@@ -1,5 +1,5 @@
 // 単体クイズの得点保存と、時間経過による減衰計算。
-import { db, client } from './db';
+import { getDb, getClient } from './db';
 import { quizScores } from './db/schema';
 
 const DAY_MS = 86_400_000;
@@ -8,11 +8,13 @@ export type LatestScore = { itemId: string; score: number; takenAt: number };
 
 /** 得点を1件保存する（同じ日でも履歴として追加）。 */
 export async function saveScore(itemId: string, score: number, takenAt = Date.now()): Promise<void> {
+	const db = await getDb();
 	await db.insert(quizScores).values({ itemId, score: Math.round(score), takenAt });
 }
 
 /** 各項目の最新の得点（減衰前）を返す。 */
 export async function getLatestScores(): Promise<Map<string, LatestScore>> {
+	const client = await getClient();
 	const rs = await client.execute(
 		`SELECT qs.item_id, qs.score, qs.taken_at
 		 FROM quiz_scores qs

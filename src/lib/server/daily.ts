@@ -1,5 +1,5 @@
 // daily_practice.yaml のルールに従って「その日に練習するカード群」を選定する。
-import { client } from './db';
+import { getClient } from './db';
 import {
 	dailyPolicy,
 	orderedItemIds,
@@ -54,11 +54,13 @@ function startOfToday(now: number): number {
 }
 
 async function getCardRows(): Promise<CardRow[]> {
+	const client = await getClient();
 	const rs = await client.execute('SELECT item_id, due, state, last_review FROM cards');
 	return rs.rows as unknown as CardRow[];
 }
 
 async function getLatestLogs(): Promise<Map<string, LatestLog>> {
+	const client = await getClient();
 	const rs = await client.execute(
 		`SELECT rl.item_id, rl.rating, rl.reviewed_at, rl.correct_count, rl.total_count
 		 FROM review_logs rl
@@ -70,6 +72,7 @@ async function getLatestLogs(): Promise<Map<string, LatestLog>> {
 }
 
 async function yesterdayAccuracy(todayStart: number): Promise<number | null> {
+	const client = await getClient();
 	const rs = await client.execute({
 		sql: 'SELECT SUM(correct_count) c, SUM(total_count) t FROM review_logs WHERE reviewed_at >= ? AND reviewed_at < ?',
 		args: [todayStart - DAY_MS, todayStart]
@@ -84,6 +87,7 @@ async function computeWeakCards(
 	windowDays: number,
 	limitMs: number
 ): Promise<{ cards: string[]; count: number }> {
+	const client = await getClient();
 	const since = Date.now() - windowDays * DAY_MS;
 	const rs = await client.execute({
 		sql: 'SELECT item_id, correct_count, total_count, elapsed_ms FROM review_logs WHERE reviewed_at >= ?',

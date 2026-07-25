@@ -1,6 +1,6 @@
 import { createEmptyCard, fsrs, State, type Card, type Grade } from 'ts-fsrs';
 import { eq, lte, gt, asc, count, min } from 'drizzle-orm';
-import { db } from './db';
+import { getDb } from './db';
 import { cards, reviewLogs, type CardRow } from './db/schema';
 import { orderedItemIds } from './content';
 
@@ -41,6 +41,7 @@ export type NextItem = { itemId: string; kind: 'review' | 'new' } | null;
 
 /** 次に学習すべき項目を返す。まず期限の来た復習、なければ未導入の新規項目（index順）。 */
 export async function getNextItem(now = Date.now()): Promise<NextItem> {
+	const db = await getDb();
 	const dueRow = await db
 		.select({ itemId: cards.itemId })
 		.from(cards)
@@ -68,6 +69,7 @@ export type Stats = {
 };
 
 export async function getStats(now = Date.now()): Promise<Stats> {
+	const db = await getDb();
 	const total = orderedItemIds.length;
 	const introduced = (await db.select({ c: count() }).from(cards).get())?.c ?? 0;
 	const dueCount = (await db.select({ c: count() }).from(cards).where(lte(cards.due, now)).get())?.c ?? 0;
@@ -97,6 +99,7 @@ export async function applyRating(
 	meta: { correctCount: number; totalCount: number; elapsedMs: number },
 	now = new Date()
 ): Promise<RateResult> {
+	const db = await getDb();
 	const existing = await db.select().from(cards).where(eq(cards.itemId, itemId)).get();
 	const card = existing ? rowToCard(existing) : createEmptyCard(now);
 
