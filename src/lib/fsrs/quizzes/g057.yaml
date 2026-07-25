@@ -1,0 +1,356 @@
+id: g057
+file: g057.yaml
+
+title: as ... as
+type: grammar_contrast
+
+section:
+  id: s07
+  title: 形容詞・副詞・比較
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 同じくらい〜なのか、それほど〜ではないのか？
+
+core_concept:
+  as_as:
+    form: as + 形容詞/副詞の原級 + as
+    meaning: 〜と同じくらい...だ
+    image: 2つのものを同じ高さで比べる
+    examples:
+      - sentence: She is as tall as her brother.
+        ja: 彼女は兄と同じくらい背が高い。
+        point: tall の原級を使い、同じ程度を表す。
+      - sentence: This question is as difficult as that one.
+        ja: この問題はあの問題と同じくらい難しい。
+        point: difficult の原級を as ... as で挟む。
+      - sentence: He runs as fast as I do.
+        ja: 彼は私と同じくらい速く走る。
+        point: fast は runs を説明する副詞の原級。
+
+  not_as_as:
+    form: not as + 形容詞/副詞の原級 + as
+    meaning: 〜ほど...ではない
+    image: 比べた相手に届いていない
+    examples:
+      - sentence: She is not as tall as her brother.
+        ja: 彼女は兄ほど背が高くない。
+        point: 背の高さで兄に届いていない。
+      - sentence: This question is not as difficult as that one.
+        ja: この問題はあの問題ほど難しくない。
+        point: 難しさであの問題に届いていない。
+      - sentence: He does not run as fast as I do.
+        ja: 彼は私ほど速く走らない。
+        point: 走る速さで私に届いていない。
+
+main_rule: >
+  as ... as は「〜と同じくらい...だ」という原級比較。
+  as と as の間には、比較級ではなく形容詞・副詞の原級を置く。
+  as tall as, as difficult as, as fast as のように使う。
+  否定形 not as ... as は「〜ほど...ではない」という意味になる。
+  She is not as tall as her brother. は「彼女は兄ほど背が高くない」。
+  taller than のような比較級とは形が違うので注意する。
+
+contrast_pairs:
+  - same_degree: She is as tall as her brother.
+    lower_degree: She is not as tall as her brother.
+    point: >
+      as tall as は「同じくらい背が高い」。
+      not as tall as は「それほど背が高くない」。
+
+  - same_degree: This question is as difficult as that one.
+    comparative: This question is more difficult than that one.
+    point: >
+      as difficult as は「同じくらい難しい」。
+      more difficult than は「より難しい」。
+
+  - same_degree: He runs as fast as I do.
+    lower_degree: He does not run as fast as I do.
+    point: >
+      as fast as は「同じくらい速く」。
+      not as fast as は「それほど速くない」。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または as ... as で原級を使う理由を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g057_q001
+    question_type: two_choice
+    prompt: She is as ___ as her brother.
+    choices:
+      - text: tall
+        correct: true
+      - text: taller
+        correct: false
+    answer: tall
+    explanation: >
+      as ... as の間には比較級ではなく原級を置く。
+      as tall as で「〜と同じくらい背が高い」。
+    translation: 彼女は兄と同じくらい背が高い。
+    focus:
+      - as_as
+      - adjective_base_form
+      - tall
+
+  - id: g057_q002
+    question_type: two_choice
+    prompt: This question is as ___ as that one.
+    choices:
+      - text: difficult
+        correct: true
+      - text: more difficult
+        correct: false
+    answer: difficult
+    explanation: >
+      as ... as の形では原級 difficult を使う。
+      more difficult than とは形が違う。
+    translation: この問題はあの問題と同じくらい難しい。
+    focus:
+      - as_as
+      - adjective_base_form
+      - difficult
+
+  - id: g057_q003
+    question_type: two_choice
+    prompt: He runs as ___ as I do.
+    choices:
+      - text: fast
+        correct: true
+      - text: faster
+        correct: false
+    answer: fast
+    explanation: >
+      as ... as の間には副詞の原級 fast を置く。
+      runs as fast as I do で「私と同じくらい速く走る」。
+    translation: 彼は私と同じくらい速く走る。
+    focus:
+      - as_as
+      - adverb_base_form
+      - fast
+
+  - id: g057_q004
+    question_type: two_choice
+    prompt: This bag is not as ___ as yours.
+    choices:
+      - text: heavy
+        correct: true
+      - text: heavier
+        correct: false
+    answer: heavy
+    explanation: >
+      not as ... as でも、間には原級を使う。
+      not as heavy as で「〜ほど重くない」。
+    translation: このかばんはあなたのものほど重くない。
+    focus:
+      - not_as_as
+      - adjective_base_form
+      - heavy
+
+  - id: g057_q005
+    question_type: two_choice
+    prompt: My room is not as ___ as yours.
+    choices:
+      - text: large
+        correct: true
+      - text: larger
+        correct: false
+    answer: large
+    explanation: >
+      not as large as で「〜ほど広くない」。
+      as ... as の間には比較級 larger ではなく原級 large を置く。
+    translation: 私の部屋はあなたの部屋ほど広くない。
+    focus:
+      - not_as_as
+      - adjective_base_form
+      - large
+
+  - id: g057_q006
+    question_type: two_choice
+    prompt: She does not speak English as ___ as her sister.
+    choices:
+      - text: well
+        correct: true
+      - text: better
+        correct: false
+    answer: well
+    explanation: >
+      not as ... as の間には副詞の原級 well を置く。
+      better は比較級なのでここでは使わない。
+    translation: 彼女は姉ほど上手に英語を話さない。
+    focus:
+      - not_as_as
+      - adverb_base_form
+      - well
+
+  - id: g057_q007
+    question_type: two_choice
+    prompt: This book is as ___ as that book.
+    choices:
+      - text: interesting
+        correct: true
+      - text: more interesting
+        correct: false
+    answer: interesting
+    explanation: >
+      同じくらい面白いという意味なので as interesting as。
+      as ... as の間に more は入れない。
+    translation: この本はあの本と同じくらい面白い。
+    focus:
+      - as_as
+      - adjective_base_form
+      - interesting
+
+  - id: g057_q008
+    question_type: two_choice
+    prompt: The train arrived as ___ as the bus.
+    choices:
+      - text: early
+        correct: true
+      - text: earlier
+        correct: false
+    answer: early
+    explanation: >
+      as ... as の間には副詞の原級 early を置く。
+      arrived as early as the bus で「バスと同じくらい早く到着した」。
+    translation: その電車はバスと同じくらい早く到着した。
+    focus:
+      - as_as
+      - adverb_base_form
+      - early
+
+  - id: g057_q009
+    question_type: two_choice
+    prompt: This problem is ___ difficult than that one.
+    choices:
+      - text: as
+        correct: false
+      - text: more
+        correct: true
+    answer: more
+    explanation: >
+      than があるので比較級を使う。
+      more difficult than で「〜より難しい」。
+      as difficult as とは形が違う。
+    translation: この問題はあの問題より難しい。
+    focus:
+      - comparative
+      - more_than
+      - contrast_with_as_as
+
+  - id: g057_q010
+    question_type: two_choice
+    prompt: This problem is as difficult ___ that one.
+    choices:
+      - text: as
+        correct: true
+      - text: than
+        correct: false
+    answer: as
+    explanation: >
+      as ... as の形なので、後ろも as を使う。
+      as difficult than とは言わない。
+    translation: この問題はあの問題と同じくらい難しい。
+    focus:
+      - as_as
+      - second_as
+      - structure
+
+  - id: g057_q011
+    question_type: two_choice
+    prompt: He is twice as ___ as I am.
+    choices:
+      - text: old
+        correct: true
+      - text: older
+        correct: false
+    answer: old
+    explanation: >
+      twice as ... as でも、as と as の間には原級を置く。
+      twice as old as で「〜の2倍の年齢だ」。
+    translation: 彼は私の2倍の年齢だ。
+    focus:
+      - twice_as_as
+      - adjective_base_form
+      - old
+
+  - id: g057_q012
+    question_type: two_choice
+    prompt: This box is three times as ___ as that one.
+    choices:
+      - text: heavy
+        correct: true
+      - text: heavier
+        correct: false
+    answer: heavy
+    explanation: >
+      three times as ... as の形でも原級 heavy を使う。
+      「あれの3倍重い」という意味。
+    translation: この箱はあの箱の3倍重い。
+    focus:
+      - times_as_as
+      - adjective_base_form
+      - heavy
+
+common_mistakes:
+  - mistake: as ... as の間に比較級を入れてしまう
+    correction: >
+      as ... as の間には原級を入れる。
+      as tall as, as difficult as, as fast as が正しい。
+  - mistake: as difficult than のように than を使ってしまう
+    correction: >
+      as ... as は前も後ろも as。
+      more difficult than と混同しない。
+  - mistake: not as ... as を「同じくらい〜だ」と読んでしまう
+    correction: >
+      not as ... as は「〜ほど...ではない」。
+      She is not as tall as her brother. は「兄ほど背が高くない」。
+  - mistake: twice as ... as で比較級を使う
+    correction: >
+      twice as old as, three times as heavy as のように、
+      倍数表現でも原級を使う。
+  - mistake: 形容詞と副詞の区別を見落とす
+    correction: >
+      She is as careful as ... なら形容詞 careful。
+      She drives as carefully as ... なら副詞 carefully。
+
+learning_notes:
+  - >
+    as ... as は原級比較。
+    「同じくらい〜」を表す。
+  - >
+    not as ... as は「〜ほど...ではない」。
+    比較級に直すと less ... than や not 比較級 than に近い意味になることがある。
+  - >
+    than があれば比較級、as ... as なら原級。
+    まず構文の形を見る。
+  - >
+    twice as ... as, three times as ... as のように、
+    倍数表現でも as と as の間は原級を使う。
+
+prerequisites:
+  - g053
+  - g056
+
+next_items:
+  - g058
+  - g059
+  - g060

@@ -1,0 +1,392 @@
+id: g097
+file: g097.yaml
+
+title: 感嘆文 What / How
+type: grammar_contrast
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 感嘆文で What と How を使い分けられるか？
+
+core_concept:
+  what_exclamation:
+    form: What + a/an + 形容詞 + 単数名詞 + 主語 + 動詞!
+    meaning: なんて〜な...なのだろう
+    image: 名詞を中心に驚きを表す
+    examples:
+      - sentence: What a beautiful flower this is!
+        ja: これはなんて美しい花なのだろう。
+        point: flower という名詞を中心にしているので What を使う。
+      - sentence: What an interesting story he told us!
+        ja: 彼はなんて面白い話を私たちにしたのだろう。
+        point: an interesting story という名詞句を強めている。
+      - sentence: What a clever student she is!
+        ja: 彼女はなんて賢い生徒なのだろう。
+        point: a clever student という名詞句が中心。
+
+  what_plural_uncountable:
+    form: What + 形容詞 + 複数名詞/不可算名詞 + 主語 + 動詞!
+    meaning: なんて〜な...なのだろう
+    image: 複数名詞・不可算名詞では a/an を付けない
+    examples:
+      - sentence: What beautiful flowers these are!
+        ja: これらはなんて美しい花なのだろう。
+        point: flowers は複数名詞なので a は付けない。
+      - sentence: What good advice he gave me!
+        ja: 彼はなんてよい助言を私にくれたのだろう。
+        point: advice は不可算名詞なので a は付けない。
+      - sentence: What nice weather we have today!
+        ja: 今日はなんてよい天気なのだろう。
+        point: weather は不可算名詞なので a は付けない。
+
+  how_exclamation:
+    form: How + 形容詞/副詞 + 主語 + 動詞!
+    meaning: なんて〜なのだろう
+    image: 形容詞・副詞そのものを強調する
+    examples:
+      - sentence: How beautiful this flower is!
+        ja: この花はなんて美しいのだろう。
+        point: beautiful という形容詞を強めているので How。
+      - sentence: How fast he runs!
+        ja: 彼はなんて速く走るのだろう。
+        point: fast という副詞を強めているので How。
+      - sentence: How clever she is!
+        ja: 彼女はなんて賢いのだろう。
+        point: clever という形容詞を強めている。
+
+  shortened_exclamation:
+    form: What + 名詞句! / How + 形容詞!
+    meaning: なんて〜なのだろう
+    image: 主語＋動詞が省略されることがある
+    examples:
+      - sentence: What a surprise!
+        ja: なんて驚きだ。
+        point: it is などが省略されている。
+      - sentence: What a pity!
+        ja: なんて残念なことだ。
+        point: a pity という名詞句なので What。
+      - sentence: How nice!
+        ja: なんてすてきなのだろう。
+        point: it is などが省略されている。
+
+main_rule: >
+  感嘆文では、名詞を中心に強調するなら What、形容詞・副詞を中心に強調するなら How を使う。
+  What a beautiful flower this is! は、a beautiful flower という名詞句を強調している。
+  How beautiful this flower is! は、beautiful という形容詞を強調している。
+  単数可算名詞なら What a/an + 形容詞 + 名詞。
+  複数名詞や不可算名詞なら a/an を付けず、What + 形容詞 + 名詞。
+  What beautiful flowers these are! / What good advice he gave me! の形になる。
+  How の後ろには形容詞または副詞を置く。
+  How fast he runs! のように、副詞も強調できる。
+  会話では What a surprise! / How nice! のように、主語＋動詞が省略されることも多い。
+
+contrast_pairs:
+  - what_form: What a beautiful flower this is!
+    how_form: How beautiful this flower is!
+    point: >
+      What は a beautiful flower という名詞句を強調する。
+      How は beautiful という形容詞を強調する。
+
+  - singular: What a clever student she is!
+    plural: What clever students they are!
+    point: >
+      単数可算名詞には a/an が必要。
+      複数名詞には a/an を付けない。
+
+  - noun_focus: What good advice he gave me!
+    adjective_focus: How good his advice was!
+    point: >
+      advice という名詞を含むなら What。
+      good という形容詞だけを前に出すなら How。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または What は名詞句、How は形容詞・副詞を強調することを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g097_q001
+    question_type: two_choice
+    prompt: ___ a beautiful flower this is!
+    choices:
+      - text: What
+        correct: true
+      - text: How
+        correct: false
+    answer: What
+    explanation: >
+      a beautiful flower という名詞句を強調している。
+      単数可算名詞 flower があるので What a ... の形。
+    translation: これはなんて美しい花なのだろう。
+    focus:
+      - what_exclamation
+      - singular_countable
+      - flower
+
+  - id: g097_q002
+    question_type: two_choice
+    prompt: ___ beautiful this flower is!
+    choices:
+      - text: How
+        correct: true
+      - text: What
+        correct: false
+    answer: How
+    explanation: >
+      beautiful という形容詞を強調している。
+      形容詞だけを前に出す感嘆文なので How を使う。
+    translation: この花はなんて美しいのだろう。
+    focus:
+      - how_exclamation
+      - adjective
+      - beautiful
+
+  - id: g097_q003
+    question_type: two_choice
+    prompt: ___ an interesting story he told us!
+    choices:
+      - text: What
+        correct: true
+      - text: How
+        correct: false
+    answer: What
+    explanation: >
+      an interesting story という名詞句を強調している。
+      単数可算名詞 story の前に an があるので What。
+    translation: 彼はなんて面白い話を私たちにしたのだろう。
+    focus:
+      - what_exclamation
+      - an
+      - story
+
+  - id: g097_q004
+    question_type: two_choice
+    prompt: ___ interesting the story is!
+    choices:
+      - text: How
+        correct: true
+      - text: What
+        correct: false
+    answer: How
+    explanation: >
+      interesting という形容詞を強調している。
+      How interesting ... の形が自然。
+    translation: その話はなんて面白いのだろう。
+    focus:
+      - how_exclamation
+      - interesting
+      - adjective_focus
+
+  - id: g097_q005
+    question_type: two_choice
+    prompt: ___ beautiful flowers these are!
+    choices:
+      - text: What
+        correct: true
+      - text: How
+        correct: false
+    answer: What
+    explanation: >
+      beautiful flowers という複数名詞句を強調している。
+      複数名詞なので a/an は付けず、What beautiful flowers。
+    translation: これらはなんて美しい花なのだろう。
+    focus:
+      - what_plural_uncountable
+      - plural
+      - flowers
+
+  - id: g097_q006
+    question_type: two_choice
+    prompt: ___ good advice he gave me!
+    choices:
+      - text: What
+        correct: true
+      - text: How
+        correct: false
+    answer: What
+    explanation: >
+      good advice という名詞句を強調している。
+      advice は不可算名詞なので a/an は付けない。
+    translation: 彼はなんてよい助言を私にくれたのだろう。
+    focus:
+      - what_plural_uncountable
+      - uncountable
+      - advice
+
+  - id: g097_q007
+    question_type: two_choice
+    prompt: ___ nice weather we have today!
+    choices:
+      - text: What
+        correct: true
+      - text: How
+        correct: false
+    answer: What
+    explanation: >
+      nice weather という名詞句を強調している。
+      weather は不可算名詞なので What nice weather が自然。
+    translation: 今日はなんてよい天気なのだろう。
+    focus:
+      - what_plural_uncountable
+      - weather
+      - uncountable
+
+  - id: g097_q008
+    question_type: two_choice
+    prompt: ___ fast he runs!
+    choices:
+      - text: How
+        correct: true
+      - text: What
+        correct: false
+    answer: How
+    explanation: >
+      fast はここでは runs を修飾する副詞。
+      副詞を強調する感嘆文なので How を使う。
+    translation: 彼はなんて速く走るのだろう。
+    focus:
+      - how_exclamation
+      - adverb
+      - fast
+
+  - id: g097_q009
+    question_type: two_choice
+    prompt: ___ clever she is!
+    choices:
+      - text: How
+        correct: true
+      - text: What
+        correct: false
+    answer: How
+    explanation: >
+      clever という形容詞を強調している。
+      How clever she is! が自然。
+    translation: 彼女はなんて賢いのだろう。
+    focus:
+      - how_exclamation
+      - clever
+      - adjective
+
+  - id: g097_q010
+    question_type: two_choice
+    prompt: ___ a clever student she is!
+    choices:
+      - text: What
+        correct: true
+      - text: How
+        correct: false
+    answer: What
+    explanation: >
+      a clever student という名詞句を強調している。
+      名詞 student が中心なので What を使う。
+    translation: 彼女はなんて賢い生徒なのだろう。
+    focus:
+      - what_exclamation
+      - student
+      - noun_phrase
+
+  - id: g097_q011
+    question_type: two_choice
+    prompt: ___ a surprise!
+    choices:
+      - text: What
+        correct: true
+      - text: How
+        correct: false
+    answer: What
+    explanation: >
+      What a surprise! は短縮された感嘆文。
+      a surprise という名詞句なので What を使う。
+    translation: なんて驚きだ。
+    focus:
+      - shortened_exclamation
+      - what_a_surprise
+      - noun_phrase
+
+  - id: g097_q012
+    question_type: two_choice
+    prompt: ___ nice!
+    choices:
+      - text: How
+        correct: true
+      - text: What
+        correct: false
+    answer: How
+    explanation: >
+      nice という形容詞だけを強調している。
+      How nice! は How nice it is! などの省略。
+    translation: なんてすてきなのだろう。
+    focus:
+      - shortened_exclamation
+      - how_nice
+      - adjective
+
+common_mistakes:
+  - mistake: What と How を日本語の「なんて」だけで判断する
+    correction: >
+      日本語ではどちらも「なんて」になりやすい。
+      英語では名詞句なら What、形容詞・副詞なら How と見る。
+  - mistake: How a beautiful flower としてしまう
+    correction: >
+      a beautiful flower は名詞句なので What a beautiful flower が正しい。
+  - mistake: What beautiful this flower is としてしまう
+    correction: >
+      beautiful だけを強調するなら How beautiful this flower is。
+  - mistake: 複数名詞や不可算名詞に a/an を付けてしまう
+    correction: >
+      What beautiful flowers / What good advice / What nice weather のように、
+      複数名詞・不可算名詞には a/an を付けない。
+  - mistake: How の後ろに名詞句を置いてしまう
+    correction: >
+      How の後ろは形容詞・副詞。
+      名詞句を強調するなら What を使う。
+
+learning_notes:
+  - >
+    感嘆文では、名詞句を強調するなら What。
+    What a beautiful flower this is! の形。
+  - >
+    形容詞・副詞を強調するなら How。
+    How beautiful this flower is! / How fast he runs! の形。
+  - >
+    単数可算名詞には a/an が必要。
+    What a clever student she is!。
+  - >
+    複数名詞・不可算名詞には a/an を付けない。
+    What beautiful flowers! / What good advice!。
+  - >
+    会話では What a surprise! / How nice! のように、
+    主語＋動詞が省略されることが多い。
+
+prerequisites:
+  - g049
+  - g050
+  - g051
+  - g053
+  - g089
+
+next_items:
+  - g098
+  - g099
+  - g100

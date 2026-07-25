@@ -1,0 +1,354 @@
+id: g020
+file: g020.yaml
+
+title: cost / own / belong / mean の状態動詞
+type: verb_usage
+
+section:
+  id: s02
+  title: 現在形・現在進行形と動詞用法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 価格・所有・所属・意味を表す状態動詞を、現在形で自然に使えるか？
+
+core_concept:
+  overview: >
+    cost, own, belong, mean は、動作というより「価格」「所有」「所属」「意味」という状態・関係を表す。
+    そのため、現在のことを表していても現在進行形ではなく、現在形を使うのが基本。
+    日本語では「〜している」と訳せることがあるが、英語では「今している動作」ではなく、
+    その時点で成り立っている状態・関係として考える。
+
+  cost:
+    meaning: 値段が〜である・費用がかかる
+    typical_form: 現在形
+    example: This bag costs 100 dollars.
+    ja: このバッグは100ドルする。
+    point: 値段という状態を述べているので costs が自然。
+
+  own:
+    meaning: 所有している
+    typical_form: 現在形
+    example: She owns two cars.
+    ja: 彼女は車を2台所有している。
+    point: 所有関係を述べているので owns が自然。
+
+  belong:
+    meaning: 所属している・〜のものである
+    typical_form: 現在形
+    example: This book belongs to me.
+    ja: この本は私のものだ。
+    point: 所属・所有関係を述べているので belongs が自然。
+
+  mean:
+    meaning: 意味する
+    typical_form: 現在形
+    example: This word means "freedom."
+    ja: この単語は「自由」を意味する。
+    point: 語や文の意味を述べているので means が自然。
+
+main_rule: >
+  cost, own, belong, mean は、基本的に状態や関係を表す動詞なので、
+  「今そうである」と言いたい場合でも現在形を使う。
+  現在進行形は「今まさに行っている動作」を表す形なので、価格・所有・所属・意味のような
+  動作でない内容にはふつう使わない。
+
+contrast_pairs:
+  - natural: This shirt costs 30 dollars.
+    unnatural: This shirt is costing 30 dollars.
+    point: >
+      シャツの値段を述べているので、状態を表す costs が自然。
+
+  - natural: My uncle owns a small restaurant.
+    unnatural: My uncle is owning a small restaurant.
+    point: >
+      レストランを所有しているという関係を述べているので、owns が自然。
+
+  - natural: This key belongs to my sister.
+    unnatural: This key is belonging to my sister.
+    point: >
+      鍵が誰のものかを述べているので、belongs が自然。
+
+  - natural: This sign means "danger."
+    unnatural: This sign is meaning "danger."
+    point: >
+      標識の意味を述べているので、means が自然。
+
+  - natural: The house costs too much for us.
+    unnatural: The house is costing too much for us.
+    point: >
+      家の価格が高すぎるという状態を述べているので、costs が自然。
+
+  - natural: He owns this land.
+    unnatural: He is owning this land.
+    point: >
+      土地の所有関係を述べているので、現在形 owns が自然。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g020_q001
+    question_type: two_choice
+    prompt: This watch ___ 200 dollars.
+    choices:
+      - text: costs
+        correct: true
+      - text: is costing
+        correct: false
+    answer: costs
+    explanation: >
+      時計の値段を述べているので、状態動詞 cost の現在形 costs が自然。
+      値段は「今している動作」ではない。
+    translation: この腕時計は200ドルする。
+    focus:
+      - cost
+      - state
+      - present_simple
+
+  - id: g020_q002
+    question_type: two_choice
+    prompt: The ticket ___ too much for me.
+    choices:
+      - text: costs
+        correct: true
+      - text: is costing
+        correct: false
+    answer: costs
+    explanation: >
+      チケットの価格が高すぎるという状態を表しているので、現在形 costs が自然。
+    translation: そのチケットは私には高すぎる。
+    focus:
+      - cost
+      - price
+      - present_simple
+
+  - id: g020_q003
+    question_type: two_choice
+    prompt: How much ___ this computer ___?
+    choices:
+      - text: does / cost
+        correct: true
+      - text: is / costing
+        correct: false
+    answer: does / cost
+    explanation: >
+      値段を尋ねるときは、状態動詞 cost を一般動詞として扱い、How much does ... cost? とする。
+      現在進行形 is costing はふつう使わない。
+    translation: このコンピューターはいくらですか。
+    focus:
+      - cost
+      - question_form
+      - present_simple
+
+  - id: g020_q004
+    question_type: two_choice
+    prompt: My aunt ___ a bakery.
+    choices:
+      - text: owns
+        correct: true
+      - text: is owning
+        correct: false
+    answer: owns
+    explanation: >
+      ベーカリーを所有しているという関係を表しているので、現在形 owns が自然。
+      所有は「今している動作」ではない。
+    translation: 私のおばはベーカリーを所有している。
+    focus:
+      - own
+      - possession
+      - present_simple
+
+  - id: g020_q005
+    question_type: two_choice
+    prompt: He ___ two apartments in the city.
+    choices:
+      - text: owns
+        correct: true
+      - text: is owning
+        correct: false
+    answer: owns
+    explanation: >
+      アパートを所有しているという状態・関係なので、現在形 owns が自然。
+    translation: 彼はその町にアパートを2つ所有している。
+    focus:
+      - own
+      - possession
+      - present_simple
+
+  - id: g020_q006
+    question_type: two_choice
+    prompt: Who ___ this car?
+    choices:
+      - text: owns
+        correct: true
+      - text: is owning
+        correct: false
+    answer: owns
+    explanation: >
+      車の所有者を尋ねているので、状態動詞 own の現在形 owns を使う。
+    translation: この車は誰のものですか。
+    focus:
+      - own
+      - question_form
+      - present_simple
+
+  - id: g020_q007
+    question_type: two_choice
+    prompt: This bag ___ to my sister.
+    choices:
+      - text: belongs
+        correct: true
+      - text: is belonging
+        correct: false
+    answer: belongs
+    explanation: >
+      かばんが誰のものかという所属・所有関係を述べているので、現在形 belongs が自然。
+    translation: このかばんは私の姉のものだ。
+    focus:
+      - belong
+      - possession
+      - present_simple
+
+  - id: g020_q008
+    question_type: two_choice
+    prompt: I don't think this key ___ to me.
+    choices:
+      - text: belongs
+        correct: true
+      - text: is belonging
+        correct: false
+    answer: belongs
+    explanation: >
+      鍵が自分のものかどうかという関係を述べているので、belongs が自然。
+    translation: この鍵は私のものではないと思う。
+    focus:
+      - belong
+      - possession
+      - present_simple
+
+  - id: g020_q009
+    question_type: two_choice
+    prompt: She ___ to the tennis club.
+    choices:
+      - text: belongs
+        correct: true
+      - text: is belonging
+        correct: false
+    answer: belongs
+    explanation: >
+      テニスクラブに所属しているという状態を表しているので、現在形 belongs が自然。
+    translation: 彼女はテニスクラブに所属している。
+    focus:
+      - belong
+      - membership
+      - present_simple
+
+  - id: g020_q010
+    question_type: two_choice
+    prompt: This word ___ "safe."
+    choices:
+      - text: means
+        correct: true
+      - text: is meaning
+        correct: false
+    answer: means
+    explanation: >
+      単語の意味を述べているので、状態動詞 mean の現在形 means が自然。
+    translation: この単語は「安全な」という意味だ。
+    focus:
+      - mean
+      - meaning
+      - present_simple
+
+  - id: g020_q011
+    question_type: two_choice
+    prompt: What ___ this symbol ___?
+    choices:
+      - text: does / mean
+        correct: true
+      - text: is / meaning
+        correct: false
+    answer: does / mean
+    explanation: >
+      記号の意味を尋ねる疑問文なので、What does ... mean? とする。
+      意味は動作ではないため、現在進行形にはしない。
+    translation: この記号は何を意味しますか。
+    focus:
+      - mean
+      - question_form
+      - present_simple
+
+  - id: g020_q012
+    question_type: two_choice
+    prompt: His silence ___ that he disagrees.
+    choices:
+      - text: means
+        correct: true
+      - text: is meaning
+        correct: false
+    answer: means
+    explanation: >
+      沈黙が何を意味するかを述べているので、現在形 means が自然。
+    translation: 彼の沈黙は、彼が反対していることを意味する。
+    focus:
+      - mean
+      - interpretation
+      - present_simple
+
+common_mistakes:
+  - mistake: 日本語の「所有している」につられて is owning とする
+    correction: >
+      own は所有関係を表す状態動詞なので、現在の所有でも He owns a house. のように現在形を使う。
+
+  - mistake: 「所属している」を be belonging to とする
+    correction: >
+      belong は所属・所有関係を表す状態動詞なので、This book belongs to me. が自然。
+
+  - mistake: 「意味している」を is meaning とする
+    correction: >
+      mean は意味を表す状態動詞なので、This word means "hope." のように現在形を使う。
+
+  - mistake: 値段を聞くときに How much is this costing? とする
+    correction: >
+      値段を尋ねる基本形は How much does this cost?。
+      cost は価格を表す状態動詞として扱う。
+
+learning_notes:
+  - >
+    cost, own, belong, mean は、現在のことでも現在進行形にしないのが基本。
+  - >
+    日本語の「〜している」は、英語では現在形になることが多い。
+    「所有している」「所属している」「意味している」は、動作ではなく状態・関係である。
+  - >
+    現在進行形は「今まさにしている動作」に向いている。
+    価格・所有・所属・意味のような内容には、ふつう現在形を使う。
+  - >
+    cost は、実際の英語では The delay is costing us money. のように、
+    継続的に損害・費用を発生させている場合に進行形になることがある。
+    ただし、このカードでは高校基礎として「値段が〜である」の cost を扱う。
+
+prerequisites:
+  - g001
+  - g015
+  - g016
+
+next_items:
+  - g021

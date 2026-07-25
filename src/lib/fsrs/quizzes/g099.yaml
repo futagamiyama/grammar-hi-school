@@ -1,0 +1,388 @@
+id: g099
+file: g099.yaml
+
+title: 修辞疑問文
+type: grammar_contrast
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 答えを求めない疑問文が、強い肯定・否定・感情を表すことを読めるか？
+
+core_concept:
+  rhetorical_negative_meaning:
+    form: Who/What/How + 疑問文?
+    meaning: 誰が〜するだろうか、いや誰も〜しない
+    image: 疑問の形で、実は否定を強く表す
+    examples:
+      - sentence: Who knows the answer?
+        ja: 誰に答えがわかるだろうか。
+        point: 文脈によって「誰にもわからない」という意味になる。
+      - sentence: Who can believe such a story?
+        ja: 誰がそんな話を信じられるだろうか。
+        point: 実際には「誰も信じられない」という強い否定。
+      - sentence: How should I know?
+        ja: どうして私にわかるというのか。
+        point: 「私にわかるはずがない」という意味。
+
+  rhetorical_positive_meaning:
+    form: Isn't/Don't/Can't + 主語 + 動詞 ...?
+    meaning: 〜ではないか、当然〜だ
+    image: 否定疑問の形で、強い肯定や確認を表す
+    examples:
+      - sentence: Isn't it obvious?
+        ja: それは明らかではないか。
+        point: 実際には「明らかだ」という強い肯定。
+      - sentence: Don't we all want to be happy?
+        ja: 私たちは皆幸せになりたいのではないか。
+        point: 「皆そう望んでいる」という含み。
+      - sentence: Can't you see the problem?
+        ja: その問題が見えないのか。
+        point: 「問題は明らかだ」という非難・確認を含む。
+
+  rhetorical_why:
+    form: Why should + 主語 + 動詞原形 ...?
+    meaning: なぜ〜しなければならないのか、〜する理由はない
+    image: why の疑問で、必要性への疑い・反発を表す
+    examples:
+      - sentence: Why should I apologize?
+        ja: なぜ私が謝らなければならないのか。
+        point: 「謝る理由はない」という気持ちを含む。
+      - sentence: Why should we accept such a rule?
+        ja: なぜ私たちがそんな規則を受け入れなければならないのか。
+        point: 受け入れる必要はない、という反発。
+      - sentence: Why should anyone trust him?
+        ja: なぜ誰かが彼を信用しなければならないのか。
+        point: 「誰も信用すべきでない」という含み。
+
+  rhetorical_what_is_the_point:
+    form: What is the point of + 動名詞?
+    meaning: 〜して何の意味があるのか
+    image: 行動の価値や意味を疑う
+    examples:
+      - sentence: What is the point of arguing?
+        ja: 議論して何の意味があるのか。
+        point: 「議論しても意味がない」という含み。
+      - sentence: What is the use of worrying?
+        ja: 心配して何の役に立つのか。
+        point: 「心配しても役に立たない」という意味。
+      - sentence: What good is a plan without action?
+        ja: 行動のない計画に何の価値があるのか。
+        point: 「行動がなければ計画に価値はない」という含み。
+
+main_rule: >
+  修辞疑問文は、形は疑問文だが、本当に答えを求めているわけではない疑問文。
+  Who can believe such a story? は「誰がそんな話を信じられるだろうか」
+  という形だが、実際には「誰も信じられない」という強い否定を表す。
+  Isn't it obvious? は「明らかではないのか」という形だが、
+  実際には「明らかだ」という強い肯定・確認を表す。
+  Why should I apologize? は「なぜ私が謝らなければならないのか」
+  という形で、「謝る理由はない」という反発を含む。
+  What is the point of arguing? は「議論して何の意味があるのか」
+  という形で、「議論しても意味がない」という評価を表す。
+  修辞疑問文では、疑問詞や否定疑問の形だけでなく、
+  文脈から実際の主張を読み取ることが重要。
+
+contrast_pairs:
+  - ordinary_question: Who knows the answer?
+    rhetorical_question: Who knows?
+    point: >
+      普通の疑問文では本当に答えを知る人を尋ねる。
+      修辞疑問では「誰にもわからない」という意味になる。
+
+  - negative_question: Isn't it obvious?
+    statement: It is obvious.
+    point: >
+      Isn't it obvious? は形は否定疑問だが、
+      実際には「明らかだ」という強い肯定を表す。
+
+  - why_question: Why should I apologize?
+    hidden_meaning: I should not have to apologize.
+    point: >
+      Why should I ...? は、単なる理由質問ではなく、
+      「私が〜する必要はない」という反発を表すことがある。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または修辞疑問文が答えを求めず主張を表すことを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g099_q001
+    question_type: two_choice
+    prompt: Who ___ such a story?
+    choices:
+      - text: can believe
+        correct: true
+      - text: can believes
+        correct: false
+    answer: can believe
+    explanation: >
+      can の後ろは動詞原形。
+      Who can believe such a story? は「誰が信じられるだろうか、いや誰も信じられない」という修辞疑問。
+    translation: 誰がそんな話を信じられるだろうか。
+    focus:
+      - rhetorical_negative_meaning
+      - who_can
+      - believe
+
+  - id: g099_q002
+    question_type: two_choice
+    prompt: Who can believe such a story?
+    choices:
+      - text: No one can believe it.
+        correct: true
+      - text: Everyone must believe it.
+        correct: false
+    answer: No one can believe it.
+    explanation: >
+      修辞疑問として読むと、「誰が信じられるだろうか」という形で、
+      実際には「誰も信じられない」という強い否定を表す。
+    translation: 誰がそんな話を信じられるだろうか。
+    focus:
+      - rhetorical_negative_meaning
+      - hidden_negative
+      - meaning
+
+  - id: g099_q003
+    question_type: two_choice
+    prompt: How ___ I know?
+    choices:
+      - text: should
+        correct: true
+      - text: do
+        correct: false
+    answer: should
+    explanation: >
+      How should I know? は「どうして私にわかるというのか」。
+      実際には「私にわかるはずがない」という意味。
+    translation: どうして私にわかるというのか。
+    focus:
+      - rhetorical_negative_meaning
+      - how_should_i_know
+      - hidden_negative
+
+  - id: g099_q004
+    question_type: two_choice
+    prompt: How should I know?
+    choices:
+      - text: I cannot know.
+        correct: true
+      - text: I know very well.
+        correct: false
+    answer: I cannot know.
+    explanation: >
+      How should I know? は答えを求める疑問ではなく、
+      「私にわかるはずがない」という不満・反発を表す。
+    translation: どうして私にわかるというのか。
+    focus:
+      - rhetorical_negative_meaning
+      - meaning
+      - cannot_know
+
+  - id: g099_q005
+    question_type: two_choice
+    prompt: ___ it obvious?
+    choices:
+      - text: Isn't
+        correct: true
+      - text: Doesn't
+        correct: false
+    answer: Isn't
+    explanation: >
+      obvious は形容詞なので be動詞を使う。
+      Isn't it obvious? は「明らかではないか」という強い確認。
+    translation: それは明らかではないか。
+    focus:
+      - rhetorical_positive_meaning
+      - negative_question
+      - obvious
+
+  - id: g099_q006
+    question_type: two_choice
+    prompt: Isn't it obvious?
+    choices:
+      - text: It is obvious.
+        correct: true
+      - text: It is impossible to know.
+        correct: false
+    answer: It is obvious.
+    explanation: >
+      Isn't it obvious? は形は否定疑問だが、
+      修辞疑問として「明らかだ」という強い肯定を表す。
+    translation: それは明らかではないか。
+    focus:
+      - rhetorical_positive_meaning
+      - hidden_positive
+      - obvious
+
+  - id: g099_q007
+    question_type: two_choice
+    prompt: ___ we all want to be happy?
+    choices:
+      - text: Don't
+        correct: true
+      - text: Aren't
+        correct: false
+    answer: Don't
+    explanation: >
+      want は一般動詞なので Don't we ...? を使う。
+      「私たちは皆幸せになりたいのではないか」という確認を表す。
+    translation: 私たちは皆幸せになりたいのではないか。
+    focus:
+      - rhetorical_positive_meaning
+      - dont_we
+      - want
+
+  - id: g099_q008
+    question_type: two_choice
+    prompt: Why ___ I apologize?
+    choices:
+      - text: should
+        correct: true
+      - text: do
+        correct: false
+    answer: should
+    explanation: >
+      Why should I apologize? は「なぜ謝らなければならないのか」。
+      「謝る理由はない」という反発を含むことが多い。
+    translation: なぜ私が謝らなければならないのか。
+    focus:
+      - rhetorical_why
+      - should
+      - apologize
+
+  - id: g099_q009
+    question_type: two_choice
+    prompt: Why should we ___ such a rule?
+    choices:
+      - text: accept
+        correct: true
+      - text: accepted
+        correct: false
+    answer: accept
+    explanation: >
+      should の後ろは動詞原形。
+      Why should we accept ...? で「なぜ受け入れなければならないのか」という反発を表す。
+    translation: なぜ私たちがそんな規則を受け入れなければならないのか。
+    focus:
+      - rhetorical_why
+      - bare_form
+      - accept
+
+  - id: g099_q010
+    question_type: two_choice
+    prompt: What is the point of ___?
+    choices:
+      - text: arguing
+        correct: true
+      - text: argue
+        correct: false
+    answer: arguing
+    explanation: >
+      of の後ろは動名詞。
+      What is the point of arguing? は「議論して何の意味があるのか」という修辞疑問。
+    translation: 議論して何の意味があるのか。
+    focus:
+      - rhetorical_what_is_the_point
+      - gerund
+      - arguing
+
+  - id: g099_q011
+    question_type: two_choice
+    prompt: What is the ___ of worrying?
+    choices:
+      - text: use
+        correct: true
+      - text: useful
+        correct: false
+    answer: use
+    explanation: >
+      What is the use of ...? は「〜して何の役に立つのか」。
+      the の後ろには名詞 use を置く。
+    translation: 心配して何の役に立つのか。
+    focus:
+      - rhetorical_what_is_the_point
+      - what_is_the_use
+      - worrying
+
+  - id: g099_q012
+    question_type: two_choice
+    prompt: What good ___ a plan without action?
+    choices:
+      - text: is
+        correct: true
+      - text: does
+        correct: false
+    answer: is
+    explanation: >
+      What good is ...? は「〜に何の価値があるのか」という表現。
+      a plan without action について価値を問う修辞疑問。
+    translation: 行動のない計画に何の価値があるのか。
+    focus:
+      - rhetorical_what_is_the_point
+      - what_good_is
+      - plan
+
+common_mistakes:
+  - mistake: 修辞疑問文をすべて普通の質問として読む
+    correction: >
+      修辞疑問文は、答えを求めるのではなく、
+      強い肯定・否定・反発・評価を表すことがある。
+  - mistake: Who can believe it? を「誰が信じられるか教えて」と読む
+    correction: >
+      文脈によっては「誰も信じられない」という強い否定を表す。
+  - mistake: Isn't it obvious? を「明らかではないのですか」とだけ読む
+    correction: >
+      修辞疑問としては「明らかだ」という強い肯定・確認を表す。
+  - mistake: Why should I ...? を普通の理由質問だけで読む
+    correction: >
+      Why should I ...? は「なぜ私が〜しなければならないのか」という反発を含むことが多い。
+  - mistake: What is the point of の後ろに動詞原形を置く
+    correction: >
+      of は前置詞なので、後ろは動名詞。
+      What is the point of arguing? が正しい。
+
+learning_notes:
+  - >
+    修辞疑問文は、形は疑問文でも、実際には主張を表す。
+  - >
+    Who can ...? は「誰が〜できるだろうか、いや誰もできない」と読むことがある。
+  - >
+    Isn't it ...? / Don't we ...? は、強い肯定・確認を表すことがある。
+  - >
+    Why should I ...? は、必要性への疑い・反発を表すことが多い。
+  - >
+    What is the point of ...? / What is the use of ...? は、
+    「〜しても意味がない」という評価を含む。
+
+prerequisites:
+  - g021
+  - g024
+  - g095
+  - g098
+
+next_items:
+  - g100
+  - g101
+  - g102

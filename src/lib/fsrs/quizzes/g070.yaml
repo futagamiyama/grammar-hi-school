@@ -1,0 +1,371 @@
+id: g070
+file: g070.yaml
+
+title: 複合関係詞 whoever / whatever
+type: grammar_contrast
+
+section:
+  id: s08
+  title: 関係詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: whoever / whatever を「誰でも」「何でも」と読めるか？
+
+core_concept:
+  whoever:
+    form: whoever + 動詞 / whoever + 主語 + 動詞
+    meaning: 〜する人は誰でも
+    image: anyone who と同じ働きをする
+    examples:
+      - sentence: Whoever comes first can choose a seat.
+        ja: 最初に来た人は誰でも席を選べる。
+        point: Whoever comes first = Anyone who comes first。
+      - sentence: I will help whoever needs help.
+        ja: 私は助けを必要とする人なら誰でも助ける。
+        point: whoever needs help が help の目的語。
+      - sentence: Whoever you are, you must follow the rules.
+        ja: あなたが誰であっても、規則には従わなければならない。
+        point: whoever you are は譲歩の意味で「誰であっても」。
+
+  whatever:
+    form: whatever + 主語 + 動詞 / whatever + 名詞 + 主語 + 動詞
+    meaning: 〜するものは何でも、どんな〜でも
+    image: anything that と同じ働きをする
+    examples:
+      - sentence: Take whatever you need.
+        ja: 必要なものは何でも持っていきなさい。
+        point: whatever you need = anything that you need。
+      - sentence: Whatever happens, stay calm.
+        ja: 何が起きても、落ち着いていなさい。
+        point: whatever happens は譲歩の意味で「何が起きても」。
+      - sentence: You can choose whatever color you like.
+        ja: 好きな色を何色でも選んでよい。
+        point: whatever color で「どんな色でも」。
+
+  noun_clause_and_concession:
+    form: whoever / whatever が名詞節または譲歩節を作る
+    meaning: 文中で名詞のかたまりになる場合と、「たとえ〜でも」を表す場合がある
+    image: 文の中の役割で意味が決まる
+    examples:
+      - sentence: I will give this ticket to whoever wants it.
+        ja: このチケットを欲しい人なら誰にでもあげます。
+        point: whoever wants it は前置詞 to の目的語。
+      - sentence: Whatever you say, I will not change my mind.
+        ja: あなたが何を言っても、私は考えを変えない。
+        point: Whatever you say は譲歩節。
+      - sentence: Whoever wins, we will accept the result.
+        ja: 誰が勝っても、私たちは結果を受け入れる。
+        point: Whoever wins は譲歩節。
+
+main_rule: >
+  複合関係詞 whoever は「〜する人は誰でも」を表し、anyone who に近い。
+  whoever comes first は anyone who comes first と同じ発想。
+  whatever は「〜するものは何でも」を表し、anything that に近い。
+  whatever you need は anything that you need と考えられる。
+  また、whoever / whatever は「たとえ誰が〜しても」「たとえ何が〜しても」という譲歩の意味も作る。
+  Whoever wins, we will accept the result. は「誰が勝っても、私たちは結果を受け入れる」。
+  Whatever happens, stay calm. は「何が起きても、落ち着いていなさい」。
+
+contrast_pairs:
+  - person: Whoever comes first can choose a seat.
+    thing: Take whatever you need.
+    point: >
+      whoever は人に使い、「〜する人は誰でも」。
+      whatever は物・事に使い、「〜するものは何でも」。
+
+  - noun_clause: I will help whoever needs help.
+    concession: Whoever wins, we will accept the result.
+    point: >
+      whoever needs help は help の目的語。
+      Whoever wins は「誰が勝っても」という譲歩節。
+
+  - noun_clause: Take whatever you need.
+    concession: Whatever happens, stay calm.
+    point: >
+      whatever you need は「必要なものは何でも」。
+      Whatever happens は「何が起きても」。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または whoever と whatever の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g070_q001
+    question_type: two_choice
+    prompt: ___ comes first can choose a seat.
+    choices:
+      - text: Whoever
+        correct: true
+      - text: Whatever
+        correct: false
+    answer: Whoever
+    explanation: >
+      comes first するのは人。
+      「最初に来た人は誰でも」なので Whoever が自然。
+    translation: 最初に来た人は誰でも席を選べる。
+    focus:
+      - whoever
+      - anyone_who
+      - person
+
+  - id: g070_q002
+    question_type: two_choice
+    prompt: Take ___ you need.
+    choices:
+      - text: whoever
+        correct: false
+      - text: whatever
+        correct: true
+    answer: whatever
+    explanation: >
+      need の目的語になる「必要なもの」を表している。
+      物・事なので whatever が自然。
+    translation: 必要なものは何でも持っていきなさい。
+    focus:
+      - whatever
+      - anything_that
+      - thing
+
+  - id: g070_q003
+    question_type: two_choice
+    prompt: I will help ___ needs help.
+    choices:
+      - text: whoever
+        correct: true
+      - text: whatever
+        correct: false
+    answer: whoever
+    explanation: >
+      needs help するのは人。
+      「助けを必要とする人なら誰でも」なので whoever が自然。
+    translation: 私は助けを必要とする人なら誰でも助ける。
+    focus:
+      - whoever
+      - person
+      - object_clause
+
+  - id: g070_q004
+    question_type: two_choice
+    prompt: I will buy ___ you recommend.
+    choices:
+      - text: whoever
+        correct: false
+      - text: whatever
+        correct: true
+    answer: whatever
+    explanation: >
+      recommend の目的語になる「あなたが勧めるもの」を表している。
+      物・事なので whatever が自然。
+    translation: あなたが勧めるものなら何でも買います。
+    focus:
+      - whatever
+      - thing
+      - object_clause
+
+  - id: g070_q005
+    question_type: two_choice
+    prompt: ___ wins, we will accept the result.
+    choices:
+      - text: Whoever
+        correct: true
+      - text: Whatever
+        correct: false
+    answer: Whoever
+    explanation: >
+      wins するのは人。
+      「誰が勝っても」という譲歩の意味なので Whoever が自然。
+    translation: 誰が勝っても、私たちは結果を受け入れる。
+    focus:
+      - whoever
+      - concession
+      - wins
+
+  - id: g070_q006
+    question_type: two_choice
+    prompt: ___ happens, stay calm.
+    choices:
+      - text: Whoever
+        correct: false
+      - text: Whatever
+        correct: true
+    answer: Whatever
+    explanation: >
+      happens するのは出来事。
+      「何が起きても」なので Whatever が自然。
+    translation: 何が起きても、落ち着いていなさい。
+    focus:
+      - whatever
+      - concession
+      - happens
+
+  - id: g070_q007
+    question_type: two_choice
+    prompt: Give this ticket to ___ wants it.
+    choices:
+      - text: whoever
+        correct: true
+      - text: whatever
+        correct: false
+    answer: whoever
+    explanation: >
+      wants it するのは人。
+      「それを欲しがる人なら誰にでも」なので whoever が自然。
+    translation: このチケットを欲しい人なら誰にでもあげなさい。
+    focus:
+      - whoever
+      - object_of_preposition
+      - person
+
+  - id: g070_q008
+    question_type: two_choice
+    prompt: You can eat ___ you like.
+    choices:
+      - text: whoever
+        correct: false
+      - text: whatever
+        correct: true
+    answer: whatever
+    explanation: >
+      eat の目的語になる「好きなもの」を表している。
+      食べ物・物なので whatever が自然。
+    translation: 好きなものを何でも食べてよい。
+    focus:
+      - whatever
+      - object_clause
+      - eat
+
+  - id: g070_q009
+    question_type: two_choice
+    prompt: ___ you are, you must follow the rules.
+    choices:
+      - text: Whoever
+        correct: true
+      - text: Whatever
+        correct: false
+    answer: Whoever
+    explanation: >
+      you are の内容が「あなたが誰であっても」という意味。
+      人の身分・正体を表すので Whoever が自然。
+    translation: あなたが誰であっても、規則には従わなければならない。
+    focus:
+      - whoever
+      - concession
+      - whoever_you_are
+
+  - id: g070_q010
+    question_type: two_choice
+    prompt: ___ you say, I will not change my mind.
+    choices:
+      - text: Whoever
+        correct: false
+      - text: Whatever
+        correct: true
+    answer: Whatever
+    explanation: >
+      say の目的語になる「あなたが言うこと」を表している。
+      「何を言っても」なので Whatever が自然。
+    translation: あなたが何を言っても、私は考えを変えない。
+    focus:
+      - whatever
+      - concession
+      - whatever_you_say
+
+  - id: g070_q011
+    question_type: two_choice
+    prompt: ___ calls me, tell them I am out.
+    choices:
+      - text: Whoever
+        correct: true
+      - text: Whatever
+        correct: false
+    answer: Whoever
+    explanation: >
+      calls me するのは人。
+      「誰が電話してきても」なので Whoever が自然。
+    translation: 誰が私に電話してきても、私は外出中だと伝えてください。
+    focus:
+      - whoever
+      - concession
+      - calls
+
+  - id: g070_q012
+    question_type: two_choice
+    prompt: Choose ___ color you like.
+    choices:
+      - text: whoever
+        correct: false
+      - text: whatever
+        correct: true
+    answer: whatever
+    explanation: >
+      whatever + 名詞 で「どんな〜でも」を表す。
+      whatever color you like で「好きな色を何色でも」。
+    translation: 好きな色を何色でも選びなさい。
+    focus:
+      - whatever
+      - whatever_plus_noun
+      - color
+
+common_mistakes:
+  - mistake: whoever と whatever をどちらも「何でも」と訳す
+    correction: >
+      whoever は人に使い、「誰でも」。
+      whatever は物・事に使い、「何でも」。
+  - mistake: whoever を物に使ってしまう
+    correction: >
+      物・事なら whatever。
+      Take whatever you need. が自然。
+  - mistake: whatever を人に使ってしまう
+    correction: >
+      人なら whoever。
+      Whoever comes first can choose a seat. が自然。
+  - mistake: whoever / whatever を疑問詞としてしか読めない
+    correction: >
+      複合関係詞では「〜する人は誰でも」「〜するものは何でも」という意味になる。
+  - mistake: 譲歩の意味を読み落とす
+    correction: >
+      Whoever wins は「誰が勝っても」。
+      Whatever happens は「何が起きても」。
+
+learning_notes:
+  - >
+    whoever = anyone who と考える。
+    「〜する人は誰でも」という意味。
+  - >
+    whatever = anything that と考える。
+    「〜するものは何でも」という意味。
+  - >
+    文頭に置かれると、譲歩の意味になることが多い。
+    Whoever wins, ... / Whatever happens, ... の形。
+  - >
+    whatever + 名詞 で「どんな〜でも」。
+    whatever color you like のように使う。
+
+prerequisites:
+  - g061
+  - g062
+  - g067
+
+next_items:
+  - g071
+  - g072
+  - g073

@@ -1,0 +1,343 @@
+id: g013
+file: g013.yaml
+
+title: be と be being
+type: verb_usage
+
+section:
+  id: s02
+  title: 現在形・現在進行形と動詞用法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 性質を述べるのか、一時的な振る舞いを述べるのか？
+
+core_concept:
+  be_simple:
+    form: be動詞の現在形
+    meaning: 性質・状態・身分・恒常的な特徴を表す
+    image: その人や物が、もともとそうである / 今そういう状態である
+    examples:
+      - sentence: He is kind.
+        ja: 彼は親切だ。
+        point: 彼の性格・特徴を述べている。
+      - sentence: She is quiet.
+        ja: 彼女は静かな人だ。
+        point: 普段の性格や状態を述べている。
+      - sentence: The box is heavy.
+        ja: その箱は重い。
+        point: 物の状態・性質を述べている。
+
+  be_being:
+    form: be動詞の現在進行形
+    meaning: 今だけの振る舞い・一時的な態度を表す
+    image: 今はそう振る舞っている / いつもそうとは限らない
+    examples:
+      - sentence: He is being kind today.
+        ja: 彼は今日は親切に振る舞っている。
+        point: 普段の性格ではなく、今日の一時的な振る舞いを述べている。
+      - sentence: You are being rude.
+        ja: 君は失礼な態度を取っている。
+        point: 今の態度・振る舞いを批判している。
+      - sentence: The children are being quiet.
+        ja: 子どもたちは静かにしている。
+        point: 一時的に静かに振る舞っている。
+
+main_rule: >
+  be動詞は普通、状態や性質を表すため現在進行形にしにくい。
+  しかし、人の態度・行動・振る舞いを表すときは be being を使える。
+  He is kind. は「彼は親切な人だ」。
+  He is being kind. は「彼は今、親切に振る舞っている」。
+  be being は「今だけそうしている」という一時性を表す。
+
+contrast_pairs:
+  - be_simple: He is polite.
+    be_being: He is being polite today.
+    point: >
+      is polite は普段の性格・特徴。
+      is being polite は今日だけの一時的な振る舞い。
+
+  - be_simple: She is quiet.
+    be_being: She is being quiet during the meeting.
+    point: >
+      is quiet は性格や状態。
+      is being quiet は会議中だけ静かにしているという行動。
+
+  - be_simple: You are rude.
+    be_being: You are being rude.
+    point: >
+      are rude は相手の性格を直接批判する強い表現。
+      are being rude は今の態度を批判する表現。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g013_q001
+    question_type: two_choice
+    prompt: He ___ very polite today.
+    choices:
+      - text: is
+        correct: false
+      - text: is being
+        correct: true
+    answer: is being
+    ja: 彼は今日はとても礼儀正しく振る舞っている。
+    explanation: >
+      today があり、普段の性格ではなく今日の一時的な振る舞いを表している。
+      したがって is being が自然。
+    focus:
+      - temporary_behavior
+      - today
+      - be_being
+
+  - id: g013_q002
+    question_type: two_choice
+    prompt: My sister ___ very kind.
+    choices:
+      - text: is
+        correct: true
+      - text: is being
+        correct: false
+    answer: is
+    ja: 私の姉はとても親切だ。
+    explanation: >
+      姉の性格・特徴を述べている。
+      一時的な振る舞いではないので is が自然。
+    focus:
+      - character
+      - stable_quality
+      - be_simple
+
+  - id: g013_q003
+    question_type: two_choice
+    prompt: You ___ rude. Please apologize.
+    choices:
+      - text: are
+        correct: false
+      - text: are being
+        correct: true
+    answer: are being
+    ja: 君は失礼な態度を取っている。謝りなさい。
+    explanation: >
+      今の態度を批判している文。
+      性格そのものではなく一時的な振る舞いなので are being が自然。
+    focus:
+      - current_attitude
+      - criticism
+      - be_being
+
+  - id: g013_q004
+    question_type: two_choice
+    prompt: This bag ___ heavy.
+    choices:
+      - text: is
+        correct: true
+      - text: is being
+        correct: false
+    answer: is
+    ja: このバッグは重い。
+    explanation: >
+      バッグの状態・性質を述べている。
+      物が「重く振る舞っている」わけではないので is being は不自然。
+    focus:
+      - state
+      - object_quality
+      - be_simple
+
+  - id: g013_q005
+    question_type: two_choice
+    prompt: The children ___ quiet now.
+    choices:
+      - text: are
+        correct: false
+      - text: are being
+        correct: true
+    answer: are being
+    ja: 子どもたちは今、静かにしている。
+    explanation: >
+      now があり、子どもたちが一時的に静かに振る舞っている状況。
+      したがって are being が自然。
+    focus:
+      - temporary_behavior
+      - now
+      - be_being
+
+  - id: g013_q006
+    question_type: two_choice
+    prompt: Tom ___ tall for his age.
+    choices:
+      - text: is
+        correct: true
+      - text: is being
+        correct: false
+    answer: is
+    ja: トムは年齢の割に背が高い。
+    explanation: >
+      tall は身体的特徴であり、本人の一時的な振る舞いではない。
+      したがって is が自然。
+    focus:
+      - physical_quality
+      - stable_state
+      - be_simple
+
+  - id: g013_q007
+    question_type: two_choice
+    prompt: Why ___ you so difficult today?
+    choices:
+      - text: are
+        correct: false
+      - text: are being
+        correct: true
+    answer: are being
+    ja: 今日はどうしてそんなに扱いにくい態度を取っているの？
+    explanation: >
+      today があり、今の態度・振る舞いについて言っている。
+      一時的な態度なので are being が自然。
+    focus:
+      - temporary_attitude
+      - today
+      - be_being
+
+  - id: g013_q008
+    question_type: two_choice
+    prompt: The room ___ dark.
+    choices:
+      - text: is
+        correct: true
+      - text: is being
+        correct: false
+    answer: is
+    ja: その部屋は暗い。
+    explanation: >
+      部屋の状態を述べている。
+      部屋が「暗く振る舞っている」わけではないので is being は不自然。
+    focus:
+      - state
+      - room_condition
+      - be_simple
+
+  - id: g013_q009
+    question_type: two_choice
+    prompt: She ___ silly. She usually acts more seriously.
+    choices:
+      - text: is
+        correct: false
+      - text: is being
+        correct: true
+    answer: is being
+    ja: 彼女はばかな振る舞いをしている。普段はもっと真面目に行動する。
+    explanation: >
+      She usually acts more seriously から、普段とは違う一時的な振る舞いだとわかる。
+      したがって is being が自然。
+    focus:
+      - contrast_with_usual
+      - temporary_behavior
+      - be_being
+
+  - id: g013_q010
+    question_type: two_choice
+    prompt: My father ___ a doctor.
+    choices:
+      - text: is
+        correct: true
+      - text: is being
+        correct: false
+    answer: is
+    ja: 私の父は医者だ。
+    explanation: >
+      職業・身分を表している。
+      一時的な振る舞いではないので is が自然。
+    focus:
+      - identity
+      - occupation
+      - be_simple
+
+  - id: g013_q011
+    question_type: two_choice
+    prompt: The students ___ careful during the experiment.
+    choices:
+      - text: are
+        correct: false
+      - text: are being
+        correct: true
+    answer: are being
+    ja: 生徒たちは実験中、注意深く行動している。
+    explanation: >
+      during the experiment があり、実験中の一時的な振る舞いを表している。
+      したがって are being が自然。
+    focus:
+      - temporary_behavior
+      - during_the_experiment
+      - be_being
+
+  - id: g013_q012
+    question_type: two_choice
+    prompt: This answer ___ correct.
+    choices:
+      - text: is
+        correct: true
+      - text: is being
+        correct: false
+    answer: is
+    ja: この答えは正しい。
+    explanation: >
+      答えの状態・性質を述べている。
+      答えが一時的にそう振る舞っているわけではないので is が自然。
+    focus:
+      - state
+      - correctness
+      - be_simple
+
+common_mistakes:
+  - mistake: be動詞は絶対に進行形にならないと思う
+    correction: >
+      be動詞は通常は状態を表すため進行形にしにくい。
+      しかし、人の態度・振る舞いを表すときは be being を使える。
+
+  - mistake: He is kind. と He is being kind. を同じ意味だと思う
+    correction: >
+      He is kind. は性格として親切。
+      He is being kind. は今だけ親切に振る舞っている、という意味。
+
+  - mistake: 物や状態にも be being を使ってしまう
+    correction: >
+      This bag is heavy. のような物の性質には普通 is being は使わない。
+      be being は主に人の一時的な態度・振る舞いに使う。
+
+learning_notes:
+  - >
+    be being は、現在進行形の中でも特殊な用法。
+    「存在している」ではなく「そう振る舞っている」と考えるとわかりやすい。
+  - >
+    rude, polite, careful, silly, difficult, quiet などは、
+    人の一時的な態度を表すとき be being と一緒に使える。
+  - >
+    tall, old, heavy, correct, dead, empty など、物理的性質や状態を表す語は、
+    普通 be being とは相性が悪い。
+  - >
+    be being は「いつもそうとは限らない」という含みを持ちやすい。
+
+prerequisites:
+  - g001
+
+next_items:
+  - g014
+  - g015

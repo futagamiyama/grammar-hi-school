@@ -1,0 +1,373 @@
+id: g064
+file: g064.yaml
+
+title: 関係副詞 where / when
+type: grammar_contrast
+
+section:
+  id: s08
+  title: 関係詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 場所を説明しているのか、時を説明しているのか？
+
+core_concept:
+  where:
+    form: 場所を表す名詞 + where + 主語 + 動詞 ...
+    meaning: そこで〜する場所、そこで〜した場所
+    image: 前の場所を、後ろの文で説明する
+    examples:
+      - sentence: This is the town where I was born.
+        ja: ここは私が生まれた町です。
+        point: the town という場所を where I was born が説明している。
+      - sentence: I visited the school where my father studied.
+        ja: 私は父が学んだ学校を訪れた。
+        point: the school という場所を説明しているので where。
+      - sentence: This is the room where we had the meeting.
+        ja: ここは私たちが会議をした部屋です。
+        point: the room という場所を説明している。
+
+  when:
+    form: 時を表す名詞 + when + 主語 + 動詞 ...
+    meaning: その時に〜する時、〜した時
+    image: 前の時を、後ろの文で説明する
+    examples:
+      - sentence: I remember the day when we first met.
+        ja: 私は私たちが初めて会った日を覚えている。
+        point: the day という時を when we first met が説明している。
+      - sentence: Summer is the season when many people travel.
+        ja: 夏は多くの人が旅行する季節だ。
+        point: the season という時期を説明しているので when。
+      - sentence: There are times when I feel nervous.
+        ja: 私が緊張する時がある。
+        point: times という時を説明している。
+
+  relation_to_preposition_plus_which:
+    form: where = in/at which, when = in/on/at which
+    meaning: 関係副詞は、前置詞 + which に近い働きをする
+    image: 場所・時の中で起きることを表す
+    examples:
+      - sentence: This is the town where I was born.
+        ja: ここは私が生まれた町です。
+        point: where は in which に近い。
+      - sentence: I remember the day when we first met.
+        ja: 私は私たちが初めて会った日を覚えている。
+        point: when は on which に近い。
+      - sentence: This is the house where he lives.
+        ja: これが彼が住んでいる家です。
+        point: where は in which に近い。
+
+main_rule: >
+  関係副詞は、場所や時を後ろから説明する関係詞。
+  場所を表す名詞を説明するなら where、時を表す名詞を説明するなら when を使う。
+  This is the town where I was born. は「私が生まれた町」。
+  I remember the day when we first met. は「私たちが初めて会った日」。
+  where は in/at which、when は in/on/at which に近い働きをする。
+  まず先行詞が場所か時かを見る。
+
+contrast_pairs:
+  - place: This is the town where I was born.
+    time: I remember the day when I was born.
+    point: >
+      the town は場所なので where。
+      the day は時なので when。
+
+  - place: This is the school where my father studied.
+    time: This is the year when my father graduated.
+    point: >
+      school は場所。
+      year は時。
+
+  - relative_adverb: This is the house where he lives.
+    relative_pronoun: This is the house which he bought.
+    point: >
+      where he lives は「そこで住んでいる」。
+      which he bought は「それを買った」。
+      後ろの文で場所の副詞が必要か、目的語が必要かを見る。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または where と when の使い分けを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g064_q001
+    question_type: two_choice
+    prompt: This is the town ___ I was born.
+    choices:
+      - text: where
+        correct: true
+      - text: when
+        correct: false
+    answer: where
+    explanation: >
+      the town は場所を表す名詞。
+      「そこで生まれた町」なので where を使う。
+    translation: ここは私が生まれた町です。
+    focus:
+      - where
+      - place_antecedent
+      - relative_adverb
+
+  - id: g064_q002
+    question_type: two_choice
+    prompt: I remember the day ___ we first met.
+    choices:
+      - text: where
+        correct: false
+      - text: when
+        correct: true
+    answer: when
+    explanation: >
+      the day は時を表す名詞。
+      「その日に初めて会った」なので when を使う。
+    translation: 私は私たちが初めて会った日を覚えている。
+    focus:
+      - when
+      - time_antecedent
+      - relative_adverb
+
+  - id: g064_q003
+    question_type: two_choice
+    prompt: This is the school ___ my father studied.
+    choices:
+      - text: where
+        correct: true
+      - text: when
+        correct: false
+    answer: where
+    explanation: >
+      the school は場所。
+      父がそこで学んだ学校を表すので where が自然。
+    translation: ここは私の父が学んだ学校です。
+    focus:
+      - where
+      - place_antecedent
+      - school
+
+  - id: g064_q004
+    question_type: two_choice
+    prompt: Summer is the season ___ many people travel.
+    choices:
+      - text: where
+        correct: false
+      - text: when
+        correct: true
+    answer: when
+    explanation: >
+      the season は時期を表す名詞。
+      その時期に多くの人が旅行するので when を使う。
+    translation: 夏は多くの人が旅行する季節だ。
+    focus:
+      - when
+      - time_antecedent
+      - season
+
+  - id: g064_q005
+    question_type: two_choice
+    prompt: This is the room ___ we had the meeting.
+    choices:
+      - text: where
+        correct: true
+      - text: when
+        correct: false
+    answer: where
+    explanation: >
+      the room は場所。
+      そこで会議をしたという意味なので where を使う。
+    translation: ここは私たちが会議をした部屋です。
+    focus:
+      - where
+      - place_antecedent
+      - room
+
+  - id: g064_q006
+    question_type: two_choice
+    prompt: There are times ___ I feel nervous.
+    choices:
+      - text: where
+        correct: false
+      - text: when
+        correct: true
+    answer: when
+    explanation: >
+      times は時を表す名詞。
+      「緊張する時がある」なので when が自然。
+    translation: 私が緊張する時がある。
+    focus:
+      - when
+      - time_antecedent
+      - times
+
+  - id: g064_q007
+    question_type: two_choice
+    prompt: I visited the village ___ my grandmother grew up.
+    choices:
+      - text: where
+        correct: true
+      - text: when
+        correct: false
+    answer: where
+    explanation: >
+      the village は場所。
+      祖母がそこで育った村を表すので where を使う。
+    translation: 私は祖母が育った村を訪れた。
+    focus:
+      - where
+      - place_antecedent
+      - village
+
+  - id: g064_q008
+    question_type: two_choice
+    prompt: I will never forget the year ___ I moved to Tokyo.
+    choices:
+      - text: where
+        correct: false
+      - text: when
+        correct: true
+    answer: when
+    explanation: >
+      the year は時を表す名詞。
+      東京へ引っ越した年を説明しているので when を使う。
+    translation: 私は東京へ引っ越した年を決して忘れない。
+    focus:
+      - when
+      - time_antecedent
+      - year
+
+  - id: g064_q009
+    question_type: two_choice
+    prompt: This is the restaurant ___ we had dinner.
+    choices:
+      - text: where
+        correct: true
+      - text: when
+        correct: false
+    answer: where
+    explanation: >
+      the restaurant は場所。
+      そこで夕食を食べたという意味なので where が自然。
+    translation: ここは私たちが夕食を食べたレストランです。
+    focus:
+      - where
+      - place_antecedent
+      - restaurant
+
+  - id: g064_q010
+    question_type: two_choice
+    prompt: Monday is the day ___ the shop is closed.
+    choices:
+      - text: where
+        correct: false
+      - text: when
+        correct: true
+    answer: when
+    explanation: >
+      the day は時を表す名詞。
+      その日に店が閉まっているので when を使う。
+    translation: 月曜日はその店が閉まっている日です。
+    focus:
+      - when
+      - time_antecedent
+      - day
+
+  - id: g064_q011
+    question_type: two_choice
+    prompt: This is the house ___ he lives.
+    choices:
+      - text: where
+        correct: true
+      - text: which
+        correct: false
+    answer: where
+    explanation: >
+      live はここでは「そこに住む」という場所の情報を必要とする。
+      the house を場所として説明しているので where が自然。
+      which を使うなら This is the house in which he lives. となる。
+    translation: これが彼が住んでいる家です。
+    focus:
+      - where
+      - relative_adverb
+      - where_vs_which
+
+  - id: g064_q012
+    question_type: two_choice
+    prompt: This is the house ___ he bought.
+    choices:
+      - text: where
+        correct: false
+      - text: which
+        correct: true
+    answer: which
+    explanation: >
+      bought の目的語が必要で、「彼がそれを買った家」という意味。
+      場所の副詞ではなく目的語を表す関係代名詞 which が自然。
+    translation: これが彼が買った家です。
+    focus:
+      - which
+      - object_relative
+      - where_vs_which
+
+common_mistakes:
+  - mistake: 場所を表す名詞の後なら必ず where を使う
+    correction: >
+      後ろの文で場所の副詞が必要なときは where。
+      目的語が欠けているなら which を使う。
+      the house where he lives / the house which he bought。
+  - mistake: 時を表す名詞の後に where を使ってしまう
+    correction: >
+      day, year, season, time など時を説明するなら when を使う。
+  - mistake: where を関係代名詞だと思う
+    correction: >
+      where は関係副詞。
+      in which, at which などに近い働きをする。
+  - mistake: when を疑問詞の「いつ」だけだと思う
+    correction: >
+      when は関係副詞として「〜する時」を表すこともできる。
+      the day when we met のように使う。
+  - mistake: which と where の違いを先行詞だけで判断する
+    correction: >
+      先行詞が場所でも、後ろの文で目的語が欠けていれば which。
+      後ろの文が完全で、場所情報だけを足すなら where。
+
+learning_notes:
+  - >
+    where は場所を説明する関係副詞。
+    the town where I was born は「私が生まれた町」。
+  - >
+    when は時を説明する関係副詞。
+    the day when we first met は「私たちが初めて会った日」。
+  - >
+    関係副詞の後ろの文は、基本的に主語・動詞・目的語がそろった形になりやすい。
+    where I was born, when we first met のように読む。
+  - >
+    場所名詞の後でも、which になる場合がある。
+    the house which he bought は bought の目的語が欠けている。
+
+prerequisites:
+  - g061
+  - g062
+  - g063
+
+next_items:
+  - g065
+  - g066
+  - g067

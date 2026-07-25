@@ -1,0 +1,368 @@
+id: g019
+file: g019.yaml
+
+title: taste / smell / feel の使い分け
+type: verb_usage
+
+section:
+  id: s02
+  title: 現在形・現在進行形と動詞用法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 感覚を表す状態か、意識して試す・確かめる動作かを判断できるか？
+
+core_concept:
+  overview: >
+    taste, smell, feel は、状態を表す用法と、動作を表す用法の両方を持つ。
+    「味がする」「においがする」「手触りがする」のように、物がどのように感じられるかを言うときは、
+    現在形を使うのが基本。
+    一方、「味見している」「においをかいでいる」「手で触って確かめている」のように、
+    人や動物が意識して感覚を使っている動作なら、現在進行形を使える。
+
+  taste_as_state:
+    meaning: 味がする
+    typical_form: 現在形
+    example: This soup tastes salty.
+    ja: このスープは塩辛い味がする。
+    point: スープがどのような味かを述べている状態用法。
+
+  taste_as_action:
+    meaning: 味見する
+    typical_form: 現在進行形
+    example: The chef is tasting the soup.
+    ja: シェフがスープを味見している。
+    point: 人が意識して味を確かめている動作用法。
+
+  smell_as_state:
+    meaning: においがする
+    typical_form: 現在形
+    example: These flowers smell sweet.
+    ja: これらの花は甘いにおいがする。
+    point: 花がどのようなにおいかを述べている状態用法。
+
+  smell_as_action:
+    meaning: においをかぐ
+    typical_form: 現在進行形
+    example: The dog is smelling the bag.
+    ja: 犬がそのかばんのにおいをかいでいる。
+    point: 動物が意識してにおいを調べている動作用法。
+
+  feel_as_state:
+    meaning: 手触りがする・感じがする
+    typical_form: 現在形
+    example: This towel feels soft.
+    ja: このタオルは柔らかい手触りがする。
+    point: 物がどのように感じられるかを述べている状態用法。
+
+  feel_as_action:
+    meaning: 手で触って確かめる
+    typical_form: 現在進行形
+    example: She is feeling the wall for a switch.
+    ja: 彼女はスイッチを探して壁を手で触っている。
+    point: 人が手で触って何かを確かめている動作用法。
+
+main_rule: >
+  taste, smell, feel は、物の性質や感覚を表すときは現在形を使う。
+  人や動物が意識して「味見する」「においをかぐ」「触って確かめる」という動作をしているなら、
+  現在進行形を使える。日本語の「〜している」だけで判断せず、状態を述べているのか、
+  感覚を使う動作をしているのかを区別する。
+
+contrast_pairs:
+  - natural: This cake tastes sweet.
+    unnatural: This cake is tasting sweet.
+    point: >
+      ケーキがどんな味かを述べているので、状態用法の tastes が自然。
+
+  - natural: The chef is tasting the sauce now.
+    unnatural: The chef tastes the sauce now.
+    point: >
+      シェフが今味を確かめている動作なので、現在進行形 is tasting が自然。
+
+  - natural: These flowers smell nice.
+    unnatural: These flowers are smelling nice.
+    point: >
+      花がどんなにおいかを述べているので、状態用法の smell が自然。
+
+  - natural: The dog is smelling the box.
+    unnatural: The dog smells the box now.
+    point: >
+      犬が箱のにおいをかいで調べている動作なので、現在進行形 is smelling が自然。
+
+  - natural: This blanket feels warm.
+    unnatural: This blanket is feeling warm.
+    point: >
+      毛布がどのように感じられるかを述べているので、状態用法の feels が自然。
+
+  - natural: She is feeling the door in the dark.
+    unnatural: She feels the door in the dark now.
+    point: >
+      暗闇で手探りしている動作なので、現在進行形 is feeling が自然。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g019_q001
+    question_type: two_choice
+    prompt: This soup ___ salty.
+    choices:
+      - text: tastes
+        correct: true
+      - text: is tasting
+        correct: false
+    answer: tastes
+    explanation: >
+      スープがどのような味かを述べている状態用法なので、現在形 tastes が自然。
+      スープ自身が味見しているわけではない。
+    translation: このスープは塩辛い味がする。
+    focus:
+      - taste
+      - state
+      - present_simple
+
+  - id: g019_q002
+    question_type: two_choice
+    prompt: The chef ___ the soup now.
+    choices:
+      - text: tastes
+        correct: false
+      - text: is tasting
+        correct: true
+    answer: is tasting
+    explanation: >
+      now があり、シェフが味を確かめている動作を表すので、現在進行形 is tasting が自然。
+    translation: シェフは今、そのスープを味見している。
+    focus:
+      - taste
+      - action_now
+      - present_continuous
+
+  - id: g019_q003
+    question_type: two_choice
+    prompt: This milk ___ sour.
+    choices:
+      - text: tastes
+        correct: true
+      - text: is tasting
+        correct: false
+    answer: tastes
+    explanation: >
+      牛乳が酸っぱい味がするという性質・状態を述べているので、現在形 tastes が自然。
+    translation: この牛乳は酸っぱい味がする。
+    focus:
+      - taste
+      - state
+      - present_simple
+
+  - id: g019_q004
+    question_type: two_choice
+    prompt: She ___ the sauce to check the flavor.
+    choices:
+      - text: tastes
+        correct: false
+      - text: is tasting
+        correct: true
+    answer: is tasting
+    explanation: >
+      味を確かめるためにソースを味見している動作なので、現在進行形 is tasting が自然。
+    translation: 彼女は味を確認するために、そのソースを味見している。
+    focus:
+      - taste
+      - deliberate_action
+      - present_continuous
+
+  - id: g019_q005
+    question_type: two_choice
+    prompt: These flowers ___ sweet.
+    choices:
+      - text: smell
+        correct: true
+      - text: are smelling
+        correct: false
+    answer: smell
+    explanation: >
+      花がどのようなにおいかを述べている状態用法なので、現在形 smell が自然。
+      花が自分でにおいをかいでいるわけではない。
+    translation: これらの花は甘いにおいがする。
+    focus:
+      - smell
+      - state
+      - present_simple
+
+  - id: g019_q006
+    question_type: two_choice
+    prompt: The dog ___ the bag now.
+    choices:
+      - text: smells
+        correct: false
+      - text: is smelling
+        correct: true
+    answer: is smelling
+    explanation: >
+      now があり、犬がかばんのにおいをかいでいる動作を表しているので、現在進行形 is smelling が自然。
+    translation: 犬は今、そのかばんのにおいをかいでいる。
+    focus:
+      - smell
+      - animal_action
+      - present_continuous
+
+  - id: g019_q007
+    question_type: two_choice
+    prompt: The kitchen ___ of fresh bread.
+    choices:
+      - text: smells
+        correct: true
+      - text: is smelling
+        correct: false
+    answer: smells
+    explanation: >
+      台所に焼きたてのパンのにおいがするという状態を述べているので、現在形 smells が自然。
+    translation: 台所は焼きたてのパンのにおいがする。
+    focus:
+      - smell_of
+      - state
+      - present_simple
+
+  - id: g019_q008
+    question_type: two_choice
+    prompt: He ___ the milk because he thinks it may be bad.
+    choices:
+      - text: smells
+        correct: false
+      - text: is smelling
+        correct: true
+    answer: is smelling
+    explanation: >
+      牛乳が悪くなっているか確かめるために、意識してにおいをかいでいる動作なので、現在進行形 is smelling が自然。
+    translation: 彼は牛乳が悪くなっているかもしれないと思って、においをかいでいる。
+    focus:
+      - smell
+      - deliberate_action
+      - present_continuous
+
+  - id: g019_q009
+    question_type: two_choice
+    prompt: This towel ___ soft.
+    choices:
+      - text: feels
+        correct: true
+      - text: is feeling
+        correct: false
+    answer: feels
+    explanation: >
+      タオルが柔らかい手触りであるという状態を述べているので、現在形 feels が自然。
+    translation: このタオルは柔らかい手触りがする。
+    focus:
+      - feel
+      - state
+      - present_simple
+
+  - id: g019_q010
+    question_type: two_choice
+    prompt: She ___ the wall for a light switch.
+    choices:
+      - text: feels
+        correct: false
+      - text: is feeling
+        correct: true
+    answer: is feeling
+    explanation: >
+      スイッチを探すために壁を手で触って確かめている動作なので、現在進行形 is feeling が自然。
+    translation: 彼女は電気のスイッチを探して壁を手で触っている。
+    focus:
+      - feel
+      - touch_action
+      - present_continuous
+
+  - id: g019_q011
+    question_type: two_choice
+    prompt: This shirt ___ rough.
+    choices:
+      - text: feels
+        correct: true
+      - text: is feeling
+        correct: false
+    answer: feels
+    explanation: >
+      シャツがざらざらした手触りであるという状態を述べているので、現在形 feels が自然。
+    translation: このシャツはざらざらした手触りがする。
+    focus:
+      - feel
+      - texture
+      - present_simple
+
+  - id: g019_q012
+    question_type: two_choice
+    prompt: The doctor ___ the patient's neck now.
+    choices:
+      - text: feels
+        correct: false
+      - text: is feeling
+        correct: true
+    answer: is feeling
+    explanation: >
+      医師が診察のために患者の首を触って確かめている動作なので、現在進行形 is feeling が自然。
+    translation: 医師は今、患者の首を触って調べている。
+    focus:
+      - feel
+      - medical_context
+      - present_continuous
+
+common_mistakes:
+  - mistake: 日本語の「味がしている」「においがしている」を現在進行形にしてしまう
+    correction: >
+      物がどんな味・におい・手触りかを述べるときは、基本的に現在形を使う。
+      This soup tastes salty. / These flowers smell sweet. / This towel feels soft.
+
+  - mistake: taste, smell, feel はすべて進行形にできないと思ってしまう
+    correction: >
+      状態用法では進行形にしにくいが、人や動物が意識して味見する・においをかぐ・触って確かめる動作なら進行形にできる。
+      The chef is tasting the soup. / The dog is smelling the bag. / She is feeling the wall.
+
+  - mistake: 主語を見ずに動詞だけで判断する
+    correction: >
+      This soup tastes salty. の主語は soup なので、スープの性質を述べている。
+      The chef is tasting the soup. の主語は chef なので、味見する動作を述べている。
+
+  - mistake: feel をすべて「感じる」とだけ覚える
+    correction: >
+      feel は、物の手触りを述べる状態用法と、手で触って確かめる動作用法がある。
+      どちらの意味かを文脈で判断する。
+
+learning_notes:
+  - >
+    taste, smell, feel は、look / see や hear / listen と同じく、
+    「状態」と「意識的な動作」の違いが重要になる。
+  - >
+    物が主語で「〜な味がする」「〜なにおいがする」「〜な感じがする」と言う場合は、現在形が基本。
+  - >
+    人や動物が主語で、感覚を使って何かを確かめている場合は、現在進行形が自然になりやすい。
+  - >
+    feel は「気分・体調」を表すときに I'm feeling better. のような進行形も自然に使われる。
+    このカードでは、主に「手触り」と「触って確かめる動作」に絞って練習する。
+
+prerequisites:
+  - g001
+  - g017
+  - g018
+
+next_items:
+  - g020

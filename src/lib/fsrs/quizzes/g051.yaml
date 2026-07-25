@@ -1,0 +1,357 @@
+id: g051
+file: g051.yaml
+
+title: many / much
+type: grammar_contrast
+
+section:
+  id: s06
+  title: 名詞・冠詞・数量表現
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 数えられる名詞か、量として見る名詞か？
+
+core_concept:
+  many:
+    form: many + 複数可算名詞
+    meaning: 多くの〜
+    image: 1つ、2つと数えられるものがたくさんある
+    examples:
+      - sentence: There are many students in the classroom.
+        ja: 教室には多くの生徒がいる。
+        point: students は数えられる複数名詞なので many。
+      - sentence: She has read many books.
+        ja: 彼女は多くの本を読んだことがある。
+        point: books は数えられる複数名詞なので many。
+      - sentence: How many questions did you answer?
+        ja: あなたはいくつの質問に答えましたか。
+        point: questions は数えられるので How many。
+
+  much:
+    form: much + 不可算名詞
+    meaning: 多くの〜、多量の〜
+    image: 数ではなく量として見るものがたくさんある
+    examples:
+      - sentence: We do not have much time.
+        ja: 私たちにはあまり時間がない。
+        point: time は不可算名詞なので much。
+      - sentence: How much water do you need?
+        ja: どれくらいの水が必要ですか。
+        point: water は量として見るので How much。
+      - sentence: He does not have much money.
+        ja: 彼にはあまりお金がない。
+        point: money は不可算名詞なので much。
+
+main_rule: >
+  many は複数可算名詞に使い、much は不可算名詞に使う。
+  many books, many students, many questions のように、1つ2つと数えられるものには many。
+  much time, much water, much money のように、量として見るものには much。
+  疑問文では How many + 複数可算名詞、How much + 不可算名詞を使う。
+  否定文では not many, not much がよく使われる。
+  肯定文では many/much も使えるが、日常的には a lot of がよく使われる。
+
+contrast_pairs:
+  - countable: many books
+    uncountable: much time
+    point: >
+      books は数えられるので many。
+      time は量として見るので much。
+
+  - countable: How many people came?
+    uncountable: How much money do you need?
+    point: >
+      people は人数として数えられるので How many。
+      money は金額・量として見るので How much。
+
+  - countable: I do not have many friends.
+    uncountable: I do not have much free time.
+    point: >
+      friends は複数可算名詞なので many。
+      free time は不可算名詞なので much。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または many と much の使い分けを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g051_q001
+    question_type: two_choice
+    prompt: There are ___ students in the classroom.
+    choices:
+      - text: many
+        correct: true
+      - text: much
+        correct: false
+    answer: many
+    explanation: >
+      students は数えられる複数名詞。
+      複数可算名詞には many を使う。
+    translation: 教室には多くの生徒がいる。
+    focus:
+      - many
+      - countable_plural
+      - students
+
+  - id: g051_q002
+    question_type: two_choice
+    prompt: We do not have ___ time.
+    choices:
+      - text: many
+        correct: false
+      - text: much
+        correct: true
+    answer: much
+    explanation: >
+      time は不可算名詞。
+      量として見る名詞には much を使う。
+    translation: 私たちにはあまり時間がない。
+    focus:
+      - much
+      - uncountable_noun
+      - time
+
+  - id: g051_q003
+    question_type: two_choice
+    prompt: How ___ books did you buy?
+    choices:
+      - text: many
+        correct: true
+      - text: much
+        correct: false
+    answer: many
+    explanation: >
+      books は数えられる複数名詞。
+      数をたずねるので How many books が自然。
+    translation: あなたは何冊の本を買いましたか。
+    focus:
+      - how_many
+      - countable_plural
+      - books
+
+  - id: g051_q004
+    question_type: two_choice
+    prompt: How ___ water do you need?
+    choices:
+      - text: many
+        correct: false
+      - text: much
+        correct: true
+    answer: much
+    explanation: >
+      water は不可算名詞。
+      量をたずねるので How much water が自然。
+    translation: どれくらいの水が必要ですか。
+    focus:
+      - how_much
+      - uncountable_noun
+      - water
+
+  - id: g051_q005
+    question_type: two_choice
+    prompt: She does not have ___ friends in this city.
+    choices:
+      - text: many
+        correct: true
+      - text: much
+        correct: false
+    answer: many
+    explanation: >
+      friends は数えられる複数名詞。
+      not many friends で「あまり多くの友人はいない」。
+    translation: 彼女にはこの町にあまり多くの友人がいない。
+    focus:
+      - many
+      - countable_plural
+      - friends
+
+  - id: g051_q006
+    question_type: two_choice
+    prompt: He does not have ___ money.
+    choices:
+      - text: many
+        correct: false
+      - text: much
+        correct: true
+    answer: much
+    explanation: >
+      money は不可算名詞。
+      not much money で「あまり多くのお金はない」。
+    translation: 彼にはあまりお金がない。
+    focus:
+      - much
+      - uncountable_noun
+      - money
+
+  - id: g051_q007
+    question_type: two_choice
+    prompt: I made ___ mistakes on the test.
+    choices:
+      - text: many
+        correct: true
+      - text: much
+        correct: false
+    answer: many
+    explanation: >
+      mistakes は数えられる複数名詞。
+      many mistakes で「多くのミス」。
+    translation: 私はその試験で多くのミスをした。
+    focus:
+      - many
+      - countable_plural
+      - mistakes
+
+  - id: g051_q008
+    question_type: two_choice
+    prompt: There was not ___ information on the website.
+    choices:
+      - text: many
+        correct: false
+      - text: much
+        correct: true
+    answer: much
+    explanation: >
+      information は不可算名詞。
+      not much information で「あまり多くの情報はない」。
+    translation: そのウェブサイトにはあまり多くの情報がなかった。
+    focus:
+      - much
+      - uncountable_noun
+      - information
+
+  - id: g051_q009
+    question_type: two_choice
+    prompt: How ___ people came to the meeting?
+    choices:
+      - text: many
+        correct: true
+      - text: much
+        correct: false
+    answer: many
+    explanation: >
+      people は人数として数えられる。
+      数をたずねるので How many people が自然。
+    translation: 何人がその会議に来ましたか。
+    focus:
+      - how_many
+      - countable_plural
+      - people
+
+  - id: g051_q010
+    question_type: two_choice
+    prompt: How ___ sugar do you want in your tea?
+    choices:
+      - text: many
+        correct: false
+      - text: much
+        correct: true
+    answer: much
+    explanation: >
+      sugar は量として見る不可算名詞。
+      量をたずねるので How much sugar が自然。
+    translation: 紅茶にどれくらい砂糖を入れますか。
+    focus:
+      - how_much
+      - uncountable_noun
+      - sugar
+
+  - id: g051_q011
+    question_type: two_choice
+    prompt: There are not ___ cars on the road today.
+    choices:
+      - text: many
+        correct: true
+      - text: much
+        correct: false
+    answer: many
+    explanation: >
+      cars は数えられる複数名詞。
+      not many cars で「あまり多くの車はない」。
+    translation: 今日は道路に車があまり多くない。
+    focus:
+      - many
+      - countable_plural
+      - cars
+
+  - id: g051_q012
+    question_type: two_choice
+    prompt: I do not drink ___ coffee.
+    choices:
+      - text: many
+        correct: false
+      - text: much
+        correct: true
+    answer: much
+    explanation: >
+      coffee は飲み物として量で見る不可算名詞。
+      not much coffee で「あまり多くのコーヒーは飲まない」。
+    translation: 私はあまりコーヒーを飲まない。
+    focus:
+      - much
+      - uncountable_noun
+      - coffee
+
+common_mistakes:
+  - mistake: many と much をどちらも「たくさん」とだけ覚える
+    correction: >
+      many は数えられる複数名詞に使う。
+      much は不可算名詞に使う。
+      名詞が数か量かで判断する。
+  - mistake: many money と言ってしまう
+    correction: >
+      money は不可算名詞なので much money。
+      日常的には a lot of money もよく使う。
+  - mistake: much books と言ってしまう
+    correction: >
+      books は複数可算名詞なので many books。
+      much は使わない。
+  - mistake: information を可算名詞として many informations としてしまう
+    correction: >
+      information は不可算名詞。
+      much information または a lot of information とする。
+      個別の情報は pieces of information と表す。
+  - mistake: How many と How much を日本語の「いくつ」だけで判断する
+    correction: >
+      数をたずねるなら How many。
+      量・金額・時間などをたずねるなら How much。
+
+learning_notes:
+  - >
+    many は「数」、much は「量」。
+    まず後ろの名詞が数えられるかどうかを見る。
+  - >
+    How many books? は「何冊」。
+    How much water? は「どれくらいの水」。
+  - >
+    time, money, water, information, advice, homework, coffee, sugar などは
+    高校英語でよく出る不可算名詞。
+  - >
+    肯定文では many/much より a lot of が自然なことも多い。
+    ただし文法問題では many/much の可算・不可算の判定が重要。
+
+prerequisites:
+  - g049
+  - g050
+
+next_items:
+  - g052
+  - g053
+  - g054

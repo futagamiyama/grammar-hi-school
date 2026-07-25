@@ -1,0 +1,358 @@
+id: g046
+file: g046.yaml
+
+title: enough to do
+type: construction
+
+section:
+  id: s05
+  title: 不定詞・動名詞・分詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 〜するのに十分か？
+
+core_concept:
+  adjective_enough_to_do:
+    form: 形容詞/副詞 + enough + to do
+    meaning: 〜するのに十分...である
+    image: 条件を満たしていて、後ろの行為が可能になる
+    examples:
+      - sentence: He is old enough to drive.
+        ja: 彼は運転できる年齢に達している。
+        point: 運転するのに十分年を取っている。
+      - sentence: This box is light enough to carry.
+        ja: この箱は運べるほど軽い。
+        point: 運ぶことができる程度に軽い。
+      - sentence: She spoke slowly enough for us to understand.
+        ja: 彼女は私たちが理解できるほどゆっくり話した。
+        point: 私たちが理解できる程度にゆっくり話した。
+
+  enough_noun_to_do:
+    form: enough + 名詞 + to do
+    meaning: 〜するのに十分な名詞がある
+    image: 必要な量・数が足りている
+    examples:
+      - sentence: We have enough time to finish the work.
+        ja: 私たちにはその仕事を終えるのに十分な時間がある。
+        point: finish the work に必要な time が十分ある。
+      - sentence: She has enough money to buy the ticket.
+        ja: 彼女にはそのチケットを買うのに十分なお金がある。
+        point: buy the ticket に必要な money が十分ある。
+      - sentence: There are enough chairs for everyone to sit down.
+        ja: 全員が座るのに十分な椅子がある。
+        point: sit down に必要な chairs の数が足りている。
+
+main_rule: >
+  enough to do は「〜するのに十分」という意味を表す。
+  形容詞・副詞と使う場合は、形容詞/副詞 + enough + to do の語順になる。
+  old enough to drive, light enough to carry, slowly enough to understand のように使う。
+  名詞と使う場合は、enough + 名詞 + to do の語順になる。
+  enough time to finish, enough money to buy のように使う。
+  too ... to do が「〜すぎてできない」という否定的な結果を表すのに対し、
+  enough to do は「十分〜なのでできる」という可能性を表すことが多い。
+
+contrast_pairs:
+  - enough_to_do: He is old enough to drive.
+    too_to_do: He is too young to drive.
+    point: >
+      old enough to drive は「運転できる年齢だ」。
+      too young to drive は「若すぎて運転できない」。
+
+  - enough_to_do: This box is light enough to carry.
+    too_to_do: This box is too heavy to carry.
+    point: >
+      light enough to carry は「運べるほど軽い」。
+      too heavy to carry は「重すぎて運べない」。
+
+  - enough_noun: We have enough time to finish the work.
+    not_enough_noun: We do not have enough time to finish the work.
+    point: >
+      enough time to finish は「終えるのに十分な時間」。
+      not enough time to finish は「終えるのに十分な時間がない」。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または enough to do の語順と意味を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g046_q001
+    question_type: two_choice
+    prompt: He is old ___ to drive.
+    choices:
+      - text: enough
+        correct: true
+      - text: too
+        correct: false
+    answer: enough
+    explanation: >
+      old enough to drive で「運転するのに十分な年齢である」。
+      too old to drive だと「年を取りすぎて運転できない」という別の意味になる。
+    translation: 彼は運転できる年齢に達している。
+    focus:
+      - adjective_enough_to_do
+      - old_enough_to_drive
+      - ability
+
+  - id: g046_q002
+    question_type: two_choice
+    prompt: He is too young ___.
+    choices:
+      - text: to drive
+        correct: true
+      - text: driving
+        correct: false
+    answer: to drive
+    explanation: >
+      too young to drive で「若すぎて運転できない」。
+      enough to do との対比として、too ... to do も to do を使う。
+    translation: 彼は若すぎて運転できない。
+    focus:
+      - too_to_do
+      - contrast
+      - to_infinitive
+
+  - id: g046_q003
+    question_type: two_choice
+    prompt: This box is light enough ___.
+    choices:
+      - text: to carry
+        correct: true
+      - text: carrying
+        correct: false
+    answer: to carry
+    explanation: >
+      light enough to carry で「運べるほど軽い」。
+      enough の後ろは to + 動詞の原形を使う。
+    translation: この箱は運べるほど軽い。
+    focus:
+      - enough_to_do
+      - light_enough_to_carry
+      - to_infinitive
+
+  - id: g046_q004
+    question_type: two_choice
+    prompt: This box is ___ enough to carry.
+    choices:
+      - text: light
+        correct: true
+      - text: heavy
+        correct: false
+    answer: light
+    explanation: >
+      carry できるほど十分という意味なので、light enough が自然。
+      heavy enough to carry だと意味が不自然になる。
+    translation: この箱は運べるほど軽い。
+    focus:
+      - adjective_enough_to_do
+      - semantic_fit
+      - light
+
+  - id: g046_q005
+    question_type: two_choice
+    prompt: We have enough time ___ the work.
+    choices:
+      - text: to finish
+        correct: true
+      - text: finishing
+        correct: false
+    answer: to finish
+    explanation: >
+      enough time to finish で「終えるのに十分な時間」。
+      enough + 名詞 + to do の形。
+    translation: 私たちにはその仕事を終えるのに十分な時間がある。
+    focus:
+      - enough_noun_to_do
+      - enough_time
+      - to_infinitive
+
+  - id: g046_q006
+    question_type: two_choice
+    prompt: She has enough money ___ the ticket.
+    choices:
+      - text: to buy
+        correct: true
+      - text: buying
+        correct: false
+    answer: to buy
+    explanation: >
+      enough money to buy で「買うのに十分なお金」。
+      enough + 名詞 + to do の形を使う。
+    translation: 彼女にはそのチケットを買うのに十分なお金がある。
+    focus:
+      - enough_noun_to_do
+      - enough_money
+      - buy
+
+  - id: g046_q007
+    question_type: two_choice
+    prompt: The water is warm enough ___.
+    choices:
+      - text: to swim in
+        correct: true
+      - text: swimming in
+        correct: false
+    answer: to swim in
+    explanation: >
+      warm enough to swim in で「泳げるほど暖かい」。
+      water との関係で in が必要なので、to swim in とする。
+    translation: その水は泳げるほど暖かい。
+    focus:
+      - enough_to_do
+      - preposition_remains
+      - swim_in
+
+  - id: g046_q008
+    question_type: two_choice
+    prompt: The room is large enough ___ everyone.
+    choices:
+      - text: to hold
+        correct: true
+      - text: holding
+        correct: false
+    answer: to hold
+    explanation: >
+      large enough to hold everyone で「全員を収容できるほど広い」。
+      enough の後ろは to do。
+    translation: その部屋は全員を収容できるほど広い。
+    focus:
+      - enough_to_do
+      - large_enough
+      - capacity
+
+  - id: g046_q009
+    question_type: two_choice
+    prompt: She spoke slowly enough for us ___.
+    choices:
+      - text: to understand
+        correct: true
+      - text: understanding
+        correct: false
+    answer: to understand
+    explanation: >
+      for us to understand で「私たちが理解するのに」。
+      slowly enough for us to understand が自然。
+    translation: 彼女は私たちが理解できるほどゆっくり話した。
+    focus:
+      - adverb_enough_to_do
+      - for_someone_to_do
+      - understand
+
+  - id: g046_q010
+    question_type: two_choice
+    prompt: The explanation was clear enough for beginners ___.
+    choices:
+      - text: to follow
+        correct: true
+      - text: following
+        correct: false
+    answer: to follow
+    explanation: >
+      clear enough for beginners to follow で
+      「初心者が理解してついていけるほど明確」。
+      for beginners は to follow の意味上の主語。
+    translation: その説明は初心者がついていけるほど明確だった。
+    focus:
+      - enough_to_do
+      - for_someone_to_do
+      - clear_enough
+
+  - id: g046_q011
+    question_type: two_choice
+    prompt: There are enough chairs for everyone ___.
+    choices:
+      - text: to sit down
+        correct: true
+      - text: sitting down
+        correct: false
+    answer: to sit down
+    explanation: >
+      enough chairs for everyone to sit down で
+      「全員が座るのに十分な椅子」。
+      enough + 名詞 + for 人 to do の形。
+    translation: 全員が座るのに十分な椅子がある。
+    focus:
+      - enough_noun_to_do
+      - for_everyone_to_do
+      - chairs
+
+  - id: g046_q012
+    question_type: two_choice
+    prompt: This sentence is easy enough ___.
+    choices:
+      - text: to understand
+        correct: true
+      - text: understanding
+        correct: false
+    answer: to understand
+    explanation: >
+      easy enough to understand で「理解できるほど簡単」。
+      形容詞 + enough + to do の語順。
+    translation: この文は理解できるほど簡単だ。
+    focus:
+      - enough_to_do
+      - easy_enough
+      - understand
+
+common_mistakes:
+  - mistake: enough old to drive のように語順を間違える
+    correction: >
+      形容詞・副詞と使う場合は、形容詞/副詞 + enough + to do。
+      old enough to drive が正しい。
+  - mistake: enough to doing としてしまう
+    correction: >
+      enough の後ろは to + 動詞の原形。
+      enough to do の形を使う。
+  - mistake: enough time finish のように to を抜かす
+    correction: >
+      enough + 名詞 + to do の形。
+      enough time to finish, enough money to buy のように to が必要。
+  - mistake: too ... to do と enough to do の意味を混同する
+    correction: >
+      too young to drive は「若すぎて運転できない」。
+      old enough to drive は「運転できる年齢だ」。
+  - mistake: 必要な前置詞を落とす
+    correction: >
+      swim in the water なので The water is warm enough to swim in.
+      のように in を残す。
+
+learning_notes:
+  - >
+    enough to do は「条件を満たしているので、できる」という感覚を持つ。
+  - >
+    形容詞・副詞と使う場合は、old enough, slowly enough のように
+    enough は形容詞・副詞の後ろに置く。
+  - >
+    名詞と使う場合は、enough time, enough money, enough chairs のように
+    enough は名詞の前に置く。
+  - >
+    too ... to do は「強すぎてできない」。
+    enough to do は「十分なのでできる」。
+    この対比で覚えるとよい。
+
+prerequisites:
+  - g039
+  - g045
+
+next_items:
+  - g047
+  - g048
+  - g049

@@ -1,0 +1,358 @@
+id: g017
+file: g017.yaml
+
+title: see / look / watch の使い分け
+type: verb_usage
+
+section:
+  id: s02
+  title: 現在形・現在進行形と動詞用法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 見える状態か、意識して見る動作か、じっと見る動作かを判断できるか？
+
+core_concept:
+  overview: >
+    see, look, watch はどれも「見る」と訳されることがあるが、英語では意味が違う。
+    see は「自然に目に入る・見える」という知覚の状態に近い。
+    look は「意識して目を向ける」という動作で、普通は look at の形で使う。
+    watch は「動いているもの・変化するものをしばらく見る、観察する」という動作である。
+    そのため、see は現在形で使われやすく、look や watch は今している動作なら現在進行形になりやすい。
+
+  see:
+    meaning: 自然に見える・目に入る
+    typical_form: 現在形
+    example: I see a bird in the tree.
+    ja: 木に鳥が見える。
+    point: 意識して見ようとしている動作ではなく、目に入っている状態を表す。
+
+  look:
+    meaning: 意識して目を向ける
+    typical_form: look at + 名詞
+    example: She is looking at the picture.
+    ja: 彼女はその絵を見ている。
+    point: 意識して目を向けている動作なので、今しているなら現在進行形になりやすい。
+
+  watch:
+    meaning: 動いているもの・変化するものをしばらく見る
+    typical_form: watch + 名詞
+    example: We are watching a soccer game.
+    ja: 私たちはサッカーの試合を見ている。
+    point: 試合・映画・テレビ・人の動きなどを注意して見続ける動作を表す。
+
+main_rule: >
+  see は「見える」という知覚の状態を表すので、普通は現在形で使う。
+  look は「目を向ける」という動作で、目的語を取るときは look at を使う。
+  watch は「動いているもの・変化するものをしばらく見る」という動作を表す。
+  日本語の「見る」だけで判断せず、自然に見えるのか、意識して目を向けるのか、
+  しばらく観察するのかを区別する。
+
+contrast_pairs:
+  - natural: I see a dog over there.
+    unnatural: I am seeing a dog over there.
+    point: >
+      ただ目に入っているという知覚なら、現在形 see が自然。
+
+  - natural: She is looking at the blackboard.
+    unnatural: She is seeing at the blackboard.
+    point: >
+      意識して黒板に目を向けているので look at を使う。see at とは言わない。
+
+  - natural: We are watching TV now.
+    unnatural: We see TV now.
+    point: >
+      テレビを意識して見続けている動作なので watch を使う。
+
+  - natural: He watches the news every morning.
+    unnatural: He is watching the news every morning.
+    point: >
+      every morning があるので習慣を表す。動作動詞 watch でも、習慣なら現在形を使う。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g017_q001
+    question_type: two_choice
+    prompt: I ___ a bird in the tree.
+    choices:
+      - text: see
+        correct: true
+      - text: am seeing
+        correct: false
+    answer: see
+    explanation: >
+      鳥が自然に目に入っている状況なので、知覚を表す現在形 see が自然。
+      基本的な英文法では I am seeing a bird. とはしにくい。
+    translation: 木に鳥が見える。
+    focus:
+      - see
+      - perception
+      - stative_verb
+      - present_simple
+
+  - id: g017_q002
+    question_type: two_choice
+    prompt: Can you ___ the mountain from here?
+    choices:
+      - text: see
+        correct: true
+      - text: look
+        correct: false
+    answer: see
+    explanation: >
+      「ここから山が見えるか」という意味なので see を使う。
+      look は「意識して目を向ける」という動作で、この文には合わない。
+    translation: ここからその山が見えますか。
+    focus:
+      - see
+      - can_see
+      - perception
+
+  - id: g017_q003
+    question_type: two_choice
+    prompt: She ___ at the map now.
+    choices:
+      - text: looks
+        correct: false
+      - text: is looking
+        correct: true
+    answer: is looking
+    explanation: >
+      now があり、地図に意識して目を向けている動作を表すので、現在進行形 is looking が自然。
+      目的語の前には at が必要。
+    translation: 彼女は今、地図を見ている。
+    focus:
+      - look_at
+      - action_now
+      - present_continuous
+
+  - id: g017_q004
+    question_type: two_choice
+    prompt: Please ___ at this picture.
+    choices:
+      - text: look
+        correct: true
+      - text: see
+        correct: false
+    answer: look
+    explanation: >
+      相手に「意識して目を向けてください」と言っているので look at を使う。
+      see は自然に見えるという意味で、命令文には合いにくい。
+    translation: この写真を見てください。
+    focus:
+      - look_at
+      - imperative
+      - deliberate_action
+
+  - id: g017_q005
+    question_type: two_choice
+    prompt: We ___ TV now.
+    choices:
+      - text: watch
+        correct: false
+      - text: are watching
+        correct: true
+    answer: are watching
+    explanation: >
+      now があり、テレビを今見ている動作を表すので、現在進行形 are watching が自然。
+      TV は動きのあるものをしばらく見る対象なので watch を使う。
+    translation: 私たちは今テレビを見ている。
+    focus:
+      - watch
+      - tv
+      - action_now
+      - present_continuous
+
+  - id: g017_q006
+    question_type: two_choice
+    prompt: My father ___ the news every evening.
+    choices:
+      - text: watches
+        correct: true
+      - text: is watching
+        correct: false
+    answer: watches
+    explanation: >
+      every evening があるので、今だけの動作ではなく習慣を表す。
+      主語が My father なので現在形 watches が自然。
+    translation: 父は毎晩ニュースを見る。
+    focus:
+      - watch
+      - habit
+      - every_evening
+      - present_simple
+
+  - id: g017_q007
+    question_type: two_choice
+    prompt: The children ___ a movie in the living room now.
+    choices:
+      - text: watch
+        correct: false
+      - text: are watching
+        correct: true
+    answer: are watching
+    explanation: >
+      now があり、映画を今見ている動作を表すので、現在進行形 are watching が自然。
+      映画のように動きのあるものをしばらく見る場合は watch を使う。
+    translation: 子どもたちは今、居間で映画を見ている。
+    focus:
+      - watch
+      - movie
+      - action_now
+      - present_continuous
+
+  - id: g017_q008
+    question_type: two_choice
+    prompt: Look! The baby ___ you.
+    choices:
+      - text: looks at
+        correct: false
+      - text: is looking at
+        correct: true
+    answer: is looking at
+    explanation: >
+      Look! により、今その場で起きている動作を示している。
+      赤ちゃんがあなたの方を見ているので、現在進行形 is looking at が自然。
+    translation: 見て。赤ちゃんがあなたを見ているよ。
+    focus:
+      - look_at
+      - immediate_situation
+      - present_continuous
+
+  - id: g017_q009
+    question_type: two_choice
+    prompt: I can't ___ anything in this dark room.
+    choices:
+      - text: see
+        correct: true
+      - text: watch
+        correct: false
+    answer: see
+    explanation: >
+      暗い部屋で「何も見えない」という知覚の話なので see を使う。
+      watch は対象を注意して見続ける動作で、この文には合わない。
+    translation: この暗い部屋では何も見えない。
+    focus:
+      - see
+      - perception
+      - can_see
+      - negative_form
+
+  - id: g017_q010
+    question_type: two_choice
+    prompt: Don't ___ at the sun.
+    choices:
+      - text: look
+        correct: true
+      - text: see
+        correct: false
+    answer: look
+    explanation: >
+      「太陽に目を向けてはいけない」という意味なので look at を使う。
+      see は自然に見えるという意味で、この命令文には合わない。
+    translation: 太陽を見てはいけない。
+    focus:
+      - look_at
+      - imperative
+      - deliberate_action
+      - negative_form
+
+  - id: g017_q011
+    question_type: two_choice
+    prompt: They ___ the birds in the park every Sunday.
+    choices:
+      - text: watch
+        correct: true
+      - text: are watching
+        correct: false
+    answer: watch
+    explanation: >
+      every Sunday があるので習慣を表す。
+      鳥の動きなどを観察する意味なので watch を使うが、習慣なので現在形 watch が自然。
+    translation: 彼らは毎週日曜日に公園で鳥を観察する。
+    focus:
+      - watch
+      - observation
+      - habit
+      - present_simple
+
+  - id: g017_q012
+    question_type: two_choice
+    prompt: The students ___ the experiment carefully now.
+    choices:
+      - text: watch
+        correct: false
+      - text: are watching
+        correct: true
+    answer: are watching
+    explanation: >
+      now があり、実験の進行を注意して見ている動作を表している。
+      変化するものを観察するので watch、今している動作なので現在進行形 are watching が自然。
+    translation: 生徒たちは今、その実験を注意深く見ている。
+    focus:
+      - watch
+      - observation
+      - action_now
+      - present_continuous
+
+common_mistakes:
+  - mistake: 日本語の「見る」をすべて see にしてしまう
+    correction: >
+      see は「自然に見える」。意識して目を向けるなら look at、テレビ・映画・試合などをしばらく見るなら watch を使う。
+
+  - mistake: look の後ろに目的語をそのまま置いてしまう
+    correction: >
+      look は目的語を取るとき、普通は look at + 名詞 にする。
+      例: look at the picture
+
+  - mistake: watch をいつも現在進行形にしてしまう
+    correction: >
+      watch は動作動詞なので、今している動作なら現在進行形になる。
+      しかし every day や every Sunday などの習慣なら現在形を使う。
+
+  - mistake: see を「今見ている」だから現在進行形にしてしまう
+    correction: >
+      see が「目に入る・見える」という意味なら、普通は現在形を使う。
+      例: I see a bird. / Can you see the sign?
+
+learning_notes:
+  - >
+    see は努力しなくても目に入る「見える」に近い。
+  - >
+    look は意識して目を向ける動作で、目的語を置くなら look at を使う。
+  - >
+    watch は動いているもの・変化するものをしばらく見るときに使う。
+  - >
+    watch は動作動詞なので、now なら現在進行形、every day なら現在形になる。
+  - >
+    see には「会う」「診察を受ける」「付き合っている」などの別用法もあるが、
+    このカードでは基本の「見える」に絞る。
+
+prerequisites:
+  - g001
+  - g015
+  - g016
+
+next_items:
+  - g018
+  - g019
+  - g020

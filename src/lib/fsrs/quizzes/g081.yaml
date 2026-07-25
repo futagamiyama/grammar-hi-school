@@ -1,0 +1,376 @@
+id: g081
+file: g081.yaml
+
+title: 要求・提案・命令の that節
+type: construction
+
+section:
+  id: s09
+  title: 仮定法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: suggest / demand / insist などの後ろで、that節内の動詞を原形にできるか？
+
+core_concept:
+  mandative_subjunctive:
+    form: 動詞 + that + 主語 + 動詞原形
+    meaning: 〜すべきだと要求・提案・命令する
+    image: まだ実現していない行動を求める
+    examples:
+      - sentence: The teacher suggested that he study harder.
+        ja: 先生は彼がもっと一生懸命勉強するよう提案した。
+        point: he でも studies ではなく study を使う。
+      - sentence: They demanded that the meeting be postponed.
+        ja: 彼らは会議を延期するよう要求した。
+        point: be動詞も is ではなく be を使う。
+      - sentence: The doctor recommended that she rest for a few days.
+        ja: 医者は彼女が数日休むよう勧めた。
+        point: she でも rests ではなく rest を使う。
+
+  should_variant:
+    form: 動詞 + that + 主語 + should + 動詞原形
+    meaning: 〜すべきだと要求・提案・命令する
+    image: should を使って義務・必要を明示する
+    examples:
+      - sentence: The teacher suggested that he should study harder.
+        ja: 先生は彼がもっと一生懸命勉強すべきだと提案した。
+        point: should study も可能。
+      - sentence: They demanded that the meeting should be postponed.
+        ja: 彼らは会議が延期されるべきだと要求した。
+        point: should be postponed も可能。
+      - sentence: I recommended that she should see a doctor.
+        ja: 私は彼女が医者に診てもらうべきだと勧めた。
+        point: should see は意味がわかりやすい形。
+
+  indicative_that_clause:
+    form: 動詞 + that + 主語 + 普通の時制
+    meaning: 事実を述べる that節
+    image: 要求・提案ではなく、事実や主張を述べる
+    examples:
+      - sentence: He said that she was tired.
+        ja: 彼は彼女が疲れていると言った。
+        point: 事実を述べる that節なので普通の時制を使う。
+      - sentence: He insisted that he was innocent.
+        ja: 彼は自分は無実だと主張した。
+        point: insist が「事実を主張する」意味なら普通の時制。
+      - sentence: She believes that he is honest.
+        ja: 彼女は彼が正直だと信じている。
+        point: 要求ではないので is を使う。
+
+main_rule: >
+  suggest, demand, request, recommend, order, insist などが
+  「〜するよう要求する・提案する・命令する」という意味で使われると、
+  that節の中で動詞の原形を使うことがある。
+  The teacher suggested that he study harder. では、
+  主語が he でも studies ではなく study。
+  They demanded that the meeting be postponed. では、
+  is postponed ではなく be postponed。
+  これは仮定法現在と呼ばれ、まだ実現していない行動を求める表現。
+  should + 動詞原形を使う形もある。
+  ただし、say, believe などで事実を述べる that節では普通の時制を使う。
+  insist も「事実を主張する」意味なら He insisted that he was innocent. のように普通の時制になる。
+
+contrast_pairs:
+  - mandative: The teacher suggested that he study harder.
+    ordinary: The teacher said that he studies hard.
+    point: >
+      suggest が提案を表すときは that節内が原形になりやすい。
+      said that は事実を述べるので普通の時制。
+
+  - mandative: They demanded that the meeting be postponed.
+    ordinary: They said that the meeting was postponed.
+    point: >
+      demanded that は要求なので be postponed。
+      said that は事実報告なので was postponed。
+
+  - demand_meaning: He insisted that she be present.
+    fact_meaning: He insisted that he was innocent.
+    point: >
+      insist が要求なら原形 be。
+      insist が事実の主張なら普通の時制 was。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または要求・提案・命令の that節で原形を使う理由を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g081_q001
+    question_type: two_choice
+    prompt: The teacher suggested that he ___ harder.
+    choices:
+      - text: study
+        correct: true
+      - text: studies
+        correct: false
+    answer: study
+    explanation: >
+      suggest が「提案する」という意味なので、that節内は仮定法現在。
+      主語が he でも原形 study を使う。
+    translation: 先生は彼がもっと一生懸命勉強するよう提案した。
+    focus:
+      - mandative_subjunctive
+      - suggest
+      - bare_form
+
+  - id: g081_q002
+    question_type: two_choice
+    prompt: The teacher said that he ___ hard.
+    choices:
+      - text: studies
+        correct: true
+      - text: study
+        correct: false
+    answer: studies
+    explanation: >
+      said that は事実を述べる普通の that節。
+      主語 he に合わせて studies を使う。
+    translation: 先生は彼が一生懸命勉強すると言った。
+    focus:
+      - indicative_that_clause
+      - ordinary_that
+      - studies
+
+  - id: g081_q003
+    question_type: two_choice
+    prompt: They demanded that the meeting ___ postponed.
+    choices:
+      - text: be
+        correct: true
+      - text: is
+        correct: false
+    answer: be
+    explanation: >
+      demand が「要求する」という意味なので、that節内は原形。
+      be動詞も is ではなく be を使う。
+    translation: 彼らは会議を延期するよう要求した。
+    focus:
+      - mandative_subjunctive
+      - demand
+      - be_postponed
+
+  - id: g081_q004
+    question_type: two_choice
+    prompt: They said that the meeting ___ postponed.
+    choices:
+      - text: was
+        correct: true
+      - text: be
+        correct: false
+    answer: was
+    explanation: >
+      said that は事実を述べる普通の that節。
+      過去の事実なら was postponed が自然。
+    translation: 彼らは会議が延期されたと言った。
+    focus:
+      - indicative_that_clause
+      - ordinary_that
+      - was_postponed
+
+  - id: g081_q005
+    question_type: two_choice
+    prompt: The doctor recommended that she ___ for a few days.
+    choices:
+      - text: rest
+        correct: true
+      - text: rests
+        correct: false
+    answer: rest
+    explanation: >
+      recommend が「勧める」という意味なので、that節内は原形。
+      she でも rests ではなく rest を使う。
+    translation: 医者は彼女が数日休むよう勧めた。
+    focus:
+      - mandative_subjunctive
+      - recommend
+      - rest
+
+  - id: g081_q006
+    question_type: two_choice
+    prompt: I requested that he ___ the room.
+    choices:
+      - text: leave
+        correct: true
+      - text: leaves
+        correct: false
+    answer: leave
+    explanation: >
+      request が「要求する」という意味なので、that節内は原形。
+      he でも leave を使う。
+    translation: 私は彼に部屋を出るよう求めた。
+    focus:
+      - mandative_subjunctive
+      - request
+      - leave
+
+  - id: g081_q007
+    question_type: two_choice
+    prompt: The judge ordered that the witness ___ silent.
+    choices:
+      - text: remain
+        correct: true
+      - text: remains
+        correct: false
+    answer: remain
+    explanation: >
+      order が「命じる」という意味なので、that節内は原形。
+      the witness が三人称単数でも remain を使う。
+    translation: 裁判官は証人に黙っているよう命じた。
+    focus:
+      - mandative_subjunctive
+      - order
+      - remain
+
+  - id: g081_q008
+    question_type: two_choice
+    prompt: The committee proposed that the rule ___ changed.
+    choices:
+      - text: be
+        correct: true
+      - text: is
+        correct: false
+    answer: be
+    explanation: >
+      propose が「提案する」という意味なので、that節内は原形。
+      受動態でも be changed の形にする。
+    translation: 委員会はその規則を変更するよう提案した。
+    focus:
+      - mandative_subjunctive
+      - propose
+      - be_changed
+
+  - id: g081_q009
+    question_type: two_choice
+    prompt: He insisted that she ___ present.
+    choices:
+      - text: be
+        correct: true
+      - text: is
+        correct: false
+    answer: be
+    explanation: >
+      insist が「〜するよう強く求める」という意味。
+      要求の that節なので be present が自然。
+    translation: 彼は彼女が出席するよう強く求めた。
+    focus:
+      - mandative_subjunctive
+      - insist_demand
+      - be_present
+
+  - id: g081_q010
+    question_type: two_choice
+    prompt: He insisted that he ___ innocent.
+    choices:
+      - text: was
+        correct: true
+      - text: be
+        correct: false
+    answer: was
+    explanation: >
+      ここでの insist は「事実を主張する」という意味。
+      要求ではないので普通の時制 was を使う。
+    translation: 彼は自分は無実だと主張した。
+    focus:
+      - indicative_that_clause
+      - insist_fact
+      - was_innocent
+
+  - id: g081_q011
+    question_type: two_choice
+    prompt: She suggested that the plan ___ reconsidered.
+    choices:
+      - text: be
+        correct: true
+      - text: is
+        correct: false
+    answer: be
+    explanation: >
+      suggest が提案を表している。
+      「計画が再検討されるように」という意味なので be reconsidered が自然。
+    translation: 彼女はその計画を再検討するよう提案した。
+    focus:
+      - mandative_subjunctive
+      - suggest
+      - passive
+
+  - id: g081_q012
+    question_type: two_choice
+    prompt: They recommended that he ___ should see a specialist.
+    choices:
+      - text: he
+        correct: false
+      - text: ""
+        correct: true
+    answer: ""
+    explanation: >
+      recommended that he should see a specialist のように、should + 動詞原形を使う形も可能。
+      空所には何も入れない。
+    translation: 彼らは彼が専門医に診てもらうべきだと勧めた。
+    focus:
+      - should_variant
+      - recommend
+      - should_do
+
+common_mistakes:
+  - mistake: he の後ろだから必ず studies / goes / is にする
+    correction: >
+      要求・提案・命令の that節では、三人称単数でも原形を使う。
+      that he study, that she go, that he be のようにする。
+  - mistake: be postponed を is postponed にしてしまう
+    correction: >
+      demand / suggest / recommend などの後では、
+      受動態でも be + 過去分詞を使う。
+  - mistake: suggest that he studies としてしまう
+    correction: >
+      「彼が勉強するよう提案する」なら suggest that he study が基本。
+      should study も可能。
+  - mistake: insist のすべてを仮定法現在にしてしまう
+    correction: >
+      insist が「要求する」なら that she be present。
+      「事実を主張する」なら that he was innocent のように普通の時制。
+  - mistake: that節がすべて仮定法になると思う
+    correction: >
+      say, think, believe などで事実を述べる that節は普通の時制を使う。
+
+learning_notes:
+  - >
+    要求・提案・命令を表す動詞の後では、that節内の動詞が原形になることがある。
+  - >
+    代表動詞は suggest, demand, request, recommend, order, propose, insist。
+  - >
+    be動詞も原形 be になる。
+    that the meeting be postponed の形に注意する。
+  - >
+    should + 動詞原形を使う形もある。
+    that he should study のように読めればよい。
+  - >
+    事実を述べる that節では普通の時制。
+    意味が「要求・提案」か「事実の主張」かを見分ける。
+
+prerequisites:
+  - g021
+  - g024
+  - g072
+
+next_items:
+  - g082
+  - g083
+  - g084

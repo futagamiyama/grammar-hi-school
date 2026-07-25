@@ -1,0 +1,352 @@
+id: g018
+file: g018.yaml
+
+title: hear / listen の使い分け
+type: verb_usage
+
+section:
+  id: s02
+  title: 現在形・現在進行形と動詞用法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 聞こえる状態か、意識して聞く動作かを判断できるか？
+
+core_concept:
+  overview: >
+    hear と listen はどちらも「聞く」と訳されることがあるが、英語では意味が違う。
+    hear は「自然に耳に入る・聞こえる」という知覚を表す。
+    listen は「意識して耳を向ける」という動作を表し、目的語を取るときは普通 listen to を使う。
+    そのため、hear は現在形で使われやすく、listen は今している動作なら現在進行形になりやすい。
+
+  hear:
+    meaning: 自然に聞こえる・耳に入る
+    typical_form: 現在形
+    example: I hear a strange noise.
+    ja: 変な音が聞こえる。
+    point: 意識して聞こうとしている動作ではなく、音が耳に入っている状態を表す。
+
+  listen:
+    meaning: 意識して聞く・耳を傾ける
+    typical_form: listen to + 名詞
+    example: She is listening to music.
+    ja: 彼女は音楽を聞いている。
+    point: 意識して耳を向けている動作なので、今しているなら現在進行形になりやすい。
+
+  listen_without_object:
+    meaning: 注意して聞く
+    typical_form: listen
+    example: Please listen carefully.
+    ja: 注意して聞いてください。
+    point: 目的語がない場合は listen だけで使える。目的語がある場合は listen to を使う。
+
+main_rule: >
+  hear は「聞こえる」という知覚の状態を表すので、普通は現在形で使う。
+  listen は「意識して聞く」という動作を表し、目的語を取るときは listen to を使う。
+  日本語の「聞く」だけで判断せず、自然に聞こえているのか、意識して耳を向けているのかを区別する。
+
+contrast_pairs:
+  - natural: I hear a noise outside.
+    unnatural: I am hearing a noise outside.
+    point: >
+      ただ音が耳に入っている知覚なら、現在形 hear が自然。
+
+  - natural: She is listening to the radio now.
+    unnatural: She is hearing the radio now.
+    point: >
+      ラジオを意識して聞いている動作なので listen to を使う。
+
+  - natural: Can you hear me?
+    unnatural: Can you listen me?
+    point: >
+      声が聞こえているかを尋ねる文なので hear を使う。
+      listen は目的語を取るとき listen to の形にする。
+
+  - natural: Please listen to me.
+    unnatural: Please hear me.
+    point: >
+      相手に注意して聞くように求めているので listen to を使う。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g018_q001
+    question_type: two_choice
+    prompt: I ___ a strange noise outside.
+    choices:
+      - text: hear
+        correct: true
+      - text: am listening to
+        correct: false
+    answer: hear
+    explanation: >
+      外で変な音が自然に耳に入っている状況なので、知覚を表す hear が自然。
+      listen to は意識して聞く動作を表す。
+    translation: 外で変な音が聞こえる。
+    focus:
+      - hear
+      - perception
+      - stative_verb
+      - present_simple
+
+  - id: g018_q002
+    question_type: two_choice
+    prompt: Can you ___ me?
+    choices:
+      - text: hear
+        correct: true
+      - text: listen
+        correct: false
+    answer: hear
+    explanation: >
+      「私の声が聞こえますか」という意味なので hear を使う。
+      listen は「注意して聞く」という動作で、目的語を取るなら listen to me になる。
+    translation: 私の声が聞こえますか。
+    focus:
+      - hear
+      - can_hear
+      - perception
+
+  - id: g018_q003
+    question_type: two_choice
+    prompt: She ___ music in her room now.
+    choices:
+      - text: hears
+        correct: false
+      - text: is listening to
+        correct: true
+    answer: is listening to
+    explanation: >
+      now があり、音楽を意識して聞いている動作を表すので、現在進行形 is listening to が自然。
+      music という目的語があるので listen to music とする。
+    translation: 彼女は今、自分の部屋で音楽を聞いている。
+    focus:
+      - listen_to
+      - music
+      - action_now
+      - present_continuous
+
+  - id: g018_q004
+    question_type: two_choice
+    prompt: Please ___ carefully.
+    choices:
+      - text: listen
+        correct: true
+      - text: hear
+        correct: false
+    answer: listen
+    explanation: >
+      相手に注意して聞くように命じているので listen が自然。
+      hear は自然に聞こえるという意味で、ここでは合わない。
+    translation: 注意して聞いてください。
+    focus:
+      - listen
+      - imperative
+      - deliberate_action
+
+  - id: g018_q005
+    question_type: two_choice
+    prompt: Please ___ the teacher.
+    choices:
+      - text: listen to
+        correct: true
+      - text: listen
+        correct: false
+    answer: listen to
+    explanation: >
+      目的語 the teacher があるので listen to the teacher とする。
+      listen は自動詞なので、直接目的語を取る形にはしにくい。
+    translation: 先生の話を聞いてください。
+    focus:
+      - listen_to
+      - preposition_to
+      - imperative
+
+  - id: g018_q006
+    question_type: two_choice
+    prompt: We ___ the radio every morning.
+    choices:
+      - text: listen to
+        correct: true
+      - text: are listening to
+        correct: false
+    answer: listen to
+    explanation: >
+      every morning があるので、今している動作ではなく習慣を表す。
+      したがって現在形 listen to が自然。
+    translation: 私たちは毎朝ラジオを聞く。
+    focus:
+      - listen_to
+      - habit
+      - every_morning
+      - present_simple
+
+  - id: g018_q007
+    question_type: two_choice
+    prompt: We ___ the radio now.
+    choices:
+      - text: listen to
+        correct: false
+      - text: are listening to
+        correct: true
+    answer: are listening to
+    explanation: >
+      now があるので、今ラジオを聞いている動作を表している。
+      したがって現在進行形 are listening to が自然。
+    translation: 私たちは今ラジオを聞いている。
+    focus:
+      - listen_to
+      - action_now
+      - present_continuous
+
+  - id: g018_q008
+    question_type: two_choice
+    prompt: I can ___ someone crying.
+    choices:
+      - text: hear
+        correct: true
+      - text: listen to
+        correct: false
+    answer: hear
+    explanation: >
+      誰かが泣いている声が耳に入っている状況なので hear を使う。
+      listen to は意識して聞く動作を表すため、この文では不自然。
+    translation: 誰かが泣いているのが聞こえる。
+    focus:
+      - hear
+      - can_hear
+      - perception
+
+  - id: g018_q009
+    question_type: two_choice
+    prompt: The students ___ to the lecture now.
+    choices:
+      - text: listen
+        correct: false
+      - text: are listening
+        correct: true
+    answer: are listening
+    explanation: >
+      now があり、講義に意識して耳を向けている動作を表すので are listening が自然。
+      to the lecture という前置詞句も必要。
+    translation: 学生たちは今、講義を聞いている。
+    focus:
+      - listen_to
+      - lecture
+      - action_now
+      - present_continuous
+
+  - id: g018_q010
+    question_type: two_choice
+    prompt: I ___ from my old friend once a month.
+    choices:
+      - text: hear
+        correct: true
+      - text: listen
+        correct: false
+    answer: hear
+    explanation: >
+      hear from は「〜から連絡がある」という表現。
+      once a month があるので、習慣的・定期的なこととして現在形 hear が自然。
+    translation: 私は月に一度、旧友から連絡をもらう。
+    focus:
+      - hear_from
+      - expression
+      - habit
+      - present_simple
+
+  - id: g018_q011
+    question_type: two_choice
+    prompt: Are you ___ to me?
+    choices:
+      - text: listening
+        correct: true
+      - text: hearing
+        correct: false
+    answer: listening
+    explanation: >
+      「私の話をちゃんと聞いているのか」という意味なので listening to me が自然。
+      hearing は単に音が聞こえていることを表し、ここでは意図が合わない。
+    translation: 私の話を聞いていますか。
+    focus:
+      - listen_to
+      - attention
+      - present_continuous
+
+  - id: g018_q012
+    question_type: two_choice
+    prompt: I can't ___ you because the line is bad.
+    choices:
+      - text: hear
+        correct: true
+      - text: listen to
+        correct: false
+    answer: hear
+    explanation: >
+      電話回線が悪くて相手の声が聞こえないという意味なので hear を使う。
+      listen to は注意して聞く動作であり、聞こえるかどうかの問題ではない。
+    translation: 回線が悪いので、あなたの声が聞こえません。
+    focus:
+      - hear
+      - phone
+      - perception
+      - cannot_hear
+
+common_mistakes:
+  - mistake: 日本語の「聞く」をすべて listen にしてしまう
+    correction: >
+      「音が聞こえる」なら hear、「意識して聞く」なら listen を使う。
+      Can you hear me? は「私の声が聞こえますか」という意味。
+
+  - mistake: listen の後ろに直接目的語を置いてしまう
+    correction: >
+      listen は目的語を取るとき、普通 listen to + 名詞 の形にする。
+      listen music ではなく listen to music。
+
+  - mistake: hear を「注意して聞く」の意味で使ってしまう
+    correction: >
+      先生や話に注意を向けて聞くなら listen to を使う。
+      Please listen to the teacher. が自然。
+
+  - mistake: 今聞いているから hear を現在進行形にしてしまう
+    correction: >
+      hear は知覚を表す状態動詞なので、基本的には I hear a noise. のように現在形を使う。
+      意識して聞いている動作なら I am listening to music. とする。
+
+learning_notes:
+  - >
+    hear は「聞こうとしなくても聞こえる」という知覚を表す。
+    see と同じく、状態動詞として現在形で使われやすい。
+  - >
+    listen は「聞こうとして耳を向ける」という動作を表す。
+    look と同じく、目的語を取るときは前置詞 to が必要になる。
+  - >
+    hear from は「〜から連絡がある」という表現で、単純に音が聞こえる意味ではない。
+  - >
+    hear と listen の違いは、現在形・現在進行形の理解だけでなく、動詞ごとの語法として別に練習する必要がある。
+
+prerequisites:
+  - g001
+  - g017
+
+next_items:
+  - g019
+  - g020

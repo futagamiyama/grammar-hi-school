@@ -1,0 +1,390 @@
+id: g095
+file: g095.yaml
+
+title: 付加疑問文
+type: grammar_contrast
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 文末の付加疑問で、前の文に合う助動詞・否定形・主語を選べるか？
+
+core_concept:
+  positive_statement_negative_tag:
+    form: 肯定文, 助動詞/be動詞 + not + 代名詞?
+    meaning: 〜ですよね
+    image: 肯定文には否定の短い疑問を付ける
+    examples:
+      - sentence: You are a student, aren't you?
+        ja: あなたは学生ですよね。
+        point: are に対応して aren't you を付ける。
+      - sentence: He likes tennis, doesn't he?
+        ja: 彼はテニスが好きですよね。
+        point: likes は一般動詞の現在・三人称単数なので doesn't he。
+      - sentence: She can swim, can't she?
+        ja: 彼女は泳げますよね。
+        point: can に対応して can't she。
+
+  negative_statement_positive_tag:
+    form: 否定文, 助動詞/be動詞 + 代名詞?
+    meaning: 〜ではありませんよね
+    image: 否定文には肯定の短い疑問を付ける
+    examples:
+      - sentence: You are not tired, are you?
+        ja: あなたは疲れていませんよね。
+        point: 否定文なので、付加疑問は肯定の are you。
+      - sentence: He does not like coffee, does he?
+        ja: 彼はコーヒーが好きではありませんよね。
+        point: does not に対応して does he。
+      - sentence: She cannot drive, can she?
+        ja: 彼女は運転できませんよね。
+        point: cannot に対応して can she。
+
+  auxiliary_matching:
+    form: 前の文の助動詞・be動詞・時制に合わせる
+    meaning: do / does / did / am / is / are / was / were / can / will / have などを選ぶ
+    image: 付加疑問は、前の文の文法情報を短く受ける
+    examples:
+      - sentence: They went home, didn't they?
+        ja: 彼らは家に帰りましたよね。
+        point: went は一般動詞の過去なので didn't they。
+      - sentence: She has finished the work, hasn't she?
+        ja: 彼女はその仕事を終えましたよね。
+        point: has finished に対応して hasn't she。
+      - sentence: It will rain tomorrow, won't it?
+        ja: 明日は雨が降りますよね。
+        point: will に対応して won't it。
+
+  special_tags:
+    form: 命令文, will you? / Let's ..., shall we?
+    meaning: 〜してくださいね / 〜しましょうね
+    image: 命令・勧誘には特別な付加疑問を使う
+    examples:
+      - sentence: Open the window, will you?
+        ja: 窓を開けてくれますよね。
+        point: 命令文には will you? がよく使われる。
+      - sentence: Don't be late, will you?
+        ja: 遅れないでくださいね。
+        point: 否定命令でも will you? がよく使われる。
+      - sentence: Let's go for a walk, shall we?
+        ja: 散歩に行きましょうね。
+        point: Let's ... には shall we? を付ける。
+
+main_rule: >
+  付加疑問文は、文末に短い疑問を付けて「〜ですよね」と確認する表現。
+  基本は、肯定文には否定の付加疑問、否定文には肯定の付加疑問を付ける。
+  You are a student, aren't you? は、are に対応して aren't you。
+  He likes tennis, doesn't he? は、likes が一般動詞の現在・三人称単数なので doesn't he。
+  They went home, didn't they? は、went が過去なので didn't they。
+  She can swim, can't she? は、can に対応して can't she。
+  否定文では You are not tired, are you? のように肯定形を付ける。
+  命令文には will you?、Let's ... には shall we? がよく使われる。
+
+contrast_pairs:
+  - positive: You are a student, aren't you?
+    negative: You are not a student, are you?
+    point: >
+      肯定文には否定タグ。
+      否定文には肯定タグ。
+
+  - be_verb: She is tired, isn't she?
+    general_verb: She likes coffee, doesn't she?
+    point: >
+      be動詞なら be動詞で受ける。
+      一般動詞なら do / does / did で受ける。
+
+  - imperative: Open the window, will you?
+    lets: Let's open the window, shall we?
+    point: >
+      命令文には will you?。
+      Let's ... には shall we?。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または付加疑問が前の文の助動詞・時制・肯否に合わせることを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g095_q001
+    question_type: two_choice
+    prompt: You are a student, ___?
+    choices:
+      - text: aren't you
+        correct: true
+      - text: don't you
+        correct: false
+    answer: aren't you
+    explanation: >
+      前の文は be動詞 are の肯定文。
+      肯定文なので否定の付加疑問 aren't you を付ける。
+    translation: あなたは学生ですよね。
+    focus:
+      - positive_statement_negative_tag
+      - be_verb
+      - are
+
+  - id: g095_q002
+    question_type: two_choice
+    prompt: You are not tired, ___?
+    choices:
+      - text: are you
+        correct: true
+      - text: aren't you
+        correct: false
+    answer: are you
+    explanation: >
+      前の文は否定文 are not tired。
+      否定文には肯定の付加疑問 are you を付ける。
+    translation: あなたは疲れていませんよね。
+    focus:
+      - negative_statement_positive_tag
+      - be_verb
+      - are_you
+
+  - id: g095_q003
+    question_type: two_choice
+    prompt: He likes tennis, ___?
+    choices:
+      - text: doesn't he
+        correct: true
+      - text: isn't he
+        correct: false
+    answer: doesn't he
+    explanation: >
+      likes は一般動詞の現在・三人称単数。
+      肯定文なので doesn't he を付ける。
+    translation: 彼はテニスが好きですよね。
+    focus:
+      - positive_statement_negative_tag
+      - does
+      - likes
+
+  - id: g095_q004
+    question_type: two_choice
+    prompt: He does not like coffee, ___?
+    choices:
+      - text: does he
+        correct: true
+      - text: doesn't he
+        correct: false
+    answer: does he
+    explanation: >
+      前の文は does not を含む否定文。
+      否定文には肯定の付加疑問 does he を付ける。
+    translation: 彼はコーヒーが好きではありませんよね。
+    focus:
+      - negative_statement_positive_tag
+      - does_he
+      - not_like
+
+  - id: g095_q005
+    question_type: two_choice
+    prompt: They went home, ___?
+    choices:
+      - text: didn't they
+        correct: true
+      - text: don't they
+        correct: false
+    answer: didn't they
+    explanation: >
+      went は一般動詞の過去形。
+      肯定文なので didn't they を付ける。
+    translation: 彼らは家に帰りましたよね。
+    focus:
+      - auxiliary_matching
+      - did
+      - went
+
+  - id: g095_q006
+    question_type: two_choice
+    prompt: They did not go home, ___?
+    choices:
+      - text: did they
+        correct: true
+      - text: didn't they
+        correct: false
+    answer: did they
+    explanation: >
+      前の文は did not を含む否定文。
+      否定文には肯定の付加疑問 did they を付ける。
+    translation: 彼らは家に帰りませんでしたよね。
+    focus:
+      - negative_statement_positive_tag
+      - did_they
+      - did_not
+
+  - id: g095_q007
+    question_type: two_choice
+    prompt: She can swim, ___?
+    choices:
+      - text: can't she
+        correct: true
+      - text: doesn't she
+        correct: false
+    answer: can't she
+    explanation: >
+      前の文に助動詞 can がある。
+      肯定文なので can't she を付ける。
+    translation: 彼女は泳げますよね。
+    focus:
+      - positive_statement_negative_tag
+      - can
+      - modal
+
+  - id: g095_q008
+    question_type: two_choice
+    prompt: She cannot drive, ___?
+    choices:
+      - text: can she
+        correct: true
+      - text: can't she
+        correct: false
+    answer: can she
+    explanation: >
+      前の文は cannot drive の否定文。
+      否定文には肯定の付加疑問 can she を付ける。
+    translation: 彼女は運転できませんよね。
+    focus:
+      - negative_statement_positive_tag
+      - can_she
+      - cannot
+
+  - id: g095_q009
+    question_type: two_choice
+    prompt: She has finished the work, ___?
+    choices:
+      - text: hasn't she
+        correct: true
+      - text: doesn't she
+        correct: false
+    answer: hasn't she
+    explanation: >
+      has finished は現在完了。
+      has に対応して hasn't she を付ける。
+    translation: 彼女はその仕事を終えましたよね。
+    focus:
+      - auxiliary_matching
+      - present_perfect
+      - has
+
+  - id: g095_q010
+    question_type: two_choice
+    prompt: It will rain tomorrow, ___?
+    choices:
+      - text: won't it
+        correct: true
+      - text: doesn't it
+        correct: false
+    answer: won't it
+    explanation: >
+      前の文に will がある。
+      肯定文なので won't it を付ける。
+    translation: 明日は雨が降りますよね。
+    focus:
+      - auxiliary_matching
+      - will
+      - wont_it
+
+  - id: g095_q011
+    question_type: two_choice
+    prompt: Open the window, ___?
+    choices:
+      - text: will you
+        correct: true
+      - text: don't you
+        correct: false
+    answer: will you
+    explanation: >
+      命令文の付加疑問では will you? がよく使われる。
+      Open the window, will you? で「窓を開けてくれますよね」。
+    translation: 窓を開けてくれますよね。
+    focus:
+      - special_tags
+      - imperative
+      - will_you
+
+  - id: g095_q012
+    question_type: two_choice
+    prompt: Let's go for a walk, ___?
+    choices:
+      - text: shall we
+        correct: true
+      - text: will you
+        correct: false
+    answer: shall we
+    explanation: >
+      Let's ... の付加疑問は shall we?。
+      「〜しましょうね」という勧誘を表す。
+    translation: 散歩に行きましょうね。
+    focus:
+      - special_tags
+      - lets
+      - shall_we
+
+common_mistakes:
+  - mistake: 肯定文にも肯定の付加疑問を付けてしまう
+    correction: >
+      基本は、肯定文には否定タグ。
+      You are a student, aren't you? の形にする。
+  - mistake: 否定文にも否定の付加疑問を付けてしまう
+    correction: >
+      否定文には肯定タグ。
+      You are not tired, are you? の形にする。
+  - mistake: 一般動詞とbe動詞を混同する
+    correction: >
+      be動詞なら be動詞で受ける。
+      一般動詞なら do / does / did を使う。
+  - mistake: He likes tennis, isn't he? としてしまう
+    correction: >
+      likes は一般動詞なので doesn't he を使う。
+      He likes tennis, doesn't he? が正しい。
+  - mistake: Let's ... に will you? を付けてしまう
+    correction: >
+      Let's ... の付加疑問は shall we?。
+      Let's go, shall we? が自然。
+
+learning_notes:
+  - >
+    付加疑問は、文末に短い疑問を付けて確認する表現。
+    日本語では「〜ですよね」と訳すことが多い。
+  - >
+    肯定文には否定タグ、否定文には肯定タグを付けるのが基本。
+  - >
+    付加疑問の助動詞は、前の文の助動詞・be動詞・時制に合わせる。
+  - >
+    一般動詞なら do / does / did を使う。
+    He likes tennis, doesn't he? の形。
+  - >
+    命令文には will you?、Let's ... には shall we? がよく使われる。
+
+prerequisites:
+  - g001
+  - g002
+  - g021
+  - g085
+  - g087
+
+next_items:
+  - g096
+  - g097
+  - g098

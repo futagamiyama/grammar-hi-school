@@ -1,0 +1,371 @@
+id: g080
+file: g080.yaml
+
+title: 混合仮定法
+type: grammar_contrast
+
+section:
+  id: s09
+  title: 仮定法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 過去の仮定と現在の結果が混ざる形を読めるか？
+
+core_concept:
+  past_condition_present_result:
+    form: If + 主語 + had + 過去分詞 ..., 主語 + would/could/might + 動詞原形 ... now
+    meaning: もし過去に〜していたら、今...だろうに
+    image: 過去の選択が、現在の状態を変えている
+    examples:
+      - sentence: If I had studied harder, I would be a doctor now.
+        ja: もしもっと一生懸命勉強していたら、今ごろ医者になっているだろうに。
+        point: 過去に十分勉強しなかった結果、今医者ではない。
+      - sentence: If she had taken the job, she would live in London now.
+        ja: もし彼女がその仕事を引き受けていたら、今ロンドンに住んでいるだろうに。
+        point: 過去に仕事を引き受けなかった結果、今ロンドンに住んでいない。
+      - sentence: If I had not missed the train, I would be there now.
+        ja: もしその電車に乗り遅れていなかったら、今そこにいるだろうに。
+        point: 過去に電車に乗り遅れた結果、今そこにいない。
+
+  past_condition_past_result:
+    form: If + 主語 + had + 過去分詞 ..., 主語 + would/could/might have + 過去分詞 ...
+    meaning: もし過去に〜していたら、過去に...しただろうに
+    image: 過去の条件と過去の結果が対応する
+    examples:
+      - sentence: If I had studied harder, I would have passed the exam.
+        ja: もしもっと一生懸命勉強していたら、試験に合格していただろうに。
+        point: 過去の条件と過去の結果。
+      - sentence: If she had taken the job, she would have moved to London.
+        ja: もし彼女がその仕事を引き受けていたら、ロンドンに引っ越していただろうに。
+        point: 過去に引っ越しただろうという結果。
+      - sentence: If I had not missed the train, I would have arrived on time.
+        ja: もしその電車に乗り遅れていなかったら、時間通りに到着していただろうに。
+        point: 過去の到着について述べている。
+
+  present_condition_past_result:
+    form: If + 主語 + 過去形 ..., 主語 + would/could/might have + 過去分詞 ...
+    meaning: もし今〜なら、過去に...していただろうに
+    image: 現在の性質・状態が、過去の行動に影響したと仮定する
+    examples:
+      - sentence: If I were braver, I would have spoken to her yesterday.
+        ja: もし私がもっと勇敢なら、昨日彼女に話しかけていただろうに。
+        point: 現在の性格を仮定し、過去の行動結果を述べている。
+      - sentence: If he were more careful, he would not have made that mistake.
+        ja: もし彼がもっと注意深い人なら、あの間違いをしなかっただろうに。
+        point: 現在の性質と過去の結果が混ざっている。
+      - sentence: If I knew French, I could have helped the tourist.
+        ja: もし私がフランス語を知っていれば、その旅行者を助けられたのに。
+        point: 現在も知らない能力が、過去に助けられなかった理由になっている。
+
+main_rule: >
+  混合仮定法は、If節と結果節の時がずれる仮定法。
+  特に多いのは、過去の事実に反する条件が、現在の結果につながる形。
+  If I had studied harder, I would be a doctor now. は
+  「もし過去にもっと勉強していたら、今ごろ医者になっているだろうに」という意味。
+  If節は had + 過去分詞なので過去の非現実。
+  結果節は would + 動詞原形なので現在の非現実。
+  now, today, still などの語があると、結果が現在を表すことに気づきやすい。
+  結果が過去なら would have + 過去分詞、結果が現在なら would + 動詞原形を使う。
+
+contrast_pairs:
+  - past_result: If I had studied harder, I would have passed the exam.
+    present_result: If I had studied harder, I would be a doctor now.
+    point: >
+      would have passed は過去の結果。
+      would be now は現在の結果。
+
+  - past_result: If she had taken the job, she would have moved to London.
+    present_result: If she had taken the job, she would live in London now.
+    point: >
+      would have moved は過去に引っ越しただろうという結果。
+      would live now は今住んでいるだろうという結果。
+
+  - present_condition: If I were braver, I would have spoken to her yesterday.
+    past_condition: If I had been braver then, I would have spoken to her yesterday.
+    point: >
+      If I were braver は現在の性格を仮定している。
+      If I had been braver then は過去の時点で勇敢だったらという仮定。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または過去条件＋現在結果の混合仮定法を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g080_q001
+    question_type: two_choice
+    prompt: If I had studied harder, I ___ a doctor now.
+    choices:
+      - text: would be
+        correct: true
+      - text: would have been
+        correct: false
+    answer: would be
+    explanation: >
+      now があるので、結果は現在。
+      If節は過去の非現実だが、結果節は would + 動詞原形にする。
+    translation: もしもっと一生懸命勉強していたら、今ごろ医者になっているだろうに。
+    focus:
+      - past_condition_present_result
+      - would_be
+      - now
+
+  - id: g080_q002
+    question_type: two_choice
+    prompt: If I had studied harder, I ___ the exam.
+    choices:
+      - text: would have passed
+        correct: true
+      - text: would pass
+        correct: false
+    answer: would have passed
+    explanation: >
+      試験に合格したかどうかという過去の結果を述べている。
+      過去の結果なので would have passed を使う。
+    translation: もしもっと一生懸命勉強していたら、試験に合格していただろうに。
+    focus:
+      - past_condition_past_result
+      - would_have
+      - exam
+
+  - id: g080_q003
+    question_type: two_choice
+    prompt: If she had taken the job, she ___ in London now.
+    choices:
+      - text: would live
+        correct: true
+      - text: would have lived
+        correct: false
+    answer: would live
+    explanation: >
+      now があるので、今ロンドンに住んでいるだろうという現在の結果。
+      would live が自然。
+    translation: もし彼女がその仕事を引き受けていたら、今ロンドンに住んでいるだろうに。
+    focus:
+      - past_condition_present_result
+      - would_live
+      - now
+
+  - id: g080_q004
+    question_type: two_choice
+    prompt: If she had taken the job, she ___ to London.
+    choices:
+      - text: would have moved
+        correct: true
+      - text: would move
+        correct: false
+    answer: would have moved
+    explanation: >
+      その仕事を引き受けた過去の結果として、引っ越しただろうという意味。
+      過去の結果なので would have moved。
+    translation: もし彼女がその仕事を引き受けていたら、ロンドンに引っ越していただろうに。
+    focus:
+      - past_condition_past_result
+      - would_have_moved
+      - past_result
+
+  - id: g080_q005
+    question_type: two_choice
+    prompt: If I had not missed the train, I ___ there now.
+    choices:
+      - text: would be
+        correct: true
+      - text: would have been
+        correct: false
+    answer: would be
+    explanation: >
+      now があるので、今そこにいるだろうという現在の結果。
+      過去の条件と現在の結果が混ざっている。
+    translation: もしその電車に乗り遅れていなかったら、今そこにいるだろうに。
+    focus:
+      - past_condition_present_result
+      - missed_train
+      - now
+
+  - id: g080_q006
+    question_type: two_choice
+    prompt: If I had not missed the train, I ___ on time.
+    choices:
+      - text: would have arrived
+        correct: true
+      - text: would arrive
+        correct: false
+    answer: would have arrived
+    explanation: >
+      時間通りに到着したかどうかという過去の結果。
+      過去の結果なので would have arrived を使う。
+    translation: もしその電車に乗り遅れていなかったら、時間通りに到着していただろうに。
+    focus:
+      - past_condition_past_result
+      - would_have_arrived
+      - train
+
+  - id: g080_q007
+    question_type: two_choice
+    prompt: If I had learned English as a child, I ___ fluent now.
+    choices:
+      - text: would be
+        correct: true
+      - text: would have been
+        correct: false
+    answer: would be
+    explanation: >
+      as a child は過去の条件、now は現在の結果。
+      混合仮定法なので would be fluent now が自然。
+    translation: もし子どものころに英語を学んでいたら、今ごろ流暢になっているだろうに。
+    focus:
+      - past_condition_present_result
+      - english
+      - now
+
+  - id: g080_q008
+    question_type: two_choice
+    prompt: If he had listened to the doctor, he ___ healthier today.
+    choices:
+      - text: would be
+        correct: true
+      - text: would have been
+        correct: false
+    answer: would be
+    explanation: >
+      today があるので、現在の健康状態を述べている。
+      過去に医者の話を聞かなかった結果、今健康でないという意味。
+    translation: もし彼が医者の言うことを聞いていたら、今日もっと健康だろうに。
+    focus:
+      - past_condition_present_result
+      - today
+      - health
+
+  - id: g080_q009
+    question_type: two_choice
+    prompt: If he had listened to the doctor, he ___ sick last month.
+    choices:
+      - text: would not have become
+        correct: true
+      - text: would not become
+        correct: false
+    answer: would not have become
+    explanation: >
+      last month があり、過去の結果を述べている。
+      過去の非現実なので would not have become を使う。
+    translation: もし彼が医者の言うことを聞いていたら、先月病気にならなかっただろうに。
+    focus:
+      - past_condition_past_result
+      - last_month
+      - would_have
+
+  - id: g080_q010
+    question_type: two_choice
+    prompt: If I were braver, I ___ to her yesterday.
+    choices:
+      - text: would have spoken
+        correct: true
+      - text: would speak
+        correct: false
+    answer: would have spoken
+    explanation: >
+      If I were braver は現在の性格への仮定。
+      yesterday があるので、過去に話しかけただろうという結果は would have spoken。
+    translation: もし私がもっと勇敢なら、昨日彼女に話しかけていただろうに。
+    focus:
+      - present_condition_past_result
+      - yesterday
+      - would_have
+
+  - id: g080_q011
+    question_type: two_choice
+    prompt: If he were more careful, he ___ that mistake.
+    choices:
+      - text: would not have made
+        correct: true
+      - text: would not make
+        correct: false
+    answer: would not have made
+    explanation: >
+      that mistake はすでにした過去の間違いを指す文脈。
+      現在の性質を仮定し、過去の結果を述べているので would not have made。
+    translation: もし彼がもっと注意深い人なら、あの間違いをしなかっただろうに。
+    focus:
+      - present_condition_past_result
+      - careful
+      - mistake
+
+  - id: g080_q012
+    question_type: two_choice
+    prompt: If I knew French, I ___ the tourist yesterday.
+    choices:
+      - text: could have helped
+        correct: true
+      - text: could help
+        correct: false
+    answer: could have helped
+    explanation: >
+      If I knew French は現在もフランス語を知らないという仮定。
+      yesterday があるので、過去に助けられたのにという結果は could have helped。
+    translation: もし私がフランス語を知っていれば、昨日その旅行者を助けられたのに。
+    focus:
+      - present_condition_past_result
+      - could_have
+      - yesterday
+
+common_mistakes:
+  - mistake: If節が had + 過去分詞なら、結果節も必ず would have + 過去分詞だと思う
+    correction: >
+      結果が現在なら would + 動詞原形を使う。
+      If I had studied harder, I would be a doctor now. のようになる。
+  - mistake: now があるのに would have been を選ぶ
+    correction: >
+      now, today, still などが現在の結果を示す場合は、
+      would be, would live, could speak のように現在の非現実にする。
+  - mistake: 過去条件と現在結果のつながりを読まない
+    correction: >
+      混合仮定法では、過去の選択や出来事が、今の状態に影響している。
+  - mistake: If I were braver, I would speak to her yesterday. とする
+    correction: >
+      yesterday があるので結果は過去。
+      would have spoken を使う。
+  - mistake: 仮定法過去完了と混合仮定法を同じだと思う
+    correction: >
+      仮定法過去完了は、過去条件＋過去結果。
+      混合仮定法では、過去条件＋現在結果など、時がずれる。
+
+learning_notes:
+  - >
+    混合仮定法では、If節と結果節の時が一致しない。
+  - >
+    最頻出は、過去条件＋現在結果。
+    If I had studied harder, I would be a doctor now. の形。
+  - >
+    now, today, still などがあれば、結果節は現在を表す可能性が高い。
+  - >
+    結果が過去なら would have + 過去分詞。
+    結果が現在なら would + 動詞原形。
+
+prerequisites:
+  - g072
+  - g073
+  - g074
+  - g079
+
+next_items:
+  - g081
+  - g082
+  - g083

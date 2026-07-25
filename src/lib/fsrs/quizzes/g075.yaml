@@ -1,0 +1,374 @@
+id: g075
+file: g075.yaml
+
+title: as if / as though + 仮定法
+type: grammar_contrast
+
+section:
+  id: s09
+  title: 仮定法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 「まるで〜であるかのように」を、現在と過去の非現実で使い分けられるか？
+
+core_concept:
+  as_if_present:
+    form: as if / as though + 主語 + 過去形
+    meaning: まるで今〜であるかのように
+    image: 現在の事実とは違う様子を、たとえで表す
+    examples:
+      - sentence: He talks as if he knew everything.
+        ja: 彼はまるで何でも知っているかのように話す。
+        point: 実際には何でも知っているわけではない。
+      - sentence: She acts as if she were a queen.
+        ja: 彼女はまるで女王であるかのように振る舞う。
+        point: 実際には女王ではない。
+      - sentence: He treats me as though I were a child.
+        ja: 彼は私をまるで子どもであるかのように扱う。
+        point: 実際には私は子どもではない。
+
+  as_if_past:
+    form: as if / as though + 主語 + had + 過去分詞
+    meaning: まるで過去に〜したかのように
+    image: 過去の事実とは違う様子を、たとえで表す
+    examples:
+      - sentence: He looked as if he had seen a ghost.
+        ja: 彼はまるで幽霊を見たかのような顔をしていた。
+        point: 実際に見たとは限らず、そう見えたという比喩。
+      - sentence: She spoke as if she had known me for years.
+        ja: 彼女はまるで何年も私を知っていたかのように話した。
+        point: 実際には長年知っていたわけではない。
+      - sentence: The room looked as though nobody had used it for years.
+        ja: その部屋はまるで何年も誰も使っていなかったかのように見えた。
+        point: 過去から続く未使用のように見えたという意味。
+
+  as_if_were:
+    form: as if / as though + 主語 + were
+    meaning: まるで〜であるかのように
+    image: be動詞では were を使うのが標準的
+    examples:
+      - sentence: He speaks as if he were an expert.
+        ja: 彼はまるで専門家であるかのように話す。
+        point: 実際には専門家ではないという含み。
+      - sentence: She looks as if she were tired.
+        ja: 彼女はまるで疲れているかのように見える。
+        point: 見た様子を述べている。
+      - sentence: He behaves as though he were the boss.
+        ja: 彼はまるで自分が上司であるかのように振る舞う。
+        point: 実際には上司ではない。
+
+main_rule: >
+  as if / as though は「まるで〜であるかのように」を表す。
+  現在の事実と違う様子を表すなら、後ろに過去形を使う。
+  He talks as if he knew everything. は
+  「彼はまるで何でも知っているかのように話す」という意味で、
+  実際には何でも知っているわけではない。
+  過去の事実と違う様子を表すなら、had + 過去分詞を使う。
+  He looked as if he had seen a ghost. は
+  「彼はまるで幽霊を見たかのような顔をしていた」という意味。
+  be動詞では were を使うのが標準的。
+
+contrast_pairs:
+  - present_unreal: He talks as if he knew everything.
+    past_unreal: He looked as if he had seen a ghost.
+    point: >
+      knew は現在の様子についての非現実。
+      had seen は過去に何かをしたかのような非現実。
+
+  - present_unreal: She acts as if she were a queen.
+    past_unreal: She spoke as if she had been a queen.
+    point: >
+      were は今そうであるかのような様子。
+      had been は過去にそうだったかのような様子。
+
+  - as_if: He speaks as if he were an expert.
+    as_though: He speaks as though he were an expert.
+    point: >
+      as if と as though はほぼ同じ意味。
+      どちらも「まるで〜であるかのように」を表す。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または as if + 過去形 と as if + had + 過去分詞 の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g075_q001
+    question_type: two_choice
+    prompt: He talks as if he ___ everything.
+    choices:
+      - text: knew
+        correct: true
+      - text: knows
+        correct: false
+    answer: knew
+    explanation: >
+      実際には何でも知っているわけではないが、そう見える話し方をしている。
+      現在の非現実なので過去形 knew を使う。
+    translation: 彼はまるで何でも知っているかのように話す。
+    focus:
+      - as_if_present
+      - knew
+      - unreal_present
+
+  - id: g075_q002
+    question_type: two_choice
+    prompt: She acts as if she ___ a queen.
+    choices:
+      - text: were
+        correct: true
+      - text: is
+        correct: false
+    answer: were
+    explanation: >
+      実際には女王ではないが、女王のように振る舞っている。
+      仮定法なので were を使う。
+    translation: 彼女はまるで女王であるかのように振る舞う。
+    focus:
+      - as_if_were
+      - were
+      - unreal_present
+
+  - id: g075_q003
+    question_type: two_choice
+    prompt: He looked as if he ___ a ghost.
+    choices:
+      - text: had seen
+        correct: true
+      - text: saw
+        correct: false
+    answer: had seen
+    explanation: >
+      looked は過去の様子で、「その前に幽霊を見たかのように」という意味。
+      過去の非現実なので had seen を使う。
+    translation: 彼はまるで幽霊を見たかのような顔をしていた。
+    focus:
+      - as_if_past
+      - had_seen
+      - ghost
+
+  - id: g075_q004
+    question_type: two_choice
+    prompt: She spoke as if she ___ me for years.
+    choices:
+      - text: had known
+        correct: true
+      - text: knew
+        correct: false
+    answer: had known
+    explanation: >
+      何年も前から知っていたかのように話したという意味。
+      過去の話し方よりさらに前の非現実なので had known を使う。
+    translation: 彼女はまるで何年も私を知っていたかのように話した。
+    focus:
+      - as_if_past
+      - had_known
+      - for_years
+
+  - id: g075_q005
+    question_type: two_choice
+    prompt: He treats me as though I ___ a child.
+    choices:
+      - text: were
+        correct: true
+      - text: am
+        correct: false
+    answer: were
+    explanation: >
+      実際には子どもではないが、子どものように扱われている。
+      現在の非現実なので were を使う。
+    translation: 彼は私をまるで子どもであるかのように扱う。
+    focus:
+      - as_if_were
+      - as_though
+      - child
+
+  - id: g075_q006
+    question_type: two_choice
+    prompt: He behaves as though he ___ the boss.
+    choices:
+      - text: were
+        correct: true
+      - text: is
+        correct: false
+    answer: were
+    explanation: >
+      実際には上司ではないが、上司のように振る舞っている。
+      as though + 仮定法過去なので were を使う。
+    translation: 彼はまるで自分が上司であるかのように振る舞う。
+    focus:
+      - as_if_were
+      - as_though
+      - boss
+
+  - id: g075_q007
+    question_type: two_choice
+    prompt: The room looked as though nobody ___ it for years.
+    choices:
+      - text: had used
+        correct: true
+      - text: used
+        correct: false
+    answer: had used
+    explanation: >
+      部屋が、何年も使われていなかったかのように見えたという意味。
+      looked より前の状態を表すので had used を使う。
+    translation: その部屋はまるで何年も誰も使っていなかったかのように見えた。
+    focus:
+      - as_if_past
+      - had_used
+      - room
+
+  - id: g075_q008
+    question_type: two_choice
+    prompt: She looks as if she ___ tired.
+    choices:
+      - text: were
+        correct: true
+      - text: had been
+        correct: false
+    answer: were
+    explanation: >
+      looks は現在の様子。
+      今疲れているように見えるので、現在の非現実・様子として were を使う。
+    translation: 彼女はまるで疲れているかのように見える。
+    focus:
+      - as_if_present
+      - were
+      - looks
+
+  - id: g075_q009
+    question_type: two_choice
+    prompt: He smiled as if he ___ the answer.
+    choices:
+      - text: knew
+        correct: true
+      - text: had known
+        correct: false
+    answer: knew
+    explanation: >
+      答えを知っているかのように微笑んだという意味。
+      その時点で知っているように見えたので knew が自然。
+    translation: 彼はまるで答えを知っているかのように微笑んだ。
+    focus:
+      - as_if_present
+      - knew
+      - answer
+
+  - id: g075_q010
+    question_type: two_choice
+    prompt: He apologized as if he ___ something wrong.
+    choices:
+      - text: had done
+        correct: true
+      - text: did
+        correct: false
+    answer: had done
+    explanation: >
+      謝った時点より前に何か悪いことをしたかのように、という意味。
+      過去の非現実なので had done を使う。
+    translation: 彼はまるで何か悪いことをしたかのように謝った。
+    focus:
+      - as_if_past
+      - had_done
+      - apologized
+
+  - id: g075_q011
+    question_type: two_choice
+    prompt: She speaks as if English ___ her first language.
+    choices:
+      - text: were
+        correct: true
+      - text: is
+        correct: false
+    answer: were
+    explanation: >
+      実際には英語が第一言語ではないが、そのように話すという意味。
+      仮定法なので were を使う。
+    translation: 彼女はまるで英語が母語であるかのように話す。
+    focus:
+      - as_if_were
+      - first_language
+      - unreal_present
+
+  - id: g075_q012
+    question_type: two_choice
+    prompt: He ran as if he ___ for his life.
+    choices:
+      - text: were running
+        correct: true
+      - text: runs
+        correct: false
+    answer: were running
+    explanation: >
+      「命がけで走っているかのように」という、その時の様子を表している。
+      as if + 仮定法の進行形として were running が自然。
+    translation: 彼はまるで命がけで走っているかのように走った。
+    focus:
+      - as_if_present
+      - were_running
+      - manner
+
+common_mistakes:
+  - mistake: as if の後ろを普通の現在形にしてしまう
+    correction: >
+      現在の事実と違う様子なら、as if + 過去形を使う。
+      He talks as if he knew everything. が自然。
+  - mistake: as if + had + 過去分詞を現在の意味で読んでしまう
+    correction: >
+      had + 過去分詞は、過去にそうしたかのように見えたという意味。
+      He looked as if he had seen a ghost. のように使う。
+  - mistake: were を he / she に使うことに違和感を持つ
+    correction: >
+      仮定法では he were, she were も使う。
+      She acts as if she were a queen. が標準的。
+  - mistake: as if と as though は全く違うと思う
+    correction: >
+      as if と as though はほぼ同じ意味で、
+      どちらも「まるで〜であるかのように」を表す。
+  - mistake: as if の後ろを必ず過去完了にしてしまう
+    correction: >
+      現在の様子なら過去形。
+      過去に何かをしたかのようなら had + 過去分詞。
+
+learning_notes:
+  - >
+    as if / as though は「まるで〜であるかのように」。
+    見た目・話し方・振る舞いを説明する時によく使う。
+  - >
+    現在の非現実なら as if + 過去形。
+    He speaks as if he were an expert.
+  - >
+    過去の非現実なら as if + had + 過去分詞。
+    He looked as if he had seen a ghost.
+  - >
+    looks / talks / behaves など現在の様子なら過去形、
+    looked / spoke / apologized など過去の様子で、その前の出来事を表すなら過去完了を疑う。
+
+prerequisites:
+  - g072
+  - g073
+  - g074
+
+next_items:
+  - g076
+  - g077
+  - g078

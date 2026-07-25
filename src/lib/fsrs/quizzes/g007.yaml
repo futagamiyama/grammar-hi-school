@@ -1,0 +1,339 @@
+id: g007
+file: g007.yaml
+
+title: 未来表現 will vs 現在形
+type: grammar_contrast
+
+section:
+  id: s01
+  title: 時制・相の基本対立
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 未来についての予測・意志か、時刻表・公式スケジュールとして決まっていることか？
+
+core_concept:
+  will:
+    form: will + 動詞の原形
+    meaning: 未来についての予測・意志・その場での判断を表す
+    image: たぶんそうなる / そうするつもり / 今そう判断する
+    examples:
+      - sentence: I think it will rain tomorrow.
+        ja: 明日は雨が降ると思う。
+        point: 未来についての予測を表している。
+      - sentence: I will call you later.
+        ja: 後で電話します。
+        point: 話している時点での意志・約束を表している。
+      - sentence: She will probably pass the exam.
+        ja: 彼女はたぶん試験に合格するだろう。
+        point: probably があり、未来についての予測を述べている。
+
+  present_simple:
+    form: 現在形
+    meaning: 時刻表・予定表・営業時間・公式スケジュールなど、決まっている未来を表す
+    image: 表に載っている / 制度として決まっている / 個人の意志より schedule が前に出る
+    examples:
+      - sentence: The train leaves at 8:30 tomorrow morning.
+        ja: その電車は明日の朝8時30分に出発する。
+        point: 時刻表上の予定なので現在形 leaves を使う。
+      - sentence: The store opens at nine tomorrow.
+        ja: その店は明日9時に開く。
+        point: 営業時間として決まっている未来なので現在形 opens を使う。
+      - sentence: The meeting starts at ten.
+        ja: 会議は10時に始まる。
+        point: 予定表上で決まっている開始時刻を表している。
+
+main_rule: >
+  will は、未来についての予測・意志・その場での判断を表す。
+  現在形は、未来のことでも、時刻表・営業時間・公式スケジュール・予定表など、
+  すでに決まっている事実のように扱う場合に使う。
+  日本語ではどちらも「〜する」「〜だろう」と訳せることがあるため、
+  未来の予測なのか、スケジュールとして固定されていることなのかで判断する。
+
+contrast_pairs:
+  - will: I think the train will be late.
+    present_simple: The train leaves at 8:30.
+    point: >
+      will be late は未来についての予測、leaves は時刻表上の固定された予定を表す。
+
+  - will: I will open the window.
+    present_simple: The store opens at nine.
+    point: >
+      will open はその場の意志、opens は営業時間として決まっている予定を表す。
+
+  - will: The meeting will probably be long.
+    present_simple: The meeting starts at ten.
+    point: >
+      will probably be は予測、starts は予定表上の開始時刻を表す。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g007_q001
+    question_type: two_choice
+    prompt: "The train ___ at 7:45 tomorrow morning."
+    choices:
+      - text: will leave
+        correct: false
+      - text: leaves
+        correct: true
+    answer: leaves
+    ja: "その電車は明日の朝7時45分に出発します。"
+    explanation: >
+      電車の出発時刻は時刻表上の予定なので、未来のことでも現在形 leaves が自然。
+    focus:
+      - timetable
+      - present_simple
+
+  - id: g007_q002
+    question_type: two_choice
+    prompt: "I think the train ___ late tonight."
+    choices:
+      - text: will be
+        correct: true
+      - text: is
+        correct: false
+    answer: will be
+    ja: "今夜、その電車は遅れると思います。"
+    explanation: >
+      I think があり、未来についての予測を述べている。
+      したがって will be が自然。
+    focus:
+      - prediction
+      - will
+
+  - id: g007_q003
+    question_type: two_choice
+    prompt: "The museum ___ at ten on Sundays."
+    choices:
+      - text: will open
+        correct: false
+      - text: opens
+        correct: true
+    answer: opens
+    ja: "その博物館は日曜日には10時に開きます。"
+    explanation: >
+      営業時間・開館時間として決まっていることなので、現在形 opens を使う。
+    focus:
+      - opening_hours
+      - schedule
+      - present_simple
+
+  - id: g007_q004
+    question_type: two_choice
+    prompt: "It's getting dark. I ___ the lights on."
+    choices:
+      - text: will turn
+        correct: true
+      - text: turn
+        correct: false
+    answer: will turn
+    ja: "暗くなってきました。電気をつけます。"
+    explanation: >
+      その場で「電気をつける」と決めているので will turn が自然。
+      現在形はこのような即時の意志には合わない。
+    focus:
+      - instant_decision
+      - will
+
+  - id: g007_q005
+    question_type: two_choice
+    prompt: "The next class ___ at 1:15."
+    choices:
+      - text: will start
+        correct: false
+      - text: starts
+        correct: true
+    answer: starts
+    ja: "次の授業は1時15分に始まります。"
+    explanation: >
+      授業の開始時刻は時間割・予定表上の決まった時刻なので、現在形 starts が自然。
+    focus:
+      - fixed_schedule
+      - school_timetable
+      - present_simple
+
+  - id: g007_q006
+    question_type: two_choice
+    prompt: "She probably ___ angry when she hears this."
+    choices:
+      - text: will get
+        correct: true
+      - text: gets
+        correct: false
+    answer: will get
+    ja: "これを聞いたら、彼女はたぶん怒るでしょう。"
+    explanation: >
+      probably があり、未来の反応について予測している。
+      したがって will get が自然。
+    focus:
+      - prediction
+      - probably
+      - will
+
+  - id: g007_q007
+    question_type: two_choice
+    prompt: "The final exam ___ on March 5."
+    choices:
+      - text: will be
+        correct: false
+      - text: is
+        correct: true
+    answer: is
+    ja: "期末試験は3月5日にあります。"
+    explanation: >
+      試験日は公式スケジュールとして決まっているので、現在形 is が自然。
+      will be も文脈によって不可能ではないが、このカードでは「予定表上の固定予定」として現在形を選ぶ。
+    focus:
+      - official_schedule
+      - exam_date
+      - present_simple
+
+  - id: g007_q008
+    question_type: two_choice
+    prompt: "I don't know yet, but I ___ you my answer tomorrow."
+    choices:
+      - text: will give
+        correct: true
+      - text: give
+        correct: false
+    answer: will give
+    ja: "まだわかりませんが、明日あなたに返事をします。"
+    explanation: >
+      話し手が未来にそうすると言っている意志・約束なので will give が自然。
+      時刻表や公式スケジュールではない。
+    focus:
+      - promise
+      - will
+
+  - id: g007_q009
+    question_type: two_choice
+    prompt: "The shop ___ at eight tomorrow morning."
+    choices:
+      - text: will open
+        correct: false
+      - text: opens
+        correct: true
+    answer: opens
+    ja: "その店は明日の朝8時に開きます。"
+    explanation: >
+      店の営業時間として決まっている未来なので、現在形 opens が自然。
+    focus:
+      - opening_hours
+      - present_simple
+
+  - id: g007_q010
+    question_type: two_choice
+    prompt: "Don't worry. I ___ you when I arrive."
+    choices:
+      - text: will call
+        correct: true
+      - text: call
+        correct: false
+    answer: will call
+    ja: "心配しないで。着いたら電話します。"
+    explanation: >
+      話し手の意志・約束を表しているので will call が自然。
+      when I arrive の中の arrive は時を表す副詞節なので現在形だが、主節は will call になる。
+    focus:
+      - promise
+      - main_clause_future
+      - will
+
+  - id: g007_q011
+    question_type: two_choice
+    prompt: "The bus ___ every ten minutes."
+    choices:
+      - text: will come
+        correct: false
+      - text: comes
+        correct: true
+    answer: comes
+    ja: "そのバスは10分ごとに来ます。"
+    explanation: >
+      every ten minutes があり、時刻表・通常運行を表している。
+      したがって現在形 comes が自然。
+    focus:
+      - regular_schedule
+      - every_ten_minutes
+      - present_simple
+
+  - id: g007_q012
+    question_type: two_choice
+    prompt: "I think this plan ___ well."
+    choices:
+      - text: will work
+        correct: true
+      - text: works
+        correct: false
+    answer: will work
+    ja: "この計画はうまくいくと思います。"
+    explanation: >
+      I think があり、未来の結果について予測している。
+      したがって will work が自然。
+    focus:
+      - prediction
+      - future_result
+      - will
+
+common_mistakes:
+  - mistake: 未来のことはすべて will を使うと思う
+    correction: >
+      未来のことでも、時刻表・営業時間・公式スケジュールのように固定された予定は現在形で表す。
+      例: The train leaves at 8:30.
+
+  - mistake: 現在形は現在のことだけを表すと思う
+    correction: >
+      現在形は、時刻表や予定表のように、未来でもすでに決まっていることを表せる。
+      例: The meeting starts at ten tomorrow.
+
+  - mistake: The train will leave at 8:30. が常に間違いだと思う
+    correction: >
+      will leave も文脈によって可能だが、時刻表上の予定として淡々と述べるなら現在形 leaves が基本。
+      このカードでは、固定スケジュールには現在形を選ぶ練習をする。
+
+  - mistake: 時を表す副詞節の現在形と、固定スケジュールの現在形を混同する
+    correction: >
+      when I arrive の arrive は副詞節の中で未来を現在形で表す用法。
+      The train leaves at 8:30 の leaves は時刻表・固定予定の現在形。
+      似ているが、別のカード g010 で詳しく扱う。
+
+learning_notes:
+  - >
+    will は、未来の予測・意志・約束を表すときに使う。
+  - >
+    現在形は、未来のことでも、時刻表・営業時間・授業時間・試験日など、
+    スケジュールとして固定されている場合に使う。
+  - >
+    tomorrow や next week があっても、固定スケジュールなら現在形になる。
+    例: The train leaves tomorrow morning.
+  - >
+    「未来だから will」ではなく、「予測・意志なのか、予定表上の事実なのか」で判断する。
+  - >
+    when, before, after などの副詞節で未来を現在形にする用法は、g010 で別に扱う。
+
+prerequisites:
+  - g005
+  - g006
+
+next_items:
+  - g008
+  - g010

@@ -1,0 +1,405 @@
+id: g103
+file: g103.yaml
+
+title: 名詞節の that
+type: grammar_contrast
+
+section:
+  id: s11
+  title: 名詞節・接続詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: that + 完全文を「〜ということ」として、主語・目的語・補語に使えるか？
+
+core_concept:
+  that_object_clause:
+    form: 主語 + 動詞 + that + 主語 + 動詞
+    meaning: 〜ということを思う・知る・言う・信じる
+    image: that節全体が動詞の目的語になる
+    examples:
+      - sentence: I think that he is honest.
+        ja: 私は彼が正直だと思う。
+        point: that he is honest が think の目的語。
+      - sentence: She said that she was tired.
+        ja: 彼女は疲れていると言った。
+        point: that she was tired が said の内容。
+      - sentence: We know that the earth is round.
+        ja: 私たちは地球が丸いことを知っている。
+        point: that the earth is round が know の目的語。
+
+  that_subject_clause:
+    form: That + 主語 + 動詞 + 動詞 ...
+    meaning: 〜ということが...
+    image: that節全体が文の主語になる
+    examples:
+      - sentence: That he lied is clear.
+        ja: 彼がうそをついたことは明らかだ。
+        point: That he lied 全体が主語。
+      - sentence: That she passed the exam surprised us.
+        ja: 彼女が試験に合格したことは私たちを驚かせた。
+        point: That she passed the exam 全体が主語。
+      - sentence: That he refused the offer was unexpected.
+        ja: 彼がその申し出を断ったことは予想外だった。
+        point: That he refused the offer 全体が主語。
+
+  it_extraposition_that:
+    form: It + be動詞 + 形容詞/名詞 + that + 主語 + 動詞
+    meaning: 〜ということは...だ
+    image: 長い that節を後ろに回し、it を仮の主語にする
+    examples:
+      - sentence: It is clear that he lied.
+        ja: 彼がうそをついたことは明らかだ。
+        point: It が仮主語で、that he lied が本当の主語。
+      - sentence: It is surprising that she passed the exam.
+        ja: 彼女が試験に合格したことは驚きだ。
+        point: that節を後ろに置くと自然。
+      - sentence: It is a pity that he cannot come.
+        ja: 彼が来られないのは残念だ。
+        point: It is a pity that ... はよく使う形。
+
+  that_complement_clause:
+    form: 主語 + be動詞 + that + 主語 + 動詞
+    meaning: 問題・事実・理由などは〜ということだ
+    image: that節が補語になり、主語の中身を説明する
+    examples:
+      - sentence: The problem is that we have no money.
+        ja: 問題は、私たちにお金がないことだ。
+        point: that we have no money が補語。
+      - sentence: The truth is that he did not know it.
+        ja: 真実は、彼がそれを知らなかったということだ。
+        point: that節が The truth の中身を説明している。
+      - sentence: The point is that we need more time.
+        ja: 要点は、私たちにはもっと時間が必要だということだ。
+        point: that we need more time が補語。
+
+  that_omission:
+    form: 主語 + think/say/know/believe + 主語 + 動詞
+    meaning: 〜ということを思う・言う・知る
+    image: 目的語の that は省略されることが多い
+    examples:
+      - sentence: I think he is honest.
+        ja: 私は彼が正直だと思う。
+        point: think の目的語の that が省略されている。
+      - sentence: She said she was tired.
+        ja: 彼女は疲れていると言った。
+        point: said の後ろの that が省略されている。
+      - sentence: I believe you are right.
+        ja: 私はあなたが正しいと信じている。
+        point: believe の目的語の that が省略されている。
+
+main_rule: >
+  名詞節の that は、that + 完全文で「〜ということ」を表す。
+  I think that he is honest. では、that he is honest が think の目的語。
+  That he lied is clear. では、That he lied 全体が主語。
+  The problem is that we have no money. では、that we have no money が補語。
+  主語になる that節は長くなりやすいので、
+  It is clear that he lied. のように it を仮主語にして that節を後ろへ置く形がよく使われる。
+  目的語になる that は、I think he is honest. のように省略されることが多い。
+  ただし、that節の中は主語と動詞がそろった完全文になる。
+  that は「それ」ではなく、節を名詞にする接続詞として読む。
+
+contrast_pairs:
+  - with_that: I think that he is honest.
+    omitted_that: I think he is honest.
+    point: >
+      think の目的語になる that は省略できることが多い。
+      どちらも「彼が正直だと思う」という意味。
+
+  - subject_clause: That he lied is clear.
+    extraposition: It is clear that he lied.
+    point: >
+      That he lied を主語にすることもできる。
+      ただし、It is clear that ... の方が自然なことが多い。
+
+  - complement_clause: The problem is that we have no money.
+    appositive_that: The fact that we have no money is serious.
+    point: >
+      The problem is that ... では that節が補語。
+      The fact that ... では that節が fact の内容を説明する同格。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または that節が主語・目的語・補語になることを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g103_q001
+    question_type: two_choice
+    prompt: I think ___ he is honest.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      that he is honest で「彼が正直だということ」。
+      that節が think の目的語になっている。
+    translation: 私は彼が正直だと思う。
+    focus:
+      - that_object_clause
+      - think_that
+      - complete_clause
+
+  - id: g103_q002
+    question_type: two_choice
+    prompt: She said ___ she was tired.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      that she was tired が said の内容。
+      「彼女は疲れていると言った」という意味。
+    translation: 彼女は疲れていると言った。
+    focus:
+      - that_object_clause
+      - said_that
+      - tired
+
+  - id: g103_q003
+    question_type: two_choice
+    prompt: We know ___ the earth is round.
+    choices:
+      - text: that
+        correct: true
+      - text: which
+        correct: false
+    answer: that
+    explanation: >
+      that the earth is round で「地球が丸いということ」。
+      that節が know の目的語。
+    translation: 私たちは地球が丸いことを知っている。
+    focus:
+      - that_object_clause
+      - know_that
+      - fact
+
+  - id: g103_q004
+    question_type: two_choice
+    prompt: ___ he lied is clear.
+    choices:
+      - text: That
+        correct: true
+      - text: What
+        correct: false
+    answer: That
+    explanation: >
+      That he lied 全体が文の主語。
+      「彼がうそをついたことは明らかだ」という意味。
+    translation: 彼がうそをついたことは明らかだ。
+    focus:
+      - that_subject_clause
+      - subject_clause
+      - lied
+
+  - id: g103_q005
+    question_type: two_choice
+    prompt: ___ she passed the exam surprised us.
+    choices:
+      - text: That
+        correct: true
+      - text: Because
+        correct: false
+    answer: That
+    explanation: >
+      That she passed the exam 全体が主語。
+      surprised us の主語になっている。
+    translation: 彼女が試験に合格したことは私たちを驚かせた。
+    focus:
+      - that_subject_clause
+      - passed_exam
+      - surprised
+
+  - id: g103_q006
+    question_type: two_choice
+    prompt: It is clear ___ he lied.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      It is clear that ... は仮主語構文。
+      it が仮の主語で、that he lied が本当の主語。
+    translation: 彼がうそをついたことは明らかだ。
+    focus:
+      - it_extraposition_that
+      - dummy_it
+      - clear
+
+  - id: g103_q007
+    question_type: two_choice
+    prompt: It is surprising ___ she passed the exam.
+    choices:
+      - text: that
+        correct: true
+      - text: because
+        correct: false
+    answer: that
+    explanation: >
+      It is surprising that ... で「〜ということは驚きだ」。
+      that節が本当の主語。
+    translation: 彼女が試験に合格したことは驚きだ。
+    focus:
+      - it_extraposition_that
+      - surprising
+      - that_clause
+
+  - id: g103_q008
+    question_type: two_choice
+    prompt: It is a pity ___ he cannot come.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      It is a pity that ... は「〜なのは残念だ」。
+      that he cannot come が残念な内容。
+    translation: 彼が来られないのは残念だ。
+    focus:
+      - it_extraposition_that
+      - a_pity
+      - cannot_come
+
+  - id: g103_q009
+    question_type: two_choice
+    prompt: The problem is ___ we have no money.
+    choices:
+      - text: that
+        correct: true
+      - text: because of
+        correct: false
+    answer: that
+    explanation: >
+      that we have no money が be動詞の補語。
+      「問題は、お金がないということだ」という意味。
+    translation: 問題は、私たちにお金がないことだ。
+    focus:
+      - that_complement_clause
+      - complement
+      - problem
+
+  - id: g103_q010
+    question_type: two_choice
+    prompt: The truth is ___ he did not know it.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      The truth is that ... で「真実は〜ということだ」。
+      that he did not know it が補語。
+    translation: 真実は、彼がそれを知らなかったということだ。
+    focus:
+      - that_complement_clause
+      - truth
+      - did_not_know
+
+  - id: g103_q011
+    question_type: two_choice
+    prompt: I think he is honest.
+    choices:
+      - text: that が省略されている
+        correct: true
+      - text: 関係代名詞が省略されている
+        correct: false
+    answer: that が省略されている
+    explanation: >
+      I think he is honest は I think that he is honest の that が省略された形。
+      he is honest は think の目的語になっている名詞節。
+    translation: 私は彼が正直だと思う。
+    focus:
+      - that_omission
+      - omitted_that
+      - object_clause
+
+  - id: g103_q012
+    question_type: two_choice
+    prompt: She said she was tired.
+    choices:
+      - text: that が省略されている
+        correct: true
+      - text: which が省略されている
+        correct: false
+    answer: that が省略されている
+    explanation: >
+      She said she was tired は She said that she was tired の that が省略された形。
+      that節が said の内容を表している。
+    translation: 彼女は疲れていると言った。
+    focus:
+      - that_omission
+      - said
+      - omitted_that
+
+common_mistakes:
+  - mistake: that を「それ」と訳してしまう
+    correction: >
+      名詞節の that は「それ」ではなく、節を名詞にする接続詞。
+      that he is honest は「彼が正直だということ」と読む。
+  - mistake: that節の中を疑問文語順にしてしまう
+    correction: >
+      that節の中は普通の文の語順。
+      that he is honest が正しく、that is he honest とはしない。
+  - mistake: 主語になる that節を読めない
+    correction: >
+      That he lied is clear. では、
+      That he lied 全体が主語になっている。
+  - mistake: It is clear that ... の it を「それ」と強く訳す
+    correction: >
+      It is clear that ... の it は仮主語。
+      本当の主語は後ろの that節。
+  - mistake: 目的語の that が省略されると、文構造を見失う
+    correction: >
+      I think he is honest. は I think that he is honest. の省略。
+      he is honest 全体が think の目的語。
+
+learning_notes:
+  - >
+    名詞節の that は、that + 完全文で「〜ということ」を表す。
+  - >
+    that節は、目的語・主語・補語になれる。
+    I think that ... / That ... is clear / The problem is that ...。
+  - >
+    主語の that節は長くなりやすいので、
+    It is clear that ... の仮主語構文がよく使われる。
+  - >
+    think, say, know, believe などの目的語になる that は省略されることが多い。
+  - >
+    that節の中は、疑問文語順ではなく普通の文の語順にする。
+
+prerequisites:
+  - g094
+  - g096
+  - g101
+  - g102
+
+next_items:
+  - g104
+  - g105
+  - g106

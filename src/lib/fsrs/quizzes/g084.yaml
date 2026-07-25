@@ -1,0 +1,377 @@
+id: g084
+file: g084.yaml
+
+title: 強調構文 It is ... that
+type: construction
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: It is ... that の形で、文のどの部分が強調されているかを読めるか？
+
+core_concept:
+  cleft_subject:
+    form: It is/was + 主語 + that/who + 動詞 ...
+    meaning: 〜したのは...だ
+    image: 主語を前に取り出して強調する
+    examples:
+      - sentence: It was Ken that broke the window.
+        ja: 窓を割ったのはケンだった。
+        point: Ken を強調している。
+      - sentence: It was my sister who called you yesterday.
+        ja: 昨日あなたに電話したのは私の姉だった。
+        point: my sister を強調している。人なので who も使える。
+      - sentence: It is hard work that leads to success.
+        ja: 成功につながるのは努力だ。
+        point: hard work を強調している。
+
+  cleft_object:
+    form: It is/was + 目的語 + that + 主語 + 動詞 ...
+    meaning: 主語が〜したのは...だ
+    image: 目的語を前に取り出して強調する
+    examples:
+      - sentence: It was this book that I bought yesterday.
+        ja: 私が昨日買ったのはこの本だった。
+        point: this book を強調している。
+      - sentence: It is English that she wants to study.
+        ja: 彼女が勉強したがっているのは英語だ。
+        point: English を強調している。
+      - sentence: It was the truth that he told us.
+        ja: 彼が私たちに話したのは真実だった。
+        point: the truth を強調している。
+
+  cleft_adverbial:
+    form: It is/was + 副詞句 + that + 主語 + 動詞 ...
+    meaning: 主語が〜したのは...でだ
+    image: 時・場所・理由などを前に取り出して強調する
+    examples:
+      - sentence: It was yesterday that I met her.
+        ja: 私が彼女に会ったのは昨日だった。
+        point: yesterday という時を強調している。
+      - sentence: It was in the park that I met her.
+        ja: 私が彼女に会ったのは公園でだった。
+        point: in the park という場所を強調している。
+      - sentence: It was because he was tired that he made a mistake.
+        ja: 彼が間違えたのは、疲れていたからだった。
+        point: because he was tired という理由を強調している。
+
+main_rule: >
+  強調構文 It is/was ... that は、文の一部を前に取り出して強調する形。
+  It was Ken that broke the window. は
+  Ken broke the window. の Ken を強調し、
+  「窓を割ったのはケンだった」という意味になる。
+  It was this book that I bought yesterday. は
+  I bought this book yesterday. の this book を強調する。
+  It was yesterday that I met her. は
+  I met her yesterday. の yesterday を強調する。
+  強調される部分は、主語・目的語・時・場所・理由などになれる。
+  人を強調する場合は that の代わりに who が使われることもある。
+
+contrast_pairs:
+  - plain: Ken broke the window.
+    cleft: It was Ken that broke the window.
+    point: >
+      普通の文は単に「ケンが窓を割った」。
+      強調構文は「窓を割ったのはケンだった」と Ken を強調する。
+
+  - plain: I bought this book yesterday.
+    object_focus: It was this book that I bought yesterday.
+    time_focus: It was yesterday that I bought this book.
+    point: >
+      this book を前に出せば「買ったもの」を強調する。
+      yesterday を前に出せば「買った時」を強調する。
+
+  - cleft: It was in the park that I met her.
+    relative_clause: The park that I visited was beautiful.
+    point: >
+      It was in the park that ... は強調構文。
+      The park that ... は関係代名詞の文。
+      It is/was で始まるかを確認する。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または It is ... that が強調構文であることを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g084_q001
+    question_type: two_choice
+    prompt: ___ was Ken that broke the window.
+    choices:
+      - text: It
+        correct: true
+      - text: This
+        correct: false
+    answer: It
+    explanation: >
+      It was ... that の強調構文。
+      Ken を強調して「窓を割ったのはケンだった」という意味。
+    translation: 窓を割ったのはケンだった。
+    focus:
+      - cleft_subject
+      - it_was_that
+      - subject_focus
+
+  - id: g084_q002
+    question_type: two_choice
+    prompt: It was Ken ___ broke the window.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      It was Ken that ... の強調構文。
+      what はこの形では使わない。
+    translation: 窓を割ったのはケンだった。
+    focus:
+      - cleft_subject
+      - that
+      - ken
+
+  - id: g084_q003
+    question_type: two_choice
+    prompt: It was this book ___ I bought yesterday.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      It was this book that ... で this book を強調している。
+      「私が昨日買ったのはこの本だった」という意味。
+    translation: 私が昨日買ったのはこの本だった。
+    focus:
+      - cleft_object
+      - object_focus
+      - this_book
+
+  - id: g084_q004
+    question_type: two_choice
+    prompt: It was yesterday ___ I met her.
+    choices:
+      - text: that
+        correct: true
+      - text: when
+        correct: false
+    answer: that
+    explanation: >
+      強調構文では、時を強調していても that を使える。
+      It was yesterday that I met her. が自然。
+    translation: 私が彼女に会ったのは昨日だった。
+    focus:
+      - cleft_adverbial
+      - time_focus
+      - yesterday
+
+  - id: g084_q005
+    question_type: two_choice
+    prompt: It was in the park ___ I met her.
+    choices:
+      - text: that
+        correct: true
+      - text: where
+        correct: false
+    answer: that
+    explanation: >
+      場所 in the park を強調している強調構文。
+      関係副詞 where ではなく that を使うのが基本。
+    translation: 私が彼女に会ったのは公園でだった。
+    focus:
+      - cleft_adverbial
+      - place_focus
+      - in_the_park
+
+  - id: g084_q006
+    question_type: two_choice
+    prompt: It was because he was tired ___ he made a mistake.
+    choices:
+      - text: that
+        correct: true
+      - text: why
+        correct: false
+    answer: that
+    explanation: >
+      because he was tired という理由を強調している。
+      強調構文なので that を使う。
+    translation: 彼が間違えたのは、疲れていたからだった。
+    focus:
+      - cleft_adverbial
+      - reason_focus
+      - because
+
+  - id: g084_q007
+    question_type: two_choice
+    prompt: It is English ___ she wants to study.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      English を強調している。
+      「彼女が勉強したがっているのは英語だ」という意味。
+    translation: 彼女が勉強したがっているのは英語だ。
+    focus:
+      - cleft_object
+      - english
+      - object_focus
+
+  - id: g084_q008
+    question_type: two_choice
+    prompt: It was my sister ___ called you yesterday.
+    choices:
+      - text: who
+        correct: true
+      - text: which
+        correct: false
+    answer: who
+    explanation: >
+      人 my sister を強調している。
+      強調構文では that も使えるが、人なので who も自然。
+    translation: 昨日あなたに電話したのは私の姉だった。
+    focus:
+      - cleft_subject
+      - who
+      - person_focus
+
+  - id: g084_q009
+    question_type: two_choice
+    prompt: It was the truth ___ he told us.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      the truth を強調している。
+      It was the truth that he told us. が自然。
+    translation: 彼が私たちに話したのは真実だった。
+    focus:
+      - cleft_object
+      - truth
+      - object_focus
+
+  - id: g084_q010
+    question_type: two_choice
+    prompt: It is hard work ___ leads to success.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      hard work を強調している。
+      「成功につながるのは努力だ」という意味。
+    translation: 成功につながるのは努力だ。
+    focus:
+      - cleft_subject
+      - hard_work
+      - subject_focus
+
+  - id: g084_q011
+    question_type: two_choice
+    prompt: It was at five o'clock ___ the meeting started.
+    choices:
+      - text: that
+        correct: true
+      - text: when
+        correct: false
+    answer: that
+    explanation: >
+      at five o'clock という時を強調している。
+      強調構文なので that を使う。
+    translation: 会議が始まったのは5時だった。
+    focus:
+      - cleft_adverbial
+      - time_focus
+      - at_five
+
+  - id: g084_q012
+    question_type: two_choice
+    prompt: It was not until midnight ___ he came home.
+    choices:
+      - text: that
+        correct: true
+      - text: when
+        correct: false
+    answer: that
+    explanation: >
+      not until midnight を強調する強調構文。
+      It was not until ... that ... で「〜して初めて...した」。
+    translation: 真夜中になって初めて彼は帰宅した。
+    focus:
+      - cleft_adverbial
+      - not_until
+      - that
+
+common_mistakes:
+  - mistake: It is ... that を形式主語構文と混同する
+    correction: >
+      強調構文では、It is と that を外すと普通の文に戻せる。
+      It was Ken that broke the window. → Ken broke the window.
+  - mistake: 時を強調するときに when を選んでしまう
+    correction: >
+      強調構文では、時を強調していても that を使える。
+      It was yesterday that I met her. が自然。
+  - mistake: 場所を強調するときに where を選んでしまう
+    correction: >
+      強調構文では、場所を強調していても that を使える。
+      It was in the park that I met her. が自然。
+  - mistake: what を that の代わりに使ってしまう
+    correction: >
+      It is ... that の形では that を使う。
+      what は「〜すること・もの」を含む関係代名詞で、別の構文。
+  - mistake: 強調されている部分を見抜かずに訳す
+    correction: >
+      It is/was と that の間にある語句が強調される。
+      そこを「〜なのは...だ」と読む。
+
+learning_notes:
+  - >
+    強調構文は、文の一部を前に取り出して強調する形。
+    It is/was ... that ... が基本。
+  - >
+    It is/was と that を外すと、元の普通の文に戻せる。
+    これが強調構文を見分ける大きな手がかり。
+  - >
+    強調できるのは、主語・目的語・時・場所・理由など。
+  - >
+    時なら when、場所なら where と反射的に選ばない。
+    強調構文なら that を選ぶ。
+
+prerequisites:
+  - g061
+  - g062
+  - g064
+  - g067
+
+next_items:
+  - g085
+  - g086
+  - g087

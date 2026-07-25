@@ -1,0 +1,348 @@
+id: g053
+file: g053.yaml
+
+title: 形容詞 vs 副詞
+type: grammar_contrast
+
+section:
+  id: s07
+  title: 形容詞・副詞・比較
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 名詞を説明するのか、動詞・形容詞・文全体を説明するのか？
+
+core_concept:
+  adjective:
+    form: 形容詞
+    meaning: 名詞を説明する。また、be動詞やlook, seem, become, feel, taste, smell などの後ろで主語の状態を説明する。
+    image: 名詞・主語の性質を表す
+    examples:
+      - sentence: She is a careful driver.
+        ja: 彼女は注意深い運転者だ。
+        point: driver という名詞を説明しているので careful。
+      - sentence: The question was easy.
+        ja: その問題は簡単だった。
+        point: question の性質を説明しているので easy。
+      - sentence: The soup tastes good.
+        ja: そのスープはおいしい。
+        point: taste の後ろで soup の状態を説明しているので good。
+
+  adverb:
+    form: 副詞
+    meaning: 動詞・形容詞・副詞・文全体を説明する
+    image: 動作の仕方、程度、文全体へのコメントを加える
+    examples:
+      - sentence: She drives carefully.
+        ja: 彼女は注意深く運転する。
+        point: drives という動作の仕方を説明しているので carefully。
+      - sentence: He solved the problem easily.
+        ja: 彼はその問題を簡単に解いた。
+        point: solved という動作の仕方を説明しているので easily。
+      - sentence: The question was extremely difficult.
+        ja: その問題は非常に難しかった。
+        point: difficult という形容詞の程度を説明しているので extremely。
+
+main_rule: >
+  形容詞は、名詞や主語の性質を説明する。
+  a careful driver, an easy question, The soup tastes good. のように使う。
+  副詞は、動詞・形容詞・副詞・文全体を説明する。
+  drive carefully, solved easily, extremely difficult, Luckily, ... のように使う。
+  とくに look, sound, feel, taste, smell などは、後ろに形容詞を置いて
+  主語の状態を表すことが多い。
+  The soup tastes good. は「スープがおいしい」であり、
+  tastes well とはしない。
+
+contrast_pairs:
+  - adjective: She is a careful driver.
+    adverb: She drives carefully.
+    point: >
+      careful は driver という名詞を説明する。
+      carefully は drives という動作を説明する。
+
+  - adjective: The question was easy.
+    adverb: He answered the question easily.
+    point: >
+      easy は question の性質を説明する。
+      easily は answered という動作を説明する。
+
+  - adjective: The soup tastes good.
+    adverb: He plays the piano well.
+    point: >
+      good は soup の状態・性質を説明する形容詞。
+      well は plays という動作の仕方を説明する副詞。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または形容詞と副詞の基本的な役割の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g053_q001
+    question_type: two_choice
+    prompt: She is a ___ driver.
+    choices:
+      - text: careful
+        correct: true
+      - text: carefully
+        correct: false
+    answer: careful
+    explanation: >
+      driver という名詞を説明しているので形容詞 careful を使う。
+      carefully は動作を説明する副詞。
+    translation: 彼女は注意深い運転者だ。
+    focus:
+      - adjective
+      - noun_modifier
+      - careful
+
+  - id: g053_q002
+    question_type: two_choice
+    prompt: She drives ___.
+    choices:
+      - text: careful
+        correct: false
+      - text: carefully
+        correct: true
+    answer: carefully
+    explanation: >
+      drives という動作の仕方を説明しているので副詞 carefully を使う。
+    translation: 彼女は注意深く運転する。
+    focus:
+      - adverb
+      - verb_modifier
+      - carefully
+
+  - id: g053_q003
+    question_type: two_choice
+    prompt: The test was ___.
+    choices:
+      - text: easy
+        correct: true
+      - text: easily
+        correct: false
+    answer: easy
+    explanation: >
+      be動詞の後ろで、主語 The test の性質を説明している。
+      形容詞 easy が自然。
+    translation: そのテストは簡単だった。
+    focus:
+      - adjective
+      - subject_complement
+      - easy
+
+  - id: g053_q004
+    question_type: two_choice
+    prompt: He solved the problem ___.
+    choices:
+      - text: easy
+        correct: false
+      - text: easily
+        correct: true
+    answer: easily
+    explanation: >
+      solved という動作の仕方を説明しているので、副詞 easily を使う。
+    translation: 彼はその問題を簡単に解いた。
+    focus:
+      - adverb
+      - verb_modifier
+      - easily
+
+  - id: g053_q005
+    question_type: two_choice
+    prompt: The soup tastes ___.
+    choices:
+      - text: good
+        correct: true
+      - text: well
+        correct: false
+    answer: good
+    explanation: >
+      taste の後ろでは、主語 The soup の状態・性質を説明している。
+      形容詞 good が自然。
+    translation: そのスープはおいしい。
+    focus:
+      - adjective
+      - linking_verb
+      - good
+
+  - id: g053_q006
+    question_type: two_choice
+    prompt: He plays the piano ___.
+    choices:
+      - text: good
+        correct: false
+      - text: well
+        correct: true
+    answer: well
+    explanation: >
+      plays という動作の仕方を説明しているので、副詞 well を使う。
+      play the piano well で「ピアノを上手に弾く」。
+    translation: 彼はピアノを上手に弾く。
+    focus:
+      - adverb
+      - verb_modifier
+      - well
+
+  - id: g053_q007
+    question_type: two_choice
+    prompt: It was a ___ change.
+    choices:
+      - text: sudden
+        correct: true
+      - text: suddenly
+        correct: false
+    answer: sudden
+    explanation: >
+      change という名詞を説明しているので形容詞 sudden を使う。
+    translation: それは突然の変化だった。
+    focus:
+      - adjective
+      - noun_modifier
+      - sudden
+
+  - id: g053_q008
+    question_type: two_choice
+    prompt: The weather changed ___.
+    choices:
+      - text: sudden
+        correct: false
+      - text: suddenly
+        correct: true
+    answer: suddenly
+    explanation: >
+      changed という動作・変化の仕方を説明しているので副詞 suddenly を使う。
+    translation: 天気が突然変わった。
+    focus:
+      - adverb
+      - verb_modifier
+      - suddenly
+
+  - id: g053_q009
+    question_type: two_choice
+    prompt: She looked ___ after the exam.
+    choices:
+      - text: happy
+        correct: true
+      - text: happily
+        correct: false
+    answer: happy
+    explanation: >
+      looked はここでは「〜に見える」という意味。
+      主語 She の状態を説明しているので形容詞 happy が自然。
+    translation: 試験の後、彼女はうれしそうに見えた。
+    focus:
+      - adjective
+      - linking_verb
+      - happy
+
+  - id: g053_q010
+    question_type: two_choice
+    prompt: She smiled ___.
+    choices:
+      - text: happy
+        correct: false
+      - text: happily
+        correct: true
+    answer: happily
+    explanation: >
+      smiled という動作の仕方を説明しているので副詞 happily を使う。
+    translation: 彼女はうれしそうにほほえんだ。
+    focus:
+      - adverb
+      - verb_modifier
+      - happily
+
+  - id: g053_q011
+    question_type: two_choice
+    prompt: This rule is ___ important.
+    choices:
+      - text: extreme
+        correct: false
+      - text: extremely
+        correct: true
+    answer: extremely
+    explanation: >
+      important という形容詞の程度を説明しているので、副詞 extremely を使う。
+    translation: この規則は非常に重要だ。
+    focus:
+      - adverb
+      - adjective_modifier
+      - extremely
+
+  - id: g053_q012
+    question_type: two_choice
+    prompt: ___, nobody was injured.
+    choices:
+      - text: Lucky
+        correct: false
+      - text: Luckily
+        correct: true
+    answer: Luckily
+    explanation: >
+      文全体に「幸運なことに」というコメントを加えている。
+      文全体を説明する副詞 Luckily が自然。
+    translation: 幸運なことに、誰もけがをしなかった。
+    focus:
+      - adverb
+      - sentence_modifier
+      - luckily
+
+common_mistakes:
+  - mistake: 形容詞と副詞を日本語の「〜い」「〜く」だけで判断する
+    correction: >
+      英語では、何を説明しているかを見る。
+      名詞・主語の性質なら形容詞、動作・形容詞・文全体なら副詞。
+  - mistake: She drives careful. としてしまう
+    correction: >
+      drives という動作を説明するので副詞 carefully が必要。
+      She drives carefully. が正しい。
+  - mistake: The soup tastes well. としてしまう
+    correction: >
+      tastes はここでは「味がする」という連結動詞。
+      主語 The soup の性質を説明するので good を使う。
+  - mistake: looked happily と looked happy を混同する
+    correction: >
+      She looked happy. は「幸せそうに見えた」。
+      She looked happily at me. なら「うれしそうに私を見た」で、look at の動作を説明する。
+  - mistake: extremely important の extremely を形容詞だと思う
+    correction: >
+      extremely は important という形容詞の程度を説明する副詞。
+
+learning_notes:
+  - >
+    形容詞は名詞を説明する。
+    a careful driver, an easy question, a sudden change のように使う。
+  - >
+    副詞は動詞を説明する。
+    drive carefully, solve easily, change suddenly のように使う。
+  - >
+    副詞は形容詞や文全体も説明できる。
+    extremely important, Luckily, nobody was injured. のように使う。
+  - >
+    look, sound, feel, taste, smell などは、後ろに形容詞を置いて
+    主語の状態・性質を表すことが多い。
+
+prerequisites: []
+
+next_items:
+  - g054
+  - g055
+  - g056

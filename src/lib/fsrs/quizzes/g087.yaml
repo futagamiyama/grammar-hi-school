@@ -1,0 +1,389 @@
+id: g087
+file: g087.yaml
+
+title: So / Neither / Nor による倒置
+type: grammar_contrast
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 「私もそうです」「私もそうではありません」を、So / Neither / Nor + 助動詞 + 主語で言えるか？
+
+core_concept:
+  so_inversion:
+    form: So + 助動詞/be動詞 + 主語
+    meaning: 〜もそうです
+    image: 肯定文に同意して、自分も同じだと言う
+    examples:
+      - sentence: I like coffee. So do I.
+        ja: 私はコーヒーが好きです。私もです。
+        point: like は一般動詞の現在形なので do I。
+      - sentence: She is tired. So am I.
+        ja: 彼女は疲れています。私もです。
+        point: be動詞 is に対応して am I。
+      - sentence: He can swim. So can I.
+        ja: 彼は泳げます。私も泳げます。
+        point: can に対応して can I。
+
+  neither_nor_inversion:
+    form: Neither/Nor + 助動詞/be動詞 + 主語
+    meaning: 〜もそうではありません
+    image: 否定文に同意して、自分も同じく否定だと言う
+    examples:
+      - sentence: I do not like coffee. Neither do I.
+        ja: 私はコーヒーが好きではありません。私も好きではありません。
+        point: 否定文への同意なので Neither do I。
+      - sentence: She is not tired. Neither am I.
+        ja: 彼女は疲れていません。私も疲れていません。
+        point: be動詞に対応して Neither am I。
+      - sentence: He cannot swim. Nor can I.
+        ja: 彼は泳げません。私も泳げません。
+        point: 助動詞 can に対応して Nor can I。
+
+  auxiliary_matching:
+    form: 前の文の助動詞・be動詞・時制に合わせる
+    meaning: do / does / did / am / is / are / was / were / can / have などを選ぶ
+    image: 前の文の文法情報を受ける
+    examples:
+      - sentence: He likes tennis. So does she.
+        ja: 彼はテニスが好きです。彼女もです。
+        point: likes は三人称単数現在なので does she。
+      - sentence: I went there yesterday. So did he.
+        ja: 私は昨日そこへ行きました。彼もです。
+        point: went は一般動詞の過去なので did he。
+      - sentence: I have finished the work. So has she.
+        ja: 私はその仕事を終えました。彼女もです。
+        point: have finished に対応して has she。
+
+  so_subject_auxiliary:
+    form: So + 主語 + 助動詞
+    meaning: 本当にその通りだ
+    image: 同意ではなく、前の発言を確認する
+    examples:
+      - sentence: You look tired. So I do.
+        ja: 君は疲れて見えるね。本当にそうです。
+        point: So do I. とは意味が違う。
+      - sentence: He said he would win, and so he did.
+        ja: 彼は勝つと言った。そして本当に勝った。
+        point: so he did は「実際にそうした」。
+      - sentence: You forgot your bag. So I did.
+        ja: 君、かばんを忘れたよ。本当だ、忘れていた。
+        point: So I did は確認・認める表現。
+
+main_rule: >
+  So + 助動詞/be動詞 + 主語 は、肯定文を受けて「〜もそうです」と言う形。
+  I like coffee. So do I. は「私も好きです」。
+  Neither / Nor + 助動詞/be動詞 + 主語 は、否定文を受けて「〜もそうではありません」と言う形。
+  I do not like coffee. Neither do I. は「私も好きではありません」。
+  助動詞は前の文に合わせる。
+  一般動詞の現在なら do/does、過去なら did、be動詞なら am/is/are/was/were、
+  can なら can、have finished なら have/has を使う。
+  So I do. のように So + 主語 + 助動詞 になると、
+  「本当にそうです」という確認の意味になり、So do I. とは違う。
+
+contrast_pairs:
+  - positive_agreement: I like coffee. So do I.
+    negative_agreement: I do not like coffee. Neither do I.
+    point: >
+      肯定文に「私も」と同意するなら So do I。
+      否定文に「私もそうでない」と同意するなら Neither do I。
+
+  - agreement: I like coffee. So do I.
+    confirmation: You like coffee. So I do.
+    point: >
+      So do I は「私もそうです」。
+      So I do は「本当にそうです」と前の発言を認める。
+
+  - present: He likes tennis. So does she.
+    past: He liked tennis. So did she.
+    point: >
+      現在の三人称単数なら does。
+      過去なら did。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または So do I / Neither do I / So I do の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g087_q001
+    question_type: two_choice
+    prompt: I like coffee. So ___.
+    choices:
+      - text: do I
+        correct: true
+      - text: I do
+        correct: false
+    answer: do I
+    explanation: >
+      肯定文 I like coffee に対して「私も」と言う形。
+      So + 助動詞 + 主語 なので So do I.
+    translation: 私はコーヒーが好きです。私もです。
+    focus:
+      - so_inversion
+      - do_i
+      - positive_agreement
+
+  - id: g087_q002
+    question_type: two_choice
+    prompt: I do not like coffee. Neither ___.
+    choices:
+      - text: do I
+        correct: true
+      - text: I do
+        correct: false
+    answer: do I
+    explanation: >
+      否定文に対して「私もそうではない」と言う形。
+      Neither + 助動詞 + 主語 なので Neither do I.
+    translation: 私はコーヒーが好きではありません。私も好きではありません。
+    focus:
+      - neither_nor_inversion
+      - do_i
+      - negative_agreement
+
+  - id: g087_q003
+    question_type: two_choice
+    prompt: She is tired. So ___.
+    choices:
+      - text: am I
+        correct: true
+      - text: do I
+        correct: false
+    answer: am I
+    explanation: >
+      前の文は be動詞 is。
+      自分について言うので am I を使い、So am I. となる。
+    translation: 彼女は疲れています。私も疲れています。
+    focus:
+      - so_inversion
+      - be_verb
+      - am_i
+
+  - id: g087_q004
+    question_type: two_choice
+    prompt: She is not tired. Neither ___.
+    choices:
+      - text: am I
+        correct: true
+      - text: do I
+        correct: false
+    answer: am I
+    explanation: >
+      否定の be動詞文を受けている。
+      「私も疲れていない」は Neither am I.
+    translation: 彼女は疲れていません。私も疲れていません。
+    focus:
+      - neither_nor_inversion
+      - be_verb
+      - am_i
+
+  - id: g087_q005
+    question_type: two_choice
+    prompt: He can swim. So ___.
+    choices:
+      - text: can I
+        correct: true
+      - text: do I
+        correct: false
+    answer: can I
+    explanation: >
+      前の文に助動詞 can がある。
+      同じ助動詞を使って So can I. とする。
+    translation: 彼は泳げます。私も泳げます。
+    focus:
+      - so_inversion
+      - can
+      - modal_matching
+
+  - id: g087_q006
+    question_type: two_choice
+    prompt: He cannot swim. Nor ___.
+    choices:
+      - text: can I
+        correct: true
+      - text: do I
+        correct: false
+    answer: can I
+    explanation: >
+      否定文 cannot swim を受けて「私も泳げない」と言う形。
+      Nor can I. が自然。
+    translation: 彼は泳げません。私も泳げません。
+    focus:
+      - neither_nor_inversion
+      - nor
+      - can_i
+
+  - id: g087_q007
+    question_type: two_choice
+    prompt: He likes tennis. So ___.
+    choices:
+      - text: does she
+        correct: true
+      - text: do she
+        correct: false
+    answer: does she
+    explanation: >
+      likes は一般動詞の三人称単数現在。
+      she も三人称単数なので does she を使う。
+    translation: 彼はテニスが好きです。彼女もです。
+    focus:
+      - auxiliary_matching
+      - does_she
+      - third_person_singular
+
+  - id: g087_q008
+    question_type: two_choice
+    prompt: He liked tennis. So ___.
+    choices:
+      - text: did she
+        correct: true
+      - text: does she
+        correct: false
+    answer: did she
+    explanation: >
+      liked は一般動詞の過去形。
+      過去を受けるので did she を使う。
+    translation: 彼はテニスが好きでした。彼女もでした。
+    focus:
+      - auxiliary_matching
+      - did_she
+      - past
+
+  - id: g087_q009
+    question_type: two_choice
+    prompt: I have finished the work. So ___.
+    choices:
+      - text: has she
+        correct: true
+      - text: does she
+        correct: false
+    answer: has she
+    explanation: >
+      have finished は現在完了。
+      she を主語にするので has she を使う。
+    translation: 私はその仕事を終えました。彼女も終えました。
+    focus:
+      - auxiliary_matching
+      - present_perfect
+      - has_she
+
+  - id: g087_q010
+    question_type: two_choice
+    prompt: I was late. So ___.
+    choices:
+      - text: was he
+        correct: true
+      - text: did he
+        correct: false
+    answer: was he
+    explanation: >
+      前の文は be動詞 was。
+      be動詞を受けるので So was he. が自然。
+    translation: 私は遅れました。彼も遅れました。
+    focus:
+      - so_inversion
+      - was_he
+      - be_verb
+
+  - id: g087_q011
+    question_type: two_choice
+    prompt: I was not late. Neither ___.
+    choices:
+      - text: was he
+        correct: true
+      - text: did he
+        correct: false
+    answer: was he
+    explanation: >
+      否定の be動詞文を受けている。
+      「彼も遅れていなかった」は Neither was he.
+    translation: 私は遅れていませんでした。彼も遅れていませんでした。
+    focus:
+      - neither_nor_inversion
+      - was_he
+      - negative_agreement
+
+  - id: g087_q012
+    question_type: two_choice
+    prompt: You forgot your bag. So ___.
+    choices:
+      - text: I did
+        correct: true
+      - text: did I
+        correct: false
+    answer: I did
+    explanation: >
+      ここでは「私も忘れた」ではなく、「本当だ、忘れていた」と認める意味。
+      確認・同意は So + 主語 + 助動詞 の So I did.
+    translation: 君、かばんを忘れたよ。本当だ、忘れていた。
+    focus:
+      - so_subject_auxiliary
+      - confirmation
+      - so_i_did
+
+common_mistakes:
+  - mistake: So I do と So do I を同じ意味だと思う
+    correction: >
+      So do I は「私もそうです」。
+      So I do は「本当にそうです」と前の発言を認める表現。
+  - mistake: 否定文への同意に So do I を使ってしまう
+    correction: >
+      否定文には Neither do I / Nor do I を使う。
+      I do not like coffee. Neither do I. が自然。
+  - mistake: 前の文の助動詞に合わせない
+    correction: >
+      can なら can I、be動詞なら am I / was he、
+      現在完了なら have/has を使う。
+  - mistake: He likes ... So do she. としてしまう
+    correction: >
+      三人称単数現在では does を使う。
+      So does she. が正しい。
+  - mistake: 過去文を受けても do / does を使ってしまう
+    correction: >
+      一般動詞の過去なら did を使う。
+      He liked tennis. So did she. が正しい。
+
+learning_notes:
+  - >
+    So + 助動詞 + 主語 は、肯定文を受けて「〜もそうです」。
+  - >
+    Neither / Nor + 助動詞 + 主語 は、否定文を受けて「〜もそうではありません」。
+  - >
+    助動詞は前の文に合わせる。
+    do / does / did / am / is / are / was / were / can / have / has を選ぶ。
+  - >
+    So + 主語 + 助動詞 は「本当にそうです」という確認。
+    語順が変わると意味も変わる。
+
+prerequisites:
+  - g001
+  - g002
+  - g021
+  - g085
+  - g086
+
+next_items:
+  - g088
+  - g089
+  - g090

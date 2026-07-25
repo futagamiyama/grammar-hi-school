@@ -1,0 +1,375 @@
+id: g083
+file: g083.yaml
+
+title: would rather + 仮定法
+type: grammar_contrast
+
+section:
+  id: s09
+  title: 仮定法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: would rather の後ろで、同一主語なら原形、別主語なら仮定法を使えるか？
+
+core_concept:
+  would_rather_do:
+    form: 主語 + would rather + 動詞原形
+    meaning: むしろ〜したい、〜する方がよい
+    image: 主語自身がしたいことを言う
+    examples:
+      - sentence: I would rather stay home.
+        ja: 私はむしろ家にいたい。
+        point: I が stay するので、would rather の後ろは動詞原形。
+      - sentence: She would rather walk than take a taxi.
+        ja: 彼女はタクシーに乗るより歩きたい。
+        point: would rather A than B で「BよりAしたい」。
+      - sentence: I would rather not go there.
+        ja: 私はそこへ行きたくない。
+        point: 否定は would rather not + 動詞原形。
+
+  would_rather_subject_past:
+    form: 主語 + would rather + 別の主語 + 過去形
+    meaning: むしろ〜してほしい、〜してくれた方がよい
+    image: 相手にしてほしいことを、遠回しに仮定法で言う
+    examples:
+      - sentence: I would rather you stayed here.
+        ja: 私はあなたにここにいてほしい。
+        point: you が stayed するので、仮定法過去を使う。
+      - sentence: I would rather he came tomorrow.
+        ja: 私は彼に明日来てほしい。
+        point: tomorrow の話でも、would rather + 主語 + 過去形。
+      - sentence: I would rather you did not tell anyone.
+        ja: 私はあなたに誰にも言わないでほしい。
+        point: 否定は did not + 動詞原形。
+
+  would_rather_subject_past_perfect:
+    form: 主語 + would rather + 別の主語 + had + 過去分詞
+    meaning: むしろ〜してほしかった、〜しないでほしかった
+    image: 過去に起きたことへの不満・後悔
+    examples:
+      - sentence: I would rather you had told me the truth.
+        ja: 私はあなたに本当のことを言ってほしかった。
+        point: 実際には過去に言ってくれなかった。
+      - sentence: I would rather he had not said that.
+        ja: 私は彼にあんなことを言ってほしくなかった。
+        point: 実際には過去に言ってしまった。
+      - sentence: She would rather we had left earlier.
+        ja: 彼女は私たちにもっと早く出発してほしかった。
+        point: 実際には早く出発しなかった。
+
+main_rule: >
+  would rather は「むしろ〜したい」「〜する方がよい」という意味を表す。
+  主語自身が何かをするなら、would rather + 動詞原形を使う。
+  I would rather stay home. は「私はむしろ家にいたい」。
+  しかし、別の人に何かをしてほしい場合は、
+  would rather + 主語 + 過去形を使う。
+  I would rather you stayed here. は「あなたにここにいてほしい」。
+  この stayed は過去の意味ではなく、現在・未来への希望を表す仮定法過去。
+  過去にしてほしかったことを言うなら、
+  would rather + 主語 + had + 過去分詞を使う。
+  I would rather you had told me the truth. は
+  「あなたに本当のことを言ってほしかった」という過去への不満・後悔を表す。
+
+contrast_pairs:
+  - same_subject: I would rather stay home.
+    different_subject: I would rather you stayed home.
+    point: >
+      I would rather stay は、I 自身が stay したい。
+      I would rather you stayed は、you に stay してほしい。
+
+  - present_or_future: I would rather he came tomorrow.
+    past_regret: I would rather he had come yesterday.
+    point: >
+      came tomorrow は未来への希望だが、仮定法過去を使う。
+      had come yesterday は過去に来てほしかったという後悔。
+
+  - negative_present: I would rather you did not tell anyone.
+    negative_past: I would rather you had not told anyone.
+    point: >
+      did not tell はこれから言わないでほしい。
+      had not told は過去に言わないでほしかった。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または would rather do と would rather + 主語 + 過去形 の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g083_q001
+    question_type: two_choice
+    prompt: I would rather ___ home.
+    choices:
+      - text: stay
+        correct: true
+      - text: stayed
+        correct: false
+    answer: stay
+    explanation: >
+      I 自身が家にいることを望んでいる。
+      同一主語なので would rather + 動詞原形を使う。
+    translation: 私はむしろ家にいたい。
+    focus:
+      - would_rather_do
+      - same_subject
+      - stay
+
+  - id: g083_q002
+    question_type: two_choice
+    prompt: I would rather you ___ home.
+    choices:
+      - text: stayed
+        correct: true
+      - text: stay
+        correct: false
+    answer: stayed
+    explanation: >
+      I が望み、you が家にいる。
+      別主語なので would rather + 主語 + 過去形を使う。
+    translation: 私はあなたに家にいてほしい。
+    focus:
+      - would_rather_subject_past
+      - different_subject
+      - stayed
+
+  - id: g083_q003
+    question_type: two_choice
+    prompt: She would rather ___ than take a taxi.
+    choices:
+      - text: walk
+        correct: true
+      - text: walked
+        correct: false
+    answer: walk
+    explanation: >
+      She 自身が歩くことを望んでいる。
+      would rather A than B では、A に動詞原形を使う。
+    translation: 彼女はタクシーに乗るより歩きたい。
+    focus:
+      - would_rather_do
+      - rather_than
+      - walk
+
+  - id: g083_q004
+    question_type: two_choice
+    prompt: I would rather he ___ tomorrow.
+    choices:
+      - text: came
+        correct: true
+      - text: comes
+        correct: false
+    answer: came
+    explanation: >
+      tomorrow の話でも、I が he に来てほしいと言っている。
+      別主語なので仮定法過去 came を使う。
+    translation: 私は彼に明日来てほしい。
+    focus:
+      - would_rather_subject_past
+      - future_meaning
+      - came
+
+  - id: g083_q005
+    question_type: two_choice
+    prompt: I would rather ___ there.
+    choices:
+      - text: not go
+        correct: true
+      - text: do not go
+        correct: false
+    answer: not go
+    explanation: >
+      would rather の否定は would rather not + 動詞原形。
+      I would rather not go there. が自然。
+    translation: 私はそこへ行きたくない。
+    focus:
+      - would_rather_do
+      - negative
+      - not_go
+
+  - id: g083_q006
+    question_type: two_choice
+    prompt: I would rather you ___ anyone.
+    choices:
+      - text: did not tell
+        correct: true
+      - text: do not tell
+        correct: false
+    answer: did not tell
+    explanation: >
+      I が you に誰にも言わないでほしいと言っている。
+      別主語なので仮定法過去の否定 did not tell を使う。
+    translation: 私はあなたに誰にも言わないでほしい。
+    focus:
+      - would_rather_subject_past
+      - negative
+      - did_not_tell
+
+  - id: g083_q007
+    question_type: two_choice
+    prompt: I would rather you ___ me the truth yesterday.
+    choices:
+      - text: had told
+        correct: true
+      - text: told
+        correct: false
+    answer: had told
+    explanation: >
+      yesterday があり、過去に本当のことを言ってほしかったという後悔。
+      would rather + 主語 + had + 過去分詞を使う。
+    translation: 私はあなたに昨日、本当のことを言ってほしかった。
+    focus:
+      - would_rather_subject_past_perfect
+      - past_regret
+      - had_told
+
+  - id: g083_q008
+    question_type: two_choice
+    prompt: I would rather he ___ that.
+    choices:
+      - text: had not said
+        correct: true
+      - text: did not say
+        correct: false
+    answer: had not said
+    explanation: >
+      すでに言ってしまったことへの不満・後悔。
+      過去に言わないでほしかったので had not said を使う。
+    translation: 私は彼にあんなことを言ってほしくなかった。
+    focus:
+      - would_rather_subject_past_perfect
+      - negative_past
+      - had_not_said
+
+  - id: g083_q009
+    question_type: two_choice
+    prompt: She would rather we ___ earlier.
+    choices:
+      - text: had left
+        correct: true
+      - text: left
+        correct: false
+    answer: had left
+    explanation: >
+      実際には早く出発しなかったことへの過去の不満。
+      would rather + 主語 + had + 過去分詞を使う。
+    translation: 彼女は私たちにもっと早く出発してほしかった。
+    focus:
+      - would_rather_subject_past_perfect
+      - had_left
+      - past_regret
+
+  - id: g083_q010
+    question_type: two_choice
+    prompt: I would rather ___ tea than coffee.
+    choices:
+      - text: drink
+        correct: true
+      - text: drank
+        correct: false
+    answer: drink
+    explanation: >
+      I 自身が飲みたいものを言っている。
+      同一主語なので would rather + 動詞原形。
+    translation: 私はコーヒーよりお茶を飲みたい。
+    focus:
+      - would_rather_do
+      - same_subject
+      - drink
+
+  - id: g083_q011
+    question_type: two_choice
+    prompt: I would rather my son ___ less time online.
+    choices:
+      - text: spent
+        correct: true
+      - text: spends
+        correct: false
+    answer: spent
+    explanation: >
+      I が my son にしてほしいことを述べている。
+      別主語なので would rather + 主語 + 過去形。
+    translation: 私は息子にオンラインで過ごす時間を減らしてほしい。
+    focus:
+      - would_rather_subject_past
+      - different_subject
+      - spent
+
+  - id: g083_q012
+    question_type: two_choice
+    prompt: I would rather you ___ late next time.
+    choices:
+      - text: were not
+        correct: true
+      - text: are not
+        correct: false
+    answer: were not
+    explanation: >
+      next time の話でも、別主語 you への希望なので仮定法過去を使う。
+      be動詞は were not が自然。
+    translation: 次回は遅れないでほしい。
+    focus:
+      - would_rather_subject_past
+      - were_not
+      - future_meaning
+
+common_mistakes:
+  - mistake: I would rather you stay here. と原形を使ってしまう
+    correction: >
+      別主語なら would rather + 主語 + 過去形。
+      I would rather you stayed here. が基本。
+  - mistake: I would rather stayed home. としてしまう
+    correction: >
+      主語自身がするなら would rather + 動詞原形。
+      I would rather stay home. が正しい。
+  - mistake: tomorrow があるから comes にしてしまう
+    correction: >
+      would rather + 別主語では、未来の希望でも過去形を使う。
+      I would rather he came tomorrow. が自然。
+  - mistake: 過去への後悔で told を使ってしまう
+    correction: >
+      過去にしてほしかったことなら had + 過去分詞。
+      I would rather you had told me the truth. とする。
+  - mistake: 否定形を would rather do not としてしまう
+    correction: >
+      同一主語の否定は would rather not + 動詞原形。
+      別主語の否定は would rather + 主語 + did not + 動詞原形。
+
+learning_notes:
+  - >
+    would rather + 動詞原形 は、主語自身の好み。
+    I would rather stay home. の形。
+  - >
+    would rather + 主語 + 過去形 は、別の人にしてほしいこと。
+    I would rather you stayed here. の形。
+  - >
+    would rather + 主語 + had + 過去分詞 は、過去にしてほしかったことへの後悔。
+  - >
+    would rather の後ろで、誰がその動作をするのかを見る。
+    同じ主語なら原形、別主語なら仮定法を考える。
+
+prerequisites:
+  - g072
+  - g073
+  - g074
+
+next_items:
+  - g084
+  - g085
+  - g086

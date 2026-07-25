@@ -1,0 +1,375 @@
+id: g082
+file: g082.yaml
+
+title: 仮定法未来 should / were to
+type: grammar_contrast
+
+section:
+  id: s09
+  title: 仮定法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 可能性の低い未来条件を should / were to で表せるか？
+
+core_concept:
+  if_should:
+    form: If + 主語 + should + 動詞原形 ..., 主語 + will/would/can/could + 動詞原形 ...
+    meaning: 万一〜なら
+    image: 起こる可能性は低いが、あり得る未来条件
+    examples:
+      - sentence: If it should rain tomorrow, the game will be canceled.
+        ja: 万一明日雨が降れば、試合は中止されるだろう。
+        point: 雨の可能性は低いが、あり得る未来条件。
+      - sentence: If you should need help, please call me.
+        ja: 万一助けが必要なら、私に電話してください。
+        point: 丁寧な案内文でよく使われる。
+      - sentence: If he should come early, ask him to wait.
+        ja: 万一彼が早く来たら、待つように言ってください。
+        point: 未来に起こるかもしれない低い可能性を表す。
+
+  if_were_to:
+    form: If + 主語 + were to + 動詞原形 ..., 主語 + would/could/might + 動詞原形 ...
+    meaning: もし仮に〜するようなことがあれば
+    image: 現実性がかなり低い未来条件
+    examples:
+      - sentence: If the sun were to disappear, life on Earth would end.
+        ja: もし太陽が消えるようなことがあれば、地球上の生命は終わるだろう。
+        point: 実際にはほとんどあり得ない未来条件。
+      - sentence: If I were to lose my job, I would move back home.
+        ja: もし仮に仕事を失うようなことがあれば、実家に戻るだろう。
+        point: 可能性の低い未来を仮に考えている。
+      - sentence: If war were to break out, many people would suffer.
+        ja: もし戦争が起こるようなことがあれば、多くの人が苦しむだろう。
+        point: 起きてほしくない低い可能性を表す。
+
+  ordinary_future_condition:
+    form: If + 主語 + 現在形 ..., 主語 + will/can + 動詞原形 ...
+    meaning: もし〜なら
+    image: 普通に起こりうる未来条件
+    examples:
+      - sentence: If it rains tomorrow, the game will be canceled.
+        ja: 明日雨が降れば、試合は中止されるだろう。
+        point: 普通にあり得る未来条件。
+      - sentence: If you need help, please call me.
+        ja: 助けが必要なら、私に電話してください。
+        point: 普通の条件文。
+      - sentence: If he comes early, ask him to wait.
+        ja: 彼が早く来たら、待つように言ってください。
+        point: 現実的な未来条件。
+
+main_rule: >
+  仮定法未来は、未来について可能性の低い条件を表す。
+  If + 主語 + should + 動詞原形 は「万一〜なら」。
+  If it should rain tomorrow, the game will be canceled. は
+  「万一明日雨が降れば、試合は中止されるだろう」という意味。
+  If + 主語 + were to + 動詞原形 は「もし仮に〜するようなことがあれば」。
+  If the sun were to disappear, life on Earth would end. は、
+  ほとんどあり得ない未来を仮に考える表現。
+  普通に起こりうる未来条件なら If + 現在形 を使う。
+  If it rains tomorrow と If it should rain tomorrow の違いは、
+  起こる可能性をどれくらい低く見ているかにある。
+
+contrast_pairs:
+  - ordinary: If it rains tomorrow, the game will be canceled.
+    should_future: If it should rain tomorrow, the game will be canceled.
+    point: >
+      If it rains は普通の未来条件。
+      If it should rain は「万一雨が降れば」と、可能性を低く見ている。
+
+  - should_future: If you should need help, please call me.
+    were_to_future: If you were to need help, I would help you.
+    point: >
+      should は「万一〜なら」。
+      were to は「もし仮に〜するようなことがあれば」と、さらに仮定的に響くことが多い。
+
+  - ordinary: If he comes early, ask him to wait.
+    should_future: If he should come early, ask him to wait.
+    point: >
+      comes は普通の条件。
+      should come は「万一早く来たら」という低い可能性。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または should / were to が可能性の低い未来条件を表すことを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g082_q001
+    question_type: two_choice
+    prompt: If it ___ rain tomorrow, the game will be canceled.
+    choices:
+      - text: should
+        correct: true
+      - text: would
+        correct: false
+    answer: should
+    explanation: >
+      If + 主語 + should + 動詞原形で「万一〜なら」。
+      If it should rain tomorrow が自然。
+    translation: 万一明日雨が降れば、試合は中止されるだろう。
+    focus:
+      - if_should
+      - future_condition
+      - rain
+
+  - id: g082_q002
+    question_type: two_choice
+    prompt: If it ___ tomorrow, the game will be canceled.
+    choices:
+      - text: rains
+        correct: true
+      - text: will rain
+        correct: false
+    answer: rains
+    explanation: >
+      普通の未来条件では If節の中に現在形を使う。
+      If it rains tomorrow が自然。
+    translation: 明日雨が降れば、試合は中止されるだろう。
+    focus:
+      - ordinary_future_condition
+      - present_in_if_clause
+      - rains
+
+  - id: g082_q003
+    question_type: two_choice
+    prompt: If you ___ need help, please call me.
+    choices:
+      - text: should
+        correct: true
+      - text: would
+        correct: false
+    answer: should
+    explanation: >
+      If you should need help は「万一助けが必要なら」。
+      丁寧な案内文でよく使う。
+    translation: 万一助けが必要なら、私に電話してください。
+    focus:
+      - if_should
+      - polite_notice
+      - need_help
+
+  - id: g082_q004
+    question_type: two_choice
+    prompt: If you need help, please ___ me.
+    choices:
+      - text: call
+        correct: true
+      - text: will call
+        correct: false
+    answer: call
+    explanation: >
+      please の後ろは動詞原形。
+      If you need help は普通の条件文。
+    translation: 助けが必要なら、私に電話してください。
+    focus:
+      - ordinary_future_condition
+      - imperative
+      - call
+
+  - id: g082_q005
+    question_type: two_choice
+    prompt: If the sun ___ disappear, life on Earth would end.
+    choices:
+      - text: were to
+        correct: true
+      - text: should to
+        correct: false
+    answer: were to
+    explanation: >
+      If + 主語 + were to + 動詞原形で、かなり可能性の低い未来条件を表す。
+      should to という形は使わない。
+    translation: もし太陽が消えるようなことがあれば、地球上の生命は終わるだろう。
+    focus:
+      - if_were_to
+      - low_possibility
+      - were_to
+
+  - id: g082_q006
+    question_type: two_choice
+    prompt: If I ___ lose my job, I would move back home.
+    choices:
+      - text: were to
+        correct: true
+      - text: was to
+        correct: false
+    answer: were to
+    explanation: >
+      仮定法未来の形は If I were to + 動詞原形。
+      「もし仮に仕事を失うようなことがあれば」という意味。
+    translation: もし仮に仕事を失うようなことがあれば、実家に戻るだろう。
+    focus:
+      - if_were_to
+      - were_to
+      - lose_job
+
+  - id: g082_q007
+    question_type: two_choice
+    prompt: If war ___ break out, many people would suffer.
+    choices:
+      - text: were to
+        correct: true
+      - text: will
+        correct: false
+    answer: were to
+    explanation: >
+      If war were to break out で「もし戦争が起こるようなことがあれば」。
+      起きてほしくない低い可能性を表している。
+    translation: もし戦争が起こるようなことがあれば、多くの人が苦しむだろう。
+    focus:
+      - if_were_to
+      - break_out
+      - low_possibility
+
+  - id: g082_q008
+    question_type: two_choice
+    prompt: If he ___ come early, ask him to wait.
+    choices:
+      - text: should
+        correct: true
+      - text: would
+        correct: false
+    answer: should
+    explanation: >
+      If he should come early は「万一彼が早く来たら」。
+      should の後ろは動詞原形 come。
+    translation: 万一彼が早く来たら、待つように言ってください。
+    focus:
+      - if_should
+      - come_early
+      - future_condition
+
+  - id: g082_q009
+    question_type: two_choice
+    prompt: If he comes early, ___ him to wait.
+    choices:
+      - text: ask
+        correct: true
+      - text: will ask
+        correct: false
+    answer: ask
+    explanation: >
+      If he comes early は普通の未来条件。
+      命令文なので ask him to wait が自然。
+    translation: 彼が早く来たら、待つように言ってください。
+    focus:
+      - ordinary_future_condition
+      - imperative
+      - ask
+
+  - id: g082_q010
+    question_type: two_choice
+    prompt: If anything ___ happen, let me know at once.
+    choices:
+      - text: should
+        correct: true
+      - text: would
+        correct: false
+    answer: should
+    explanation: >
+      If anything should happen は「万一何か起これば」。
+      起こる可能性は低いが、念のために言う表現。
+    translation: 万一何か起これば、すぐに知らせてください。
+    focus:
+      - if_should
+      - anything_should_happen
+      - precaution
+
+  - id: g082_q011
+    question_type: two_choice
+    prompt: If this plan ___ fail, we would need another one.
+    choices:
+      - text: were to
+        correct: true
+      - text: will
+        correct: false
+    answer: were to
+    explanation: >
+      If this plan were to fail は「もし仮にこの計画が失敗するようなことがあれば」。
+      低い可能性を仮定している。
+    translation: もし仮にこの計画が失敗するようなことがあれば、別の案が必要になるだろう。
+    focus:
+      - if_were_to
+      - plan
+      - fail
+
+  - id: g082_q012
+    question_type: two_choice
+    prompt: If I ___ meet him tomorrow, I will give him your message.
+    choices:
+      - text: should
+        correct: true
+      - text: would
+        correct: false
+    answer: should
+    explanation: >
+      If I should meet him tomorrow は「万一明日彼に会ったら」。
+      未来の低い可能性を表す。
+    translation: 万一明日彼に会ったら、あなたの伝言を彼に伝えます。
+    focus:
+      - if_should
+      - meet_tomorrow
+      - future_condition
+
+common_mistakes:
+  - mistake: If節の中に will を入れてしまう
+    correction: >
+      普通の未来条件では If it rains tomorrow のように現在形を使う。
+      低い可能性なら If it should rain tomorrow とする。
+  - mistake: should を「〜すべき」とだけ読む
+    correction: >
+      If節内の should は「万一〜なら」という低い可能性の未来条件を表すことがある。
+  - mistake: were to を過去の意味だと思う
+    correction: >
+      If + 主語 + were to + 動詞原形 は未来の仮定を表す。
+      「もし仮に〜するようなことがあれば」という意味。
+  - mistake: should to do としてしまう
+    correction: >
+      should の後ろは動詞原形。
+      should rain, should need, should happen の形にする。
+  - mistake: were to と should の差を完全に同じだと思う
+    correction: >
+      どちらも未来の低い可能性を表せるが、
+      were to はより仮定的・非現実的に響くことが多い。
+
+learning_notes:
+  - >
+    If + should + 動詞原形 は「万一〜なら」。
+    起こる可能性が低い未来条件を表す。
+  - >
+    If + were to + 動詞原形 は「もし仮に〜するようなことがあれば」。
+    かなり仮定的な未来条件を表す。
+  - >
+    普通の未来条件なら If + 現在形。
+    If it rains tomorrow, ... のように will を入れない。
+  - >
+    Should you need help, ... のように should が文頭に出る倒置形は、
+    If you should need help, ... と同じ意味。
+
+prerequisites:
+  - g005
+  - g010
+  - g021
+  - g078
+
+next_items:
+  - g083
+  - g084
+  - g085

@@ -1,0 +1,365 @@
+id: g016
+file: g016.yaml
+
+title: like / love / want / need の現在形・現在進行形
+type: verb_usage
+
+section:
+  id: s02
+  title: 現在形・現在進行形と動詞用法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 感情・欲求・必要を表す状態動詞を現在形で判断できるか？
+
+core_concept:
+  overview: >
+    like, love, want, need は、感情・好み・欲求・必要という状態を表す動詞である。
+    そのため、「今好きだ」「今ほしい」「今必要だ」と言う場合でも、普通は現在進行形ではなく現在形を使う。
+    日本語では「好きでいる」「欲しがっている」「必要としている」のように訳せるため、
+    進行形にしたくなりやすいが、英語では状態を表す現在形が基本である。
+
+  like:
+    meaning: 好きである・気に入っている
+    natural_form: 現在形
+    unnatural_form: 現在進行形
+    example: I like this song.
+    ja: 私はこの歌が好きだ。
+    point: 好み・感情の状態なので、I am liking this song. は基本的な英文法では避ける。
+
+  love:
+    meaning: 大好きである・愛している
+    natural_form: 現在形
+    unnatural_form: 現在進行形
+    example: She loves animals.
+    ja: 彼女は動物が大好きだ。
+    point: 強い好み・感情を表す状態なので、現在形 loves が基本。
+
+  want:
+    meaning: 欲しい・〜したい
+    natural_form: 現在形
+    unnatural_form: 現在進行形
+    example: I want a new bike.
+    ja: 私は新しい自転車が欲しい。
+    point: 欲求の状態を表すので、I am wanting ではなく I want が自然。
+
+  need:
+    meaning: 必要としている・必要である
+    natural_form: 現在形
+    unnatural_form: 現在進行形
+    example: We need more time.
+    ja: 私たちはもっと時間が必要だ。
+    point: 必要性の状態を表すので、We are needing ではなく We need が自然。
+
+main_rule: >
+  like, love, want, need は、動作ではなく感情・欲求・必要の状態を表す。
+  したがって、「今そう思っている」「今必要としている」と言いたい場合でも、
+  英語では現在形を使うのが基本である。
+  日本語の「〜している」に引きずられて現在進行形にしないことが大切である。
+
+contrast_pairs:
+  - natural: I like this book.
+    unnatural: I am liking this book.
+    point: >
+      like は好み・感情の状態を表すので、現在形 like が自然。
+
+  - natural: She loves music.
+    unnatural: She is loving music.
+    point: >
+      love は強い好み・感情を表す状態動詞なので、現在形 loves が基本。
+
+  - natural: He wants a new computer.
+    unnatural: He is wanting a new computer.
+    point: >
+      want は欲求の状態を表すので、現在形 wants が自然。
+
+  - natural: We need your help.
+    unnatural: We are needing your help.
+    point: >
+      need は必要性の状態を表すので、現在形 need が自然。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g016_q001
+    question_type: two_choice
+    prompt: I ___ this song.
+    choices:
+      - text: like
+        correct: true
+      - text: am liking
+        correct: false
+    answer: like
+    explanation: >
+      like は「好きである」という感情・好みの状態を表す動詞なので、
+      現在進行形 am liking ではなく現在形 like が自然。
+    translation: 私はこの歌が好きだ。
+    focus:
+      - like
+      - stative_verb
+      - present_simple
+
+  - id: g016_q002
+    question_type: two_choice
+    prompt: She ___ Japanese food.
+    choices:
+      - text: likes
+        correct: true
+      - text: is liking
+        correct: false
+    answer: likes
+    explanation: >
+      like は好みを表す状態動詞。主語が She なので、現在形 likes が自然。
+    translation: 彼女は日本食が好きだ。
+    focus:
+      - like
+      - third_person_singular
+      - stative_verb
+      - present_simple
+
+  - id: g016_q003
+    question_type: two_choice
+    prompt: Do you ___ this movie?
+    choices:
+      - text: like
+        correct: true
+      - text: liking
+        correct: false
+    answer: like
+    explanation: >
+      疑問文でも、like は状態動詞として現在形を使う。
+      Do you like ...? が自然。
+    translation: あなたはこの映画が好きですか。
+    focus:
+      - like
+      - question_form
+      - stative_verb
+      - present_simple
+
+  - id: g016_q004
+    question_type: two_choice
+    prompt: I don't ___ cold weather.
+    choices:
+      - text: like
+        correct: true
+      - text: liking
+        correct: false
+    answer: like
+    explanation: >
+      don't の後ろには動詞の原形 like を置く。
+      また、like は好みの状態を表すので進行形にはしにくい。
+    translation: 私は寒い天気が好きではない。
+    focus:
+      - like
+      - negative_form
+      - stative_verb
+      - present_simple
+
+  - id: g016_q005
+    question_type: two_choice
+    prompt: My sister ___ animals.
+    choices:
+      - text: loves
+        correct: true
+      - text: is loving
+        correct: false
+    answer: loves
+    explanation: >
+      love は強い好み・感情の状態を表す。主語が My sister なので、現在形 loves が自然。
+    translation: 私の姉は動物が大好きだ。
+    focus:
+      - love
+      - third_person_singular
+      - stative_verb
+      - present_simple
+
+  - id: g016_q006
+    question_type: two_choice
+    prompt: Many children ___ chocolate.
+    choices:
+      - text: love
+        correct: true
+      - text: are loving
+        correct: false
+    answer: love
+    explanation: >
+      love は「大好きである」という感情の状態を表すので、
+      are loving ではなく現在形 love が自然。
+    translation: 多くの子どもたちはチョコレートが大好きだ。
+    focus:
+      - love
+      - plural_subject
+      - stative_verb
+      - present_simple
+
+  - id: g016_q007
+    question_type: two_choice
+    prompt: I ___ a glass of water.
+    choices:
+      - text: want
+        correct: true
+      - text: am wanting
+        correct: false
+    answer: want
+    explanation: >
+      want は「欲しい」という欲求の状態を表す動詞なので、
+      現在進行形 am wanting ではなく現在形 want が自然。
+    translation: 私は水を一杯欲しい。
+    focus:
+      - want
+      - stative_verb
+      - present_simple
+
+  - id: g016_q008
+    question_type: two_choice
+    prompt: He ___ to be a doctor.
+    choices:
+      - text: wants
+        correct: true
+      - text: is wanting
+        correct: false
+    answer: wants
+    explanation: >
+      want to do は「〜したい」という欲求を表す。
+      主語が He なので、現在形 wants が自然。
+    translation: 彼は医者になりたがっている。
+    focus:
+      - want_to_do
+      - third_person_singular
+      - stative_verb
+      - present_simple
+
+  - id: g016_q009
+    question_type: two_choice
+    prompt: Do you ___ any help?
+    choices:
+      - text: need
+        correct: true
+      - text: needing
+        correct: false
+    answer: need
+    explanation: >
+      need は「必要としている」という状態を表す。
+      疑問文では Do you need ...? が自然。
+    translation: 何か助けが必要ですか。
+    focus:
+      - need
+      - question_form
+      - stative_verb
+      - present_simple
+
+  - id: g016_q010
+    question_type: two_choice
+    prompt: We ___ more information.
+    choices:
+      - text: need
+        correct: true
+      - text: are needing
+        correct: false
+    answer: need
+    explanation: >
+      need は必要性の状態を表すので、are needing ではなく現在形 need が自然。
+    translation: 私たちはもっと情報が必要だ。
+    focus:
+      - need
+      - stative_verb
+      - present_simple
+
+  - id: g016_q011
+    question_type: two_choice
+    prompt: She ___ a new pair of shoes.
+    choices:
+      - text: wants
+        correct: true
+      - text: is wanting
+        correct: false
+    answer: wants
+    explanation: >
+      want は欲求の状態を表す動詞である。
+      主語が She なので、現在形 wants が自然。
+    translation: 彼女は新しい靴が欲しい。
+    focus:
+      - want
+      - third_person_singular
+      - stative_verb
+      - present_simple
+
+  - id: g016_q012
+    question_type: two_choice
+    prompt: This plant ___ a lot of sunlight.
+    choices:
+      - text: needs
+        correct: true
+      - text: is needing
+        correct: false
+    answer: needs
+    explanation: >
+      need は「必要である」という状態を表す。
+      主語が This plant なので、現在形 needs が自然。
+    translation: この植物はたくさんの日光を必要とする。
+    focus:
+      - need
+      - third_person_singular
+      - stative_verb
+      - present_simple
+
+common_mistakes:
+  - mistake: 日本語の「好きでいる」を見て I am liking としてしまう
+    correction: >
+      like は好み・感情の状態を表すため、I like ... が基本。
+      「今好きだ」という意味でも、普通は I like ... と言う。
+
+  - mistake: 日本語の「欲しがっている」を見て is wanting としてしまう
+    correction: >
+      want は欲求の状態を表すため、現在形 want / wants が基本。
+      He wants a new computer. が自然。
+
+  - mistake: need を「必要としている」と訳して進行形にする
+    correction: >
+      need は必要性の状態を表すので、We need more time. が自然。
+      We are needing more time. は基本的な高校英文法では避ける。
+
+  - mistake: now があると必ず現在進行形にする
+    correction: >
+      now があっても、like, want, need のような状態動詞では現在形を使う。
+      I want it now. が自然。
+
+learning_notes:
+  - >
+    like, love, want, need は、動作ではなく「心の状態」や「必要性の状態」を表す。
+    したがって、日本語で「〜している」と訳せても現在進行形にはしにくい。
+  - >
+    現在進行形は「今している動作」や「一時的な行動」に使う。
+    like や want は、動作が進んでいるわけではなく、その時点でそう感じている状態である。
+  - >
+    love は広告表現や会話で I'm loving it. のように使われることもあるが、
+    高校英文法の基本カードでは、まず状態動詞として現在形を使う原則を身につける。
+  - >
+    このカードは g001 の現在形・現在進行形の基本対立を、感情・欲求・必要を表す動詞に応用するためのカードである。
+
+prerequisites:
+  - g001
+  - g015
+
+next_items:
+  - g017
+  - g018
+  - g019

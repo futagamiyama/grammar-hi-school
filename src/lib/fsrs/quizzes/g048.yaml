@@ -1,0 +1,371 @@
+id: g048
+file: g048.yaml
+
+title: 分詞構文
+type: construction
+
+section:
+  id: s05
+  title: 不定詞・動名詞・分詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 接続詞と主語を省いた構造を読めるか？
+
+core_concept:
+  participial_construction:
+    form: 分詞句 + 主節
+    meaning: 接続詞と主語を省き、理由・時・条件・付帯状況などを簡潔に表す
+    image: 2つの動作・状況を、分詞でつなぐ
+    examples:
+      - sentence: Feeling tired, I went to bed early.
+        ja: 疲れていたので、私は早く寝た。
+        point: Because I felt tired の意味。
+      - sentence: Walking down the street, I saw an old friend.
+        ja: 通りを歩いていると、私は昔の友人に会った。
+        point: When I was walking down the street の意味。
+      - sentence: Not knowing what to say, she remained silent.
+        ja: 何と言えばよいかわからなかったので、彼女は黙っていた。
+        point: Because she did not know what to say の意味。
+
+  active_participle:
+    form: doing
+    meaning: 主語が〜している・〜する側であることを表す
+    image: 主節の主語が分詞の動作をする
+    examples:
+      - sentence: Seeing the police officer, he ran away.
+        ja: 警官を見ると、彼は逃げた。
+        point: he が見たので Seeing。
+      - sentence: Living near the station, I can get to school easily.
+        ja: 駅の近くに住んでいるので、私は学校に簡単に行ける。
+        point: I が住んでいるので Living。
+      - sentence: Opening the door, she entered the room.
+        ja: ドアを開けて、彼女は部屋に入った。
+        point: she がドアを開けたので Opening。
+
+  passive_participle:
+    form: done
+    meaning: 主語が〜される側であることを表す
+    image: 主節の主語が分詞の動作を受ける
+    examples:
+      - sentence: Written in simple English, this book is easy to read.
+        ja: 簡単な英語で書かれているので、この本は読みやすい。
+        point: this book が書かれた側なので Written。
+      - sentence: Built in 1990, the bridge is still used today.
+        ja: 1990年に建てられたその橋は、今も使われている。
+        point: the bridge が建てられた側なので Built。
+      - sentence: Seen from a distance, the island looks small.
+        ja: 遠くから見ると、その島は小さく見える。
+        point: the island が見られる側なので Seen。
+
+main_rule: >
+  分詞構文は、接続詞と主語を省いて、分詞で文をつなぐ形。
+  doing は、主節の主語がその動作をする側であるときに使う。
+  done は、主節の主語がその動作を受ける側であるときに使う。
+  Feeling tired, I went to bed early. は Because I felt tired の意味。
+  Written in simple English, this book is easy to read. は
+  Because this book is written in simple English の意味。
+  分詞構文は、理由・時・条件・付帯状況などを文脈で判断する。
+
+contrast_pairs:
+  - full_clause: Because I felt tired, I went to bed early.
+    participial_construction: Feeling tired, I went to bed early.
+    point: >
+      I が tired という状態を感じているので Feeling。
+      理由を表す分詞構文。
+
+  - full_clause: When I was walking down the street, I saw an old friend.
+    participial_construction: Walking down the street, I saw an old friend.
+    point: >
+      I が歩いているので Walking。
+      時を表す分詞構文。
+
+  - full_clause: Because this book is written in simple English, it is easy to read.
+    participial_construction: Written in simple English, this book is easy to read.
+    point: >
+      this book は書かれる側なので Written。
+      受け身の意味を持つ分詞構文。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または分詞構文で doing と done を使い分ける理由を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g048_q001
+    question_type: two_choice
+    prompt: ___ tired, I went to bed early.
+    choices:
+      - text: Feeling
+        correct: true
+      - text: Felt
+        correct: false
+    answer: Feeling
+    explanation: >
+      主語 I が tired と感じている側なので、現在分詞 Feeling を使う。
+      Because I felt tired の意味。
+    translation: 疲れていたので、私は早く寝た。
+    focus:
+      - participial_construction
+      - reason
+      - active_participle
+
+  - id: g048_q002
+    question_type: two_choice
+    prompt: ___ in simple English, this book is easy to read.
+    choices:
+      - text: Writing
+        correct: false
+      - text: Written
+        correct: true
+    answer: Written
+    explanation: >
+      this book は書く側ではなく、書かれた側。
+      受け身の意味なので過去分詞 Written が自然。
+    translation: 簡単な英語で書かれているので、この本は読みやすい。
+    focus:
+      - participial_construction
+      - passive_participle
+      - written
+
+  - id: g048_q003
+    question_type: two_choice
+    prompt: ___ down the street, I saw an old friend.
+    choices:
+      - text: Walking
+        correct: true
+      - text: Walked
+        correct: false
+    answer: Walking
+    explanation: >
+      主語 I が通りを歩いていたので、能動の意味を表す Walking を使う。
+      When I was walking down the street の意味。
+    translation: 通りを歩いていると、私は昔の友人に会った。
+    focus:
+      - participial_construction
+      - time
+      - active_participle
+
+  - id: g048_q004
+    question_type: two_choice
+    prompt: ___ by many people, the song became famous.
+    choices:
+      - text: Singing
+        correct: false
+      - text: Sung
+        correct: true
+    answer: Sung
+    explanation: >
+      the song は歌う側ではなく、歌われる側。
+      by many people もあるので、過去分詞 Sung が自然。
+    translation: 多くの人に歌われて、その歌は有名になった。
+    focus:
+      - passive_participle
+      - by_phrase
+      - sung
+
+  - id: g048_q005
+    question_type: two_choice
+    prompt: ___ the police officer, he ran away.
+    choices:
+      - text: Seeing
+        correct: true
+      - text: Seen
+        correct: false
+    answer: Seeing
+    explanation: >
+      he が警官を見た側なので Seeing を使う。
+      When/Because he saw the police officer の意味。
+    translation: 警官を見ると、彼は逃げた。
+    focus:
+      - active_participle
+      - seeing
+      - time_or_reason
+
+  - id: g048_q006
+    question_type: two_choice
+    prompt: ___ from a distance, the island looks small.
+    choices:
+      - text: Seeing
+        correct: false
+      - text: Seen
+        correct: true
+    answer: Seen
+    explanation: >
+      the island は見る側ではなく、見られる側。
+      受け身の意味なので Seen from a distance が自然。
+    translation: 遠くから見ると、その島は小さく見える。
+    focus:
+      - passive_participle
+      - seen_from
+      - passive_meaning
+
+  - id: g048_q007
+    question_type: two_choice
+    prompt: ___ near the station, I can get to school easily.
+    choices:
+      - text: Living
+        correct: true
+      - text: Lived
+        correct: false
+    answer: Living
+    explanation: >
+      主語 I が駅の近くに住んでいるので Living を使う。
+      Because I live near the station の意味。
+    translation: 駅の近くに住んでいるので、私は学校に簡単に行ける。
+    focus:
+      - active_participle
+      - reason
+      - living
+
+  - id: g048_q008
+    question_type: two_choice
+    prompt: ___ in 1990, the bridge is still used today.
+    choices:
+      - text: Building
+        correct: false
+      - text: Built
+        correct: true
+    answer: Built
+    explanation: >
+      the bridge は建てる側ではなく、建てられた側。
+      受け身の意味を表す過去分詞 Built が自然。
+    translation: 1990年に建てられたその橋は、今も使われている。
+    focus:
+      - passive_participle
+      - built
+      - passive_meaning
+
+  - id: g048_q009
+    question_type: two_choice
+    prompt: ___ the door, she entered the room.
+    choices:
+      - text: Opening
+        correct: true
+      - text: Opened
+        correct: false
+    answer: Opening
+    explanation: >
+      she がドアを開けた側なので Opening を使う。
+      After she opened the door の意味。
+    translation: ドアを開けて、彼女は部屋に入った。
+    focus:
+      - active_participle
+      - sequence
+      - opening
+
+  - id: g048_q010
+    question_type: two_choice
+    prompt: ___ by the news, she could not speak.
+    choices:
+      - text: Shocking
+        correct: false
+      - text: Shocked
+        correct: true
+    answer: Shocked
+    explanation: >
+      she は驚かせる側ではなく、驚かされた側。
+      by the news もあるので、過去分詞 Shocked が自然。
+    translation: その知らせに衝撃を受けて、彼女は話せなかった。
+    focus:
+      - passive_participle
+      - emotion
+      - shocked
+
+  - id: g048_q011
+    question_type: two_choice
+    prompt: ___ what to say, she remained silent.
+    choices:
+      - text: Not knowing
+        correct: true
+      - text: Not known
+        correct: false
+    answer: Not knowing
+    explanation: >
+      she が何と言えばよいかわからない状態なので、
+      能動の意味を表す Not knowing が自然。
+    translation: 何と言えばよいかわからなかったので、彼女は黙っていた。
+    focus:
+      - negative_participial_construction
+      - not_knowing
+      - reason
+
+  - id: g048_q012
+    question_type: two_choice
+    prompt: ___ carefully, this machine can be used safely.
+    choices:
+      - text: Using
+        correct: false
+      - text: Used
+        correct: true
+    answer: Used
+    explanation: >
+      this machine は使う側ではなく、使われる側。
+      If it is used carefully の意味なので Used carefully が自然。
+    translation: 注意深く使えば、この機械は安全に使用できる。
+    focus:
+      - passive_participle
+      - condition
+      - used_carefully
+
+common_mistakes:
+  - mistake: 分詞構文をすべて「〜しながら」と訳してしまう
+    correction: >
+      分詞構文は、理由・時・条件・付帯状況などを表す。
+      文脈によって「〜なので」「〜すると」「〜すれば」「〜しながら」と読む。
+  - mistake: 主節の主語と分詞の意味上の主語を確認しない
+    correction: >
+      分詞構文では、ふつう分詞の意味上の主語は主節の主語と同じ。
+      I がするなら doing、I がされるなら done を選ぶ。
+  - mistake: 受け身の意味なのに doing を選ぶ
+    correction: >
+      Written in simple English, this book ... のように、
+      主語がされる側なら過去分詞を使う。
+  - mistake: Not knowing のような否定形を見落とす
+    correction: >
+      分詞構文の否定は分詞の前に not を置く。
+      Not knowing what to say, ... の形になる。
+  - mistake: by があるのに現在分詞を選ぶ
+    correction: >
+      by many people, by the news などがあれば、
+      受け身の意味になりやすいので過去分詞を考える。
+
+learning_notes:
+  - >
+    分詞構文は、接続詞と主語を省いて文を短くする形。
+    まず元の文に戻して考えるとわかりやすい。
+  - >
+    doing は主語が動作をする側。
+    done は主語が動作を受ける側。
+  - >
+    分詞構文の意味は1つに固定されない。
+    理由・時・条件・付帯状況を文脈で読む。
+  - >
+    入試では、分詞構文の意味そのものより、
+    doing か done かの判断がよく問われる。
+
+prerequisites:
+  - g031
+  - g047
+
+next_items:
+  - g049
+  - g050
+  - g051

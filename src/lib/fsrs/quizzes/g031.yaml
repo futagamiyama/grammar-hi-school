@@ -1,0 +1,350 @@
+id: g031
+file: g031.yaml
+
+title: 能動態 vs 受動態
+type: grammar_contrast
+
+section:
+  id: s04
+  title: 受動態・態
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 行為者を中心にするか、受け手を中心にするか？
+
+core_concept:
+  active_voice:
+    form: 能動態
+    meaning: 動作をする人・ものを主語にして述べる
+    image: 誰がするのかを中心に見る
+    examples:
+      - sentence: The chef cooks the meal.
+        ja: その料理人が食事を作る。
+        point: 動作をする the chef が主語。
+      - sentence: Many people use this app.
+        ja: 多くの人がこのアプリを使っている。
+        point: 使う人 many people を中心に述べている。
+      - sentence: The teacher explained the rule.
+        ja: 先生がその規則を説明した。
+        point: 説明した人 the teacher が主語。
+
+  passive_voice:
+    form: 受動態
+    meaning: 動作を受ける人・ものを主語にして述べる
+    image: 何がされるのか、誰が影響を受けるのかを中心に見る
+    basic_form: be + 過去分詞
+    examples:
+      - sentence: The meal is cooked by the chef.
+        ja: その食事はその料理人によって作られる。
+        point: 作られる対象 the meal が主語。
+      - sentence: This app is used by many people.
+        ja: このアプリは多くの人に使われている。
+        point: 使われる対象 this app を中心に述べている。
+      - sentence: The rule was explained by the teacher.
+        ja: その規則は先生によって説明された。
+        point: 説明された対象 the rule が主語。
+
+main_rule: >
+  能動態は「する側」を主語にする。
+  受動態は「される側・影響を受ける側」を主語にする。
+  受動態の基本形は be + 過去分詞。
+  英語では、誰がしたかよりも、何がされたかを中心にしたいとき、
+  または行為者が不明・不要なときに受動態がよく使われる。
+
+contrast_pairs:
+  - active: The company built this bridge.
+    passive: This bridge was built by the company.
+    point: >
+      能動態では the company が主語。
+      受動態では this bridge が主語になり、橋に焦点が移る。
+
+  - active: People speak English in many countries.
+    passive: English is spoken in many countries.
+    point: >
+      「人々が話す」よりも「英語が話されている」ことを中心にしている。
+      行為者 people は一般的なので省略されやすい。
+
+  - active: Someone stole my bike.
+    passive: My bike was stolen.
+    point: >
+      誰が盗んだかわからない、または言う必要がないため、
+      受け手である my bike を主語にする。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または能動態と受動態の焦点の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g031_q001
+    question_type: two_choice
+    prompt: This book ___ by many students.
+    choices:
+      - text: uses
+        correct: false
+      - text: is used
+        correct: true
+    answer: is used
+    explanation: >
+      主語 This book は「使う側」ではなく「使われる側」。
+      受動態 be + 過去分詞の is used が自然。
+    translation: この本は多くの生徒に使われている。
+    focus:
+      - passive_voice
+      - be_past_participle
+      - object_as_subject
+
+  - id: g031_q002
+    question_type: two_choice
+    prompt: Many students ___ this book.
+    choices:
+      - text: use
+        correct: true
+      - text: are used
+        correct: false
+    answer: use
+    explanation: >
+      主語 Many students は「使う側」なので能動態 use が自然。
+      are used にすると「生徒たちが使われる」という意味になってしまう。
+    translation: 多くの生徒がこの本を使っている。
+    focus:
+      - active_voice
+      - agent_as_subject
+
+  - id: g031_q003
+    question_type: two_choice
+    prompt: The window ___ last night.
+    choices:
+      - text: broke
+        correct: false
+      - text: was broken
+        correct: true
+    answer: was broken
+    explanation: >
+      窓は自分で壊したのではなく、壊された対象。
+      last night の過去なので was broken が自然。
+    translation: その窓は昨夜壊された。
+    focus:
+      - passive_voice
+      - past_passive
+      - object_as_subject
+
+  - id: g031_q004
+    question_type: two_choice
+    prompt: Someone ___ the window last night.
+    choices:
+      - text: broke
+        correct: true
+      - text: was broken
+        correct: false
+    answer: broke
+    explanation: >
+      主語 Someone は壊した側なので、能動態 broke が自然。
+      was broken だと someone が壊されたという不自然な意味になる。
+    translation: 誰かが昨夜その窓を壊した。
+    focus:
+      - active_voice
+      - past_simple
+      - agent_as_subject
+
+  - id: g031_q005
+    question_type: two_choice
+    prompt: English ___ in many countries.
+    choices:
+      - text: speaks
+        correct: false
+      - text: is spoken
+        correct: true
+    answer: is spoken
+    explanation: >
+      English は「話す側」ではなく「話される言語」。
+      受動態 is spoken が自然。
+    translation: 英語は多くの国で話されている。
+    focus:
+      - passive_voice
+      - language
+      - general_fact
+
+  - id: g031_q006
+    question_type: two_choice
+    prompt: People ___ English in many countries.
+    choices:
+      - text: speak
+        correct: true
+      - text: are spoken
+        correct: false
+    answer: speak
+    explanation: >
+      主語 People は話す側なので能動態 speak が自然。
+      are spoken にすると「人々が話される」という意味になってしまう。
+    translation: 多くの国で人々は英語を話している。
+    focus:
+      - active_voice
+      - agent_as_subject
+      - general_fact
+
+  - id: g031_q007
+    question_type: two_choice
+    prompt: The meeting ___ at 3 p.m.
+    choices:
+      - text: started
+        correct: true
+      - text: was started
+        correct: false
+    answer: started
+    explanation: >
+      meeting は「始まる」という自動詞的な出来事として述べられるのが自然。
+      ここでは「誰かに始められた」ことを強調していないので started がよい。
+    translation: 会議は午後3時に始まった。
+    focus:
+      - active_voice
+      - intransitive_event
+      - started
+
+  - id: g031_q008
+    question_type: two_choice
+    prompt: The meeting ___ by the manager.
+    choices:
+      - text: started
+        correct: false
+      - text: was started
+        correct: true
+    answer: was started
+    explanation: >
+      by the manager があり、会議が管理者によって始められたことを表す。
+      受動態 was started が自然。
+    translation: その会議は管理者によって始められた。
+    focus:
+      - passive_voice
+      - by_phrase
+      - past_passive
+
+  - id: g031_q009
+    question_type: two_choice
+    prompt: My bike ___ yesterday.
+    choices:
+      - text: stole
+        correct: false
+      - text: was stolen
+        correct: true
+    answer: was stolen
+    explanation: >
+      My bike は盗む側ではなく、盗まれた対象。
+      受動態 was stolen が自然。
+    translation: 私の自転車は昨日盗まれた。
+    focus:
+      - passive_voice
+      - object_as_subject
+      - stolen
+
+  - id: g031_q010
+    question_type: two_choice
+    prompt: A thief ___ my bike yesterday.
+    choices:
+      - text: stole
+        correct: true
+      - text: was stolen
+        correct: false
+    answer: stole
+    explanation: >
+      主語 A thief は盗んだ側なので能動態 stole が自然。
+      was stolen にすると「泥棒が盗まれた」という意味になる。
+    translation: 泥棒が昨日私の自転車を盗んだ。
+    focus:
+      - active_voice
+      - agent_as_subject
+      - stole
+
+  - id: g031_q011
+    question_type: two_choice
+    prompt: This song ___ by young people.
+    choices:
+      - text: loves
+        correct: false
+      - text: is loved
+        correct: true
+    answer: is loved
+    explanation: >
+      This song は愛する側ではなく、愛される対象。
+      受動態 is loved が自然。
+    translation: この歌は若者に愛されている。
+    focus:
+      - passive_voice
+      - emotion_verb
+      - object_as_subject
+
+  - id: g031_q012
+    question_type: two_choice
+    prompt: Young people ___ this song.
+    choices:
+      - text: love
+        correct: true
+      - text: are loved
+        correct: false
+    answer: love
+    explanation: >
+      主語 Young people は愛する側なので能動態 love が自然。
+      are loved だと「若者が愛されている」という意味になる。
+    translation: 若者はこの歌を愛している。
+    focus:
+      - active_voice
+      - agent_as_subject
+      - emotion_verb
+
+common_mistakes:
+  - mistake: 日本語の「〜される」だけを見て機械的に受動態にする
+    correction: >
+      まず英語の主語が「する側」か「される側」かを確認する。
+      する側なら能動態、される側なら受動態。
+  - mistake: be動詞を忘れて過去分詞だけにする
+    correction: >
+      受動態の基本形は be + 過去分詞。
+      This book used by many students. ではなく
+      This book is used by many students. とする。
+  - mistake: すべての受動態に by をつける
+    correction: >
+      行為者が不明・一般的・重要でないときは by は省略される。
+      My bike was stolen. のように言える。
+  - mistake: 自動詞を無理に受動態にする
+    correction: >
+      happen, arrive, disappear など目的語を取らない動詞は、
+      基本的に受動態にできない。
+      ただし群動詞などは別カードで扱う。
+
+learning_notes:
+  - >
+    受動態は「能動態の書き換え」としてだけ覚えると弱い。
+    本質は、文の主語と焦点を変えること。
+  - >
+    英語では、何がされたかを中心に言いたいときに受動態を使う。
+    行為者がわからないときにも受動態が便利。
+  - >
+    be + 過去分詞の be は、主語と時制に合わせて変わる。
+    is used, was used, are used, were used のように変化する。
+  - >
+    by は「誰によって」を言う必要があるときだけ使う。
+    いつも必要なわけではない。
+
+prerequisites: []
+
+next_items:
+  - g032
+  - g033
+  - g034

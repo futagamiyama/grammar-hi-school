@@ -1,0 +1,414 @@
+id: g110
+file: g110.yaml
+
+title: 条件を表す接続詞 if / unless / as long as / provided that
+type: grammar_contrast
+
+section:
+  id: s11
+  title: 名詞節・接続詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 条件を表す if / unless / as long as / provided that を、意味と形に応じて使い分けられるか？
+
+core_concept:
+  if_condition:
+    form: if + 主語 + 現在形, 主語 + will/can/may + 動詞原形
+    meaning: もし〜なら
+    image: ある条件が満たされた時の結果を述べる
+    examples:
+      - sentence: If it rains tomorrow, we will stay home.
+        ja: もし明日雨が降れば、私たちは家にいるでしょう。
+        point: 未来の条件でも if節の中は rains と現在形。
+      - sentence: If you need help, call me.
+        ja: 助けが必要なら、私に電話してください。
+        point: if you need help が条件を表す。
+      - sentence: If he comes early, we can start the meeting.
+        ja: もし彼が早く来れば、私たちは会議を始められます。
+        point: 条件節では will come ではなく comes。
+
+  unless_condition:
+    form: unless + 主語 + 肯定形
+    meaning: 〜しない限り、もし〜でなければ
+    image: unless = if ... not
+    examples:
+      - sentence: Unless it rains, we will go hiking.
+        ja: 雨が降らない限り、私たちはハイキングに行きます。
+        point: unless it rains = if it does not rain。
+      - sentence: You will fail unless you study harder.
+        ja: もっと一生懸命勉強しなければ、あなたは失敗するでしょう。
+        point: unless you study harder = if you do not study harder。
+      - sentence: Do not open the door unless you know who it is.
+        ja: 誰か分かっている場合を除いて、ドアを開けてはいけません。
+        point: unless の後ろは基本的に肯定形で条件を表す。
+
+  as_long_as_condition:
+    form: as long as + 主語 + 動詞
+    meaning: 〜する限り、〜である限り
+    image: 条件が続く範囲では結果も成り立つ
+    examples:
+      - sentence: You can use my car as long as you drive carefully.
+        ja: 注意して運転する限り、私の車を使ってよいです。
+        point: 注意して運転することが条件。
+      - sentence: As long as you are honest, I will trust you.
+        ja: あなたが正直である限り、私はあなたを信頼します。
+        point: 正直である状態が続くことを条件にしている。
+      - sentence: You may stay here as long as you keep quiet.
+        ja: 静かにしている限り、ここにいてもよいです。
+        point: keep quiet が条件。
+
+  provided_that_condition:
+    form: provided that + 主語 + 動詞
+    meaning: 〜という条件で、〜であれば
+    image: 条件をはっきり指定する、やや硬い表現
+    examples:
+      - sentence: You can join the club provided that you follow the rules.
+        ja: 規則に従うという条件で、そのクラブに参加できます。
+        point: provided that は条件を明確に示す。
+      - sentence: We will accept the offer provided that the price is fair.
+        ja: 価格が妥当であれば、私たちはその申し出を受け入れます。
+        point: 価格が妥当であることが条件。
+      - sentence: The plan will succeed provided that everyone cooperates.
+        ja: 全員が協力すれば、その計画は成功するでしょう。
+        point: everyone cooperates が成功の条件。
+
+  future_in_condition_clause:
+    form: if/unless/as long as/provided that + 主語 + 現在形
+    meaning: 未来の条件でも現在形
+    image: 条件節の中では will を使わない
+    examples:
+      - sentence: If he comes tomorrow, I will tell him.
+        ja: もし彼が明日来たら、私は彼に伝えます。
+        point: if he will come ではなく if he comes。
+      - sentence: Unless she calls, I will leave.
+        ja: 彼女が電話してこない限り、私は出発します。
+        point: unless she will call ではなく unless she calls。
+      - sentence: As long as you try, you will improve.
+        ja: 努力する限り、あなたは上達するでしょう。
+        point: as long as you will try ではなく as long as you try。
+
+main_rule: >
+  条件を表す接続詞には if, unless, as long as, provided that などがある。
+  if は「もし〜なら」と条件を表す基本形。
+  If it rains tomorrow, we will stay home. では、
+  「明日雨が降ること」が家にいる条件になっている。
+  unless は「〜しない限り」「もし〜でなければ」で、if ... not に近い。
+  Unless it rains, we will go hiking. は
+  If it does not rain, we will go hiking. とほぼ同じ意味。
+  as long as は「〜する限り」で、条件が続く範囲を表す。
+  provided that は「〜という条件で」というやや硬い表現で、
+  条件を明確に指定する時に使う。
+  重要なのは、条件の副詞節では未来の内容でも will を使わず、現在形を使うこと。
+  If he comes tomorrow が正しく、if he will come tomorrow とはしない。
+
+contrast_pairs:
+  - if_form: If it does not rain, we will go hiking.
+    unless_form: Unless it rains, we will go hiking.
+    point: >
+      unless it rains は if it does not rain とほぼ同じ意味。
+      unless の後ろは普通、肯定形にする。
+
+  - correct: If he comes tomorrow, I will tell him.
+    incorrect: If he will come tomorrow, I will tell him.
+    point: >
+      条件節では、未来の内容でも現在形を使う。
+      if he comes が正しい。
+
+  - as_long_as: You can use my car as long as you drive carefully.
+    provided_that: You can join the club provided that you follow the rules.
+    point: >
+      as long as は「〜する限り」。
+      provided that は「〜という条件で」と条件を明確に指定する。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または if / unless / as long as / provided that の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g110_q001
+    question_type: two_choice
+    prompt: ___ it rains tomorrow, we will stay home.
+    choices:
+      - text: If
+        correct: true
+      - text: Because of
+        correct: false
+    answer: If
+    explanation: >
+      it rains tomorrow は文。
+      「もし明日雨が降れば」という条件を表すので If を使う。
+    translation: もし明日雨が降れば、私たちは家にいるでしょう。
+    focus:
+      - if_condition
+      - condition
+      - rains
+
+  - id: g110_q002
+    question_type: two_choice
+    prompt: If it ___ tomorrow, we will stay home.
+    choices:
+      - text: rains
+        correct: true
+      - text: will rain
+        correct: false
+    answer: rains
+    explanation: >
+      条件を表す if節では、未来の内容でも現在形を使う。
+      if it rains tomorrow が正しい。
+    translation: もし明日雨が降れば、私たちは家にいるでしょう。
+    focus:
+      - future_in_condition_clause
+      - present_for_future
+      - rains
+
+  - id: g110_q003
+    question_type: two_choice
+    prompt: If you ___ help, call me.
+    choices:
+      - text: need
+        correct: true
+      - text: will need
+        correct: false
+    answer: need
+    explanation: >
+      if you need help は条件節。
+      未来の可能性でも、条件節の中では現在形 need を使う。
+    translation: 助けが必要なら、私に電話してください。
+    focus:
+      - if_condition
+      - future_in_condition_clause
+      - help
+
+  - id: g110_q004
+    question_type: two_choice
+    prompt: ___ it rains, we will go hiking.
+    choices:
+      - text: Unless
+        correct: true
+      - text: If not
+        correct: false
+    answer: Unless
+    explanation: >
+      Unless it rains で「雨が降らない限り」。
+      if it does not rain に近い意味。
+    translation: 雨が降らない限り、私たちはハイキングに行きます。
+    focus:
+      - unless_condition
+      - if_not
+      - hiking
+
+  - id: g110_q005
+    question_type: two_choice
+    prompt: You will fail unless you ___ harder.
+    choices:
+      - text: study
+        correct: true
+      - text: will study
+        correct: false
+    answer: study
+    explanation: >
+      unless節も条件節なので、未来の内容でも現在形。
+      unless you study harder が正しい。
+    translation: もっと一生懸命勉強しなければ、あなたは失敗するでしょう。
+    focus:
+      - unless_condition
+      - future_in_condition_clause
+      - study
+
+  - id: g110_q006
+    question_type: two_choice
+    prompt: Unless it rains means ___.
+    choices:
+      - text: if it does not rain
+        correct: true
+      - text: if it rains
+        correct: false
+    answer: if it does not rain
+    explanation: >
+      unless は if ... not に近い。
+      unless it rains は「雨が降らないなら」「雨が降らない限り」。
+    translation: Unless it rains は「雨が降らないなら」という意味である。
+    focus:
+      - unless_condition
+      - meaning
+      - if_not
+
+  - id: g110_q007
+    question_type: two_choice
+    prompt: You can use my car ___ you drive carefully.
+    choices:
+      - text: as long as
+        correct: true
+      - text: because of
+        correct: false
+    answer: as long as
+    explanation: >
+      as long as you drive carefully で「注意して運転する限り」。
+      車を使える条件を表している。
+    translation: 注意して運転する限り、私の車を使ってよいです。
+    focus:
+      - as_long_as_condition
+      - condition
+      - drive_carefully
+
+  - id: g110_q008
+    question_type: two_choice
+    prompt: As long as you ___ honest, I will trust you.
+    choices:
+      - text: are
+        correct: true
+      - text: will be
+        correct: false
+    answer: are
+    explanation: >
+      as long as節は条件節。
+      未来の内容でも現在形 are を使う。
+    translation: あなたが正直である限り、私はあなたを信頼します。
+    focus:
+      - as_long_as_condition
+      - future_in_condition_clause
+      - honest
+
+  - id: g110_q009
+    question_type: two_choice
+    prompt: You may stay here as long as you ___ quiet.
+    choices:
+      - text: keep
+        correct: true
+      - text: will keep
+        correct: false
+    answer: keep
+    explanation: >
+      as long as you keep quiet で「静かにしている限り」。
+      条件節では will keep ではなく keep。
+    translation: 静かにしている限り、ここにいてもよいです。
+    focus:
+      - as_long_as_condition
+      - keep_quiet
+      - present_for_future
+
+  - id: g110_q010
+    question_type: two_choice
+    prompt: You can join the club ___ you follow the rules.
+    choices:
+      - text: provided that
+        correct: true
+      - text: because of
+        correct: false
+    answer: provided that
+    explanation: >
+      provided that you follow the rules で
+      「規則に従うという条件で」という意味。
+    translation: 規則に従うという条件で、そのクラブに参加できます。
+    focus:
+      - provided_that_condition
+      - formal_condition
+      - rules
+
+  - id: g110_q011
+    question_type: two_choice
+    prompt: We will accept the offer provided that the price ___ fair.
+    choices:
+      - text: is
+        correct: true
+      - text: will be
+        correct: false
+    answer: is
+    explanation: >
+      provided that の節も条件節。
+      未来の内容でも the price is fair と現在形にする。
+    translation: 価格が妥当であれば、私たちはその申し出を受け入れます。
+    focus:
+      - provided_that_condition
+      - future_in_condition_clause
+      - price
+
+  - id: g110_q012
+    question_type: two_choice
+    prompt: The plan will succeed provided that everyone ___.
+    choices:
+      - text: cooperates
+        correct: true
+      - text: will cooperate
+        correct: false
+    answer: cooperates
+    explanation: >
+      provided that everyone cooperates で「全員が協力すれば」。
+      条件節では will cooperate ではなく cooperates。
+    translation: 全員が協力すれば、その計画は成功するでしょう。
+    focus:
+      - provided_that_condition
+      - cooperates
+      - present_for_future
+
+common_mistakes:
+  - mistake: 条件節で will を使ってしまう
+    correction: >
+      if / unless / as long as / provided that が条件を表す時は、
+      未来の内容でも現在形を使う。
+      if he comes / unless she calls / as long as you try。
+  - mistake: unless を if と同じ意味だと思う
+    correction: >
+      unless は if ... not に近い。
+      unless it rains = if it does not rain。
+  - mistake: unless の後ろを二重否定にしてしまう
+    correction: >
+      unless 自体に not の意味があるので、
+      unless you do not study とすると意味がずれやすい。
+      基本は unless you study と肯定形で覚える。
+  - mistake: as long as を時間の長さだけで読む
+    correction: >
+      as long as は条件の「〜する限り」を表すことが多い。
+      As long as you are honest, I will trust you.。
+  - mistake: provided that を because と同じ理由表現だと思う
+    correction: >
+      provided that は理由ではなく条件。
+      「〜という条件で」と読む。
+
+learning_notes:
+  - >
+    if は条件の基本形。
+    If it rains, we will stay home. の形。
+  - >
+    条件節では、未来の内容でも現在形を使う。
+    if he comes / unless she calls / provided that everyone cooperates。
+  - >
+    unless は if ... not に近く、「〜しない限り」と読む。
+  - >
+    as long as は「〜する限り」。
+    条件が続く範囲を表す。
+  - >
+    provided that は「〜という条件で」という硬めの条件表現。
+    契約・規則・説明文でよく出る。
+
+prerequisites:
+  - g001
+  - g006
+  - g007
+  - g010
+  - g102
+  - g109
+
+next_items:
+  - g111
+  - g112
+  - g113

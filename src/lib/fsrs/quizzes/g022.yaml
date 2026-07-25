@@ -1,0 +1,251 @@
+id: g022
+file: g022.yaml
+title: must vs have to
+type: grammar_contrast
+section:
+  id: s03
+  title: 助動詞・法
+level: basic
+target: 高校英文法基礎
+core_question: 話し手の判断による義務か、外部事情による必要か？
+core_concept:
+  must:
+    form: must + 動詞の原形
+    meaning: 話し手が強く必要だと判断している義務・決意・強い勧めを表す
+    image: 自分の判断として、どうしても必要だと思っている
+    examples:
+    - sentence: I must apologize to her.
+      ja: 私は彼女に謝らなければならない。
+      point: 話し手自身が、謝る必要があると強く感じている。
+    - sentence: You must try this cake.
+      ja: このケーキをぜひ食べてみて。
+      point: 相手への強い勧めを表している。
+    - sentence: I must stop wasting money.
+      ja: 私はお金を無駄遣いするのをやめなければならない。
+      point: 自分の決意・内側からの必要性を表している。
+  have_to:
+    form: have to + 動詞の原形
+    meaning: 規則・状況・他人の指示など、外部事情による必要を表す
+    image: 自分の気持ちとは別に、そうする必要がある
+    examples:
+    - sentence: We have to wear helmets in this factory.
+      ja: この工場ではヘルメットを着用しなければならない。
+      point: 工場の規則による必要を表している。
+    - sentence: I have to work late tonight.
+      ja: 私は今夜、遅くまで働かなければならない。
+      point: 仕事や状況による必要を表している。
+    - sentence: Passengers have to show their passports.
+      ja: 乗客はパスポートを提示しなければならない。
+      point: 手続き・規則による必要を表している。
+main_rule: must は、話し手が「これは必要だ」と強く判断している時に使う。have to は、規則・状況・他人の指示など、外部から来る必要を表すことが多い。ただし肯定文では意味が重なることも多く、文脈から自然な方を選ぶ。
+contrast_pairs:
+- must: I must call my mother. I almost forgot.
+  have_to: I have to call my boss at 3:00.
+  point: must は自分の強い必要感、have to は予定・仕事上の必要を表す。
+- must: You must read this book.
+  have_to: Students have to read this book for class.
+  point: must は強い勧め、have to は授業上の義務を表す。
+- must: I must stop eating so much sugar.
+  have_to: I have to stop eating sugar because of my doctor’s advice.
+  point: must は自分の決意、have to は医師の指示による必要を表す。
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.6
+    max_threshold_ratio: 0.85
+review_questions:
+- id: g022_q001
+  question_type: two_choice
+  prompt: I ___ apologize to her. It was my fault.
+  choices:
+  - text: must
+    correct: true
+  - text: have to
+    correct: false
+  answer: must
+  explanation: It was my fault から、話し手自身が謝る必要を強く感じている。内側からの判断なので must が自然。
+  focus:
+  - speaker_judgement
+  - personal_responsibility
+  - must
+- id: g022_q002
+  question_type: two_choice
+  prompt: Workers ___ wear helmets in this factory.
+  choices:
+  - text: must
+    correct: false
+  - text: have to
+    correct: true
+  answer: have to
+  explanation: 工場の規則による必要を表している。外部のルールなので have to が自然。
+  focus:
+  - external_rule
+  - workplace_rule
+  - have_to
+- id: g022_q003
+  question_type: two_choice
+  prompt: You ___ try this cake. It is really good.
+  choices:
+  - text: must
+    correct: true
+  - text: have to
+    correct: false
+  answer: must
+  explanation: 相手への強い勧めを表している。義務ではなく「ぜひ〜して」という意味なので must が自然。
+  focus:
+  - strong_recommendation
+  - must
+- id: g022_q004
+  question_type: two_choice
+  prompt: I ___ work late tonight because my boss asked me to.
+  choices:
+  - text: must
+    correct: false
+  - text: have to
+    correct: true
+  answer: have to
+  explanation: 上司に頼まれたという外部事情による必要を表している。したがって have to が自然。
+  focus:
+  - external_pressure
+  - boss_request
+  - have_to
+- id: g022_q005
+  question_type: two_choice
+  prompt: I ___ stop wasting money. This is my decision.
+  choices:
+  - text: must
+    correct: true
+  - text: have to
+    correct: false
+  answer: must
+  explanation: This is my decision から、自分の決意として必要だと考えている。話し手の内側から出た判断なので must が自然。
+  focus:
+  - personal_decision
+  - resolution
+  - must
+- id: g022_q006
+  question_type: two_choice
+  prompt: Passengers ___ show their passports at the gate.
+  choices:
+  - text: must
+    correct: false
+  - text: have to
+    correct: true
+  answer: have to
+  explanation: 搭乗口での手続き・規則による必要を表している。外部のルールなので have to が自然。
+  focus:
+  - procedure
+  - external_rule
+  - have_to
+- id: g022_q007
+  question_type: two_choice
+  prompt: I ___ remember to send the email before noon.
+  choices:
+  - text: must
+    correct: true
+  - text: have to
+    correct: false
+  answer: must
+  explanation: 自分に言い聞かせるような強い必要・注意を表している。話し手の判断なので must が自然。
+  focus:
+  - self_reminder
+  - speaker_judgement
+  - must
+- id: g022_q008
+  question_type: two_choice
+  prompt: She ___ take this medicine three times a day.
+  choices:
+  - text: must
+    correct: false
+  - text: has to
+    correct: true
+  answer: has to
+  explanation: 薬の服用は、医師の指示や状況による必要を表すことが多い。外部事情なので has to が自然。
+  focus:
+  - medical_instruction
+  - external_necessity
+  - have_to
+- id: g022_q009
+  question_type: two_choice
+  prompt: We ___ leave now, or we will miss the last train.
+  choices:
+  - text: must
+    correct: false
+  - text: have to
+    correct: true
+  answer: have to
+  explanation: 終電に間に合わないという状況による必要を表している。外部状況に押されているので have to が自然。
+  focus:
+  - situation_based_necessity
+  - last_train
+  - have_to
+- id: g022_q010
+  question_type: two_choice
+  prompt: I ___ tell you something important. I cannot keep silent.
+  choices:
+  - text: must
+    correct: true
+  - text: have to
+    correct: false
+  answer: must
+  explanation: I cannot keep silent から、話し手が内側から強く必要を感じている。したがって must が自然。
+  focus:
+  - inner_necessity
+  - speaker_judgement
+  - must
+- id: g022_q011
+  question_type: two_choice
+  prompt: In this school, students ___ wear uniforms.
+  choices:
+  - text: must
+    correct: false
+  - text: have to
+    correct: true
+  answer: have to
+  explanation: 学校の規則による必要を表している。外部のルールなので have to が自然。
+  focus:
+  - school_rule
+  - external_rule
+  - have_to
+- id: g022_q012
+  question_type: two_choice
+  prompt: You ___ read this book. It will change the way you think.
+  choices:
+  - text: must
+    correct: true
+  - text: have to
+    correct: false
+  answer: must
+  explanation: 強いおすすめを表している。相手に命令しているのではなく「ぜひ読んでほしい」という意味なので must が自然。
+  focus:
+  - strong_recommendation
+  - must
+common_mistakes:
+- mistake: must と have to をどちらも「〜しなければならない」とだけ覚える
+  correction: must は話し手の判断・決意、have to は規則・状況など外部事情による必要を表すことが多い。
+- mistake: have to を助動詞と同じように三単現でも have to のまま使う
+  correction: '主語が三人称単数なら has to になる。例: She has to take this medicine.'
+- mistake: must の否定 must not と have to の否定 do not have to を同じ意味だと思う
+  correction: must not は禁止、do not have to は不要。この違いは g023 で扱う。
+learning_notes:
+- 肯定文の must と have to は意味が重なることもある。試験用には、文脈が「話し手の判断」か「外部事情」かを見る。
+- must は強い勧めにも使える。You must try this. は「ぜひ試して」という意味になる。
+- have to は普通の動詞 have を含む形なので、三単現では has to、過去では had to になる。
+- 否定形の must not と do not have to は意味が大きく違うため、別カードで扱う。
+prerequisites:
+- g021
+next_items:
+- g023
+- g024

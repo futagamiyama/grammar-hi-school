@@ -1,0 +1,406 @@
+id: g100
+file: g100.yaml
+
+title: 強調・倒置・省略の総合判定
+type: exam_judgement
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 強調・倒置・省略・疑問構文を、文脈と語順から総合的に判定できるか？
+
+core_concept:
+  emphasis_judgement:
+    form: It is/was ... that / do・does・did + 動詞原形
+    meaning: 〜なのは...だ、本当に〜する
+    image: 文の一部や動詞を強く前面に出す
+    examples:
+      - sentence: It was Ken that broke the window.
+        ja: 窓を割ったのはケンだった。
+        point: It was と that の間の Ken が強調されている。
+      - sentence: I do like this song.
+        ja: 私はこの歌が本当に好きです。
+        point: 肯定文の do は動詞 like を強調する。
+      - sentence: She did call me yesterday.
+        ja: 彼女は昨日たしかに私に電話した。
+        point: did の後ろは原形 call。
+
+  inversion_judgement:
+    form: 否定語・Only・So・場所副詞 + 助動詞/動詞 + 主語
+    meaning: 強調、同意、場面提示
+    image: 文頭に強い語句が出ると語順が変わる
+    examples:
+      - sentence: Never have I seen such a view.
+        ja: 私はそんな景色を一度も見たことがない。
+        point: Never が文頭にあるので have I seen と倒置。
+      - sentence: Only then did I understand the problem.
+        ja: その時初めて私はその問題を理解した。
+        point: Only then の後ろで did I understand と倒置。
+      - sentence: Here comes the bus.
+        ja: ほら、バスが来た。
+        point: Here が文頭に出て、名詞主語 the bus が後ろに来る。
+
+  ellipsis_judgement:
+    form: 接続詞 + 形容詞/分詞 / to / so / not / than expected
+    meaning: 省略された主語・動詞句・節を補って読む
+    image: 短い語句の背後に文全体が隠れている
+    examples:
+      - sentence: If necessary, call me.
+        ja: 必要なら、私に電話してください。
+        point: If it is necessary の it is が省略されている。
+      - sentence: I wanted to go, but I was not able to.
+        ja: 私は行きたかったが、行くことができなかった。
+        point: able to の後ろに go が省略されている。
+      - sentence: The test was easier than expected.
+        ja: そのテストは予想より簡単だった。
+        point: than expected の後ろに it was expected to be が省略されている。
+
+  question_judgement:
+    form: 間接疑問 / 付加疑問 / 否定疑問 / 修辞疑問
+    meaning: 〜か、〜ですよね、〜ではないのですか、〜ではないか
+    image: 疑問文の形でも、語順や意味が変わる
+    examples:
+      - sentence: I do not know where he lives.
+        ja: 私は彼がどこに住んでいるか知らない。
+        point: 間接疑問文では where he lives の平叙文語順。
+      - sentence: You are a student, aren't you?
+        ja: あなたは学生ですよね。
+        point: 肯定文には否定の付加疑問。
+      - sentence: Isn't it obvious?
+        ja: それは明らかではないか。
+        point: 修辞疑問として、実際には「明らかだ」という強い肯定。
+
+main_rule: >
+  強調・倒置・省略・疑問構文は、形だけを丸暗記すると混乱しやすい。
+  まず、文頭や文末に特別な語句があるかを見る。
+  It is/was ... that なら強調構文。
+  肯定文の do / does / did なら動詞の強調。
+  Never, Only then, Not only などが文頭にあれば、助動詞 + 主語 + 動詞の倒置を考える。
+  Here, There, Away, On the wall などが文頭にあり、主語が名詞なら、動詞 + 名詞主語の倒置を考える。
+  If necessary, When asked, than expected, as soon as possible, want to, do so などは、
+  省略された主語・be動詞・動詞句・節を補って読む。
+  間接疑問文では疑問詞の後ろを平叙文語順にする。
+  付加疑問文では前の文の助動詞・肯否・主語に合わせる。
+  否定疑問文や修辞疑問文では、疑問の形に隠れた確認・驚き・強い主張を読む。
+
+contrast_pairs:
+  - emphasis: It was Ken that broke the window.
+    question: Who broke the window?
+    point: >
+      It was ... that は強調構文。
+      本当に答えを尋ねている疑問文ではない。
+
+  - inversion: Never have I seen such a view.
+    ordinary: I have never seen such a view.
+    point: >
+      Never を文頭に出すと倒置する。
+      意味は近いが、倒置形は強調的で硬い。
+
+  - indirect_question: I know where he lives.
+    direct_question: Where does he live?
+    point: >
+      間接疑問文では where he lives。
+      直接疑問文では does he live。
+
+  - ellipsis: If necessary, call me.
+    full_form: If it is necessary, call me.
+    point: >
+      If necessary は省略表現。
+      it is を補って読む。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または強調・倒置・省略・疑問構文のどれかを文脈から判定できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g100_q001
+    question_type: two_choice
+    prompt: It was Ken ___ broke the window.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      It was ... that の強調構文。
+      Ken を強調して「窓を割ったのはケンだった」という意味。
+    translation: 窓を割ったのはケンだった。
+    focus:
+      - emphasis_judgement
+      - cleft_sentence
+      - that
+
+  - id: g100_q002
+    question_type: two_choice
+    prompt: I ___ like this song.
+    choices:
+      - text: do
+        correct: true
+      - text: am
+        correct: false
+    answer: do
+    explanation: >
+      肯定文で do を入れると、動詞 like を強調する。
+      I do like ... で「本当に好きです」。
+    translation: 私はこの歌が本当に好きです。
+    focus:
+      - emphasis_judgement
+      - emphatic_do
+      - like
+
+  - id: g100_q003
+    question_type: two_choice
+    prompt: Never ___ I seen such a view.
+    choices:
+      - text: have
+        correct: true
+      - text: I have
+        correct: false
+    answer: have
+    explanation: >
+      Never が文頭に出ているので倒置する。
+      現在完了なので have I seen の語順。
+    translation: 私はそんな景色を一度も見たことがない。
+    focus:
+      - inversion_judgement
+      - negative_inversion
+      - never
+
+  - id: g100_q004
+    question_type: two_choice
+    prompt: Only then ___ I understand the problem.
+    choices:
+      - text: did
+        correct: true
+      - text: I did
+        correct: false
+    answer: did
+    explanation: >
+      Only then が文頭にあるので、主節が倒置する。
+      did I understand が正しい。
+    translation: その時初めて私はその問題を理解した。
+    focus:
+      - inversion_judgement
+      - only_then
+      - did
+
+  - id: g100_q005
+    question_type: two_choice
+    prompt: Here ___ the bus.
+    choices:
+      - text: comes
+        correct: true
+      - text: the bus comes
+        correct: false
+    answer: comes
+    explanation: >
+      Here が文頭にあり、主語 the bus は名詞。
+      Here comes the bus. という倒置になる。
+    translation: ほら、バスが来た。
+    focus:
+      - inversion_judgement
+      - here_comes
+      - noun_subject
+
+  - id: g100_q006
+    question_type: two_choice
+    prompt: Here ___ comes.
+    choices:
+      - text: he
+        correct: true
+      - text: comes he
+        correct: false
+    answer: he
+    explanation: >
+      主語が代名詞 he の場合は、普通 Here he comes. とする。
+      Here comes he. とはしない。
+    translation: ほら、彼が来た。
+    focus:
+      - inversion_judgement
+      - pronoun_subject
+      - here_he_comes
+
+  - id: g100_q007
+    question_type: two_choice
+    prompt: If ___, call me.
+    choices:
+      - text: necessary
+        correct: true
+      - text: necessity
+        correct: false
+    answer: necessary
+    explanation: >
+      If necessary は If it is necessary の省略。
+      necessary は形容詞なので自然。
+    translation: 必要なら、私に電話してください。
+    focus:
+      - ellipsis_judgement
+      - if_necessary
+      - adjective
+
+  - id: g100_q008
+    question_type: two_choice
+    prompt: I wanted to go, but I was not able ___.
+    choices:
+      - text: to
+        correct: true
+      - text: going
+        correct: false
+    answer: to
+    explanation: >
+      able to の後ろに go が省略されている。
+      代不定詞 to の形。
+    translation: 私は行きたかったが、行くことができなかった。
+    focus:
+      - ellipsis_judgement
+      - pro_infinitive
+      - able_to
+
+  - id: g100_q009
+    question_type: two_choice
+    prompt: The test was easier than ___.
+    choices:
+      - text: expected
+        correct: true
+      - text: expecting
+        correct: false
+    answer: expected
+    explanation: >
+      than expected は「予想より」。
+      than it was expected to be などが省略された比較表現。
+    translation: そのテストは予想より簡単だった。
+    focus:
+      - ellipsis_judgement
+      - than_expected
+      - comparison
+
+  - id: g100_q010
+    question_type: two_choice
+    prompt: I do not know where ___.
+    choices:
+      - text: he lives
+        correct: true
+      - text: does he live
+        correct: false
+    answer: he lives
+    explanation: >
+      間接疑問文では、疑問詞の後ろは平叙文語順。
+      where he lives が正しい。
+    translation: 私は彼がどこに住んでいるか知らない。
+    focus:
+      - question_judgement
+      - indirect_question
+      - word_order
+
+  - id: g100_q011
+    question_type: two_choice
+    prompt: You are a student, ___?
+    choices:
+      - text: aren't you
+        correct: true
+      - text: don't you
+        correct: false
+    answer: aren't you
+    explanation: >
+      前の文は be動詞 are の肯定文。
+      肯定文には否定の付加疑問 aren't you を付ける。
+    translation: あなたは学生ですよね。
+    focus:
+      - question_judgement
+      - tag_question
+      - are
+
+  - id: g100_q012
+    question_type: two_choice
+    prompt: ___ it obvious?
+    choices:
+      - text: Isn't
+        correct: true
+      - text: Doesn't
+        correct: false
+    answer: Isn't
+    explanation: >
+      obvious は形容詞なので be動詞を使う。
+      Isn't it obvious? は修辞疑問として「明らかではないか」という意味。
+    translation: それは明らかではないか。
+    focus:
+      - question_judgement
+      - rhetorical_question
+      - obvious
+
+common_mistakes:
+  - mistake: It is ... that をすべて形式主語構文だと思う
+    correction: >
+      It is/was と that を外して普通の文に戻せるなら、強調構文の可能性が高い。
+  - mistake: 文頭の Never / Only then を見ても普通語順にしてしまう
+    correction: >
+      否定語・準否定語・Only を含む語句が文頭に出ると、助動詞 + 主語 + 動詞の倒置を考える。
+  - mistake: Here comes he. と代名詞主語まで倒置してしまう
+    correction: >
+      主語が代名詞なら Here he comes. / Away they ran. のように普通語順が基本。
+  - mistake: 省略表現を不完全な文として処理する
+    correction: >
+      If necessary, than expected, able to, did so などは、省略された語句を補って読む。
+  - mistake: 間接疑問文を直接疑問文の語順にしてしまう
+    correction: >
+      I do not know where he lives. のように、疑問詞の後ろは平叙文語順にする。
+
+learning_notes:
+  - >
+    強調構文では、It is/was と that の間にある語句が強調される。
+  - >
+    肯定文の do / does / did は、動詞を強調する。
+    後ろは必ず動詞原形。
+  - >
+    倒置は、文頭の語句が合図になる。
+    Never, Only then, Not only, Here, There, Away などに注意する。
+  - >
+    省略表現では、短い語句の背後に何が省略されているかを補って読む。
+  - >
+    疑問構文では、語順と意味を分けて見る。
+    間接疑問は平叙文語順、付加疑問は前文に合わせ、修辞疑問は隠れた主張を読む。
+
+prerequisites:
+  - g084
+  - g085
+  - g086
+  - g087
+  - g088
+  - g089
+  - g090
+  - g091
+  - g092
+  - g093
+  - g094
+  - g095
+  - g096
+  - g097
+  - g098
+  - g099
+
+next_items:
+  - g101
+  - g102
+  - g103

@@ -1,0 +1,347 @@
+id: g047
+file: g047.yaml
+
+title: 現在分詞 vs 過去分詞
+type: construction
+
+section:
+  id: s05
+  title: 不定詞・動名詞・分詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: する側か、される側か？
+
+core_concept:
+  present_participle:
+    form: 動詞のing形
+    meaning: 〜している、〜する側、感情を引き起こす側を表す
+    image: 動作が進行している / 主語が動作をしている / 人に感情を起こさせる
+    examples:
+      - sentence: Look at the running boy.
+        ja: 走っている少年を見なさい。
+        point: 少年が走っているので running。
+      - sentence: The barking dog woke me up.
+        ja: 吠えている犬が私を起こした。
+        point: 犬が吠えているので barking。
+      - sentence: The movie was exciting.
+        ja: その映画はわくわくするものだった。
+        point: 映画が人を興奮させるので exciting。
+
+  past_participle:
+    form: 過去分詞
+    meaning: 〜された、〜されている側、感情を受ける側を表す
+    image: 動作を受けている / すでにそうされた状態 / 感情を受けた状態
+    examples:
+      - sentence: The broken window was repaired.
+        ja: 壊れた窓は修理された。
+        point: 窓は壊された側なので broken。
+      - sentence: The stolen bike was found.
+        ja: 盗まれた自転車が見つかった。
+        point: 自転車は盗まれた側なので stolen。
+      - sentence: I was excited about the game.
+        ja: 私はその試合に興奮した。
+        point: 私が興奮させられた側なので excited。
+
+main_rule: >
+  現在分詞は「〜している」「〜する側」を表す。
+  過去分詞は「〜された」「〜されている側」を表す。
+  a running boy は「走っている少年」で、少年が走る側。
+  a broken window は「壊された窓」で、窓は壊される側。
+  感情を表す語では、interesting/exciting/surprising は感情を起こす側、
+  interested/excited/surprised は感情を受ける側を表す。
+
+contrast_pairs:
+  - present_participle: a running boy
+    past_participle: a broken window
+    point: >
+      running は boy が走っていることを表す。
+      broken は window が壊された状態を表す。
+
+  - present_participle: a barking dog
+    past_participle: a stolen bike
+    point: >
+      barking は dog が吠えている。
+      stolen は bike が盗まれた。
+
+  - present_participle: The story was interesting.
+    past_participle: I was interested in the story.
+    point: >
+      interesting は話が人に興味を起こさせる。
+      interested は人が興味を持たされた状態。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または現在分詞と過去分詞の意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g047_q001
+    question_type: two_choice
+    prompt: Look at the ___ boy.
+    choices:
+      - text: running
+        correct: true
+      - text: run
+        correct: false
+    answer: running
+    explanation: >
+      少年が走っているので、動作をしている側を表す現在分詞 running を使う。
+      a running boy で「走っている少年」。
+    translation: 走っている少年を見なさい。
+    focus:
+      - present_participle
+      - active_meaning
+      - running_boy
+
+  - id: g047_q002
+    question_type: two_choice
+    prompt: The ___ window was repaired.
+    choices:
+      - text: breaking
+        correct: false
+      - text: broken
+        correct: true
+    answer: broken
+    explanation: >
+      窓は壊す側ではなく、壊された側。
+      受け身の意味を表す過去分詞 broken が自然。
+    translation: 壊れた窓は修理された。
+    focus:
+      - past_participle
+      - passive_meaning
+      - broken_window
+
+  - id: g047_q003
+    question_type: two_choice
+    prompt: The ___ dog kept us awake.
+    choices:
+      - text: barking
+        correct: true
+      - text: barked
+        correct: false
+    answer: barking
+    explanation: >
+      犬が吠えているので、動作をしている側を表す現在分詞 barking を使う。
+    translation: 吠えている犬のせいで私たちは眠れなかった。
+    focus:
+      - present_participle
+      - active_meaning
+      - barking_dog
+
+  - id: g047_q004
+    question_type: two_choice
+    prompt: The ___ bike was found near the station.
+    choices:
+      - text: stealing
+        correct: false
+      - text: stolen
+        correct: true
+    answer: stolen
+    explanation: >
+      自転車は盗む側ではなく、盗まれた側。
+      受け身の意味を表す過去分詞 stolen が自然。
+    translation: 盗まれた自転車が駅の近くで見つかった。
+    focus:
+      - past_participle
+      - passive_meaning
+      - stolen_bike
+
+  - id: g047_q005
+    question_type: two_choice
+    prompt: The ___ baby is my sister.
+    choices:
+      - text: sleeping
+        correct: true
+      - text: slept
+        correct: false
+    answer: sleeping
+    explanation: >
+      赤ちゃんが眠っているので、現在分詞 sleeping を使う。
+      a sleeping baby で「眠っている赤ちゃん」。
+    translation: 眠っている赤ちゃんは私の妹です。
+    focus:
+      - present_participle
+      - active_state
+      - sleeping_baby
+
+  - id: g047_q006
+    question_type: two_choice
+    prompt: The ___ letter was on the desk.
+    choices:
+      - text: writing
+        correct: false
+      - text: written
+        correct: true
+    answer: written
+    explanation: >
+      手紙は書く側ではなく、書かれた側。
+      過去分詞 written が自然。
+    translation: 書かれた手紙が机の上にあった。
+    focus:
+      - past_participle
+      - passive_meaning
+      - written_letter
+
+  - id: g047_q007
+    question_type: two_choice
+    prompt: The story was ___.
+    choices:
+      - text: interesting
+        correct: true
+      - text: interested
+        correct: false
+    answer: interesting
+    explanation: >
+      主語 The story は人に興味を起こさせるもの。
+      感情を引き起こす側なので interesting が自然。
+    translation: その話は面白かった。
+    focus:
+      - present_participle_adjective
+      - causing_feeling
+      - interesting
+
+  - id: g047_q008
+    question_type: two_choice
+    prompt: I was ___ in the story.
+    choices:
+      - text: interesting
+        correct: false
+      - text: interested
+        correct: true
+    answer: interested
+    explanation: >
+      主語 I は興味を持った人。
+      感情を受ける側なので過去分詞 interested が自然。
+    translation: 私はその話に興味を持った。
+    focus:
+      - past_participle_adjective
+      - receiving_feeling
+      - interested
+
+  - id: g047_q009
+    question_type: two_choice
+    prompt: The news was ___.
+    choices:
+      - text: surprising
+        correct: true
+      - text: surprised
+        correct: false
+    answer: surprising
+    explanation: >
+      主語 The news は人を驚かせるもの。
+      感情を引き起こす側なので surprising が自然。
+    translation: その知らせは驚くべきものだった。
+    focus:
+      - present_participle_adjective
+      - causing_feeling
+      - surprising
+
+  - id: g047_q010
+    question_type: two_choice
+    prompt: She was ___ at the news.
+    choices:
+      - text: surprising
+        correct: false
+      - text: surprised
+        correct: true
+    answer: surprised
+    explanation: >
+      主語 She は驚いた人。
+      感情を受ける側なので過去分詞 surprised が自然。
+    translation: 彼女はその知らせに驚いた。
+    focus:
+      - past_participle_adjective
+      - receiving_feeling
+      - surprised
+
+  - id: g047_q011
+    question_type: two_choice
+    prompt: The ___ leaves covered the ground.
+    choices:
+      - text: falling
+        correct: false
+      - text: fallen
+        correct: true
+    answer: fallen
+    explanation: >
+      地面を覆っているのは、すでに落ちた葉。
+      完了した状態を表す過去分詞 fallen が自然。
+    translation: 落ち葉が地面を覆っていた。
+    focus:
+      - past_participle
+      - completed_state
+      - fallen_leaves
+
+  - id: g047_q012
+    question_type: two_choice
+    prompt: Look at the leaves ___ from the tree.
+    choices:
+      - text: falling
+        correct: true
+      - text: fallen
+        correct: false
+    answer: falling
+    explanation: >
+      葉が木から落ちている途中なので、進行中の動作を表す falling が自然。
+    translation: 木から落ちている葉を見なさい。
+    focus:
+      - present_participle
+      - ongoing_action
+      - falling_leaves
+
+common_mistakes:
+  - mistake: 現在分詞を「現在」、過去分詞を「過去」とだけ考える
+    correction: >
+      現在分詞・過去分詞の違いは、時制よりも「する側」か「される側」かが重要。
+      running boy は「走っている少年」、broken window は「壊された窓」。
+  - mistake: 感情表現で interested と interesting を混同する
+    correction: >
+      人が主語なら interested、物・出来事が主語なら interesting が基本。
+      I am interested. / The story is interesting.
+  - mistake: 受け身の意味なのに現在分詞を選ぶ
+    correction: >
+      stolen bike, written letter, broken window のように、
+      物が動作を受けているなら過去分詞を使う。
+  - mistake: falling leaves と fallen leaves を同じだと思う
+    correction: >
+      falling leaves は「落ちている途中の葉」。
+      fallen leaves は「すでに落ちた葉・落ち葉」。
+
+learning_notes:
+  - >
+    現在分詞は「動いている」「している」「感情を起こす」側。
+  - >
+    過去分詞は「された」「されている」「感情を受けた」側。
+  - >
+    分詞は名詞を説明する形容詞のように使える。
+    a running boy, a broken window のように名詞の前に置くことが多い。
+  - >
+    感情表現では、-ing は感情を引き起こす側、
+    -ed は感情を受ける側として判断するとよい。
+
+prerequisites:
+  - g038
+  - g039
+
+next_items:
+  - g048
+  - g049
+  - g050

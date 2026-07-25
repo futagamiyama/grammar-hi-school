@@ -1,0 +1,369 @@
+id: g067
+file: g067.yaml
+
+title: 関係代名詞 what
+type: construction
+
+section:
+  id: s08
+  title: 関係詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: what が「何」ではなく「〜すること・もの」と読めるか？
+
+core_concept:
+  what_basic:
+    form: what + 主語 + 動詞 / what + 動詞 ...
+    meaning: 〜すること、〜するもの
+    image: what の中に the thing(s) which/that が含まれている
+    examples:
+      - sentence: This is what I wanted.
+        ja: これが私の欲しかったものです。
+        point: what I wanted = the thing that I wanted。
+      - sentence: I believe what he said.
+        ja: 私は彼が言ったことを信じている。
+        point: what he said = the thing that he said。
+      - sentence: What you need is rest.
+        ja: あなたに必要なのは休息です。
+        point: What you need が主語になっている。
+
+  what_as_object:
+    form: 動詞 + what + 主語 + 動詞
+    meaning: 〜が...すること・ものを、動詞の目的語にする
+    image: what節全体が名詞のかたまりになる
+    examples:
+      - sentence: I don't understand what you mean.
+        ja: 私はあなたの言っていることがわからない。
+        point: what you mean が understand の目的語。
+      - sentence: She gave me what I needed.
+        ja: 彼女は私に必要なものをくれた。
+        point: what I needed が gave の目的語。
+      - sentence: Tell me what happened.
+        ja: 何が起きたのか教えてください。
+        point: what happened が tell の目的語。
+
+  contrast_with_that:
+    form: what / the thing that
+    meaning: what は先行詞を含む。that は先行詞を別に必要とする。
+    image: what = the thing that
+    examples:
+      - sentence: This is what I wanted.
+        ja: これが私の欲しかったものです。
+        point: what の前に the thing を置かない。
+      - sentence: This is the thing that I wanted.
+        ja: これが私の欲しかったものです。
+        point: the thing があるなら that を使う。
+      - sentence: I believe what he said.
+        ja: 私は彼が言ったことを信じている。
+        point: what は「こと」を含む。
+
+main_rule: >
+  関係代名詞 what は「〜すること」「〜するもの」という意味を表す。
+  what は先行詞を含む関係代名詞で、what = the thing(s) which/that と考えられる。
+  This is what I wanted. は This is the thing that I wanted. と近い意味。
+  そのため、the thing what のように、先行詞と what を重ねてはいけない。
+  what節全体は名詞のかたまりになり、主語・目的語・補語として使える。
+
+contrast_pairs:
+  - what_clause: This is what I wanted.
+    thing_that: This is the thing that I wanted.
+    point: >
+      what は the thing that を含む。
+      the thing があるなら that、ないなら what を使う。
+
+  - what_clause: I believe what he said.
+    thing_that: I believe the thing that he said.
+    point: >
+      what he said は「彼が言ったこと」。
+      what節全体が believe の目的語になる。
+
+  - question_word: What did he say?
+    relative_pronoun: I don't know what he said.
+    point: >
+      What did he say? は疑問文。
+      what he said は「彼が言ったこと」という名詞節。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または what = the thing that の関係を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g067_q001
+    question_type: two_choice
+    prompt: This is ___ I wanted.
+    choices:
+      - text: what
+        correct: true
+      - text: that
+        correct: false
+    answer: what
+    explanation: >
+      先行詞がなく、「私が欲しかったもの」という意味。
+      what I wanted = the thing that I wanted と考える。
+    translation: これが私の欲しかったものです。
+    focus:
+      - what_basic
+      - the_thing_that
+      - complement
+
+  - id: g067_q002
+    question_type: two_choice
+    prompt: This is the thing ___ I wanted.
+    choices:
+      - text: what
+        correct: false
+      - text: that
+        correct: true
+    answer: that
+    explanation: >
+      the thing という先行詞がすでにある。
+      what は先行詞を含むので、ここでは that を使う。
+    translation: これが私の欲しかったものです。
+    focus:
+      - contrast_with_that
+      - antecedent_present
+      - that
+
+  - id: g067_q003
+    question_type: two_choice
+    prompt: I believe ___ he said.
+    choices:
+      - text: what
+        correct: true
+      - text: which
+        correct: false
+    answer: what
+    explanation: >
+      「彼が言ったこと」を believe の目的語にしている。
+      what he said が自然。
+    translation: 私は彼が言ったことを信じている。
+    focus:
+      - what_as_object
+      - object_clause
+      - what_he_said
+
+  - id: g067_q004
+    question_type: two_choice
+    prompt: I believe the words ___ he said.
+    choices:
+      - text: what
+        correct: false
+      - text: that
+        correct: true
+    answer: that
+    explanation: >
+      the words という先行詞がある。
+      先行詞を後ろから説明するので that が自然。
+    translation: 私は彼が言った言葉を信じている。
+    focus:
+      - contrast_with_that
+      - antecedent_present
+      - words
+
+  - id: g067_q005
+    question_type: two_choice
+    prompt: ___ you need is rest.
+    choices:
+      - text: What
+        correct: true
+      - text: That
+        correct: false
+    answer: What
+    explanation: >
+      What you need が主語で、「あなたに必要なもの」という意味。
+      what = the thing that と考える。
+    translation: あなたに必要なのは休息です。
+    focus:
+      - what_basic
+      - subject_clause
+      - what_you_need
+
+  - id: g067_q006
+    question_type: two_choice
+    prompt: The thing ___ you need is rest.
+    choices:
+      - text: what
+        correct: false
+      - text: that
+        correct: true
+    answer: that
+    explanation: >
+      The thing という先行詞があるので that を使う。
+      The thing what とはしない。
+    translation: あなたに必要なものは休息です。
+    focus:
+      - contrast_with_that
+      - avoid_the_thing_what
+      - that
+
+  - id: g067_q007
+    question_type: two_choice
+    prompt: I don't understand ___ you mean.
+    choices:
+      - text: what
+        correct: true
+      - text: which
+        correct: false
+    answer: what
+    explanation: >
+      「あなたの意味すること」を understand の目的語にしている。
+      what you mean が自然。
+    translation: 私はあなたの言っていることがわからない。
+    focus:
+      - what_as_object
+      - what_you_mean
+      - object_clause
+
+  - id: g067_q008
+    question_type: two_choice
+    prompt: She gave me ___ I needed.
+    choices:
+      - text: what
+        correct: true
+      - text: that
+        correct: false
+    answer: what
+    explanation: >
+      「私に必要なもの」を表している。
+      先行詞がないので what I needed が自然。
+    translation: 彼女は私に必要なものをくれた。
+    focus:
+      - what_as_object
+      - what_i_needed
+      - gave
+
+  - id: g067_q009
+    question_type: two_choice
+    prompt: She gave me the book ___ I needed.
+    choices:
+      - text: what
+        correct: false
+      - text: that
+        correct: true
+    answer: that
+    explanation: >
+      the book という先行詞がある。
+      その本を後ろから説明するので that が自然。
+    translation: 彼女は私に必要だった本をくれた。
+    focus:
+      - contrast_with_that
+      - antecedent_present
+      - book
+
+  - id: g067_q010
+    question_type: two_choice
+    prompt: Tell me ___ happened.
+    choices:
+      - text: what
+        correct: true
+      - text: that
+        correct: false
+    answer: what
+    explanation: >
+      「何が起きたのか」「起きたこと」を表している。
+      what happened が tell me の内容になる。
+    translation: 何が起きたのか教えてください。
+    focus:
+      - what_basic
+      - what_happened
+      - subject_in_clause
+
+  - id: g067_q011
+    question_type: two_choice
+    prompt: I was surprised by ___ I saw.
+    choices:
+      - text: what
+        correct: true
+      - text: which
+        correct: false
+    answer: what
+    explanation: >
+      「私が見たもの」に驚いたという意味。
+      先行詞がないので what I saw が自然。
+    translation: 私は自分が見たものに驚いた。
+    focus:
+      - what_as_object
+      - what_i_saw
+      - object_of_preposition
+
+  - id: g067_q012
+    question_type: two_choice
+    prompt: I was surprised by the scene ___ I saw.
+    choices:
+      - text: what
+        correct: false
+      - text: that
+        correct: true
+    answer: that
+    explanation: >
+      the scene という先行詞がある。
+      what は先行詞を含むので、ここでは that を使う。
+    translation: 私は自分が見た光景に驚いた。
+    focus:
+      - contrast_with_that
+      - antecedent_present
+      - scene
+
+common_mistakes:
+  - mistake: what を疑問詞の「何」だけだと思う
+    correction: >
+      what は関係代名詞として「〜すること・もの」を表す。
+      what he said は「彼が言ったこと」。
+  - mistake: the thing what としてしまう
+    correction: >
+      what は the thing that を含む。
+      the thing があるなら the thing that、ないなら what を使う。
+  - mistake: 先行詞があるのに what を使う
+    correction: >
+      the book, the words, the scene などの先行詞がある場合は
+      that / which を使う。
+  - mistake: what節を疑問文の語順にしてしまう
+    correction: >
+      I don't know what he said. のように、what節の中は平叙文の語順。
+      what did he say とはしない。
+  - mistake: what と which を同じだと思う
+    correction: >
+      what は先行詞を含む。
+      which は前にある先行詞を説明する。
+
+learning_notes:
+  - >
+    what = the thing(s) that と考えると理解しやすい。
+  - >
+    what節は名詞のかたまりになる。
+    主語・目的語・補語として使える。
+  - >
+    This is what I wanted. と This is the thing that I wanted. は近い意味。
+    ただし the thing what とはしない。
+  - >
+    関係代名詞 what は、疑問詞 what と形は同じだが、
+    文の中では「〜すること・もの」と読むことが多い。
+
+prerequisites:
+  - g061
+  - g062
+  - g066
+
+next_items:
+  - g068
+  - g069
+  - g070

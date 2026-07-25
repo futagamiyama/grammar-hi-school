@@ -1,0 +1,405 @@
+id: g107
+file: g107.yaml
+
+title: 目的を表す so that / in order to
+type: grammar_contrast
+
+section:
+  id: s11
+  title: 名詞節・接続詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 「〜するために」を、so that + 文 と in order to + 動詞原形で正しく表せるか？
+
+core_concept:
+  so_that_purpose:
+    form: 主語 + 動詞 ... so that + 主語 + can/will/may + 動詞原形
+    meaning: 〜できるように、〜するために
+    image: 目的を文で説明する
+    examples:
+      - sentence: I got up early so that I could catch the first train.
+        ja: 始発電車に乗れるように、私は早く起きた。
+        point: so that の後ろは I could catch という文。
+      - sentence: Speak slowly so that everyone can understand you.
+        ja: 皆があなたの言うことを理解できるように、ゆっくり話してください。
+        point: so that + 主語 + can の形。
+      - sentence: She saved money so that she could study abroad.
+        ja: 留学できるように、彼女はお金を貯めた。
+        point: 過去の目的なので could が自然。
+
+  in_order_to_purpose:
+    form: in order to + 動詞原形
+    meaning: 〜するために
+    image: 目的を不定詞句で短く表す
+    examples:
+      - sentence: I got up early in order to catch the first train.
+        ja: 始発電車に乗るために、私は早く起きた。
+        point: in order to の後ろは動詞原形 catch。
+      - sentence: He went to the library in order to study.
+        ja: 勉強するために、彼は図書館へ行った。
+        point: in order to study で目的を表す。
+      - sentence: She saved money in order to study abroad.
+        ja: 留学するために、彼女はお金を貯めた。
+        point: 主語が同じなら in order to が使いやすい。
+
+  so_as_to_purpose:
+    form: so as to + 動詞原形
+    meaning: 〜するために
+    image: in order to に近い、やや硬い目的表現
+    examples:
+      - sentence: He spoke quietly so as not to wake the baby.
+        ja: 赤ちゃんを起こさないように、彼は静かに話した。
+        point: 否定は so as not to do の形。
+      - sentence: She left early so as to arrive on time.
+        ja: 時間通りに到着するために、彼女は早く出発した。
+        point: so as to の後ろは動詞原形。
+      - sentence: We changed the plan so as to reduce costs.
+        ja: 費用を減らすために、私たちは計画を変更した。
+        point: 目的をやや硬く表している。
+
+  for_purpose:
+    form: for + 名詞 / for + 動名詞
+    meaning: 〜のために、〜するために
+    image: for の後ろは名詞句
+    examples:
+      - sentence: This tool is used for cutting paper.
+        ja: この道具は紙を切るために使われる。
+        point: for の後ろに動詞を置くなら動名詞 cutting。
+      - sentence: I bought a gift for my mother.
+        ja: 私は母のために贈り物を買った。
+        point: for my mother は「母のために」。
+      - sentence: He went to the store for milk.
+        ja: 彼は牛乳を買いに店へ行った。
+        point: for milk は目的の名詞句。
+
+  negative_purpose:
+    form: in order not to + 動詞原形 / so that + 主語 + will not/would not + 動詞原形
+    meaning: 〜しないために
+    image: 否定の位置に注意する
+    examples:
+      - sentence: I left early in order not to be late.
+        ja: 遅れないように、私は早く出発した。
+        point: not は to の前に置く。
+      - sentence: I left early so that I would not be late.
+        ja: 遅れないように、私は早く出発した。
+        point: so that の後ろは文なので would not be。
+      - sentence: He whispered so as not to wake the baby.
+        ja: 赤ちゃんを起こさないように、彼はささやいた。
+        point: so as not to do の形。
+
+main_rule: >
+  目的を表す時は、後ろに文を置くなら so that、後ろに動詞原形を置くなら in order to を使う。
+  I got up early so that I could catch the first train. では、
+  so that の後ろに I could catch the first train という文が来ている。
+  I got up early in order to catch the first train. では、
+  in order to の後ろに catch という動詞原形が来ている。
+  主語が同じなら in order to で短く表せることが多い。
+  主語が違う時や、can / could / will / would などを使いたい時は so that が便利。
+  否定の目的は in order not to do、so as not to do、
+  または so that + 主語 + will not/would not + 動詞原形で表す。
+  for は前置詞なので、後ろには名詞・名詞句・動名詞を置く。
+
+contrast_pairs:
+  - clause: I got up early so that I could catch the first train.
+    phrase: I got up early in order to catch the first train.
+    point: >
+      so that の後ろは文。
+      in order to の後ろは動詞原形。
+
+  - same_subject: She saved money in order to study abroad.
+    different_subject: She saved money so that her son could study abroad.
+    point: >
+      主語が同じなら in order to が使いやすい。
+      主語が違うなら so that + 文が自然。
+
+  - infinitive_negative: I left early in order not to be late.
+    clause_negative: I left early so that I would not be late.
+    point: >
+      in order to の否定は in order not to。
+      so that の否定は文の中で would not / will not を使う。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または so that + 文 と in order to + 動詞原形の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g107_q001
+    question_type: two_choice
+    prompt: I got up early ___ I could catch the first train.
+    choices:
+      - text: so that
+        correct: true
+      - text: in order to
+        correct: false
+    answer: so that
+    explanation: >
+      I could catch the first train は主語＋助動詞＋動詞を含む文。
+      文を後ろに取るので so that を使う。
+    translation: 始発電車に乗れるように、私は早く起きた。
+    focus:
+      - so_that_purpose
+      - purpose_clause
+      - could
+
+  - id: g107_q002
+    question_type: two_choice
+    prompt: I got up early ___ catch the first train.
+    choices:
+      - text: in order to
+        correct: true
+      - text: so that
+        correct: false
+    answer: in order to
+    explanation: >
+      catch は動詞原形。
+      in order to catch で「乗るために」という目的を表す。
+    translation: 始発電車に乗るために、私は早く起きた。
+    focus:
+      - in_order_to_purpose
+      - infinitive
+      - catch
+
+  - id: g107_q003
+    question_type: two_choice
+    prompt: Speak slowly ___ everyone can understand you.
+    choices:
+      - text: so that
+        correct: true
+      - text: in order to
+        correct: false
+    answer: so that
+    explanation: >
+      everyone can understand you は文。
+      so that + 主語 + can で「〜できるように」を表す。
+    translation: 皆があなたの言うことを理解できるように、ゆっくり話してください。
+    focus:
+      - so_that_purpose
+      - can
+      - understand
+
+  - id: g107_q004
+    question_type: two_choice
+    prompt: He went to the library ___ study.
+    choices:
+      - text: in order to
+        correct: true
+      - text: so that
+        correct: false
+    answer: in order to
+    explanation: >
+      study は動詞原形。
+      in order to study で「勉強するために」という意味。
+    translation: 勉強するために、彼は図書館へ行った。
+    focus:
+      - in_order_to_purpose
+      - study
+      - library
+
+  - id: g107_q005
+    question_type: two_choice
+    prompt: She saved money ___ she could study abroad.
+    choices:
+      - text: so that
+        correct: true
+      - text: in order to
+        correct: false
+    answer: so that
+    explanation: >
+      she could study abroad は文。
+      so that の後ろに目的を表す文を置いている。
+    translation: 留学できるように、彼女はお金を貯めた。
+    focus:
+      - so_that_purpose
+      - study_abroad
+      - could
+
+  - id: g107_q006
+    question_type: two_choice
+    prompt: She saved money ___ study abroad.
+    choices:
+      - text: in order to
+        correct: true
+      - text: so that
+        correct: false
+    answer: in order to
+    explanation: >
+      study abroad は動詞原形で始まる句。
+      in order to study abroad で「留学するために」。
+    translation: 留学するために、彼女はお金を貯めた。
+    focus:
+      - in_order_to_purpose
+      - same_subject
+      - study_abroad
+
+  - id: g107_q007
+    question_type: two_choice
+    prompt: She saved money ___ her son could study abroad.
+    choices:
+      - text: so that
+        correct: true
+      - text: in order to
+        correct: false
+    answer: so that
+    explanation: >
+      her son could study abroad は文。
+      前の主語 she と後ろの主語 her son が違うので、so that + 文が自然。
+    translation: 息子が留学できるように、彼女はお金を貯めた。
+    focus:
+      - so_that_purpose
+      - different_subject
+      - her_son
+
+  - id: g107_q008
+    question_type: two_choice
+    prompt: He spoke quietly so as not ___ the baby.
+    choices:
+      - text: to wake
+        correct: true
+      - text: wake
+        correct: false
+    answer: to wake
+    explanation: >
+      so as not to do で「〜しないように」。
+      so as not to wake the baby が正しい。
+    translation: 赤ちゃんを起こさないように、彼は静かに話した。
+    focus:
+      - so_as_to_purpose
+      - negative_purpose
+      - baby
+
+  - id: g107_q009
+    question_type: two_choice
+    prompt: She left early so as ___ on time.
+    choices:
+      - text: to arrive
+        correct: true
+      - text: arrive
+        correct: false
+    answer: to arrive
+    explanation: >
+      so as to + 動詞原形の形。
+      so as to arrive on time で「時間通りに到着するために」。
+    translation: 時間通りに到着するために、彼女は早く出発した。
+    focus:
+      - so_as_to_purpose
+      - arrive
+      - on_time
+
+  - id: g107_q010
+    question_type: two_choice
+    prompt: This tool is used for ___ paper.
+    choices:
+      - text: cutting
+        correct: true
+      - text: cut
+        correct: false
+    answer: cutting
+    explanation: >
+      for は前置詞なので、後ろに動詞を置くなら動名詞。
+      for cutting paper が正しい。
+    translation: この道具は紙を切るために使われる。
+    focus:
+      - for_purpose
+      - gerund
+      - cutting
+
+  - id: g107_q011
+    question_type: two_choice
+    prompt: I left early in order ___ late.
+    choices:
+      - text: not to be
+        correct: true
+      - text: to not be
+        correct: false
+    answer: not to be
+    explanation: >
+      in order to の否定は in order not to do。
+      in order not to be late が基本形。
+    translation: 遅れないように、私は早く出発した。
+    focus:
+      - negative_purpose
+      - in_order_not_to
+      - late
+
+  - id: g107_q012
+    question_type: two_choice
+    prompt: I left early so that I ___ be late.
+    choices:
+      - text: would not
+        correct: true
+      - text: not would
+        correct: false
+    answer: would not
+    explanation: >
+      so that の後ろは文。
+      否定は助動詞の後ろに not を置き、I would not be late とする。
+    translation: 遅れないように、私は早く出発した。
+    focus:
+      - negative_purpose
+      - so_that
+      - would_not
+
+common_mistakes:
+  - mistake: so that の後ろに動詞原形だけを置く
+    correction: >
+      so that の後ろは文。
+      so that catch the train ではなく、so that I could catch the train。
+  - mistake: in order to の後ろに主語＋動詞を置く
+    correction: >
+      in order to の後ろは動詞原形。
+      in order to I could catch とはしない。
+  - mistake: for の後ろに動詞原形を置く
+    correction: >
+      for は前置詞なので、後ろに動詞を置くなら動名詞。
+      for cutting paper が正しい。
+  - mistake: in order to の否定を in order to not do だけで覚える
+    correction: >
+      標準的には in order not to do をまず覚える。
+      in order not to be late の形。
+  - mistake: 主語が違うのに in order to を使う
+    correction: >
+      主語が違う時は so that + 主語 + 助動詞 + 動詞が自然。
+      She saved money so that her son could study abroad.。
+
+learning_notes:
+  - >
+    so that は後ろに文を置き、「〜できるように」「〜するために」を表す。
+  - >
+    in order to は後ろに動詞原形を置き、「〜するために」を表す。
+  - >
+    主語が同じなら in order to、主語が違うなら so that が使いやすい。
+  - >
+    否定の目的は in order not to do / so as not to do / so that ... would not do。
+  - >
+    for は前置詞なので、後ろは名詞句または動名詞にする。
+
+prerequisites:
+  - g039
+  - g045
+  - g090
+  - g105
+  - g106
+
+next_items:
+  - g108
+  - g109
+  - g110

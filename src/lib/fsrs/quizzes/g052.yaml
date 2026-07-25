@@ -1,0 +1,355 @@
+id: g052
+file: g052.yaml
+
+title: some / any
+type: grammar_contrast
+
+section:
+  id: s06
+  title: 名詞・冠詞・数量表現
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 肯定的に「いくらか」か、否定・疑問で「少しでも」か？
+
+core_concept:
+  some:
+    form: some + 複数可算名詞 / 不可算名詞
+    meaning: いくつかの、いくらかの
+    image: ある程度存在することを前提にしている
+    examples:
+      - sentence: I bought some apples.
+        ja: 私はいくつかリンゴを買った。
+        point: apples がいくつかあるという肯定文。
+      - sentence: There is some water in the bottle.
+        ja: ボトルに水が少し入っている。
+        point: water が少しあるという肯定文。
+      - sentence: Would you like some tea?
+        ja: 紅茶はいかがですか。
+        point: 申し出では疑問文でも some を使う。
+
+  any:
+    form: any + 複数可算名詞 / 不可算名詞
+    meaning: 否定文では「少しも〜ない」、疑問文では「いくらか」
+    image: あるかどうかわからない、または少しでも存在するかを問う
+    examples:
+      - sentence: I do not have any money.
+        ja: 私はお金を少しも持っていない。
+        point: 否定文なので any。
+      - sentence: Are there any questions?
+        ja: 何か質問はありますか。
+        point: 質問があるかどうかをたずねているので any。
+      - sentence: We did not see any birds.
+        ja: 私たちは鳥を一羽も見なかった。
+        point: 否定文で「少しも・一つもない」を表す。
+
+main_rule: >
+  some は、肯定文で「いくつかの・いくらかの」を表す。
+  any は、疑問文や否定文でよく使われる。
+  I have some questions. は「いくつか質問があります」。
+  I do not have any questions. は「質問はありません」。
+  Do you have any questions? は「何か質問はありますか」。
+  ただし、相手に勧める・依頼する疑問文では some を使うことがある。
+  Would you like some tea? や Can I have some water? がその例。
+
+contrast_pairs:
+  - positive: I have some questions.
+    negative: I do not have any questions.
+    point: >
+      肯定文では some questions。
+      否定文では any questions が自然。
+
+  - question_neutral: Do you have any money?
+    offer_or_request: Can I have some water?
+    point: >
+      あるかどうかを普通に聞くなら any。
+      何かを頼む・申し出る疑問文では some を使うことが多い。
+
+  - countable: I bought some apples.
+    uncountable: I bought some bread.
+    point: >
+      some は複数可算名詞にも不可算名詞にも使える。
+      apples は数、bread は量として見る。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または some と any の基本的な使い分けを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g052_q001
+    question_type: two_choice
+    prompt: I bought ___ apples at the market.
+    choices:
+      - text: some
+        correct: true
+      - text: any
+        correct: false
+    answer: some
+    explanation: >
+      肯定文で「いくつかのリンゴ」を表している。
+      some apples が自然。
+    translation: 私は市場でいくつかリンゴを買った。
+    focus:
+      - some
+      - affirmative_sentence
+      - countable_plural
+
+  - id: g052_q002
+    question_type: two_choice
+    prompt: I did not buy ___ apples.
+    choices:
+      - text: some
+        correct: false
+      - text: any
+        correct: true
+    answer: any
+    explanation: >
+      否定文では any を使うのが基本。
+      not buy any apples で「リンゴを一つも買わなかった」。
+    translation: 私はリンゴを一つも買わなかった。
+    focus:
+      - any
+      - negative_sentence
+      - countable_plural
+
+  - id: g052_q003
+    question_type: two_choice
+    prompt: There is ___ water in the bottle.
+    choices:
+      - text: some
+        correct: true
+      - text: any
+        correct: false
+    answer: some
+    explanation: >
+      肯定文で「水が少しある」という意味。
+      water は不可算名詞だが、some を使える。
+    translation: ボトルには水が少し入っている。
+    focus:
+      - some
+      - affirmative_sentence
+      - uncountable_noun
+
+  - id: g052_q004
+    question_type: two_choice
+    prompt: There isn't ___ water in the bottle.
+    choices:
+      - text: some
+        correct: false
+      - text: any
+        correct: true
+    answer: any
+    explanation: >
+      否定文なので any を使う。
+      not any water で「水が少しもない」。
+    translation: ボトルには水が少しも入っていない。
+    focus:
+      - any
+      - negative_sentence
+      - uncountable_noun
+
+  - id: g052_q005
+    question_type: two_choice
+    prompt: Do you have ___ questions?
+    choices:
+      - text: some
+        correct: false
+      - text: any
+        correct: true
+    answer: any
+    explanation: >
+      質問があるかどうかを普通にたずねる疑問文。
+      Do you have any questions? が自然。
+    translation: 何か質問はありますか。
+    focus:
+      - any
+      - question
+      - neutral_question
+
+  - id: g052_q006
+    question_type: two_choice
+    prompt: I have ___ questions about the lesson.
+    choices:
+      - text: some
+        correct: true
+      - text: any
+        correct: false
+    answer: some
+    explanation: >
+      肯定文で「いくつか質問がある」という意味。
+      some questions が自然。
+    translation: 私はその授業についていくつか質問があります。
+    focus:
+      - some
+      - affirmative_sentence
+      - questions
+
+  - id: g052_q007
+    question_type: two_choice
+    prompt: Would you like ___ coffee?
+    choices:
+      - text: some
+        correct: true
+      - text: any
+        correct: false
+    answer: some
+    explanation: >
+      疑問文だが、相手に勧める表現なので some を使う。
+      Would you like some coffee? が自然。
+    translation: コーヒーはいかがですか。
+    focus:
+      - some
+      - offer
+      - polite_question
+
+  - id: g052_q008
+    question_type: two_choice
+    prompt: Is there ___ coffee left?
+    choices:
+      - text: some
+        correct: false
+      - text: any
+        correct: true
+    answer: any
+    explanation: >
+      コーヒーが残っているかどうかをたずねている普通の疑問文。
+      any coffee が自然。
+    translation: コーヒーはまだ残っていますか。
+    focus:
+      - any
+      - question
+      - uncountable_noun
+
+  - id: g052_q009
+    question_type: two_choice
+    prompt: Can I have ___ water?
+    choices:
+      - text: some
+        correct: true
+      - text: any
+        correct: false
+    answer: some
+    explanation: >
+      疑問文だが、水をくださいという依頼。
+      依頼では some を使うことが多い。
+    translation: 水を少しいただけますか。
+    focus:
+      - some
+      - request
+      - polite_question
+
+  - id: g052_q010
+    question_type: two_choice
+    prompt: We didn't see ___ birds in the park.
+    choices:
+      - text: some
+        correct: false
+      - text: any
+        correct: true
+    answer: any
+    explanation: >
+      否定文なので any を使う。
+      didn't see any birds で「鳥を一羽も見なかった」。
+    translation: 私たちは公園で鳥を一羽も見なかった。
+    focus:
+      - any
+      - negative_sentence
+      - birds
+
+  - id: g052_q011
+    question_type: two_choice
+    prompt: She needs ___ help with her homework.
+    choices:
+      - text: some
+        correct: true
+      - text: any
+        correct: false
+    answer: some
+    explanation: >
+      肯定文で「少し助けが必要だ」という意味。
+      help は不可算名詞として使われるので some help が自然。
+    translation: 彼女は宿題について少し助けが必要だ。
+    focus:
+      - some
+      - affirmative_sentence
+      - help
+
+  - id: g052_q012
+    question_type: two_choice
+    prompt: She doesn't need ___ help.
+    choices:
+      - text: some
+        correct: false
+      - text: any
+        correct: true
+    answer: any
+    explanation: >
+      否定文なので any を使う。
+      doesn't need any help で「助けを少しも必要としていない」。
+    translation: 彼女は助けを少しも必要としていない。
+    focus:
+      - any
+      - negative_sentence
+      - help
+
+common_mistakes:
+  - mistake: 疑問文では必ず any と覚える
+    correction: >
+      普通の疑問文では any が基本だが、
+      Would you like some tea? や Can I have some water? のような
+      申し出・依頼では some を使うことが多い。
+  - mistake: some は可算名詞だけに使うと思う
+    correction: >
+      some は複数可算名詞にも不可算名詞にも使える。
+      some apples, some water, some money のように使う。
+  - mistake: any を肯定文では絶対に使えないと思う
+    correction: >
+      基本カードでは疑問文・否定文の any を扱う。
+      ただし、肯定文の any は「どんな〜でも」という別の意味で使われる。
+  - mistake: not any の意味を弱く読む
+    correction: >
+      not any は「少しも〜ない」「一つも〜ない」という強い否定になることが多い。
+  - mistake: Do you have some questions? と Do you have any questions? を同じだと思う
+    correction: >
+      普通に有無をたずねるなら Do you have any questions?。
+      some を使うと、質問があることをある程度予想している響きが出ることがある。
+
+learning_notes:
+  - >
+    some は「あることを前提にした、いくらか」。
+    any は「あるかどうかわからない、少しでも」という感覚。
+  - >
+    肯定文では some、否定文・普通の疑問文では any が基本。
+  - >
+    申し出・依頼の疑問文では some が自然。
+    Would you like some tea? / Can I have some water?
+  - >
+    some / any は、複数可算名詞にも不可算名詞にも使える。
+
+prerequisites:
+  - g049
+  - g050
+  - g051
+
+next_items:
+  - g053
+  - g054
+  - g055

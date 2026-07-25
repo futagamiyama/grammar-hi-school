@@ -1,0 +1,352 @@
+id: g030
+file: g030.yaml
+
+title: cannot have 過去分詞
+type: grammar_contrast
+
+section:
+  id: s03
+  title: 助動詞・法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 過去について「ありえない」と判断しているか？
+
+core_concept:
+  cannot_have_past_participle:
+    form: cannot have + 過去分詞
+    meaning: 過去のことについて「〜したはずがない」「〜だったはずがない」と強く否定的に推量する
+    image: 今ある証拠から、過去にそれが起きたとは考えられない
+    examples:
+      - sentence: He cannot have said that.
+        ja: 彼がそんなことを言ったはずがない。
+        point: 過去に言ったという可能性を強く否定している。
+      - sentence: She cannot have forgotten the meeting.
+        ja: 彼女がその会議を忘れたはずがない。
+        point: 過去に忘れたとは考えられない、と推量している。
+      - sentence: They cannot have arrived already.
+        ja: 彼らがもう到着したはずがない。
+        point: すでに到着したという過去の完了を否定的に推量している。
+
+  cannot_base_verb:
+    form: cannot + 動詞の原形
+    meaning: 現在の不可能、または現在について「〜であるはずがない」という推量を表す
+    image: 今できない / 今そうであるはずがない
+    examples:
+      - sentence: I cannot open this door.
+        ja: 私はこのドアを開けられない。
+        point: 現在の能力・可能性の否定。
+      - sentence: He cannot be at home now.
+        ja: 彼が今家にいるはずがない。
+        point: 現在の状態について、ありえないと推量している。
+
+main_rule: >
+  cannot have + 過去分詞は、過去の出来事や状態について
+  「〜したはずがない」「〜だったはずがない」と強く否定的に推量する形。
+  cannot + 動詞の原形は、現在の不可能、または現在について
+  「〜であるはずがない」という推量を表す。
+  過去を否定的に推量するときは cannot have + 過去分詞を使う。
+
+contrast_pairs:
+  - present_inference: He cannot be at home now.
+    past_inference: He cannot have been at home yesterday.
+    point: >
+      cannot be は現在の状態への否定的推量。
+      cannot have been は過去の状態への否定的推量。
+
+  - present_impossibility: She cannot know the answer.
+    past_inference: She cannot have known the answer.
+    point: >
+      cannot know は今知っているはずがない。
+      cannot have known は過去に知っていたはずがない。
+
+  - present_or_future: They cannot arrive in five minutes.
+    past_inference: They cannot have arrived already.
+    point: >
+      cannot arrive はこれから到着することが不可能。
+      cannot have arrived はすでに到着したはずがないという過去への推量。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または cannot have 過去分詞 の意味を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g030_q001
+    question_type: two_choice
+    prompt: He was with me all day. He ___ the crime.
+    choices:
+      - text: cannot commit
+        correct: false
+      - text: cannot have committed
+        correct: true
+    answer: cannot have committed
+    explanation: >
+      He was with me all day という過去の事実から、
+      過去に犯罪を犯したはずがないと推量している。
+      過去への否定的推量なので cannot have committed が自然。
+    translation: 彼は一日中私と一緒にいた。彼がその犯罪を犯したはずがない。
+    focus:
+      - past_inference
+      - negative_inference
+      - cannot_have_past_participle
+
+  - id: g030_q002
+    question_type: two_choice
+    prompt: She is too careful. She ___ such a mistake.
+    choices:
+      - text: cannot have made
+        correct: true
+      - text: cannot make
+        correct: false
+    answer: cannot have made
+    explanation: >
+      such a mistake はすでに起きたミスについて話している。
+      彼女がそのようなミスをしたはずがない、という過去への推量なので
+      cannot have made が自然。
+    translation: 彼女はとても慎重だ。そんなミスをしたはずがない。
+    focus:
+      - past_action
+      - cannot_have_past_participle
+
+  - id: g030_q003
+    question_type: two_choice
+    prompt: He looks calm now. He ___ the bad news yet.
+    choices:
+      - text: cannot have heard
+        correct: true
+      - text: cannot hear
+        correct: false
+    answer: cannot have heard
+    explanation: >
+      今落ち着いている様子から、
+      まだその悪い知らせを聞いたはずがないと推量している。
+      過去に聞いたかどうかへの判断なので cannot have heard が自然。
+    translation: 彼は今落ち着いて見える。まだその悪い知らせを聞いたはずがない。
+    focus:
+      - evidence_now
+      - past_inference
+      - cannot_have_past_participle
+
+  - id: g030_q004
+    question_type: two_choice
+    prompt: The road was closed yesterday. They ___ through that road.
+    choices:
+      - text: cannot go
+        correct: false
+      - text: cannot have gone
+        correct: true
+    answer: cannot have gone
+    explanation: >
+      yesterday により過去の話。
+      道路が閉鎖されていたので、彼らがその道を通ったはずがない。
+      cannot have gone が自然。
+    translation: 昨日その道路は閉鎖されていた。彼らがその道を通ったはずがない。
+    focus:
+      - yesterday
+      - past_action
+      - cannot_have_past_participle
+
+  - id: g030_q005
+    question_type: two_choice
+    prompt: He ___ at home now. I just saw him at the station.
+    choices:
+      - text: cannot be
+        correct: true
+      - text: cannot have been
+        correct: false
+    answer: cannot be
+    explanation: >
+      now があるので、現在の状態についての否定的推量。
+      今家にいるはずがない、なので cannot be が自然。
+    translation: 彼が今家にいるはずがない。さっき駅で彼を見た。
+    focus:
+      - present_inference
+      - cannot_base_verb
+
+  - id: g030_q006
+    question_type: two_choice
+    prompt: He was in London yesterday. He ___ at the meeting in Tokyo.
+    choices:
+      - text: cannot be
+        correct: false
+      - text: cannot have been
+        correct: true
+    answer: cannot have been
+    explanation: >
+      yesterday の過去の状況から、
+      東京の会議にいたはずがないと推量している。
+      過去の状態への否定的推量なので cannot have been が自然。
+    translation: 彼は昨日ロンドンにいた。東京の会議にいたはずがない。
+    focus:
+      - past_state
+      - cannot_have_been
+      - negative_inference
+
+  - id: g030_q007
+    question_type: two_choice
+    prompt: The package is still here. They ___ it.
+    choices:
+      - text: cannot have sent
+        correct: true
+      - text: cannot send
+        correct: false
+    answer: cannot have sent
+    explanation: >
+      荷物がまだここにあるという現在の証拠から、
+      彼らがそれを送ったはずがないと推量している。
+      過去の行為への否定的推量なので cannot have sent が自然。
+    translation: その荷物はまだここにある。彼らがそれを送ったはずがない。
+    focus:
+      - evidence_now
+      - past_action
+      - cannot_have_past_participle
+
+  - id: g030_q008
+    question_type: two_choice
+    prompt: She did not know my address. She ___ me the letter.
+    choices:
+      - text: cannot have sent
+        correct: true
+      - text: cannot send
+        correct: false
+    answer: cannot have sent
+    explanation: >
+      住所を知らなかったという過去の事実から、
+      その手紙を送ったはずがないと推量している。
+      cannot have sent が自然。
+    translation: 彼女は私の住所を知らなかった。私にその手紙を送ったはずがない。
+    focus:
+      - past_evidence
+      - past_inference
+      - cannot_have_past_participle
+
+  - id: g030_q009
+    question_type: two_choice
+    prompt: This answer is wrong. It ___ correct.
+    choices:
+      - text: cannot be
+        correct: true
+      - text: cannot have been
+        correct: false
+    answer: cannot be
+    explanation: >
+      This answer is wrong と現在の判断を述べている。
+      今正しいはずがない、という現在への否定的推量なので
+      cannot be が自然。
+    translation: この答えは間違っている。正しいはずがない。
+    focus:
+      - present_inference
+      - cannot_base_verb
+
+  - id: g030_q010
+    question_type: two_choice
+    prompt: The answer was wrong. It ___ correct.
+    choices:
+      - text: cannot be
+        correct: false
+      - text: cannot have been
+        correct: true
+    answer: cannot have been
+    explanation: >
+      The answer was wrong と過去の判断を述べている。
+      その答えが正しかったはずがない、という過去への否定的推量なので
+      cannot have been が自然。
+    translation: その答えは間違っていた。正しかったはずがない。
+    focus:
+      - past_state
+      - cannot_have_been
+      - negative_inference
+
+  - id: g030_q011
+    question_type: two_choice
+    prompt: He has never studied French. He ___ that French book.
+    choices:
+      - text: cannot have read
+        correct: true
+      - text: cannot read
+        correct: false
+    answer: cannot have read
+    explanation: >
+      フランス語を勉強したことがないという事実から、
+      そのフランス語の本を読んだはずがないと推量している。
+      過去の読書経験への否定的推量なので cannot have read が自然。
+    translation: 彼はフランス語を勉強したことがない。そのフランス語の本を読んだはずがない。
+    focus:
+      - background_evidence
+      - past_inference
+      - cannot_have_past_participle
+
+  - id: g030_q012
+    question_type: two_choice
+    prompt: They left only five minutes ago. They ___ already.
+    choices:
+      - text: cannot arrive
+        correct: false
+      - text: cannot have arrived
+        correct: true
+    answer: cannot have arrived
+    explanation: >
+      5分前に出発したばかりなので、
+      すでに到着したはずがないと推量している。
+      already と過去の完了への判断から cannot have arrived が自然。
+    translation: 彼らはたった5分前に出発した。もう到着したはずがない。
+    focus:
+      - already
+      - past_completion
+      - cannot_have_past_participle
+
+common_mistakes:
+  - mistake: cannot have を「持てない」と読んでしまう
+    correction: >
+      cannot have + 過去分詞 の have は完了形を作る助動詞。
+      「持つ」という意味ではない。
+  - mistake: 過去の推量なのに cannot + 動詞の原形を選んでしまう
+    correction: >
+      過去について「〜したはずがない」と言うときは
+      cannot have + 過去分詞を使う。
+  - mistake: cannot have done と must not have done を同じだと思う
+    correction: >
+      cannot have done は「したはずがない」という強い否定的推量。
+      must not have done は英語では一般にこの意味では使わず、
+      高校英文法では cannot have done を基本形として覚える。
+
+learning_notes:
+  - >
+    cannot have + 過去分詞は、今ある証拠や過去の事実から、
+    過去にそれが起きたとは考えられないと判断する表現。
+  - >
+    cannot be は現在の状態への否定的推量。
+    cannot have been は過去の状態への否定的推量。
+  - >
+    must have + 過去分詞は「〜したに違いない」。
+    cannot have + 過去分詞は「〜したはずがない」。
+    この2つを対で覚えると理解しやすい。
+  - >
+    日本語では「はずがない」と訳すが、
+    英語では過去のことなら have + 過去分詞が必要になる。
+
+prerequisites:
+  - g027
+  - g028
+  - g029
+
+next_items:
+  - g031

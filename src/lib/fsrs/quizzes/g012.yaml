@@ -1,0 +1,329 @@
+id: g012
+file: g012.yaml
+
+title: think の現在形・進行形
+type: verb_usage
+
+section:
+  id: s02
+  title: 現在形・現在進行形と動詞用法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: think が「思う・信じる」か、「考えている・検討している」か？
+
+core_concept:
+  opinion_think:
+    form: think / thinks
+    meaning: 意見・判断・信念を表す
+    image: そう思っている / そう判断している / そう信じている
+    examples:
+      - sentence: I think he is right.
+        ja: 私は彼が正しいと思う。
+        point: think は believe に近く、意見・判断を表すので現在形を使う。
+      - sentence: She thinks English is important.
+        ja: 彼女は英語が大切だと思っている。
+        point: 一時的な動作ではなく、彼女の考え・判断を表している。
+      - sentence: They think the plan will work.
+        ja: 彼らはその計画がうまくいくと思っている。
+        point: 計画についての判断・見込みを表している。
+
+  mental_activity_think:
+    form: am / is / are thinking
+    meaning: 頭の中で考えている・検討している最中を表す
+    image: 今考えている途中 / 検討中である / まだ結論を出していない
+    examples:
+      - sentence: I am thinking about the problem.
+        ja: 私はその問題について考えている。
+        point: 頭の中で考える活動の最中なので現在進行形にできる。
+      - sentence: She is thinking of studying abroad.
+        ja: 彼女は留学することを考えている。
+        point: think of doing は「〜しようかと考えている・検討している」を表す。
+      - sentence: They are thinking about changing the schedule.
+        ja: 彼らは予定を変更することを考えている。
+        point: まだ決定ではなく、検討中の状態を表している。
+
+main_rule: >
+  think は「〜と思う」「〜だと考える」という意見・判断を表すとき、普通は現在形を使う。
+  一方、think about / think of のように「頭の中で考えている」「検討している」という活動を表すときは、
+  現在進行形にできる。think という単語だけで判断せず、後ろに that節が来るのか、
+  about / of などが来て「考える活動」を表しているのかを見る。
+
+contrast_pairs:
+  - opinion_think: I think he is right.
+    mental_activity_think: I am thinking about his idea.
+    point: >
+      think he is right は意見・判断なので現在形。
+      think about his idea は考える活動の最中なので現在進行形にできる。
+
+  - opinion_think: She thinks the answer is correct.
+    mental_activity_think: She is thinking of changing her answer.
+    point: >
+      thinks the answer is correct は判断を述べている。
+      is thinking of changing は変更を検討している途中を表す。
+
+  - opinion_think: They think the plan will work.
+    mental_activity_think: They are thinking about a new plan.
+    point: >
+      think the plan will work は計画への見込み。
+      are thinking about a new plan は新しい計画を考えている活動。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+fsrs_rating:
+  again:
+    condition: 2問以上ミス、または「意見のthink」と「考える活動のthink」の違いを説明できない
+  hard:
+    condition: 1問ミス、または正解しても理由を説明できない
+  good:
+    condition: 全問正解。ただしEASY条件は満たさない
+  easy:
+    condition: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g012_q001
+    question_type: two_choice
+    prompt: I ___ he is right.
+    choices:
+      - text: think
+        correct: true
+      - text: am thinking
+        correct: false
+    answer: think
+    explanation: >
+      think he is right は「彼は正しいと思う」という意見・判断を表す。
+      考える活動の最中ではないので、現在形 think が自然。
+    focus:
+      - opinion_think
+      - that_clause
+      - present_simple
+
+  - id: g012_q002
+    question_type: two_choice
+    prompt: I ___ about the problem now.
+    choices:
+      - text: think
+        correct: false
+      - text: am thinking
+        correct: true
+    answer: am thinking
+    explanation: >
+      think about the problem は「その問題について考えている」という活動を表す。
+      now があり、今考えている最中なので am thinking が自然。
+    focus:
+      - mental_activity_think
+      - think_about
+      - present_continuous
+
+  - id: g012_q003
+    question_type: two_choice
+    prompt: She ___ English is important.
+    choices:
+      - text: thinks
+        correct: true
+      - text: is thinking
+        correct: false
+    answer: thinks
+    explanation: >
+      thinks English is important は、英語が大切だという彼女の判断を表す。
+      一時的な活動ではないので現在形 thinks が自然。
+    focus:
+      - opinion_think
+      - judgement
+      - present_simple
+
+  - id: g012_q004
+    question_type: two_choice
+    prompt: She ___ of studying abroad.
+    choices:
+      - text: thinks
+        correct: false
+      - text: is thinking
+        correct: true
+    answer: is thinking
+    explanation: >
+      think of studying abroad は「留学しようかと考える・検討する」という意味。
+      検討中の状態を表すので is thinking が自然。
+    focus:
+      - mental_activity_think
+      - think_of_doing
+      - present_continuous
+
+  - id: g012_q005
+    question_type: two_choice
+    prompt: They ___ the plan will work.
+    choices:
+      - text: think
+        correct: true
+      - text: are thinking
+        correct: false
+    answer: think
+    explanation: >
+      think the plan will work は、その計画がうまくいくという見込み・判断を表す。
+      頭の中で検討している活動ではないので、現在形 think を使う。
+    focus:
+      - opinion_think
+      - prediction
+      - present_simple
+
+  - id: g012_q006
+    question_type: two_choice
+    prompt: They ___ about changing the plan.
+    choices:
+      - text: think
+        correct: false
+      - text: are thinking
+        correct: true
+    answer: are thinking
+    explanation: >
+      think about changing the plan は「計画を変更することを考えている」という検討中の活動を表す。
+      したがって are thinking が自然。
+    focus:
+      - mental_activity_think
+      - think_about_doing
+      - present_continuous
+
+  - id: g012_q007
+    question_type: two_choice
+    prompt: He ___ this answer is wrong.
+    choices:
+      - text: thinks
+        correct: true
+      - text: is thinking
+        correct: false
+    answer: thinks
+    explanation: >
+      this answer is wrong という内容についての判断を述べている。
+      意見の think なので現在形 thinks が自然。
+    focus:
+      - opinion_think
+      - judgement
+      - present_simple
+
+  - id: g012_q008
+    question_type: two_choice
+    prompt: He ___ about what to do next.
+    choices:
+      - text: thinks
+        correct: false
+      - text: is thinking
+        correct: true
+    answer: is thinking
+    explanation: >
+      think about what to do next は「次に何をすべきか考えている」という思考活動を表す。
+      その活動の最中なので is thinking が自然。
+    focus:
+      - mental_activity_think
+      - think_about
+      - present_continuous
+
+  - id: g012_q009
+    question_type: two_choice
+    prompt: I ___ this book is useful.
+    choices:
+      - text: think
+        correct: true
+      - text: am thinking
+        correct: false
+    answer: think
+    explanation: >
+      this book is useful という評価・意見を述べている。
+      検討中の活動ではないので、現在形 think が自然。
+    focus:
+      - opinion_think
+      - evaluation
+      - present_simple
+
+  - id: g012_q010
+    question_type: two_choice
+    prompt: I ___ of buying a new computer.
+    choices:
+      - text: think
+        correct: false
+      - text: am thinking
+        correct: true
+    answer: am thinking
+    explanation: >
+      think of buying は「買おうかと考えている・検討している」という意味。
+      まだ決定ではなく検討中なので、am thinking が自然。
+    focus:
+      - mental_activity_think
+      - think_of_doing
+      - present_continuous
+
+  - id: g012_q011
+    question_type: two_choice
+    prompt: My teacher ___ I should read more.
+    choices:
+      - text: thinks
+        correct: true
+      - text: is thinking
+        correct: false
+    answer: thinks
+    explanation: >
+      I should read more という内容について、先生の意見・判断を述べている。
+      したがって現在形 thinks が自然。
+    focus:
+      - opinion_think
+      - opinion
+      - present_simple
+
+  - id: g012_q012
+    question_type: two_choice
+    prompt: We ___ about where to go this weekend.
+    choices:
+      - text: think
+        correct: false
+      - text: are thinking
+        correct: true
+    answer: are thinking
+    explanation: >
+      think about where to go は「どこへ行くか考えている」という検討中の活動を表す。
+      this weekend の予定について今考えているので are thinking が自然。
+    focus:
+      - mental_activity_think
+      - think_about
+      - present_continuous
+
+common_mistakes:
+  - mistake: think は状態動詞だから必ず進行形にできないと思う
+    correction: >
+      think が「思う・信じる」という意味なら普通は現在形。
+      しかし think about / think of のように「考える活動」を表すときは現在進行形にできる。
+
+  - mistake: 日本語の「考えている」をすべて現在進行形にしてしまう
+    correction: >
+      「彼は正しいと思っている」は I think he is right. が自然。
+      意見・判断なら現在形、頭の中で検討中なら現在進行形と考える。
+
+  - mistake: think of doing と think that の違いを見ない
+    correction: >
+      think that ... は意見・判断を表すことが多い。
+      think of doing は「〜しようかと考えている」という検討を表すことが多い。
+
+learning_notes:
+  - >
+    think は、意味によって現在形と現在進行形の使い方が変わる代表的な動詞。
+  - >
+    think + 文 は「〜だと思う」という判断を表しやすい。
+  - >
+    think about / think of は「〜について考える」「〜しようかと検討する」という活動を表しやすい。
+  - >
+    現在進行形にできるかどうかは、動詞だけでなく、そのときの意味で判断する。
+
+prerequisites:
+  - g001
+
+next_items:
+  - g013
+  - g014
+  - g015

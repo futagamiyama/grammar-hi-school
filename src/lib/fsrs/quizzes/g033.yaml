@@ -1,0 +1,349 @@
+id: g033
+file: g033.yaml
+
+title: 進行形の受動態
+type: construction
+
+section:
+  id: s04
+  title: 受動態・態
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 今まさに行われている受け身か？
+
+core_concept:
+  simple_passive:
+    form: be + 過去分詞
+    meaning: される・されているという事実や状態を表す
+    image: 普段そうされる / すでにそういう状態である
+    examples:
+      - sentence: This room is cleaned every day.
+        ja: この部屋は毎日掃除される。
+        point: 毎日の習慣的な受動態。
+      - sentence: English is spoken in many countries.
+        ja: 英語は多くの国で話されている。
+        point: 一般的な事実を表す受動態。
+      - sentence: The door is locked.
+        ja: そのドアには鍵がかかっている。
+        point: 現在の状態を表す受動態。
+
+  progressive_passive:
+    form: be + being + 過去分詞
+    meaning: 今まさに〜されている、現在作業中であることを表す
+    image: 受け身の動作が今進行中
+    examples:
+      - sentence: This room is being cleaned now.
+        ja: この部屋は今掃除されている。
+        point: 掃除という作業が今進行中。
+      - sentence: The road is being repaired.
+        ja: その道路は修理中だ。
+        point: 修理という作業が今行われている。
+      - sentence: A new bridge is being built.
+        ja: 新しい橋が建設中だ。
+        point: 建設が現在進行中。
+
+main_rule: >
+  通常の受動態 be + 過去分詞は、「される」「されている」という事実や状態を表す。
+  進行形の受動態 be + being + 過去分詞は、
+  「今まさに〜されている」「現在作業中である」という意味を表す。
+  being は「受動態の動作が進行中である」ことを示す。
+
+contrast_pairs:
+  - simple_passive: This room is cleaned every day.
+    progressive_passive: This room is being cleaned now.
+    point: >
+      is cleaned は毎日の習慣。
+      is being cleaned は今掃除中。
+
+  - simple_passive: The road is repaired every year.
+    progressive_passive: The road is being repaired now.
+    point: >
+      is repaired は定期的に修理されること。
+      is being repaired は今修理されていること。
+
+  - simple_passive: The bridge was built in 1990.
+    progressive_passive: The bridge was being built when I visited the town.
+    point: >
+      was built は完成した事実。
+      was being built はその過去の時点で建設中だったこと。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または進行形の受動態の意味を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g033_q001
+    question_type: two_choice
+    prompt: This room ___ now.
+    choices:
+      - text: is cleaned
+        correct: false
+      - text: is being cleaned
+        correct: true
+    answer: is being cleaned
+    explanation: >
+      now があり、掃除が今進行中であることを表している。
+      「今掃除されている」なので is being cleaned が自然。
+    translation: この部屋は今掃除されている。
+    focus:
+      - progressive_passive
+      - now
+      - being_past_participle
+
+  - id: g033_q002
+    question_type: two_choice
+    prompt: This room ___ every morning.
+    choices:
+      - text: is cleaned
+        correct: true
+      - text: is being cleaned
+        correct: false
+    answer: is cleaned
+    explanation: >
+      every morning があるので、毎朝掃除されるという習慣的な受動態。
+      通常の受動態 is cleaned が自然。
+    translation: この部屋は毎朝掃除される。
+    focus:
+      - simple_passive
+      - habit
+      - every_morning
+
+  - id: g033_q003
+    question_type: two_choice
+    prompt: The road ___ at the moment.
+    choices:
+      - text: is repaired
+        correct: false
+      - text: is being repaired
+        correct: true
+    answer: is being repaired
+    explanation: >
+      at the moment があるので、修理作業が今進行中。
+      進行形の受動態 is being repaired が自然。
+    translation: その道路は現在修理中だ。
+    focus:
+      - progressive_passive
+      - at_the_moment
+      - repair
+
+  - id: g033_q004
+    question_type: two_choice
+    prompt: The road ___ every year.
+    choices:
+      - text: is repaired
+        correct: true
+      - text: is being repaired
+        correct: false
+    answer: is repaired
+    explanation: >
+      every year があるので、定期的に修理されるという事実を表す。
+      通常の受動態 is repaired が自然。
+    translation: その道路は毎年修理される。
+    focus:
+      - simple_passive
+      - habit
+      - every_year
+
+  - id: g033_q005
+    question_type: two_choice
+    prompt: A new bridge ___ near the station now.
+    choices:
+      - text: is built
+        correct: false
+      - text: is being built
+        correct: true
+    answer: is being built
+    explanation: >
+      now があるので、橋の建設が現在進行中であることを表す。
+      is being built が自然。
+    translation: 新しい橋が今、駅の近くに建設されている。
+    focus:
+      - progressive_passive
+      - construction
+      - now
+
+  - id: g033_q006
+    question_type: two_choice
+    prompt: Many houses ___ of wood in this area.
+    choices:
+      - text: are built
+        correct: true
+      - text: are being built
+        correct: false
+    answer: are built
+    explanation: >
+      この地域では多くの家が木で建てられる、という一般的な事実。
+      今建設中とは言っていないので are built が自然。
+    translation: この地域では多くの家が木で建てられている。
+    focus:
+      - simple_passive
+      - general_fact
+      - built_of_wood
+
+  - id: g033_q007
+    question_type: two_choice
+    prompt: The documents ___ right now.
+    choices:
+      - text: are being checked
+        correct: true
+      - text: are checked
+        correct: false
+    answer: are being checked
+    explanation: >
+      right now があるので、確認作業が今行われている。
+      進行形の受動態 are being checked が自然。
+    translation: その書類は今まさに確認されている。
+    focus:
+      - progressive_passive
+      - right_now
+      - being_past_participle
+
+  - id: g033_q008
+    question_type: two_choice
+    prompt: The documents ___ before the meeting.
+    choices:
+      - text: are checked
+        correct: true
+      - text: are being checked
+        correct: false
+    answer: are checked
+    explanation: >
+      会議の前に書類が確認されるという通常の手順を述べている。
+      今確認中とは限らないので are checked が自然。
+    translation: その書類は会議の前に確認される。
+    focus:
+      - simple_passive
+      - routine
+      - before_the_meeting
+
+  - id: g033_q009
+    question_type: two_choice
+    prompt: When I visited the town, the bridge ___.
+    choices:
+      - text: was built
+        correct: false
+      - text: was being built
+        correct: true
+    answer: was being built
+    explanation: >
+      私がその町を訪れた時点で、橋の建設が進行中だったことを表す。
+      過去進行形の受動態 was being built が自然。
+    translation: 私がその町を訪れた時、その橋は建設中だった。
+    focus:
+      - past_progressive_passive
+      - when_clause
+      - was_being_past_participle
+
+  - id: g033_q010
+    question_type: two_choice
+    prompt: The bridge ___ in 1990.
+    choices:
+      - text: was built
+        correct: true
+      - text: was being built
+        correct: false
+    answer: was built
+    explanation: >
+      in 1990 は建設された事実・完成時期を表している。
+      その時に建設中だったとは言っていないので was built が自然。
+    translation: その橋は1990年に建てられた。
+    focus:
+      - simple_past_passive
+      - completed_fact
+      - in_1990
+
+  - id: g033_q011
+    question_type: two_choice
+    prompt: The plan ___ by the committee now.
+    choices:
+      - text: is discussed
+        correct: false
+      - text: is being discussed
+        correct: true
+    answer: is being discussed
+    explanation: >
+      now があるので、委員会による議論が今進行中。
+      is being discussed が自然。
+    translation: その計画は今、委員会で議論されている。
+    focus:
+      - progressive_passive
+      - now
+      - discussion
+
+  - id: g033_q012
+    question_type: two_choice
+    prompt: The plan ___ at every meeting.
+    choices:
+      - text: is discussed
+        correct: true
+      - text: is being discussed
+        correct: false
+    answer: is discussed
+    explanation: >
+      at every meeting があるので、毎回議論されるという習慣的な受動態。
+      is discussed が自然。
+    translation: その計画は毎回の会議で議論される。
+    focus:
+      - simple_passive
+      - habit
+      - every_meeting
+
+common_mistakes:
+  - mistake: be being + 過去分詞を見て不自然だと思ってしまう
+    correction: >
+      be being + 過去分詞は正しい形。
+      「今まさに〜されている」という進行中の受動態を表す。
+  - mistake: now があるのに通常の受動態を選ぶ
+    correction: >
+      now, right now, at the moment などがあり、作業が進行中なら
+      is being repaired のように進行形の受動態を使う。
+  - mistake: every day などの習慣でも進行形の受動態を使う
+    correction: >
+      every day, every year, usually などは習慣や一般事実を表すので、
+      通常の受動態 is repaired, are checked などを使う。
+  - mistake: was built と was being built を混同する
+    correction: >
+      was built は「建てられた」という完成した事実。
+      was being built は「その時、建設中だった」という進行中の状態。
+
+learning_notes:
+  - >
+    進行形の受動態は be + being + 過去分詞。
+    being は「その受動的な動作が進行中」であることを示す。
+  - >
+    is cleaned は「掃除される」または「掃除されている状態」。
+    is being cleaned は「今掃除中」。
+  - >
+    過去のある時点で「〜されている最中だった」と言うときは
+    was/were being + 過去分詞を使う。
+  - >
+    受動態は「される側」が主語。
+    進行形の受動態は「される側に対して、作業が今進んでいる」と考える。
+
+prerequisites:
+  - g031
+  - g032
+
+next_items:
+  - g034
+  - g035
+  - g036

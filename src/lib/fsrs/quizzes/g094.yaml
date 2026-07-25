@@ -1,0 +1,378 @@
+id: g094
+file: g094.yaml
+
+title: 疑問詞 + do you think ... ?
+type: construction
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: do you think / believe / suppose が入った疑問文で、後ろを平叙文語順にできるか？
+
+core_concept:
+  inserted_do_you_think:
+    form: 疑問詞 + do you think + 主語 + 動詞 ... ?
+    meaning: 〜だと思いますか
+    image: do you think が文中に挿入され、その後ろは普通の文の語順になる
+    examples:
+      - sentence: Who do you think he is?
+        ja: 彼は誰だと思いますか。
+        point: do you think の後ろは he is の語順。is he ではない。
+      - sentence: Where do you think she lives?
+        ja: 彼女はどこに住んでいると思いますか。
+        point: do you think の後ろは she lives の語順。
+      - sentence: Why do you think he left early?
+        ja: 彼はなぜ早く帰ったと思いますか。
+        point: do you think の後ろは he left early の語順。
+
+  other_inserted_verbs:
+    form: 疑問詞 + do you believe/suppose/guess/expect + 主語 + 動詞 ... ?
+    meaning: 〜だと信じますか、推測しますか、予想しますか
+    image: think 以外でも同じ語順になる
+    examples:
+      - sentence: What do you believe he said?
+        ja: 彼は何と言ったと信じていますか。
+        point: do you believe の後ろは he said。
+      - sentence: When do you suppose the train will arrive?
+        ja: その電車はいつ到着すると思いますか。
+        point: the train will arrive の語順を保つ。
+      - sentence: How much do you expect it will cost?
+        ja: それはいくらかかると予想しますか。
+        point: it will cost の語順を保つ。
+
+  subject_question_with_insertion:
+    form: 疑問詞主語 + do you think + 動詞 ... ?
+    meaning: 誰が〜すると思いますか、何が〜したと思いますか
+    image: 疑問詞そのものが後ろの文の主語になる
+    examples:
+      - sentence: Who do you think broke the window?
+        ja: 誰が窓を割ったと思いますか。
+        point: who が broke の主語。he broke などの主語を追加しない。
+      - sentence: What do you think caused the accident?
+        ja: 何がその事故を引き起こしたと思いますか。
+        point: what が caused の主語。
+      - sentence: Who do you think will win the game?
+        ja: 誰がその試合に勝つと思いますか。
+        point: who が will win の主語。
+
+main_rule: >
+  do you think / believe / suppose などが入った疑問文では、
+  疑問詞の後ろに do you think を置き、その後ろは平叙文語順にする。
+  Who do you think he is? は「彼は誰だと思いますか」。
+  do you think の後ろは he is であり、is he ではない。
+  Where do you think she lives? も、she lives の語順になる。
+  ただし、疑問詞そのものが後ろの文の主語になる場合は、
+  Who do you think broke the window? のように、who が broke の主語になる。
+  この場合、he broke のように別の主語を足さない。
+  ポイントは、do you think の後ろを普通の文として組み立てること。
+
+contrast_pairs:
+  - correct: Who do you think he is?
+    incorrect: Who do you think is he?
+    point: >
+      do you think の後ろは平叙文語順。
+      he is が正しく、is he ではない。
+
+  - object_question: What do you think he bought?
+    subject_question: What do you think happened?
+    point: >
+      he bought では what は目的語。
+      happened では what が主語なので、別の主語を入れない。
+
+  - direct_question: Where does she live?
+    inserted_question: Where do you think she lives?
+    point: >
+      直接疑問文では does she live。
+      do you think が入ると、後ろは she lives になる。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または do you think の後ろが平叙文語順になることを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g094_q001
+    question_type: two_choice
+    prompt: Who do you think ___?
+    choices:
+      - text: he is
+        correct: true
+      - text: is he
+        correct: false
+    answer: he is
+    explanation: >
+      do you think の後ろは平叙文語順。
+      he is が正しく、is he にはしない。
+    translation: 彼は誰だと思いますか。
+    focus:
+      - inserted_do_you_think
+      - word_order
+      - who
+
+  - id: g094_q002
+    question_type: two_choice
+    prompt: Where do you think ___?
+    choices:
+      - text: she lives
+        correct: true
+      - text: does she live
+        correct: false
+    answer: she lives
+    explanation: >
+      do you think が入った後ろは普通の文の語順。
+      she lives とする。
+    translation: 彼女はどこに住んでいると思いますか。
+    focus:
+      - inserted_do_you_think
+      - where
+      - she_lives
+
+  - id: g094_q003
+    question_type: two_choice
+    prompt: Why do you think ___ early?
+    choices:
+      - text: he left
+        correct: true
+      - text: did he leave
+        correct: false
+    answer: he left
+    explanation: >
+      do you think の後ろは he left early。
+      did he leave の疑問文語順にはしない。
+    translation: 彼はなぜ早く帰ったと思いますか。
+    focus:
+      - inserted_do_you_think
+      - why
+      - past
+
+  - id: g094_q004
+    question_type: two_choice
+    prompt: What do you think ___?
+    choices:
+      - text: he bought
+        correct: true
+      - text: did he buy
+        correct: false
+    answer: he bought
+    explanation: >
+      what は bought の目的語。
+      do you think の後ろは he bought の平叙文語順になる。
+    translation: 彼は何を買ったと思いますか。
+    focus:
+      - inserted_do_you_think
+      - object_question
+      - bought
+
+  - id: g094_q005
+    question_type: two_choice
+    prompt: When do you think ___?
+    choices:
+      - text: the meeting will start
+        correct: true
+      - text: will the meeting start
+        correct: false
+    answer: the meeting will start
+    explanation: >
+      do you think の後ろは the meeting will start。
+      will the meeting start の疑問文語順にはしない。
+    translation: 会議はいつ始まると思いますか。
+    focus:
+      - inserted_do_you_think
+      - when
+      - future
+
+  - id: g094_q006
+    question_type: two_choice
+    prompt: How much do you think ___?
+    choices:
+      - text: it will cost
+        correct: true
+      - text: will it cost
+        correct: false
+    answer: it will cost
+    explanation: >
+      do you think の後ろは it will cost。
+      How much は cost の内容を尋ねている。
+    translation: それはいくらかかると思いますか。
+    focus:
+      - inserted_do_you_think
+      - how_much
+      - cost
+
+  - id: g094_q007
+    question_type: two_choice
+    prompt: Who do you think ___ the window?
+    choices:
+      - text: broke
+        correct: true
+      - text: he broke
+        correct: false
+    answer: broke
+    explanation: >
+      ここでは who が broke の主語。
+      he など別の主語を足さず、Who do you think broke ... とする。
+    translation: 誰が窓を割ったと思いますか。
+    focus:
+      - subject_question_with_insertion
+      - who_subject
+      - broke
+
+  - id: g094_q008
+    question_type: two_choice
+    prompt: What do you think ___ the accident?
+    choices:
+      - text: caused
+        correct: true
+      - text: it caused
+        correct: false
+    answer: caused
+    explanation: >
+      what が caused の主語。
+      What do you think caused the accident? で「何が事故を起こしたと思うか」。
+    translation: 何がその事故を引き起こしたと思いますか。
+    focus:
+      - subject_question_with_insertion
+      - what_subject
+      - caused
+
+  - id: g094_q009
+    question_type: two_choice
+    prompt: Who do you think ___ the game?
+    choices:
+      - text: will win
+        correct: true
+      - text: he will win
+        correct: false
+    answer: will win
+    explanation: >
+      who が will win の主語。
+      別の主語 he を入れない。
+    translation: 誰がその試合に勝つと思いますか。
+    focus:
+      - subject_question_with_insertion
+      - will_win
+      - who
+
+  - id: g094_q010
+    question_type: two_choice
+    prompt: What do you believe ___?
+    choices:
+      - text: he said
+        correct: true
+      - text: did he say
+        correct: false
+    answer: he said
+    explanation: >
+      do you believe の後ろも平叙文語順。
+      he said が自然。
+    translation: 彼は何と言ったと信じていますか。
+    focus:
+      - other_inserted_verbs
+      - believe
+      - he_said
+
+  - id: g094_q011
+    question_type: two_choice
+    prompt: When do you suppose ___?
+    choices:
+      - text: the train will arrive
+        correct: true
+      - text: will the train arrive
+        correct: false
+    answer: the train will arrive
+    explanation: >
+      do you suppose の後ろは the train will arrive。
+      will the train arrive の疑問文語順にはしない。
+    translation: その電車はいつ到着すると思いますか。
+    focus:
+      - other_inserted_verbs
+      - suppose
+      - train
+
+  - id: g094_q012
+    question_type: two_choice
+    prompt: How long do you expect ___?
+    choices:
+      - text: it will take
+        correct: true
+      - text: will it take
+        correct: false
+    answer: it will take
+    explanation: >
+      do you expect の後ろは it will take。
+      How long が文頭に出ていても、後ろは平叙文語順。
+    translation: それはどれくらい時間がかかると予想しますか。
+    focus:
+      - other_inserted_verbs
+      - expect
+      - how_long
+
+common_mistakes:
+  - mistake: Who do you think is he? としてしまう
+    correction: >
+      do you think の後ろは平叙文語順。
+      Who do you think he is? が正しい。
+  - mistake: Where do you think does she live? としてしまう
+    correction: >
+      疑問文の do は do you think で使われている。
+      後ろは she lives と普通の語順にする。
+  - mistake: What do you think did he buy? としてしまう
+    correction: >
+      do you think の後ろでは did he buy にしない。
+      What do you think he bought? が自然。
+  - mistake: Who do you think he broke the window? としてしまう
+    correction: >
+      「誰が窓を割ったか」では who が主語。
+      Who do you think broke the window? とする。
+  - mistake: think 以外では語順が変わると思う
+    correction: >
+      believe, suppose, expect, guess などでも基本は同じ。
+      後ろは平叙文語順になる。
+
+learning_notes:
+  - >
+    疑問詞 + do you think ... ? では、
+    do you think の後ろを普通の文の語順にする。
+  - >
+    Who do you think he is? は he is。
+    is he ではない。
+  - >
+    Where do you think she lives? は she lives。
+    does she live ではない。
+  - >
+    疑問詞が後ろの文の主語になる場合は、
+    Who do you think broke the window? のように別の主語を足さない。
+  - >
+    think だけでなく、believe, suppose, expect, guess でも同じ型を使う。
+
+prerequisites:
+  - g001
+  - g002
+  - g085
+  - g086
+  - g093
+
+next_items:
+  - g095
+  - g096
+  - g097

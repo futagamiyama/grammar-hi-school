@@ -1,0 +1,357 @@
+id: g055
+file: g055.yaml
+
+title: late / lately
+type: grammar_contrast
+
+section:
+  id: s07
+  title: 形容詞・副詞・比較
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 遅い・遅くなのか、最近なのか？
+
+core_concept:
+  late:
+    form: late
+    meaning: 形容詞では「遅い」、副詞では「遅く」
+    image: 予定時刻・通常の時刻より後
+    examples:
+      - sentence: He was late for school.
+        ja: 彼は学校に遅刻した。
+        point: 形容詞 late で「遅い・遅刻している」。
+      - sentence: She came home late.
+        ja: 彼女は遅く帰宅した。
+        point: came home を説明する副詞で「遅く」。
+      - sentence: I stayed up late last night.
+        ja: 私は昨夜遅くまで起きていた。
+        point: stayed up を説明する副詞で「遅くまで」。
+
+  lately:
+    form: lately
+    meaning: 最近、このごろ
+    image: 現在に近い最近の期間
+    examples:
+      - sentence: I have been busy lately.
+        ja: 私は最近忙しい。
+        point: 現在につながる最近の状態なので lately。
+      - sentence: Have you seen him lately?
+        ja: 最近彼に会いましたか。
+        point: 最近の経験をたずねている。
+      - sentence: She has not been sleeping well lately.
+        ja: 彼女は最近よく眠れていない。
+        point: 最近続いている状態を表す。
+
+main_rule: >
+  late は「遅い・遅く」という意味。
+  形容詞としても副詞としても使える。
+  be late は「遅刻している」、come late は「遅く来る」。
+  lately は「最近・このごろ」という意味で、late の普通の副詞形ではない。
+  I came home late. は「遅く帰宅した」。
+  I have been busy lately. は「最近忙しい」。
+  -ly がついているからといって、lately を「遅く」の意味で使ってはいけない。
+
+contrast_pairs:
+  - late: He came late.
+    lately: He has been busy lately.
+    point: >
+      came late は「遅く来た」。
+      lately は「最近」という意味。
+
+  - late: She was late for the meeting.
+    lately: She has been late for meetings lately.
+    point: >
+      was late は「遅刻した」。
+      lately は「最近」という時期を表す。
+
+  - late: I stayed up late.
+    lately: I have not slept well lately.
+    point: >
+      stayed up late は「遅くまで起きていた」。
+      lately は「最近よく眠れていない」の最近。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または late と lately の意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g055_q001
+    question_type: two_choice
+    prompt: He was ___ for school.
+    choices:
+      - text: late
+        correct: true
+      - text: lately
+        correct: false
+    answer: late
+    explanation: >
+      be late for ... で「〜に遅れる・遅刻する」。
+      lately は「最近」という意味なのでここでは使わない。
+    translation: 彼は学校に遅刻した。
+    focus:
+      - late
+      - adjective
+      - be_late_for
+
+  - id: g055_q002
+    question_type: two_choice
+    prompt: I have been very busy ___.
+    choices:
+      - text: late
+        correct: false
+      - text: lately
+        correct: true
+    answer: lately
+    explanation: >
+      現在完了形とともに「最近ずっと忙しい」という意味。
+      「最近」は lately を使う。
+    translation: 私は最近とても忙しい。
+    focus:
+      - lately
+      - recent_period
+      - present_perfect
+
+  - id: g055_q003
+    question_type: two_choice
+    prompt: She came home ___ last night.
+    choices:
+      - text: late
+        correct: true
+      - text: lately
+        correct: false
+    answer: late
+    explanation: >
+      「昨夜遅く帰宅した」という意味。
+      came home を説明する副詞として late を使う。
+    translation: 彼女は昨夜遅く帰宅した。
+    focus:
+      - late
+      - adverb
+      - came_home_late
+
+  - id: g055_q004
+    question_type: two_choice
+    prompt: Have you seen him ___?
+    choices:
+      - text: late
+        correct: false
+      - text: lately
+        correct: true
+    answer: lately
+    explanation: >
+      「最近彼に会いましたか」という意味。
+      最近の経験をたずねるので lately が自然。
+    translation: 最近彼に会いましたか。
+    focus:
+      - lately
+      - recent_period
+      - present_perfect_question
+
+  - id: g055_q005
+    question_type: two_choice
+    prompt: I stayed up ___ to finish the report.
+    choices:
+      - text: late
+        correct: true
+      - text: lately
+        correct: false
+    answer: late
+    explanation: >
+      stay up late で「遅くまで起きている」。
+      lately は「最近」なので意味が合わない。
+    translation: 私は報告書を終えるために遅くまで起きていた。
+    focus:
+      - late
+      - adverb
+      - stay_up_late
+
+  - id: g055_q006
+    question_type: two_choice
+    prompt: She has not been sleeping well ___.
+    choices:
+      - text: late
+        correct: false
+      - text: lately
+        correct: true
+    answer: lately
+    explanation: >
+      最近よく眠れていないという意味。
+      現在に近い期間を表すので lately が自然。
+    translation: 彼女は最近よく眠れていない。
+    focus:
+      - lately
+      - recent_period
+      - present_perfect_progressive
+
+  - id: g055_q007
+    question_type: two_choice
+    prompt: Don't be ___ for the meeting.
+    choices:
+      - text: late
+        correct: true
+      - text: lately
+        correct: false
+    answer: late
+    explanation: >
+      be late for the meeting で「会議に遅れる」。
+      形容詞 late を使う。
+    translation: 会議に遅れないで。
+    focus:
+      - late
+      - adjective
+      - meeting
+
+  - id: g055_q008
+    question_type: two_choice
+    prompt: I haven't heard from her ___.
+    choices:
+      - text: late
+        correct: false
+      - text: lately
+        correct: true
+    answer: lately
+    explanation: >
+      「最近彼女から連絡がない」という意味。
+      現在完了形と相性のよい lately を使う。
+    translation: 私は最近彼女から連絡をもらっていない。
+    focus:
+      - lately
+      - recent_period
+      - havent_heard
+
+  - id: g055_q009
+    question_type: two_choice
+    prompt: The train arrived ___.
+    choices:
+      - text: late
+        correct: true
+      - text: lately
+        correct: false
+    answer: late
+    explanation: >
+      電車が遅れて到着したという意味。
+      arrived を説明する副詞として late を使う。
+    translation: その電車は遅れて到着した。
+    focus:
+      - late
+      - adverb
+      - arrived_late
+
+  - id: g055_q010
+    question_type: two_choice
+    prompt: Prices have risen ___.
+    choices:
+      - text: late
+        correct: false
+      - text: lately
+        correct: true
+    answer: lately
+    explanation: >
+      「最近、価格が上がっている」という意味。
+      最近の変化を表すので lately が自然。
+    translation: 最近、物価が上がっている。
+    focus:
+      - lately
+      - recent_change
+      - present_perfect
+
+  - id: g055_q011
+    question_type: two_choice
+    prompt: He worked ___ into the night.
+    choices:
+      - text: late
+        correct: true
+      - text: lately
+        correct: false
+    answer: late
+    explanation: >
+      work late into the night で「夜遅くまで働く」。
+      「遅くまで」という意味なので late を使う。
+    translation: 彼は夜遅くまで働いた。
+    focus:
+      - late
+      - adverb
+      - work_late
+
+  - id: g055_q012
+    question_type: two_choice
+    prompt: I haven't felt well ___.
+    choices:
+      - text: late
+        correct: false
+      - text: lately
+        correct: true
+    answer: lately
+    explanation: >
+      「最近体調がよくない」という意味。
+      現在まで続く最近の状態なので lately が自然。
+    translation: 私は最近体調がよくない。
+    focus:
+      - lately
+      - recent_period
+      - present_perfect
+
+common_mistakes:
+  - mistake: late の副詞形は always lately だと思う
+    correction: >
+      late はそのまま副詞としても使える。
+      come late, arrive late, stay up late のように使う。
+      lately は「最近」という別の意味。
+  - mistake: I came home lately. を「遅く帰宅した」と読む
+    correction: >
+      「遅く帰宅した」は I came home late.。
+      lately は「最近」なので、I have been busy lately. のように使う。
+  - mistake: lately を「遅れて」の意味で使う
+    correction: >
+      lately は「最近・このごろ」。
+      「遅れて」は late を使う。
+  - mistake: 現在完了形で late を選んでしまう
+    correction: >
+      現在完了形で「最近」を表すなら lately が自然。
+      Have you seen him lately? / Prices have risen lately.
+  - mistake: -ly がつく語は必ず普通の副詞形だと思う
+    correction: >
+      hard/hardly, late/lately のように、
+      -ly がつくと意味が変わる語がある。
+
+learning_notes:
+  - >
+    late は「遅い・遅く」。
+    形容詞にも副詞にもなる。
+  - >
+    lately は「最近・このごろ」。
+    遅いという意味ではない。
+  - >
+    come late と come lately は意味が違う。
+    come late は「遅く来る」、come lately は「最近来る」という意味になりうる。
+  - >
+    lately は現在完了形とよく一緒に使われる。
+    I have been busy lately. / Have you seen him lately?
+
+prerequisites:
+  - g053
+  - g054
+
+next_items:
+  - g056
+  - g057
+  - g058

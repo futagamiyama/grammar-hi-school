@@ -1,0 +1,389 @@
+id: g088
+file: g088.yaml
+
+title: 場所・方向の副詞による倒置
+type: construction
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 場所・方向を表す語句が文頭に出たときの倒置を読めるか？
+
+core_concept:
+  here_there_inversion:
+    form: Here/There + 動詞 + 名詞主語
+    meaning: ここに〜が来る、そこに〜がある
+    image: 場所・出現を強調し、名詞主語を後ろに置く
+    examples:
+      - sentence: Here comes the bus.
+        ja: ほら、バスが来た。
+        point: Here が文頭に出て、comes the bus の語順になる。
+      - sentence: There goes the bell.
+        ja: ほら、ベルが鳴った。
+        point: There goes ... で、何かが起こったことを勢いよく示す。
+      - sentence: Here is your ticket.
+        ja: こちらがあなたのチケットです。
+        point: be動詞でも Here is + 名詞 の語順になる。
+
+  place_phrase_inversion:
+    form: 場所を表す副詞句 + 動詞 + 名詞主語
+    meaning: 〜に...がある、〜に...がいた
+    image: 場所を先に示して、そこにあるものを後から出す
+    examples:
+      - sentence: On the wall hung a beautiful picture.
+        ja: 壁には美しい絵が掛かっていた。
+        point: On the wall を文頭に出し、hung a beautiful picture と倒置している。
+      - sentence: Under the tree sat an old man.
+        ja: 木の下に一人の老人が座っていた。
+        point: Under the tree を文頭に出して、sat an old man の語順。
+      - sentence: At the top of the hill stood a small church.
+        ja: 丘の頂上に小さな教会が立っていた。
+        point: 場所を強調し、その場所にあるものを後ろに置く。
+
+  direction_adverb_inversion:
+    form: 方向副詞 + 動詞 + 名詞主語
+    meaning: 〜が...へ行った、飛び出した、落ちた
+    image: 動きの方向を前に出して、場面を生き生き描く
+    examples:
+      - sentence: Away ran the children.
+        ja: 子どもたちは走り去った。
+        point: Away を文頭に出し、ran the children と倒置している。
+      - sentence: Out rushed the students.
+        ja: 生徒たちは外へ飛び出した。
+        point: Out を文頭に出して、rushed the students の語順。
+      - sentence: Down fell the leaves.
+        ja: 葉が落ちてきた。
+        point: Down を文頭に出して、fell the leaves の語順。
+
+  pronoun_no_inversion:
+    form: Here/There/Away + 代名詞主語 + 動詞
+    meaning: 代名詞主語では普通、完全な倒置をしない
+    image: 代名詞は軽いので、主語を動詞の前に残す
+    examples:
+      - sentence: Here he comes.
+        ja: ほら、彼が来た。
+        point: 主語が he なので Here comes he とはしない。
+      - sentence: Away they ran.
+        ja: 彼らは走り去った。
+        point: 主語が they なので Away ran they とはしない。
+      - sentence: There it goes.
+        ja: ほら、それが行った。
+        point: 主語が it なので There goes it とはしない。
+
+main_rule: >
+  場所や方向を表す語句が文頭に出ると、動詞 + 名詞主語 の倒置が起こることがある。
+  Here comes the bus. は The bus comes here. ではなく、
+  「ほら、バスが来た」と場面を示す表現。
+  On the wall hung a beautiful picture. は
+  A beautiful picture hung on the wall. の場所句を前に出した形。
+  Away ran the children. は、Away を文頭に出して動きを強調している。
+  ただし、主語が he, she, it, they などの代名詞の場合は、
+  Here he comes. / Away they ran. のように普通、主語 + 動詞の語順になる。
+  倒置するかどうかは、文頭の語句と主語が名詞か代名詞かを見る。
+
+contrast_pairs:
+  - noun_subject: Here comes the bus.
+    pronoun_subject: Here it comes.
+    point: >
+      主語が名詞 the bus なら comes the bus と倒置する。
+      主語が代名詞 it なら it comes の語順を保つ。
+
+  - ordinary: A beautiful picture hung on the wall.
+    inversion: On the wall hung a beautiful picture.
+    point: >
+      場所句 On the wall を文頭に出すと、
+      hung a beautiful picture の倒置になる。
+
+  - noun_subject: Away ran the children.
+    pronoun_subject: Away they ran.
+    point: >
+      名詞主語 the children なら ran the children。
+      代名詞 they なら they ran。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または場所・方向の副詞による倒置と代名詞主語の場合の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g088_q001
+    question_type: two_choice
+    prompt: Here ___ the bus.
+    choices:
+      - text: comes
+        correct: true
+      - text: the bus comes
+        correct: false
+    answer: comes
+    explanation: >
+      Here が文頭にあり、主語 the bus は名詞。
+      Here comes the bus. の倒置形が自然。
+    translation: ほら、バスが来た。
+    focus:
+      - here_there_inversion
+      - noun_subject
+      - here_comes
+
+  - id: g088_q002
+    question_type: two_choice
+    prompt: Here ___ comes.
+    choices:
+      - text: he
+        correct: true
+      - text: comes he
+        correct: false
+    answer: he
+    explanation: >
+      主語が代名詞 he の場合は、普通 Here he comes. とする。
+      Here comes he. とはしない。
+    translation: ほら、彼が来た。
+    focus:
+      - pronoun_no_inversion
+      - here_he_comes
+      - pronoun_subject
+
+  - id: g088_q003
+    question_type: two_choice
+    prompt: There ___ the bell.
+    choices:
+      - text: goes
+        correct: true
+      - text: the bell goes
+        correct: false
+    answer: goes
+    explanation: >
+      There goes the bell. は「ほら、ベルが鳴った」という定型的な倒置。
+      主語 the bell は名詞なので goes the bell になる。
+    translation: ほら、ベルが鳴った。
+    focus:
+      - here_there_inversion
+      - there_goes
+      - bell
+
+  - id: g088_q004
+    question_type: two_choice
+    prompt: There ___ goes.
+    choices:
+      - text: it
+        correct: true
+      - text: goes it
+        correct: false
+    answer: it
+    explanation: >
+      主語が代名詞 it の場合は倒置せず、There it goes. とする。
+    translation: ほら、それが行った。
+    focus:
+      - pronoun_no_inversion
+      - there_it_goes
+      - pronoun_subject
+
+  - id: g088_q005
+    question_type: two_choice
+    prompt: On the wall ___ a beautiful picture.
+    choices:
+      - text: hung
+        correct: true
+      - text: a beautiful picture hung
+        correct: false
+    answer: hung
+    explanation: >
+      場所句 On the wall が文頭に出ている。
+      主語 a beautiful picture は名詞なので、hung a beautiful picture と倒置する。
+    translation: 壁には美しい絵が掛かっていた。
+    focus:
+      - place_phrase_inversion
+      - on_the_wall
+      - hung
+
+  - id: g088_q006
+    question_type: two_choice
+    prompt: Under the tree ___ an old man.
+    choices:
+      - text: sat
+        correct: true
+      - text: an old man sat
+        correct: false
+    answer: sat
+    explanation: >
+      Under the tree を文頭に出して場所を強調している。
+      sat an old man の倒置が自然。
+    translation: 木の下に一人の老人が座っていた。
+    focus:
+      - place_phrase_inversion
+      - under_the_tree
+      - sat
+
+  - id: g088_q007
+    question_type: two_choice
+    prompt: At the top of the hill ___ a small church.
+    choices:
+      - text: stood
+        correct: true
+      - text: a small church stood
+        correct: false
+    answer: stood
+    explanation: >
+      場所句 At the top of the hill が文頭にある。
+      名詞主語 a small church は動詞の後ろに置かれ、stood a small church となる。
+    translation: 丘の頂上に小さな教会が立っていた。
+    focus:
+      - place_phrase_inversion
+      - stood
+      - place_focus
+
+  - id: g088_q008
+    question_type: two_choice
+    prompt: In front of the station ___ many people.
+    choices:
+      - text: stood
+        correct: true
+      - text: many people stood
+        correct: false
+    answer: stood
+    explanation: >
+      In front of the station を文頭に出した倒置。
+      stood many people で「多くの人が立っていた」。
+    translation: 駅の前には多くの人が立っていた。
+    focus:
+      - place_phrase_inversion
+      - stood
+      - many_people
+
+  - id: g088_q009
+    question_type: two_choice
+    prompt: Away ___ the children.
+    choices:
+      - text: ran
+        correct: true
+      - text: the children ran
+        correct: false
+    answer: ran
+    explanation: >
+      方向副詞 Away が文頭にあり、主語 the children は名詞。
+      Away ran the children. の倒置になる。
+    translation: 子どもたちは走り去った。
+    focus:
+      - direction_adverb_inversion
+      - away
+      - ran
+
+  - id: g088_q010
+    question_type: two_choice
+    prompt: Away ___ ran.
+    choices:
+      - text: they
+        correct: true
+      - text: ran they
+        correct: false
+    answer: they
+    explanation: >
+      主語が代名詞 they なので、Away they ran. とする。
+      Away ran they. とはしない。
+    translation: 彼らは走り去った。
+    focus:
+      - pronoun_no_inversion
+      - away_they_ran
+      - pronoun_subject
+
+  - id: g088_q011
+    question_type: two_choice
+    prompt: Out ___ the students.
+    choices:
+      - text: rushed
+        correct: true
+      - text: the students rushed
+        correct: false
+    answer: rushed
+    explanation: >
+      Out が文頭に出て、動きの方向を強調している。
+      名詞主語 the students なので rushed the students と倒置する。
+    translation: 生徒たちは外へ飛び出した。
+    focus:
+      - direction_adverb_inversion
+      - out
+      - rushed
+
+  - id: g088_q012
+    question_type: two_choice
+    prompt: Down ___ the leaves.
+    choices:
+      - text: fell
+        correct: true
+      - text: the leaves fell
+        correct: false
+    answer: fell
+    explanation: >
+      Down が文頭に出て、落ちる方向を強調している。
+      名詞主語 the leaves なので fell the leaves と倒置する。
+    translation: 葉が落ちてきた。
+    focus:
+      - direction_adverb_inversion
+      - down
+      - fell
+
+common_mistakes:
+  - mistake: Here comes the bus. を疑問文だと思う
+    correction: >
+      これは疑問文ではなく、Here が文頭に出た倒置。
+      「ほら、バスが来た」という意味。
+  - mistake: Here comes he. としてしまう
+    correction: >
+      主語が代名詞なら普通は倒置しない。
+      Here he comes. が自然。
+  - mistake: 場所句が文頭に出ても普通語順だけで処理する
+    correction: >
+      On the wall hung a picture. のように、
+      場所句を前に出すと動詞 + 名詞主語の倒置が起こることがある。
+  - mistake: Away ran they. としてしまう
+    correction: >
+      代名詞主語では Away they ran. とする。
+      名詞主語なら Away ran the children.。
+  - mistake: 倒置文の主語を見失う
+    correction: >
+      Here comes the bus. の主語は the bus。
+      On the wall hung a picture. の主語は a picture。
+
+learning_notes:
+  - >
+    Here / There + 動詞 + 名詞主語 は、出現や動きを生き生き示す倒置。
+    Here comes the bus. の形。
+  - >
+    場所句を文頭に出すと、動詞 + 名詞主語 の倒置が起こることがある。
+    On the wall hung a picture. の形。
+  - >
+    Away, Out, Down などの方向副詞でも倒置が起こる。
+    Away ran the children. の形。
+  - >
+    主語が代名詞なら普通は倒置しない。
+    Here he comes. / Away they ran. のように読む。
+
+prerequisites:
+  - g084
+  - g085
+  - g086
+  - g087
+
+next_items:
+  - g089
+  - g090
+  - g091

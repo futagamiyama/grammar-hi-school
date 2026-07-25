@@ -1,0 +1,410 @@
+id: g111
+file: g111.yaml
+
+title: 接続詞 as の用法
+type: grammar_contrast
+
+section:
+  id: s11
+  title: 名詞節・接続詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 接続詞 as を、時・理由・様態・変化の文脈に応じて読めるか？
+
+core_concept:
+  as_time:
+    form: as + 主語 + 動詞
+    meaning: 〜するとき、〜しながら
+    image: 二つの出来事がほぼ同時に起こる
+    examples:
+      - sentence: As I opened the door, the phone rang.
+        ja: 私がドアを開けた時、電話が鳴った。
+        point: ドアを開ける動作と電話が鳴る出来事がほぼ同時。
+      - sentence: She smiled as she listened to the music.
+        ja: 彼女は音楽を聴きながら微笑んだ。
+        point: smiled と listened が同時に進んでいる。
+      - sentence: As we walked along the river, we talked about school.
+        ja: 川沿いを歩きながら、私たちは学校について話した。
+        point: 歩くことと話すことが同時に行われている。
+
+  as_reason:
+    form: as + 主語 + 動詞
+    meaning: 〜なので、〜だから
+    image: 背景事情として理由を添える
+    examples:
+      - sentence: As it was late, we went home.
+        ja: 遅かったので、私たちは家に帰った。
+        point: 遅かったことを理由として前に出している。
+      - sentence: As I was tired, I went to bed early.
+        ja: 疲れていたので、私は早く寝た。
+        point: 疲れていたことを背景事情として示している。
+      - sentence: As she had no money, she could not buy the ticket.
+        ja: お金がなかったので、彼女はその切符を買えなかった。
+        point: お金がなかったことが理由。
+
+  as_manner:
+    form: as + 主語 + 動詞
+    meaning: 〜するように、〜した通りに
+    image: やり方・方法を示す
+    examples:
+      - sentence: Do as I say.
+        ja: 私の言う通りにしなさい。
+        point: as I say で「私が言うように」。
+      - sentence: Leave the room as you found it.
+        ja: 部屋を見つけた時のままにしておきなさい。
+        point: as you found it で「あなたが見つけた通りに」。
+      - sentence: Write the answer as the teacher showed you.
+        ja: 先生が示した通りに答えを書きなさい。
+        point: as the teacher showed you で方法を表す。
+
+  as_change:
+    form: as + 主語 + 動詞 比較級
+    meaning: 〜するにつれて
+    image: 一方の変化に合わせて、もう一方も変化する
+    examples:
+      - sentence: As he grew older, he became wiser.
+        ja: 彼は年を取るにつれて、より賢くなった。
+        point: 年を取る変化と賢くなる変化が連動している。
+      - sentence: As the city grew, traffic became worse.
+        ja: その都市が大きくなるにつれて、交通は悪化した。
+        point: 都市の成長と交通の悪化が並行している。
+      - sentence: As time passed, she felt better.
+        ja: 時間がたつにつれて、彼女は気分がよくなった。
+        point: 時間の経過と状態の変化を表す。
+
+  as_vs_like:
+    form: as + 文 / like + 名詞句
+    meaning: 〜するように / 〜のように
+    image: as は接続詞として文を取り、like は前置詞として名詞句を取る
+    examples:
+      - sentence: Do as I do.
+        ja: 私がするようにしなさい。
+        point: as の後ろに I do という文が来ている。
+      - sentence: He talks like a teacher.
+        ja: 彼は先生のように話す。
+        point: like の後ろは名詞句 a teacher。
+      - sentence: She sings like a professional singer.
+        ja: 彼女はプロ歌手のように歌う。
+        point: like の後ろは名詞句。
+
+main_rule: >
+  as は、文脈によって複数の意味を持つ接続詞。
+  時を表す場合は「〜するとき」「〜しながら」。
+  As I opened the door, the phone rang. は、
+  ドアを開けたことと電話が鳴ったことがほぼ同時に起きたことを表す。
+  理由を表す場合は「〜なので」。
+  As it was late, we went home. は、遅かったことを理由として示す。
+  様態を表す場合は「〜するように」「〜した通りに」。
+  Do as I say. は「私の言う通りにしなさい」。
+  変化を表す場合は「〜するにつれて」。
+  As he grew older, he became wiser. は、年を取る変化と賢くなる変化が連動している。
+  また、as は接続詞として後ろに文を取る。
+  like は前置詞として後ろに名詞句を取るのが基本。
+  Do as I do. と He talks like a teacher. の違いに注意する。
+
+contrast_pairs:
+  - time: As I opened the door, the phone rang.
+    reason: As it was late, we went home.
+    point: >
+      as は同じ形でも、文脈によって時にも理由にもなる。
+      同時性なら「〜するとき」、理由なら「〜なので」と読む。
+
+  - manner: Do as I say.
+    comparison: He talks like a teacher.
+    point: >
+      as は後ろに文を取って「〜するように」。
+      like は後ろに名詞句を取って「〜のように」。
+
+  - change: As he grew older, he became wiser.
+    time: She smiled as she listened to the music.
+    point: >
+      as + 変化の文脈では「〜するにつれて」。
+      同時進行の動作では「〜しながら」。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または as の時・理由・様態・変化の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g111_q001
+    question_type: two_choice
+    prompt: As I opened the door, the phone rang.
+    choices:
+      - text: 時を表す as
+        correct: true
+      - text: 理由を表す as
+        correct: false
+    answer: 時を表す as
+    explanation: >
+      ドアを開けたことと電話が鳴ったことがほぼ同時に起きている。
+      ここでの as は「〜するとき」。
+    translation: 私がドアを開けた時、電話が鳴った。
+    focus:
+      - as_time
+      - simultaneous
+      - opened
+
+  - id: g111_q002
+    question_type: two_choice
+    prompt: She smiled as she listened to the music.
+    choices:
+      - text: 〜しながら
+        correct: true
+      - text: 〜なので
+        correct: false
+    answer: 〜しながら
+    explanation: >
+      smiled と listened が同時に進んでいる。
+      as はここでは「〜しながら」と読む。
+    translation: 彼女は音楽を聴きながら微笑んだ。
+    focus:
+      - as_time
+      - while
+      - listened
+
+  - id: g111_q003
+    question_type: two_choice
+    prompt: As we walked along the river, we talked about school.
+    choices:
+      - text: 歩きながら
+        correct: true
+      - text: 歩いたので
+        correct: false
+    answer: 歩きながら
+    explanation: >
+      walked と talked が同時に行われている。
+      ここでは as を「〜しながら」と読む。
+    translation: 川沿いを歩きながら、私たちは学校について話した。
+    focus:
+      - as_time
+      - simultaneous_action
+      - walked
+
+  - id: g111_q004
+    question_type: two_choice
+    prompt: As it was late, we went home.
+    choices:
+      - text: 理由を表す as
+        correct: true
+      - text: 様態を表す as
+        correct: false
+    answer: 理由を表す as
+    explanation: >
+      遅かったことが、家に帰った理由になっている。
+      as はここでは「〜なので」。
+    translation: 遅かったので、私たちは家に帰った。
+    focus:
+      - as_reason
+      - because
+      - late
+
+  - id: g111_q005
+    question_type: two_choice
+    prompt: As I was tired, I went to bed early.
+    choices:
+      - text: 疲れていたので
+        correct: true
+      - text: 疲れているように
+        correct: false
+    answer: 疲れていたので
+    explanation: >
+      疲れていたことが、早く寝た理由になっている。
+      ここでの as は理由を表す。
+    translation: 疲れていたので、私は早く寝た。
+    focus:
+      - as_reason
+      - tired
+      - reason
+
+  - id: g111_q006
+    question_type: two_choice
+    prompt: As she had no money, she could not buy the ticket.
+    choices:
+      - text: お金がなかったので
+        correct: true
+      - text: お金があるように
+        correct: false
+    answer: お金がなかったので
+    explanation: >
+      お金がなかったことが、切符を買えなかった理由。
+      as は理由の「〜なので」。
+    translation: お金がなかったので、彼女はその切符を買えなかった。
+    focus:
+      - as_reason
+      - no_money
+      - could_not_buy
+
+  - id: g111_q007
+    question_type: two_choice
+    prompt: Do ___ I say.
+    choices:
+      - text: as
+        correct: true
+      - text: like
+        correct: false
+    answer: as
+    explanation: >
+      I say は文。
+      as I say で「私の言うように」「私の言う通りに」という意味。
+    translation: 私の言う通りにしなさい。
+    focus:
+      - as_manner
+      - do_as_i_say
+      - clause
+
+  - id: g111_q008
+    question_type: two_choice
+    prompt: Leave the room ___ you found it.
+    choices:
+      - text: as
+        correct: true
+      - text: like
+        correct: false
+    answer: as
+    explanation: >
+      you found it は文。
+      as you found it で「あなたが見つけた時の通りに」。
+    translation: 部屋を見つけた時のままにしておきなさい。
+    focus:
+      - as_manner
+      - as_you_found_it
+      - manner
+
+  - id: g111_q009
+    question_type: two_choice
+    prompt: As he grew older, he became wiser.
+    choices:
+      - text: 〜するにつれて
+        correct: true
+      - text: 〜なので
+        correct: false
+    answer: 〜するにつれて
+    explanation: >
+      年を取る変化と、賢くなる変化が連動している。
+      as はここでは「〜するにつれて」。
+    translation: 彼は年を取るにつれて、より賢くなった。
+    focus:
+      - as_change
+      - grew_older
+      - became_wiser
+
+  - id: g111_q010
+    question_type: two_choice
+    prompt: As the city grew, traffic became worse.
+    choices:
+      - text: その都市が大きくなるにつれて
+        correct: true
+      - text: その都市が大きかったので
+        correct: false
+    answer: その都市が大きくなるにつれて
+    explanation: >
+      都市の成長と交通の悪化が並行している。
+      as は変化の「〜するにつれて」を表す。
+    translation: その都市が大きくなるにつれて、交通は悪化した。
+    focus:
+      - as_change
+      - city_grew
+      - traffic
+
+  - id: g111_q011
+    question_type: two_choice
+    prompt: Do ___ I do.
+    choices:
+      - text: as
+        correct: true
+      - text: like
+        correct: false
+    answer: as
+    explanation: >
+      I do は文。
+      接続詞として文を取るので as を使う。
+      Do as I do. で「私がするようにしなさい」。
+    translation: 私がするようにしなさい。
+    focus:
+      - as_vs_like
+      - clause
+      - do_as
+
+  - id: g111_q012
+    question_type: two_choice
+    prompt: He talks ___ a teacher.
+    choices:
+      - text: like
+        correct: true
+      - text: as
+        correct: false
+    answer: like
+    explanation: >
+      a teacher は名詞句。
+      「先生のように」と名詞句を後ろに取るので like を使う。
+    translation: 彼は先生のように話す。
+    focus:
+      - as_vs_like
+      - like_noun
+      - teacher
+
+common_mistakes:
+  - mistake: as を一つの日本語だけで覚える
+    correction: >
+      as は「〜するとき」「〜なので」「〜するように」「〜するにつれて」など、
+      文脈によって意味が変わる。
+  - mistake: as を理由の意味だけで読む
+    correction: >
+      As I opened the door, the phone rang. の as は時。
+      As he grew older, he became wiser. の as は変化。
+  - mistake: Do like I say. としてしまう
+    correction: >
+      標準的には、後ろに文を取るなら Do as I say.。
+      like は基本的に名詞句を後ろに取る。
+  - mistake: as + 名詞句 と like + 文を混同する
+    correction: >
+      基本形として、as + 文、like + 名詞句をまず覚える。
+  - mistake: As he grew older を「年を取ったので」と読む
+    correction: >
+      grow older / become wiser のような変化が並ぶ場合、
+      as は「〜するにつれて」と読むのが自然。
+
+learning_notes:
+  - >
+    as は多義語なので、直後の形だけでなく、前後の関係を見る。
+  - >
+    同時に起こる出来事なら「〜するとき」「〜しながら」。
+  - >
+    理由になっていれば「〜なので」。
+    because より背景事情を添える感じがある。
+  - >
+    やり方を示していれば「〜するように」「〜した通りに」。
+    Do as I say. は基本表現。
+  - >
+    変化が並ぶ時は「〜するにつれて」。
+    As he grew older, he became wiser. を基本形として覚える。
+
+prerequisites:
+  - g053
+  - g105
+  - g106
+  - g109
+
+next_items:
+  - g112
+  - g113
+  - g114

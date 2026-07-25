@@ -1,0 +1,414 @@
+id: g114
+file: g114.yaml
+
+title: 接続副詞 however / therefore / moreover / otherwise
+type: grammar_contrast
+
+section:
+  id: s11
+  title: 名詞節・接続詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 接続副詞 however / therefore / moreover / otherwise の意味と、等位接続詞との違いを判断できるか？
+
+core_concept:
+  however_contrast:
+    form: 文. However, 文.
+    meaning: しかしながら
+    image: 前の文と反対・対比の内容を後ろに置く
+    examples:
+      - sentence: The plan was simple. However, it failed.
+        ja: その計画は単純だった。しかしながら、失敗した。
+        point: however は前の文と後ろの文を対比させる接続副詞。
+      - sentence: I wanted to join them. However, I was too busy.
+        ja: 私は彼らに加わりたかった。しかし、忙しすぎた。
+        point: 行きたい気持ちと実際の状況を対比している。
+      - sentence: The test was difficult. However, many students passed it.
+        ja: そのテストは難しかった。しかし、多くの生徒が合格した。
+        point: 難しいのに合格者が多いという対比。
+
+  therefore_result:
+    form: 文. Therefore, 文.
+    meaning: したがって、それゆえ
+    image: 前の内容から論理的な結論を出す
+    examples:
+      - sentence: It was raining. Therefore, the game was canceled.
+        ja: 雨が降っていた。したがって、その試合は中止された。
+        point: 雨から試合中止という結論を導いている。
+      - sentence: He did not study. Therefore, he failed the test.
+        ja: 彼は勉強しなかった。したがって、テストに落ちた。
+        point: 原因から結果を述べている。
+      - sentence: The data is incomplete. Therefore, we cannot draw a conclusion.
+        ja: データは不完全だ。したがって、結論は出せない。
+        point: therefore は論理的な結果・結論を示す。
+
+  moreover_addition:
+    form: 文. Moreover, 文.
+    meaning: さらに、その上
+    image: 前の内容に追加情報を加える
+    examples:
+      - sentence: The hotel is cheap. Moreover, it is close to the station.
+        ja: そのホテルは安い。さらに、駅に近い。
+        point: 安いことに加えて、駅に近い情報を加えている。
+      - sentence: She is kind. Moreover, she is very reliable.
+        ja: 彼女は親切だ。さらに、とても信頼できる。
+        point: 性質を追加して評価を強めている。
+      - sentence: The method is simple. Moreover, it saves time.
+        ja: その方法は単純だ。さらに、時間を節約できる。
+        point: 追加の利点を述べている。
+
+  otherwise_warning:
+    form: 命令文, or/otherwise 文
+    meaning: さもないと、そうでなければ
+    image: 前の条件を満たさない場合の悪い結果を示す
+    examples:
+      - sentence: Hurry up. Otherwise, you will miss the train.
+        ja: 急ぎなさい。さもないと電車に乗り遅れます。
+        point: 急がない場合の結果を otherwise で示している。
+      - sentence: Follow the rules. Otherwise, you will be punished.
+        ja: 規則に従いなさい。さもないと罰せられます。
+        point: 規則に従わない場合の結果。
+      - sentence: Take an umbrella. Otherwise, you may get wet.
+        ja: 傘を持って行きなさい。さもないと濡れるかもしれません。
+        point: そうしない場合の結果を表す。
+
+  conjunctive_adverb_vs_conjunction:
+    form: 文. However/Therefore/Moreover/Otherwise, 文.
+    meaning: 接続副詞は文を意味的につなぐが、単独で接続詞にはならない
+    image: 接続副詞は文法上は副詞なので、文と文を直接つなぎにくい
+    examples:
+      - sentence: I was tired, so I went home.
+        ja: 私は疲れていたので、家に帰った。
+        point: so は等位接続詞として文をつなげる。
+      - sentence: I was tired. Therefore, I went home.
+        ja: 私は疲れていた。したがって、家に帰った。
+        point: therefore は接続副詞なので、新しい文で使うのが基本。
+      - sentence: I wanted to go, but I stayed home.
+        ja: 私は行きたかったが、家にいた。
+        point: but は等位接続詞として文をつなげる。
+
+main_rule: >
+  however, therefore, moreover, otherwise は接続副詞。
+  文と文を意味の上でつなぐが、and / but / or / so のような等位接続詞とは違う。
+  however は「しかしながら」で、前の内容と対比する。
+  therefore は「したがって」で、前の内容から結果・結論を出す。
+  moreover は「さらに」で、追加情報を加える。
+  otherwise は「さもないと」「そうでなければ」で、前の条件を満たさない場合の結果を示す。
+  入試では、however と but、therefore と so、moreover と and、otherwise と or の違いが狙われやすい。
+  I was tired, so I went home. の so は等位接続詞として文を直接つなげる。
+  I was tired. Therefore, I went home. の therefore は接続副詞として、普通は新しい文やセミコロンの後で使う。
+  意味だけでなく、文法上の働きにも注意する。
+
+contrast_pairs:
+  - conjunction: I was tired, so I went home.
+    conjunctive_adverb: I was tired. Therefore, I went home.
+    point: >
+      so は等位接続詞。
+      therefore は接続副詞。
+      意味は近いが、文法上の扱いが違う。
+
+  - conjunction: I wanted to go, but I stayed home.
+    conjunctive_adverb: I wanted to go. However, I stayed home.
+    point: >
+      but は文を直接つなぐ等位接続詞。
+      however は接続副詞で、新しい文として使うのが基本。
+
+  - conjunction: Hurry up, or you will miss the train.
+    conjunctive_adverb: Hurry up. Otherwise, you will miss the train.
+    point: >
+      or は命令文の後で「さもないと」。
+      otherwise も同じ意味を表せるが、接続副詞として使う。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または接続副詞と等位接続詞の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g114_q001
+    question_type: two_choice
+    prompt: The plan was simple. ___, it failed.
+    choices:
+      - text: However
+        correct: true
+      - text: Therefore
+        correct: false
+    answer: However
+    explanation: >
+      単純だったのに失敗した、という対比。
+      逆接を表す接続副詞 however が自然。
+    translation: その計画は単純だった。しかしながら、失敗した。
+    focus:
+      - however_contrast
+      - contrast
+      - failed
+
+  - id: g114_q002
+    question_type: two_choice
+    prompt: I wanted to join them. ___, I was too busy.
+    choices:
+      - text: However
+        correct: true
+      - text: Moreover
+        correct: false
+    answer: However
+    explanation: >
+      参加したかったが、忙しすぎたという対比。
+      however で「しかし」とつなぐ。
+    translation: 私は彼らに加わりたかった。しかし、忙しすぎた。
+    focus:
+      - however_contrast
+      - wanted
+      - busy
+
+  - id: g114_q003
+    question_type: two_choice
+    prompt: It was raining. ___, the game was canceled.
+    choices:
+      - text: Therefore
+        correct: true
+      - text: However
+        correct: false
+    answer: Therefore
+    explanation: >
+      雨が降っていた結果、試合が中止された。
+      結果・結論を表す therefore が自然。
+    translation: 雨が降っていた。したがって、その試合は中止された。
+    focus:
+      - therefore_result
+      - result
+      - canceled
+
+  - id: g114_q004
+    question_type: two_choice
+    prompt: He did not study. ___, he failed the test.
+    choices:
+      - text: Therefore
+        correct: true
+      - text: Moreover
+        correct: false
+    answer: Therefore
+    explanation: >
+      勉強しなかったことから、テストに落ちたという結果を述べている。
+      therefore が自然。
+    translation: 彼は勉強しなかった。したがって、テストに落ちた。
+    focus:
+      - therefore_result
+      - failed
+      - result
+
+  - id: g114_q005
+    question_type: two_choice
+    prompt: The hotel is cheap. ___, it is close to the station.
+    choices:
+      - text: Moreover
+        correct: true
+      - text: However
+        correct: false
+    answer: Moreover
+    explanation: >
+      安いことに加えて、駅に近いという追加情報を述べている。
+      moreover は「さらに」。
+    translation: そのホテルは安い。さらに、駅に近い。
+    focus:
+      - moreover_addition
+      - addition
+      - hotel
+
+  - id: g114_q006
+    question_type: two_choice
+    prompt: She is kind. ___, she is very reliable.
+    choices:
+      - text: Moreover
+        correct: true
+      - text: Therefore
+        correct: false
+    answer: Moreover
+    explanation: >
+      親切であることに加えて、信頼できるという情報を足している。
+      追加を表す moreover が自然。
+    translation: 彼女は親切だ。さらに、とても信頼できる。
+    focus:
+      - moreover_addition
+      - reliable
+      - addition
+
+  - id: g114_q007
+    question_type: two_choice
+    prompt: Hurry up. ___, you will miss the train.
+    choices:
+      - text: Otherwise
+        correct: true
+      - text: Moreover
+        correct: false
+    answer: Otherwise
+    explanation: >
+      急がない場合に電車に乗り遅れる、という結果を示している。
+      otherwise は「さもないと」。
+    translation: 急ぎなさい。さもないと電車に乗り遅れます。
+    focus:
+      - otherwise_warning
+      - warning
+      - miss_train
+
+  - id: g114_q008
+    question_type: two_choice
+    prompt: Follow the rules. ___, you will be punished.
+    choices:
+      - text: Otherwise
+        correct: true
+      - text: Therefore
+        correct: false
+    answer: Otherwise
+    explanation: >
+      規則に従わない場合の悪い結果を述べている。
+      otherwise が自然。
+    translation: 規則に従いなさい。さもないと罰せられます。
+    focus:
+      - otherwise_warning
+      - rules
+      - punished
+
+  - id: g114_q009
+    question_type: two_choice
+    prompt: I was tired, ___ I went home.
+    choices:
+      - text: so
+        correct: true
+      - text: therefore
+        correct: false
+    answer: so
+    explanation: >
+      コンマの後に文を直接つないでいるので、等位接続詞 so が自然。
+      therefore は接続副詞なので、普通は I was tired. Therefore, I went home. とする。
+    translation: 私は疲れていたので、家に帰った。
+    focus:
+      - conjunctive_adverb_vs_conjunction
+      - so_vs_therefore
+      - punctuation
+
+  - id: g114_q010
+    question_type: two_choice
+    prompt: I was tired. ___, I went home.
+    choices:
+      - text: Therefore
+        correct: true
+      - text: So
+        correct: false
+    answer: Therefore
+    explanation: >
+      新しい文の文頭に置いて、前文からの結果を示している。
+      接続副詞 Therefore が自然。
+    translation: 私は疲れていた。したがって、家に帰った。
+    focus:
+      - conjunctive_adverb_vs_conjunction
+      - therefore
+      - new_sentence
+
+  - id: g114_q011
+    question_type: two_choice
+    prompt: I wanted to go, ___ I stayed home.
+    choices:
+      - text: but
+        correct: true
+      - text: however
+        correct: false
+    answer: but
+    explanation: >
+      コンマの後で二つの文を直接つないでいる。
+      等位接続詞 but が自然。
+      however を使うなら I wanted to go. However, I stayed home.。
+    translation: 私は行きたかったが、家にいた。
+    focus:
+      - conjunctive_adverb_vs_conjunction
+      - but_vs_however
+      - contrast
+
+  - id: g114_q012
+    question_type: two_choice
+    prompt: Hurry up, ___ you will miss the train.
+    choices:
+      - text: or
+        correct: true
+      - text: otherwise
+        correct: false
+    answer: or
+    explanation: >
+      命令文 + or で「さもないと」。
+      otherwise を使うなら Hurry up. Otherwise, you will miss the train. が自然。
+    translation: 急ぎなさい、さもないと電車に乗り遅れます。
+    focus:
+      - conjunctive_adverb_vs_conjunction
+      - or_vs_otherwise
+      - warning
+
+common_mistakes:
+  - mistake: however を but とまったく同じように使う
+    correction: >
+      but は等位接続詞として文を直接つなげる。
+      however は接続副詞なので、新しい文やセミコロンの後で使うのが基本。
+  - mistake: therefore を so と同じ位置で使う
+    correction: >
+      so は等位接続詞。
+      therefore は接続副詞。
+      I was tired, so I went home. / I was tired. Therefore, I went home.。
+  - mistake: moreover を逆接として読む
+    correction: >
+      moreover は「さらに」。
+      前の内容に追加情報を加える。
+  - mistake: otherwise を ordinary の意味と混同する
+    correction: >
+      otherwise は「さもないと」「そうでなければ」。
+      条件を満たさない場合の結果を表す。
+  - mistake: 接続副詞だけで文と文を雑につなぐ
+    correction: >
+      接続副詞は意味の上で文をつなぐ副詞。
+      句読点や文の切れ目を意識する。
+
+learning_notes:
+  - >
+    however は「しかしながら」。
+    対比・逆接を表す接続副詞。
+  - >
+    therefore は「したがって」。
+    結果・結論を表す接続副詞。
+  - >
+    moreover は「さらに」。
+    追加情報を加える接続副詞。
+  - >
+    otherwise は「さもないと」「そうでなければ」。
+    前の条件を満たさない場合の結果を表す。
+  - >
+    but / so / and / or は等位接続詞。
+    however / therefore / moreover / otherwise は接続副詞。
+    意味が近くても文法上の働きが違う。
+
+prerequisites:
+  - g105
+  - g106
+  - g108
+  - g112
+  - g113
+
+next_items:
+  - g115
+  - g116
+  - g117

@@ -1,0 +1,428 @@
+id: g117
+file: g117.yaml
+
+title: 前置詞 at / on / in の時・場所
+type: grammar_contrast
+
+section:
+  id: s12
+  title: 前置詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: at / on / in を、時と場所の「点・面・空間」のイメージで使い分けられるか？
+
+core_concept:
+  at_time_point:
+    form: at + 時刻・特定の時点
+    meaning: 〜時に、〜という時点で
+    image: 時間上の一点
+    examples:
+      - sentence: The meeting starts at 9:00.
+        ja: 会議は9時に始まります。
+        point: 9:00 は時間上の一点なので at。
+      - sentence: I usually wake up at six.
+        ja: 私はたいてい6時に起きます。
+        point: 時刻を表すので at。
+      - sentence: She arrived at noon.
+        ja: 彼女は正午に到着した。
+        point: noon は特定の時点なので at。
+
+  on_time_day:
+    form: on + 曜日・日付・特定の日
+    meaning: 〜曜日に、〜日に
+    image: カレンダー上の一日
+    examples:
+      - sentence: I have a test on Monday.
+        ja: 私は月曜日にテストがあります。
+        point: Monday は曜日なので on。
+      - sentence: The concert is on July 10.
+        ja: そのコンサートは7月10日にあります。
+        point: 日付を表すので on。
+      - sentence: We met on a rainy day.
+        ja: 私たちは雨の日に会った。
+        point: a rainy day は特定の日なので on。
+
+  in_time_period:
+    form: in + 月・年・季節・長い期間
+    meaning: 〜月に、〜年に、〜の間に
+    image: 時間の広がりの中
+    examples:
+      - sentence: I was born in 2010.
+        ja: 私は2010年に生まれました。
+        point: 年という期間の中なので in。
+      - sentence: School starts in April.
+        ja: 学校は4月に始まります。
+        point: 月を表すので in。
+      - sentence: It is hot in summer.
+        ja: 夏は暑い。
+        point: 季節という期間なので in。
+
+  at_place_point:
+    form: at + 場所・地点
+    meaning: 〜で、〜に
+    image: 地図上の一点・活動の場所
+    examples:
+      - sentence: I met him at the station.
+        ja: 私は駅で彼に会った。
+        point: the station を地点として見ているので at。
+      - sentence: She is waiting at the bus stop.
+        ja: 彼女はバス停で待っている。
+        point: bus stop は地点なので at。
+      - sentence: He is at school.
+        ja: 彼は学校にいます。
+        point: school を活動の場所として見ている。
+
+  on_place_surface:
+    form: on + 面・線・接触している場所
+    meaning: 〜の上に、〜に接して
+    image: 表面に接している
+    examples:
+      - sentence: The book is on the desk.
+        ja: その本は机の上にあります。
+        point: 机の表面に接しているので on。
+      - sentence: There is a picture on the wall.
+        ja: 壁に絵があります。
+        point: 壁の表面に接しているので on。
+      - sentence: The town is on the river.
+        ja: その町は川沿いにあります。
+        point: 川という線に接しているイメージ。
+
+  in_place_space:
+    form: in + 空間・範囲・内部
+    meaning: 〜の中に、〜で
+    image: 立体的な空間や範囲の中
+    examples:
+      - sentence: The keys are in the bag.
+        ja: 鍵はバッグの中にあります。
+        point: バッグの内部なので in。
+      - sentence: He lives in Tokyo.
+        ja: 彼は東京に住んでいます。
+        point: 東京という範囲の中なので in。
+      - sentence: There are many fish in the lake.
+        ja: 湖にはたくさんの魚がいます。
+        point: 湖の中なので in。
+
+main_rule: >
+  at / on / in は、時と場所の両方で使う基本前置詞。
+  中心イメージは、at が点、on が面・接触、in が空間・範囲。
+  時間では、at は時刻や特定の時点に使う。
+  at 9:00 / at noon の形。
+  on は曜日・日付・特定の日に使う。
+  on Monday / on July 10 / on a rainy day の形。
+  in は月・年・季節・長い期間に使う。
+  in April / in 2010 / in summer の形。
+  場所では、at は地点や活動の場所、
+  on は表面・線・接触、
+  in は内部・空間・範囲を表す。
+  at the station, on the desk, in the room の違いを、
+  「点・面・空間」として考えると整理しやすい。
+
+contrast_pairs:
+  - at_time: at 9:00
+    on_time: on Monday
+    in_time: in April
+    point: >
+      at は時刻という一点。
+      on は曜日・日付という一日。
+      in は月・年・季節という期間。
+
+  - at_place: at the station
+    in_place: in the station
+    point: >
+      at the station は駅を地点・待ち合わせ場所として見る。
+      in the station は駅の建物の中にいることを強調する。
+
+  - on_place: on the desk
+    in_place: in the desk
+    point: >
+      on the desk は机の上。
+      in the desk は机の引き出しなど内部。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または at / on / in の点・面・空間の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g117_q001
+    question_type: two_choice
+    prompt: The meeting starts ___ 9:00.
+    choices:
+      - text: at
+        correct: true
+      - text: in
+        correct: false
+    answer: at
+    explanation: >
+      9:00 は時刻で、時間上の一点。
+      時刻には at を使う。
+    translation: 会議は9時に始まります。
+    focus:
+      - at_time_point
+      - time
+      - nine_oclock
+
+  - id: g117_q002
+    question_type: two_choice
+    prompt: I usually wake up ___ six.
+    choices:
+      - text: at
+        correct: true
+      - text: on
+        correct: false
+    answer: at
+    explanation: >
+      six は時刻。
+      時間上の一点なので at six が正しい。
+    translation: 私はたいてい6時に起きます。
+    focus:
+      - at_time_point
+      - wake_up
+      - time_point
+
+  - id: g117_q003
+    question_type: two_choice
+    prompt: I have a test ___ Monday.
+    choices:
+      - text: on
+        correct: true
+      - text: in
+        correct: false
+    answer: on
+    explanation: >
+      Monday は曜日。
+      曜日には on を使う。
+    translation: 私は月曜日にテストがあります。
+    focus:
+      - on_time_day
+      - weekday
+      - monday
+
+  - id: g117_q004
+    question_type: two_choice
+    prompt: The concert is ___ July 10.
+    choices:
+      - text: on
+        correct: true
+      - text: in
+        correct: false
+    answer: on
+    explanation: >
+      July 10 は日付。
+      日付には on を使う。
+    translation: そのコンサートは7月10日にあります。
+    focus:
+      - on_time_day
+      - date
+      - july_ten
+
+  - id: g117_q005
+    question_type: two_choice
+    prompt: School starts ___ April.
+    choices:
+      - text: in
+        correct: true
+      - text: on
+        correct: false
+    answer: in
+    explanation: >
+      April は月。
+      月という期間の中なので in April が正しい。
+    translation: 学校は4月に始まります。
+    focus:
+      - in_time_period
+      - month
+      - april
+
+  - id: g117_q006
+    question_type: two_choice
+    prompt: It is hot ___ summer.
+    choices:
+      - text: in
+        correct: true
+      - text: at
+        correct: false
+    answer: in
+    explanation: >
+      summer は季節。
+      季節という期間には in を使う。
+    translation: 夏は暑い。
+    focus:
+      - in_time_period
+      - season
+      - summer
+
+  - id: g117_q007
+    question_type: two_choice
+    prompt: I met him ___ the station.
+    choices:
+      - text: at
+        correct: true
+      - text: on
+        correct: false
+    answer: at
+    explanation: >
+      the station を待ち合わせの地点として見ている。
+      地点・場所には at を使う。
+    translation: 私は駅で彼に会った。
+    focus:
+      - at_place_point
+      - station
+      - meeting_place
+
+  - id: g117_q008
+    question_type: two_choice
+    prompt: She is waiting ___ the bus stop.
+    choices:
+      - text: at
+        correct: true
+      - text: in
+        correct: false
+    answer: at
+    explanation: >
+      bus stop は地点。
+      地図上の一点として見るので at the bus stop が自然。
+    translation: 彼女はバス停で待っている。
+    focus:
+      - at_place_point
+      - bus_stop
+      - point
+
+  - id: g117_q009
+    question_type: two_choice
+    prompt: The book is ___ the desk.
+    choices:
+      - text: on
+        correct: true
+      - text: in
+        correct: false
+    answer: on
+    explanation: >
+      本が机の表面に接している。
+      表面・接触を表すので on the desk。
+    translation: その本は机の上にあります。
+    focus:
+      - on_place_surface
+      - surface
+      - desk
+
+  - id: g117_q010
+    question_type: two_choice
+    prompt: There is a picture ___ the wall.
+    choices:
+      - text: on
+        correct: true
+      - text: in
+        correct: false
+    answer: on
+    explanation: >
+      絵が壁の表面に接している。
+      壁にかかっているものは on the wall。
+    translation: 壁に絵があります。
+    focus:
+      - on_place_surface
+      - wall
+      - surface
+
+  - id: g117_q011
+    question_type: two_choice
+    prompt: The keys are ___ the bag.
+    choices:
+      - text: in
+        correct: true
+      - text: on
+        correct: false
+    answer: in
+    explanation: >
+      鍵がバッグの内部にある。
+      内部・空間を表すので in the bag が正しい。
+    translation: 鍵はバッグの中にあります。
+    focus:
+      - in_place_space
+      - inside
+      - bag
+
+  - id: g117_q012
+    question_type: two_choice
+    prompt: He lives ___ Tokyo.
+    choices:
+      - text: in
+        correct: true
+      - text: at
+        correct: false
+    answer: in
+    explanation: >
+      Tokyo という地域・範囲の中に住んでいる。
+      都市や国などの範囲には in を使う。
+    translation: 彼は東京に住んでいます。
+    focus:
+      - in_place_space
+      - city
+      - tokyo
+
+common_mistakes:
+  - mistake: 日本語の「に」「で」だけで at / on / in を決める
+    correction: >
+      日本語訳では区別しにくい。
+      at は点、on は面・接触、in は空間・範囲で考える。
+  - mistake: 時刻に in を使ってしまう
+    correction: >
+      時刻は時間上の一点なので at。
+      at 9:00 / at noon の形。
+  - mistake: 曜日や日付に in を使ってしまう
+    correction: >
+      曜日・日付・特定の日には on。
+      on Monday / on July 10 / on a rainy day。
+  - mistake: 月・年・季節に on を使ってしまう
+    correction: >
+      月・年・季節・長い期間には in。
+      in April / in 2010 / in summer。
+  - mistake: at the station と in the station を完全に同じだと思う
+    correction: >
+      at the station は駅を地点として見る。
+      in the station は駅の建物内部を強調する。
+  - mistake: on と in を「上」と「中」だけで機械的に訳す
+    correction: >
+      on は接触・線上、in は範囲の中。
+      on the river / in Tokyo のような用法もある。
+
+learning_notes:
+  - >
+    at / on / in の基本イメージは、点・面・空間。
+  - >
+    時間では、at は時刻、on は曜日・日付、in は月・年・季節・長い期間。
+  - >
+    場所では、at は地点、on は表面・接触、in は内部・範囲。
+  - >
+    at the station は地点としての駅。
+    in the station は駅の建物の中。
+  - >
+    日本語の「に」「で」ではなく、英語側の空間イメージで選ぶ。
+
+prerequisites:
+  - g053
+  - g109
+  - g115
+
+next_items:
+  - g118
+  - g119
+  - g120

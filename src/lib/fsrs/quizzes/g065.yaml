@@ -1,0 +1,370 @@
+id: g065
+file: g065.yaml
+
+title: 関係副詞 why / how
+type: grammar_contrast
+
+section:
+  id: s08
+  title: 関係詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 理由を説明しているのか、方法を説明しているのか？
+
+core_concept:
+  why:
+    form: the reason why + 主語 + 動詞 ...
+    meaning: 〜する理由、〜した理由
+    image: 前の reason を、後ろの文で説明する
+    examples:
+      - sentence: I don't know the reason why he left.
+        ja: 私は彼が去った理由を知らない。
+        point: the reason を why he left が説明している。
+      - sentence: Tell me the reason why you were late.
+        ja: なぜ遅れたのか理由を教えてください。
+        point: 遅れた理由を説明しているので why。
+      - sentence: That is why I changed my mind.
+        ja: だから私は考えを変えたのです。
+        point: why は「その理由で」という意味を作る。
+
+  how:
+    form: how + 主語 + 動詞 ...
+    meaning: どのように〜するか、〜する方法
+    image: 方法・やり方を表す
+    examples:
+      - sentence: This is how I solved the problem.
+        ja: これが私がその問題を解いた方法です。
+        point: how は「どのようにして」という方法を表す。
+      - sentence: I don't know how this machine works.
+        ja: 私はこの機械がどのように動くのか知らない。
+        point: 仕組み・方法を表しているので how。
+      - sentence: Please show me how to use this app.
+        ja: このアプリの使い方を見せてください。
+        point: how to do で「〜する方法」。
+
+  the_way:
+    form: the way + 主語 + 動詞 ...
+    meaning: 〜する方法、〜のやり方
+    image: how と近い意味だが、the way how とはしない
+    examples:
+      - sentence: This is the way I solved the problem.
+        ja: これが私がその問題を解いた方法です。
+        point: the way の後ろに how を重ねない。
+      - sentence: I like the way she speaks.
+        ja: 私は彼女の話し方が好きだ。
+        point: the way she speaks で「彼女の話し方」。
+      - sentence: The way he explains grammar is clear.
+        ja: 彼の文法の説明の仕方は明快だ。
+        point: the way + 主語 + 動詞 の形。
+
+main_rule: >
+  why は reason を説明し、「〜する理由」を表す。
+  the reason why he left は「彼が去った理由」。
+  how は「どのように〜するか」「〜する方法」を表す。
+  This is how I solved the problem. は「これが私がその問題を解いた方法です」。
+  ただし、the way と how は重ねない。
+  This is the way I solved the problem. は自然だが、
+  This is the way how I solved the problem. は避ける。
+  理由なら why、方法なら how または the way と判断する。
+
+contrast_pairs:
+  - reason: I don't know the reason why he left.
+    method: I don't know how he solved the problem.
+    point: >
+      reason を説明するなら why。
+      方法・やり方を表すなら how。
+
+  - why_clause: That is why I changed my mind.
+    how_clause: This is how I changed my mind.
+    point: >
+      why は「それが理由で」。
+      how は「そのようにして」。
+
+  - how: This is how I solved the problem.
+    the_way: This is the way I solved the problem.
+    point: >
+      how と the way は近い意味を表せる。
+      ただし the way how とはしない。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または why と how / the way の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g065_q001
+    question_type: two_choice
+    prompt: I don't know the reason ___ he left.
+    choices:
+      - text: why
+        correct: true
+      - text: how
+        correct: false
+    answer: why
+    explanation: >
+      the reason を説明しているので why を使う。
+      the reason why he left で「彼が去った理由」。
+    translation: 私は彼が去った理由を知らない。
+    focus:
+      - why
+      - reason
+      - relative_adverb
+
+  - id: g065_q002
+    question_type: two_choice
+    prompt: This is ___ I solved the problem.
+    choices:
+      - text: why
+        correct: false
+      - text: how
+        correct: true
+    answer: how
+    explanation: >
+      問題を解いた方法を表している。
+      方法・やり方なので how が自然。
+    translation: これが私がその問題を解いた方法です。
+    focus:
+      - how
+      - method
+      - relative_adverb
+
+  - id: g065_q003
+    question_type: two_choice
+    prompt: Tell me the reason ___ you were late.
+    choices:
+      - text: why
+        correct: true
+      - text: where
+        correct: false
+    answer: why
+    explanation: >
+      the reason を説明している。
+      遅れた理由を聞いているので why が自然。
+    translation: なぜ遅れたのか理由を教えてください。
+    focus:
+      - why
+      - reason
+      - were_late
+
+  - id: g065_q004
+    question_type: two_choice
+    prompt: I don't understand ___ this machine works.
+    choices:
+      - text: why
+        correct: false
+      - text: how
+        correct: true
+    answer: how
+    explanation: >
+      機械がどのように動くのか、仕組み・方法を表している。
+      how this machine works が自然。
+    translation: 私はこの機械がどのように動くのかわからない。
+    focus:
+      - how
+      - method
+      - machine
+
+  - id: g065_q005
+    question_type: two_choice
+    prompt: That is ___ I changed my mind.
+    choices:
+      - text: why
+        correct: true
+      - text: how
+        correct: false
+    answer: why
+    explanation: >
+      That is why ... で「だから〜」「それが〜した理由だ」。
+      理由を表すので why が自然。
+    translation: だから私は考えを変えたのです。
+    focus:
+      - why
+      - that_is_why
+      - reason
+
+  - id: g065_q006
+    question_type: two_choice
+    prompt: This is ___ I changed my mind.
+    choices:
+      - text: why
+        correct: false
+      - text: how
+        correct: true
+    answer: how
+    explanation: >
+      考えを変えた方法・過程を表している。
+      「このようにして」という意味なので how が自然。
+    translation: これが私が考えを変えた方法です。
+    focus:
+      - how
+      - method
+      - contrast_with_why
+
+  - id: g065_q007
+    question_type: two_choice
+    prompt: This is the way ___ the problem.
+    choices:
+      - text: I solved
+        correct: true
+      - text: how I solved
+        correct: false
+    answer: I solved
+    explanation: >
+      the way の後ろに how を重ねない。
+      This is the way I solved the problem. が自然。
+    translation: これが私がその問題を解いた方法です。
+    focus:
+      - the_way
+      - avoid_the_way_how
+      - method
+
+  - id: g065_q008
+    question_type: two_choice
+    prompt: I like the way ___ speaks.
+    choices:
+      - text: she
+        correct: true
+      - text: how she
+        correct: false
+    answer: she
+    explanation: >
+      the way she speaks で「彼女の話し方」。
+      the way how she speaks とはしない。
+    translation: 私は彼女の話し方が好きだ。
+    focus:
+      - the_way
+      - avoid_the_way_how
+      - speaks
+
+  - id: g065_q009
+    question_type: two_choice
+    prompt: Please show me ___ to use this app.
+    choices:
+      - text: why
+        correct: false
+      - text: how
+        correct: true
+    answer: how
+    explanation: >
+      how to do で「〜する方法」。
+      アプリの使い方を見せてほしいという意味なので how が自然。
+    translation: このアプリの使い方を見せてください。
+    focus:
+      - how_to_do
+      - method
+      - app
+
+  - id: g065_q010
+    question_type: two_choice
+    prompt: I cannot explain the reason ___ she refused the offer.
+    choices:
+      - text: why
+        correct: true
+      - text: how
+        correct: false
+    answer: why
+    explanation: >
+      the reason を説明しているので why。
+      彼女が申し出を断った理由を表す。
+    translation: 私は彼女がその申し出を断った理由を説明できない。
+    focus:
+      - why
+      - reason
+      - refused
+
+  - id: g065_q011
+    question_type: two_choice
+    prompt: Do you know ___ to fix this error?
+    choices:
+      - text: why
+        correct: false
+      - text: how
+        correct: true
+    answer: how
+    explanation: >
+      how to fix で「直す方法」。
+      エラーの直し方を知っているかを聞いている。
+    translation: このエラーの直し方を知っていますか。
+    focus:
+      - how_to_do
+      - method
+      - fix_error
+
+  - id: g065_q012
+    question_type: two_choice
+    prompt: The reason ___ I study English is simple.
+    choices:
+      - text: why
+        correct: true
+      - text: where
+        correct: false
+    answer: why
+    explanation: >
+      the reason を説明している。
+      英語を勉強する理由なので why を使う。
+    translation: 私が英語を勉強する理由は単純です。
+    focus:
+      - why
+      - reason
+      - study_english
+
+common_mistakes:
+  - mistake: reason の後に how を使ってしまう
+    correction: >
+      reason を説明するなら why。
+      the reason why he left が自然。
+  - mistake: 方法を表す文で why を使ってしまう
+    correction: >
+      方法・やり方なら how。
+      This is how I solved the problem. が自然。
+  - mistake: the way how としてしまう
+    correction: >
+      the way と how は重ねない。
+      This is the way I solved the problem. または This is how I solved the problem. とする。
+  - mistake: how を関係副詞として使えないと思う
+    correction: >
+      how は「〜する方法」を表せる。
+      This is how I solved it. / I don't know how it works. のように使う。
+  - mistake: why を疑問詞の「なぜ」だけだと思う
+    correction: >
+      why は関係副詞として reason を説明できる。
+      the reason why ... の形を覚える。
+
+learning_notes:
+  - >
+    why は「理由」。
+    the reason why ... で「〜する理由」を表す。
+  - >
+    how は「方法」。
+    This is how ... や how to do の形でよく使う。
+  - >
+    the way は how と近い意味を持つが、the way how とはしない。
+  - >
+    関係副詞では、先行詞と意味を見る。
+    reason なら why、方法・やり方なら how / the way。
+
+prerequisites:
+  - g064
+
+next_items:
+  - g066
+  - g067
+  - g068

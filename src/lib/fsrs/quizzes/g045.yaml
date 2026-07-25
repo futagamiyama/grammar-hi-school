@@ -1,0 +1,354 @@
+id: g045
+file: g045.yaml
+
+title: too ... to do
+type: construction
+
+section:
+  id: s05
+  title: 不定詞・動名詞・分詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: あまりに〜なのでできない、を判断できるか？
+
+core_concept:
+  too_to_do:
+    form: too + 形容詞/副詞 + to do
+    meaning: あまりに〜なので、〜できない
+    image: 程度が強すぎて、後ろの行為が不可能になる
+    examples:
+      - sentence: This box is too heavy to carry.
+        ja: この箱は重すぎて運べない。
+        point: 重さが強すぎて、運ぶことができない。
+      - sentence: He is too young to drive.
+        ja: 彼は若すぎて運転できない。
+        point: 若すぎるため、運転できない。
+      - sentence: The tea is too hot to drink.
+        ja: そのお茶は熱すぎて飲めない。
+        point: 熱すぎるため、飲むことができない。
+
+  so_that_cannot:
+    form: so + 形容詞/副詞 + that + 主語 + cannot do
+    meaning: とても〜なので、〜できない
+    image: too ... to do を文で言い換える形
+    examples:
+      - sentence: This box is so heavy that I cannot carry it.
+        ja: この箱はとても重いので、私は運べない。
+        point: too heavy to carry と近い意味。
+      - sentence: He is so young that he cannot drive.
+        ja: 彼はとても若いので、運転できない。
+        point: too young to drive と近い意味。
+      - sentence: The tea is so hot that I cannot drink it.
+        ja: そのお茶はとても熱いので、私は飲めない。
+        point: too hot to drink と近い意味。
+
+main_rule: >
+  too ... to do は「あまりに〜なので、〜できない」という意味を表す。
+  too の後ろには形容詞・副詞が来て、その後に to do が続く。
+  too heavy to carry は「重すぎて運べない」。
+  too young to drive は「若すぎて運転できない」。
+  so ... that 主語 cannot do に言い換えられることが多い。
+  too は単なる very ではなく、「程度が強すぎて不可能」という否定的な結果を含む。
+
+contrast_pairs:
+  - too_to_do: This box is too heavy to carry.
+    so_that: This box is so heavy that I cannot carry it.
+    point: >
+      too heavy to carry は「重すぎて運べない」。
+      so heavy that I cannot carry it と近い意味。
+
+  - too_to_do: He is too young to drive.
+    so_that: He is so young that he cannot drive.
+    point: >
+      too young to drive は「若すぎて運転できない」。
+      単に「とても若い」ではなく、不可能の意味を含む。
+
+  - too_to_do: The problem is too difficult for me to solve.
+    so_that: The problem is so difficult that I cannot solve it.
+    point: >
+      for me を入れると「私には〜できない」という意味を明示できる。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または too ... to do の否定的な意味を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g045_q001
+    question_type: two_choice
+    prompt: This box is too heavy ___.
+    choices:
+      - text: to carry
+        correct: true
+      - text: carrying
+        correct: false
+    answer: to carry
+    explanation: >
+      too ... to do の形。
+      「重すぎて運べない」という意味なので too heavy to carry が自然。
+    translation: この箱は重すぎて運べない。
+    focus:
+      - too_to_do
+      - too_heavy_to_carry
+      - impossibility
+
+  - id: g045_q002
+    question_type: two_choice
+    prompt: He is too young ___ a car.
+    choices:
+      - text: to drive
+        correct: true
+      - text: driving
+        correct: false
+    answer: to drive
+    explanation: >
+      too young to drive で「若すぎて運転できない」。
+      too ... to do の形なので to drive を使う。
+    translation: 彼は若すぎて車を運転できない。
+    focus:
+      - too_to_do
+      - too_young_to_drive
+      - age_limit
+
+  - id: g045_q003
+    question_type: two_choice
+    prompt: The tea is too hot ___.
+    choices:
+      - text: to drink
+        correct: true
+      - text: drinking
+        correct: false
+    answer: to drink
+    explanation: >
+      お茶が熱すぎて飲めないという意味。
+      too hot to drink が自然。
+    translation: そのお茶は熱すぎて飲めない。
+    focus:
+      - too_to_do
+      - too_hot_to_drink
+      - impossibility
+
+  - id: g045_q004
+    question_type: two_choice
+    prompt: The problem is too difficult for me ___.
+    choices:
+      - text: to solve
+        correct: true
+      - text: solving
+        correct: false
+    answer: to solve
+    explanation: >
+      too difficult for me to solve で「私には難しすぎて解けない」。
+      for me は to solve の意味上の主語を表す。
+    translation: その問題は私には難しすぎて解けない。
+    focus:
+      - too_to_do
+      - for_someone_to_do
+      - difficult_problem
+
+  - id: g045_q005
+    question_type: two_choice
+    prompt: This bag is too small ___ all the books.
+    choices:
+      - text: to hold
+        correct: true
+      - text: holding
+        correct: false
+    answer: to hold
+    explanation: >
+      かばんが小さすぎて全部の本を入れられないという意味。
+      too small to hold が自然。
+    translation: このかばんは小さすぎて、その本を全部入れられない。
+    focus:
+      - too_to_do
+      - too_small_to_hold
+      - capacity
+
+  - id: g045_q006
+    question_type: two_choice
+    prompt: She spoke too fast ___.
+    choices:
+      - text: to understand
+        correct: true
+      - text: understanding
+        correct: false
+    answer: to understand
+    explanation: >
+      速すぎて理解できなかったという意味。
+      too fast to understand が自然。
+    translation: 彼女は話すのが速すぎて理解できなかった。
+    focus:
+      - too_to_do
+      - adverb_too_fast
+      - comprehension
+
+  - id: g045_q007
+    question_type: two_choice
+    prompt: The question was too hard for the students ___.
+    choices:
+      - text: to answer
+        correct: true
+      - text: answering
+        correct: false
+    answer: to answer
+    explanation: >
+      too hard for the students to answer で
+      「生徒たちには難しすぎて答えられなかった」。
+    translation: その質問は生徒たちには難しすぎて答えられなかった。
+    focus:
+      - too_to_do
+      - for_someone_to_do
+      - answer
+
+  - id: g045_q008
+    question_type: two_choice
+    prompt: The river is too dangerous ___ in.
+    choices:
+      - text: to swim
+        correct: true
+      - text: swimming
+        correct: false
+    answer: to swim
+    explanation: >
+      川が危険すぎて泳げないという意味。
+      too dangerous to swim in が自然。
+      in は river との関係で必要。
+    translation: その川は危険すぎて泳げない。
+    focus:
+      - too_to_do
+      - preposition_remains
+      - swim_in
+
+  - id: g045_q009
+    question_type: two_choice
+    prompt: The room is too dark ___ in.
+    choices:
+      - text: to read
+        correct: true
+      - text: reading
+        correct: false
+    answer: to read
+    explanation: >
+      部屋が暗すぎて、その中で読書できないという意味。
+      too dark to read in が自然。
+      in は the room との関係で残る。
+    translation: その部屋は暗すぎて読書できない。
+    focus:
+      - too_to_do
+      - preposition_remains
+      - read_in
+
+  - id: g045_q010
+    question_type: two_choice
+    prompt: He was too tired ___.
+    choices:
+      - text: to continue
+        correct: true
+      - text: continuing
+        correct: false
+    answer: to continue
+    explanation: >
+      疲れすぎて続けられなかったという意味。
+      too tired to continue が自然。
+    translation: 彼は疲れすぎて続けられなかった。
+    focus:
+      - too_to_do
+      - too_tired_to_continue
+      - impossibility
+
+  - id: g045_q011
+    question_type: two_choice
+    prompt: This sentence is too long for beginners ___.
+    choices:
+      - text: to understand
+        correct: true
+      - text: understanding
+        correct: false
+    answer: to understand
+    explanation: >
+      初心者には長すぎて理解できないという意味。
+      too long for beginners to understand が自然。
+    translation: この文は初心者には長すぎて理解できない。
+    focus:
+      - too_to_do
+      - for_someone_to_do
+      - understand
+
+  - id: g045_q012
+    question_type: two_choice
+    prompt: The coffee was too bitter ___.
+    choices:
+      - text: to drink
+        correct: true
+      - text: drinking
+        correct: false
+    answer: to drink
+    explanation: >
+      コーヒーが苦すぎて飲めなかったという意味。
+      too bitter to drink が自然。
+    translation: そのコーヒーは苦すぎて飲めなかった。
+    focus:
+      - too_to_do
+      - too_bitter_to_drink
+      - impossibility
+
+common_mistakes:
+  - mistake: too を very と同じ意味だと思う
+    correction: >
+      too は「度が過ぎている」という意味で、
+      too ... to do では「〜すぎてできない」という否定的な結果を含む。
+  - mistake: too ... to doing としてしまう
+    correction: >
+      too ... の後ろは to + 動詞の原形。
+      too heavy to carry のように使う。
+  - mistake: for 人 to do の人を抜かして意味が曖昧になる
+    correction: >
+      誰にとってできないのかを明示したいときは
+      too difficult for me to solve のように for 人 to do を使う。
+  - mistake: 前置詞を落としてしまう
+    correction: >
+      swim in the river → The river is too dangerous to swim in.
+      read in the room → The room is too dark to read in.
+      のように、必要な前置詞は残る。
+  - mistake: too ... to do を肯定的に読んでしまう
+    correction: >
+      too young to drive は「若すぎて運転できない」。
+      「とても若くて運転できる」ではない。
+
+learning_notes:
+  - >
+    too ... to do は、程度が強すぎて行為ができないことを表す。
+  - >
+    too heavy to carry は so heavy that I cannot carry it と考えると理解しやすい。
+  - >
+    for 人 to do を入れると、「誰にとってできないのか」を明示できる。
+  - >
+    too ... to do は否定語がなくても否定的な意味を含む。
+    「できない」を文の中で感じ取ることが大切。
+
+prerequisites:
+  - g039
+  - g044
+
+next_items:
+  - g046
+  - g047
+  - g048

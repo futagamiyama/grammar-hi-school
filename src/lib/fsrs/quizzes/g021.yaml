@@ -1,0 +1,348 @@
+id: g021
+file: g021.yaml
+
+title: can vs be able to
+type: grammar_contrast
+
+section:
+  id: s03
+  title: 助動詞・法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 一般的能力か、特定状況で実際にできたことか？
+
+core_concept:
+  can:
+    form: can do
+    meaning: 現在の能力・可能性・許可・依頼を表す
+    image: ふつうにできる / 可能である / してよい
+    examples:
+      - sentence: She can speak French.
+        ja: 彼女はフランス語を話せる。
+        point: 現在の一般的な能力を表す。
+      - sentence: Can you help me?
+        ja: 手伝ってくれますか。
+        point: 相手に依頼している。
+      - sentence: This machine can detect small errors.
+        ja: この機械は小さな誤りを検出できる。
+        point: 機械の一般的な能力を表す。
+
+  be_able_to:
+    form: be able to do
+    meaning: 能力・可能性を表し、canが使えない形や特定状況での成功にも使う
+    image: 実際にできる / 何とかできた / willやhaveの後でも使える
+    examples:
+      - sentence: We were able to finish the work on time.
+        ja: 私たちは時間通りにその仕事を終えることができた。
+        point: 特定の状況で実際に成功したことを表す。
+      - sentence: I will be able to drive next year.
+        ja: 私は来年、車を運転できるようになる。
+        point: willの後ではcanを重ねられないのでbe able toを使う。
+      - sentence: I have been able to sleep better recently.
+        ja: 最近、以前よりよく眠れるようになっている。
+        point: 完了形ではbe able toを使う。
+
+main_rule: >
+  canは、現在の一般的な能力・可能性・許可・依頼を表す。
+  be able toは、canと近い意味を表せるが、特に「特定状況で実際にできた」
+  ことや、will / have / may / want to などの後でcanが使えない場合に必要になる。
+  過去の一般的能力にはcouldを使い、過去の特定場面で実際に成功した場合は
+  was/were able toを使うのが基本。
+
+contrast_pairs:
+  - can: She can swim.
+    be_able_to: She is able to swim.
+    point: >
+      どちらも能力を表せるが、日常的にはcanの方が自然で簡潔。
+
+  - can: I could swim when I was six.
+    be_able_to: I was able to swim across the river yesterday.
+    point: >
+      couldは過去の一般的能力、was able toは特定場面で実際に成功したことを表す。
+
+  - can: I can join the meeting.
+    be_able_to: I will be able to join the meeting tomorrow.
+    point: >
+      willの後にcanは置けないので、未来の能力・可能性にはwill be able toを使う。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g021_q001
+    question_type: two_choice
+    prompt: She ___ speak three languages.
+    ja: 彼女は3か国語を話せる。
+    choices:
+      - text: can
+        correct: true
+      - text: is able to
+        correct: false
+    answer: can
+    explanation: >
+      現在の一般的な能力を表すので、canが自然。
+      is able toも文法的には可能だが、日常的にはcanの方が簡潔で自然。
+    focus:
+      - present_ability
+      - can
+      - general_ability
+
+  - id: g021_q002
+    question_type: two_choice
+    prompt: I ___ read before I started school.
+    ja: 私は学校に上がる前に読むことができた。
+    choices:
+      - text: could
+        correct: true
+      - text: was able to
+        correct: false
+    answer: could
+    explanation: >
+      子どものころの一般的能力を表しているので、couldが自然。
+      特定の一回の成功ではない。
+    focus:
+      - past_general_ability
+      - could
+      - general_ability
+
+  - id: g021_q003
+    question_type: two_choice
+    prompt: After hours of climbing, we ___ reach the top.
+    ja: 何時間も登った後、私たちは頂上に到達できた。
+    choices:
+      - text: could
+        correct: false
+      - text: were able to
+        correct: true
+    answer: were able to
+    explanation: >
+      過去の特定場面で実際に成功したことを表すので、were able toが自然。
+      couldだけだと一般的能力の意味に寄りやすい。
+    focus:
+      - past_specific_success
+      - be_able_to
+      - actual_success
+
+  - id: g021_q004
+    question_type: two_choice
+    prompt: He ___ fix the computer after trying several methods.
+    ja: 彼はいくつかの方法を試した後、そのコンピュータを直すことができた。
+    choices:
+      - text: could
+        correct: false
+      - text: was able to
+        correct: true
+    answer: was able to
+    explanation: >
+      過去の特定場面で「実際に直せた」という成功を表している。
+      この場合はwas able toが自然。
+    focus:
+      - past_specific_success
+      - be_able_to
+      - actual_success
+
+  - id: g021_q005
+    question_type: two_choice
+    prompt: I ___ drive next year.
+    ja: 私は来年、車を運転できるようになる。
+    choices:
+      - text: will can
+        correct: false
+      - text: will be able to
+        correct: true
+    answer: will be able to
+    explanation: >
+      willの後にcanを重ねることはできない。
+      未来の能力を表すときはwill be able toを使う。
+    focus:
+      - future_ability
+      - will_be_able_to
+      - modal_limitation
+
+  - id: g021_q006
+    question_type: two_choice
+    prompt: You may ___ solve this problem.
+    ja: あなたはこの問題を解けるかもしれない。
+    choices:
+      - text: can
+        correct: false
+      - text: be able to
+        correct: true
+    answer: be able to
+    explanation: >
+      mayの後にcanを続けることはできない。
+      助動詞の後ではbe able toを使う。
+    focus:
+      - after_modal
+      - be_able_to
+      - modal_limitation
+
+  - id: g021_q007
+    question_type: two_choice
+    prompt: I have not ___ sleep well recently.
+    ja: 最近、私はよく眠れていない。
+    choices:
+      - text: could
+        correct: false
+      - text: been able to
+        correct: true
+    answer: been able to
+    explanation: >
+      現在完了形ではhave been able toの形を使う。
+      have couldとは言えない。
+    focus:
+      - perfect_form
+      - have_been_able_to
+      - modal_limitation
+
+  - id: g021_q008
+    question_type: two_choice
+    prompt: I want to ___ speak English more fluently.
+    ja: 私は英語をもっと流ちょうに話せるようになりたい。
+    choices:
+      - text: can
+        correct: false
+      - text: be able to
+        correct: true
+    answer: be able to
+    explanation: >
+      want toの後にcanは置けない。
+      to不定詞の形にするにはbe able toを使う。
+    focus:
+      - infinitive
+      - be_able_to
+      - want_to
+
+  - id: g021_q009
+    question_type: two_choice
+    prompt: This app ___ translate simple sentences.
+    ja: このアプリは簡単な文を翻訳できる。
+    choices:
+      - text: can
+        correct: true
+      - text: is able to
+        correct: false
+    answer: can
+    explanation: >
+      アプリの一般的な機能・能力を述べているので、canが自然。
+      is able toも可能だが、ここではcanの方が簡潔。
+    focus:
+      - machine_ability
+      - can
+      - general_ability
+
+  - id: g021_q010
+    question_type: two_choice
+    prompt: Luckily, she ___ catch the last train.
+    ja: 幸運にも、彼女は終電に乗ることができた。
+    choices:
+      - text: could
+        correct: false
+      - text: was able to
+        correct: true
+    answer: was able to
+    explanation: >
+      終電に乗れたという過去の一回の成功なので、was able toが自然。
+      luckilyも「実際にうまくいった」ことを示している。
+    focus:
+      - past_specific_success
+      - be_able_to
+      - luckily
+
+  - id: g021_q011
+    question_type: two_choice
+    prompt: My grandfather ___ speak Russian when he was young.
+    ja: 私の祖父は若いころロシア語を話せた。
+    choices:
+      - text: could
+        correct: true
+      - text: was able to
+        correct: false
+    answer: could
+    explanation: >
+      若いころの一般的能力を表しているので、couldが自然。
+      特定の一回の成功ではない。
+    focus:
+      - past_general_ability
+      - could
+      - general_ability
+
+  - id: g021_q012
+    question_type: two_choice
+    prompt: We should ___ finish the project by Friday.
+    ja: 私たちは金曜日までにそのプロジェクトを終えられるはずだ。
+    choices:
+      - text: can
+        correct: false
+      - text: be able to
+        correct: true
+    answer: be able to
+    explanation: >
+      shouldの後にcanを続けることはできない。
+      助動詞の後で「できる」を表すにはbe able toを使う。
+    focus:
+      - after_modal
+      - be_able_to
+      - should
+
+common_mistakes:
+  - mistake: will canと言ってしまう
+    correction: >
+      助動詞を2つ続けることはできない。
+      未来の能力はwill be able toで表す。
+
+  - mistake: have couldと言ってしまう
+    correction: >
+      完了形ではhave been able toを使う。
+      例: I have been able to sleep better recently.
+
+  - mistake: 過去に「できた」はすべてcouldだと思う
+    correction: >
+      過去の一般的能力ならcould。
+      過去の特定場面で実際に成功したならwas/were able toが自然。
+
+  - mistake: be able toはcanの堅い言い換えだと思う
+    correction: >
+      単なる言い換えではない。
+      will, have, may, want toなど、canが使えない形で必要になる。
+
+learning_notes:
+  - >
+    canは現在の能力を表す最も基本的な形。
+    日常的にはbe able toより簡潔で自然なことが多い。
+  - >
+    be able toは、canが使えない文法環境で重要になる。
+    will be able to, have been able to, may be able to, want to be able toなど。
+  - >
+    過去の肯定文では、一般的能力ならcould、
+    特定場面で実際にできたことならwas/were able toを使う。
+  - >
+    否定文ではcouldn'tとwasn't/weren't able toの差が小さいこともあるため、
+    このカードではまず肯定文の違いを優先して学ぶ。
+
+prerequisites:
+  - g020
+
+next_items:
+  - g022
+  - g027

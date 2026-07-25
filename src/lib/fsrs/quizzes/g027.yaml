@@ -1,0 +1,346 @@
+id: g027
+file: g027.yaml
+
+title: could の意味
+type: grammar_contrast
+
+section:
+  id: s03
+  title: 助動詞・法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 過去の一般的能力か、特定場面で実際にできたことか、控えめな可能性・依頼か？
+
+core_concept:
+  could_past_ability:
+    form: could + 動詞の原形
+    meaning: 過去に一般的にできた能力を表す
+    image: 昔はそういう能力があった
+    examples:
+      - sentence: When I was a child, I could swim fast.
+        ja: 子どものころ、私は速く泳げた。
+        point: 過去の一般的な能力を表すので could が自然。
+      - sentence: My grandmother could speak French.
+        ja: 祖母はフランス語を話すことができた。
+        point: 過去に持っていた能力を述べている。
+
+  was_able_to_specific_success:
+    form: was/were able to + 動詞の原形
+    meaning: 特定の場面で実際にできたこと・成功したことを表す
+    image: その時、実際にやり遂げた
+    examples:
+      - sentence: I was able to finish the report yesterday.
+        ja: 私は昨日、そのレポートを仕上げることができた。
+        point: 昨日という特定の場面で実際にできたことなので was able to が自然。
+      - sentence: They were able to catch the last train.
+        ja: 彼らは終電に間に合うことができた。
+        point: 特定の場面で成功したことを表している。
+
+  could_possibility_request:
+    form: could + 動詞の原形
+    meaning: 控えめな可能性・提案・丁寧な依頼を表す
+    image: あり得る / してもよい / していただけますか
+    examples:
+      - sentence: It could rain this evening.
+        ja: 今晩、雨が降るかもしれない。
+        point: 可能性を控えめに述べている。
+      - sentence: Could you open the window?
+        ja: 窓を開けていただけますか。
+        point: 丁寧な依頼を表している。
+
+main_rule: >
+  could は「〜できた」とだけ覚えると危険である。
+  過去の一般的能力なら could を使う。
+  しかし、特定の場面で実際に成功したことを表す肯定文では、was/were able to が自然になることが多い。
+  また could は、過去ではなく、現在・未来についての控えめな可能性、提案、丁寧な依頼にも使われる。
+
+contrast_pairs:
+  - could: When I was young, I could run fast.
+    was_able_to: I was able to win the race yesterday.
+    point: >
+      could は昔の一般的能力、was able to は昨日そのレースに実際に勝てたという特定場面の成功。
+
+  - could: It could be true.
+    can: It can be true in some cases.
+    point: >
+      could は「あり得るかもしれない」という控えめな可能性。
+      can は「場合によってはあり得る」という一般的可能性。
+
+  - could: Could you help me?
+    can: Can you help me?
+    point: >
+      could は can より距離を置いた丁寧な依頼として使われる。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g027_q001
+    question_type: two_choice
+    prompt: When I was little, I ___ climb tall trees.
+    choices:
+      - text: could
+        correct: true
+      - text: was able to
+        correct: false
+    answer: could
+    ja: 私が小さかったころ、高い木に登ることができた。
+    explanation: >
+      When I was little は過去の時期を表し、climb tall trees はそのころの一般的な能力。
+      したがって could が自然。
+    focus:
+      - could
+      - past_general_ability
+      - ability
+
+  - id: g027_q002
+    question_type: two_choice
+    prompt: After three hours of work, I ___ fix the computer.
+    choices:
+      - text: could
+        correct: false
+      - text: was able to
+        correct: true
+    answer: was able to
+    ja: 3時間作業した後、私はそのコンピューターを修理することができた。
+    explanation: >
+      特定の場面で実際に修理に成功したことを表している。
+      肯定文では could より was able to が自然。
+    focus:
+      - was_able_to
+      - specific_success
+      - actual_result
+
+  - id: g027_q003
+    question_type: two_choice
+    prompt: My father ___ speak English when he was young.
+    choices:
+      - text: could
+        correct: true
+      - text: was able to
+        correct: false
+    answer: could
+    ja: 父は若いころ英語を話すことができた。
+    explanation: >
+      若いころに持っていた一般的な能力を表すので could が自然。
+    focus:
+      - could
+      - past_general_ability
+      - speak
+
+  - id: g027_q004
+    question_type: two_choice
+    prompt: We ___ get tickets for the concert yesterday.
+    choices:
+      - text: could
+        correct: false
+      - text: were able to
+        correct: true
+    answer: were able to
+    ja: 私たちは昨日、そのコンサートのチケットを手に入れることができた。
+    explanation: >
+      yesterday の特定場面で実際にチケットを取れた、という成功を表している。
+      そのため were able to が自然。
+    focus:
+      - was_able_to
+      - specific_success
+      - yesterday
+
+  - id: g027_q005
+    question_type: two_choice
+    prompt: I ___ not hear what she said because the room was noisy.
+    choices:
+      - text: could
+        correct: true
+      - text: was able to
+        correct: false
+    answer: could
+    ja: 部屋がうるさかったので、彼女が言ったことが聞こえなかった。
+    explanation: >
+      否定文では、特定場面でできなかったことにも couldn't を普通に使う。
+      ここでは could not hear が自然。
+    focus:
+      - could_not
+      - specific_failure
+      - negative
+
+  - id: g027_q006
+    question_type: two_choice
+    prompt: It ___ rain later, so take an umbrella.
+    choices:
+      - text: could
+        correct: true
+      - text: was able to
+        correct: false
+    answer: could
+    ja: 後で雨が降るかもしれないので、傘を持っていきなさい。
+    explanation: >
+      ここは過去の能力ではなく、未来についての控えめな可能性を表している。
+      could rain で「雨が降る可能性がある」。
+    focus:
+      - could
+      - possibility
+      - future
+
+  - id: g027_q007
+    question_type: two_choice
+    prompt: ___ you tell me the way to the station?
+    choices:
+      - text: Could
+        correct: true
+      - text: Were able to
+        correct: false
+    answer: Could
+    ja: 駅への道を教えていただけますか。
+    explanation: >
+      Could you ...? は丁寧な依頼を表す。
+      過去の能力を聞いているのではない。
+    focus:
+      - could_you
+      - polite_request
+      - request
+
+  - id: g027_q008
+    question_type: two_choice
+    prompt: She studied hard and ___ pass the entrance exam.
+    choices:
+      - text: could
+        correct: false
+      - text: was able to
+        correct: true
+    answer: was able to
+    ja: 彼女は一生懸命勉強して、入学試験に合格することができた。
+    explanation: >
+      努力した結果、特定の試験に実際に合格したという成功を表している。
+      そのため was able to が自然。
+    focus:
+      - was_able_to
+      - specific_success
+      - exam
+
+  - id: g027_q009
+    question_type: two_choice
+    prompt: This story ___ be true, but I am not sure.
+    choices:
+      - text: could
+        correct: true
+      - text: was able to
+        correct: false
+    answer: could
+    ja: この話は本当かもしれないが、私は確信がない。
+    explanation: >
+      ここでは能力ではなく、現在についての控えめな可能性を表している。
+      could be true が自然。
+    focus:
+      - could
+      - possibility
+      - uncertainty
+
+  - id: g027_q010
+    question_type: two_choice
+    prompt: When he was in high school, he ___ solve difficult math problems quickly.
+    choices:
+      - text: could
+        correct: true
+      - text: was able to
+        correct: false
+    answer: could
+    ja: 彼は高校生のころ、難しい数学の問題をすばやく解くことができた。
+    explanation: >
+      高校生のころの一般的な能力を述べているので could が自然。
+    focus:
+      - could
+      - past_general_ability
+      - math
+
+  - id: g027_q011
+    question_type: two_choice
+    prompt: You ___ ask your teacher for help.
+    choices:
+      - text: could
+        correct: true
+      - text: were able to
+        correct: false
+    answer: could
+    ja: 先生に助けを求めてみてもいいかもしれない。
+    explanation: >
+      could は控えめな提案にも使える。
+      ここでは過去の能力ではない。
+    focus:
+      - could
+      - suggestion
+      - advice
+
+  - id: g027_q012
+    question_type: two_choice
+    prompt: The door was locked, but we ___ open it with a spare key.
+    choices:
+      - text: could
+        correct: false
+      - text: were able to
+        correct: true
+    answer: were able to
+    ja: ドアは鍵がかかっていたが、私たちは予備の鍵で開けることができた。
+    explanation: >
+      特定の場面で実際に開けることに成功したことを表している。
+      肯定文では were able to が自然。
+    focus:
+      - was_able_to
+      - specific_success
+      - actual_result
+
+common_mistakes:
+  - mistake: could をすべて「〜できた」と訳してしまう
+    correction: >
+      could は過去の能力だけでなく、現在・未来についての控えめな可能性や丁寧な依頼にも使う。
+
+  - mistake: 特定の場面で実際に成功した肯定文にも could を使ってしまう
+    correction: >
+      「昨日チケットを取れた」「試験に合格できた」のような実際の成功には、was/were able to が自然なことが多い。
+
+  - mistake: Could you ...? を「あなたは〜できましたか」と過去の意味で読んでしまう
+    correction: >
+      Could you ...? は多くの場合、丁寧な依頼を表す。
+      過去の能力を聞いているとは限らない。
+
+learning_notes:
+  - >
+    could の中心には「距離」がある。
+    過去の能力、控えめな可能性、丁寧な依頼は、どれも直接的に言い切らない感じを持つ。
+  - >
+    過去の一般的能力なら could が自然。
+    例: I could swim when I was five.
+  - >
+    特定の場面で実際に成功した肯定文では、was/were able to を優先する。
+    例: I was able to finish the work yesterday.
+  - >
+    否定文では、特定の場面でできなかったことにも couldn't を普通に使う。
+    例: I couldn't open the door.
+  - >
+    could は「かもしれない」「していただけますか」「してみてもよい」という意味でも頻繁に使われる。
+
+prerequisites:
+  - g021
+
+next_items:
+  - g028
+  - g029
+  - g030

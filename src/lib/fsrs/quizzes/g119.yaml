@@ -1,0 +1,440 @@
+id: g119
+file: g119.yaml
+
+title: 時間を表す前置詞 for / since / during / until / by
+type: grammar_contrast
+
+section:
+  id: s12
+  title: 前置詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: for / since / during / until / by を、期間・起点・期間中・継続の終点・期限で使い分けられるか？
+
+core_concept:
+  for_duration:
+    form: for + 期間
+    meaning: 〜の間
+    image: 時間の長さを表す
+    examples:
+      - sentence: I have lived here for three years.
+        ja: 私はここに3年間住んでいます。
+        point: three years は時間の長さなので for。
+      - sentence: She studied for two hours.
+        ja: 彼女は2時間勉強した。
+        point: two hours は期間を表す。
+      - sentence: We stayed there for a week.
+        ja: 私たちはそこに1週間滞在した。
+        point: a week は長さなので for。
+
+  since_starting_point:
+    form: since + 起点
+    meaning: 〜以来、〜からずっと
+    image: ある時点から現在・過去のある時点まで続く
+    examples:
+      - sentence: I have lived here since 2020.
+        ja: 私は2020年以来ここに住んでいます。
+        point: 2020 は期間の起点なので since。
+      - sentence: She has been sick since Monday.
+        ja: 彼女は月曜日からずっと病気です。
+        point: Monday は始まりの時点。
+      - sentence: I have known him since I was a child.
+        ja: 私は子供のころから彼を知っています。
+        point: since の後ろには文も置ける。
+
+  during_period_event:
+    form: during + 名詞句
+    meaning: 〜の間に、〜の間ずっと
+    image: ある出来事・期間の中で
+    examples:
+      - sentence: I fell asleep during the movie.
+        ja: 私は映画の間に眠ってしまった。
+        point: the movie という出来事の期間中。
+      - sentence: We talked during lunch.
+        ja: 私たちは昼食中に話した。
+        point: lunch という時間の中。
+      - sentence: No one spoke during the meeting.
+        ja: 会議中、誰も話さなかった。
+        point: the meeting は名詞句なので during。
+
+  until_continuation_endpoint:
+    form: until + 時点・文
+    meaning: 〜までずっと
+    image: その時点まで状態・動作が続く
+    examples:
+      - sentence: I studied until midnight.
+        ja: 私は真夜中まで勉強した。
+        point: 勉強が真夜中まで続いた。
+      - sentence: Wait here until I come back.
+        ja: 私が戻るまでここで待っていてください。
+        point: 待つ状態が戻る時まで続く。
+      - sentence: He stayed in the office until late.
+        ja: 彼は遅くまで事務所にいた。
+        point: 滞在が遅い時間まで続いた。
+
+  by_deadline:
+    form: by + 時点
+    meaning: 〜までに
+    image: その時点を期限として、それ以前に完了する
+    examples:
+      - sentence: Please finish this by Friday.
+        ja: 金曜日までにこれを終えてください。
+        point: Friday は完了の期限なので by。
+      - sentence: I will be back by six.
+        ja: 私は6時までには戻ります。
+        point: 6時以前に戻るという期限。
+      - sentence: Submit the report by tomorrow.
+        ja: 明日までに報告書を提出してください。
+        point: tomorrow が提出の締め切り。
+
+  for_vs_during:
+    form: for + 長さ / during + 出来事・期間名
+    meaning: 〜の間 / 〜の間に
+    image: for は時間の量、during は期間の枠
+    examples:
+      - sentence: I slept for eight hours.
+        ja: 私は8時間眠った。
+        point: eight hours は時間の長さなので for。
+      - sentence: I slept during the flight.
+        ja: 私は飛行中に眠った。
+        point: the flight という出来事の間なので during。
+      - sentence: We talked for an hour during the meeting.
+        ja: 私たちは会議中に1時間話した。
+        point: for an hour は長さ、during the meeting は期間の枠。
+
+main_rule: >
+  時間を表す前置詞は、日本語ではどれも「〜に」「〜から」「〜まで」と訳されやすいが、
+  英語では時間の見方が違う。
+  for は時間の長さを表す。
+  for three years / for two hours / for a week の形。
+  since は継続の起点を表す。
+  since 2020 / since Monday / since I was a child の形。
+  during は出来事や期間の中で起こることを表す。
+  during the movie / during lunch / during the meeting の形。
+  until は「〜までずっと」で、状態・動作がその時点まで続くことを表す。
+  I studied until midnight. は勉強が真夜中まで続いたという意味。
+  by は「〜までに」で、期限までに完了することを表す。
+  Please finish this by Friday. は金曜日までに終えるという締め切り。
+  for は長さ、since は起点、during は期間の枠、until は継続の終点、by は完了の期限と考える。
+
+contrast_pairs:
+  - duration: I have lived here for three years.
+    starting_point: I have lived here since 2020.
+    point: >
+      for は時間の長さ。
+      since は始まりの時点。
+
+  - duration: I slept for eight hours.
+    period_event: I slept during the flight.
+    point: >
+      for eight hours は眠った長さ。
+      during the flight は飛行中という期間の枠。
+
+  - continuation: I studied until midnight.
+    deadline: Please finish this by Friday.
+    point: >
+      until はその時まで動作が続く。
+      by はその時までに完了する。
+
+  - until: Wait here until I come back.
+    by: I will be back by six.
+    point: >
+      until は待つ状態が続く。
+      by は戻る期限を表す。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または for / since / during / until / by の時間イメージを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g119_q001
+    question_type: two_choice
+    prompt: I have lived here ___ three years.
+    choices:
+      - text: for
+        correct: true
+      - text: since
+        correct: false
+    answer: for
+    explanation: >
+      three years は時間の長さ。
+      期間の長さには for を使う。
+    translation: 私はここに3年間住んでいます。
+    focus:
+      - for_duration
+      - duration
+      - three_years
+
+  - id: g119_q002
+    question_type: two_choice
+    prompt: I have lived here ___ 2020.
+    choices:
+      - text: since
+        correct: true
+      - text: for
+        correct: false
+    answer: since
+    explanation: >
+      2020 は継続の起点。
+      起点を表すので since 2020 が正しい。
+    translation: 私は2020年以来ここに住んでいます。
+    focus:
+      - since_starting_point
+      - starting_point
+      - twenty_twenty
+
+  - id: g119_q003
+    question_type: two_choice
+    prompt: She studied ___ two hours.
+    choices:
+      - text: for
+        correct: true
+      - text: during
+        correct: false
+    answer: for
+    explanation: >
+      two hours は時間の長さ。
+      どれくらい勉強したかを表すので for。
+    translation: 彼女は2時間勉強した。
+    focus:
+      - for_duration
+      - two_hours
+      - studied
+
+  - id: g119_q004
+    question_type: two_choice
+    prompt: She has been sick ___ Monday.
+    choices:
+      - text: since
+        correct: true
+      - text: for
+        correct: false
+    answer: since
+    explanation: >
+      Monday は病気が始まった起点。
+      起点を表すので since Monday。
+    translation: 彼女は月曜日からずっと病気です。
+    focus:
+      - since_starting_point
+      - monday
+      - sick
+
+  - id: g119_q005
+    question_type: two_choice
+    prompt: I have known him ___ I was a child.
+    choices:
+      - text: since
+        correct: true
+      - text: during
+        correct: false
+    answer: since
+    explanation: >
+      I was a child は「子供だったころ」という起点を表す文。
+      since の後ろには起点を表す文も置ける。
+    translation: 私は子供のころから彼を知っています。
+    focus:
+      - since_starting_point
+      - since_clause
+      - child
+
+  - id: g119_q006
+    question_type: two_choice
+    prompt: I fell asleep ___ the movie.
+    choices:
+      - text: during
+        correct: true
+      - text: for
+        correct: false
+    answer: during
+    explanation: >
+      the movie は出来事・期間の枠。
+      その映画の間に眠ったので during を使う。
+    translation: 私は映画の間に眠ってしまった。
+    focus:
+      - during_period_event
+      - movie
+      - period_event
+
+  - id: g119_q007
+    question_type: two_choice
+    prompt: No one spoke ___ the meeting.
+    choices:
+      - text: during
+        correct: true
+      - text: since
+        correct: false
+    answer: during
+    explanation: >
+      the meeting は会議という期間の枠。
+      その間の出来事を表すので during。
+    translation: 会議中、誰も話さなかった。
+    focus:
+      - during_period_event
+      - meeting
+      - during
+
+  - id: g119_q008
+    question_type: two_choice
+    prompt: I studied ___ midnight.
+    choices:
+      - text: until
+        correct: true
+      - text: by
+        correct: false
+    answer: until
+    explanation: >
+      勉強が真夜中まで続いたことを表している。
+      継続の終点には until を使う。
+    translation: 私は真夜中まで勉強した。
+    focus:
+      - until_continuation_endpoint
+      - continuation
+      - midnight
+
+  - id: g119_q009
+    question_type: two_choice
+    prompt: Wait here ___ I come back.
+    choices:
+      - text: until
+        correct: true
+      - text: by
+        correct: false
+    answer: until
+    explanation: >
+      戻る時点まで待つ状態が続く。
+      「〜までずっと」は until。
+    translation: 私が戻るまでここで待っていてください。
+    focus:
+      - until_continuation_endpoint
+      - until_clause
+      - come_back
+
+  - id: g119_q010
+    question_type: two_choice
+    prompt: Please finish this ___ Friday.
+    choices:
+      - text: by
+        correct: true
+      - text: until
+        correct: false
+    answer: by
+    explanation: >
+      金曜日は完了の期限。
+      「金曜日までに終える」なので by Friday。
+    translation: 金曜日までにこれを終えてください。
+    focus:
+      - by_deadline
+      - deadline
+      - friday
+
+  - id: g119_q011
+    question_type: two_choice
+    prompt: I will be back ___ six.
+    choices:
+      - text: by
+        correct: true
+      - text: until
+        correct: false
+    answer: by
+    explanation: >
+      6時までには戻る、という期限を表している。
+      完了の期限には by を使う。
+    translation: 私は6時までには戻ります。
+    focus:
+      - by_deadline
+      - by_six
+      - deadline
+
+  - id: g119_q012
+    question_type: two_choice
+    prompt: We talked ___ an hour ___ the meeting.
+    choices:
+      - text: for / during
+        correct: true
+      - text: during / for
+        correct: false
+    answer: for / during
+    explanation: >
+      an hour は時間の長さなので for an hour。
+      the meeting は期間の枠なので during the meeting。
+    translation: 私たちは会議中に1時間話した。
+    focus:
+      - for_vs_during
+      - for_duration
+      - during_period
+
+common_mistakes:
+  - mistake: for と since をどちらも「〜から」と考える
+    correction: >
+      for は時間の長さ。
+      since は始まりの時点。
+      for three years / since 2020 を区別する。
+  - mistake: during の後ろに時間の長さだけを置く
+    correction: >
+      during は出来事・期間名を後ろに取る。
+      during the meeting は自然だが、during two hours ではなく for two hours。
+  - mistake: until と by をどちらも「まで」とだけ覚える
+    correction: >
+      until は継続の終点。
+      by は完了の期限。
+      study until midnight / finish by Friday。
+  - mistake: since の後ろは年だけだと思う
+    correction: >
+      since の後ろには、Monday, 2020, last year, I was a child など、
+      起点を表す語句や文が来る。
+  - mistake: for an hour during the meeting のように二つの前置詞が必要な場面を一つで処理する
+    correction: >
+      for an hour は長さ。
+      during the meeting は期間の枠。
+      役割が違うので両方使える。
+
+learning_notes:
+  - >
+    for は期間の長さ。
+    for three years / for two hours / for a week。
+  - >
+    since は起点。
+    since 2020 / since Monday / since I was a child。
+  - >
+    during は期間の枠。
+    during the movie / during lunch / during the meeting。
+  - >
+    until は継続の終点。
+    I studied until midnight.。
+  - >
+    by は完了の期限。
+    Please finish this by Friday.。
+  - >
+    日本語の「まで」に引きずられず、
+    継続なら until、期限なら by と判断する。
+
+prerequisites:
+  - g004
+  - g009
+  - g109
+  - g115
+  - g117
+
+next_items:
+  - g120
+  - g121
+  - g122

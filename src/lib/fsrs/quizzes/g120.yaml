@@ -1,0 +1,437 @@
+id: g120
+file: g120.yaml
+
+title: 手段・道具・方法を表す by / with / in / on
+type: grammar_contrast
+
+section:
+  id: s12
+  title: 前置詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 手段・道具・方法を表す by / with / in / on を、後ろの名詞の種類から使い分けられるか？
+
+core_concept:
+  by_means_transport:
+    form: by + 交通手段・通信手段・方法
+    meaning: 〜で、〜によって
+    image: 方法・手段をざっくり示す
+    examples:
+      - sentence: I go to school by bus.
+        ja: 私はバスで学校へ行きます。
+        point: bus は交通手段なので by。
+      - sentence: He sent the document by email.
+        ja: 彼はその書類をメールで送った。
+        point: email は通信手段なので by。
+      - sentence: You can solve this problem by using this formula.
+        ja: この公式を使うことによって、この問題を解けます。
+        point: by + 動名詞で「〜することによって」。
+
+  with_tool_instrument:
+    form: with + 道具・器具・身体部位
+    meaning: 〜を使って、〜で
+    image: 手に持つ道具・具体的な器具を使う
+    examples:
+      - sentence: He cut the bread with a knife.
+        ja: 彼はナイフでパンを切った。
+        point: knife は具体的な道具なので with。
+      - sentence: She opened the door with a key.
+        ja: 彼女は鍵でドアを開けた。
+        point: key は道具なので with。
+      - sentence: He covered his face with his hands.
+        ja: 彼は手で顔を覆った。
+        point: hands は身体部位で、手段として使われている。
+
+  in_language_material_color:
+    form: in + 言語・材料・色・書き方
+    meaning: 〜語で、〜で書いて、〜色で
+    image: 表現の中身・素材・状態を表す
+    examples:
+      - sentence: Please write your name in English.
+        ja: 名前を英語で書いてください。
+        point: English は言語なので in。
+      - sentence: Write the answer in ink.
+        ja: 答えをインクで書きなさい。
+        point: ink は書く時の材料・媒体なので in。
+      - sentence: The sign was written in red.
+        ja: その標識は赤で書かれていた。
+        point: red は色なので in。
+
+  on_device_medium:
+    form: on + 電話・テレビ・ラジオ・インターネット・画面
+    meaning: 〜で、〜を使って、〜に
+    image: 機器・媒体の上で情報がやり取りされる
+    examples:
+      - sentence: I talked to her on the phone.
+        ja: 私は電話で彼女と話した。
+        point: the phone は通信機器・媒体なので on。
+      - sentence: I saw the news on TV.
+        ja: 私はテレビでそのニュースを見た。
+        point: TV は情報媒体なので on。
+      - sentence: I found the information on the Internet.
+        ja: 私はその情報をインターネットで見つけた。
+        point: the Internet は情報が載る媒体なので on。
+
+  by_vs_with:
+    form: by + 方法 / with + 道具
+    meaning: 方法として〜で / 道具を使って〜で
+    image: by は方法、with は具体的な道具
+    examples:
+      - sentence: I went there by car.
+        ja: 私は車でそこへ行った。
+        point: car は交通手段なので by car。
+      - sentence: I opened the can with a knife.
+        ja: 私はナイフで缶を開けた。
+        point: knife は手に持つ道具なので with a knife。
+      - sentence: He learned English by listening to podcasts.
+        ja: 彼はポッドキャストを聞くことによって英語を学んだ。
+        point: by + 動名詞で方法を表す。
+
+  special_transport_forms:
+    form: by car/bus/train/plane / on foot
+    meaning: 車・バス・電車・飛行機で / 徒歩で
+    image: 交通手段には基本 by、徒歩は on foot
+    examples:
+      - sentence: We traveled by train.
+        ja: 私たちは電車で旅行した。
+        point: 交通手段なので by train。
+      - sentence: He came here on foot.
+        ja: 彼は徒歩でここへ来た。
+        point: 徒歩は by foot ではなく on foot。
+      - sentence: She went to Osaka by plane.
+        ja: 彼女は飛行機で大阪へ行った。
+        point: plane は交通手段なので by plane。
+
+main_rule: >
+  手段・道具・方法を表す前置詞では、後ろに来る名詞の種類を見る。
+  by は交通手段・通信手段・方法を表す。
+  by bus / by train / by email / by using this formula の形。
+  with は具体的な道具・器具・身体部位を使う時に使う。
+  with a knife / with a key / with his hands の形。
+  in は言語・材料・色・書き方を表す。
+  in English / in ink / in red の形。
+  on は電話・テレビ・ラジオ・インターネット・画面などの媒体に使う。
+  on the phone / on TV / on the Internet の形。
+  交通手段は基本的に by を使うが、徒歩は on foot と言う。
+  by と with の違いは、by が方法全体、with が具体的な道具というイメージで考える。
+
+contrast_pairs:
+  - means: I went there by car.
+    instrument: I opened the can with a knife.
+    point: >
+      by は交通手段や方法。
+      with は具体的な道具。
+
+  - language: Please write your name in English.
+    tool: Please write your name with this pen.
+    point: >
+      言語なら in English。
+      具体的なペンなら with this pen。
+
+  - transport: We traveled by train.
+    walking: He came here on foot.
+    point: >
+      交通手段は by train / by bus / by plane。
+      徒歩は例外的に on foot。
+
+  - medium: I saw the news on TV.
+    communication_method: He sent the document by email.
+    point: >
+      TV や Internet のような情報媒体は on。
+      email を送信手段として見る時は by email。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または by / with / in / on の手段・道具・媒体の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g120_q001
+    question_type: two_choice
+    prompt: I go to school ___ bus.
+    choices:
+      - text: by
+        correct: true
+      - text: with
+        correct: false
+    answer: by
+    explanation: >
+      bus は交通手段。
+      交通手段を表す時は by bus が基本。
+    translation: 私はバスで学校へ行きます。
+    focus:
+      - by_means_transport
+      - transport
+      - bus
+
+  - id: g120_q002
+    question_type: two_choice
+    prompt: We traveled ___ train.
+    choices:
+      - text: by
+        correct: true
+      - text: on
+        correct: false
+    answer: by
+    explanation: >
+      train は交通手段。
+      交通手段としての電車は by train とする。
+    translation: 私たちは電車で旅行した。
+    focus:
+      - special_transport_forms
+      - by_train
+      - travel
+
+  - id: g120_q003
+    question_type: two_choice
+    prompt: He came here ___ foot.
+    choices:
+      - text: on
+        correct: true
+      - text: by
+        correct: false
+    answer: on
+    explanation: >
+      徒歩は例外的に on foot と言う。
+      by foot ではなく on foot を基本形として覚える。
+    translation: 彼は徒歩でここへ来た。
+    focus:
+      - special_transport_forms
+      - on_foot
+      - walking
+
+  - id: g120_q004
+    question_type: two_choice
+    prompt: He sent the document ___ email.
+    choices:
+      - text: by
+        correct: true
+      - text: with
+        correct: false
+    answer: by
+    explanation: >
+      email は送信の手段。
+      手段を表すので by email が自然。
+    translation: 彼はその書類をメールで送った。
+    focus:
+      - by_means_transport
+      - email
+      - communication_method
+
+  - id: g120_q005
+    question_type: two_choice
+    prompt: He cut the bread ___ a knife.
+    choices:
+      - text: with
+        correct: true
+      - text: by
+        correct: false
+    answer: with
+    explanation: >
+      knife は具体的な道具。
+      道具を使う時は with a knife とする。
+    translation: 彼はナイフでパンを切った。
+    focus:
+      - with_tool_instrument
+      - tool
+      - knife
+
+  - id: g120_q006
+    question_type: two_choice
+    prompt: She opened the door ___ a key.
+    choices:
+      - text: with
+        correct: true
+      - text: by
+        correct: false
+    answer: with
+    explanation: >
+      key は具体的な道具。
+      ドアを開ける道具なので with a key。
+    translation: 彼女は鍵でドアを開けた。
+    focus:
+      - with_tool_instrument
+      - key
+      - instrument
+
+  - id: g120_q007
+    question_type: two_choice
+    prompt: Please write your name ___ English.
+    choices:
+      - text: in
+        correct: true
+      - text: by
+        correct: false
+    answer: in
+    explanation: >
+      English は言語。
+      言語を表す時は in English を使う。
+    translation: 名前を英語で書いてください。
+    focus:
+      - in_language_material_color
+      - language
+      - english
+
+  - id: g120_q008
+    question_type: two_choice
+    prompt: Write the answer ___ ink.
+    choices:
+      - text: in
+        correct: true
+      - text: with
+        correct: false
+    answer: in
+    explanation: >
+      ink は書く時の材料・媒体。
+      in ink で「インクで」と表す。
+    translation: 答えをインクで書きなさい。
+    focus:
+      - in_language_material_color
+      - ink
+      - writing_material
+
+  - id: g120_q009
+    question_type: two_choice
+    prompt: The sign was written ___ red.
+    choices:
+      - text: in
+        correct: true
+      - text: with
+        correct: false
+    answer: in
+    explanation: >
+      red は色。
+      色を表す時は in red とする。
+    translation: その標識は赤で書かれていた。
+    focus:
+      - in_language_material_color
+      - color
+      - red
+
+  - id: g120_q010
+    question_type: two_choice
+    prompt: I talked to her ___ the phone.
+    choices:
+      - text: on
+        correct: true
+      - text: by
+        correct: false
+    answer: on
+    explanation: >
+      the phone は通信機器・媒体。
+      電話で話すは on the phone が自然。
+    translation: 私は電話で彼女と話した。
+    focus:
+      - on_device_medium
+      - phone
+      - communication
+
+  - id: g120_q011
+    question_type: two_choice
+    prompt: I saw the news ___ TV.
+    choices:
+      - text: on
+        correct: true
+      - text: in
+        correct: false
+    answer: on
+    explanation: >
+      TV は情報媒体。
+      テレビで見るは on TV とする。
+    translation: 私はテレビでそのニュースを見た。
+    focus:
+      - on_device_medium
+      - tv
+      - medium
+
+  - id: g120_q012
+    question_type: two_choice
+    prompt: You can solve this problem ___ using this formula.
+    choices:
+      - text: by
+        correct: true
+      - text: with
+        correct: false
+    answer: by
+    explanation: >
+      by + 動名詞で「〜することによって」。
+      by using this formula で「この公式を使うことによって」。
+    translation: この公式を使うことによって、この問題を解けます。
+    focus:
+      - by_means_transport
+      - by_gerund
+      - method
+
+common_mistakes:
+  - mistake: by と with をどちらも「〜で」とだけ覚える
+    correction: >
+      by は方法・交通手段。
+      with は具体的な道具。
+      by bus / with a knife を区別する。
+  - mistake: by a knife としてしまう
+    correction: >
+      ナイフのような具体的な道具には with を使う。
+      with a knife が正しい。
+  - mistake: with bus としてしまう
+    correction: >
+      交通手段としてのバスには by を使う。
+      by bus が正しい。
+  - mistake: by foot としてしまう
+    correction: >
+      徒歩は例外的に on foot。
+      by foot ではなく on foot を基本形として覚える。
+  - mistake: English や red に by を使ってしまう
+    correction: >
+      言語・色・材料には in を使う。
+      in English / in red / in ink。
+  - mistake: phone や TV に by を使ってしまう
+    correction: >
+      電話・テレビ・インターネットなどの媒体には on を使うことが多い。
+      on the phone / on TV / on the Internet。
+
+learning_notes:
+  - >
+    by は方法・手段。
+    by bus / by train / by email / by using ...。
+  - >
+    with は具体的な道具。
+    with a knife / with a key / with this pen。
+  - >
+    in は言語・材料・色。
+    in English / in ink / in red。
+  - >
+    on は機器・媒体。
+    on the phone / on TV / on the Internet。
+  - >
+    日本語ではどれも「〜で」になりやすい。
+    英語では、交通手段か、道具か、言語・材料か、媒体かを見て選ぶ。
+
+prerequisites:
+  - g039
+  - g053
+  - g117
+  - g118
+  - g119
+
+next_items:
+  - g121
+  - g122
+  - g123

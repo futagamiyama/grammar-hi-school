@@ -1,0 +1,354 @@
+id: g034
+file: g034.yaml
+
+title: 完了形の受動態
+type: construction
+
+section:
+  id: s04
+  title: 受動態・態
+
+level: basic
+target: 高校英文法基礎
+
+core_question: すでに行われた結果が現在に関係しているか？
+
+core_concept:
+  simple_past_passive:
+    form: was/were + 過去分詞
+    meaning: 過去のある時点で〜されたことを表す
+    image: 過去の出来事として切って述べる
+    examples:
+      - sentence: The window was repaired yesterday.
+        ja: その窓は昨日修理された。
+        point: yesterday により、過去の出来事として述べている。
+      - sentence: The bridge was built in 1990.
+        ja: その橋は1990年に建てられた。
+        point: 過去の具体的な時点で建てられた事実。
+      - sentence: The room was cleaned this morning.
+        ja: その部屋は今朝掃除された。
+        point: 今朝という過去の時点に焦点がある。
+
+  present_perfect_passive:
+    form: has/have been + 過去分詞
+    meaning: すでに〜されている、〜された結果が今に関係していることを表す
+    image: 過去に行われたことの結果が、今見える・今問題になる
+    examples:
+      - sentence: The window has been repaired.
+        ja: その窓は修理されている。
+        point: 修理が完了し、その結果が今も関係している。
+      - sentence: The report has been submitted.
+        ja: その報告書は提出されている。
+        point: 提出済みであることが現在の状況として重要。
+      - sentence: All the tickets have been sold.
+        ja: チケットはすべて売り切れている。
+        point: 売れた結果、今は残っていない。
+
+main_rule: >
+  完了形の受動態は has/have been + 過去分詞。
+  「すでに〜されている」「〜された結果が今に関係している」という意味を表す。
+  was/were + 過去分詞は、過去の具体的な時点で「〜された」と述べる形。
+  already, yet, just, so far, recently などは現在完了の受動態と結びつきやすい。
+  yesterday, last week, in 1990 など過去の具体的時点がある場合は、
+  普通は過去形の受動態を使う。
+
+contrast_pairs:
+  - simple_past_passive: The window was repaired yesterday.
+    present_perfect_passive: The window has been repaired.
+    point: >
+      was repaired yesterday は昨日修理されたという過去の出来事。
+      has been repaired は修理済みで、今その結果が関係している。
+
+  - simple_past_passive: The bridge was built in 1990.
+    present_perfect_passive: The bridge has been built.
+    point: >
+      in 1990 があれば過去の時点なので was built。
+      has been built は、建設が完了して今存在していることに焦点がある。
+
+  - simple_past_passive: The documents were checked this morning.
+    present_perfect_passive: The documents have been checked.
+    point: >
+      this morning を過去の時点として述べるなら were checked。
+      have been checked は、確認済みである現在の状態を表す。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または完了形の受動態の意味を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g034_q001
+    question_type: two_choice
+    prompt: The window ___ already.
+    choices:
+      - text: was repaired
+        correct: false
+      - text: has been repaired
+        correct: true
+    answer: has been repaired
+    explanation: >
+      already があり、修理がすでに完了していることを表す。
+      現在に関係する完了形の受動態 has been repaired が自然。
+    translation: その窓はすでに修理されている。
+    focus:
+      - present_perfect_passive
+      - already
+      - has_been_past_participle
+
+  - id: g034_q002
+    question_type: two_choice
+    prompt: The window ___ yesterday.
+    choices:
+      - text: was repaired
+        correct: true
+      - text: has been repaired
+        correct: false
+    answer: was repaired
+    explanation: >
+      yesterday は過去の具体的な時点。
+      過去形の受動態 was repaired が自然。
+    translation: その窓は昨日修理された。
+    focus:
+      - simple_past_passive
+      - yesterday
+      - was_past_participle
+
+  - id: g034_q003
+    question_type: two_choice
+    prompt: All the tickets ___.
+    choices:
+      - text: were sold
+        correct: false
+      - text: have been sold
+        correct: true
+    answer: have been sold
+    explanation: >
+      チケットがすべて売れて、今は残っていないという現在の結果を表す。
+      完了形の受動態 have been sold が自然。
+    translation: チケットはすべて売り切れている。
+    focus:
+      - present_perfect_passive
+      - result_now
+      - have_been_past_participle
+
+  - id: g034_q004
+    question_type: two_choice
+    prompt: All the tickets ___ last night.
+    choices:
+      - text: were sold
+        correct: true
+      - text: have been sold
+        correct: false
+    answer: were sold
+    explanation: >
+      last night があるので、昨夜売れたという過去の出来事。
+      過去形の受動態 were sold が自然。
+    translation: チケットは昨夜すべて売れた。
+    focus:
+      - simple_past_passive
+      - last_night
+      - were_past_participle
+
+  - id: g034_q005
+    question_type: two_choice
+    prompt: The report ___ just now.
+    choices:
+      - text: was submitted
+        correct: true
+      - text: has been submitted
+        correct: false
+    answer: was submitted
+    explanation: >
+      just now は「たった今」という過去の時点を表すことが多い。
+      ここでは過去形の受動態 was submitted が自然。
+    translation: その報告書はたった今提出された。
+    focus:
+      - simple_past_passive
+      - just_now
+      - submitted
+
+  - id: g034_q006
+    question_type: two_choice
+    prompt: The report ___ already.
+    choices:
+      - text: was submitted
+        correct: false
+      - text: has been submitted
+        correct: true
+    answer: has been submitted
+    explanation: >
+      already があるので、提出がすでに完了し、
+      今その結果が関係している。
+      has been submitted が自然。
+    translation: その報告書はすでに提出されている。
+    focus:
+      - present_perfect_passive
+      - already
+      - submitted
+
+  - id: g034_q007
+    question_type: two_choice
+    prompt: The door ___.
+    choices:
+      - text: has been locked
+        correct: true
+      - text: was locked
+        correct: false
+    answer: has been locked
+    explanation: >
+      文脈なしで「ドアは鍵がかけられている」と今の結果を言うなら、
+      has been locked が自然。
+      過去の時点を述べる語句がない。
+    translation: そのドアには鍵がかけられている。
+    focus:
+      - present_perfect_passive
+      - result_now
+      - locked
+
+  - id: g034_q008
+    question_type: two_choice
+    prompt: The door ___ at 9 p.m.
+    choices:
+      - text: was locked
+        correct: true
+      - text: has been locked
+        correct: false
+    answer: was locked
+    explanation: >
+      at 9 p.m. は過去の具体的な時点。
+      その時に鍵がかけられたという過去の出来事なので was locked が自然。
+    translation: そのドアは午後9時に鍵をかけられた。
+    focus:
+      - simple_past_passive
+      - specific_past_time
+      - locked
+
+  - id: g034_q009
+    question_type: two_choice
+    prompt: Three mistakes ___ so far.
+    choices:
+      - text: were found
+        correct: false
+      - text: have been found
+        correct: true
+    answer: have been found
+    explanation: >
+      so far は「これまでのところ」という現在までの範囲を表す。
+      現在完了の受動態 have been found が自然。
+    translation: これまでのところ、3つのミスが見つかっている。
+    focus:
+      - present_perfect_passive
+      - so_far
+      - current_result
+
+  - id: g034_q010
+    question_type: two_choice
+    prompt: Three mistakes ___ during the test yesterday.
+    choices:
+      - text: were found
+        correct: true
+      - text: have been found
+        correct: false
+    answer: were found
+    explanation: >
+      yesterday があり、過去のテスト中に見つかったという出来事を述べている。
+      過去形の受動態 were found が自然。
+    translation: 昨日のテスト中に3つのミスが見つかった。
+    focus:
+      - simple_past_passive
+      - yesterday
+      - during_the_test
+
+  - id: g034_q011
+    question_type: two_choice
+    prompt: The new rule ___ recently.
+    choices:
+      - text: was introduced
+        correct: false
+      - text: has been introduced
+        correct: true
+    answer: has been introduced
+    explanation: >
+      recently は現在に近い過去を表し、現在への影響を含むことが多い。
+      新しい規則が導入され、今関係しているので has been introduced が自然。
+    translation: その新しい規則は最近導入された。
+    focus:
+      - present_perfect_passive
+      - recently
+      - introduced
+
+  - id: g034_q012
+    question_type: two_choice
+    prompt: The new rule ___ in 2020.
+    choices:
+      - text: was introduced
+        correct: true
+      - text: has been introduced
+        correct: false
+    answer: was introduced
+    explanation: >
+      in 2020 は過去の具体的な時点。
+      過去形の受動態 was introduced が自然。
+    translation: その新しい規則は2020年に導入された。
+    focus:
+      - simple_past_passive
+      - in_2020
+      - introduced
+
+common_mistakes:
+  - mistake: has been を見ると進行形だと思ってしまう
+    correction: >
+      has been + 過去分詞は完了形の受動態。
+      has been repaired は「修理されている・修理済み」。
+      has been repairing なら現在完了進行形。
+  - mistake: yesterday や last week と現在完了の受動態を一緒に使う
+    correction: >
+      yesterday, last week, in 1990 など過去の具体的時点がある場合は、
+      普通は was/were + 過去分詞を使う。
+  - mistake: have been + 過去分詞の have を「持つ」と読んでしまう
+    correction: >
+      have/has は完了形を作る助動詞。
+      have been sold は「売られている・売り切れている」という受動態。
+  - mistake: 現在完了の受動態と過去形の受動態を日本語訳だけで判断する
+    correction: >
+      日本語ではどちらも「〜された」と訳せることがある。
+      過去の具体的時点か、現在への結果・関係かで判断する。
+
+learning_notes:
+  - >
+    完了形の受動態は has/have been + 過去分詞。
+    「すでに〜されている」「〜された結果が今関係している」と考える。
+  - >
+    The report has been submitted. は「報告書は提出済み」という現在の状態。
+    The report was submitted yesterday. は「昨日提出された」という過去の出来事。
+  - >
+    already, yet, just, so far, recently は現在完了の受動態と相性がよい。
+  - >
+    yesterday, last week, in 2020, at 9 p.m. などは過去の具体的時点なので、
+    過去形の受動態を選びやすい。
+
+prerequisites:
+  - g002
+  - g031
+  - g032
+
+next_items:
+  - g035
+  - g036
+  - g037

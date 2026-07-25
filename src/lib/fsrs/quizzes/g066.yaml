@@ -1,0 +1,375 @@
+id: g066
+file: g066.yaml
+
+title: 制限用法 vs 非制限用法
+type: grammar_contrast
+
+section:
+  id: s08
+  title: 関係詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 名詞を絞り込むのか、補足説明を加えるのか？
+
+core_concept:
+  restrictive_relative:
+    form: 先行詞 + 関係詞 ...
+    meaning: どの人・どの物かを限定する
+    image: 名詞を絞り込む
+    examples:
+      - sentence: Students who study every day improve quickly.
+        ja: 毎日勉強する生徒は早く上達する。
+        point: どの生徒かを who study every day が限定している。
+      - sentence: The book which I bought yesterday is interesting.
+        ja: 私が昨日買った本は面白い。
+        point: どの本かを which I bought yesterday が限定している。
+      - sentence: People who live here are friendly.
+        ja: ここに住んでいる人々は親切だ。
+        point: どの人々かを who live here が限定している。
+
+  non_restrictive_relative:
+    form: 先行詞, 関係詞 ...
+    meaning: すでに特定されている名詞に補足説明を加える
+    image: 名詞を絞り込まず、横から説明を足す
+    examples:
+      - sentence: My father, who lives in Tokyo, is a doctor.
+        ja: 東京に住んでいる私の父は医者です。
+        point: My father はすでに特定されており、who lives in Tokyo は補足説明。
+      - sentence: This book, which I bought yesterday, is interesting.
+        ja: 昨日買ったこの本は面白い。
+        point: This book はすでに特定されており、which I bought yesterday は補足説明。
+      - sentence: Ken, who speaks English well, helped us.
+        ja: 英語を上手に話すケンが私たちを助けてくれた。
+        point: Ken は固有名詞なので、関係詞節は補足説明になりやすい。
+
+  that_not_in_non_restrictive:
+    form: コンマ + who/which
+    meaning: 非制限用法では that を普通使わない
+    image: コンマの後の補足説明では who / which を使う
+    examples:
+      - sentence: My brother, who lives in Osaka, is a teacher.
+        ja: 大阪に住んでいる私の兄は教師です。
+        point: コンマつきの補足説明なので who を使う。
+      - sentence: This camera, which I bought last year, is broken.
+        ja: 昨年買ったこのカメラは壊れている。
+        point: コンマつきの補足説明なので which を使う。
+      - sentence: Tokyo, which is the capital of Japan, is a huge city.
+        ja: 日本の首都である東京は大都市だ。
+        point: コンマつきで補足しているので which を使う。
+
+main_rule: >
+  制限用法は、コンマなしで名詞を後ろから限定し、
+  「どの人・どの物か」を絞り込む。
+  Students who study every day は「毎日勉強する生徒」。
+  非制限用法は、コンマを使って、すでに特定されている名詞に補足説明を加える。
+  My father, who lives in Tokyo, ... は「私の父は、ちなみに東京に住んでいるが、...」という補足。
+  非制限用法では、関係代名詞 that は普通使わず、who や which を使う。
+
+contrast_pairs:
+  - restrictive: My brother who lives in Osaka is a teacher.
+    non_restrictive: My brother, who lives in Osaka, is a teacher.
+    point: >
+      コンマなしは「大阪に住んでいる兄」と兄弟の中から限定する。
+      コンマありは「私の兄は、ちなみに大阪に住んでいるが」と補足する。
+
+  - restrictive: The book which I bought yesterday is interesting.
+    non_restrictive: This book, which I bought yesterday, is interesting.
+    point: >
+      The book which ... はどの本かを限定する。
+      This book, which ... は、この本について補足説明を加える。
+
+  - restrictive: People who live here are friendly.
+    non_restrictive: Ken, who lives here, is friendly.
+    point: >
+      People who live here は人々を限定する。
+      Ken はすでに特定されているので、who lives here は補足説明。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または制限用法と非制限用法の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g066_q001
+    question_type: two_choice
+    prompt: Students ___ study every day improve quickly.
+    choices:
+      - text: who
+        correct: true
+      - text: ", who"
+        correct: false
+    answer: who
+    explanation: >
+      どの生徒かを限定する制限用法。
+      Students who study every day で「毎日勉強する生徒」。
+      コンマは不要。
+    translation: 毎日勉強する生徒は早く上達する。
+    focus:
+      - restrictive_relative
+      - no_comma
+      - who
+
+  - id: g066_q002
+    question_type: two_choice
+    prompt: My father, ___ lives in Tokyo, is a doctor.
+    choices:
+      - text: who
+        correct: true
+      - text: that
+        correct: false
+    answer: who
+    explanation: >
+      コンマつきの非制限用法。
+      補足説明では that は普通使わず、who を使う。
+    translation: 東京に住んでいる私の父は医者です。
+    focus:
+      - non_restrictive_relative
+      - comma
+      - that_not_used
+
+  - id: g066_q003
+    question_type: two_choice
+    prompt: The book ___ I bought yesterday is interesting.
+    choices:
+      - text: which
+        correct: true
+      - text: ", which"
+        correct: false
+    answer: which
+    explanation: >
+      どの本かを限定する制限用法。
+      The book which I bought yesterday で「私が昨日買った本」。
+    translation: 私が昨日買った本は面白い。
+    focus:
+      - restrictive_relative
+      - no_comma
+      - which
+
+  - id: g066_q004
+    question_type: two_choice
+    prompt: This book, ___ I bought yesterday, is interesting.
+    choices:
+      - text: which
+        correct: true
+      - text: that
+        correct: false
+    answer: which
+    explanation: >
+      This book はすでに特定されており、コンマつきで補足説明している。
+      非制限用法では that ではなく which を使う。
+    translation: 昨日買ったこの本は面白い。
+    focus:
+      - non_restrictive_relative
+      - comma
+      - which
+
+  - id: g066_q005
+    question_type: two_choice
+    prompt: People ___ live near the sea often eat fresh fish.
+    choices:
+      - text: who
+        correct: true
+      - text: ", who"
+        correct: false
+    answer: who
+    explanation: >
+      どの人々かを限定している。
+      People who live near the sea で「海の近くに住む人々」。
+    translation: 海の近くに住む人々はよく新鮮な魚を食べる。
+    focus:
+      - restrictive_relative
+      - people
+      - no_comma
+
+  - id: g066_q006
+    question_type: two_choice
+    prompt: Ken, ___ lives near the sea, eats fresh fish every day.
+    choices:
+      - text: who
+        correct: true
+      - text: that
+        correct: false
+    answer: who
+    explanation: >
+      Ken は固有名詞で、すでに特定されている。
+      コンマつきの補足説明なので who を使い、that は普通使わない。
+    translation: 海の近くに住んでいるケンは、毎日新鮮な魚を食べる。
+    focus:
+      - non_restrictive_relative
+      - proper_noun
+      - who
+
+  - id: g066_q007
+    question_type: two_choice
+    prompt: The camera ___ I bought last year is broken.
+    choices:
+      - text: which
+        correct: true
+      - text: ", which"
+        correct: false
+    answer: which
+    explanation: >
+      どのカメラかを限定している制限用法。
+      the camera which I bought last year で「昨年買ったカメラ」。
+    translation: 私が昨年買ったカメラは壊れている。
+    focus:
+      - restrictive_relative
+      - which
+      - no_comma
+
+  - id: g066_q008
+    question_type: two_choice
+    prompt: This camera, ___ I bought last year, is broken.
+    choices:
+      - text: which
+        correct: true
+      - text: that
+        correct: false
+    answer: which
+    explanation: >
+      This camera はすでに特定されている。
+      コンマつきの補足説明なので which を使い、that は使わない。
+    translation: 昨年買ったこのカメラは壊れている。
+    focus:
+      - non_restrictive_relative
+      - which
+      - that_not_used
+
+  - id: g066_q009
+    question_type: two_choice
+    prompt: Tokyo, ___ is the capital of Japan, is a huge city.
+    choices:
+      - text: which
+        correct: true
+      - text: that
+        correct: false
+    answer: which
+    explanation: >
+      Tokyo は固有名詞で、すでに特定されている。
+      コンマつきの補足説明なので which を使う。
+    translation: 日本の首都である東京は大都市だ。
+    focus:
+      - non_restrictive_relative
+      - proper_noun
+      - which
+
+  - id: g066_q010
+    question_type: two_choice
+    prompt: Cities ___ have good public transport are easy to live in.
+    choices:
+      - text: that
+        correct: true
+      - text: ", that"
+        correct: false
+    answer: that
+    explanation: >
+      どの都市かを限定する制限用法。
+      制限用法では that も使えるが、コンマつきの , that は不可。
+    translation: 公共交通がよい都市は住みやすい。
+    focus:
+      - restrictive_relative
+      - that
+      - no_comma
+
+  - id: g066_q011
+    question_type: two_choice
+    prompt: My brother ___ lives in Osaka is a teacher.
+    choices:
+      - text: who
+        correct: true
+      - text: ", who"
+        correct: false
+    answer: who
+    explanation: >
+      コンマなしなら、大阪に住んでいる兄を限定している意味になる。
+      兄弟が複数いる可能性がある読み。
+    translation: 大阪に住んでいる私の兄は教師です。
+    focus:
+      - restrictive_relative
+      - meaning_difference
+      - brother
+
+  - id: g066_q012
+    question_type: two_choice
+    prompt: My brother, ___ lives in Osaka, is a teacher.
+    choices:
+      - text: who
+        correct: true
+      - text: that
+        correct: false
+    answer: who
+    explanation: >
+      コンマつきの補足説明なので who を使う。
+      that は非制限用法では普通使わない。
+    translation: 私の兄は、大阪に住んでいますが、教師です。
+    focus:
+      - non_restrictive_relative
+      - meaning_difference
+      - brother
+
+common_mistakes:
+  - mistake: コンマの有無を意味に関係ない記号だと思う
+    correction: >
+      コンマなしは名詞を限定する。
+      コンマありは補足説明を加える。
+      意味が変わるので、コンマは重要。
+  - mistake: 非制限用法で that を使ってしまう
+    correction: >
+      コンマつきの補足説明では that は普通使わない。
+      who や which を使う。
+  - mistake: 固有名詞の後で制限用法のように読んでしまう
+    correction: >
+      Ken, Tokyo, my father など、すでに特定されている名詞は
+      補足説明の非制限用法になりやすい。
+  - mistake: My brother who ... と My brother, who ... を同じだと思う
+    correction: >
+      コンマなしは「〜している兄」と限定する。
+      コンマありは「私の兄は、ちなみに〜しているが」と補足する。
+  - mistake: 関係詞節はすべて名詞を限定すると考える
+    correction: >
+      関係詞節には、名詞を限定する制限用法と、
+      補足説明を加える非制限用法がある。
+
+learning_notes:
+  - >
+    制限用法は、どの名詞かを絞り込む。
+    コンマは置かない。
+  - >
+    非制限用法は、すでに特定されている名詞に補足説明を加える。
+    コンマを置く。
+  - >
+    非制限用法では that は普通使わない。
+    who / which を使う。
+  - >
+    入試では、コンマの有無、先行詞が固有名詞かどうか、
+    that が使えるかどうかがよく問われる。
+
+prerequisites:
+  - g061
+  - g062
+  - g063
+  - g064
+  - g065
+
+next_items:
+  - g067
+  - g068
+  - g069

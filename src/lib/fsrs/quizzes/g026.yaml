@@ -1,0 +1,273 @@
+id: g026
+file: g026.yaml
+title: will vs would
+type: grammar_contrast
+section:
+  id: s03
+  title: 助動詞・法
+level: basic
+target: 高校英文法基礎
+core_question: 直接的な意志・予測なのか、距離を置いた表現・丁寧表現・過去から見た未来なのか？
+core_concept:
+  will:
+    form: will + 動詞の原形
+    meaning: 未来についての意志・予測・申し出を、比較的直接的に表す。
+    image: 今ここから未来へまっすぐ向かう感じ / その場で決める感じ
+    examples:
+    - sentence: I will call you later.
+      ja: 後で電話します。
+      point: 今決めた意志や約束を直接的に述べている。
+    - sentence: It will be cold tomorrow.
+      ja: 明日は寒くなるだろう。
+      point: 未来について比較的まっすぐ予測している。
+    - sentence: I will help you.
+      ja: 手伝います。
+      point: その場で申し出る意志を表している。
+  would:
+    form: would + 動詞の原形
+    meaning: will に距離感を加えた形。丁寧さ、控えめさ、仮定、過去から見た未来などを表す。
+    image: 直接言わずに少し距離を置く / 現実から一歩引く / 過去の視点から未来を見る
+    examples:
+    - sentence: Would you help me?
+      ja: 手伝っていただけますか。
+      point: Will you ...? より丁寧で控えめな依頼。
+    - sentence: I would call him, but I do not have his number.
+      ja: 彼に電話するのだが、番号を知らない。
+      point: 仮定的な状況での意志を表している。
+    - sentence: He said he would come.
+      ja: 彼は来ると言った。
+      point: 過去の時点から見た未来なので would を使う。
+main_rule: 'will は、未来についての意志・予測・申し出を比較的直接的に表す。
+
+  would は will に距離を置いた形で、丁寧な依頼、控えめな表現、仮定の話、過去から見た未来などに使う。
+
+  日本語ではどちらも「〜するだろう」「〜してくれる？」のように訳せることがあるため、
+
+  直接的に言っているのか、距離を置いているのか、文脈が現在か過去かを見て判断する。'
+contrast_pairs:
+- will: Will you open the window?
+  would: Would you open the window?
+  point: will は直接的な依頼。would は距離を置くため、より丁寧に聞こえる。
+- will: I will help you.
+  would: I would help you if I had time.
+  point: will は実際に手伝う意志。would は条件が満たされれば手伝う、という仮定。
+- will: He says he will come.
+  would: He said he would come.
+  point: 現在の発言なら will、過去の発言から見た未来なら would。
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.6
+    max_threshold_ratio: 0.85
+review_questions:
+- id: g026_q001
+  question_type: two_choice
+  prompt: I ___ help you with your homework.
+  choices:
+  - text: will
+    correct: true
+  - text: would
+    correct: false
+  answer: will
+  ja: 宿題を手伝います。
+  explanation: その場で助ける意志・申し出を直接的に述べているので will が自然。
+  focus:
+  - offer
+  - direct_willingness
+  - will
+- id: g026_q002
+  question_type: two_choice
+  prompt: I ___ help you if I had more time.
+  choices:
+  - text: will
+    correct: false
+  - text: would
+    correct: true
+  answer: would
+  ja: もっと時間があれば、あなたを手伝うのですが。
+  explanation: if I had more time があり、現実とは違う仮定を表している。仮定の結果には would を使う。
+  focus:
+  - hypothetical
+  - if_clause
+  - would
+- id: g026_q003
+  question_type: two_choice
+  prompt: ___ you close the door?
+  choices:
+  - text: Will
+    correct: true
+  - text: Would
+    correct: false
+  answer: Will
+  ja: ドアを閉めてくれる？
+  explanation: 直接的な依頼なら Will you ...? が自然。丁寧さを強めるなら Would you ...? も可能だが、このカードでは直接的な依頼として will を選ぶ。
+  focus:
+  - request
+  - direct_request
+  - will
+- id: g026_q004
+  question_type: two_choice
+  prompt: ___ you close the door, please?
+  choices:
+  - text: Will
+    correct: false
+  - text: Would
+    correct: true
+  answer: Would
+  ja: ドアを閉めていただけますか。
+  explanation: please があり、丁寧な依頼として述べている。Would you ...? は Will you ...? より距離を置いた丁寧な表現。
+  focus:
+  - polite_request
+  - distance
+  - would
+- id: g026_q005
+  question_type: two_choice
+  prompt: He says he ___ come tomorrow.
+  choices:
+  - text: will
+    correct: true
+  - text: would
+    correct: false
+  answer: will
+  ja: 彼は明日来ると言っている。
+  explanation: He says と現在の発言を表しているので、そこから見た未来には will を使う。
+  focus:
+  - reported_speech
+  - present_reporting
+  - will
+- id: g026_q006
+  question_type: two_choice
+  prompt: He said he ___ come the next day.
+  choices:
+  - text: will
+    correct: false
+  - text: would
+    correct: true
+  answer: would
+  ja: 彼は翌日来ると言った。
+  explanation: He said という過去の発言から見た未来なので、will ではなく would が自然。
+  focus:
+  - future_in_the_past
+  - reported_speech
+  - would
+- id: g026_q007
+  question_type: two_choice
+  prompt: I think this plan ___ work.
+  choices:
+  - text: will
+    correct: true
+  - text: would
+    correct: false
+  answer: will
+  ja: この計画はうまくいくと思う。
+  explanation: 未来について比較的直接的に予測しているので will が自然。
+  focus:
+  - prediction
+  - will
+- id: g026_q008
+  question_type: two_choice
+  prompt: This plan ___ work better if we had more money.
+  choices:
+  - text: will
+    correct: false
+  - text: would
+    correct: true
+  answer: would
+  ja: もっと資金があれば、この計画はもっとよく機能するだろう。
+  explanation: if we had more money が現実とは違う仮定なので、結果には would を使う。
+  focus:
+  - hypothetical_result
+  - would
+- id: g026_q009
+  question_type: two_choice
+  prompt: I ___ be happy to answer your questions.
+  choices:
+  - text: will
+    correct: false
+  - text: would
+    correct: true
+  answer: would
+  ja: ご質問に喜んでお答えします。
+  explanation: I would be happy to ... は丁寧で控えめな申し出の定型表現。直接的な意志より、丁寧さが中心。
+  focus:
+  - polite_offer
+  - would_be_happy_to
+  - would
+- id: g026_q010
+  question_type: two_choice
+  prompt: I ___ never forget your kindness.
+  choices:
+  - text: will
+    correct: true
+  - text: would
+    correct: false
+  answer: will
+  ja: あなたの親切は決して忘れません。
+  explanation: 未来に向けた強い意志・約束を直接的に述べているので will が自然。
+  focus:
+  - promise
+  - strong_will
+  - will
+- id: g026_q011
+  question_type: two_choice
+  prompt: When we were children, my grandfather ___ tell us old stories.
+  choices:
+  - text: will
+    correct: false
+  - text: would
+    correct: true
+  answer: would
+  ja: 私たちが子どものころ、祖父はよく昔話をしてくれた。
+  explanation: 過去の習慣的な行動を表す would。will では現在・未来の意志になってしまう。
+  focus:
+  - past_habit
+  - would
+- id: g026_q012
+  question_type: two_choice
+  prompt: The door ___ not open. I think it is locked.
+  choices:
+  - text: will
+    correct: true
+  - text: would
+    correct: false
+  answer: will
+  ja: ドアが開かない。鍵がかかっていると思う。
+  explanation: will not は「どうしても〜しない」という現在の拒否・不具合を表すことがある。ここではドアが開こうとしない状況。
+  focus:
+  - refusal
+  - will_not
+  - present_situation
+common_mistakes:
+- mistake: would を will の過去形としてだけ覚える
+  correction: would は過去の文脈でも使うが、丁寧さ・仮定・控えめな表現にも使う。Would you ...? は現在の丁寧な依頼である。
+- mistake: will は単なる未来、would は単なる過去だと思う
+  correction: will は意志・予測・申し出を直接的に表す。would は will に距離を置いた表現で、仮定や丁寧さにも使う。
+- mistake: Will you ...? と Would you ...? を同じ丁寧さだと思う
+  correction: Will you ...? は比較的直接的な依頼。Would you ...? は距離を置くため、より丁寧に聞こえる。
+- mistake: He said he will come. のように、過去の発言でも will をそのまま使う
+  correction: 過去の発言から見た未来は、通常 would を使う。He said he would come. が基本。
+learning_notes:
+- will と would の中心差は、単なる時制差ではなく「距離感」で考えるとわかりやすい。
+- will は、今の地点から未来へまっすぐ向かう感じがある。意志・予測・申し出を直接的に言う。
+- would は、現実・相手・現在から少し距離を置く。だから仮定法、丁寧表現、過去から見た未来に使われる。
+- Would you ...? は丁寧な依頼、I would ... if ... は仮定の結果、He said he would ... は過去から見た未来。
+- 過去の習慣を表す would は used to との違いがあるため、必要なら別カードで扱う。
+prerequisites:
+- g005
+- g025
+next_items:
+- g027
+- g028
+- g029

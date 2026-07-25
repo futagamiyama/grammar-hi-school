@@ -1,0 +1,371 @@
+id: g073
+file: g073.yaml
+
+title: 仮定法過去完了
+type: grammar_contrast
+
+section:
+  id: s09
+  title: 仮定法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 過去の事実に反する仮定を、had + 過去分詞で表せるか？
+
+core_concept:
+  subjunctive_past_perfect:
+    form: If + 主語 + had + 過去分詞 ..., 主語 + would/could/might have + 過去分詞 ...
+    meaning: もし過去に〜していたら、...だっただろうに
+    image: 過去に実際には起きなかった世界を仮に考える
+    examples:
+      - sentence: If I had studied harder, I would have passed the exam.
+        ja: もしもっと一生懸命勉強していたら、試験に合格していただろうに。
+        point: 実際には十分に勉強せず、試験に合格しなかった。
+      - sentence: If you had told me earlier, I could have helped you.
+        ja: もしもっと早く私に言ってくれていたら、あなたを助けられたのに。
+        point: 実際には早く言わなかったので、助けられなかった。
+      - sentence: If it had not rained, we would have gone hiking.
+        ja: もし雨が降っていなかったら、私たちはハイキングに行っていただろうに。
+        point: 実際には雨が降ったので、行かなかった。
+
+  contrast_with_subjunctive_past:
+    form: If + 過去形 / If + had + 過去分詞
+    meaning: 仮定法過去は現在の非現実、仮定法過去完了は過去の非現実
+    image: 現在なら過去形、過去なら had + 過去分詞
+    examples:
+      - sentence: If I had time, I would help you.
+        ja: もし今時間があれば、あなたを助けるのに。
+        point: 現在の非現実なので仮定法過去。
+      - sentence: If I had had time, I would have helped you.
+        ja: もしあの時時間があったら、あなたを助けただろうに。
+        point: 過去の非現実なので仮定法過去完了。
+      - sentence: If she were here, she would help us.
+        ja: もし彼女がここにいれば、私たちを助けてくれるのに。
+        point: 現在の非現実。
+
+  modal_have_past_participle:
+    form: would/could/might have + 過去分詞
+    meaning: 〜しただろうに、〜できただろうに、〜したかもしれないのに
+    image: 過去に起きなかった結果を述べる
+    examples:
+      - sentence: I would have called you.
+        ja: 私はあなたに電話しただろうに。
+        point: 実際には電話しなかった。
+      - sentence: She could have won the race.
+        ja: 彼女はそのレースに勝てたかもしれないのに。
+        point: 実際には勝たなかった。
+      - sentence: They might have arrived on time.
+        ja: 彼らは時間通りに到着したかもしれないのに。
+        point: 実際にはそうならなかった可能性を述べている。
+
+main_rule: >
+  仮定法過去完了は、過去の事実に反する仮定を表す。
+  形は If + 主語 + had + 過去分詞, 主語 + would/could/might have + 過去分詞。
+  If I had studied harder, I would have passed the exam. は
+  「もしもっと勉強していたら、試験に合格していただろうに」という意味で、
+  実際には十分に勉強せず、合格しなかったことを含む。
+  仮定法過去は現在の非現実、仮定法過去完了は過去の非現実。
+  would have + 過去分詞は「〜しただろうに」と、実際には起きなかった過去の結果を表す。
+
+contrast_pairs:
+  - present_unreal: If I had time, I would help you.
+    past_unreal: If I had had time, I would have helped you.
+    point: >
+      If I had time は現在の非現実。
+      If I had had time は過去の非現実。
+
+  - real_past: Because I studied hard, I passed the exam.
+    unreal_past: If I had studied harder, I would have passed the exam.
+    point: >
+      実際に起きた過去は普通の過去形。
+      起きなかった過去を仮定するなら had + 過去分詞を使う。
+
+  - present_unreal: If she were here, she could help us.
+    past_unreal: If she had been here, she could have helped us.
+    point: >
+      If she were here は今ここにいない。
+      If she had been here は過去にここにいなかった。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または仮定法過去完了が過去の非現実を表すことを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g073_q001
+    question_type: two_choice
+    prompt: If I ___ harder, I would have passed the exam.
+    choices:
+      - text: had studied
+        correct: true
+      - text: studied
+        correct: false
+    answer: had studied
+    explanation: >
+      would have passed があるので、過去の事実に反する仮定。
+      If節では had + 過去分詞を使う。
+    translation: もしもっと一生懸命勉強していたら、試験に合格していただろうに。
+    focus:
+      - subjunctive_past_perfect
+      - had_past_participle
+      - exam
+
+  - id: g073_q002
+    question_type: two_choice
+    prompt: If you had told me earlier, I ___ you.
+    choices:
+      - text: could have helped
+        correct: true
+      - text: could help
+        correct: false
+    answer: could have helped
+    explanation: >
+      If you had told me earlier は過去の非現実。
+      結果も過去なので could have helped を使う。
+    translation: もしもっと早く私に言ってくれていたら、あなたを助けられたのに。
+    focus:
+      - modal_have_past_participle
+      - could_have
+      - past_unreal
+
+  - id: g073_q003
+    question_type: two_choice
+    prompt: If it ___, we would have gone hiking.
+    choices:
+      - text: had not rained
+        correct: true
+      - text: did not rain
+        correct: false
+    answer: had not rained
+    explanation: >
+      would have gone があるので仮定法過去完了。
+      過去に実際には雨が降った、という含みがある。
+    translation: もし雨が降っていなかったら、私たちはハイキングに行っていただろうに。
+    focus:
+      - subjunctive_past_perfect
+      - negative_if_clause
+      - weather
+
+  - id: g073_q004
+    question_type: two_choice
+    prompt: If she ___ there, she could have helped us.
+    choices:
+      - text: had been
+        correct: true
+      - text: were
+        correct: false
+    answer: had been
+    explanation: >
+      could have helped があるので、過去の非現実。
+      If節では had been を使う。
+    translation: もし彼女がそこにいたら、私たちを助けられたのに。
+    focus:
+      - subjunctive_past_perfect
+      - had_been
+      - could_have
+
+  - id: g073_q005
+    question_type: two_choice
+    prompt: If I ___ time now, I would help you.
+    choices:
+      - text: had
+        correct: true
+      - text: had had
+        correct: false
+    answer: had
+    explanation: >
+      now があり、現在の非現実を表している。
+      仮定法過去なので had を使う。
+    translation: もし今時間があれば、あなたを助けるのに。
+    focus:
+      - contrast_with_subjunctive_past
+      - present_unreal
+      - now
+
+  - id: g073_q006
+    question_type: two_choice
+    prompt: If I ___ time yesterday, I would have helped you.
+    choices:
+      - text: had had
+        correct: true
+      - text: had
+        correct: false
+    answer: had had
+    explanation: >
+      yesterday と would have helped から、過去の非現実。
+      have time の過去完了なので had had time になる。
+    translation: もし昨日時間があったら、あなたを助けただろうに。
+    focus:
+      - subjunctive_past_perfect
+      - had_had
+      - yesterday
+
+  - id: g073_q007
+    question_type: two_choice
+    prompt: If he ___ the train, he would have arrived on time.
+    choices:
+      - text: had caught
+        correct: true
+      - text: caught
+        correct: false
+    answer: had caught
+    explanation: >
+      would have arrived があるので、過去の事実に反する仮定。
+      実際には電車に乗れなかったという含みがある。
+    translation: もし彼がその電車に乗れていたら、時間通りに到着していただろうに。
+    focus:
+      - subjunctive_past_perfect
+      - had_caught
+      - train
+
+  - id: g073_q008
+    question_type: two_choice
+    prompt: If he had caught the train, he ___ on time.
+    choices:
+      - text: would have arrived
+        correct: true
+      - text: would arrive
+        correct: false
+    answer: would have arrived
+    explanation: >
+      If he had caught the train は過去の非現実。
+      結果も過去なので would have arrived を使う。
+    translation: もし彼がその電車に乗れていたら、時間通りに到着していただろうに。
+    focus:
+      - modal_have_past_participle
+      - would_have
+      - result_clause
+
+  - id: g073_q009
+    question_type: two_choice
+    prompt: If they ___ earlier, they might have met her.
+    choices:
+      - text: had left
+        correct: true
+      - text: left
+        correct: false
+    answer: had left
+    explanation: >
+      might have met があるので仮定法過去完了。
+      If節では had left を使う。
+    translation: もし彼らがもっと早く出発していたら、彼女に会えたかもしれないのに。
+    focus:
+      - subjunctive_past_perfect
+      - might_have
+      - had_left
+
+  - id: g073_q010
+    question_type: two_choice
+    prompt: If they had left earlier, they ___ her.
+    choices:
+      - text: might have met
+        correct: true
+      - text: might meet
+        correct: false
+    answer: might have met
+    explanation: >
+      If they had left earlier は過去の非現実。
+      過去に会えたかもしれないという結果なので might have met。
+    translation: もし彼らがもっと早く出発していたら、彼女に会えたかもしれないのに。
+    focus:
+      - modal_have_past_participle
+      - might_have
+      - result_clause
+
+  - id: g073_q011
+    question_type: two_choice
+    prompt: If I ___ your advice, I would not have made that mistake.
+    choices:
+      - text: had followed
+        correct: true
+      - text: followed
+        correct: false
+    answer: had followed
+    explanation: >
+      would not have made があるので過去の非現実。
+      実際には助言に従わず、間違えたという意味。
+    translation: もしあなたの助言に従っていたら、あの間違いをしなかっただろうに。
+    focus:
+      - subjunctive_past_perfect
+      - had_followed
+      - advice
+
+  - id: g073_q012
+    question_type: two_choice
+    prompt: If I had followed your advice, I ___ that mistake.
+    choices:
+      - text: would not have made
+        correct: true
+      - text: would not make
+        correct: false
+    answer: would not have made
+    explanation: >
+      If I had followed your advice は過去の非現実。
+      過去に間違えなかっただろうという結果なので would not have made。
+    translation: もしあなたの助言に従っていたら、あの間違いをしなかっただろうに。
+    focus:
+      - modal_have_past_participle
+      - negative_result
+      - would_have
+
+common_mistakes:
+  - mistake: 仮定法過去完了を現在の仮定だと思う
+    correction: >
+      仮定法過去完了は、過去の事実に反する仮定。
+      If I had studied harder は「過去にもっと勉強していたら」。
+  - mistake: If I studied harder, I would have passed. と混ぜてしまう
+    correction: >
+      過去の非現実なら If I had studied harder, I would have passed.
+      If節も結果節も過去の形にそろえる。
+  - mistake: would have の後ろに過去形を置いてしまう
+    correction: >
+      would have / could have / might have の後ろは過去分詞。
+      would have passed, could have helped, might have met。
+  - mistake: had had を不自然だと思って避ける
+    correction: >
+      have time を仮定法過去完了にすると had had time になる。
+      If I had had time, I would have helped you. は正しい。
+  - mistake: 仮定法過去と仮定法過去完了を時で区別しない
+    correction: >
+      現在の非現実は If + 過去形, would + 原形。
+      過去の非現実は If + had + 過去分詞, would have + 過去分詞。
+
+learning_notes:
+  - >
+    仮定法過去完了は、過去に実際には起きなかったことを仮定する表現。
+  - >
+    基本形は If + had + 過去分詞, would/could/might have + 過去分詞。
+  - >
+    would have passed は「合格しただろうに」。
+    実際には合格しなかったという含みがある。
+  - >
+    仮定法過去は現在の非現実。
+    仮定法過去完了は過去の非現実。
+    now / yesterday などの時を意識して区別する。
+
+prerequisites:
+  - g003
+  - g028
+  - g072
+
+next_items:
+  - g074
+  - g075
+  - g076

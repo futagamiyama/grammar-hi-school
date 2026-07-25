@@ -1,0 +1,354 @@
+id: g061
+file: g061.yaml
+
+title: 関係代名詞 who / which
+type: grammar_contrast
+
+section:
+  id: s08
+  title: 関係詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 説明される名詞が人か、物・動物かを判断できるか？
+
+core_concept:
+  who:
+    form: 人 + who + 動詞 ...
+    meaning: 〜する人、〜である人
+    image: 前の人を、後ろの文で説明する
+    examples:
+      - sentence: I know a boy who lives in Osaka.
+        ja: 私は大阪に住んでいる少年を知っている。
+        point: a boy は人なので who を使う。
+      - sentence: The woman who teaches English is my aunt.
+        ja: 英語を教えている女性は私のおばです。
+        point: The woman を who teaches English が説明している。
+      - sentence: Students who study every day improve quickly.
+        ja: 毎日勉強する生徒は早く上達する。
+        point: Students は人なので who を使う。
+
+  which:
+    form: 物・動物 + which + 動詞 ...
+    meaning: 〜する物、〜である物・動物
+    image: 前の物・動物を、後ろの文で説明する
+    examples:
+      - sentence: I have a book which explains grammar clearly.
+        ja: 私は文法をわかりやすく説明している本を持っている。
+        point: a book は物なので which を使う。
+      - sentence: The dog which lives next door is very friendly.
+        ja: 隣に住んでいる犬はとても人なつこい。
+        point: The dog は動物なので which を使う。
+      - sentence: This is a machine which makes bread.
+        ja: これはパンを作る機械です。
+        point: a machine は物なので which を使う。
+
+main_rule: >
+  関係代名詞は、前にある名詞を後ろから説明する語。
+  説明される名詞を先行詞という。
+  先行詞が人なら who、物・動物なら which を使うのが基本。
+  a boy who lives in Osaka は「大阪に住んでいる少年」。
+  a book which explains grammar は「文法を説明している本」。
+  まずは関係代名詞の後ろの文よりも、
+  その前にある名詞が人か物かを見る。
+
+contrast_pairs:
+  - person: I know a boy who lives in Osaka.
+    thing: I have a book which explains grammar.
+    point: >
+      a boy は人なので who。
+      a book は物なので which。
+
+  - person: The woman who teaches English is my aunt.
+    thing: The school which stands on the hill is old.
+    point: >
+      The woman は人なので who。
+      The school は物・場所なので which。
+
+  - person: Students who study hard pass the test.
+    animal_or_thing: The dog which lives next door is friendly.
+    point: >
+      Students は人なので who。
+      The dog は動物なので which を使うのが基本。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または who と which の基本的な使い分けを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g061_q001
+    question_type: two_choice
+    prompt: I know a boy ___ lives in Osaka.
+    choices:
+      - text: who
+        correct: true
+      - text: which
+        correct: false
+    answer: who
+    explanation: >
+      先行詞 a boy は人。
+      人を説明する関係代名詞なので who を使う。
+    translation: 私は大阪に住んでいる少年を知っている。
+    focus:
+      - who
+      - person_antecedent
+      - subject_relative
+
+  - id: g061_q002
+    question_type: two_choice
+    prompt: I have a book ___ explains grammar clearly.
+    choices:
+      - text: who
+        correct: false
+      - text: which
+        correct: true
+    answer: which
+    explanation: >
+      先行詞 a book は物。
+      物を説明する関係代名詞なので which を使う。
+    translation: 私は文法をわかりやすく説明している本を持っている。
+    focus:
+      - which
+      - thing_antecedent
+      - subject_relative
+
+  - id: g061_q003
+    question_type: two_choice
+    prompt: The woman ___ teaches English is my aunt.
+    choices:
+      - text: who
+        correct: true
+      - text: which
+        correct: false
+    answer: who
+    explanation: >
+      先行詞 The woman は人。
+      人を説明するので who が自然。
+    translation: 英語を教えている女性は私のおばです。
+    focus:
+      - who
+      - person_antecedent
+      - woman
+
+  - id: g061_q004
+    question_type: two_choice
+    prompt: The school ___ stands on the hill is old.
+    choices:
+      - text: who
+        correct: false
+      - text: which
+        correct: true
+    answer: which
+    explanation: >
+      先行詞 The school は物・場所。
+      人ではないので which を使う。
+    translation: 丘の上に建っているその学校は古い。
+    focus:
+      - which
+      - thing_antecedent
+      - school
+
+  - id: g061_q005
+    question_type: two_choice
+    prompt: Students ___ study every day improve quickly.
+    choices:
+      - text: who
+        correct: true
+      - text: which
+        correct: false
+    answer: who
+    explanation: >
+      先行詞 Students は人。
+      人を説明する関係代名詞なので who を使う。
+    translation: 毎日勉強する生徒は早く上達する。
+    focus:
+      - who
+      - person_antecedent
+      - students
+
+  - id: g061_q006
+    question_type: two_choice
+    prompt: This is a machine ___ makes bread.
+    choices:
+      - text: who
+        correct: false
+      - text: which
+        correct: true
+    answer: which
+    explanation: >
+      先行詞 a machine は物。
+      物を説明する関係代名詞なので which を使う。
+    translation: これはパンを作る機械です。
+    focus:
+      - which
+      - thing_antecedent
+      - machine
+
+  - id: g061_q007
+    question_type: two_choice
+    prompt: The doctor ___ helped me was very kind.
+    choices:
+      - text: who
+        correct: true
+      - text: which
+        correct: false
+    answer: who
+    explanation: >
+      先行詞 The doctor は人。
+      人を説明するので who が自然。
+    translation: 私を助けてくれた医者はとても親切だった。
+    focus:
+      - who
+      - person_antecedent
+      - doctor
+
+  - id: g061_q008
+    question_type: two_choice
+    prompt: The bus ___ goes to the station is late.
+    choices:
+      - text: who
+        correct: false
+      - text: which
+        correct: true
+    answer: which
+    explanation: >
+      先行詞 The bus は物。
+      物を説明する関係代名詞なので which を使う。
+    translation: 駅へ行くバスが遅れている。
+    focus:
+      - which
+      - thing_antecedent
+      - bus
+
+  - id: g061_q009
+    question_type: two_choice
+    prompt: I met a singer ___ is famous in Japan.
+    choices:
+      - text: who
+        correct: true
+      - text: which
+        correct: false
+    answer: who
+    explanation: >
+      先行詞 a singer は人。
+      人を説明する関係代名詞なので who を使う。
+    translation: 私は日本で有名な歌手に会った。
+    focus:
+      - who
+      - person_antecedent
+      - singer
+
+  - id: g061_q010
+    question_type: two_choice
+    prompt: I bought a camera ___ is easy to use.
+    choices:
+      - text: who
+        correct: false
+      - text: which
+        correct: true
+    answer: which
+    explanation: >
+      先行詞 a camera は物。
+      物を説明する関係代名詞なので which を使う。
+    translation: 私は使いやすいカメラを買った。
+    focus:
+      - which
+      - thing_antecedent
+      - camera
+
+  - id: g061_q011
+    question_type: two_choice
+    prompt: The dog ___ lives next door is friendly.
+    choices:
+      - text: who
+        correct: false
+      - text: which
+        correct: true
+    answer: which
+    explanation: >
+      先行詞 The dog は動物。
+      基本的には人ではないので which を使う。
+      ペットを人のように扱う場合に who が使われることもあるが、基礎では which と考える。
+    translation: 隣に住んでいる犬は人なつこい。
+    focus:
+      - which
+      - animal_antecedent
+      - dog
+
+  - id: g061_q012
+    question_type: two_choice
+    prompt: The people ___ live here are very friendly.
+    choices:
+      - text: who
+        correct: true
+      - text: which
+        correct: false
+    answer: who
+    explanation: >
+      先行詞 The people は人。
+      人を説明する関係代名詞なので who を使う。
+    translation: ここに住んでいる人々はとても親切だ。
+    focus:
+      - who
+      - person_antecedent
+      - people
+
+common_mistakes:
+  - mistake: 関係代名詞の後ろだけを見て who / which を選ぶ
+    correction: >
+      まず関係代名詞の前にある先行詞を見る。
+      先行詞が人なら who、物・動物なら which が基本。
+  - mistake: book や school に who を使ってしまう
+    correction: >
+      book, school, bus, camera などは人ではない。
+      which を使う。
+  - mistake: people に which を使ってしまう
+    correction: >
+      people は人なので who を使う。
+      The people who live here ... が自然。
+  - mistake: 関係代名詞を「接続詞」とだけ考える
+    correction: >
+      関係代名詞は、前の名詞を後ろから説明する語。
+      a boy who lives in Osaka は「大阪に住んでいる少年」。
+  - mistake: 動物には必ず who を使うと思う
+    correction: >
+      動物は基本的には which。
+      ただし、ペットなどを人のように扱う場合に who が使われることもある。
+
+learning_notes:
+  - >
+    関係代名詞は、名詞を後ろから説明する仕組み。
+    日本語では前から訳すことが多い。
+  - >
+    先行詞が人なら who、物・動物なら which。
+    まずこの基本を反射的に判断できるようにする。
+  - >
+    who lives in Osaka は「大阪に住んでいる」。
+    which explains grammar は「文法を説明している」。
+  - >
+    that も人・物の両方に使えるが、このカードでは who / which の基本対立に集中する。
+
+prerequisites: []
+
+next_items:
+  - g062
+  - g063
+  - g064

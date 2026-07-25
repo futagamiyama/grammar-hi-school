@@ -1,0 +1,334 @@
+id: g010
+file: g010.yaml
+
+title: 時・条件の副詞節
+type: grammar_contrast
+
+section:
+  id: s01
+  title: 時制・相の基本対立
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 未来のことでも現在形を使う副詞節か？
+
+core_concept:
+  adverbial_clause_present:
+    form: when / if / before / after / until / as soon as など + 現在形
+    meaning: 時・条件を表す副詞節では、未来の内容でも現在形を使う
+    image: 未来の予定を述べるのではなく、主節が起きる条件・時点を示す
+    examples:
+      - sentence: I will call you when I get home.
+        ja: 家に着いたら電話します。
+        point: when I get home は「電話する時点」を示す副詞節なので、未来のことでも現在形 get を使う。
+      - sentence: If it rains tomorrow, we will stay home.
+        ja: 明日雨が降れば、私たちは家にいるでしょう。
+        point: if it rains tomorrow は条件を表す副詞節なので、未来のことでも現在形 rains を使う。
+      - sentence: Please wait until the meeting ends.
+        ja: 会議が終わるまで待ってください。
+        point: until the meeting ends は待つ期限を示す副詞節なので、現在形 ends を使う。
+
+  main_clause_future:
+    form: will + 動詞の原形
+    meaning: 主節では、未来の出来事・意志・予測を will で表せる
+    image: 実際に起こる未来の動作や結果を述べる
+    examples:
+      - sentence: I will call you when I get home.
+        ja: 家に着いたら電話します。
+        point: I will call you は主節なので、未来の動作を will call で表している。
+      - sentence: If it rains tomorrow, we will stay home.
+        ja: 明日雨が降れば、私たちは家にいるでしょう。
+        point: we will stay home は主節なので、未来の結果を will stay で表している。
+      - sentence: I will tell her before she leaves.
+        ja: 彼女が出発する前に、私は彼女に伝えます。
+        point: I will tell her は主節なので will を使う。
+
+main_rule: >
+  時・条件を表す副詞節では、未来のことでも現在形を使う。
+  when, if, before, after, until, as soon as, once, in case などの後ろで、
+  「〜したら」「〜する時」「〜するまで」「〜する前に」という条件や時点を表す場合、will ではなく現在形にする。
+  一方、主節では未来の動作や結果を表すために will を使える。
+
+contrast_pairs:
+  - adverbial_clause: I will call you when I get home.
+    main_clause: I will call you when I get home.
+    point: >
+      when I get home は副詞節なので現在形 get。
+      I will call you は主節なので will call。
+
+  - adverbial_clause: If it rains tomorrow, we will stay home.
+    main_clause: If it rains tomorrow, we will stay home.
+    point: >
+      if it rains tomorrow は条件を表す副詞節なので現在形 rains。
+      we will stay home は主節なので will stay。
+
+  - adverbial_clause: Please wait until the meeting ends.
+    main_clause: Please wait until the meeting ends.
+    point: >
+      until the meeting ends は期限を表す副詞節なので現在形 ends。
+      命令文の主節 Please wait が中心になっている。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+fsrs_rating:
+  again:
+    condition: 2問以上ミス、または時・条件の副詞節では未来でも現在形を使うことを説明できない
+  hard:
+    condition: 1問ミス、または正解しても理由を説明できない
+  good:
+    condition: 全問正解。ただしEASY条件は満たさない
+  easy:
+    condition: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g010_q001
+    question_type: two_choice
+    prompt: I will call you when I ___ home.
+    choices:
+      - text: get
+        correct: true
+      - text: will get
+        correct: false
+    answer: get
+    explanation: >
+      when I get home は「家に着いた時」という時を表す副詞節。
+      未来のことでも副詞節では現在形 get を使う。
+    focus:
+      - when_clause
+      - future_in_adverbial_clause
+      - present_simple
+
+  - id: g010_q002
+    question_type: two_choice
+    prompt: When I get home, I ___ you.
+    choices:
+      - text: call
+        correct: false
+      - text: will call
+        correct: true
+    answer: will call
+    explanation: >
+      When I get home は副詞節だが、I will call you は主節。
+      主節では未来の動作を will call で表せる。
+    focus:
+      - main_clause
+      - future_result
+      - will
+
+  - id: g010_q003
+    question_type: two_choice
+    prompt: If it ___ tomorrow, we will stay home.
+    choices:
+      - text: rains
+        correct: true
+      - text: will rain
+        correct: false
+    answer: rains
+    explanation: >
+      If it rains tomorrow は条件を表す副詞節。
+      tomorrow があっても、副詞節の中では現在形 rains を使う。
+    focus:
+      - if_clause
+      - condition
+      - present_simple
+
+  - id: g010_q004
+    question_type: two_choice
+    prompt: If it rains tomorrow, we ___ home.
+    choices:
+      - text: stay
+        correct: false
+      - text: will stay
+        correct: true
+    answer: will stay
+    explanation: >
+      If it rains tomorrow は条件を表す副詞節だが、we will stay home は主節。
+      未来の結果を述べるので will stay が自然。
+    focus:
+      - main_clause
+      - future_result
+      - will
+
+  - id: g010_q005
+    question_type: two_choice
+    prompt: We will start as soon as everyone ___.
+    choices:
+      - text: arrives
+        correct: true
+      - text: will arrive
+        correct: false
+    answer: arrives
+    explanation: >
+      as soon as everyone arrives は「みんなが到着したらすぐに」という時を表す副詞節。
+      未来のことでも現在形 arrives を使う。
+    focus:
+      - as_soon_as
+      - time_clause
+      - present_simple
+
+  - id: g010_q006
+    question_type: two_choice
+    prompt: Please wait until the meeting ___.
+    choices:
+      - text: ends
+        correct: true
+      - text: will end
+        correct: false
+    answer: ends
+    explanation: >
+      until the meeting ends は「会議が終わるまで」という期限を表す副詞節。
+      未来のことでも現在形 ends を使う。
+    focus:
+      - until_clause
+      - time_limit
+      - present_simple
+
+  - id: g010_q007
+    question_type: two_choice
+    prompt: Before you ___, check the door.
+    choices:
+      - text: leave
+        correct: true
+      - text: will leave
+        correct: false
+    answer: leave
+    explanation: >
+      Before you leave は「出発する前に」という時を表す副詞節。
+      未来の行動でも現在形 leave を使う。
+    focus:
+      - before_clause
+      - time_clause
+      - present_simple
+
+  - id: g010_q008
+    question_type: two_choice
+    prompt: After she ___ the report, she will send it to you.
+    choices:
+      - text: finishes
+        correct: true
+      - text: will finish
+        correct: false
+    answer: finishes
+    explanation: >
+      After she finishes the report は「彼女がレポートを終えた後で」という時を表す副詞節。
+      未来のことでも現在形 finishes を使う。
+    focus:
+      - after_clause
+      - time_clause
+      - present_simple
+
+  - id: g010_q009
+    question_type: two_choice
+    prompt: I will tell her the news when I ___ her.
+    choices:
+      - text: see
+        correct: true
+      - text: will see
+        correct: false
+    answer: see
+    explanation: >
+      when I see her は「彼女に会う時」という時を表す副詞節。
+      未来のことでも現在形 see を使う。
+    focus:
+      - when_clause
+      - time_clause
+      - present_simple
+
+  - id: g010_q010
+    question_type: two_choice
+    prompt: You will pass the test if you ___ hard.
+    choices:
+      - text: study
+        correct: true
+      - text: will study
+        correct: false
+    answer: study
+    explanation: >
+      if you study hard は条件を表す副詞節。
+      未来のことでも現在形 study を使う。
+    focus:
+      - if_clause
+      - condition
+      - present_simple
+
+  - id: g010_q011
+    question_type: two_choice
+    prompt: Once you ___ the password, you can use the site.
+    choices:
+      - text: enter
+        correct: true
+      - text: will enter
+        correct: false
+    answer: enter
+    explanation: >
+      Once you enter the password は「パスワードを入力したら」という条件・時点を表す副詞節。
+      未来のことでも現在形 enter を使う。
+    focus:
+      - once_clause
+      - condition
+      - present_simple
+
+  - id: g010_q012
+    question_type: two_choice
+    prompt: Take an umbrella in case it ___.
+    choices:
+      - text: rains
+        correct: true
+      - text: will rain
+        correct: false
+    answer: rains
+    explanation: >
+      in case it rains は「雨が降る場合に備えて」という条件を表す副詞節。
+      未来の可能性でも現在形 rains を使う。
+    focus:
+      - in_case
+      - condition
+      - present_simple
+
+common_mistakes:
+  - mistake: tomorrow や next week があると、必ず will を使うと思う
+    correction: >
+      副詞節の中では、未来のことでも現在形を使う。
+      例: If it rains tomorrow, we will stay home.
+
+  - mistake: if の後ろには絶対に will を置けないと思う
+    correction: >
+      条件を表す副詞節では普通 will を使わない。
+      ただし、if が「〜かどうか」という名詞節を作る場合は別で、I don't know if he will come. のように will を使える。
+
+  - mistake: 文全体に will を1つ入れればよいと思う
+    correction: >
+      主節では will を使えても、時・条件の副詞節では現在形を使う。
+      主節と副詞節を分けて見る必要がある。
+
+learning_notes:
+  - >
+    このカードで見るのは、未来表現そのものではなく、時・条件を表す副詞節の中の時制である。
+  - >
+    when, if, before, after, until, as soon as, once, in case などは、
+    「いつ」「どんな条件で」主節が起きるかを示すことが多い。
+  - >
+    副詞節では未来のことでも現在形を使うが、主節では will を使える。
+  - >
+    if や when が名詞節を作る場合は別問題になる。
+    例: I don't know when he will arrive. は「いつ到着するかを知らない」という名詞節なので、will が使える。
+
+prerequisites:
+  - g005
+  - g006
+  - g007
+
+next_items:
+  - g011
+  - g083
+  - g085
+  - g106

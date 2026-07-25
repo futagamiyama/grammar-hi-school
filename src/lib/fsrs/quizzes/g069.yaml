@@ -1,0 +1,376 @@
+id: g069
+file: g069.yaml
+
+title: 前置詞 + 関係代名詞
+type: construction
+
+section:
+  id: s08
+  title: 関係詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 前置詞を関係代名詞の前に置く形を理解できるか？
+
+core_concept:
+  preposition_plus_which:
+    form: 前置詞 + which
+    meaning: 物・場所・事柄について、前置詞との関係を含めて説明する
+    image: in it, with it, about it などを in which, with which, about which にする
+    examples:
+      - sentence: This is the house in which he lives.
+        ja: これが彼が住んでいる家です。
+        point: he lives in the house の in the house が in which になっている。
+      - sentence: This is the tool with which he fixed the bike.
+        ja: これが彼が自転車を修理した道具です。
+        point: he fixed the bike with the tool の with the tool が with which になっている。
+      - sentence: The topic about which we talked was difficult.
+        ja: 私たちが話した話題は難しかった。
+        point: we talked about the topic の about the topic が about which になっている。
+
+  preposition_plus_whom:
+    form: 前置詞 + whom
+    meaning: 人について、前置詞との関係を含めて説明する
+    image: to him, with her, for them などを to whom, with whom, for whom にする
+    examples:
+      - sentence: The person to whom I spoke was polite.
+        ja: 私が話しかけた人は礼儀正しかった。
+        point: I spoke to the person の to the person が to whom になっている。
+      - sentence: The woman with whom I worked was kind.
+        ja: 私が一緒に働いた女性は親切だった。
+        point: I worked with the woman の with the woman が with whom になっている。
+      - sentence: The man for whom she works is famous.
+        ja: 彼女が働いている相手の男性は有名だ。
+        point: she works for the man の for the man が for whom になっている。
+
+  preposition_at_end:
+    form: 先行詞 + 関係代名詞/省略 + 主語 + 動詞 + 前置詞
+    meaning: 前置詞を文末に残す形
+    image: 口語では前置詞を後ろに残すことが多い
+    examples:
+      - sentence: This is the house which he lives in.
+        ja: これが彼が住んでいる家です。
+        point: in which he lives を which he lives in と言える。
+      - sentence: The person I spoke to was polite.
+        ja: 私が話しかけた人は礼儀正しかった。
+        point: to whom I spoke を I spoke to と言える。
+      - sentence: The topic we talked about was difficult.
+        ja: 私たちが話した話題は難しかった。
+        point: about which we talked を we talked about と言える。
+
+main_rule: >
+  関係代名詞は、前置詞とセットで使われることがある。
+  he lives in the house を関係詞でつなぐと、
+  the house in which he lives になる。
+  I spoke to the person なら、the person to whom I spoke になる。
+  物・場所なら which、人なら whom を使う。
+  前置詞 + which/whom は硬い表現で、入試英文や書き言葉でよく出る。
+  口語では the house he lives in, the person I spoke to のように、
+  前置詞を後ろに残し、目的格の関係代名詞を省略することも多い。
+  ただし、前置詞の直後の which/whom は省略できない。
+
+contrast_pairs:
+  - formal: This is the house in which he lives.
+    informal: This is the house which he lives in.
+    point: >
+      in which は硬い形。
+      which he lives in は前置詞を後ろに残す形。
+      さらに This is the house he lives in. と省略もできる。
+
+  - formal: The person to whom I spoke was polite.
+    informal: The person I spoke to was polite.
+    point: >
+      to whom は硬い形。
+      spoke to の to を後ろに残すと、目的格の whom は省略しやすい。
+
+  - formal: The topic about which we talked was difficult.
+    informal: The topic we talked about was difficult.
+    point: >
+      about which は硬い形。
+      talked about の about を後ろに残す形も自然。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または前置詞 + which/whom と文末前置詞の関係を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g069_q001
+    question_type: two_choice
+    prompt: This is the house ___ which he lives.
+    choices:
+      - text: in
+        correct: true
+      - text: which
+        correct: false
+    answer: in
+    explanation: >
+      he lives in the house という関係。
+      live in の in が必要なので in which he lives が自然。
+    translation: これが彼が住んでいる家です。
+    focus:
+      - preposition_plus_which
+      - in_which
+      - live_in
+
+  - id: g069_q002
+    question_type: two_choice
+    prompt: This is the house which he lives ___.
+    choices:
+      - text: in
+        correct: true
+      - text: at
+        correct: false
+    answer: in
+    explanation: >
+      live in the house の in を文末に残している形。
+      which he lives in が自然。
+    translation: これが彼が住んでいる家です。
+    focus:
+      - preposition_at_end
+      - live_in
+      - house
+
+  - id: g069_q003
+    question_type: two_choice
+    prompt: The person ___ whom I spoke was polite.
+    choices:
+      - text: to
+        correct: true
+      - text: with
+        correct: false
+    answer: to
+    explanation: >
+      I spoke to the person という関係。
+      speak to 人 なので to whom I spoke が自然。
+    translation: 私が話しかけた人は礼儀正しかった。
+    focus:
+      - preposition_plus_whom
+      - to_whom
+      - speak_to
+
+  - id: g069_q004
+    question_type: two_choice
+    prompt: The person I spoke ___ was polite.
+    choices:
+      - text: to
+        correct: true
+      - text: in
+        correct: false
+    answer: to
+    explanation: >
+      spoke to the person の to を文末に残している形。
+      The person I spoke to が自然。
+    translation: 私が話しかけた人は礼儀正しかった。
+    focus:
+      - preposition_at_end
+      - spoke_to
+      - omission_possible
+
+  - id: g069_q005
+    question_type: two_choice
+    prompt: This is the tool ___ which he fixed the bike.
+    choices:
+      - text: with
+        correct: true
+      - text: to
+        correct: false
+    answer: with
+    explanation: >
+      he fixed the bike with the tool という関係。
+      道具を使う意味なので with which が自然。
+    translation: これが彼が自転車を修理した道具です。
+    focus:
+      - preposition_plus_which
+      - with_which
+      - tool
+
+  - id: g069_q006
+    question_type: two_choice
+    prompt: This is the tool which he fixed the bike ___.
+    choices:
+      - text: with
+        correct: true
+      - text: to
+        correct: false
+    answer: with
+    explanation: >
+      fixed the bike with the tool の with を文末に残している。
+      which he fixed the bike with が自然。
+    translation: これが彼が自転車を修理した道具です。
+    focus:
+      - preposition_at_end
+      - with
+      - tool
+
+  - id: g069_q007
+    question_type: two_choice
+    prompt: The woman ___ whom I worked was kind.
+    choices:
+      - text: with
+        correct: true
+      - text: in
+        correct: false
+    answer: with
+    explanation: >
+      I worked with the woman という関係。
+      work with 人 なので with whom I worked が自然。
+    translation: 私が一緒に働いた女性は親切だった。
+    focus:
+      - preposition_plus_whom
+      - with_whom
+      - work_with
+
+  - id: g069_q008
+    question_type: two_choice
+    prompt: The woman I worked ___ was kind.
+    choices:
+      - text: with
+        correct: true
+      - text: for
+        correct: false
+    answer: with
+    explanation: >
+      worked with the woman の with を文末に残している形。
+      The woman I worked with が自然。
+    translation: 私が一緒に働いた女性は親切だった。
+    focus:
+      - preposition_at_end
+      - worked_with
+      - woman
+
+  - id: g069_q009
+    question_type: two_choice
+    prompt: The topic ___ which we talked was difficult.
+    choices:
+      - text: about
+        correct: true
+      - text: by
+        correct: false
+    answer: about
+    explanation: >
+      we talked about the topic という関係。
+      talk about なので about which we talked が自然。
+    translation: 私たちが話した話題は難しかった。
+    focus:
+      - preposition_plus_which
+      - about_which
+      - talk_about
+
+  - id: g069_q010
+    question_type: two_choice
+    prompt: The topic we talked ___ was difficult.
+    choices:
+      - text: about
+        correct: true
+      - text: by
+        correct: false
+    answer: about
+    explanation: >
+      talked about the topic の about を文末に残している形。
+      The topic we talked about が自然。
+    translation: 私たちが話した話題は難しかった。
+    focus:
+      - preposition_at_end
+      - talked_about
+      - topic
+
+  - id: g069_q011
+    question_type: two_choice
+    prompt: This is the problem ___ which we are interested.
+    choices:
+      - text: in
+        correct: true
+      - text: on
+        correct: false
+    answer: in
+    explanation: >
+      we are interested in the problem という関係。
+      be interested in なので in which we are interested が自然。
+    translation: これが私たちが興味を持っている問題です。
+    focus:
+      - preposition_plus_which
+      - interested_in
+      - problem
+
+  - id: g069_q012
+    question_type: two_choice
+    prompt: This is the problem we are interested ___.
+    choices:
+      - text: in
+        correct: true
+      - text: on
+        correct: false
+    answer: in
+    explanation: >
+      interested in the problem の in を文末に残している形。
+      the problem we are interested in が自然。
+    translation: これが私たちが興味を持っている問題です。
+    focus:
+      - preposition_at_end
+      - interested_in
+      - omission_possible
+
+common_mistakes:
+  - mistake: 前置詞を落としてしまう
+    correction: >
+      live in the house, speak to the person, talk about the topic のように、
+      元の動詞句で必要な前置詞は関係詞節でも残る。
+  - mistake: in which の which を省略してしまう
+    correction: >
+      前置詞の直後にある which/whom は省略できない。
+      This is the house in which he lives. が正しい。
+  - mistake: 人に which を使ってしまう
+    correction: >
+      前置詞の後ろでも、人なら whom、物なら which が基本。
+      the person to whom I spoke / the house in which he lives。
+  - mistake: whom を主格の who と混同する
+    correction: >
+      前置詞の目的語になる形は whom。
+      to whom, with whom, for whom のように使う。
+  - mistake: 文末前置詞を必ず誤りだと思う
+    correction: >
+      the house he lives in, the person I spoke to のように、
+      前置詞を文末に残す形は特に口語で自然。
+      ただし、硬い英文では in which, to whom もよく使われる。
+
+learning_notes:
+  - >
+    前置詞 + 関係代名詞は、元の文の前置詞関係を保った形。
+    he lives in the house → the house in which he lives。
+  - >
+    物・場所なら which、人なら whom を使う。
+    in which, with which, about which / to whom, with whom。
+  - >
+    前置詞を後ろに残す形もよく使う。
+    the house he lives in, the topic we talked about。
+  - >
+    省略できるのは、前置詞を後ろに残した目的格関係代名詞。
+    in which の which は省略できない。
+
+prerequisites:
+  - g061
+  - g062
+  - g068
+
+next_items:
+  - g070
+  - g071
+  - g072

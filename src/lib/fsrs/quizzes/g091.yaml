@@ -1,0 +1,390 @@
+id: g091
+file: g091.yaml
+
+title: 比較表現での省略
+type: construction
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: than / as の後ろで省略された語句を補って読めるか？
+
+core_concept:
+  than_auxiliary_substitution:
+    form: 比較級 + than + 主語 + 助動詞
+    meaning: 〜がするよりも...
+    image: 前に出た動詞句を助動詞だけで受ける
+    examples:
+      - sentence: He works harder than I do.
+        ja: 彼は私より一生懸命働く。
+        point: do は work hard を受けている。
+      - sentence: She can swim faster than I can.
+        ja: 彼女は私より速く泳げる。
+        point: can の後ろに swim fast が省略されている。
+      - sentence: He studied harder than I did.
+        ja: 彼は私より一生懸命勉強した。
+        point: did は studied hard を受けている。
+
+  than_be_ellipsis:
+    form: 比較級 + than + 主語 + be動詞
+    meaning: 〜が...であるよりも
+    image: 比較対象の形容詞を省略する
+    examples:
+      - sentence: She is taller than I am.
+        ja: 彼女は私より背が高い。
+        point: am の後ろに tall が省略されている。
+      - sentence: This problem is more difficult than that one is.
+        ja: この問題はあの問題より難しい。
+        point: is の後ろに difficult が省略されている。
+      - sentence: The room was smaller than I expected.
+        ja: その部屋は私が予想したより小さかった。
+        point: expected の後ろに it would be が省略されていると考える。
+
+  than_expected_ellipsis:
+    form: 比較級 + than expected/usual/necessary
+    meaning: 予想より、いつもより、必要以上に
+    image: than の後ろの主語＋beなどを短く省略する
+    examples:
+      - sentence: The test was easier than expected.
+        ja: そのテストは予想より簡単だった。
+        point: than expected = than it was expected to be。
+      - sentence: He arrived earlier than usual.
+        ja: 彼はいつもより早く到着した。
+        point: than usual = than he usually arrived。
+      - sentence: Do not use more water than necessary.
+        ja: 必要以上に水を使ってはいけない。
+        point: than necessary = than is necessary。
+
+  as_possible_ellipsis:
+    form: as + 形容詞/副詞 + as possible/necessary
+    meaning: できるだけ〜、必要なだけ〜
+    image: as の後ろで it is possible / it is necessary が省略される
+    examples:
+      - sentence: Please reply as soon as possible.
+        ja: できるだけ早く返信してください。
+        point: as soon as possible = as soon as it is possible。
+      - sentence: Read as carefully as possible.
+        ja: できるだけ注意深く読みなさい。
+        point: possible の前に it is が省略されている。
+      - sentence: Add as much water as necessary.
+        ja: 必要なだけ水を加えなさい。
+        point: as necessary = as is necessary。
+
+main_rule: >
+  比較表現では、than や as の後ろで同じ語句が省略されることが多い。
+  He works harder than I do. の do は work hard を受けている。
+  She can swim faster than I can. の can の後ろには swim fast が省略されている。
+  She is taller than I am. の am の後ろには tall が省略されている。
+  than expected, than usual, than necessary などは、
+  than の後ろの主語＋be や動詞句が短く省略された形。
+  as soon as possible は as soon as it is possible の省略と考えるとよい。
+  比較表現では、同じ語句を繰り返さず、助動詞・be動詞・短い形容詞だけを残すことが多い。
+
+contrast_pairs:
+  - full: He works harder than I work hard.
+    natural: He works harder than I do.
+    point: >
+      比較節では同じ動詞句 work hard を繰り返さず、
+      do だけで受けるのが自然。
+
+  - full: She is taller than I am tall.
+    natural: She is taller than I am.
+    point: >
+      比較対象の形容詞 tall は省略される。
+      than I am の am は残る。
+
+  - full: Please reply as soon as it is possible.
+    natural: Please reply as soon as possible.
+    point: >
+      as soon as possible は定型表現。
+      it is が省略されていると考えるとわかりやすい。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または比較表現で省略された動詞句・形容詞を補って説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g091_q001
+    question_type: two_choice
+    prompt: He works harder than I ___.
+    choices:
+      - text: do
+        correct: true
+      - text: work
+        correct: false
+    answer: do
+    explanation: >
+      do は work hard を受けている。
+      比較節では同じ動詞句を繰り返さず、助動詞 do だけで受ける。
+    translation: 彼は私より一生懸命働く。
+    focus:
+      - than_auxiliary_substitution
+      - do_substitution
+      - work_hard
+
+  - id: g091_q002
+    question_type: two_choice
+    prompt: She can swim faster than I ___.
+    choices:
+      - text: can
+        correct: true
+      - text: do
+        correct: false
+    answer: can
+    explanation: >
+      前の文に can swim があるので、比較節でも can を使う。
+      can の後ろに swim fast が省略されている。
+    translation: 彼女は私より速く泳げる。
+    focus:
+      - than_auxiliary_substitution
+      - can
+      - swim_fast
+
+  - id: g091_q003
+    question_type: two_choice
+    prompt: He studied harder than I ___.
+    choices:
+      - text: did
+        correct: true
+      - text: do
+        correct: false
+    answer: did
+    explanation: >
+      studied は過去。
+      比較節では did が studied hard を受けている。
+    translation: 彼は私より一生懸命勉強した。
+    focus:
+      - than_auxiliary_substitution
+      - did
+      - past
+
+  - id: g091_q004
+    question_type: two_choice
+    prompt: She is taller than I ___.
+    choices:
+      - text: am
+        correct: true
+      - text: do
+        correct: false
+    answer: am
+    explanation: >
+      tall という形容詞を比較しているので、be動詞 am を使う。
+      am の後ろに tall が省略されている。
+    translation: 彼女は私より背が高い。
+    focus:
+      - than_be_ellipsis
+      - am
+      - tall
+
+  - id: g091_q005
+    question_type: two_choice
+    prompt: This problem is more difficult than that one ___.
+    choices:
+      - text: is
+        correct: true
+      - text: does
+        correct: false
+    answer: is
+    explanation: >
+      difficult は形容詞なので、比較節では be動詞 is を使う。
+      is の後ろに difficult が省略されている。
+    translation: この問題はあの問題より難しい。
+    focus:
+      - than_be_ellipsis
+      - is
+      - difficult
+
+  - id: g091_q006
+    question_type: two_choice
+    prompt: The room was smaller than I ___.
+    choices:
+      - text: expected
+        correct: true
+      - text: expecting
+        correct: false
+    answer: expected
+    explanation: >
+      than I expected で「私が予想したより」。
+      expected の後ろには it would be などが省略されている。
+    translation: その部屋は私が予想したより小さかった。
+    focus:
+      - than_be_ellipsis
+      - expected
+      - comparison_clause
+
+  - id: g091_q007
+    question_type: two_choice
+    prompt: The test was easier than ___.
+    choices:
+      - text: expected
+        correct: true
+      - text: expecting
+        correct: false
+    answer: expected
+    explanation: >
+      than expected は「予想より」。
+      than it was expected to be のような内容が省略されている。
+    translation: そのテストは予想より簡単だった。
+    focus:
+      - than_expected_ellipsis
+      - expected
+      - reduced_comparison
+
+  - id: g091_q008
+    question_type: two_choice
+    prompt: He arrived earlier than ___.
+    choices:
+      - text: usual
+        correct: true
+      - text: usually
+        correct: false
+    answer: usual
+    explanation: >
+      than usual は「いつもより」。
+      usual は名詞的に使われる定型表現。
+    translation: 彼はいつもより早く到着した。
+    focus:
+      - than_expected_ellipsis
+      - than_usual
+      - usual
+
+  - id: g091_q009
+    question_type: two_choice
+    prompt: Do not use more water than ___.
+    choices:
+      - text: necessary
+        correct: true
+      - text: necessity
+        correct: false
+    answer: necessary
+    explanation: >
+      than necessary は「必要以上に」。
+      than is necessary のように is が省略されていると考える。
+    translation: 必要以上に水を使ってはいけない。
+    focus:
+      - than_expected_ellipsis
+      - than_necessary
+      - necessary
+
+  - id: g091_q010
+    question_type: two_choice
+    prompt: Please reply as soon as ___.
+    choices:
+      - text: possible
+        correct: true
+      - text: possibly
+        correct: false
+    answer: possible
+    explanation: >
+      as soon as possible は「できるだけ早く」。
+      as soon as it is possible の it is が省略されていると考える。
+    translation: できるだけ早く返信してください。
+    focus:
+      - as_possible_ellipsis
+      - as_soon_as_possible
+      - possible
+
+  - id: g091_q011
+    question_type: two_choice
+    prompt: Read as carefully as ___.
+    choices:
+      - text: possible
+        correct: true
+      - text: possibility
+        correct: false
+    answer: possible
+    explanation: >
+      as carefully as possible は「できるだけ注意深く」。
+      possible の前に it is が省略されている。
+    translation: できるだけ注意深く読みなさい。
+    focus:
+      - as_possible_ellipsis
+      - as_carefully_as_possible
+      - possible
+
+  - id: g091_q012
+    question_type: two_choice
+    prompt: Add as much water as ___.
+    choices:
+      - text: necessary
+        correct: true
+      - text: necessity
+        correct: false
+    answer: necessary
+    explanation: >
+      as much water as necessary は「必要なだけの水」。
+      as necessary は as is necessary の省略と考えるとよい。
+    translation: 必要なだけ水を加えなさい。
+    focus:
+      - as_possible_ellipsis
+      - as_necessary
+      - much_water
+
+common_mistakes:
+  - mistake: He works harder than I work. と繰り返してしまう
+    correction: >
+      比較節では同じ動詞句を繰り返さず、do で受けることが多い。
+      He works harder than I do. が自然。
+  - mistake: She can swim faster than I do. としてしまう
+    correction: >
+      前に can があるなら、比較節でも can を使う。
+      She can swim faster than I can. が自然。
+  - mistake: She is taller than I do. としてしまう
+    correction: >
+      tall は形容詞なので be動詞で受ける。
+      She is taller than I am. が正しい。
+  - mistake: than expected を「期待したより」とだけ機械的に読む
+    correction: >
+      than expected は「予想より」。
+      than it was expected to be の省略と考えると読みやすい。
+  - mistake: as soon as possible を丸暗記だけで処理する
+    correction: >
+      as soon as possible は as soon as it is possible の省略。
+      possible は形容詞なので、possibly にはしない。
+
+learning_notes:
+  - >
+    比較節では、同じ動詞句を繰り返さず、do / does / did や助動詞だけで受ける。
+  - >
+    形容詞を比較している時は be動詞で受ける。
+    She is taller than I am. の形。
+  - >
+    than expected / than usual / than necessary は、短い省略表現としてよく出る。
+  - >
+    as soon as possible / as carefully as possible は、
+    it is possible が省略された形と考えるとわかりやすい。
+  - >
+    比較表現では、than / as の後ろに何が省略されているかを補って読む。
+
+prerequisites:
+  - g053
+  - g056
+  - g057
+  - g089
+  - g090
+
+next_items:
+  - g092
+  - g093
+  - g094

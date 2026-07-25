@@ -1,0 +1,350 @@
+id: g038
+file: g038.yaml
+
+title: 感情を表す受動態
+type: construction
+
+section:
+  id: s04
+  title: 受動態・態
+
+level: basic
+target: 高校英文法基礎
+
+core_question: excited, interested, surprised などを正しく使えるか？
+
+core_concept:
+  emotion_passive:
+    form: be + 感情を表す過去分詞
+    meaning: 人が何かによって感情を引き起こされている状態を表す
+    image: 人が感情を受ける側になる
+    examples:
+      - sentence: I am interested in science.
+        ja: 私は科学に興味がある。
+        point: 私が興味を引き起こされている状態。
+      - sentence: She was surprised at the news.
+        ja: 彼女はその知らせに驚いた。
+        point: 彼女が驚かされた状態。
+      - sentence: We were excited about the game.
+        ja: 私たちはその試合に興奮した。
+        point: 私たちが興奮させられた状態。
+
+  emotion_ing_adjective:
+    form: 感情を引き起こすもの + be + -ing 形容詞
+    meaning: 物・出来事・人が、感情を引き起こす性質を持つことを表す
+    image: それが人を〜させる
+    examples:
+      - sentence: The movie was exciting.
+        ja: その映画はわくわくするものだった。
+        point: 映画が人を興奮させる性質を持つ。
+      - sentence: The story is interesting.
+        ja: その話は面白い。
+        point: 話が人に興味を持たせる。
+      - sentence: The result was surprising.
+        ja: その結果は驚くべきものだった。
+        point: 結果が人を驚かせる性質を持つ。
+
+main_rule: >
+  感情を表す語では、人が主語なら過去分詞形を使うことが多い。
+  I am interested. は「私は興味を持たされている状態」。
+  I am excited. は「私は興奮している状態」。
+  物・出来事が主語で、人に感情を起こさせる性質を言うなら -ing 形を使う。
+  The movie is exciting. は「その映画は人を興奮させる」。
+  日本語ではどちらも「面白い」「驚いた」などと訳せるため、
+  主語が感情を受ける人か、感情を引き起こすものかで判断する。
+
+contrast_pairs:
+  - person_feeling: I am interested in the book.
+    thing_causing_feeling: The book is interesting.
+    point: >
+      I が主語なら interested。
+      The book が主語なら interesting。
+
+  - person_feeling: She was surprised at the news.
+    thing_causing_feeling: The news was surprising.
+    point: >
+      She は驚かされた人なので surprised。
+      The news は人を驚かせるものなので surprising。
+
+  - person_feeling: We were excited about the game.
+    thing_causing_feeling: The game was exciting.
+    point: >
+      We は興奮した人なので excited。
+      The game は興奮を引き起こすものなので exciting。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または感情を受ける人と感情を引き起こすものの違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g038_q001
+    question_type: two_choice
+    prompt: I am ___ in history.
+    choices:
+      - text: interested
+        correct: true
+      - text: interesting
+        correct: false
+    answer: interested
+    explanation: >
+      主語 I は興味を持っている人。
+      人が感情を受けている状態なので interested が自然。
+    translation: 私は歴史に興味がある。
+    focus:
+      - person_feeling
+      - interested
+      - emotion_passive
+
+  - id: g038_q002
+    question_type: two_choice
+    prompt: History is ___ to me.
+    choices:
+      - text: interested
+        correct: false
+      - text: interesting
+        correct: true
+    answer: interesting
+    explanation: >
+      主語 History は人に興味を持たせるもの。
+      感情を引き起こす性質なので interesting が自然。
+    translation: 歴史は私にとって面白い。
+    focus:
+      - thing_causing_feeling
+      - interesting
+      - ing_adjective
+
+  - id: g038_q003
+    question_type: two_choice
+    prompt: She was ___ at the news.
+    choices:
+      - text: surprised
+        correct: true
+      - text: surprising
+        correct: false
+    answer: surprised
+    explanation: >
+      主語 She は驚いた人。
+      感情を受けた側なので surprised が自然。
+    translation: 彼女はその知らせに驚いた。
+    focus:
+      - person_feeling
+      - surprised
+      - emotion_passive
+
+  - id: g038_q004
+    question_type: two_choice
+    prompt: The news was ___.
+    choices:
+      - text: surprised
+        correct: false
+      - text: surprising
+        correct: true
+    answer: surprising
+    explanation: >
+      主語 The news は人を驚かせるもの。
+      感情を引き起こす性質なので surprising が自然。
+    translation: その知らせは驚くべきものだった。
+    focus:
+      - thing_causing_feeling
+      - surprising
+      - ing_adjective
+
+  - id: g038_q005
+    question_type: two_choice
+    prompt: We were ___ about the game.
+    choices:
+      - text: excited
+        correct: true
+      - text: exciting
+        correct: false
+    answer: excited
+    explanation: >
+      主語 We は興奮した人たち。
+      感情を受けた側なので excited が自然。
+    translation: 私たちはその試合に興奮した。
+    focus:
+      - person_feeling
+      - excited
+      - emotion_passive
+
+  - id: g038_q006
+    question_type: two_choice
+    prompt: The game was ___.
+    choices:
+      - text: excited
+        correct: false
+      - text: exciting
+        correct: true
+    answer: exciting
+    explanation: >
+      主語 The game は人を興奮させるもの。
+      感情を引き起こす性質なので exciting が自然。
+    translation: その試合はわくわくするものだった。
+    focus:
+      - thing_causing_feeling
+      - exciting
+      - ing_adjective
+
+  - id: g038_q007
+    question_type: two_choice
+    prompt: He was ___ with the result.
+    choices:
+      - text: disappointed
+        correct: true
+      - text: disappointing
+        correct: false
+    answer: disappointed
+    explanation: >
+      主語 He はがっかりした人。
+      感情を受けた側なので disappointed が自然。
+    translation: 彼はその結果にがっかりした。
+    focus:
+      - person_feeling
+      - disappointed
+      - emotion_passive
+
+  - id: g038_q008
+    question_type: two_choice
+    prompt: The result was ___.
+    choices:
+      - text: disappointed
+        correct: false
+      - text: disappointing
+        correct: true
+    answer: disappointing
+    explanation: >
+      主語 The result は人をがっかりさせるもの。
+      感情を引き起こす性質なので disappointing が自然。
+    translation: その結果はがっかりするものだった。
+    focus:
+      - thing_causing_feeling
+      - disappointing
+      - ing_adjective
+
+  - id: g038_q009
+    question_type: two_choice
+    prompt: The children were ___ by the story.
+    choices:
+      - text: amused
+        correct: true
+      - text: amusing
+        correct: false
+    answer: amused
+    explanation: >
+      主語 The children は楽しませられた側。
+      by the story もあるので、過去分詞 amused が自然。
+    translation: 子どもたちはその話で楽しんだ。
+    focus:
+      - person_feeling
+      - amused
+      - by_phrase
+
+  - id: g038_q010
+    question_type: two_choice
+    prompt: The story was ___.
+    choices:
+      - text: amused
+        correct: false
+      - text: amusing
+        correct: true
+    answer: amusing
+    explanation: >
+      主語 The story は人を楽しませるもの。
+      感情を引き起こす性質なので amusing が自然。
+    translation: その話は面白かった。
+    focus:
+      - thing_causing_feeling
+      - amusing
+      - ing_adjective
+
+  - id: g038_q011
+    question_type: two_choice
+    prompt: I was ___ with his answer.
+    choices:
+      - text: satisfied
+        correct: true
+      - text: satisfying
+        correct: false
+    answer: satisfied
+    explanation: >
+      主語 I は満足した人。
+      感情を受けた側なので satisfied が自然。
+    translation: 私は彼の答えに満足した。
+    focus:
+      - person_feeling
+      - satisfied
+      - emotion_passive
+
+  - id: g038_q012
+    question_type: two_choice
+    prompt: His answer was ___.
+    choices:
+      - text: satisfied
+        correct: false
+      - text: satisfying
+        correct: true
+    answer: satisfying
+    explanation: >
+      主語 His answer は人を満足させるもの。
+      感情を引き起こす性質なので satisfying が自然。
+    translation: 彼の答えは満足のいくものだった。
+    focus:
+      - thing_causing_feeling
+      - satisfying
+      - ing_adjective
+
+common_mistakes:
+  - mistake: I am interesting. と言ってしまう
+    correction: >
+      I am interesting. は「私は人に興味を起こさせる人だ」という意味になる。
+      「私は興味がある」なら I am interested. とする。
+  - mistake: The movie was excited. と言ってしまう
+    correction: >
+      映画が興奮しているのではなく、映画が人を興奮させる。
+      The movie was exciting. が自然。
+  - mistake: 日本語の「面白い」だけで interesting/interested を選ぶ
+    correction: >
+      主語が人なら interested、主語が物・出来事なら interesting が基本。
+      日本語訳ではなく主語の役割で判断する。
+  - mistake: by や at, in, about, with の前置詞を無視する
+    correction: >
+      surprised at, interested in, excited about, disappointed with,
+      satisfied with など、感情表現にはよく使う前置詞がある。
+
+learning_notes:
+  - >
+    感情を表す過去分詞は、形は受動態だが、
+    実際には「感情の状態」を表す形容詞のように使われる。
+  - >
+    人が主語なら interested, excited, surprised, disappointed, satisfied などを使う。
+  - >
+    物・出来事が主語なら interesting, exciting, surprising, disappointing, satisfying などを使う。
+  - >
+    「人が感情を受ける側」「物が感情を起こす側」と考えると、
+    -ed と -ing の違いが見えやすい。
+
+prerequisites:
+  - g031
+  - g032
+
+next_items:
+  - g039
+  - g040
+  - g041

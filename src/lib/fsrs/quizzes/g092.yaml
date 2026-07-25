@@ -1,0 +1,397 @@
+id: g092
+file: g092.yaml
+
+title: if any / if ever / if anything
+type: construction
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: if any / if ever / if anything などの短い省略表現を読めるか？
+
+core_concept:
+  if_any:
+    form: few/little + 名詞, if any
+    meaning: あるとしてもほとんどない
+    image: if there are any / if there is any が省略されている
+    examples:
+      - sentence: There are few mistakes, if any.
+        ja: 間違いは、あるとしてもほとんどない。
+        point: if any = if there are any mistakes。
+      - sentence: He has little money, if any.
+        ja: 彼にはお金が、あるとしてもほとんどない。
+        point: if any = if he has any money。
+      - sentence: Few people, if any, understood the lecture.
+        ja: その講義を理解した人は、いたとしてもほとんどいなかった。
+        point: if any が few people を補足している。
+
+  if_ever:
+    form: rarely/seldom/few + if ever
+    meaning: あるとしてもめったにない
+    image: if it ever happens / if he ever does が省略されている
+    examples:
+      - sentence: He rarely, if ever, makes mistakes.
+        ja: 彼は間違いをすることが、あるとしてもめったにない。
+        point: if ever = if he ever makes mistakes。
+      - sentence: She seldom, if ever, complains.
+        ja: 彼女は不平を言うことが、あるとしてもめったにない。
+        point: seldom と if ever が一緒に使われている。
+      - sentence: Such chances come few, if ever.
+        ja: そのような機会は、あるとしてもめったに来ない。
+        point: if ever で「あるとしても」の意味を加えている。
+
+  if_anything:
+    form: if anything, 文
+    meaning: むしろ、どちらかと言えば
+    image: 前の予想と反対方向に少し修正する
+    examples:
+      - sentence: The problem is not easier. If anything, it is harder.
+        ja: その問題は簡単ではない。むしろ難しくなっている。
+        point: if anything は「むしろ」「どちらかと言えば」。
+      - sentence: He is not lazy. If anything, he works too hard.
+        ja: 彼は怠け者ではない。むしろ働きすぎだ。
+        point: 前の否定を受けて、反対方向に補足する。
+      - sentence: Prices have not fallen. If anything, they have risen.
+        ja: 物価は下がっていない。むしろ上がっている。
+        point: 予想と逆の内容を述べている。
+
+  if_at_all:
+    form: if at all
+    meaning: そもそも〜するとしても、仮に〜するとしても
+    image: 成立する可能性自体が低いことを示す
+    examples:
+      - sentence: He will come late, if at all.
+        ja: 彼は来るとしても遅れて来るだろう。
+        point: if at all = if he comes at all。
+      - sentence: The effect is small, if it exists at all.
+        ja: その効果は、そもそも存在するとしても小さい。
+        point: at all が存在そのものへの疑いを示す。
+      - sentence: We should use this method carefully, if at all.
+        ja: この方法を使うとしても、慎重に使うべきだ。
+        point: 使うかどうか自体が疑わしい。
+
+main_rule: >
+  if any / if ever / if anything / if at all は、短いが意味の重い省略表現。
+  if any は if there are any / if there is any の省略で、
+  「あるとしても」という意味を表す。
+  There are few mistakes, if any. は
+  「間違いは、あるとしてもほとんどない」。
+  if ever は if it ever happens / if he ever does などの省略で、
+  「あるとしてもめったにない」。
+  He rarely, if ever, makes mistakes. は
+  「彼は間違いをすることが、あるとしてもめったにない」。
+  if anything は「むしろ」「どちらかと言えば」という意味で、
+  前の内容を否定したあと、反対方向に補足する。
+  if at all は「そもそも〜するとしても」という意味で、
+  その出来事や状態が成立する可能性自体が低いことを表す。
+
+contrast_pairs:
+  - if_any: There are few mistakes, if any.
+    full_form: There are few mistakes, if there are any mistakes.
+    point: >
+      if any は if there are any mistakes の省略。
+      「あるとしてもほとんどない」と読む。
+
+  - if_ever: He rarely, if ever, makes mistakes.
+    ordinary: He rarely makes mistakes.
+    point: >
+      if ever を加えると「あるとしても」という含みが強くなる。
+      rarely と一緒に使われやすい。
+
+  - if_anything: The problem is not easier. If anything, it is harder.
+    wrong_reading: The problem is easier.
+    point: >
+      if anything は「もし何かなら」ではなく、
+      「むしろ」「どちらかと言えば」と読む。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または if any / if ever / if anything の意味の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g092_q001
+    question_type: two_choice
+    prompt: There are few mistakes, if ___.
+    choices:
+      - text: any
+        correct: true
+      - text: ever
+        correct: false
+    answer: any
+    explanation: >
+      few mistakes, if any で「間違いは、あるとしてもほとんどない」。
+      if any は if there are any mistakes の省略。
+    translation: 間違いは、あるとしてもほとんどない。
+    focus:
+      - if_any
+      - few
+      - omission
+
+  - id: g092_q002
+    question_type: two_choice
+    prompt: He has little money, if ___.
+    choices:
+      - text: any
+        correct: true
+      - text: ever
+        correct: false
+    answer: any
+    explanation: >
+      little money, if any で「お金は、あるとしてもほとんどない」。
+      any は money を受けている。
+    translation: 彼にはお金が、あるとしてもほとんどない。
+    focus:
+      - if_any
+      - little
+      - money
+
+  - id: g092_q003
+    question_type: two_choice
+    prompt: Few people, if ___, understood the lecture.
+    choices:
+      - text: any
+        correct: true
+      - text: anything
+        correct: false
+    answer: any
+    explanation: >
+      Few people, if any, で「人は、いたとしてもほとんどいない」。
+      if any が few people を補足している。
+    translation: その講義を理解した人は、いたとしてもほとんどいなかった。
+    focus:
+      - if_any
+      - few_people
+      - lecture
+
+  - id: g092_q004
+    question_type: two_choice
+    prompt: He rarely, if ___, makes mistakes.
+    choices:
+      - text: ever
+        correct: true
+      - text: any
+        correct: false
+    answer: ever
+    explanation: >
+      rarely, if ever で「あるとしてもめったにない」。
+      if ever は if he ever makes mistakes の省略。
+    translation: 彼は間違いをすることが、あるとしてもめったにない。
+    focus:
+      - if_ever
+      - rarely
+      - mistakes
+
+  - id: g092_q005
+    question_type: two_choice
+    prompt: She seldom, if ___, complains.
+    choices:
+      - text: ever
+        correct: true
+      - text: any
+        correct: false
+    answer: ever
+    explanation: >
+      seldom, if ever は「あるとしてもめったに〜しない」。
+      complains という行動の頻度を表しているので ever を使う。
+    translation: 彼女は不平を言うことが、あるとしてもめったにない。
+    focus:
+      - if_ever
+      - seldom
+      - complains
+
+  - id: g092_q006
+    question_type: two_choice
+    prompt: Such chances come few, if ___.
+    choices:
+      - text: ever
+        correct: true
+      - text: any
+        correct: false
+    answer: ever
+    explanation: >
+      few, if ever は「あるとしてもめったにない」。
+      come という出来事の頻度を表しているので ever が自然。
+    translation: そのような機会は、あるとしてもめったに来ない。
+    focus:
+      - if_ever
+      - chances
+      - rare_event
+
+  - id: g092_q007
+    question_type: two_choice
+    prompt: The problem is not easier. If ___, it is harder.
+    choices:
+      - text: anything
+        correct: true
+      - text: any
+        correct: false
+    answer: anything
+    explanation: >
+      If anything は「むしろ」「どちらかと言えば」。
+      簡単ではなく、むしろ難しいという流れ。
+    translation: その問題は簡単ではない。むしろ難しくなっている。
+    focus:
+      - if_anything
+      - rather
+      - harder
+
+  - id: g092_q008
+    question_type: two_choice
+    prompt: He is not lazy. If ___, he works too hard.
+    choices:
+      - text: anything
+        correct: true
+      - text: ever
+        correct: false
+    answer: anything
+    explanation: >
+      If anything は「むしろ」。
+      怠け者ではなく、むしろ働きすぎだという意味。
+    translation: 彼は怠け者ではない。むしろ働きすぎだ。
+    focus:
+      - if_anything
+      - not_lazy
+      - works_too_hard
+
+  - id: g092_q009
+    question_type: two_choice
+    prompt: Prices have not fallen. If ___, they have risen.
+    choices:
+      - text: anything
+        correct: true
+      - text: any
+        correct: false
+    answer: anything
+    explanation: >
+      If anything は「むしろ」。
+      下がったのではなく、むしろ上がったという意味。
+    translation: 物価は下がっていない。むしろ上がっている。
+    focus:
+      - if_anything
+      - prices
+      - risen
+
+  - id: g092_q010
+    question_type: two_choice
+    prompt: He will come late, if ___ all.
+    choices:
+      - text: at
+        correct: true
+      - text: in
+        correct: false
+    answer: at
+    explanation: >
+      if at all は「そもそも〜するとしても」。
+      彼は来るとしても遅れて来るだろう、という意味。
+    translation: 彼は来るとしても遅れて来るだろう。
+    focus:
+      - if_at_all
+      - at_all
+      - come_late
+
+  - id: g092_q011
+    question_type: two_choice
+    prompt: The effect is small, if it exists ___ all.
+    choices:
+      - text: at
+        correct: true
+      - text: in
+        correct: false
+    answer: at
+    explanation: >
+      if it exists at all で「そもそも存在するとしても」。
+      at all は存在そのものへの疑いを示している。
+    translation: その効果は、そもそも存在するとしても小さい。
+    focus:
+      - if_at_all
+      - exists_at_all
+      - effect
+
+  - id: g092_q012
+    question_type: two_choice
+    prompt: We should use this method carefully, if ___ all.
+    choices:
+      - text: at
+        correct: true
+      - text: for
+        correct: false
+    answer: at
+    explanation: >
+      if at all は「使うとしても」。
+      この方法を使うかどうか自体に慎重な態度を示している。
+    translation: この方法を使うとしても、慎重に使うべきだ。
+    focus:
+      - if_at_all
+      - carefully
+      - method
+
+common_mistakes:
+  - mistake: if any を「もし何かなら」と直訳する
+    correction: >
+      if any は「あるとしても」。
+      few / little と一緒に使われると「あるとしてもほとんどない」と読む。
+  - mistake: if ever を「いつかなら」と読む
+    correction: >
+      if ever は「あるとしても」。
+      rarely / seldom と一緒に「あるとしてもめったにない」という意味になる。
+  - mistake: if anything を「もし何かなら」と読む
+    correction: >
+      if anything は「むしろ」「どちらかと言えば」。
+      前の内容を修正して、反対方向に補足する。
+  - mistake: if at all を「すべてにおいて」と読む
+    correction: >
+      if at all は「そもそも〜するとしても」。
+      起こる可能性・存在可能性が低いことを示す。
+  - mistake: any と ever を区別しない
+    correction: >
+      any は物・量・人数などの有無を受ける。
+      ever は出来事や行動が起こるかどうかを受ける。
+
+learning_notes:
+  - >
+    if any は「あるとしても」。
+    few / little と一緒に出ることが多い。
+  - >
+    if ever は「あるとしても」だが、行動・出来事の頻度を表す。
+    rarely / seldom と相性がよい。
+  - >
+    if anything は「むしろ」「どちらかと言えば」。
+    直訳しないことが重要。
+  - >
+    if at all は「そもそも〜するとしても」。
+    成立する可能性そのものが低い時に使う。
+  - >
+    これらは短いので読み飛ばしやすいが、文全体の評価を大きく変える。
+
+prerequisites:
+  - g049
+  - g050
+  - g052
+  - g089
+  - g091
+
+next_items:
+  - g093
+  - g094
+  - g095

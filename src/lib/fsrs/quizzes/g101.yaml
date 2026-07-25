@@ -1,0 +1,395 @@
+id: g101
+file: g101.yaml
+
+title: 同格の that
+type: grammar_contrast
+
+section:
+  id: s11
+  title: 名詞節・接続詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: the fact that ... の that が、前の名詞の内容を説明する同格の that だと読めるか？
+
+core_concept:
+  appositive_that:
+    form: 抽象名詞 + that + 完全文
+    meaning: 〜という事実・考え・知らせ・可能性
+    image: that以下が、前の抽象名詞の中身を説明する
+    examples:
+      - sentence: The fact that he lied shocked us.
+        ja: 彼がうそをついたという事実は私たちに衝撃を与えた。
+        point: that he lied が the fact の中身を説明している。
+      - sentence: The news that she had won surprised everyone.
+        ja: 彼女が勝ったという知らせは皆を驚かせた。
+        point: that she had won が the news の内容。
+      - sentence: There is a possibility that he will come.
+        ja: 彼が来る可能性がある。
+        point: that he will come が possibility の内容。
+
+  abstract_nouns:
+    form: fact / idea / news / belief / possibility / claim / rumor / hope + that
+    meaning: 〜という事実・考え・知らせ・信念・可能性・主張・うわさ・希望
+    image: 抽象名詞は中身を that節で説明できる
+    examples:
+      - sentence: I like the idea that everyone can learn.
+        ja: 誰でも学べるという考えが私は好きだ。
+        point: the idea の中身が that everyone can learn。
+      - sentence: The belief that money solves everything is dangerous.
+        ja: お金がすべてを解決するという信念は危険だ。
+        point: belief の内容を that節が説明している。
+      - sentence: The claim that the product is safe is questionable.
+        ja: その製品は安全だという主張は疑わしい。
+        point: claim の内容を that節が説明している。
+
+  relative_that:
+    form: 名詞 + that + 不完全な文
+    meaning: 〜する名詞、〜を...した名詞
+    image: that が後ろの文の主語・目的語の役割をする
+    examples:
+      - sentence: The book that I bought yesterday was expensive.
+        ja: 私が昨日買った本は高かった。
+        point: that は bought の目的語。関係代名詞。
+      - sentence: The man that lives next door is a doctor.
+        ja: 隣に住んでいる男性は医者だ。
+        point: that は lives の主語。関係代名詞。
+      - sentence: The idea that he proposed was interesting.
+        ja: 彼が提案した考えは面白かった。
+        point: that は proposed の目的語。関係代名詞で、同格ではない。
+
+  appositive_vs_relative:
+    form: 名詞 + that + 完全文 / 名詞 + that + 不完全文
+    meaning: 〜という名詞 / 〜する名詞
+    image: that以下が完全なら同格、不完全なら関係代名詞を疑う
+    examples:
+      - sentence: The idea that he is honest is wrong.
+        ja: 彼が正直だという考えは間違っている。
+        point: he is honest は完全文なので、that は同格。
+      - sentence: The idea that he proposed was wrong.
+        ja: 彼が提案した考えは間違っていた。
+        point: he proposed は目的語が欠けているので、that は関係代名詞。
+      - sentence: The rumor that she quit her job was false.
+        ja: 彼女が仕事を辞めたといううわさは誤りだった。
+        point: she quit her job は完全文なので、that は同格。
+
+main_rule: >
+  同格の that は、前にある抽象名詞の内容を説明する that。
+  The fact that he lied shocked us. では、
+  that he lied が the fact の中身を説明し、
+  「彼がうそをついたという事実」という意味になる。
+  同格の that の後ろには、主語と動詞がそろった完全文が来る。
+  よく使われる名詞は fact, idea, news, belief, possibility, claim, rumor, hope など。
+  一方、関係代名詞の that は、後ろの文の主語や目的語の役割をする。
+  The book that I bought yesterday では、that は bought の目的語。
+  同格か関係代名詞かを見分けるには、that 以下が完全文かどうかを見る。
+  完全文なら同格、不完全なら関係代名詞の可能性が高い。
+
+contrast_pairs:
+  - appositive: The idea that he is honest is wrong.
+    relative: The idea that he proposed was wrong.
+    point: >
+      he is honest は完全文なので、that は同格。
+      he proposed は目的語が欠けているので、that は関係代名詞。
+
+  - appositive: The news that she had won surprised everyone.
+    relative: The news that I heard surprised everyone.
+    point: >
+      she had won は完全文なので、勝ったという知らせ。
+      I heard は目的語が欠けているので、私が聞いた知らせ。
+
+  - appositive: The fact that he lied shocked us.
+    relative_like: The fact that we discovered shocked us.
+    point: >
+      he lied は完全文なので、うそをついたという事実。
+      we discovered は目的語が欠けており、私たちが発見した事実。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または同格の that と関係代名詞 that の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g101_q001
+    question_type: two_choice
+    prompt: The fact ___ he lied shocked us.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      The fact that he lied で「彼がうそをついたという事実」。
+      that he lied が fact の中身を説明している。
+    translation: 彼がうそをついたという事実は私たちに衝撃を与えた。
+    focus:
+      - appositive_that
+      - fact_that
+      - complete_clause
+
+  - id: g101_q002
+    question_type: two_choice
+    prompt: The news ___ she had won surprised everyone.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      The news that she had won で「彼女が勝ったという知らせ」。
+      she had won は完全文なので、that は同格。
+    translation: 彼女が勝ったという知らせは皆を驚かせた。
+    focus:
+      - appositive_that
+      - news_that
+      - complete_clause
+
+  - id: g101_q003
+    question_type: two_choice
+    prompt: There is a possibility ___ he will come.
+    choices:
+      - text: that
+        correct: true
+      - text: which
+        correct: false
+    answer: that
+    explanation: >
+      a possibility that he will come で「彼が来る可能性」。
+      that節が possibility の内容を説明している。
+    translation: 彼が来る可能性がある。
+    focus:
+      - appositive_that
+      - possibility_that
+      - future
+
+  - id: g101_q004
+    question_type: two_choice
+    prompt: I like the idea ___ everyone can learn.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      the idea that everyone can learn で「誰でも学べるという考え」。
+      everyone can learn は完全文。
+    translation: 誰でも学べるという考えが私は好きだ。
+    focus:
+      - abstract_nouns
+      - idea_that
+      - complete_clause
+
+  - id: g101_q005
+    question_type: two_choice
+    prompt: The belief ___ money solves everything is dangerous.
+    choices:
+      - text: that
+        correct: true
+      - text: which
+        correct: false
+    answer: that
+    explanation: >
+      the belief that money solves everything で
+      「お金がすべてを解決するという信念」。
+      that節が belief の内容を説明している。
+    translation: お金がすべてを解決するという信念は危険だ。
+    focus:
+      - abstract_nouns
+      - belief_that
+      - money
+
+  - id: g101_q006
+    question_type: two_choice
+    prompt: The claim ___ the product is safe is questionable.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      the claim that the product is safe で「その製品は安全だという主張」。
+      the product is safe は完全文なので、that は同格。
+    translation: その製品は安全だという主張は疑わしい。
+    focus:
+      - abstract_nouns
+      - claim_that
+      - safe
+
+  - id: g101_q007
+    question_type: two_choice
+    prompt: The rumor ___ she quit her job was false.
+    choices:
+      - text: that
+        correct: true
+      - text: which
+        correct: false
+    answer: that
+    explanation: >
+      the rumor that she quit her job で「彼女が仕事を辞めたといううわさ」。
+      she quit her job は完全文。
+    translation: 彼女が仕事を辞めたといううわさは誤りだった。
+    focus:
+      - abstract_nouns
+      - rumor_that
+      - complete_clause
+
+  - id: g101_q008
+    question_type: two_choice
+    prompt: The book ___ I bought yesterday was expensive.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      the book that I bought yesterday は関係代名詞の that。
+      I bought の目的語が欠けているので、同格ではない。
+    translation: 私が昨日買った本は高かった。
+    focus:
+      - relative_that
+      - object_gap
+      - book
+
+  - id: g101_q009
+    question_type: two_choice
+    prompt: The man ___ lives next door is a doctor.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      the man that lives next door は関係代名詞の that。
+      that が lives の主語の役割をしている。
+    translation: 隣に住んでいる男性は医者だ。
+    focus:
+      - relative_that
+      - subject_gap
+      - man
+
+  - id: g101_q010
+    question_type: two_choice
+    prompt: The idea that he is honest is wrong.
+    choices:
+      - text: 同格のthat
+        correct: true
+      - text: 関係代名詞のthat
+        correct: false
+    answer: 同格のthat
+    explanation: >
+      he is honest は主語と動詞がそろった完全文。
+      that以下が idea の内容を説明しているので、同格の that。
+    translation: 彼が正直だという考えは間違っている。
+    focus:
+      - appositive_vs_relative
+      - complete_clause
+      - idea
+
+  - id: g101_q011
+    question_type: two_choice
+    prompt: The idea that he proposed was wrong.
+    choices:
+      - text: 関係代名詞のthat
+        correct: true
+      - text: 同格のthat
+        correct: false
+    answer: 関係代名詞のthat
+    explanation: >
+      he proposed は目的語が欠けている。
+      that が proposed の目的語の役割をしているので、関係代名詞。
+    translation: 彼が提案した考えは間違っていた。
+    focus:
+      - appositive_vs_relative
+      - object_gap
+      - proposed
+
+  - id: g101_q012
+    question_type: two_choice
+    prompt: The news that I heard surprised everyone.
+    choices:
+      - text: 関係代名詞のthat
+        correct: true
+      - text: 同格のthat
+        correct: false
+    answer: 関係代名詞のthat
+    explanation: >
+      I heard は目的語が欠けている。
+      that が heard の目的語になっているので、これは関係代名詞。
+    translation: 私が聞いた知らせは皆を驚かせた。
+    focus:
+      - appositive_vs_relative
+      - news
+      - heard
+
+common_mistakes:
+  - mistake: 名詞 + that をすべて関係代名詞だと思う
+    correction: >
+      the fact that he lied のように、
+      that以下が完全文で名詞の内容を説明していれば同格の that。
+  - mistake: 同格の that を what にしてしまう
+    correction: >
+      the fact what he lied とは言わない。
+      the fact that he lied が正しい。
+  - mistake: that以下が完全文かどうかを見ない
+    correction: >
+      同格の that は後ろが完全文。
+      関係代名詞の that は後ろに主語・目的語などの欠けがある。
+  - mistake: The idea that he is honest と The idea that he proposed を同じ構文だと思う
+    correction: >
+      he is honest は完全文なので同格。
+      he proposed は目的語が欠けているので関係代名詞。
+  - mistake: the news that she had won を「彼女が勝った知らせ」ではなく「彼女を勝った知らせ」と読む
+    correction: >
+      同格の that は前の名詞の中身を説明する。
+      「彼女が勝ったという知らせ」と読む。
+
+learning_notes:
+  - >
+    同格の that は、前の抽象名詞の内容を説明する。
+    the fact that ... / the idea that ... / the news that ... の形。
+  - >
+    同格の that の後ろには完全文が来る。
+    主語と動詞がそろっているかを見る。
+  - >
+    関係代名詞の that は、後ろの文の主語や目的語の役割をする。
+    そのため、後ろに欠けがある。
+  - >
+    fact, idea, news, belief, possibility, claim, rumor, hope などは、
+    同格の that を取りやすい。
+  - >
+    名詞 + that を見たら、that以下が「名詞の内容」なのか、
+    「その名詞を修飾する関係節」なのかを判定する。
+
+prerequisites:
+  - g061
+  - g062
+  - g067
+  - g096
+
+next_items:
+  - g102
+  - g103
+  - g104

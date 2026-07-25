@@ -1,0 +1,348 @@
+id: g015
+file: g015.yaml
+
+title: know / believe / understand の現在形・現在進行形
+type: verb_usage
+
+section:
+  id: s02
+  title: 現在形・現在進行形と動詞用法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 状態動詞として進行形にしにくい動詞を判断できるか？
+
+core_concept:
+  overview: >
+    know, believe, understand は、頭の中の状態・認識・信念を表す動詞である。
+    そのため、「今そうである」ことを言う場合でも、普通は現在進行形ではなく現在形を使う。
+    日本語では「知っている」「信じている」「理解している」と訳せるため、
+    進行形にしたくなりやすいが、英語では状態を表す現在形が基本である。
+
+  know:
+    meaning: 知っている・わかっている
+    natural_form: 現在形
+    unnatural_form: 現在進行形
+    example: I know the answer.
+    ja: 私は答えを知っている。
+    point: 知識を持っている状態なので、I am knowing とは普通言わない。
+
+  believe:
+    meaning: 信じている・本当だと思っている
+    natural_form: 現在形
+    unnatural_form: 現在進行形
+    example: She believes his story.
+    ja: 彼女は彼の話を信じている。
+    point: 信念・判断の状態なので、is believing は普通使わない。
+
+  understand:
+    meaning: 理解している・意味がわかる
+    natural_form: 現在形
+    unnatural_form: 現在進行形
+    example: I understand the problem now.
+    ja: 私は今、その問題を理解している。
+    point: 理解している状態を表すので、am understanding は基本的に避ける。
+
+main_rule: >
+  know, believe, understand は、動作ではなく心の中の状態を表す。
+  したがって、「今知っている」「今信じている」「今理解している」と言いたい場合でも、
+  英語では現在形を使うのが基本である。
+  日本語の「〜している」に引きずられて現在進行形にしないことが大切である。
+
+contrast_pairs:
+  - natural: I know his name.
+    unnatural: I am knowing his name.
+    point: >
+      know は知識を持っている状態を表すので、現在形 know が自然。
+
+  - natural: She believes the news.
+    unnatural: She is believing the news.
+    point: >
+      believe は信じている状態・判断を表すので、現在形 believes が自然。
+
+  - natural: We understand your concern.
+    unnatural: We are understanding your concern.
+    point: >
+      understand は理解している状態を表すので、現在形 understand が自然。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g015_q001
+    question_type: two_choice
+    prompt: I ___ the answer.
+    choices:
+      - text: know
+        correct: true
+      - text: am knowing
+        correct: false
+    answer: know
+    explanation: >
+      know は「知っている」という状態を表す動詞なので、現在進行形 am knowing ではなく現在形 know が自然。
+    translation: 私は答えを知っている。
+    focus:
+      - know
+      - stative_verb
+      - present_simple
+
+  - id: g015_q002
+    question_type: two_choice
+    prompt: She ___ the truth.
+    choices:
+      - text: knows
+        correct: true
+      - text: is knowing
+        correct: false
+    answer: knows
+    explanation: >
+      know は知識・認識の状態を表す。主語が She なので、現在形 knows が自然。
+    translation: 彼女は真実を知っている。
+    focus:
+      - know
+      - third_person_singular
+      - stative_verb
+      - present_simple
+
+  - id: g015_q003
+    question_type: two_choice
+    prompt: Do you ___ this word?
+    choices:
+      - text: know
+        correct: true
+      - text: knowing
+        correct: false
+    answer: know
+    explanation: >
+      疑問文でも、know は状態動詞として現在形を使う。Do you know ...? が自然。
+    translation: あなたはこの単語を知っていますか。
+    focus:
+      - know
+      - question_form
+      - stative_verb
+      - present_simple
+
+  - id: g015_q004
+    question_type: two_choice
+    prompt: I ___ him very well.
+    choices:
+      - text: know
+        correct: true
+      - text: am knowing
+        correct: false
+    answer: know
+    explanation: >
+      人を知っていることは、進行中の動作ではなく状態である。
+      したがって現在形 know が自然。
+    translation: 私は彼をとてもよく知っている。
+    focus:
+      - know
+      - person
+      - stative_verb
+      - present_simple
+
+  - id: g015_q005
+    question_type: two_choice
+    prompt: He ___ that hard work is important.
+    choices:
+      - text: believes
+        correct: true
+      - text: is believing
+        correct: false
+    answer: believes
+    explanation: >
+      believe は「信じている」「本当だと思っている」という判断・信念の状態を表す。
+      したがって現在形 believes が自然。
+    translation: 彼は努力が大切だと信じている。
+    focus:
+      - believe
+      - stative_verb
+      - present_simple
+
+  - id: g015_q006
+    question_type: two_choice
+    prompt: Many people ___ this story.
+    choices:
+      - text: believe
+        correct: true
+      - text: are believing
+        correct: false
+    answer: believe
+    explanation: >
+      believe は信じている状態を表すので、are believing ではなく現在形 believe が自然。
+    translation: 多くの人々がこの話を信じている。
+    focus:
+      - believe
+      - plural_subject
+      - stative_verb
+      - present_simple
+
+  - id: g015_q007
+    question_type: two_choice
+    prompt: I don't ___ his excuse.
+    choices:
+      - text: believe
+        correct: true
+      - text: believing
+        correct: false
+    answer: believe
+    explanation: >
+      否定文でも、believe は状態動詞として現在形を使う。
+      I don't believe ... が自然。
+    translation: 私は彼の言い訳を信じていない。
+    focus:
+      - believe
+      - negative_form
+      - stative_verb
+      - present_simple
+
+  - id: g015_q008
+    question_type: two_choice
+    prompt: She ___ in the value of education.
+    choices:
+      - text: believes
+        correct: true
+      - text: is believing
+        correct: false
+    answer: believes
+    explanation: >
+      believe in は「〜の価値・存在を信じる」という状態を表す。
+      主語が She なので、現在形 believes が自然。
+    translation: 彼女は教育の価値を信じている。
+    focus:
+      - believe_in
+      - stative_verb
+      - present_simple
+
+  - id: g015_q009
+    question_type: two_choice
+    prompt: I ___ the question now.
+    choices:
+      - text: understand
+        correct: true
+      - text: am understanding
+        correct: false
+    answer: understand
+    explanation: >
+      now があっても、understand は「理解している状態」を表すので、現在形 understand が自然。
+    translation: 私は今、その質問を理解している。
+    focus:
+      - understand
+      - now
+      - stative_verb
+      - present_simple
+
+  - id: g015_q010
+    question_type: two_choice
+    prompt: Do you ___ what I mean?
+    choices:
+      - text: understand
+        correct: true
+      - text: understanding
+        correct: false
+    answer: understand
+    explanation: >
+      「意味がわかるか」と尋ねる場合、Do you understand ...? が自然。
+      understanding はこの位置には入らない。
+    translation: 私の言っている意味がわかりますか。
+    focus:
+      - understand
+      - question_form
+      - stative_verb
+      - present_simple
+
+  - id: g015_q011
+    question_type: two_choice
+    prompt: My parents ___ my situation.
+    choices:
+      - text: understand
+        correct: true
+      - text: are understanding
+        correct: false
+    answer: understand
+    explanation: >
+      understand は理解している状態を表すので、are understanding ではなく現在形 understand が自然。
+    translation: 私の両親は私の状況を理解している。
+    focus:
+      - understand
+      - stative_verb
+      - present_simple
+
+  - id: g015_q012
+    question_type: two_choice
+    prompt: He still doesn't ___ the rule.
+    choices:
+      - text: understand
+        correct: true
+      - text: understanding
+        correct: false
+    answer: understand
+    explanation: >
+      doesn't の後ろには動詞の原形 understand を置く。
+      また、understand は状態動詞なので進行形にはしにくい。
+    translation: 彼はまだそのルールを理解していない。
+    focus:
+      - understand
+      - negative_form
+      - stative_verb
+      - present_simple
+
+common_mistakes:
+  - mistake: 日本語の「知っている」を見て I am knowing としてしまう
+    correction: >
+      know は状態動詞なので、I know ... が基本。
+      「今知っている」という意味でも、普通は I know ... と言う。
+
+  - mistake: 日本語の「信じている」を見て is believing としてしまう
+    correction: >
+      believe は信念・判断の状態を表すため、現在形 believe / believes が基本。
+      He believes the story. が自然。
+
+  - mistake: now があると必ず現在進行形にする
+    correction: >
+      now があっても、understand のような状態動詞では現在形を使う。
+      I understand it now. が自然。
+
+  - mistake: 状態動詞も「〜している」なら現在進行形だと思う
+    correction: >
+      英語では「動作が進行中」なのか「状態としてそうである」のかを分ける。
+      know, believe, understand は状態を表すので、現在形が基本。
+
+learning_notes:
+  - >
+    know, believe, understand は、現在形・現在進行形の基本対立を学んだあとに、
+    動詞ごとの性質として別に覚えるべき項目である。
+  - >
+    日本語では「知っている」「信じている」「理解している」と訳すため、
+    現在進行形にしたくなりやすいが、英語では状態動詞として現在形を使う。
+  - >
+    now があるかどうかだけで現在進行形を決めない。
+    動詞が動作を表すのか、状態を表すのかを見る。
+  - >
+    このカードでは、進行形にしにくい基本的な心的状態動詞に絞って学ぶ。
+    動詞の意味が変わる特殊な進行形は、より上級のカードで扱う。
+
+prerequisites:
+  - g001
+
+next_items:
+  - g016
+  - g017
+  - g018

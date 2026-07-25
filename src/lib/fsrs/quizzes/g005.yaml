@@ -1,0 +1,333 @@
+id: g005
+file: g005.yaml
+
+title: 未来表現 will vs be going to
+type: grammar_contrast
+
+section:
+  id: s01
+  title: 時制・相の基本対立
+
+level: basic
+target: 高校英文法基礎
+
+core_question: その場の意志・予測か、すでにある予定・兆候か？
+
+core_concept:
+  will:
+    form: will + 動詞の原形
+    meaning: その場で決めた意志・話し手の予測を表す
+    image: 今決めた / たぶんそうなると思う
+    examples:
+      - sentence: I will help you.
+        ja: 私が手伝います。
+        point: その場で手伝うと決めた意志を表している。
+      - sentence: I think it will rain tomorrow.
+        ja: 明日は雨が降ると思う。
+        point: 話し手の予測を表している。
+      - sentence: Don't worry. I'll call him later.
+        ja: 心配しないで。あとで彼に電話します。
+        point: その場で決めた行動を表している。
+
+  be_going_to:
+    form: be going to + 動詞の原形
+    meaning: すでに決まっている予定・現在の状況から見える未来を表す
+    image: もう決めてある / そうなる流れが見えている
+    examples:
+      - sentence: I am going to visit my grandmother this weekend.
+        ja: 私は今週末、祖母を訪ねる予定です。
+        point: すでに決めてある予定を表している。
+      - sentence: Look at those clouds. It is going to rain.
+        ja: あの雲を見て。雨が降りそうだ。
+        point: 現在見えている兆候から判断している。
+      - sentence: She is going to study abroad next year.
+        ja: 彼女は来年留学する予定です。
+        point: すでにある計画を表している。
+
+main_rule: >
+  will は「今決めた意志」や「話し手の予測」を表す。
+  be going to は「すでに決まっている予定」や「現在の状況から見える未来」を表す。
+  どちらも日本語では「〜するつもり」「〜だろう」と訳せることがあるため、
+  日本語訳ではなく、決定のタイミングや根拠で判断する。
+
+contrast_pairs:
+  - will: I will answer the phone.
+    be_going_to: I am going to answer the phone after this meeting.
+    point: >
+      will はその場で電話に出ると決めた感じ。
+      be going to は前から決めている予定を表す。
+
+  - will: I think it will rain tomorrow.
+    be_going_to: Look at the sky. It is going to rain.
+    point: >
+      will は話し手の予測。
+      be going to は空の様子という現在の兆候から判断している。
+
+  - will: I will buy some milk.
+    be_going_to: I am going to buy some milk on my way home.
+    point: >
+      will は今買うと決めた意志。
+      be going to はすでに考えていた予定を表す。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g005_q001
+    question_type: two_choice
+    prompt: "A: The phone is ringing. B: I ___ answer it."
+    choices:
+      - text: will
+        correct: true
+      - text: am going to
+        correct: false
+    answer: will
+    explanation: >
+      電話が鳴ったのを聞いて、その場で「出る」と決めている。
+      したがって will が自然。
+    focus:
+      - decision_now
+      - will
+      - immediate_decision
+
+  - id: g005_q002
+    question_type: two_choice
+    prompt: I ___ visit my uncle this weekend. I bought the train ticket yesterday.
+    choices:
+      - text: will
+        correct: false
+      - text: am going to
+        correct: true
+    answer: am going to
+    explanation: >
+      昨日すでに切符を買っているので、前から決まっている予定を表している。
+      したがって am going to が自然。
+    focus:
+      - prior_plan
+      - ticket_bought
+      - be_going_to
+
+  - id: g005_q003
+    question_type: two_choice
+    prompt: Look at those dark clouds. It ___ rain soon.
+    choices:
+      - text: will
+        correct: false
+      - text: is going to
+        correct: true
+    answer: is going to
+    explanation: >
+      暗い雲という現在見えている兆候から、雨が降ると判断している。
+      したがって is going to が自然。
+    focus:
+      - visible_evidence
+      - prediction_from_signs
+      - be_going_to
+
+  - id: g005_q004
+    question_type: two_choice
+    prompt: I think he ___ pass the exam.
+    choices:
+      - text: will
+        correct: true
+      - text: is going to
+        correct: false
+    answer: will
+    explanation: >
+      I think があり、話し手の予測を表している。
+      特に現在の明確な兆候を見ているわけではないので will が自然。
+    focus:
+      - speaker_prediction
+      - i_think
+      - will
+
+  - id: g005_q005
+    question_type: two_choice
+    prompt: "A: I don't understand this question. B: Don't worry. I ___ help you."
+    choices:
+      - text: will
+        correct: true
+      - text: am going to
+        correct: false
+    answer: will
+    explanation: >
+      相手の発言を聞いて、その場で手伝うと決めている。
+      したがって will が自然。
+    focus:
+      - offer
+      - decision_now
+      - will
+
+  - id: g005_q006
+    question_type: two_choice
+    prompt: She ___ start a new job next month. She has already signed the contract.
+    choices:
+      - text: will
+        correct: false
+      - text: is going to
+        correct: true
+    answer: is going to
+    explanation: >
+      すでに契約に署名しているので、前から決まっている予定を表している。
+      したがって is going to が自然。
+    focus:
+      - prior_plan
+      - confirmed_plan
+      - be_going_to
+
+  - id: g005_q007
+    question_type: two_choice
+    prompt: Maybe we ___ need more time.
+    choices:
+      - text: will
+        correct: true
+      - text: are going to
+        correct: false
+    answer: will
+    explanation: >
+      Maybe があり、話し手の予測を表している。
+      現在の具体的な兆候よりも推測なので will が自然。
+    focus:
+      - speaker_prediction
+      - maybe
+      - will
+
+  - id: g005_q008
+    question_type: two_choice
+    prompt: Be careful! You ___ drop the glass.
+    choices:
+      - text: will
+        correct: false
+      - text: are going to
+        correct: true
+    answer: are going to
+    explanation: >
+      グラスを落としそうな状況が今見えている。
+      現在の兆候から近い未来を判断しているので are going to が自然。
+    focus:
+      - visible_evidence
+      - warning
+      - be_going_to
+
+  - id: g005_q009
+    question_type: two_choice
+    prompt: I forgot to buy bread. I ___ go to the store now.
+    choices:
+      - text: will
+        correct: true
+      - text: am going to
+        correct: false
+    answer: will
+    explanation: >
+      買い忘れに気づいて、その場で店に行くと決めている。
+      したがって will が自然。
+    focus:
+      - decision_now
+      - immediate_decision
+      - will
+
+  - id: g005_q010
+    question_type: two_choice
+    prompt: We ___ have a meeting at three. It is already on the schedule.
+    choices:
+      - text: will
+        correct: false
+      - text: are going to
+        correct: true
+    answer: are going to
+    explanation: >
+      すでにスケジュールに入っている予定なので are going to が自然。
+      確定した予定を表している。
+    focus:
+      - prior_plan
+      - scheduled_event
+      - be_going_to
+
+  - id: g005_q011
+    question_type: two_choice
+    prompt: I believe the project ___ succeed.
+    choices:
+      - text: will
+        correct: true
+      - text: is going to
+        correct: false
+    answer: will
+    explanation: >
+      I believe があり、話し手の予測・判断を述べている。
+      したがって will が自然。
+    focus:
+      - speaker_prediction
+      - belief
+      - will
+
+  - id: g005_q012
+    question_type: two_choice
+    prompt: The baby is smiling. She ___ laugh.
+    choices:
+      - text: will
+        correct: false
+      - text: is going to
+        correct: true
+    answer: is going to
+    explanation: >
+      赤ちゃんが笑顔であるという現在の兆候から、笑い出しそうだと判断している。
+      したがって is going to が自然。
+    focus:
+      - visible_evidence
+      - prediction_from_signs
+      - be_going_to
+
+common_mistakes:
+  - mistake: will をすべての未来表現に使ってしまう
+    correction: >
+      すでに決まっている予定や、現在の兆候から見える未来には
+      be going to が自然なことが多い。
+
+  - mistake: be going to を単に「〜するつもり」とだけ覚える
+    correction: >
+      be going to は予定だけでなく、Look at those clouds. It is going to rain.
+      のように、現在の兆候から判断する未来にも使う。
+
+  - mistake: will と be going to を日本語訳だけで判断する
+    correction: >
+      どちらも「〜するつもり」「〜だろう」と訳せることがある。
+      決定のタイミングと根拠を見て判断する。
+
+  - mistake: I think it is going to rain. を常に間違いだと思う
+    correction: >
+      文脈によっては可能。ただし高校英文法の基本対立では、
+      I think は will、見えている兆候は be going to と整理すると理解しやすい。
+
+learning_notes:
+  - >
+    will は「未来形」というより、話し手が今持っている意志や予測を表す助動詞として考える。
+  - >
+    be going to は、すでにある計画や、現在の状況から自然に向かっている未来を表す。
+  - >
+    未来表現では、日本語訳よりも「今決めたのか」「前から決まっていたのか」
+    「根拠が見えているのか」を見る。
+  - >
+    手配済みの予定を表す現在進行形との違いは g006 で扱う。
+
+prerequisites:
+  - g001
+
+next_items:
+  - g006
+  - g007

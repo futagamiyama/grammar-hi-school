@@ -1,0 +1,411 @@
+id: g108
+file: g108.yaml
+
+title: 結果を表す so ... that / such ... that
+type: grammar_contrast
+
+section:
+  id: s11
+  title: 名詞節・接続詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 「とても〜なので...」を、so + 形容詞/副詞 + that と such + 名詞句 + that で使い分けられるか？
+
+core_concept:
+  so_adjective_that:
+    form: so + 形容詞 + that + 主語 + 動詞
+    meaning: とても〜なので...
+    image: 形容詞を強め、その結果を that節で述べる
+    examples:
+      - sentence: The box was so heavy that I could not lift it.
+        ja: その箱はとても重かったので、私は持ち上げられなかった。
+        point: heavy という形容詞を so が強めている。
+      - sentence: She was so tired that she went to bed early.
+        ja: 彼女はとても疲れていたので、早く寝た。
+        point: tired という形容詞を強めて、結果を that節で述べている。
+      - sentence: The problem was so difficult that no one could solve it.
+        ja: その問題はとても難しかったので、誰も解けなかった。
+        point: difficult が中心なので so を使う。
+
+  so_adverb_that:
+    form: so + 副詞 + that + 主語 + 動詞
+    meaning: とても〜に...したので...
+    image: 副詞を強め、その結果を述べる
+    examples:
+      - sentence: He ran so fast that no one could catch him.
+        ja: 彼はとても速く走ったので、誰も追いつけなかった。
+        point: fast は ran を修飾する副詞。
+      - sentence: She spoke so quietly that I could hardly hear her.
+        ja: 彼女はとても静かに話したので、私はほとんど聞こえなかった。
+        point: quietly という副詞を so が強めている。
+      - sentence: He worked so hard that he became ill.
+        ja: 彼はとても一生懸命働いたので、病気になった。
+        point: hard は worked を修飾する副詞。
+
+  such_noun_that:
+    form: such + a/an + 形容詞 + 単数名詞 + that + 主語 + 動詞
+    meaning: とても〜な...なので...
+    image: 名詞句全体を強め、その結果を述べる
+    examples:
+      - sentence: It was such a heavy box that I could not lift it.
+        ja: それはとても重い箱だったので、私は持ち上げられなかった。
+        point: a heavy box という名詞句を such が強めている。
+      - sentence: She is such a good teacher that everyone likes her.
+        ja: 彼女はとてもよい先生なので、皆が彼女を好きだ。
+        point: a good teacher という名詞句が中心。
+      - sentence: It was such an interesting book that I read it twice.
+        ja: それはとても面白い本だったので、私は二回読んだ。
+        point: an interesting book という名詞句を such が強めている。
+
+  such_plural_uncountable_that:
+    form: such + 形容詞 + 複数名詞/不可算名詞 + that + 主語 + 動詞
+    meaning: とても〜な...なので...
+    image: 複数名詞・不可算名詞では a/an を付けない
+    examples:
+      - sentence: They were such difficult questions that I could not answer them.
+        ja: それらはとても難しい問題だったので、私は答えられなかった。
+        point: questions は複数名詞なので a/an は付けない。
+      - sentence: It was such good advice that I followed it.
+        ja: それはとてもよい助言だったので、私はそれに従った。
+        point: advice は不可算名詞なので a/an は付けない。
+      - sentence: We had such bad weather that we stayed indoors.
+        ja: とても悪い天気だったので、私たちは屋内にいた。
+        point: weather は不可算名詞なので a/an は付けない。
+
+  so_many_much_few_little_that:
+    form: so many/much/few/little + 名詞 + that + 主語 + 動詞
+    meaning: とても多く/少なく〜なので...
+    image: 数量表現では名詞があっても so を使う
+    examples:
+      - sentence: There were so many people that we could not enter.
+        ja: とても多くの人がいたので、私たちは入れなかった。
+        point: many people は数量表現なので so many。
+      - sentence: He had so much work that he could not sleep.
+        ja: 彼にはとても多くの仕事があったので、眠れなかった。
+        point: much work は数量表現なので so much。
+      - sentence: There was so little time that we could not finish it.
+        ja: 時間があまりにも少なかったので、私たちはそれを終えられなかった。
+        point: little time は数量表現なので so little。
+
+main_rule: >
+  so ... that / such ... that は、「とても〜なので...」という結果を表す。
+  so は形容詞・副詞を強める。
+  The box was so heavy that I could not lift it. では、
+  heavy という形容詞を so が強め、その結果を that節で述べている。
+  He ran so fast that no one could catch him. では、
+  fast という副詞を so が強めている。
+  such は名詞句を強める。
+  It was such a heavy box that I could not lift it. では、
+  a heavy box という名詞句全体を such が強めている。
+  単数可算名詞なら such a/an + 形容詞 + 名詞。
+  複数名詞・不可算名詞なら such + 形容詞 + 名詞。
+  ただし、many, much, few, little の数量表現では、名詞があっても so many people / so much work のように so を使う。
+
+contrast_pairs:
+  - so_form: The box was so heavy that I could not lift it.
+    such_form: It was such a heavy box that I could not lift it.
+    point: >
+      so は heavy という形容詞を強める。
+      such は a heavy box という名詞句を強める。
+
+  - adjective_focus: She was so kind that everyone trusted her.
+    noun_focus: She was such a kind person that everyone trusted her.
+    point: >
+      kind だけなら so。
+      a kind person という名詞句なら such。
+
+  - normal_such: They were such difficult questions that I could not answer them.
+    quantity_so: There were so many questions that I could not answer them all.
+    point: >
+      difficult questions は such。
+      many questions は数量表現なので so many。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または so は形容詞・副詞、such は名詞句を強めることを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g108_q001
+    question_type: two_choice
+    prompt: The box was ___ heavy that I could not lift it.
+    choices:
+      - text: so
+        correct: true
+      - text: such
+        correct: false
+    answer: so
+    explanation: >
+      heavy は形容詞。
+      形容詞を直接強めるので so heavy that ... が正しい。
+    translation: その箱はとても重かったので、私は持ち上げられなかった。
+    focus:
+      - so_adjective_that
+      - adjective
+      - heavy
+
+  - id: g108_q002
+    question_type: two_choice
+    prompt: It was ___ a heavy box that I could not lift it.
+    choices:
+      - text: such
+        correct: true
+      - text: so
+        correct: false
+    answer: such
+    explanation: >
+      a heavy box は名詞句。
+      名詞句を強めるので such a heavy box that ... が正しい。
+    translation: それはとても重い箱だったので、私は持ち上げられなかった。
+    focus:
+      - such_noun_that
+      - noun_phrase
+      - box
+
+  - id: g108_q003
+    question_type: two_choice
+    prompt: She was ___ tired that she went to bed early.
+    choices:
+      - text: so
+        correct: true
+      - text: such
+        correct: false
+    answer: so
+    explanation: >
+      tired は形容詞。
+      so tired that ... で「とても疲れていたので...」。
+    translation: 彼女はとても疲れていたので、早く寝た。
+    focus:
+      - so_adjective_that
+      - tired
+      - result
+
+  - id: g108_q004
+    question_type: two_choice
+    prompt: She is ___ a good teacher that everyone likes her.
+    choices:
+      - text: such
+        correct: true
+      - text: so
+        correct: false
+    answer: such
+    explanation: >
+      a good teacher は名詞句。
+      such a good teacher that ... が正しい。
+    translation: 彼女はとてもよい先生なので、皆が彼女を好きだ。
+    focus:
+      - such_noun_that
+      - teacher
+      - noun_phrase
+
+  - id: g108_q005
+    question_type: two_choice
+    prompt: He ran ___ fast that no one could catch him.
+    choices:
+      - text: so
+        correct: true
+      - text: such
+        correct: false
+    answer: so
+    explanation: >
+      fast は ran を修飾する副詞。
+      副詞を強めるので so fast that ... が正しい。
+    translation: 彼はとても速く走ったので、誰も追いつけなかった。
+    focus:
+      - so_adverb_that
+      - adverb
+      - fast
+
+  - id: g108_q006
+    question_type: two_choice
+    prompt: She spoke ___ quietly that I could hardly hear her.
+    choices:
+      - text: so
+        correct: true
+      - text: such
+        correct: false
+    answer: so
+    explanation: >
+      quietly は副詞。
+      so quietly that ... で「とても静かに話したので...」。
+    translation: 彼女はとても静かに話したので、私はほとんど聞こえなかった。
+    focus:
+      - so_adverb_that
+      - quietly
+      - hardly
+
+  - id: g108_q007
+    question_type: two_choice
+    prompt: It was ___ an interesting book that I read it twice.
+    choices:
+      - text: such
+        correct: true
+      - text: so
+        correct: false
+    answer: such
+    explanation: >
+      an interesting book は名詞句。
+      such an interesting book that ... が正しい。
+    translation: それはとても面白い本だったので、私は二回読んだ。
+    focus:
+      - such_noun_that
+      - an
+      - book
+
+  - id: g108_q008
+    question_type: two_choice
+    prompt: They were ___ difficult questions that I could not answer them.
+    choices:
+      - text: such
+        correct: true
+      - text: so
+        correct: false
+    answer: such
+    explanation: >
+      difficult questions は複数名詞句。
+      名詞句を強めるので such difficult questions が正しい。
+    translation: それらはとても難しい問題だったので、私は答えられなかった。
+    focus:
+      - such_plural_uncountable_that
+      - plural
+      - questions
+
+  - id: g108_q009
+    question_type: two_choice
+    prompt: It was ___ good advice that I followed it.
+    choices:
+      - text: such
+        correct: true
+      - text: so
+        correct: false
+    answer: such
+    explanation: >
+      good advice は不可算名詞句。
+      名詞句を強めるので such good advice が正しい。
+    translation: それはとてもよい助言だったので、私はそれに従った。
+    focus:
+      - such_plural_uncountable_that
+      - uncountable
+      - advice
+
+  - id: g108_q010
+    question_type: two_choice
+    prompt: There were ___ many people that we could not enter.
+    choices:
+      - text: so
+        correct: true
+      - text: such
+        correct: false
+    answer: so
+    explanation: >
+      many people は数量表現。
+      many / much / few / little の前では so を使い、so many people となる。
+    translation: とても多くの人がいたので、私たちは入れなかった。
+    focus:
+      - so_many_much_few_little_that
+      - so_many
+      - people
+
+  - id: g108_q011
+    question_type: two_choice
+    prompt: He had ___ much work that he could not sleep.
+    choices:
+      - text: so
+        correct: true
+      - text: such
+        correct: false
+    answer: so
+    explanation: >
+      much work は数量表現。
+      名詞があっても so much work が正しい。
+    translation: 彼にはとても多くの仕事があったので、眠れなかった。
+    focus:
+      - so_many_much_few_little_that
+      - so_much
+      - work
+
+  - id: g108_q012
+    question_type: two_choice
+    prompt: There was ___ little time that we could not finish it.
+    choices:
+      - text: so
+        correct: true
+      - text: such
+        correct: false
+    answer: so
+    explanation: >
+      little time は数量表現。
+      so little time that ... で「時間があまりにも少なかったので...」。
+    translation: 時間があまりにも少なかったので、私たちはそれを終えられなかった。
+    focus:
+      - so_many_much_few_little_that
+      - so_little
+      - time
+
+common_mistakes:
+  - mistake: so と such をどちらも「とても」とだけ覚える
+    correction: >
+      so は形容詞・副詞を強める。
+      such は名詞句を強める。
+  - mistake: so a heavy box としてしまう
+    correction: >
+      a heavy box は名詞句なので such a heavy box が正しい。
+  - mistake: such heavy としてしまう
+    correction: >
+      heavy だけなら形容詞なので so heavy が正しい。
+  - mistake: such many people としてしまう
+    correction: >
+      many / much / few / little の数量表現では so を使う。
+      so many people が正しい。
+  - mistake: such an interesting book の an を落とす
+    correction: >
+      単数可算名詞では a/an が必要。
+      such an interesting book が正しい。
+
+learning_notes:
+  - >
+    so ... that は、形容詞・副詞を強めて結果を表す。
+    so heavy that ... / so fast that ... の形。
+  - >
+    such ... that は、名詞句を強めて結果を表す。
+    such a heavy box that ... の形。
+  - >
+    単数可算名詞では such a/an + 形容詞 + 名詞。
+    複数名詞・不可算名詞では such + 形容詞 + 名詞。
+  - >
+    many, much, few, little は数量表現なので、
+    名詞が続いても so many / so much / so few / so little を使う。
+  - >
+    that節は結果を表す。
+    「とても〜だった。その結果...した」と考えると読みやすい。
+
+prerequisites:
+  - g049
+  - g050
+  - g051
+  - g053
+  - g097
+  - g107
+
+next_items:
+  - g109
+  - g110
+  - g111

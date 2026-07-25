@@ -1,0 +1,368 @@
+id: g002
+file: g002.yaml
+
+title: 過去形 vs 現在完了形
+type: grammar_contrast
+
+section:
+  id: s01
+  title: 時制・相の基本対立
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 過去の出来事として切るか、現在とのつながりを見るか？
+
+core_concept:
+  past_simple:
+    form: 過去形
+    meaning: 過去のある時点で起きた出来事を、現在とは切り離して述べる
+    image: いつ起きたかが過去に固定されている / もう過去の話として完結している
+    typical_clues:
+      - yesterday
+      - last week
+      - last year
+      - ago
+      - in 2010
+      - when I was a child
+    examples:
+      - sentence: I visited Kyoto last year.
+        ja: 私は去年、京都を訪れた。
+        point: last year によって過去の時点がはっきりしている。
+      - sentence: She lost her key yesterday.
+        ja: 彼女は昨日、鍵をなくした。
+        point: yesterday によって過去の出来事として述べている。
+      - sentence: He lived in London in 2015.
+        ja: 彼は2015年にロンドンに住んでいた。
+        point: in 2015 によって過去の時点に限定されている。
+
+  present_perfect:
+    form: 現在完了形
+    meaning: 過去に起きたことを、現在とのつながりを持つものとして述べる
+    image: 過去から現在に線がつながっている / 今に影響がある / 今までの経験として見る
+    typical_clues:
+      - already
+      - yet
+      - just
+      - ever
+      - never
+      - before
+      - since
+      - for
+      - so far
+      - recently
+    examples:
+      - sentence: I have visited Kyoto before.
+        ja: 私は以前、京都を訪れたことがある。
+        point: before により、現在までの経験として述べている。
+      - sentence: She has lost her key.
+        ja: 彼女は鍵をなくしてしまった。
+        point: 鍵が今ない、という現在への影響がある。
+      - sentence: He has lived in London since 2015.
+        ja: 彼は2015年からロンドンに住んでいる。
+        point: since 2015 により、過去から現在まで続いている。
+
+main_rule: >
+  過去形は、過去のある時点で起きた出来事を現在から切り離して述べる。
+  現在完了形は、過去に起きたことを現在とのつながりを持つものとして述べる。
+  yesterday, last year, ago, in 2010 のように過去の時点が明確な場合は、普通は過去形を使う。
+  ever, never, already, yet, just, since, for などは現在完了形と結びつきやすい。
+
+contrast_pairs:
+  - past_simple: I visited Kyoto last year.
+    present_perfect: I have visited Kyoto before.
+    point: >
+      last year は過去の時点を指定するので過去形。
+      before は現在までの経験として見るので現在完了形。
+
+  - past_simple: She lost her key yesterday.
+    present_perfect: She has lost her key.
+    point: >
+      yesterday があると過去形。
+      現在完了形では「今も鍵がない」という現在への影響が感じられる。
+
+  - past_simple: He lived in London in 2015.
+    present_perfect: He has lived in London since 2015.
+    point: >
+      in 2015 は過去の時点なので過去形。
+      since 2015 は2015年から現在までの継続なので現在完了形。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、速く迷いなく答えられる
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+    note: >
+      8秒制限なら、平均4.8秒以内かつ最遅6.8秒以内をEASYの目安とする。
+
+review_questions:
+  - id: g002_q001
+    question_type: two_choice
+    prompt: I ___ Kyoto last year.
+    choices:
+      - text: visited
+        correct: true
+      - text: have visited
+        correct: false
+    answer: visited
+    explanation: >
+      last year は過去の時点をはっきり示す。
+      そのため、現在完了形ではなく過去形 visited が自然。
+    ja: 私は去年、京都を訪れた。
+    focus:
+      - past_time_marker
+      - last_year
+      - past_simple
+
+  - id: g002_q002
+    question_type: two_choice
+    prompt: I ___ Kyoto before.
+    choices:
+      - text: visited
+        correct: false
+      - text: have visited
+        correct: true
+    answer: have visited
+    explanation: >
+      before は「今までに」の経験を表しやすい。
+      現在までの経験として述べるので have visited が自然。
+    ja: 私は以前、京都を訪れたことがある。
+    focus:
+      - experience
+      - before
+      - present_perfect
+
+  - id: g002_q003
+    question_type: two_choice
+    prompt: She ___ her key yesterday.
+    choices:
+      - text: lost
+        correct: true
+      - text: has lost
+        correct: false
+    answer: lost
+    explanation: >
+      yesterday があるので、過去の出来事として切って述べている。
+      したがって過去形 lost が自然。
+    ja: 彼女は昨日、鍵をなくした。
+    focus:
+      - past_time_marker
+      - yesterday
+      - past_simple
+
+  - id: g002_q004
+    question_type: two_choice
+    prompt: She ___ her key, so she cannot open the door.
+    choices:
+      - text: lost
+        correct: false
+      - text: has lost
+        correct: true
+    answer: has lost
+    explanation: >
+      so she cannot open the door から、鍵をなくしたことが現在に影響している。
+      現在とのつながりを表すので has lost が自然。
+    ja: 彼女は鍵をなくしてしまったので、ドアを開けられない。
+    focus:
+      - present_result
+      - current_effect
+      - present_perfect
+
+  - id: g002_q005
+    question_type: two_choice
+    prompt: He ___ in London in 2015.
+    choices:
+      - text: lived
+        correct: true
+      - text: has lived
+        correct: false
+    answer: lived
+    explanation: >
+      in 2015 は過去の時点を示す。
+      現在とのつながりではなく、過去の事実として述べるので lived が自然。
+    ja: 彼は2015年にロンドンに住んでいた。
+    focus:
+      - past_time_marker
+      - in_2015
+      - past_simple
+
+  - id: g002_q006
+    question_type: two_choice
+    prompt: He ___ in London since 2015.
+    choices:
+      - text: lived
+        correct: false
+      - text: has lived
+        correct: true
+    answer: has lived
+    explanation: >
+      since 2015 は「2015年から今まで」を表す。
+      過去から現在までの継続なので has lived が自然。
+    ja: 彼は2015年からロンドンに住んでいる。
+    focus:
+      - continuation
+      - since
+      - present_perfect
+
+  - id: g002_q007
+    question_type: two_choice
+    prompt: We ___ dinner two hours ago.
+    choices:
+      - text: finished
+        correct: true
+      - text: have finished
+        correct: false
+    answer: finished
+    explanation: >
+      two hours ago は過去の時点を示す。
+      ago がある文では、普通は現在完了形ではなく過去形を使う。
+    ja: 私たちは2時間前に夕食を終えた。
+    focus:
+      - past_time_marker
+      - ago
+      - past_simple
+
+  - id: g002_q008
+    question_type: two_choice
+    prompt: We ___ dinner already.
+    choices:
+      - text: finished
+        correct: false
+      - text: have finished
+        correct: true
+    answer: have finished
+    explanation: >
+      already は「もう〜した」という完了を表す。
+      現在の状態とつながるので have finished が自然。
+    ja: 私たちはもう夕食を終えた。
+    focus:
+      - completion
+      - already
+      - present_perfect
+
+  - id: g002_q009
+    question_type: two_choice
+    prompt: Did you ___ the movie last night?
+    choices:
+      - text: see
+        correct: true
+      - text: seen
+        correct: false
+    answer: see
+    explanation: >
+      last night は過去の時点を示す。
+      疑問文では Did you see ...? の形にする。
+    ja: 昨夜その映画を見ましたか。
+    focus:
+      - past_simple_question
+      - last_night
+      - did_base_verb
+
+  - id: g002_q010
+    question_type: two_choice
+    prompt: Have you ever ___ the movie?
+    choices:
+      - text: saw
+        correct: false
+      - text: seen
+        correct: true
+    answer: seen
+    explanation: >
+      Have you ever ...? は現在までの経験をたずねる形。
+      現在完了形なので過去分詞 seen を使う。
+    ja: その映画を今までに見たことがありますか。
+    focus:
+      - experience
+      - ever
+      - present_perfect
+
+  - id: g002_q011
+    question_type: two_choice
+    prompt: I ___ him when I was a child.
+    choices:
+      - text: met
+        correct: true
+      - text: have met
+        correct: false
+    answer: met
+    explanation: >
+      when I was a child は過去の時点・時期を表す。
+      現在完了形ではなく、過去形 met が自然。
+    ja: 私は子どものころに彼に会った。
+    focus:
+      - past_time_clause
+      - when_i_was_a_child
+      - past_simple
+
+  - id: g002_q012
+    question_type: two_choice
+    prompt: I ___ him several times.
+    choices:
+      - text: met
+        correct: false
+      - text: have met
+        correct: true
+    answer: have met
+    explanation: >
+      several times は、現在までの経験回数として述べることが多い。
+      現在完了形 have met が自然。
+    ja: 私は彼に何度か会ったことがある。
+    focus:
+      - experience
+      - several_times
+      - present_perfect
+
+common_mistakes:
+  - mistake: 日本語の「〜した」だけを見て、すべて過去形にしてしまう
+    correction: >
+      英語では、過去の出来事を現在と切り離すなら過去形、
+      現在とのつながりを持って述べるなら現在完了形を使う。
+
+  - mistake: yesterday や last year と現在完了形を一緒に使ってしまう
+    correction: >
+      yesterday, last year, ago, in 2010 のように過去の時点が明確な語句は、
+      普通は過去形と結びつく。
+
+  - mistake: 現在完了形を「過去形の丁寧な言い方」だと思ってしまう
+    correction: >
+      現在完了形は丁寧表現ではない。
+      過去の出来事を、現在への影響・経験・継続として見る表現である。
+
+  - mistake: have visited を「訪問している」と現在進行形のように訳してしまう
+    correction: >
+      have + 過去分詞は現在完了形。
+      「今までに訪れたことがある」「訪れてしまった」など、現在とのつながりで訳す。
+
+learning_notes:
+  - >
+    過去形は、出来事を過去の一点に置いて、現在から切り離す形である。
+  - >
+    現在完了形は、過去に起きたことを現在とつなげて見る形である。
+  - >
+    last year, yesterday, ago, in 2010 などがあれば、まず過去形を疑う。
+  - >
+    ever, never, before, already, yet, just, since, for などがあれば、現在完了形を疑う。
+  - >
+    現在完了形は「経験」「完了・結果」「継続」に分けて説明されるが、
+    中心にあるのは「現在とのつながり」である。
+
+prerequisites:
+  - g001
+
+next_items:
+  - g003
+  - g004
+  - g009

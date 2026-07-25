@@ -1,0 +1,355 @@
+id: g028
+file: g028.yaml
+
+title: should have 過去分詞
+type: grammar_contrast
+
+section:
+  id: s03
+  title: 助動詞・法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 過去にすべきだったが、実際にはしなかったことか？
+
+core_concept:
+  should:
+    form: should + 動詞の原形
+    meaning: 現在・未来についての助言、義務、当然そうするべきことを表す
+    image: 今・これから、そうした方がよい
+    examples:
+      - sentence: You should see a doctor.
+        ja: 医者に診てもらうべきだ。
+        point: これからするべきことへの助言。
+      - sentence: We should leave early tomorrow.
+        ja: 私たちは明日早く出発すべきだ。
+        point: 未来の行動についての助言。
+
+  should_have_done:
+    form: should have + 過去分詞
+    meaning: 過去にすべきだったが、実際にはしなかったことを表す
+    image: 本当はすべきだったのに、しなかった
+    examples:
+      - sentence: You should have called me.
+        ja: あなたは私に電話すべきだった。
+        point: 実際には電話しなかった、という後悔・批判を含む。
+      - sentence: I should have studied harder.
+        ja: もっと一生懸命勉強すべきだった。
+        point: 実際には十分に勉強しなかった、という後悔を表す。
+
+  should_not_have_done:
+    form: should not have + 過去分詞
+    meaning: 過去にすべきではなかったが、実際にはしてしまったことを表す
+    image: 本当はしない方がよかったのに、してしまった
+    examples:
+      - sentence: You should not have said that.
+        ja: あなたはそんなことを言うべきではなかった。
+        point: 実際には言ってしまった、という批判を含む。
+      - sentence: I should not have eaten so much.
+        ja: そんなにたくさん食べるべきではなかった。
+        point: 実際には食べすぎた、という後悔を表す。
+
+main_rule: >
+  should + 動詞の原形は、現在・未来について「〜すべきだ」と助言する表現である。
+  should have + 過去分詞は、過去を振り返って「〜すべきだった」と述べる表現で、
+  実際にはしなかったという後悔・批判を含む。
+  should not have + 過去分詞は、過去に実際にはしてしまったことについて、
+  「〜すべきではなかった」と後悔・批判する表現である。
+
+contrast_pairs:
+  - should: You should call him now.
+    should_have_done: You should have called him yesterday.
+    point: >
+      should call は今から電話すべきという助言。
+      should have called は昨日電話すべきだったが、実際にはしなかったという意味。
+
+  - should: I should study harder.
+    should_have_done: I should have studied harder.
+    point: >
+      should study は今後の助言・決意。
+      should have studied は過去にもっと勉強すべきだったという後悔。
+
+  - should_have_done: You should have told me the truth.
+    should_not_have_done: You should not have lied to me.
+    point: >
+      should have told は本当は言うべきだったのに言わなかった。
+      should not have lied は本当は嘘をつくべきではなかったのに嘘をついた。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g028_q001
+    question_type: two_choice
+    prompt: You look sick. You ___ see a doctor.
+    choices:
+      - text: should
+        correct: true
+      - text: should have
+        correct: false
+    answer: should
+    ja: 具合が悪そうだ。医者に診てもらうべきだ。
+    explanation: >
+      これから医者に診てもらうべきだ、という現在・未来への助言。
+      過去の後悔ではないので should を使う。
+    focus:
+      - should
+      - present_advice
+      - infinitive
+
+  - id: g028_q002
+    question_type: two_choice
+    prompt: You missed the meeting. You ___ come earlier.
+    choices:
+      - text: should
+        correct: false
+      - text: should have
+        correct: true
+    answer: should have
+    ja: あなたは会議に遅れた。もっと早く来るべきだった。
+    explanation: >
+      missed the meeting から、すでに過去の失敗を振り返っている。
+      実際には早く来なかったので should have come が自然。
+    focus:
+      - should_have_done
+      - past_regret
+      - criticism
+
+  - id: g028_q003
+    question_type: two_choice
+    prompt: I failed the test. I ___ studied harder.
+    choices:
+      - text: should have
+        correct: true
+      - text: should
+        correct: false
+    answer: should have
+    ja: 私はテストに落ちた。もっと一生懸命勉強すべきだった。
+    explanation: >
+      failed the test という過去の結果を受けて、過去にすべきだったことを述べている。
+      したがって should have studied が自然。
+    focus:
+      - should_have_done
+      - past_regret
+      - studied
+
+  - id: g028_q004
+    question_type: two_choice
+    prompt: The exam is next week. You ___ study harder.
+    choices:
+      - text: should
+        correct: true
+      - text: should have
+        correct: false
+    answer: should
+    ja: 試験は来週だ。もっと一生懸命勉強すべきだ。
+    explanation: >
+      next week から、これからの試験に向けた助言。
+      過去の後悔ではないので should study が自然。
+    focus:
+      - should
+      - future_advice
+      - next_week
+
+  - id: g028_q005
+    question_type: two_choice
+    prompt: I am sorry. I ___ told you the truth.
+    choices:
+      - text: should have
+        correct: true
+      - text: should
+        correct: false
+    answer: should have
+    ja: ごめんなさい。あなたに本当のことを言うべきだった。
+    explanation: >
+      I am sorry から、過去にしなかったことへの後悔を述べている。
+      実際には真実を言わなかったので should have told が自然。
+    focus:
+      - should_have_done
+      - apology
+      - told
+
+  - id: g028_q006
+    question_type: two_choice
+    prompt: You ___ not have said such a rude thing.
+    choices:
+      - text: should
+        correct: true
+      - text: had better
+        correct: false
+    answer: should
+    ja: あなたはそんな失礼なことを言うべきではなかった。
+    explanation: >
+      should not have said で、過去に実際には言ってしまったことへの批判を表す。
+      should not have + 過去分詞を1まとまりで見る。
+    focus:
+      - should_not_have_done
+      - past_criticism
+      - said
+
+  - id: g028_q007
+    question_type: two_choice
+    prompt: We are late. We ___ left home earlier.
+    choices:
+      - text: should have
+        correct: true
+      - text: should
+        correct: false
+    answer: should have
+    ja: 私たちは遅れている。もっと早く家を出るべきだった。
+    explanation: >
+      今遅れている原因として、過去に早く出発しなかったことを後悔している。
+      したがって should have left が自然。
+    focus:
+      - should_have_done
+      - past_cause
+      - left
+
+  - id: g028_q008
+    question_type: two_choice
+    prompt: You ___ be more careful next time.
+    choices:
+      - text: should
+        correct: true
+      - text: should have
+        correct: false
+    answer: should
+    ja: 次回はもっと注意すべきだ。
+    explanation: >
+      next time はこれからのことなので、should + 動詞の原形を使う。
+      should have は過去の後悔に使う。
+    focus:
+      - should
+      - future_advice
+      - next_time
+
+  - id: g028_q009
+    question_type: two_choice
+    prompt: He did not pass the interview. He ___ prepared better.
+    choices:
+      - text: should have
+        correct: true
+      - text: should
+        correct: false
+    answer: should have
+    ja: 彼は面接に受からなかった。もっとよく準備すべきだった。
+    explanation: >
+      面接に受からなかったという過去の結果を見て、過去の準備不足を述べている。
+      したがって should have prepared が自然。
+    focus:
+      - should_have_done
+      - past_result
+      - prepared
+
+  - id: g028_q010
+    question_type: two_choice
+    prompt: I ate too much. I ___ not have eaten the last piece of cake.
+    choices:
+      - text: should
+        correct: true
+      - text: will
+        correct: false
+    answer: should
+    ja: 食べすぎた。最後のケーキを食べるべきではなかった。
+    explanation: >
+      should not have eaten で、実際には食べてしまったことへの後悔を表す。
+      ここでは will ではなく should が必要。
+    focus:
+      - should_not_have_done
+      - past_regret
+      - eaten
+
+  - id: g028_q011
+    question_type: two_choice
+    prompt: You ___ not drive so fast on this road.
+    choices:
+      - text: should
+        correct: true
+      - text: should have
+        correct: false
+    answer: should
+    ja: この道ではそんなに速く運転すべきではない。
+    explanation: >
+      現在・一般的な助言や注意なので should not drive を使う。
+      過去に運転したことへの後悔なら should not have driven になる。
+    focus:
+      - should_not
+      - present_advice
+      - drive
+
+  - id: g028_q012
+    question_type: two_choice
+    prompt: She is angry because I forgot her birthday. I ___ remembered it.
+    choices:
+      - text: should have
+        correct: true
+      - text: should
+        correct: false
+    answer: should have
+    ja: 彼女は怒っている。私が彼女の誕生日を忘れたからだ。私はそれを覚えておくべきだった。
+    explanation: >
+      forgot her birthday から、すでに起きた失敗について述べている。
+      実際には覚えていなかったので should have remembered が自然。
+    focus:
+      - should_have_done
+      - past_failure
+      - remembered
+
+common_mistakes:
+  - mistake: should have を「持つべきだ」と誤解する
+    correction: >
+      should have + 過去分詞の have は完了形を作る助動詞であり、所有の have ではない。
+      should have called は「電話を持つべきだった」ではなく「電話すべきだった」。
+
+  - mistake: should と should have を同じように使う
+    correction: >
+      should は現在・未来への助言。
+      should have + 過去分詞は、過去にしなかったことへの後悔・批判。
+
+  - mistake: should not have を「しなかった方がよい」と訳す
+    correction: >
+      should not have done は、実際にはしてしまったことについて「すべきではなかった」と述べる。
+      つまり、実際にはした、という含みがある。
+
+  - mistake: should have の後ろに動詞の原形を置く
+    correction: >
+      should have の後ろは過去分詞。
+      should have go ではなく should have gone。
+
+learning_notes:
+  - >
+    should have + 過去分詞は、過去の事実を変えることはできないが、
+    それを振り返って「本当はそうすべきだった」と言う表現である。
+  - >
+    should not have + 過去分詞は、実際にはしてしまった行為への後悔・批判を表す。
+  - >
+    日本語の「〜すべきだった」だけでなく、
+    「実際にはしなかった」という裏の意味まで読むことが重要。
+  - >
+    should have been, should have done, should not have done は、
+    入試・TOEIC・実用英語のどれでも重要な反射理解項目である。
+
+prerequisites:
+  - g021
+  - g024
+
+next_items:
+  - g029
+  - g030

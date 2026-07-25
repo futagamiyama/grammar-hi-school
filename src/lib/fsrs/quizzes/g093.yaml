@@ -1,0 +1,392 @@
+id: g093
+file: g093.yaml
+
+title: so / not による代用表現
+type: construction
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: so / not が前の文や節の内容を受けることを読めるか？
+
+core_concept:
+  so_clause_substitution:
+    form: think/believe/suppose/guess/expect + so
+    meaning: そう思う、そう信じる、そう推測する
+    image: 前に出た文全体を so で受ける
+    examples:
+      - sentence: Will he come? I think so.
+        ja: 彼は来ますか。そう思います。
+        point: so = that he will come。
+      - sentence: Is she right? I believe so.
+        ja: 彼女は正しいですか。そう信じています。
+        point: so = that she is right。
+      - sentence: Will the plan work? I suppose so.
+        ja: その計画はうまくいきますか。たぶんそうでしょう。
+        point: so が前の内容を受けている。
+
+  not_clause_substitution:
+    form: hope/think/believe/suppose/expect + not
+    meaning: そうでないことを望む、そうではないと思う
+    image: 前の文全体の否定を not で受ける
+    examples:
+      - sentence: Will it rain tomorrow? I hope not.
+        ja: 明日は雨が降りますか。降らないといいのですが。
+        point: not = that it will not rain。
+      - sentence: Is he angry? I think not.
+        ja: 彼は怒っていますか。そうではないと思います。
+        point: not が前の内容を否定して受けている。
+      - sentence: Will the meeting be canceled? I expect not.
+        ja: 会議は中止されますか。中止されないと思います。
+        point: expect not は「そうならないと思う」。
+
+  afraid_so_not:
+    form: I am afraid so / I am afraid not
+    meaning: 残念ながらそうです / 残念ながらそうではありません
+    image: よくない答えをやわらかく伝える
+    examples:
+      - sentence: Is the train late? I am afraid so.
+        ja: 電車は遅れていますか。残念ながらそうです。
+        point: so = that the train is late。
+      - sentence: Can you come tomorrow? I am afraid not.
+        ja: 明日来られますか。残念ながら無理です。
+        point: not = that I cannot come tomorrow。
+      - sentence: Did we miss the bus? I am afraid so.
+        ja: 私たちはバスに乗り遅れましたか。残念ながらそうです。
+        point: 悪い知らせに対して I am afraid so を使う。
+
+  say_so_do_so:
+    form: say so / do so
+    meaning: そう言う / そうする
+    image: 前に出た発言・行動を so で受ける
+    examples:
+      - sentence: If you think it is wrong, say so.
+        ja: それが間違っていると思うなら、そう言いなさい。
+        point: so = that it is wrong。
+      - sentence: He promised to help us, and he did so.
+        ja: 彼は私たちを助けると約束し、実際にそうした。
+        point: did so = helped us。
+      - sentence: She told me to wait, so I did so.
+        ja: 彼女は私に待つように言ったので、私はそうした。
+        point: did so = waited。
+
+main_rule: >
+  so / not は、前に出た文や節の内容を短く受けることがある。
+  Will he come? I think so. の so は that he will come を受けている。
+  Will it rain tomorrow? I hope not. の not は that it will not rain を受けている。
+  I am afraid so. は「残念ながらそうです」、
+  I am afraid not. は「残念ながらそうではありません」という意味。
+  say so は「そう言う」、do so は「そうする」。
+  so は単語1語だが、文全体・節全体・動作全体を受けることがあるので、
+  何を受けているのかを前の文脈から補って読む。
+
+contrast_pairs:
+  - positive: Will he come? I think so.
+    negative: Will he come? I do not think so.
+    point: >
+      I think so は「来ると思う」。
+      I do not think so は「来るとは思わない」。
+
+  - hope_positive: Will he pass the exam? I hope so.
+    hope_negative: Will it rain tomorrow? I hope not.
+    point: >
+      I hope so は「そうだといい」。
+      I hope not は「そうでないといい」。
+
+  - afraid_positive: Is the train late? I am afraid so.
+    afraid_negative: Can you come tomorrow? I am afraid not.
+    point: >
+      I am afraid so は悪い内容を「残念ながらそう」と認める。
+      I am afraid not は「残念ながらそうではない」と断る。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または so / not が前の文や節を受けることを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g093_q001
+    question_type: two_choice
+    prompt: Will he come? I think ___.
+    choices:
+      - text: so
+        correct: true
+      - text: such
+        correct: false
+    answer: so
+    explanation: >
+      I think so の so は that he will come を受けている。
+      「そう思います」という意味。
+    translation: 彼は来ますか。そう思います。
+    focus:
+      - so_clause_substitution
+      - think_so
+      - will_come
+
+  - id: g093_q002
+    question_type: two_choice
+    prompt: Is she right? I believe ___.
+    choices:
+      - text: so
+        correct: true
+      - text: it
+        correct: false
+    answer: so
+    explanation: >
+      I believe so は「そう信じています」。
+      so は that she is right を受けている。
+    translation: 彼女は正しいですか。そう信じています。
+    focus:
+      - so_clause_substitution
+      - believe_so
+      - right
+
+  - id: g093_q003
+    question_type: two_choice
+    prompt: Will the plan work? I suppose ___.
+    choices:
+      - text: so
+        correct: true
+      - text: this
+        correct: false
+    answer: so
+    explanation: >
+      I suppose so は「たぶんそうでしょう」。
+      so が前の内容 the plan will work を受けている。
+    translation: その計画はうまくいきますか。たぶんそうでしょう。
+    focus:
+      - so_clause_substitution
+      - suppose_so
+      - plan
+
+  - id: g093_q004
+    question_type: two_choice
+    prompt: Will it rain tomorrow? I hope ___.
+    choices:
+      - text: not
+        correct: true
+      - text: no
+        correct: false
+    answer: not
+    explanation: >
+      I hope not は「そうでないといい」という意味。
+      not は that it will not rain を受けている。
+    translation: 明日は雨が降りますか。降らないといいのですが。
+    focus:
+      - not_clause_substitution
+      - hope_not
+      - rain
+
+  - id: g093_q005
+    question_type: two_choice
+    prompt: Will he pass the exam? I hope ___.
+    choices:
+      - text: so
+        correct: true
+      - text: not
+        correct: false
+    answer: so
+    explanation: >
+      合格してほしいという意味なので I hope so。
+      so は that he will pass the exam を受けている。
+    translation: 彼は試験に合格しますか。そうだといいのですが。
+    focus:
+      - so_clause_substitution
+      - hope_so
+      - exam
+
+  - id: g093_q006
+    question_type: two_choice
+    prompt: Is he angry? I think ___.
+    choices:
+      - text: not
+        correct: true
+      - text: no
+        correct: false
+    answer: not
+    explanation: >
+      I think not は「そうではないと思う」。
+      not が he is not angry という内容を受けている。
+    translation: 彼は怒っていますか。そうではないと思います。
+    focus:
+      - not_clause_substitution
+      - think_not
+      - angry
+
+  - id: g093_q007
+    question_type: two_choice
+    prompt: Is the train late? I am afraid ___.
+    choices:
+      - text: so
+        correct: true
+      - text: not
+        correct: false
+    answer: so
+    explanation: >
+      I am afraid so は「残念ながらそうです」。
+      電車が遅れているという悪い知らせを認めている。
+    translation: 電車は遅れていますか。残念ながらそうです。
+    focus:
+      - afraid_so_not
+      - afraid_so
+      - train_late
+
+  - id: g093_q008
+    question_type: two_choice
+    prompt: Can you come tomorrow? I am afraid ___.
+    choices:
+      - text: not
+        correct: true
+      - text: no
+        correct: false
+    answer: not
+    explanation: >
+      I am afraid not は「残念ながらそうではありません」。
+      ここでは「残念ながら行けません」という意味。
+    translation: 明日来られますか。残念ながら無理です。
+    focus:
+      - afraid_so_not
+      - afraid_not
+      - cannot_come
+
+  - id: g093_q009
+    question_type: two_choice
+    prompt: Did we miss the bus? I am afraid ___.
+    choices:
+      - text: so
+        correct: true
+      - text: it
+        correct: false
+    answer: so
+    explanation: >
+      I am afraid so は、悪い内容を「残念ながらそうです」と認める表現。
+      so は that we missed the bus を受けている。
+    translation: 私たちはバスに乗り遅れましたか。残念ながらそうです。
+    focus:
+      - afraid_so_not
+      - missed_bus
+      - so
+
+  - id: g093_q010
+    question_type: two_choice
+    prompt: If you think it is wrong, say ___.
+    choices:
+      - text: so
+        correct: true
+      - text: it
+        correct: false
+    answer: so
+    explanation: >
+      say so は「そう言う」。
+      so は it is wrong という内容を受けている。
+    translation: それが間違っていると思うなら、そう言いなさい。
+    focus:
+      - say_so_do_so
+      - say_so
+      - wrong
+
+  - id: g093_q011
+    question_type: two_choice
+    prompt: He promised to help us, and he did ___.
+    choices:
+      - text: so
+        correct: true
+      - text: it
+        correct: false
+    answer: so
+    explanation: >
+      did so は helped us を受けて「実際にそうした」という意味。
+      do so は前の動作を受ける。
+    translation: 彼は私たちを助けると約束し、実際にそうした。
+    focus:
+      - say_so_do_so
+      - did_so
+      - help_us
+
+  - id: g093_q012
+    question_type: two_choice
+    prompt: She told me to wait, so I did ___.
+    choices:
+      - text: so
+        correct: true
+      - text: wait
+        correct: false
+    answer: so
+    explanation: >
+      did so は waited を受けている。
+      「彼女がそう言ったので、私はそうした」という意味。
+    translation: 彼女は私に待つように言ったので、私はそうした。
+    focus:
+      - say_so_do_so
+      - did_so
+      - wait
+
+common_mistakes:
+  - mistake: I think so の so を「とても」と読む
+    correction: >
+      I think so の so は「そのように」という意味で、
+      前の文全体を受けている。
+  - mistake: I hope not を I hope no としてしまう
+    correction: >
+      文や節を否定して受ける時は not を使う。
+      I hope not. が正しい。
+  - mistake: I am afraid so を「私はそう恐れている」と直訳する
+    correction: >
+      I am afraid so は「残念ながらそうです」。
+      悪い知らせをやわらかく認める表現。
+  - mistake: I am afraid not を「怖くない」と読む
+    correction: >
+      I am afraid not は「残念ながらそうではありません」。
+      断る時にもよく使う。
+  - mistake: did so の so が何を受けているか見ない
+    correction: >
+      did so は前に出た動作を受ける。
+      he did so = he helped us のように補って読む。
+
+learning_notes:
+  - >
+    so は、前の文・節・動作を受けて「そう」と表す。
+    I think so / I believe so / I suppose so の形。
+  - >
+    not は、前の内容を否定して受ける。
+    I hope not / I think not / I expect not の形。
+  - >
+    I am afraid so は「残念ながらそうです」。
+    I am afraid not は「残念ながらそうではありません」。
+  - >
+    say so は「そう言う」。
+    do so は「そうする」。
+  - >
+    so / not は短いが、前のどの内容を受けているかを補わないと意味を取り違える。
+
+prerequisites:
+  - g085
+  - g087
+  - g090
+  - g091
+  - g092
+
+next_items:
+  - g094
+  - g095
+  - g096

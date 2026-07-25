@@ -1,0 +1,349 @@
+id: g044
+file: g044.yaml
+
+title: want 人 to do
+type: construction
+
+section:
+  id: s05
+  title: 不定詞・動名詞・分詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 人に〜してほしい構文を作れるか？
+
+core_concept:
+  want_to_do:
+    form: want + to do
+    meaning: 自分が〜したい
+    image: 主語自身がこれからすることを望む
+    examples:
+      - sentence: I want to study abroad.
+        ja: 私は留学したい。
+        point: 留学するのは I。
+      - sentence: She wants to join the club.
+        ja: 彼女はそのクラブに入りたい。
+        point: 入るのは She。
+      - sentence: They want to buy a new car.
+        ja: 彼らは新しい車を買いたい。
+        point: 買うのは They。
+
+  want_someone_to_do:
+    form: want + 人 + to do
+    meaning: 人に〜してほしい
+    image: 主語が、別の人に何かをしてほしいと思っている
+    examples:
+      - sentence: I want you to help me.
+        ja: 私はあなたに手伝ってほしい。
+        point: 手伝うのは you。
+      - sentence: She wants him to call her.
+        ja: 彼女は彼に電話してほしいと思っている。
+        point: 電話するのは him。
+      - sentence: The teacher wants us to read this book.
+        ja: 先生は私たちにこの本を読んでほしいと思っている。
+        point: 読むのは us。
+
+main_rule: >
+  want to do は「主語自身が〜したい」。
+  want 人 to do は「主語が、人に〜してほしいと思っている」。
+  want の後ろに人を入れると、その人が to do の動作をする。
+  I want to help you. は「私があなたを手伝いたい」。
+  I want you to help me. は「あなたに私を手伝ってほしい」。
+  英語では「人に〜してほしい」を want 人 to do で表す。
+
+contrast_pairs:
+  - subject_action: I want to help you.
+    other_person_action: I want you to help me.
+    point: >
+      want to help では、手伝うのは I。
+      want you to help では、手伝うのは you。
+
+  - subject_action: She wants to call him.
+    other_person_action: She wants him to call her.
+    point: >
+      wants to call では、電話するのは She。
+      wants him to call では、電話するのは him。
+
+  - subject_action: The teacher wants to read this book.
+    other_person_action: The teacher wants us to read this book.
+    point: >
+      wants to read では、読むのは The teacher。
+      wants us to read では、読むのは us。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または want to do と want 人 to do の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g044_q001
+    question_type: two_choice
+    prompt: I want ___ me.
+    choices:
+      - text: you to help
+        correct: true
+      - text: to help you
+        correct: false
+    answer: you to help
+    explanation: >
+      「あなたに私を手伝ってほしい」という意味。
+      手伝うのは you なので want you to help me が自然。
+    translation: 私はあなたに手伝ってほしい。
+    focus:
+      - want_someone_to_do
+      - object_plus_infinitive
+      - you_to_help
+
+  - id: g044_q002
+    question_type: two_choice
+    prompt: I want ___ you.
+    choices:
+      - text: to help
+        correct: true
+      - text: you to help
+        correct: false
+    answer: to help
+    explanation: >
+      「私はあなたを手伝いたい」という意味。
+      手伝うのは I なので want to help you が自然。
+    translation: 私はあなたを手伝いたい。
+    focus:
+      - want_to_do
+      - subject_action
+      - to_infinitive
+
+  - id: g044_q003
+    question_type: two_choice
+    prompt: She wants ___ her.
+    choices:
+      - text: him to call
+        correct: true
+      - text: to call him
+        correct: false
+    answer: him to call
+    explanation: >
+      「彼女は彼に電話してほしい」という意味。
+      電話するのは him なので wants him to call her が自然。
+    translation: 彼女は彼に電話してほしいと思っている。
+    focus:
+      - want_someone_to_do
+      - him_to_call
+      - other_person_action
+
+  - id: g044_q004
+    question_type: two_choice
+    prompt: She wants ___ him.
+    choices:
+      - text: to call
+        correct: true
+      - text: him to call
+        correct: false
+    answer: to call
+    explanation: >
+      「彼女は彼に電話したい」という意味。
+      電話するのは She なので wants to call him が自然。
+    translation: 彼女は彼に電話したい。
+    focus:
+      - want_to_do
+      - subject_action
+      - call
+
+  - id: g044_q005
+    question_type: two_choice
+    prompt: The teacher wants ___ this book.
+    choices:
+      - text: us to read
+        correct: true
+      - text: to read us
+        correct: false
+    answer: us to read
+    explanation: >
+      「先生は私たちにこの本を読んでほしい」という意味。
+      読むのは us なので wants us to read this book が自然。
+    translation: 先生は私たちにこの本を読んでほしいと思っている。
+    focus:
+      - want_someone_to_do
+      - us_to_read
+      - object_plus_infinitive
+
+  - id: g044_q006
+    question_type: two_choice
+    prompt: The teacher wants ___ this book.
+    choices:
+      - text: to read
+        correct: true
+      - text: us to read
+        correct: false
+    answer: to read
+    explanation: >
+      「先生自身がこの本を読みたい」という意味。
+      読むのは The teacher なので wants to read が自然。
+    translation: 先生はこの本を読みたい。
+    focus:
+      - want_to_do
+      - subject_action
+      - read
+
+  - id: g044_q007
+    question_type: two_choice
+    prompt: My parents want ___ harder.
+    choices:
+      - text: me to study
+        correct: true
+      - text: to study me
+        correct: false
+    answer: me to study
+    explanation: >
+      「両親は私にもっと勉強してほしい」という意味。
+      勉強するのは me なので want me to study harder が自然。
+    translation: 両親は私にもっと勉強してほしいと思っている。
+    focus:
+      - want_someone_to_do
+      - me_to_study
+      - other_person_action
+
+  - id: g044_q008
+    question_type: two_choice
+    prompt: I want ___ harder.
+    choices:
+      - text: to study
+        correct: true
+      - text: me to study
+        correct: false
+    answer: to study
+    explanation: >
+      「私はもっと勉強したい」という意味。
+      勉強するのは I なので want to study harder が自然。
+    translation: 私はもっと勉強したい。
+    focus:
+      - want_to_do
+      - subject_action
+      - study
+
+  - id: g044_q009
+    question_type: two_choice
+    prompt: We want ___ with us.
+    choices:
+      - text: them to come
+        correct: true
+      - text: to come them
+        correct: false
+    answer: them to come
+    explanation: >
+      「私たちは彼らに一緒に来てほしい」という意味。
+      来るのは them なので want them to come with us が自然。
+    translation: 私たちは彼らに一緒に来てほしい。
+    focus:
+      - want_someone_to_do
+      - them_to_come
+      - come_with_us
+
+  - id: g044_q010
+    question_type: two_choice
+    prompt: We want ___ with them.
+    choices:
+      - text: to come
+        correct: true
+      - text: them to come
+        correct: false
+    answer: to come
+    explanation: >
+      「私たちは彼らと一緒に行きたい」という意味。
+      行くのは We なので want to come with them が自然。
+    translation: 私たちは彼らと一緒に行きたい。
+    focus:
+      - want_to_do
+      - subject_action
+      - come_with_them
+
+  - id: g044_q011
+    question_type: two_choice
+    prompt: Do you want ___ the window?
+    choices:
+      - text: me to open
+        correct: true
+      - text: to open me
+        correct: false
+    answer: me to open
+    explanation: >
+      「私に窓を開けてほしいですか」という意味。
+      窓を開けるのは me なので want me to open the window が自然。
+    translation: 私に窓を開けてほしいですか。
+    focus:
+      - want_someone_to_do
+      - question
+      - me_to_open
+
+  - id: g044_q012
+    question_type: two_choice
+    prompt: Do you want ___ the window?
+    choices:
+      - text: to open
+        correct: true
+      - text: me to open
+        correct: false
+    answer: to open
+    explanation: >
+      「あなたは窓を開けたいですか」という意味。
+      窓を開けるのは you なので want to open the window が自然。
+    translation: あなたは窓を開けたいですか。
+    focus:
+      - want_to_do
+      - question
+      - subject_action
+
+common_mistakes:
+  - mistake: 「人に〜してほしい」を want to 人 do のようにしてしまう
+    correction: >
+      正しい形は want 人 to do。
+      I want you to help me. のように、人を want の直後に置く。
+  - mistake: I want to help me. と I want you to help me. を混同する
+    correction: >
+      I want to help me. は「私は自分を手伝いたい」という不自然な意味。
+      「あなたに手伝ってほしい」は I want you to help me.
+  - mistake: want 人 do として to を抜かす
+    correction: >
+      want 人 to do では to が必要。
+      I want you help me. ではなく I want you to help me.
+  - mistake: want 人 to do の人を主格にしてしまう
+    correction: >
+      want の後ろの人は目的格を使う。
+      I want him to call me. / She wants us to read this book.
+
+learning_notes:
+  - >
+    want to do は、主語自身がする。
+    want 人 to do は、その人がする。
+  - >
+    I want to help you. と I want you to help me. は、
+    語順が少し違うだけで意味が大きく変わる。
+  - >
+    want 人 to do の人は、me, you, him, her, us, them などの目的格になる。
+  - >
+    ask 人 to do, tell 人 to do, expect 人 to do なども同じ形を取る。
+    ただし、このカードでは want 人 to do に集中する。
+
+prerequisites:
+  - g039
+
+next_items:
+  - g045
+  - g046
+  - g047

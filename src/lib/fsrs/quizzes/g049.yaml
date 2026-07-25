@@ -1,0 +1,349 @@
+id: g049
+file: g049.yaml
+
+title: few / a few
+type: grammar_contrast
+
+section:
+  id: s06
+  title: 名詞・冠詞・数量表現
+
+level: basic
+target: 高校英文法基礎
+
+core_question: ほとんどないのか、少しはあるのか？
+
+core_concept:
+  few:
+    form: few + 複数可算名詞
+    meaning: ほとんど〜ない
+    image: 数が少なすぎて、不十分・否定的
+    examples:
+      - sentence: Few students understood the question.
+        ja: その質問を理解した生徒はほとんどいなかった。
+        point: 理解した生徒が少なすぎるという否定的な意味。
+      - sentence: Few people came to the meeting.
+        ja: その会議に来た人はほとんどいなかった。
+        point: 人数が期待より少ない。
+      - sentence: He has few friends in this city.
+        ja: 彼にはこの町に友人がほとんどいない。
+        point: 友人の数が少なく、不十分という感じ。
+
+  a_few:
+    form: a few + 複数可算名詞
+    meaning: 少しはある、2・3の〜がある
+    image: 数は多くないが、あるにはある
+    examples:
+      - sentence: A few students understood the question.
+        ja: その質問を理解した生徒が少しはいた。
+        point: 少数だが、理解した生徒がいたという肯定的な意味。
+      - sentence: A few people came to the meeting.
+        ja: その会議に何人か来た。
+        point: 人数は少ないが、来た人はいた。
+      - sentence: He has a few friends in this city.
+        ja: 彼にはこの町に友人が何人かいる。
+        point: 多くはないが、友人がいる。
+
+main_rule: >
+  few は「ほとんど〜ない」という否定的な意味を持つ。
+  a few は「少しはある」「何人か・いくつかある」という肯定的な意味を持つ。
+  どちらも複数可算名詞に使う。
+  Few students came. は「来た生徒はほとんどいなかった」。
+  A few students came. は「少しは生徒が来た」。
+  a があるかないかで、意味の向きが大きく変わる。
+
+contrast_pairs:
+  - negative: Few students passed the test.
+    positive: A few students passed the test.
+    point: >
+      Few students は「ほとんど合格しなかった」。
+      A few students は「少しは合格した」。
+
+  - negative: He has few friends.
+    positive: He has a few friends.
+    point: >
+      few friends は「友人がほとんどいない」。
+      a few friends は「友人が何人かいる」。
+
+  - negative: There were few chairs in the room.
+    positive: There were a few chairs in the room.
+    point: >
+      few chairs は「椅子がほとんどない」。
+      a few chairs は「椅子がいくつかある」。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または few と a few の意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g049_q001
+    question_type: two_choice
+    prompt: ___ students understood the question, so the teacher explained it again.
+    choices:
+      - text: Few
+        correct: true
+      - text: A few
+        correct: false
+    answer: Few
+    explanation: >
+      先生がもう一度説明したので、理解した生徒はほとんどいなかったと考える。
+      否定的な意味なので Few students が自然。
+    translation: その質問を理解した生徒はほとんどいなかったので、先生はもう一度説明した。
+    focus:
+      - few
+      - negative_quantity
+      - countable_plural
+
+  - id: g049_q002
+    question_type: two_choice
+    prompt: ___ students understood the question, so they could help the others.
+    choices:
+      - text: Few
+        correct: false
+      - text: A few
+        correct: true
+    answer: A few
+    explanation: >
+      他の生徒を助けられたので、少数だが理解した生徒がいたという意味。
+      肯定的な意味なので A few students が自然。
+    translation: その質問を理解した生徒が少しはいたので、彼らは他の生徒を助けることができた。
+    focus:
+      - a_few
+      - positive_quantity
+      - countable_plural
+
+  - id: g049_q003
+    question_type: two_choice
+    prompt: He has ___ friends, so he often feels lonely.
+    choices:
+      - text: few
+        correct: true
+      - text: a few
+        correct: false
+    answer: few
+    explanation: >
+      often feels lonely から、友人がほとんどいないという意味。
+      否定的な few friends が自然。
+    translation: 彼には友人がほとんどいないので、よく孤独を感じる。
+    focus:
+      - few
+      - negative_quantity
+      - friends
+
+  - id: g049_q004
+    question_type: two_choice
+    prompt: He has ___ friends who can help him.
+    choices:
+      - text: few
+        correct: false
+      - text: a few
+        correct: true
+    answer: a few
+    explanation: >
+      助けてくれる友人が少しはいるという肯定的な意味。
+      a few friends が自然。
+    translation: 彼には助けてくれる友人が何人かいる。
+    focus:
+      - a_few
+      - positive_quantity
+      - friends
+
+  - id: g049_q005
+    question_type: two_choice
+    prompt: There were ___ chairs, so many people had to stand.
+    choices:
+      - text: few
+        correct: true
+      - text: a few
+        correct: false
+    answer: few
+    explanation: >
+      多くの人が立たなければならなかったので、椅子はほとんどなかった。
+      不十分さを表す few chairs が自然。
+    translation: 椅子がほとんどなかったので、多くの人が立たなければならなかった。
+    focus:
+      - few
+      - negative_quantity
+      - chairs
+
+  - id: g049_q006
+    question_type: two_choice
+    prompt: There were ___ chairs, so we sat down.
+    choices:
+      - text: few
+        correct: false
+      - text: a few
+        correct: true
+    answer: a few
+    explanation: >
+      座ることができたので、椅子がいくつかあったという意味。
+      肯定的な a few chairs が自然。
+    translation: 椅子がいくつかあったので、私たちは座った。
+    focus:
+      - a_few
+      - positive_quantity
+      - chairs
+
+  - id: g049_q007
+    question_type: two_choice
+    prompt: ___ people came to the event, and it was almost empty.
+    choices:
+      - text: Few
+        correct: true
+      - text: A few
+        correct: false
+    answer: Few
+    explanation: >
+      almost empty から、来た人がほとんどいなかったとわかる。
+      否定的な Few people が自然。
+    translation: そのイベントに来た人はほとんどおらず、会場はほぼ空だった。
+    focus:
+      - few
+      - negative_quantity
+      - people
+
+  - id: g049_q008
+    question_type: two_choice
+    prompt: ___ people came early and helped us prepare.
+    choices:
+      - text: Few
+        correct: false
+      - text: A few
+        correct: true
+    answer: A few
+    explanation: >
+      準備を手伝ってくれた人が少しはいたという意味。
+      肯定的な A few people が自然。
+    translation: 何人かが早く来て、私たちの準備を手伝ってくれた。
+    focus:
+      - a_few
+      - positive_quantity
+      - people
+
+  - id: g049_q009
+    question_type: two_choice
+    prompt: I made ___ mistakes, so my score was very high.
+    choices:
+      - text: few
+        correct: true
+      - text: a few
+        correct: false
+    answer: few
+    explanation: >
+      点数が非常に高かったので、ミスはほとんどなかったという意味。
+      few mistakes が自然。
+    translation: 私はミスがほとんどなかったので、点数がとても高かった。
+    focus:
+      - few
+      - negative_quantity
+      - mistakes
+
+  - id: g049_q010
+    question_type: two_choice
+    prompt: I made ___ mistakes, but I passed the test.
+    choices:
+      - text: few
+        correct: false
+      - text: a few
+        correct: true
+    answer: a few
+    explanation: >
+      ミスは少しあったが合格したという意味。
+      a few mistakes で「いくつかのミス」。
+    translation: 私はいくつかミスをしたが、その試験に合格した。
+    focus:
+      - a_few
+      - positive_quantity
+      - mistakes
+
+  - id: g049_q011
+    question_type: two_choice
+    prompt: ___ shops were open because it was late at night.
+    choices:
+      - text: Few
+        correct: true
+      - text: A few
+        correct: false
+    answer: Few
+    explanation: >
+      深夜だったので、開いている店はほとんどなかったという意味。
+      否定的な Few shops が自然。
+    translation: 夜遅かったので、開いている店はほとんどなかった。
+    focus:
+      - few
+      - negative_quantity
+      - shops
+
+  - id: g049_q012
+    question_type: two_choice
+    prompt: ___ shops were still open, so we bought some food.
+    choices:
+      - text: Few
+        correct: false
+      - text: A few
+        correct: true
+    answer: A few
+    explanation: >
+      食べ物を買えたので、開いている店が少しはあったという意味。
+      肯定的な A few shops が自然。
+    translation: まだ開いている店がいくつかあったので、私たちは食べ物を買った。
+    focus:
+      - a_few
+      - positive_quantity
+      - shops
+
+common_mistakes:
+  - mistake: few と a few をどちらも「少し」とだけ覚える
+    correction: >
+      few は「ほとんどない」で否定的。
+      a few は「少しはある」で肯定的。
+      a の有無で意味の向きが変わる。
+  - mistake: few を不可算名詞に使う
+    correction: >
+      few / a few は複数可算名詞に使う。
+      water, money, time などの不可算名詞には little / a little を使う。
+  - mistake: A few students came. を「ほとんど来なかった」と読む
+    correction: >
+      A few students came. は「少しは来た」。
+      「ほとんど来なかった」は Few students came.
+  - mistake: 文脈を見ずに few / a few を選ぶ
+    correction: >
+      so he feels lonely, almost empty, many people had to stand などは few。
+      helped us, we bought food, could help others などは a few が自然。
+
+learning_notes:
+  - >
+    few は「少ない」ではなく「少なすぎる」と考えるとよい。
+    否定的な響きがある。
+  - >
+    a few は「多くはないが、あるにはある」と考える。
+    肯定的な響きがある。
+  - >
+    few / a few は複数可算名詞に使う。
+    a few books, a few students, a few mistakes のように使う。
+  - >
+    不可算名詞の little / a little との対比は次のカードで扱う。
+
+prerequisites: []
+
+next_items:
+  - g050
+  - g051
+  - g052

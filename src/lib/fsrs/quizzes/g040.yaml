@@ -1,0 +1,349 @@
+id: g040
+file: g040.yaml
+
+title: remember to do vs remember doing
+type: verb_usage
+
+section:
+  id: s05
+  title: 不定詞・動名詞・分詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: これからすることを覚えているか、したことを覚えているか？
+
+core_concept:
+  remember_to_do:
+    form: remember + to do
+    meaning: これからすべきことを忘れずにする・覚えている
+    image: 未来へ向かう「忘れずに〜する」
+    examples:
+      - sentence: Remember to lock the door.
+        ja: 忘れずにドアに鍵をかけなさい。
+        point: これから鍵をかける必要がある。
+      - sentence: I remembered to call her.
+        ja: 私は忘れずに彼女に電話した。
+        point: 電話することを覚えていて、実際にした。
+      - sentence: Please remember to bring your notebook.
+        ja: 忘れずにノートを持ってきてください。
+        point: これから持ってくる必要がある。
+
+  remember_doing:
+    form: remember + doing
+    meaning: 過去にしたことを覚えている
+    image: 過去の経験・記憶を思い出す
+    examples:
+      - sentence: I remember locking the door.
+        ja: 私はドアに鍵をかけたことを覚えている。
+        point: 鍵をかけたという過去の行為を覚えている。
+      - sentence: She remembers meeting him before.
+        ja: 彼女は以前彼に会ったことを覚えている。
+        point: 以前会った経験を覚えている。
+      - sentence: I remember visiting this museum as a child.
+        ja: 私は子どものころこの博物館を訪れたことを覚えている。
+        point: 過去の経験を覚えている。
+
+main_rule: >
+  remember to do は「これからすることを覚えている」「忘れずに〜する」。
+  remember doing は「過去に〜したことを覚えている」。
+  to do は未来へ向かう行為、doing はすでに行った行為・経験を表す。
+  日本語ではどちらも「覚えている」と訳せるため、
+  行為がこれからなのか、すでに行われたことなのかで判断する。
+
+contrast_pairs:
+  - future_action: I remembered to lock the door.
+    past_memory: I remember locking the door.
+    point: >
+      remembered to lock は、忘れずに鍵をかけた。
+      remember locking は、鍵をかけたことを覚えている。
+
+  - future_action: Remember to call me tonight.
+    past_memory: I remember calling you last night.
+    point: >
+      to call はこれから電話すること。
+      calling は過去に電話したこと。
+
+  - future_action: Please remember to bring your passport.
+    past_memory: I remember bringing my passport.
+    point: >
+      remember to bring は、これから忘れずに持ってくる。
+      remember bringing は、持ってきたことを覚えている。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または remember to do と remember doing の意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g040_q001
+    question_type: two_choice
+    prompt: Remember ___ the door before you leave.
+    choices:
+      - text: to lock
+        correct: true
+      - text: locking
+        correct: false
+    answer: to lock
+    explanation: >
+      before you leave から、これから鍵をかける必要がある。
+      「忘れずに鍵をかけなさい」なので remember to lock が自然。
+    translation: 出かける前に忘れずにドアに鍵をかけなさい。
+    focus:
+      - remember_to_do
+      - future_action
+      - to_infinitive
+
+  - id: g040_q002
+    question_type: two_choice
+    prompt: I remember ___ the door before I left.
+    choices:
+      - text: to lock
+        correct: false
+      - text: locking
+        correct: true
+    answer: locking
+    explanation: >
+      before I left は過去の行為。
+      「鍵をかけたことを覚えている」なので remember locking が自然。
+    translation: 私は出かける前にドアに鍵をかけたことを覚えている。
+    focus:
+      - remember_doing
+      - past_memory
+      - gerund
+
+  - id: g040_q003
+    question_type: two_choice
+    prompt: Please remember ___ your notebook tomorrow.
+    choices:
+      - text: to bring
+        correct: true
+      - text: bringing
+        correct: false
+    answer: to bring
+    explanation: >
+      tomorrow があるので、これから持ってくる行為。
+      「忘れずに持ってきてください」なので remember to bring が自然。
+    translation: 明日、忘れずにノートを持ってきてください。
+    focus:
+      - remember_to_do
+      - tomorrow
+      - future_action
+
+  - id: g040_q004
+    question_type: two_choice
+    prompt: I remember ___ my notebook yesterday.
+    choices:
+      - text: to bring
+        correct: false
+      - text: bringing
+        correct: true
+    answer: bringing
+    explanation: >
+      yesterday があるので、過去にノートを持ってきた行為を覚えている。
+      remember bringing が自然。
+    translation: 私は昨日ノートを持ってきたことを覚えている。
+    focus:
+      - remember_doing
+      - yesterday
+      - past_memory
+
+  - id: g040_q005
+    question_type: two_choice
+    prompt: Did you remember ___ her?
+    choices:
+      - text: to call
+        correct: true
+      - text: calling
+        correct: false
+    answer: to call
+    explanation: >
+      「忘れずに彼女に電話したか」と、すべき行為をしたかを聞いている。
+      remember to call が自然。
+    translation: 彼女に電話するのを覚えていましたか。 / 忘れずに彼女に電話しましたか。
+    focus:
+      - remember_to_do
+      - task_done
+      - future_action_from_past
+
+  - id: g040_q006
+    question_type: two_choice
+    prompt: I remember ___ her last week.
+    choices:
+      - text: to call
+        correct: false
+      - text: calling
+        correct: true
+    answer: calling
+    explanation: >
+      last week があるので、先週電話したという過去の行為を覚えている。
+      remember calling が自然。
+    translation: 私は先週彼女に電話したことを覚えている。
+    focus:
+      - remember_doing
+      - last_week
+      - past_memory
+
+  - id: g040_q007
+    question_type: two_choice
+    prompt: He remembered ___ the email before the deadline.
+    choices:
+      - text: to send
+        correct: true
+      - text: sending
+        correct: false
+    answer: to send
+    explanation: >
+      締切前にメールを送ることを忘れずに実行したという意味。
+      remembered to send が自然。
+    translation: 彼は締切前に忘れずにメールを送った。
+    focus:
+      - remember_to_do
+      - deadline
+      - task_completion
+
+  - id: g040_q008
+    question_type: two_choice
+    prompt: He remembers ___ the email yesterday.
+    choices:
+      - text: to send
+        correct: false
+      - text: sending
+        correct: true
+    answer: sending
+    explanation: >
+      yesterday があるので、過去にメールを送ったことを覚えている。
+      remembers sending が自然。
+    translation: 彼は昨日そのメールを送ったことを覚えている。
+    focus:
+      - remember_doing
+      - yesterday
+      - past_memory
+
+  - id: g040_q009
+    question_type: two_choice
+    prompt: Remember ___ your medicine after dinner.
+    choices:
+      - text: to take
+        correct: true
+      - text: taking
+        correct: false
+    answer: to take
+    explanation: >
+      after dinner に薬を飲む必要がある、というこれからの行為。
+      「忘れずに飲みなさい」なので remember to take が自然。
+    translation: 夕食後に忘れずに薬を飲みなさい。
+    focus:
+      - remember_to_do
+      - future_action
+      - medicine
+
+  - id: g040_q010
+    question_type: two_choice
+    prompt: I remember ___ this medicine before.
+    choices:
+      - text: to take
+        correct: false
+      - text: taking
+        correct: true
+    answer: taking
+    explanation: >
+      before があり、以前この薬を飲んだ経験を覚えている。
+      remember taking が自然。
+    translation: 私は以前この薬を飲んだことを覚えている。
+    focus:
+      - remember_doing
+      - before
+      - past_experience
+
+  - id: g040_q011
+    question_type: two_choice
+    prompt: She remembered ___ off the lights.
+    choices:
+      - text: to turn
+        correct: true
+      - text: turning
+        correct: false
+    answer: to turn
+    explanation: >
+      電気を消すべきことを覚えていて実行したという意味。
+      remembered to turn off が自然。
+    translation: 彼女は忘れずに電気を消した。
+    focus:
+      - remember_to_do
+      - turn_off
+      - task_completion
+
+  - id: g040_q012
+    question_type: two_choice
+    prompt: She remembers ___ off the lights.
+    choices:
+      - text: to turn
+        correct: false
+      - text: turning
+        correct: true
+    answer: turning
+    explanation: >
+      電気を消したという過去の行為を覚えている。
+      remembers turning off が自然。
+    translation: 彼女は電気を消したことを覚えている。
+    focus:
+      - remember_doing
+      - turn_off
+      - past_memory
+
+common_mistakes:
+  - mistake: remember to do と remember doing をどちらも同じ「覚えている」と考える
+    correction: >
+      remember to do は「これからすべきことを忘れずにする」。
+      remember doing は「過去にしたことを覚えている」。
+  - mistake: I remember to lock the door. を「鍵をかけたことを覚えている」と読む
+    correction: >
+      過去に鍵をかけた記憶なら I remember locking the door.。
+      I remembered to lock the door. なら「忘れずに鍵をかけた」。
+  - mistake: yesterday や last week があるのに to do を選ぶ
+    correction: >
+      過去にしたことを覚えている場合は doing を使う。
+      I remember calling her last week. が自然。
+  - mistake: 命令文 Remember ... で doing を選ぶ
+    correction: >
+      「忘れずに〜しなさい」は、これからする行為なので
+      Remember to lock the door. のように to do を使う。
+
+learning_notes:
+  - >
+    remember to do は、行為がまだ先にある。
+    「忘れずに〜する」と考える。
+  - >
+    remember doing は、行為がすでに過去にある。
+    「〜したことを覚えている」と考える。
+  - >
+    remembered to do は「覚えていて実行した」という意味になりやすい。
+    I remembered to call her. は「忘れずに電話した」。
+  - >
+    remember doing は経験の記憶を表す。
+    I remember meeting him. は「彼に会ったことを覚えている」。
+
+prerequisites:
+  - g039
+
+next_items:
+  - g041
+  - g042
+  - g043

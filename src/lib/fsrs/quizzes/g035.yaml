@@ -1,0 +1,370 @@
+id: g035
+file: g035.yaml
+
+title: 第4文型の受動態
+type: construction
+
+section:
+  id: s04
+  title: 受動態・態
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 人を主語にするか、物を主語にするか？
+
+core_concept:
+  double_object_active:
+    form: S + V + 人 + 物
+    meaning: 人に物を与える・見せる・教えるなどを表す第4文型
+    image: 動作の相手と、渡されるものの両方が目的語になる
+    examples:
+      - sentence: He gave me a book.
+        ja: 彼は私に本をくれた。
+        point: me が人、a book が物。
+      - sentence: She taught us English.
+        ja: 彼女は私たちに英語を教えた。
+        point: us が人、English が教えられる内容。
+      - sentence: They offered him a job.
+        ja: 彼らは彼に仕事を提供した。
+        point: him が人、a job が提供されたもの。
+
+  person_subject_passive:
+    form: 人 + be + 過去分詞 + 物
+    meaning: 人を主語にして「〜を与えられた・教えられた・見せられた」と述べる
+    image: 受け取る人を中心に見る
+    examples:
+      - sentence: I was given a book.
+        ja: 私は本をもらった。
+        point: me が主語 I になっている。
+      - sentence: We were taught English.
+        ja: 私たちは英語を教えられた。
+        point: us が主語 We になっている。
+      - sentence: He was offered a job.
+        ja: 彼は仕事を提供された。
+        point: him が主語 He になっている。
+
+  thing_subject_passive:
+    form: 物 + be + 過去分詞 + to/for + 人
+    meaning: 物を主語にして「その物が人に与えられた・送られた・買われた」と述べる
+    image: 渡される物・与えられる物を中心に見る
+    examples:
+      - sentence: A book was given to me.
+        ja: 本が私に与えられた。
+        point: a book が主語になり、相手は to me で表す。
+      - sentence: A letter was sent to her.
+        ja: 手紙が彼女に送られた。
+        point: a letter が主語、相手は to her。
+      - sentence: A new bag was bought for me.
+        ja: 新しいかばんが私のために買われた。
+        point: buy 型では相手を for me で表す。
+
+main_rule: >
+  第4文型 S + V + 人 + 物 は、受動態にすると
+  「人」を主語にする形と、「物」を主語にする形がある。
+  人を主語にすると、人 + be + 過去分詞 + 物 になる。
+  物を主語にすると、物 + be + 過去分詞 + to/for + 人 になる。
+  give, send, show, teach, tell, offer などは to を使いやすく、
+  buy, make, cook, get などは for を使いやすい。
+
+contrast_pairs:
+  - active: He gave me a book.
+    person_subject_passive: I was given a book.
+    thing_subject_passive: A book was given to me.
+    point: >
+      me を主語にすれば I was given a book。
+      a book を主語にすれば A book was given to me。
+
+  - active: She sent him an email.
+    person_subject_passive: He was sent an email.
+    thing_subject_passive: An email was sent to him.
+    point: >
+      人を主語にするなら He was sent an email。
+      物を主語にするなら An email was sent to him。
+
+  - active: My mother bought me a new coat.
+    person_subject_passive: I was bought a new coat.
+    thing_subject_passive: A new coat was bought for me.
+    point: >
+      buy は「相手のために買う」意味なので、
+      物を主語にする受動態では for me を使う。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または第4文型の受動態で人主語・物主語の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g035_q001
+    question_type: two_choice
+    prompt: He gave me a book. → I ___ a book.
+    choices:
+      - text: was given
+        correct: true
+      - text: was gave
+        correct: false
+    answer: was given
+    explanation: >
+      me を主語 I にした受動態。
+      受動態は be + 過去分詞なので was given が正しい。
+    translation: 彼は私に本をくれた。→ 私は本をもらった。
+    focus:
+      - person_subject_passive
+      - give
+      - be_past_participle
+
+  - id: g035_q002
+    question_type: two_choice
+    prompt: He gave me a book. → A book was given ___ me.
+    choices:
+      - text: to
+        correct: true
+      - text: for
+        correct: false
+    answer: to
+    explanation: >
+      give は「人に物を与える」型なので、
+      物を主語にした受動態では to me を使う。
+    translation: 彼は私に本をくれた。→ 本が私に与えられた。
+    focus:
+      - thing_subject_passive
+      - give
+      - to_person
+
+  - id: g035_q003
+    question_type: two_choice
+    prompt: She sent him an email. → He ___ an email.
+    choices:
+      - text: was sent
+        correct: true
+      - text: was sending
+        correct: false
+    answer: was sent
+    explanation: >
+      him を主語 He にした受動態。
+      send の過去分詞 sent を使い、He was sent an email. となる。
+    translation: 彼女は彼にメールを送った。→ 彼はメールを送られた。
+    focus:
+      - person_subject_passive
+      - send
+      - past_participle
+
+  - id: g035_q004
+    question_type: two_choice
+    prompt: She sent him an email. → An email was sent ___ him.
+    choices:
+      - text: to
+        correct: true
+      - text: for
+        correct: false
+    answer: to
+    explanation: >
+      send は「人に物を送る」型。
+      物を主語にすると、相手は to him で表す。
+    translation: 彼女は彼にメールを送った。→ メールが彼に送られた。
+    focus:
+      - thing_subject_passive
+      - send
+      - to_person
+
+  - id: g035_q005
+    question_type: two_choice
+    prompt: The teacher taught us English. → We ___ English.
+    choices:
+      - text: were taught
+        correct: true
+      - text: were teaching
+        correct: false
+    answer: were taught
+    explanation: >
+      us を主語 We にした受動態。
+      teach の過去分詞 taught を使い、We were taught English. となる。
+    translation: 先生は私たちに英語を教えた。→ 私たちは英語を教えられた。
+    focus:
+      - person_subject_passive
+      - teach
+      - taught
+
+  - id: g035_q006
+    question_type: two_choice
+    prompt: The teacher taught us English. → English was taught ___ us.
+    choices:
+      - text: to
+        correct: true
+      - text: for
+        correct: false
+    answer: to
+    explanation: >
+      物・内容である English を主語にすると、
+      相手は to us で表す。
+    translation: 先生は私たちに英語を教えた。→ 英語が私たちに教えられた。
+    focus:
+      - thing_subject_passive
+      - teach
+      - to_person
+
+  - id: g035_q007
+    question_type: two_choice
+    prompt: They offered her a job. → She ___ a job.
+    choices:
+      - text: was offered
+        correct: true
+      - text: was offering
+        correct: false
+    answer: was offered
+    explanation: >
+      her を主語 She にした受動態。
+      offer の過去分詞 offered を使う。
+    translation: 彼らは彼女に仕事を提供した。→ 彼女は仕事を提供された。
+    focus:
+      - person_subject_passive
+      - offer
+      - offered
+
+  - id: g035_q008
+    question_type: two_choice
+    prompt: They offered her a job. → A job was offered ___ her.
+    choices:
+      - text: to
+        correct: true
+      - text: for
+        correct: false
+    answer: to
+    explanation: >
+      offer は「人に物・機会を提供する」型。
+      物を主語にすると to her を使う。
+    translation: 彼らは彼女に仕事を提供した。→ 仕事が彼女に提供された。
+    focus:
+      - thing_subject_passive
+      - offer
+      - to_person
+
+  - id: g035_q009
+    question_type: two_choice
+    prompt: My mother bought me a new coat. → I ___ a new coat.
+    choices:
+      - text: was bought
+        correct: true
+      - text: was buying
+        correct: false
+    answer: was bought
+    explanation: >
+      me を主語 I にした受動態。
+      I was bought a new coat. で「私は新しいコートを買ってもらった」となる。
+    translation: 母は私に新しいコートを買ってくれた。→ 私は新しいコートを買ってもらった。
+    focus:
+      - person_subject_passive
+      - buy
+      - bought
+
+  - id: g035_q010
+    question_type: two_choice
+    prompt: My mother bought me a new coat. → A new coat was bought ___ me.
+    choices:
+      - text: for
+        correct: true
+      - text: to
+        correct: false
+    answer: for
+    explanation: >
+      buy は「人のために買う」型。
+      物を主語にした受動態では for me を使う。
+    translation: 母は私に新しいコートを買ってくれた。→ 新しいコートが私のために買われた。
+    focus:
+      - thing_subject_passive
+      - buy
+      - for_person
+
+  - id: g035_q011
+    question_type: two_choice
+    prompt: He told me the truth. → I ___ the truth.
+    choices:
+      - text: was told
+        correct: true
+      - text: was said
+        correct: false
+    answer: was told
+    explanation: >
+      tell は「人に内容を伝える」動詞。
+      me を主語にした受動態では I was told the truth. となる。
+      say はこの形では使えない。
+    translation: 彼は私に真実を話した。→ 私は真実を告げられた。
+    focus:
+      - person_subject_passive
+      - tell
+      - told
+
+  - id: g035_q012
+    question_type: two_choice
+    prompt: He told me the truth. → The truth was told ___ me.
+    choices:
+      - text: to
+        correct: true
+      - text: for
+        correct: false
+    answer: to
+    explanation: >
+      the truth を主語にすると、
+      伝えられた相手は to me で表す。
+    translation: 彼は私に真実を話した。→ 真実が私に告げられた。
+    focus:
+      - thing_subject_passive
+      - tell
+      - to_person
+
+common_mistakes:
+  - mistake: 人を主語にした受動態で to や for を入れてしまう
+    correction: >
+      I was given a book. のように、人を主語にする場合は
+      その後に物をそのまま置ける。
+      I was given to a book. とはしない。
+  - mistake: 物を主語にした受動態で to/for を忘れる
+    correction: >
+      A book was given to me. のように、
+      物を主語にする場合は相手を to/for + 人で表す。
+  - mistake: give 型と buy 型の to/for を混同する
+    correction: >
+      give, send, show, teach, tell, offer は to を使いやすい。
+      buy, make, cook, get は for を使いやすい。
+  - mistake: 受動態なのに過去分詞を使わない
+    correction: >
+      受動態の基本は be + 過去分詞。
+      was gave ではなく was given、
+      was send ではなく was sent とする。
+
+learning_notes:
+  - >
+    第4文型の受動態では、「人」と「物」のどちらを主語にするかをまず決める。
+  - >
+    人を主語にすると、I was given a book. のように自然な受動態になる。
+  - >
+    物を主語にすると、A book was given to me. のように
+    to/for + 人 が必要になる。
+  - >
+    日本語では「もらう」「してもらう」と訳すと自然なことが多い。
+    ただし英語では受動態 be + 過去分詞として処理する。
+
+prerequisites:
+  - g031
+  - g032
+
+next_items:
+  - g036
+  - g037
+  - g038

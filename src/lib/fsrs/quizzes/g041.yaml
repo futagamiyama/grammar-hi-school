@@ -1,0 +1,352 @@
+id: g041
+file: g041.yaml
+
+title: forget to do vs forget doing
+type: verb_usage
+
+section:
+  id: s05
+  title: 不定詞・動名詞・分詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: し忘れたのか、したことを忘れたのか？
+
+core_concept:
+  forget_to_do:
+    form: forget + to do
+    meaning: これからすべきことを忘れて、実行しない
+    image: 未来へ向かう行為を忘れる
+    examples:
+      - sentence: I forgot to lock the door.
+        ja: 私はドアに鍵をかけ忘れた。
+        point: 鍵をかけるべきだったが、しなかった。
+      - sentence: She forgot to call me.
+        ja: 彼女は私に電話するのを忘れた。
+        point: 電話する予定・必要があったが、実行しなかった。
+      - sentence: Don't forget to bring your notebook.
+        ja: ノートを持ってくるのを忘れないで。
+        point: これから持ってくる行為を忘れないように言っている。
+
+  forget_doing:
+    form: forget + doing
+    meaning: 過去にしたことを忘れる
+    image: 過去の経験・行為の記憶が消える
+    examples:
+      - sentence: I forgot locking the door.
+        ja: 私はドアに鍵をかけたことを忘れた。
+        point: 鍵をかけた行為自体は過去に行われている。
+      - sentence: She forgot meeting him before.
+        ja: 彼女は以前彼に会ったことを忘れていた。
+        point: 会った経験があったが、その記憶を忘れていた。
+      - sentence: I will never forget visiting that town.
+        ja: 私はあの町を訪れたことを決して忘れない。
+        point: 過去の経験を忘れないという意味。
+
+main_rule: >
+  forget to do は「これからすべきことを忘れる」「〜し忘れる」。
+  forget doing は「過去に〜したことを忘れる」。
+  to do は未来へ向かう行為、doing はすでに行った行為・経験を表す。
+  日本語ではどちらも「忘れる」と訳せるため、
+  行為が実行されなかったのか、実行されたが記憶を忘れたのかで判断する。
+
+contrast_pairs:
+  - future_action_not_done: I forgot to lock the door.
+    past_action_forgotten: I forgot locking the door.
+    point: >
+      forgot to lock は、鍵をかけるべきだったが、かけ忘れた。
+      forgot locking は、鍵をかけたこと自体を忘れた。
+
+  - future_action_not_done: She forgot to call me.
+    past_action_forgotten: She forgot calling me.
+    point: >
+      forgot to call は、電話するのを忘れて電話しなかった。
+      forgot calling は、電話したことを忘れた。
+
+  - future_action_not_done: Don't forget to bring your passport.
+    past_action_forgotten: I will never forget bringing my passport.
+    point: >
+      forget to bring は、これから持ってくることを忘れる。
+      forget bringing は、持ってきたという過去の行為を忘れる。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または forget to do と forget doing の意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g041_q001
+    question_type: two_choice
+    prompt: I forgot ___ the door, so it was open all night.
+    choices:
+      - text: to lock
+        correct: true
+      - text: locking
+        correct: false
+    answer: to lock
+    explanation: >
+      ドアが一晩中開いていたので、鍵をかけるべきだったが、しなかった。
+      「鍵をかけ忘れた」なので forgot to lock が自然。
+    translation: 私はドアに鍵をかけ忘れたので、一晩中開いていた。
+    focus:
+      - forget_to_do
+      - action_not_done
+      - to_infinitive
+
+  - id: g041_q002
+    question_type: two_choice
+    prompt: I forgot ___ the door and locked it again.
+    choices:
+      - text: to lock
+        correct: false
+      - text: locking
+        correct: true
+    answer: locking
+    explanation: >
+      すでに鍵をかけたことを忘れて、もう一度かけたという意味。
+      過去にした行為を忘れたので forgot locking が自然。
+    translation: 私はドアに鍵をかけたことを忘れて、もう一度鍵をかけた。
+    focus:
+      - forget_doing
+      - past_action_forgotten
+      - gerund
+
+  - id: g041_q003
+    question_type: two_choice
+    prompt: Don't forget ___ your notebook tomorrow.
+    choices:
+      - text: to bring
+        correct: true
+      - text: bringing
+        correct: false
+    answer: to bring
+    explanation: >
+      tomorrow があるので、これから持ってくる行為。
+      「忘れずに持ってきなさい」なので forget to bring が自然。
+    translation: 明日、ノートを持ってくるのを忘れないで。
+    focus:
+      - forget_to_do
+      - future_action
+      - tomorrow
+
+  - id: g041_q004
+    question_type: two_choice
+    prompt: He forgot ___ his notebook yesterday.
+    choices:
+      - text: to bring
+        correct: false
+      - text: bringing
+        correct: true
+    answer: bringing
+    explanation: >
+      yesterday があり、過去にノートを持ってきた行為を忘れたという意味。
+      forget bringing が自然。
+    translation: 彼は昨日ノートを持ってきたことを忘れていた。
+    focus:
+      - forget_doing
+      - yesterday
+      - past_action_forgotten
+
+  - id: g041_q005
+    question_type: two_choice
+    prompt: She forgot ___ me, so I waited for hours.
+    choices:
+      - text: to call
+        correct: true
+      - text: calling
+        correct: false
+    answer: to call
+    explanation: >
+      私が何時間も待ったので、彼女は電話するべきだったが電話しなかった。
+      「電話し忘れた」なので forgot to call が自然。
+    translation: 彼女は私に電話するのを忘れたので、私は何時間も待った。
+    focus:
+      - forget_to_do
+      - action_not_done
+      - call
+
+  - id: g041_q006
+    question_type: two_choice
+    prompt: She forgot ___ me last week and called me again.
+    choices:
+      - text: to call
+        correct: false
+      - text: calling
+        correct: true
+    answer: calling
+    explanation: >
+      先週電話したことを忘れて、もう一度電話したという意味。
+      過去にした行為を忘れたので forgot calling が自然。
+    translation: 彼女は先週私に電話したことを忘れて、また電話してきた。
+    focus:
+      - forget_doing
+      - past_action_forgotten
+      - last_week
+
+  - id: g041_q007
+    question_type: two_choice
+    prompt: He forgot ___ the email before the deadline.
+    choices:
+      - text: to send
+        correct: true
+      - text: sending
+        correct: false
+    answer: to send
+    explanation: >
+      締切前にメールを送るべきだったが、送らなかったという意味。
+      forgot to send が自然。
+    translation: 彼は締切前にメールを送るのを忘れた。
+    focus:
+      - forget_to_do
+      - deadline
+      - action_not_done
+
+  - id: g041_q008
+    question_type: two_choice
+    prompt: He forgot ___ the email and sent the same message twice.
+    choices:
+      - text: to send
+        correct: false
+      - text: sending
+        correct: true
+    answer: sending
+    explanation: >
+      すでにメールを送ったことを忘れて、同じ内容を2回送ったという意味。
+      forgot sending が自然。
+    translation: 彼はそのメールを送ったことを忘れて、同じメッセージを2回送った。
+    focus:
+      - forget_doing
+      - past_action_forgotten
+      - sent_twice
+
+  - id: g041_q009
+    question_type: two_choice
+    prompt: Please don't forget ___ your medicine after dinner.
+    choices:
+      - text: to take
+        correct: true
+      - text: taking
+        correct: false
+    answer: to take
+    explanation: >
+      夕食後に薬を飲むという、これからする必要のある行為。
+      don't forget to take が自然。
+    translation: 夕食後に薬を飲むのを忘れないでください。
+    focus:
+      - forget_to_do
+      - future_action
+      - medicine
+
+  - id: g041_q010
+    question_type: two_choice
+    prompt: I forgot ___ the medicine and took it again.
+    choices:
+      - text: to take
+        correct: false
+      - text: taking
+        correct: true
+    answer: taking
+    explanation: >
+      すでに薬を飲んだことを忘れて、もう一度飲んだという意味。
+      過去の行為を忘れたので forgot taking が自然。
+    translation: 私は薬を飲んだことを忘れて、もう一度飲んだ。
+    focus:
+      - forget_doing
+      - past_action_forgotten
+      - took_again
+
+  - id: g041_q011
+    question_type: two_choice
+    prompt: I will never forget ___ Paris for the first time.
+    choices:
+      - text: to visit
+        correct: false
+      - text: visiting
+        correct: true
+    answer: visiting
+    explanation: >
+      パリを初めて訪れたという過去の経験を忘れないという意味。
+      forget visiting が自然。
+    translation: 私は初めてパリを訪れたことを決して忘れない。
+    focus:
+      - forget_doing
+      - past_experience
+      - never_forget
+
+  - id: g041_q012
+    question_type: two_choice
+    prompt: Don't forget ___ your passport before you leave.
+    choices:
+      - text: to check
+        correct: true
+      - text: checking
+        correct: false
+    answer: to check
+    explanation: >
+      出発前にパスポートを確認するという、これから必要な行為。
+      don't forget to check が自然。
+    translation: 出発前にパスポートを確認するのを忘れないで。
+    focus:
+      - forget_to_do
+      - future_action
+      - passport
+
+common_mistakes:
+  - mistake: forget to do と forget doing をどちらも同じ「忘れる」と考える
+    correction: >
+      forget to do は「し忘れる」。
+      forget doing は「したことを忘れる」。
+      行為が実行されなかったのか、実行されたが記憶を忘れたのかで判断する。
+  - mistake: I forgot locking the door. を「鍵をかけ忘れた」と読む
+    correction: >
+      「鍵をかけ忘れた」は I forgot to lock the door.。
+      I forgot locking the door. は「鍵をかけたことを忘れた」。
+  - mistake: Don't forget doing ... と言ってしまう
+    correction: >
+      「忘れずに〜しなさい」は、これからする行為なので
+      Don't forget to do ... を使う。
+  - mistake: never forget to visit Paris のように過去の経験に to do を使う
+    correction: >
+      「パリを訪れたことを忘れない」は過去の経験なので
+      I will never forget visiting Paris. とする。
+
+learning_notes:
+  - >
+    forget to do は、行為がまだ先にあり、それを忘れて実行しない。
+    「〜し忘れる」と覚える。
+  - >
+    forget doing は、行為はすでに起きており、その記憶を忘れる。
+    「〜したことを忘れる」と考える。
+  - >
+    remember to do / remember doing と完全に対になる。
+    remember to lock は「忘れずに鍵をかける」、
+    forget to lock は「鍵をかけ忘れる」。
+  - >
+    実際の会話では forget doing より remember doing の方がよく出るが、
+    入試英文法では意味の対立として重要。
+
+prerequisites:
+  - g039
+  - g040
+
+next_items:
+  - g042
+  - g043
+  - g044

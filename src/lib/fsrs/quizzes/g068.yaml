@@ -1,0 +1,370 @@
+id: g068
+file: g068.yaml
+
+title: 関係代名詞の省略
+type: construction
+
+section:
+  id: s08
+  title: 関係詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 省略できる関係代名詞と、省略できない関係代名詞を判断できるか？
+
+core_concept:
+  object_relative_omission:
+    form: 先行詞 + 主語 + 動詞 ...
+    meaning: 目的格の関係代名詞は省略できる
+    image: 関係詞節の中で目的語が欠けている
+    examples:
+      - sentence: The book I bought yesterday is interesting.
+        ja: 私が昨日買った本は面白い。
+        point: The book which/that I bought yesterday の which/that が省略されている。
+      - sentence: The man I met yesterday was kind.
+        ja: 私が昨日会った男性は親切だった。
+        point: The man who/whom/that I met yesterday の関係代名詞が省略されている。
+      - sentence: This is the movie we watched last night.
+        ja: これは私たちが昨夜見た映画です。
+        point: the movie which/that we watched の which/that が省略されている。
+
+  subject_relative_no_omission:
+    form: 先行詞 + who/which/that + 動詞 ...
+    meaning: 主格の関係代名詞は省略できない
+    image: 関係詞節の中で主語が欠けているので、関係代名詞が必要
+    examples:
+      - sentence: The man who lives next door is a doctor.
+        ja: 隣に住んでいる男性は医者です。
+        point: who が lives の主語なので省略できない。
+      - sentence: The book which is on the desk is mine.
+        ja: 机の上にある本は私のものです。
+        point: which が is の主語なので省略できない。
+      - sentence: Students who study hard usually improve.
+        ja: 一生懸命勉強する生徒はたいてい上達する。
+        point: who が study の主語なので省略できない。
+
+  preposition_and_omission:
+    form: 前置詞 + whom/which
+    meaning: 前置詞の直後の関係代名詞は省略できない
+    image: 前置詞の目的語として関係代名詞が必要
+    examples:
+      - sentence: This is the house in which he lives.
+        ja: これが彼が住んでいる家です。
+        point: in which の which は省略できない。
+      - sentence: The person to whom I spoke was polite.
+        ja: 私が話しかけた人は礼儀正しかった。
+        point: to whom の whom は省略できない。
+      - sentence: This is the house he lives in.
+        ja: これが彼が住んでいる家です。
+        point: 前置詞 in を後ろに残す形なら関係代名詞を省略できる。
+
+main_rule: >
+  関係代名詞は、目的格なら省略できる。
+  The book which I bought yesterday is interesting. は
+  The book I bought yesterday is interesting. とできる。
+  一方、主格の関係代名詞は省略できない。
+  The man who lives next door is a doctor. の who は lives の主語なので省略できない。
+  また、in which, to whom のように前置詞の直後にある関係代名詞も省略できない。
+  省略できるかどうかは、関係詞節の中で関係代名詞が主語か目的語かで判断する。
+
+contrast_pairs:
+  - object_relative: The book I bought yesterday is interesting.
+    subject_relative: The book which is on the desk is mine.
+    point: >
+      I bought の目的語が欠けているので、which/that は省略できる。
+      which is on the desk では which が is の主語なので省略できない。
+
+  - object_relative: The man I met yesterday was kind.
+    subject_relative: The man who lives next door is kind.
+    point: >
+      I met の目的語なら省略できる。
+      lives の主語なら who は省略できない。
+
+  - preposition_front: This is the house in which he lives.
+    preposition_end: This is the house he lives in.
+    point: >
+      in which の which は省略できない。
+      in を後ろに残すと、which/that を省略できる。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または主格と目的格の関係代名詞の省略可否を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g068_q001
+    question_type: two_choice
+    prompt: The book ___ I bought yesterday is interesting.
+    choices:
+      - text: which
+        correct: true
+      - text: who
+        correct: false
+    answer: which
+    explanation: >
+      先行詞 The book は物なので which が自然。
+      ここでは I bought の目的語が欠けているので、which は省略することもできる。
+    translation: 私が昨日買った本は面白い。
+    focus:
+      - object_relative
+      - omission_possible
+      - which
+
+  - id: g068_q002
+    question_type: two_choice
+    prompt: The book I bought yesterday is interesting.
+    choices:
+      - text: 正しい
+        correct: true
+      - text: 誤り
+        correct: false
+    answer: 正しい
+    explanation: >
+      The book which/that I bought yesterday の目的格関係代名詞が省略された形。
+      目的格なので省略できる。
+    translation: 私が昨日買った本は面白い。
+    focus:
+      - object_relative_omission
+      - omission_possible
+      - correct_sentence
+
+  - id: g068_q003
+    question_type: two_choice
+    prompt: The man ___ lives next door is a doctor.
+    choices:
+      - text: who
+        correct: true
+      - text: 省略
+        correct: false
+    answer: who
+    explanation: >
+      who は lives の主語。
+      主格の関係代名詞なので省略できない。
+    translation: 隣に住んでいる男性は医者です。
+    focus:
+      - subject_relative_no_omission
+      - who
+      - subject_relative
+
+  - id: g068_q004
+    question_type: two_choice
+    prompt: The man lives next door is a doctor.
+    choices:
+      - text: 正しい
+        correct: false
+      - text: 誤り
+        correct: true
+    answer: 誤り
+    explanation: >
+      The man who lives next door is a doctor. の who は lives の主語。
+      主格の関係代名詞は省略できない。
+    translation: 隣に住んでいる男性は医者です。
+    focus:
+      - subject_relative_no_omission
+      - omission_not_possible
+      - incorrect_sentence
+
+  - id: g068_q005
+    question_type: two_choice
+    prompt: The man ___ I met yesterday was kind.
+    choices:
+      - text: who
+        correct: true
+      - text: which
+        correct: false
+    answer: who
+    explanation: >
+      先行詞 The man は人なので who が自然。
+      I met の目的語が欠けているので、この who は省略することもできる。
+    translation: 私が昨日会った男性は親切だった。
+    focus:
+      - object_relative
+      - person_antecedent
+      - omission_possible
+
+  - id: g068_q006
+    question_type: two_choice
+    prompt: The man I met yesterday was kind.
+    choices:
+      - text: 正しい
+        correct: true
+      - text: 誤り
+        correct: false
+    answer: 正しい
+    explanation: >
+      The man who/whom/that I met yesterday の目的格関係代名詞が省略された形。
+      目的格なので省略できる。
+    translation: 私が昨日会った男性は親切だった。
+    focus:
+      - object_relative_omission
+      - omission_possible
+      - man_i_met
+
+  - id: g068_q007
+    question_type: two_choice
+    prompt: The movie ___ we watched last night was exciting.
+    choices:
+      - text: which
+        correct: true
+      - text: who
+        correct: false
+    answer: which
+    explanation: >
+      先行詞 The movie は物。
+      we watched の目的語が欠けているので which が自然で、省略も可能。
+    translation: 私たちが昨夜見た映画はわくわくするものだった。
+    focus:
+      - object_relative
+      - thing_antecedent
+      - movie
+
+  - id: g068_q008
+    question_type: two_choice
+    prompt: The movie we watched last night was exciting.
+    choices:
+      - text: 正しい
+        correct: true
+      - text: 誤り
+        correct: false
+    answer: 正しい
+    explanation: >
+      The movie which/that we watched last night の which/that が省略された形。
+      目的格の関係代名詞なので省略できる。
+    translation: 私たちが昨夜見た映画はわくわくするものだった。
+    focus:
+      - object_relative_omission
+      - omission_possible
+      - movie_we_watched
+
+  - id: g068_q009
+    question_type: two_choice
+    prompt: The book ___ is on the desk is mine.
+    choices:
+      - text: which
+        correct: true
+      - text: 省略
+        correct: false
+    answer: which
+    explanation: >
+      which は is の主語。
+      主格の関係代名詞なので省略できない。
+    translation: 机の上にある本は私のものです。
+    focus:
+      - subject_relative_no_omission
+      - which
+      - book_on_desk
+
+  - id: g068_q010
+    question_type: two_choice
+    prompt: The book is on the desk is mine.
+    choices:
+      - text: 正しい
+        correct: false
+      - text: 誤り
+        correct: true
+    answer: 誤り
+    explanation: >
+      The book which is on the desk is mine. の which は is の主語。
+      主格の関係代名詞は省略できない。
+    translation: 机の上にある本は私のものです。
+    focus:
+      - subject_relative_no_omission
+      - omission_not_possible
+      - incorrect_sentence
+
+  - id: g068_q011
+    question_type: two_choice
+    prompt: This is the house ___ he lives in.
+    choices:
+      - text: which
+        correct: true
+      - text: who
+        correct: false
+    answer: which
+    explanation: >
+      先行詞 the house は物・場所なので which が自然。
+      lives in の目的語が欠けているので、この which は省略できる。
+    translation: これが彼が住んでいる家です。
+    focus:
+      - object_relative
+      - preposition_end
+      - omission_possible
+
+  - id: g068_q012
+    question_type: two_choice
+    prompt: This is the house in ___ he lives.
+    choices:
+      - text: which
+        correct: true
+      - text: 省略
+        correct: false
+    answer: which
+    explanation: >
+      in which のように前置詞の直後にある関係代名詞は省略できない。
+      省略したい場合は This is the house he lives in. の形にする。
+    translation: これが彼が住んでいる家です。
+    focus:
+      - preposition_and_omission
+      - in_which
+      - omission_not_possible
+
+common_mistakes:
+  - mistake: 関係代名詞はいつでも省略できると思う
+    correction: >
+      省略できるのは目的格の関係代名詞。
+      主格の関係代名詞は省略できない。
+  - mistake: The man lives next door is a doctor. としてしまう
+    correction: >
+      lives の主語として who が必要。
+      The man who lives next door is a doctor. が正しい。
+  - mistake: The book I bought yesterday を不完全だと思う
+    correction: >
+      The book which/that I bought yesterday の目的格関係代名詞が省略された正しい形。
+  - mistake: in which の which を省略してしまう
+    correction: >
+      前置詞の直後にある関係代名詞は省略できない。
+      in which は残す。
+  - mistake: 関係代名詞の前後だけで判断し、関係詞節の中の欠けを見ない
+    correction: >
+      関係詞節の中で主語が欠けているなら省略不可。
+      目的語が欠けているなら省略可。
+
+learning_notes:
+  - >
+    省略判断の中心は、関係代名詞が主語か目的語か。
+  - >
+    目的格は省略できる。
+    the book I bought, the man I met, the movie we watched のように使う。
+  - >
+    主格は省略できない。
+    the man who lives next door, the book which is on the desk のように使う。
+  - >
+    前置詞が前に出ている in which, to whom では、関係代名詞は省略できない。
+    前置詞を後ろに残すと省略できる場合がある。
+
+prerequisites:
+  - g061
+  - g062
+  - g066
+
+next_items:
+  - g069
+  - g070
+  - g071

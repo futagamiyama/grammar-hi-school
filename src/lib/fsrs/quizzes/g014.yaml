@@ -1,0 +1,349 @@
+id: g014
+file: g014.yaml
+
+title: live / work / stay の現在形・現在進行形
+type: verb_usage
+
+section:
+  id: s02
+  title: 現在形・現在進行形と動詞用法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 恒常的な状態か、一時的な滞在・勤務か？
+
+core_concept:
+  overview: >
+    live, work, stay は、現在形と現在進行形の違いが比較的見えやすい動詞である。
+    現在形は「普段そうである」「恒常的にそうである」ことを表し、
+    現在進行形は「今だけそうしている」「一時的にそうである」ことを表す。
+
+  live:
+    present_simple:
+      meaning: 普段・恒常的に住んでいる
+      example: I live in Kyoto.
+      ja: 私は京都に住んでいる。
+      point: 通常の居住地として京都に住んでいる。
+    present_continuous:
+      meaning: 一時的に住んでいる
+      example: I am living in Kyoto this year.
+      ja: 私は今年、京都に住んでいる。
+      point: 今年だけなど、一時的な居住を表す。
+
+  work:
+    present_simple:
+      meaning: 職業・勤務先として普段働いている
+      example: She works for a bank.
+      ja: 彼女は銀行で働いている。
+      point: 普段の勤務先・職業を表す。
+    present_continuous:
+      meaning: 一時的に働いている
+      example: She is working at a cafe this summer.
+      ja: 彼女はこの夏、カフェで働いている。
+      point: 夏の間だけの一時的な仕事を表す。
+
+  stay:
+    present_simple:
+      meaning: 普段滞在する・泊まる習慣がある
+      example: We usually stay at this hotel.
+      ja: 私たちは普段このホテルに泊まる。
+      point: 繰り返しの習慣を表す。
+    present_continuous:
+      meaning: 今、一時的に滞在している
+      example: We are staying at this hotel now.
+      ja: 私たちは今このホテルに泊まっている。
+      point: 現在の一時的な滞在を表す。
+
+main_rule: >
+  live と work は、現在形なら「恒常的な居住・勤務」、現在進行形なら
+  「一時的な居住・勤務」を表すことが多い。
+  stay はもともと「一時的に滞在する」という意味を持つが、usually などがあれば現在形で習慣を表し、
+  now や this week などがあれば現在進行形で現在の滞在を表す。
+
+contrast_pairs:
+  - present_simple: I live in Osaka.
+    present_continuous: I am living in Osaka this month.
+    point: >
+      live は現在形なら普段の居住地、現在進行形なら一時的な居住を表す。
+
+  - present_simple: She works at a hospital.
+    present_continuous: She is working at a hospital during the summer.
+    point: >
+      works は普段の勤務先、is working は夏の間だけの一時的な勤務を表す。
+
+  - present_simple: We usually stay with my grandparents.
+    present_continuous: We are staying with my grandparents this week.
+    point: >
+      usually stay は習慣、are staying は今週だけの一時的な滞在を表す。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g014_q001
+    question_type: two_choice
+    prompt: I ___ in Tokyo.
+    choices:
+      - text: live
+        correct: true
+      - text: am living
+        correct: false
+    answer: live
+    explanation: >
+      一時的であることを示す語句がないため、普段の居住地を表す現在形 live が自然。
+    translation: 私は東京に住んでいる。
+    focus:
+      - live
+      - permanent_state
+      - present_simple
+
+  - id: g014_q002
+    question_type: two_choice
+    prompt: I ___ in Tokyo this month.
+    choices:
+      - text: live
+        correct: false
+      - text: am living
+        correct: true
+    answer: am living
+    explanation: >
+      this month があるので、今月だけの一時的な居住を表している。
+      したがって現在進行形 am living が自然。
+    translation: 私は今月、東京に住んでいる。
+    focus:
+      - live
+      - temporary_state
+      - present_continuous
+
+  - id: g014_q003
+    question_type: two_choice
+    prompt: My sister ___ in London.
+    choices:
+      - text: works
+        correct: true
+      - text: is working
+        correct: false
+    answer: works
+    explanation: >
+      一時的であることを示す語句がないため、普段の勤務先・職業を表す現在形 works が自然。
+    translation: 私の姉はロンドンで働いている。
+    focus:
+      - work
+      - job
+      - present_simple
+
+  - id: g014_q004
+    question_type: two_choice
+    prompt: My sister ___ in London this summer.
+    choices:
+      - text: works
+        correct: false
+      - text: is working
+        correct: true
+    answer: is working
+    explanation: >
+      this summer があるので、この夏だけの一時的な勤務を表している。
+      したがって現在進行形 is working が自然。
+    translation: 私の姉はこの夏、ロンドンで働いている。
+    focus:
+      - work
+      - temporary_job
+      - present_continuous
+
+  - id: g014_q005
+    question_type: two_choice
+    prompt: We usually ___ at this hotel.
+    choices:
+      - text: stay
+        correct: true
+      - text: are staying
+        correct: false
+    answer: stay
+    explanation: >
+      usually があるので、普段の習慣を表している。
+      したがって現在形 stay が自然。
+    translation: 私たちは普段このホテルに泊まる。
+    focus:
+      - stay
+      - usually
+      - habit
+      - present_simple
+
+  - id: g014_q006
+    question_type: two_choice
+    prompt: We ___ at this hotel now.
+    choices:
+      - text: stay
+        correct: false
+      - text: are staying
+        correct: true
+    answer: are staying
+    explanation: >
+      now があるので、今このホテルに滞在している状況を表している。
+      したがって現在進行形 are staying が自然。
+    translation: 私たちは今このホテルに泊まっている。
+    focus:
+      - stay
+      - now
+      - present_continuous
+
+  - id: g014_q007
+    question_type: two_choice
+    prompt: He ___ with his parents.
+    choices:
+      - text: lives
+        correct: true
+      - text: is living
+        correct: false
+    answer: lives
+    explanation: >
+      一時的であることを示す語句がないため、普段の居住状態を表す lives が自然。
+    translation: 彼は両親と住んでいる。
+    focus:
+      - live
+      - permanent_state
+      - present_simple
+
+  - id: g014_q008
+    question_type: two_choice
+    prompt: He ___ with his parents until he finds an apartment.
+    choices:
+      - text: lives
+        correct: false
+      - text: is living
+        correct: true
+    answer: is living
+    explanation: >
+      until he finds an apartment から、一時的に両親と住んでいる状況だとわかる。
+      したがって現在進行形 is living が自然。
+    translation: 彼はアパートを見つけるまで、両親と住んでいる。
+    focus:
+      - live
+      - temporary_state
+      - until
+      - present_continuous
+
+  - id: g014_q009
+    question_type: two_choice
+    prompt: She ___ for a software company.
+    choices:
+      - text: works
+        correct: true
+      - text: is working
+        correct: false
+    answer: works
+    explanation: >
+      普段の勤務先・職業を述べているので、現在形 works が自然。
+    translation: 彼女はソフトウェア会社で働いている。
+    focus:
+      - work
+      - job
+      - present_simple
+
+  - id: g014_q010
+    question_type: two_choice
+    prompt: She ___ for a software company while her colleague is on leave.
+    choices:
+      - text: works
+        correct: false
+      - text: is working
+        correct: true
+    answer: is working
+    explanation: >
+      while her colleague is on leave から、同僚が休んでいる間だけの一時的な勤務だとわかる。
+      したがって現在進行形 is working が自然。
+    translation: 彼女は同僚が休んでいる間、ソフトウェア会社で働いている。
+    focus:
+      - work
+      - temporary_job
+      - while
+      - present_continuous
+
+  - id: g014_q011
+    question_type: two_choice
+    prompt: They often ___ with relatives when they visit Kyoto.
+    choices:
+      - text: stay
+        correct: true
+      - text: are staying
+        correct: false
+    answer: stay
+    explanation: >
+      often と when they visit Kyoto があるので、繰り返しの習慣を表している。
+      したがって現在形 stay が自然。
+    translation: 彼らは京都を訪れるとき、よく親戚の家に泊まる。
+    focus:
+      - stay
+      - often
+      - habit
+      - present_simple
+
+  - id: g014_q012
+    question_type: two_choice
+    prompt: They ___ with relatives while their house is being repaired.
+    choices:
+      - text: stay
+        correct: false
+      - text: are staying
+        correct: true
+    answer: are staying
+    explanation: >
+      while their house is being repaired から、家の修理中だけの一時的な滞在だとわかる。
+      したがって現在進行形 are staying が自然。
+    translation: 彼らは家が修理されている間、親戚の家に泊まっている。
+    focus:
+      - stay
+      - temporary_stay
+      - while
+      - present_continuous
+
+common_mistakes:
+  - mistake: 日本語の「住んでいる」「働いている」を見て、すべて現在進行形にする
+    correction: >
+      英語では、恒常的な居住・勤務なら現在形が基本。
+      I live in Tokyo. / She works for a bank. が自然。
+
+  - mistake: live や work は常に現在形だと思う
+    correction: >
+      一時的な居住・勤務なら現在進行形も自然。
+      I am living in Tokyo this month. / She is working at a cafe this summer.
+
+  - mistake: stay は一時的な意味だから常に現在進行形だと思う
+    correction: >
+      usually, often などがあれば、stay は現在形で習慣を表す。
+      We usually stay at this hotel. が自然。
+
+learning_notes:
+  - >
+    live と work は、現在形なら恒常的、現在進行形なら一時的、という対立を作りやすい。
+  - >
+    stay はもともと一時的な滞在を表すが、習慣なら現在形、今の滞在なら現在進行形を使う。
+  - >
+    this month, this summer, while, until などは、一時的状況の手がかりになりやすい。
+  - >
+    このカードでは状態動詞全般ではなく、live / work / stay の意味差に絞って学ぶ。
+
+prerequisites:
+  - g001
+
+next_items:
+  - g015
+  - g016
+  - g017

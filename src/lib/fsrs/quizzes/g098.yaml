@@ -1,0 +1,395 @@
+id: g098
+file: g098.yaml
+
+title: 否定疑問文
+type: grammar_contrast
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 否定疑問文の形と、その驚き・確認・勧誘の含みを読めるか？
+
+core_concept:
+  negative_yes_no_question:
+    form: Don't/Doesn't/Didn't + 主語 + 動詞原形 ...?
+    meaning: 〜ではないのですか、〜しないのですか
+    image: 否定を含む疑問で、驚き・確認・意外さを表す
+    examples:
+      - sentence: Don't you like coffee?
+        ja: コーヒーが好きではないのですか。
+        point: 普通の Do you like coffee? より、意外さや確認の気持ちがある。
+      - sentence: Doesn't he know the answer?
+        ja: 彼は答えを知らないのですか。
+        point: he が主語なので Doesn't を使い、後ろは原形 know。
+      - sentence: Didn't you call her yesterday?
+        ja: 昨日彼女に電話しなかったのですか。
+        point: 過去の否定疑問なので Didn't + 原形 call。
+
+  negative_be_question:
+    form: Isn't/Aren't/Wasn't/Weren't + 主語 ...?
+    meaning: 〜ではないのですか、〜ですよね
+    image: be動詞の否定形を文頭に出す
+    examples:
+      - sentence: Isn't she your sister?
+        ja: 彼女はあなたのお姉さんではないのですか。
+        point: she is の否定疑問なので Isn't she ...?。
+      - sentence: Aren't you tired?
+        ja: 疲れていないのですか。
+        point: you are の否定疑問なので Aren't you ...?。
+      - sentence: Wasn't the movie interesting?
+        ja: その映画は面白くなかったのですか。
+        point: 過去の be動詞なので Wasn't。
+
+  negative_modal_question:
+    form: Can't/Won't/Shouldn't + 主語 + 動詞原形 ...?
+    meaning: 〜できないのですか、〜しないのですか、〜すべきではないのですか
+    image: 助動詞の否定形を文頭に出す
+    examples:
+      - sentence: Can't you swim?
+        ja: 泳げないのですか。
+        point: can の否定疑問なので Can't you ...?。
+      - sentence: Won't you join us?
+        ja: 私たちに加わりませんか。
+        point: Won't you ...? は丁寧な勧誘にもなる。
+      - sentence: Shouldn't we leave now?
+        ja: 私たちは今出発すべきではないですか。
+        point: should not の疑問で、提案・確認の意味。
+
+  answer_to_negative_question:
+    form: Yes, 主語 + 肯定 / No, 主語 + 否定
+    meaning: 英語では事実が肯定なら Yes、否定なら No
+    image: 質問の形に引きずられず、答えの中身で Yes/No を決める
+    examples:
+      - sentence: Don't you like coffee? Yes, I do.
+        ja: コーヒーが好きではないのですか。いいえ、好きです。
+        point: 英語では「好き」なら Yes, I do.。
+      - sentence: Don't you like coffee? No, I don't.
+        ja: コーヒーが好きではないのですか。はい、好きではありません。
+        point: 英語では「好きではない」なら No, I don't.。
+      - sentence: Isn't he coming? Yes, he is.
+        ja: 彼は来ないのですか。いいえ、来ます。
+        point: 実際に来るなら Yes, he is.。
+
+main_rule: >
+  否定疑問文は、Don't you ...? / Isn't she ...? / Can't you ...? のように、
+  否定形を文頭に出して作る疑問文。
+  普通の疑問文よりも、「〜ではないのですか」「当然〜ですよね」
+  という意外さ・確認・勧誘の気持ちを含むことが多い。
+  Don't you like coffee? は、単に「好きですか」と聞く Do you like coffee? より、
+  「好きではないのですか」という驚きや確認がある。
+  一般動詞では do / does / did の否定形を使い、後ろは動詞原形にする。
+  Doesn't he know ...? で、knows ではなく know。
+  Didn't you call ...? で、called ではなく call。
+  答える時は、日本語の「はい・いいえ」に引きずられず、
+  事実が肯定なら Yes、事実が否定なら No を使う。
+
+contrast_pairs:
+  - ordinary: Do you like coffee?
+    negative_question: Don't you like coffee?
+    point: >
+      Do you like coffee? は普通の質問。
+      Don't you like coffee? は「好きではないのですか」と確認・意外さを含む。
+
+  - correct: Doesn't he know the answer?
+    incorrect: Doesn't he knows the answer?
+    point: >
+      doesn't の後ろは動詞原形。
+      he が主語でも know を使う。
+
+  - positive_answer: Don't you like coffee? Yes, I do.
+    negative_answer: Don't you like coffee? No, I don't.
+    point: >
+      英語では、実際に好きなら Yes。
+      実際に好きでないなら No。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または否定疑問文の形と答え方を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g098_q001
+    question_type: two_choice
+    prompt: ___ you like coffee?
+    choices:
+      - text: Don't
+        correct: true
+      - text: Aren't
+        correct: false
+    answer: Don't
+    explanation: >
+      like は一般動詞なので do を使う。
+      否定疑問文では Don't you like coffee? となる。
+    translation: コーヒーが好きではないのですか。
+    focus:
+      - negative_yes_no_question
+      - do_question
+      - like
+
+  - id: g098_q002
+    question_type: two_choice
+    prompt: Doesn't he ___ the answer?
+    choices:
+      - text: know
+        correct: true
+      - text: knows
+        correct: false
+    answer: know
+    explanation: >
+      doesn't の後ろは動詞原形。
+      he が主語でも knows ではなく know を使う。
+    translation: 彼は答えを知らないのですか。
+    focus:
+      - negative_yes_no_question
+      - does_question
+      - bare_form
+
+  - id: g098_q003
+    question_type: two_choice
+    prompt: ___ you call her yesterday?
+    choices:
+      - text: Didn't
+        correct: true
+      - text: Don't
+        correct: false
+    answer: Didn't
+    explanation: >
+      yesterday があるので過去。
+      過去の否定疑問文は Didn't + 主語 + 動詞原形。
+    translation: 昨日彼女に電話しなかったのですか。
+    focus:
+      - negative_yes_no_question
+      - past
+      - did_question
+
+  - id: g098_q004
+    question_type: two_choice
+    prompt: Didn't you ___ her yesterday?
+    choices:
+      - text: call
+        correct: true
+      - text: called
+        correct: false
+    answer: call
+    explanation: >
+      didn't の後ろは動詞原形。
+      Didn't you called ...? とはしない。
+    translation: 昨日彼女に電話しなかったのですか。
+    focus:
+      - negative_yes_no_question
+      - bare_form
+      - call
+
+  - id: g098_q005
+    question_type: two_choice
+    prompt: ___ she your sister?
+    choices:
+      - text: Isn't
+        correct: true
+      - text: Doesn't
+        correct: false
+    answer: Isn't
+    explanation: >
+      your sister の前には be動詞が必要。
+      she is の否定疑問なので Isn't she ...? となる。
+    translation: 彼女はあなたのお姉さんではないのですか。
+    focus:
+      - negative_be_question
+      - is_not
+      - sister
+
+  - id: g098_q006
+    question_type: two_choice
+    prompt: ___ you tired?
+    choices:
+      - text: Aren't
+        correct: true
+      - text: Don't
+        correct: false
+    answer: Aren't
+    explanation: >
+      tired は形容詞なので be動詞を使う。
+      you are の否定疑問なので Aren't you tired?。
+    translation: 疲れていないのですか。
+    focus:
+      - negative_be_question
+      - are_not
+      - tired
+
+  - id: g098_q007
+    question_type: two_choice
+    prompt: ___ the movie interesting?
+    choices:
+      - text: Wasn't
+        correct: true
+      - text: Didn't
+        correct: false
+    answer: Wasn't
+    explanation: >
+      interesting は形容詞なので be動詞を使う。
+      過去の be動詞の否定疑問なので Wasn't。
+    translation: その映画は面白くなかったのですか。
+    focus:
+      - negative_be_question
+      - past_be
+      - interesting
+
+  - id: g098_q008
+    question_type: two_choice
+    prompt: ___ you swim?
+    choices:
+      - text: Can't
+        correct: true
+      - text: Don't can
+        correct: false
+    answer: Can't
+    explanation: >
+      can の否定疑問文は Can't you + 動詞原形。
+      Don't can という形は使わない。
+    translation: 泳げないのですか。
+    focus:
+      - negative_modal_question
+      - can
+      - swim
+
+  - id: g098_q009
+    question_type: two_choice
+    prompt: ___ you join us?
+    choices:
+      - text: Won't
+        correct: true
+      - text: Don't will
+        correct: false
+    answer: Won't
+    explanation: >
+      will の否定疑問文は Won't you ...?。
+      Won't you join us? は丁寧な勧誘にもなる。
+    translation: 私たちに加わりませんか。
+    focus:
+      - negative_modal_question
+      - wont_you
+      - invitation
+
+  - id: g098_q010
+    question_type: two_choice
+    prompt: ___ we leave now?
+    choices:
+      - text: Shouldn't
+        correct: true
+      - text: Don't should
+        correct: false
+    answer: Shouldn't
+    explanation: >
+      should の否定疑問文は Shouldn't we ...?。
+      「今出発すべきではないですか」という提案・確認になる。
+    translation: 私たちは今出発すべきではないですか。
+    focus:
+      - negative_modal_question
+      - should
+      - suggestion
+
+  - id: g098_q011
+    question_type: two_choice
+    prompt: Don't you like coffee? ___, I do.
+    choices:
+      - text: Yes
+        correct: true
+      - text: No
+        correct: false
+    answer: Yes
+    explanation: >
+      英語では、実際に好きなら Yes, I do.。
+      日本語の「いいえ、好きです」に引きずられない。
+    translation: コーヒーが好きではないのですか。いいえ、好きです。
+    focus:
+      - answer_to_negative_question
+      - yes_answer
+      - like
+
+  - id: g098_q012
+    question_type: two_choice
+    prompt: Don't you like coffee? ___, I don't.
+    choices:
+      - text: No
+        correct: true
+      - text: Yes
+        correct: false
+    answer: No
+    explanation: >
+      英語では、実際に好きでないなら No, I don't.。
+      否定疑問でも、答えの中身が否定なら No。
+    translation: コーヒーが好きではないのですか。はい、好きではありません。
+    focus:
+      - answer_to_negative_question
+      - no_answer
+      - dislike
+
+common_mistakes:
+  - mistake: Don't you like coffee? を普通の Do you like coffee? と同じに読む
+    correction: >
+      否定疑問文には、意外さ・確認・期待が含まれやすい。
+      「好きではないのですか」と読むとよい。
+  - mistake: Doesn't he knows ... としてしまう
+    correction: >
+      doesn't の後ろは動詞原形。
+      Doesn't he know ...? が正しい。
+  - mistake: Didn't you called ... としてしまう
+    correction: >
+      didn't の後ろは動詞原形。
+      Didn't you call ...? が正しい。
+  - mistake: Can't you swim? を Don't you can swim? としてしまう
+    correction: >
+      助動詞 can の否定疑問は Can't you ...?。
+      do を重ねない。
+  - mistake: 否定疑問文への Yes / No を日本語式に考えてしまう
+    correction: >
+      英語では事実が肯定なら Yes、否定なら No。
+      Don't you like coffee? に対して、好きなら Yes, I do.。
+
+learning_notes:
+  - >
+    否定疑問文は、否定形を文頭に出す疑問文。
+    Don't you ...? / Isn't she ...? / Can't you ...? の形。
+  - >
+    一般動詞では don't / doesn't / didn't を使い、
+    後ろは動詞原形にする。
+  - >
+    be動詞なら Isn't / Aren't / Wasn't / Weren't を使う。
+    助動詞なら Can't / Won't / Shouldn't などを使う。
+  - >
+    Won't you ...? は丁寧な勧誘になることがある。
+  - >
+    否定疑問文への答えは、英語では事実に合わせる。
+    肯定なら Yes、否定なら No。
+
+prerequisites:
+  - g001
+  - g002
+  - g021
+  - g085
+  - g095
+
+next_items:
+  - g099
+  - g100
+  - g101

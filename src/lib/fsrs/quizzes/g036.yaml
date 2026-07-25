@@ -1,0 +1,367 @@
+id: g036
+file: g036.yaml
+
+title: 第5文型の受動態
+type: construction
+
+section:
+  id: s04
+  title: 受動態・態
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 目的語補語をどう残すか？
+
+core_concept:
+  svoc_active:
+    form: S + V + O + C
+    meaning: 目的語がどのような状態・名前・立場になるかを表す第5文型
+    image: O = C の関係を見る
+    examples:
+      - sentence: They call him Ken.
+        ja: 彼らは彼をケンと呼ぶ。
+        point: him = Ken の関係。
+      - sentence: We elected her captain.
+        ja: 私たちは彼女をキャプテンに選んだ。
+        point: her = captain の関係。
+      - sentence: The news made him happy.
+        ja: その知らせは彼を幸せにした。
+        point: him = happy の状態にした。
+
+  svoc_passive:
+    form: O + be + 過去分詞 + C
+    meaning: 第5文型の目的語を主語にし、補語をそのまま残す受動態
+    image: O が主語になり、O = C の関係は残る
+    examples:
+      - sentence: He is called Ken.
+        ja: 彼はケンと呼ばれている。
+        point: him が主語 He になり、補語 Ken が残る。
+      - sentence: She was elected captain.
+        ja: 彼女はキャプテンに選ばれた。
+        point: her が主語 She になり、補語 captain が残る。
+      - sentence: He was made happy by the news.
+        ja: 彼はその知らせで幸せになった。
+        point: him が主語 He になり、補語 happy が残る。
+
+  perception_and_causative_passive:
+    form: O + be + 過去分詞 + to do
+    meaning: 知覚動詞・使役動詞の受動態では、原形不定詞が to do に戻る
+    image: see/hear/make などの後の do が、受動態では to do になる
+    examples:
+      - sentence: He was seen to enter the room.
+        ja: 彼は部屋に入るのを見られた。
+        point: active の see him enter が、受動態では was seen to enter になる。
+      - sentence: She was heard to sing.
+        ja: 彼女は歌うのを聞かれた。
+        point: hear her sing が、受動態では was heard to sing になる。
+      - sentence: He was made to clean the room.
+        ja: 彼は部屋を掃除させられた。
+        point: make him clean が、受動態では was made to clean になる。
+
+main_rule: >
+  第5文型 S + V + O + C の受動態では、目的語 O が主語になり、
+  補語 C はそのまま残る。
+  They call him Ken. は He is called Ken. となる。
+  We elected her captain. は She was elected captain. となる。
+  ただし、see/hear/make などの知覚動詞・使役動詞で
+  active の形が O + 動詞の原形 の場合、受動態では to do に戻る。
+  They made him clean the room. は He was made to clean the room. となる。
+
+contrast_pairs:
+  - active: They call him Ken.
+    passive: He is called Ken.
+    point: >
+      him が主語 He になり、補語 Ken はそのまま残る。
+
+  - active: We elected her captain.
+    passive: She was elected captain.
+    point: >
+      her が主語 She になり、補語 captain はそのまま残る。
+      captain の前に to は不要。
+
+  - active: They made him clean the room.
+    passive: He was made to clean the room.
+    point: >
+      make + O + 原形不定詞の受動態では、
+      原形不定詞 clean が to clean になる。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または第5文型の受動態で補語がどう残るかを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g036_q001
+    question_type: two_choice
+    prompt: They call him Ken. → He ___ Ken.
+    choices:
+      - text: is called
+        correct: true
+      - text: is called as
+        correct: false
+    answer: is called
+    explanation: >
+      call + O + C の受動態では、O が主語になり、補語 C はそのまま残る。
+      He is called Ken. が自然で、called as Ken とはしない。
+    translation: 彼らは彼をケンと呼ぶ。→ 彼はケンと呼ばれている。
+    focus:
+      - svoc_passive
+      - call
+      - complement_remains
+
+  - id: g036_q002
+    question_type: two_choice
+    prompt: People named the dog Pochi. → The dog ___ Pochi.
+    choices:
+      - text: was named
+        correct: true
+      - text: was named as
+        correct: false
+    answer: was named
+    explanation: >
+      name + O + C の受動態では、補語 Pochi をそのまま残す。
+      The dog was named Pochi. が自然。
+    translation: 人々はその犬をポチと名づけた。→ その犬はポチと名づけられた。
+    focus:
+      - svoc_passive
+      - name
+      - complement_remains
+
+  - id: g036_q003
+    question_type: two_choice
+    prompt: We elected her captain. → She ___ captain.
+    choices:
+      - text: was elected
+        correct: true
+      - text: was elected to
+        correct: false
+    answer: was elected
+    explanation: >
+      elect + O + C の受動態では、補語 captain をそのまま残す。
+      She was elected captain. が自然。
+    translation: 私たちは彼女をキャプテンに選んだ。→ 彼女はキャプテンに選ばれた。
+    focus:
+      - svoc_passive
+      - elect
+      - noun_complement
+
+  - id: g036_q004
+    question_type: two_choice
+    prompt: They chose him leader. → He ___ leader.
+    choices:
+      - text: was chosen
+        correct: true
+      - text: was chosen to
+        correct: false
+    answer: was chosen
+    explanation: >
+      choose + O + C の受動態では、O が主語になり、補語 leader はそのまま残る。
+      He was chosen leader. が自然。
+    translation: 彼らは彼をリーダーに選んだ。→ 彼はリーダーに選ばれた。
+    focus:
+      - svoc_passive
+      - choose
+      - noun_complement
+
+  - id: g036_q005
+    question_type: two_choice
+    prompt: The news made him happy. → He ___ happy by the news.
+    choices:
+      - text: was made
+        correct: true
+      - text: was made to
+        correct: false
+    answer: was made
+    explanation: >
+      make + O + 形容詞 の受動態では、補語の形容詞 happy がそのまま残る。
+      He was made happy by the news. が正しい。
+    translation: その知らせは彼を幸せにした。→ 彼はその知らせで幸せになった。
+    focus:
+      - svoc_passive
+      - make_adjective
+      - adjective_complement
+
+  - id: g036_q006
+    question_type: two_choice
+    prompt: The teacher kept the students quiet. → The students ___ quiet.
+    choices:
+      - text: were kept
+        correct: true
+      - text: were kept to
+        correct: false
+    answer: were kept
+    explanation: >
+      keep + O + C の受動態では、C の quiet がそのまま残る。
+      The students were kept quiet. が自然。
+    translation: 先生は生徒たちを静かにさせておいた。→ 生徒たちは静かにさせられていた。
+    focus:
+      - svoc_passive
+      - keep
+      - adjective_complement
+
+  - id: g036_q007
+    question_type: two_choice
+    prompt: They found the room empty. → The room ___ empty.
+    choices:
+      - text: was found
+        correct: true
+      - text: was found to
+        correct: false
+    answer: was found
+    explanation: >
+      find + O + C の受動態では、補語 empty がそのまま残る。
+      The room was found empty. が自然。
+    translation: 彼らはその部屋が空だとわかった。→ その部屋は空だとわかった。
+    focus:
+      - svoc_passive
+      - find
+      - adjective_complement
+
+  - id: g036_q008
+    question_type: two_choice
+    prompt: We painted the wall white. → The wall ___ white.
+    choices:
+      - text: was painted
+        correct: true
+      - text: was painted to
+        correct: false
+    answer: was painted
+    explanation: >
+      paint + O + C の受動態では、O が主語になり、補語 white が残る。
+      The wall was painted white. が自然。
+    translation: 私たちは壁を白く塗った。→ 壁は白く塗られた。
+    focus:
+      - svoc_passive
+      - paint
+      - adjective_complement
+
+  - id: g036_q009
+    question_type: two_choice
+    prompt: They made him clean the room. → He was made ___ the room.
+    choices:
+      - text: clean
+        correct: false
+      - text: to clean
+        correct: true
+    answer: to clean
+    explanation: >
+      使役動詞 make の能動態では make + O + 原形不定詞。
+      しかし受動態では to が戻り、was made to clean になる。
+    translation: 彼らは彼に部屋を掃除させた。→ 彼は部屋を掃除させられた。
+    focus:
+      - causative_passive
+      - make
+      - to_infinitive_returns
+
+  - id: g036_q010
+    question_type: two_choice
+    prompt: I saw him enter the room. → He was seen ___ the room.
+    choices:
+      - text: enter
+        correct: false
+      - text: to enter
+        correct: true
+    answer: to enter
+    explanation: >
+      知覚動詞 see の能動態では see + O + 原形不定詞。
+      受動態では to が戻り、was seen to enter となる。
+    translation: 私は彼が部屋に入るのを見た。→ 彼は部屋に入るのを見られた。
+    focus:
+      - perception_passive
+      - see
+      - to_infinitive_returns
+
+  - id: g036_q011
+    question_type: two_choice
+    prompt: They heard her sing. → She was heard ___.
+    choices:
+      - text: sing
+        correct: false
+      - text: to sing
+        correct: true
+    answer: to sing
+    explanation: >
+      hear + O + 原形不定詞の受動態では、原形不定詞に to が戻る。
+      She was heard to sing. が正しい。
+    translation: 彼らは彼女が歌うのを聞いた。→ 彼女は歌うのを聞かれた。
+    focus:
+      - perception_passive
+      - hear
+      - to_infinitive_returns
+
+  - id: g036_q012
+    question_type: two_choice
+    prompt: We saw him crossing the street. → He was seen ___ the street.
+    choices:
+      - text: crossing
+        correct: true
+      - text: to crossing
+        correct: false
+    answer: crossing
+    explanation: >
+      see + O + 現在分詞 の形では、動作の途中を見たことを表す。
+      受動態でも現在分詞 crossing はそのまま残り、
+      He was seen crossing the street. となる。
+    translation: 私たちは彼が通りを渡っているところを見た。→ 彼は通りを渡っているところを見られた。
+    focus:
+      - perception_passive
+      - present_participle
+      - crossing
+
+common_mistakes:
+  - mistake: call/name/elect などの受動態で as や to を入れてしまう
+    correction: >
+      He is called Ken. / She was elected captain. のように、
+      補語はそのまま残す。called as Ken, elected to captain は不自然。
+  - mistake: 補語を消してしまう
+    correction: >
+      第5文型の受動態では、O が主語になっても C は残る。
+      They made him happy. は He was made happy. となる。
+  - mistake: make の受動態で to を忘れる
+    correction: >
+      make + O + 原形不定詞 は、受動態では be made to do になる。
+      He was made clean ではなく He was made to clean。
+  - mistake: 知覚動詞の受動態で to do と doing を混同する
+    correction: >
+      see him enter は He was seen to enter。
+      see him entering/crossing は He was seen entering/crossing。
+      原形不定詞なら to が戻り、現在分詞ならそのまま残る。
+
+learning_notes:
+  - >
+    第5文型は O = C の関係を見る。
+    受動態では O が主語になるが、C は消えずに残る。
+  - >
+    call, name, elect, choose などは、受動態でも補語の名詞をそのまま置く。
+  - >
+    make, keep, find, paint などは、受動態でも補語の形容詞をそのまま置く。
+  - >
+    see/hear/make などで active が O + 原形不定詞 の場合、
+    passive では to do に戻る。この点は入試で狙われやすい。
+
+prerequisites:
+  - g031
+  - g032
+  - g035
+
+next_items:
+  - g037
+  - g038
+  - g039

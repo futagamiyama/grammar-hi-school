@@ -1,0 +1,374 @@
+id: g090
+file: g090.yaml
+
+title: 代不定詞 to
+type: construction
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 前に出た不定詞句を to だけで受ける省略を読めるか？
+
+core_concept:
+  pro_infinitive_after_want:
+    form: want/hope/plan/try/decide + to
+    meaning: そうしたい、そうするつもりだ
+    image: 前に出た to do を to だけで受ける
+    examples:
+      - sentence: I wanted to go, but I was not able to.
+        ja: 私は行きたかったが、行くことができなかった。
+        point: able to の後ろに go が省略されている。
+      - sentence: I asked him to help me, but he did not want to.
+        ja: 私は彼に手伝ってくれるよう頼んだが、彼は手伝いたがらなかった。
+        point: want to の後ろに help me が省略されている。
+      - sentence: She did not come, though she had promised to.
+        ja: 彼女は来ると約束していたのに、来なかった。
+        point: promised to の後ろに come が省略されている。
+
+  pro_infinitive_after_modal_like:
+    form: be able to / be going to / have to / used to + 省略
+    meaning: 〜できる、〜するつもりだ、〜しなければならない、以前は〜した
+    image: to を含む表現の後ろで動詞句を省略する
+    examples:
+      - sentence: I cannot swim, but my brother is able to.
+        ja: 私は泳げないが、兄は泳げる。
+        point: able to の後ろに swim が省略されている。
+      - sentence: I did not call her, but I was going to.
+        ja: 私は彼女に電話しなかったが、電話するつもりだった。
+        point: going to の後ろに call her が省略されている。
+      - sentence: I do not want to go, but I have to.
+        ja: 行きたくないが、行かなければならない。
+        point: have to の後ろに go が省略されている。
+
+  pro_infinitive_with_to_required:
+    form: 動詞句を省略しても to は残す
+    meaning: 何をするかは前の文脈からわかる
+    image: to が省略された動詞の目印として残る
+    examples:
+      - sentence: You may leave if you want to.
+        ja: そうしたければ、帰ってもよい。
+        point: want to の後ろに leave が省略されている。
+      - sentence: I will help you if I need to.
+        ja: 必要ならあなたを手伝います。
+        point: need to の後ろに help you が省略されている。
+      - sentence: I did not answer because I did not know how to.
+        ja: どう答えればよいかわからなかったので、私は答えなかった。
+        point: how to の後ろに answer が省略されている。
+
+main_rule: >
+  代不定詞とは、前に出た to do の内容を、to だけで受ける省略表現。
+  I wanted to go, but I was not able to. では、
+  able to の後ろに go が省略されている。
+  I asked him to help me, but he did not want to. では、
+  want to の後ろに help me が省略されている。
+  この to は「何をするか」が前の文脈でわかる時に残される。
+  want to, hope to, try to, decide to, promise to, be able to,
+  be going to, have to, used to, need to, how to などでよく使われる。
+  日本語では「そうする」「それをする」と補って読むと自然。
+
+contrast_pairs:
+  - full: I wanted to go, but I was not able to go.
+    reduced: I wanted to go, but I was not able to.
+    point: >
+      2回目の go を省略し、to だけを残している。
+      able to の to は残る。
+
+  - full: I asked him to help me, but he did not want to help me.
+    reduced: I asked him to help me, but he did not want to.
+    point: >
+      want to の後ろの help me が省略されている。
+      「手伝いたがらなかった」と読む。
+
+  - full: I did not call her, but I was going to call her.
+    reduced: I did not call her, but I was going to.
+    point: >
+      be going to の後ろの call her が省略されている。
+      「電話するつもりだった」と読む。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または代不定詞 to が前の動詞句を受けることを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g090_q001
+    question_type: two_choice
+    prompt: I wanted to go, but I was not able ___.
+    choices:
+      - text: to
+        correct: true
+      - text: go
+        correct: false
+    answer: to
+    explanation: >
+      able to の後ろに go が省略されている。
+      前に wanted to go があるので、to だけで go を受けられる。
+    translation: 私は行きたかったが、行くことができなかった。
+    focus:
+      - pro_infinitive_after_want
+      - able_to
+      - omission
+
+  - id: g090_q002
+    question_type: two_choice
+    prompt: I asked him to help me, but he did not want ___.
+    choices:
+      - text: to
+        correct: true
+      - text: helping
+        correct: false
+    answer: to
+    explanation: >
+      want to の後ろに help me が省略されている。
+      「彼は手伝いたがらなかった」という意味。
+    translation: 私は彼に手伝ってくれるよう頼んだが、彼は手伝いたがらなかった。
+    focus:
+      - pro_infinitive_after_want
+      - want_to
+      - help_me
+
+  - id: g090_q003
+    question_type: two_choice
+    prompt: She did not come, though she had promised ___.
+    choices:
+      - text: to
+        correct: true
+      - text: coming
+        correct: false
+    answer: to
+    explanation: >
+      promised to の後ろに come が省略されている。
+      promise to do の do を前文脈から補う。
+    translation: 彼女は来ると約束していたのに、来なかった。
+    focus:
+      - pro_infinitive_after_want
+      - promise_to
+      - come
+
+  - id: g090_q004
+    question_type: two_choice
+    prompt: I cannot swim, but my brother is able ___.
+    choices:
+      - text: to
+        correct: true
+      - text: swim
+        correct: false
+    answer: to
+    explanation: >
+      able to の後ろに swim が省略されている。
+      「兄は泳げる」という意味。
+    translation: 私は泳げないが、兄は泳げる。
+    focus:
+      - pro_infinitive_after_modal_like
+      - able_to
+      - swim
+
+  - id: g090_q005
+    question_type: two_choice
+    prompt: I did not call her, but I was going ___.
+    choices:
+      - text: to
+        correct: true
+      - text: call
+        correct: false
+    answer: to
+    explanation: >
+      be going to の後ろに call her が省略されている。
+      「電話するつもりだった」という意味。
+    translation: 私は彼女に電話しなかったが、電話するつもりだった。
+    focus:
+      - pro_infinitive_after_modal_like
+      - be_going_to
+      - call_her
+
+  - id: g090_q006
+    question_type: two_choice
+    prompt: I do not want to go, but I have ___.
+    choices:
+      - text: to
+        correct: true
+      - text: go
+        correct: false
+    answer: to
+    explanation: >
+      have to の後ろに go が省略されている。
+      「行かなければならない」という意味。
+    translation: 行きたくないが、行かなければならない。
+    focus:
+      - pro_infinitive_after_modal_like
+      - have_to
+      - go
+
+  - id: g090_q007
+    question_type: two_choice
+    prompt: You may leave if you want ___.
+    choices:
+      - text: to
+        correct: true
+      - text: leaving
+        correct: false
+    answer: to
+    explanation: >
+      want to の後ろに leave が省略されている。
+      「そうしたければ帰ってよい」という意味。
+    translation: そうしたければ、帰ってもよい。
+    focus:
+      - pro_infinitive_with_to_required
+      - want_to
+      - leave
+
+  - id: g090_q008
+    question_type: two_choice
+    prompt: I will help you if I need ___.
+    choices:
+      - text: to
+        correct: true
+      - text: help
+        correct: false
+    answer: to
+    explanation: >
+      need to の後ろに help you が省略されている。
+      「必要なら手伝う」という意味。
+    translation: 必要ならあなたを手伝います。
+    focus:
+      - pro_infinitive_with_to_required
+      - need_to
+      - help_you
+
+  - id: g090_q009
+    question_type: two_choice
+    prompt: I did not answer because I did not know how ___.
+    choices:
+      - text: to
+        correct: true
+      - text: answer
+        correct: false
+    answer: to
+    explanation: >
+      how to の後ろに answer が省略されている。
+      「どう答えればよいかわからなかった」という意味。
+    translation: どう答えればよいかわからなかったので、私は答えなかった。
+    focus:
+      - pro_infinitive_with_to_required
+      - how_to
+      - answer
+
+  - id: g090_q010
+    question_type: two_choice
+    prompt: I tried to solve the problem, but I was unable ___.
+    choices:
+      - text: to
+        correct: true
+      - text: solving
+        correct: false
+    answer: to
+    explanation: >
+      unable to の後ろに solve the problem が省略されている。
+      「解くことができなかった」と読む。
+    translation: 私はその問題を解こうとしたが、解けなかった。
+    focus:
+      - pro_infinitive_after_modal_like
+      - unable_to
+      - solve
+
+  - id: g090_q011
+    question_type: two_choice
+    prompt: I do not play tennis now, but I used ___.
+    choices:
+      - text: to
+        correct: true
+      - text: playing
+        correct: false
+    answer: to
+    explanation: >
+      used to の後ろに play tennis が省略されている。
+      「以前はしていた」という意味。
+    translation: 今はテニスをしないが、以前はしていた。
+    focus:
+      - pro_infinitive_after_modal_like
+      - used_to
+      - past_habit
+
+  - id: g090_q012
+    question_type: two_choice
+    prompt: I wanted to apologize, but I did not know when ___.
+    choices:
+      - text: to
+        correct: true
+      - text: apologizing
+        correct: false
+    answer: to
+    explanation: >
+      when to の後ろに apologize が省略されている。
+      「いつ謝ればよいかわからなかった」という意味。
+    translation: 私は謝りたかったが、いつ謝ればよいかわからなかった。
+    focus:
+      - pro_infinitive_with_to_required
+      - when_to
+      - apologize
+
+common_mistakes:
+  - mistake: to だけで終わる文を不完全だと思う
+    correction: >
+      前に出た動詞句がわかる場合、不定詞句を to だけで受けることがある。
+      I wanted to go, but I was not able to. は正しい。
+  - mistake: able to の to を消してしまう
+    correction: >
+      代不定詞では、動詞句を省略しても to は残す。
+      able to, want to, need to, have to の to が目印になる。
+  - mistake: I was going to. を未来表現として読めない
+    correction: >
+      I was going to. は、前の文脈の動詞句を補って
+      「〜するつもりだった」と読む。
+  - mistake: how to / when to の後ろに必ず動詞が必要だと思う
+    correction: >
+      前の文脈で動詞がわかる場合は、how to / when to だけで終われる。
+  - mistake: used to を「使った」と読んでしまう
+    correction: >
+      I used to. は、前の動詞句を受けて
+      「以前はそうしていた」という意味になる。
+
+learning_notes:
+  - >
+    代不定詞は、前に出た to do の内容を to だけで受ける省略。
+  - >
+    want to, hope to, try to, decide to, promise to などでよく使う。
+  - >
+    be able to, be going to, have to, used to, need to でも、
+    後ろの動詞句を省略して to だけを残せる。
+  - >
+    読む時は、to の後ろに何が省略されているかを前の文脈から補う。
+  - >
+    日本語では「そうする」「それをする」と補うとわかりやすい。
+
+prerequisites:
+  - g039
+  - g040
+  - g041
+  - g043
+  - g089
+
+next_items:
+  - g091
+  - g092
+  - g093

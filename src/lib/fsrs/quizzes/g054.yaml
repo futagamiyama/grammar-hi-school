@@ -1,0 +1,355 @@
+id: g054
+file: g054.yaml
+
+title: hard / hardly
+type: grammar_contrast
+
+section:
+  id: s07
+  title: 形容詞・副詞・比較
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 一生懸命に・激しくなのか、ほとんど〜ないなのか？
+
+core_concept:
+  hard:
+    form: hard
+    meaning: 形容詞では「難しい・硬い」、副詞では「一生懸命に・激しく」
+    image: 力をこめる、強く働く、難しい
+    examples:
+      - sentence: He works hard every day.
+        ja: 彼は毎日一生懸命働いている。
+        point: works を説明する副詞で「一生懸命に」。
+      - sentence: This question is hard.
+        ja: この問題は難しい。
+        point: question の性質を説明する形容詞で「難しい」。
+      - sentence: It rained hard last night.
+        ja: 昨夜は雨が激しく降った。
+        point: rained を説明する副詞で「激しく」。
+
+  hardly:
+    form: hardly
+    meaning: ほとんど〜ない
+    image: 量・頻度・可能性がほぼゼロ
+    examples:
+      - sentence: He hardly works.
+        ja: 彼はほとんど働かない。
+        point: hardly は「ほとんど〜ない」という否定的な副詞。
+      - sentence: I can hardly hear you.
+        ja: あなたの声がほとんど聞こえません。
+        point: can hardly で「ほとんど〜できない」。
+      - sentence: She hardly ever watches TV.
+        ja: 彼女はテレビをほとんど見ない。
+        point: hardly ever で「めったに〜しない」。
+
+main_rule: >
+  hard は、形容詞では「難しい・硬い」、副詞では「一生懸命に・激しく」という意味。
+  hardly は「ほとんど〜ない」という準否定語。
+  He works hard. は「彼は一生懸命働く」。
+  He hardly works. は「彼はほとんど働かない」。
+  -ly がついているからといって、hardly を hard の普通の副詞形だと考えてはいけない。
+  hardly は意味が大きく変わる語として覚える。
+
+contrast_pairs:
+  - hard: He works hard.
+    hardly: He hardly works.
+    point: >
+      works hard は「一生懸命働く」。
+      hardly works は「ほとんど働かない」。
+
+  - hard: It rained hard.
+    hardly: It hardly rained.
+    point: >
+      rained hard は「激しく雨が降った」。
+      hardly rained は「ほとんど雨が降らなかった」。
+
+  - hard: This question is hard.
+    hardly: I could hardly answer the question.
+    point: >
+      hard は「難しい」。
+      hardly は「ほとんど〜できない」。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または hard と hardly の意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g054_q001
+    question_type: two_choice
+    prompt: He works ___ every day.
+    choices:
+      - text: hard
+        correct: true
+      - text: hardly
+        correct: false
+    answer: hard
+    explanation: >
+      「一生懸命働く」という意味なので hard を使う。
+      hardly works なら「ほとんど働かない」になる。
+    translation: 彼は毎日一生懸命働いている。
+    focus:
+      - hard
+      - adverb
+      - work_hard
+
+  - id: g054_q002
+    question_type: two_choice
+    prompt: He ___ works on weekends.
+    choices:
+      - text: hard
+        correct: false
+      - text: hardly
+        correct: true
+    answer: hardly
+    explanation: >
+      「週末にはほとんど働かない」という意味。
+      hardly は「ほとんど〜ない」を表す。
+    translation: 彼は週末にはほとんど働かない。
+    focus:
+      - hardly
+      - quasi_negative
+      - hardly_works
+
+  - id: g054_q003
+    question_type: two_choice
+    prompt: This question is ___.
+    choices:
+      - text: hard
+        correct: true
+      - text: hardly
+        correct: false
+    answer: hard
+    explanation: >
+      question の性質を説明して「難しい」という意味。
+      形容詞 hard を使う。
+    translation: この問題は難しい。
+    focus:
+      - hard
+      - adjective
+      - difficult
+
+  - id: g054_q004
+    question_type: two_choice
+    prompt: I could ___ answer the question.
+    choices:
+      - text: hard
+        correct: false
+      - text: hardly
+        correct: true
+    answer: hardly
+    explanation: >
+      could hardly answer で「ほとんど答えられなかった」。
+      hardly は否定に近い意味を持つ。
+    translation: 私はその問題にほとんど答えられなかった。
+    focus:
+      - hardly
+      - can_hardly
+      - almost_not
+
+  - id: g054_q005
+    question_type: two_choice
+    prompt: It rained ___ last night.
+    choices:
+      - text: hard
+        correct: true
+      - text: hardly
+        correct: false
+    answer: hard
+    explanation: >
+      「雨が激しく降った」という意味。
+      rained を説明する副詞 hard を使う。
+    translation: 昨夜は雨が激しく降った。
+    focus:
+      - hard
+      - adverb
+      - rain_hard
+
+  - id: g054_q006
+    question_type: two_choice
+    prompt: It ___ rained last month.
+    choices:
+      - text: hard
+        correct: false
+      - text: hardly
+        correct: true
+    answer: hardly
+    explanation: >
+      「先月はほとんど雨が降らなかった」という意味。
+      hardly rained が自然。
+    translation: 先月はほとんど雨が降らなかった。
+    focus:
+      - hardly
+      - quasi_negative
+      - hardly_rained
+
+  - id: g054_q007
+    question_type: two_choice
+    prompt: She studied ___ for the exam.
+    choices:
+      - text: hard
+        correct: true
+      - text: hardly
+        correct: false
+    answer: hard
+    explanation: >
+      「試験のために一生懸命勉強した」という意味。
+      studied hard が自然。
+    translation: 彼女は試験のために一生懸命勉強した。
+    focus:
+      - hard
+      - study_hard
+      - effort
+
+  - id: g054_q008
+    question_type: two_choice
+    prompt: She ___ studied for the exam.
+    choices:
+      - text: hard
+        correct: false
+      - text: hardly
+        correct: true
+    answer: hardly
+    explanation: >
+      「試験勉強をほとんどしなかった」という意味。
+      hardly studied が自然。
+    translation: 彼女は試験勉強をほとんどしなかった。
+    focus:
+      - hardly
+      - hardly_studied
+      - almost_not
+
+  - id: g054_q009
+    question_type: two_choice
+    prompt: I can ___ hear you.
+    choices:
+      - text: hard
+        correct: false
+      - text: hardly
+        correct: true
+    answer: hardly
+    explanation: >
+      can hardly hear で「ほとんど聞こえない」。
+      hard hear とは言わない。
+    translation: あなたの声がほとんど聞こえません。
+    focus:
+      - hardly
+      - can_hardly
+      - hear
+
+  - id: g054_q010
+    question_type: two_choice
+    prompt: This bread is too ___ to eat.
+    choices:
+      - text: hard
+        correct: true
+      - text: hardly
+        correct: false
+    answer: hard
+    explanation: >
+      bread の性質を説明して「硬い」という意味。
+      形容詞 hard を使う。
+    translation: このパンは硬すぎて食べられない。
+    focus:
+      - hard
+      - adjective
+      - physical_hardness
+
+  - id: g054_q011
+    question_type: two_choice
+    prompt: We could ___ see the mountain because of the fog.
+    choices:
+      - text: hard
+        correct: false
+      - text: hardly
+        correct: true
+    answer: hardly
+    explanation: >
+      霧のせいで山がほとんど見えなかったという意味。
+      could hardly see が自然。
+    translation: 霧のせいで、私たちはその山をほとんど見ることができなかった。
+    focus:
+      - hardly
+      - could_hardly
+      - visibility
+
+  - id: g054_q012
+    question_type: two_choice
+    prompt: They fought ___ to protect their town.
+    choices:
+      - text: hard
+        correct: true
+      - text: hardly
+        correct: false
+    answer: hard
+    explanation: >
+      「町を守るために必死に戦った」という意味。
+      fought hard が自然。
+    translation: 彼らは町を守るために必死に戦った。
+    focus:
+      - hard
+      - adverb
+      - effort
+
+common_mistakes:
+  - mistake: hard の副詞形は always hardly だと思う
+    correction: >
+      hard はそのまま副詞としても使える。
+      work hard, study hard, rain hard のように使う。
+      hardly は「ほとんど〜ない」という別の意味。
+  - mistake: He works hardly. を「一生懸命働く」と読む
+    correction: >
+      He works hard. が「一生懸命働く」。
+      He hardly works. は「彼はほとんど働かない」。
+  - mistake: hardly を強調語として読む
+    correction: >
+      hardly は very のような強調語ではない。
+      「ほとんど〜ない」という否定に近い意味。
+  - mistake: can hardly を「一生懸命できる」と読む
+    correction: >
+      can hardly do は「ほとんど〜できない」。
+      I can hardly hear you. は「ほとんど聞こえない」。
+  - mistake: hard と difficult の関係だけで考える
+    correction: >
+      hard は「難しい・硬い」だけでなく、副詞で「一生懸命に・激しく」も表す。
+      hardly はまったく別に「ほとんど〜ない」。
+
+learning_notes:
+  - >
+    hard は形容詞にも副詞にもなる。
+    a hard question, work hard のように使う。
+  - >
+    hardly は「ほとんど〜ない」という準否定語。
+    not がなくても否定に近い意味になる。
+  - >
+    work hard と hardly work は意味が正反対に近い。
+    語順と意味をセットで覚える。
+  - >
+    hardly ever は「めったに〜しない」。
+    She hardly ever watches TV. のように使う。
+
+prerequisites:
+  - g053
+
+next_items:
+  - g055
+  - g056
+  - g057

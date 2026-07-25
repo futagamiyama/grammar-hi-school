@@ -1,0 +1,363 @@
+id: g003
+file: g003.yaml
+
+title: 過去形 vs 過去完了形
+type: grammar_contrast
+
+section:
+  id: s01
+  title: 時制・相の基本対立
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 過去の基準時点より前の出来事か？
+
+core_concept:
+  past_simple:
+    form: 過去形
+    meaning: 過去の出来事を、その順序どおり、または単独の過去の事実として述べる
+    image: 過去の時点にそのまま置く / 出来事を順番に並べる
+    typical_clues:
+      - yesterday
+      - last night
+      - then
+      - later
+      - after that
+      - in 2010
+    examples:
+      - sentence: I arrived at the station at eight.
+        ja: 私は8時に駅に着いた。
+        point: 過去の出来事をそのまま述べている。
+      - sentence: The train left five minutes later.
+        ja: その列車は5分後に出発した。
+        point: 過去の出来事を順番に述べている。
+      - sentence: She lost her ticket on the bus.
+        ja: 彼女はバスの中で切符をなくした。
+        point: 過去のある場面で起きた出来事を述べている。
+
+  past_perfect:
+    form: 過去完了形
+    meaning: 過去のある基準時点より、さらに前に起きた出来事を表す
+    image: 過去を振り返り、その時点より前を見る / 過去の中のさらに過去
+    typical_clues:
+      - already
+      - before
+      - by the time
+      - when I arrived
+      - when she realized
+      - because
+    examples:
+      - sentence: When I arrived at the station, the train had already left.
+        ja: 私が駅に着いた時、その列車はすでに出発していた。
+        point: 列車が出発したのは、私が到着した時点より前。
+      - sentence: She realized that she had forgotten her umbrella.
+        ja: 彼女は傘を忘れたことに気づいた。
+        point: 傘を忘れたのは、気づいた時点より前。
+      - sentence: By the time we got to the theater, the movie had started.
+        ja: 私たちが劇場に着いた時には、映画は始まっていた。
+        point: 映画が始まったのは、劇場に着いた時点より前。
+
+main_rule: >
+  過去形は、過去の出来事をそのまま述べる。
+  過去完了形は、過去のある基準時点より前に起きた出来事を表す。
+  日本語ではどちらも「〜した」「〜していた」と訳せることがあるため、
+  その出来事が「過去の基準時点より前」かどうかで判断する。
+
+contrast_pairs:
+  - past_simple: I arrived at the station, and the train left five minutes later.
+    past_perfect: When I arrived at the station, the train had already left.
+    point: >
+      過去形では出来事が順番に並ぶ。
+      過去完了形では、到着した時点より前に列車が出発していたことを表す。
+
+  - past_simple: She forgot her umbrella yesterday.
+    past_perfect: She realized that she had forgotten her umbrella.
+    point: >
+      yesterday の出来事を単独で述べるなら過去形。
+      気づいた時点より前に忘れていたことを表すなら過去完了形。
+
+  - past_simple: The movie started at seven.
+    past_perfect: By the time we got to the theater, the movie had started.
+    point: >
+      started は過去の出来事。
+      had started は、劇場に着いた時点より前に始まっていたことを表す。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、速く迷いなく答えられる
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+    note: >
+      8秒制限なら、平均4.8秒以内かつ最遅6.8秒以内をEASYの目安とする。
+
+review_questions:
+  - id: g003_q001
+    question_type: two_choice
+    prompt: When I arrived at the station, the train ___ already.
+    choices:
+      - text: left
+        correct: false
+      - text: had left
+        correct: true
+    answer: had left
+    explanation: >
+      列車が出発したのは、私が駅に着いた時点より前。
+      過去の基準時点より前なので、過去完了形 had left が自然。
+    ja: 私が駅に着いた時、その列車はすでに出発していた。
+    focus:
+      - earlier_past
+      - when_clause
+      - already
+      - past_perfect
+
+  - id: g003_q002
+    question_type: two_choice
+    prompt: I arrived at the station, and the train ___ five minutes later.
+    choices:
+      - text: left
+        correct: true
+      - text: had left
+        correct: false
+    answer: left
+    explanation: >
+      到着した後、5分後に列車が出発したという順番の出来事。
+      過去の出来事を順番に述べるので、過去形 left が自然。
+    ja: 私は駅に着き、その列車は5分後に出発した。
+    focus:
+      - sequence
+      - later
+      - past_simple
+
+  - id: g003_q003
+    question_type: two_choice
+    prompt: She realized that she ___ her umbrella.
+    choices:
+      - text: forgot
+        correct: false
+      - text: had forgotten
+        correct: true
+    answer: had forgotten
+    explanation: >
+      傘を忘れたのは、気づいた時点より前。
+      過去の基準時点より前の出来事なので、had forgotten が自然。
+    ja: 彼女は傘を忘れたことに気づいた。
+    focus:
+      - earlier_past
+      - realized_that
+      - past_perfect
+
+  - id: g003_q004
+    question_type: two_choice
+    prompt: She ___ her umbrella yesterday.
+    choices:
+      - text: forgot
+        correct: true
+      - text: had forgotten
+        correct: false
+    answer: forgot
+    explanation: >
+      yesterday は過去の時点を示す。
+      過去の出来事を単独で述べているので、過去形 forgot が自然。
+    ja: 彼女は昨日、傘を忘れた。
+    focus:
+      - past_time_marker
+      - yesterday
+      - past_simple
+
+  - id: g003_q005
+    question_type: two_choice
+    prompt: By the time we got to the theater, the movie ___.
+    choices:
+      - text: started
+        correct: false
+      - text: had started
+        correct: true
+    answer: had started
+    explanation: >
+      映画が始まったのは、私たちが劇場に着いた時点より前。
+      by the time は過去完了形と結びつきやすい。
+    ja: 私たちが劇場に着いた時には、映画は始まっていた。
+    focus:
+      - earlier_past
+      - by_the_time
+      - past_perfect
+
+  - id: g003_q006
+    question_type: two_choice
+    prompt: The movie ___ at seven.
+    choices:
+      - text: started
+        correct: true
+      - text: had started
+        correct: false
+    answer: started
+    explanation: >
+      at seven は過去の時点を示している。
+      過去の出来事をそのまま述べるので、過去形 started が自然。
+    ja: その映画は7時に始まった。
+    focus:
+      - past_time_marker
+      - at_seven
+      - past_simple
+
+  - id: g003_q007
+    question_type: two_choice
+    prompt: He could not enter the hall because he ___ his ticket.
+    choices:
+      - text: lost
+        correct: false
+      - text: had lost
+        correct: true
+    answer: had lost
+    explanation: >
+      チケットをなくしたのは、ホールに入れなかった時点より前。
+      過去の原因を示すため、過去完了形 had lost が自然。
+    ja: 彼はチケットをなくしていたので、ホールに入れなかった。
+    focus:
+      - earlier_past
+      - reason
+      - because
+      - past_perfect
+
+  - id: g003_q008
+    question_type: two_choice
+    prompt: He ___ his ticket on the bus.
+    choices:
+      - text: lost
+        correct: true
+      - text: had lost
+        correct: false
+    answer: lost
+    explanation: >
+      on the bus で起きた過去の出来事を述べているだけ。
+      比較する過去の基準時点がないので、過去形 lost が自然。
+    ja: 彼はバスの中でチケットをなくした。
+    focus:
+      - past_event
+      - on_the_bus
+      - past_simple
+
+  - id: g003_q009
+    question_type: two_choice
+    prompt: I ___ snow before I moved to Hokkaido.
+    choices:
+      - text: never saw
+        correct: false
+      - text: had never seen
+        correct: true
+    answer: had never seen
+    explanation: >
+      雪を見たことがなかったのは、北海道に引っ越す前の話。
+      moved という過去の基準時点より前なので、had never seen が自然。
+    ja: 北海道に引っ越す前、私は雪を見たことがなかった。
+    focus:
+      - earlier_past
+      - before
+      - experience_before_past
+      - past_perfect
+
+  - id: g003_q010
+    question_type: two_choice
+    prompt: I ___ snow for the first time last winter.
+    choices:
+      - text: saw
+        correct: true
+      - text: had seen
+        correct: false
+    answer: saw
+    explanation: >
+      last winter は過去の時点を示す。
+      その時に初めて見た、という過去の出来事なので saw が自然。
+    ja: 私は去年の冬、初めて雪を見た。
+    focus:
+      - past_time_marker
+      - last_winter
+      - past_simple
+
+  - id: g003_q011
+    question_type: two_choice
+    prompt: I ___ my homework and watched TV.
+    choices:
+      - text: finished
+        correct: true
+      - text: had finished
+        correct: false
+    answer: finished
+    explanation: >
+      宿題を終えて、それからテレビを見たという順番の出来事。
+      and で過去の出来事を並べているので、過去形 finished が自然。
+    ja: 私は宿題を終えて、テレビを見た。
+    focus:
+      - sequence
+      - and
+      - past_simple
+
+  - id: g003_q012
+    question_type: two_choice
+    prompt: When I called her, she ___ already gone to bed.
+    choices:
+      - text: went
+        correct: false
+      - text: had
+        correct: true
+    answer: had
+    explanation: >
+      彼女が寝たのは、私が電話した時点より前。
+      had already gone to bed で過去完了形になる。
+    ja: 私が彼女に電話した時、彼女はすでに寝ていた。
+    focus:
+      - earlier_past
+      - when_clause
+      - already
+      - past_perfect
+
+common_mistakes:
+  - mistake: 過去完了形を「過去形の強調」だと思ってしまう
+    correction: >
+      過去完了形は強調ではない。
+      過去のある基準時点より前に起きた出来事を示す形である。
+
+  - mistake: 日本語の「〜していた」を見て、すべて過去完了形にしてしまう
+    correction: >
+      日本語訳ではなく、過去の基準時点があるか、その時点より前の出来事かを判断する。
+
+  - mistake: 出来事の順番がそのまま並んでいる文にも過去完了形を使ってしまう
+    correction: >
+      I arrived, and the train left five minutes later. のように順番どおり述べる場合は、普通は過去形でよい。
+
+  - mistake: by the time や before の役割を見落とす
+    correction: >
+      by the time や before は、ある過去の時点より前に何が起きていたかを示すことが多い。
+
+learning_notes:
+  - >
+    過去形は、過去の出来事をそのまま置く形である。
+  - >
+    過去完了形は、過去の中に基準時点を作り、その基準時点より前を表す形である。
+  - >
+    had + 過去分詞を見るときは、「何より前なのか」を必ず探す。
+  - >
+    出来事が順番どおりに並んでいるだけなら、過去完了形を使わなくてもよい。
+  - >
+    過去完了形は「大過去」と呼ばれることがあるが、機械的に古い出来事へ使うのではなく、過去の基準時点との関係を見る。
+
+prerequisites:
+  - g002
+
+next_items:
+  - g004
+  - g009

@@ -1,0 +1,371 @@
+id: g076
+file: g076.yaml
+
+title: It is time + 仮定法
+type: construction
+
+section:
+  id: s09
+  title: 仮定法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: It is time の後ろで過去形を使う感覚を理解できるか？
+
+core_concept:
+  it_is_time_subjunctive:
+    form: It is time + 主語 + 過去形
+    meaning: もう〜してよい時間だ、そろそろ〜すべき時だ
+    image: 本来ならもう起きているべきことが、まだ起きていない
+    examples:
+      - sentence: It is time we went home.
+        ja: そろそろ私たちは家に帰る時間だ。
+        point: 実際にはまだ帰っていないが、もう帰るべき時だという意味。
+      - sentence: It is time you went to bed.
+        ja: もうあなたは寝る時間だ。
+        point: 実際にはまだ寝ていない。
+      - sentence: It is time he started working.
+        ja: そろそろ彼は働き始めるべき時だ。
+        point: まだ働き始めていないことへの促し。
+
+  high_time:
+    form: It is high time + 主語 + 過去形
+    meaning: とっくに〜すべき時だ
+    image: もう遅いくらいだという強い促し
+    examples:
+      - sentence: It is high time we left.
+        ja: 私たちはとっくに出発すべき時間だ。
+        point: もう出発していてもよいくらいだという強い意味。
+      - sentence: It is high time you apologized.
+        ja: あなたはとっくに謝るべき時だ。
+        point: 謝るのが遅れているという含み。
+      - sentence: It is high time the government took action.
+        ja: 政府はとっくに行動を起こすべき時だ。
+        point: まだ行動が遅いという批判を含む。
+
+  time_to_do:
+    form: It is time to + 動詞原形
+    meaning: 〜する時間だ
+    image: 誰がするかを強く出さない普通の表現
+    examples:
+      - sentence: It is time to go home.
+        ja: 家に帰る時間だ。
+        point: to go は普通の不定詞。
+      - sentence: It is time to start the meeting.
+        ja: 会議を始める時間だ。
+        point: 主語を出さず、一般的に「始める時間だ」と言う。
+      - sentence: It is time for us to leave.
+        ja: 私たちが出発する時間だ。
+        point: for us to leave で動作主を示せる。
+
+main_rule: >
+  It is time + 主語 + 過去形 は、「そろそろ〜すべき時だ」「もう〜してよい時間だ」を表す。
+  形は過去形だが、過去の意味ではない。
+  It is time we went home. は「そろそろ帰る時間だ」という現在の促し。
+  実際にはまだ帰っていないが、もう帰るべき時だという気持ちがある。
+  It is high time はさらに強く、「とっくに〜すべき時だ」という意味。
+  一方、It is time to go home. は普通の不定詞で、「帰る時間だ」という一般的な表現。
+
+contrast_pairs:
+  - subjunctive: It is time we went home.
+    infinitive: It is time to go home.
+    point: >
+      we went home は、主語 we を出して「私たちがそろそろ帰るべきだ」と言う形。
+      to go home は、一般的に「帰る時間だ」と言う形。
+
+  - normal: It is time you went to bed.
+    stronger: It is high time you went to bed.
+    point: >
+      It is time は「そろそろ〜すべき時だ」。
+      It is high time は「とっくに〜すべき時だ」とさらに強い。
+
+  - past_meaning: We went home at nine.
+    subjunctive_meaning: It is time we went home.
+    point: >
+      We went home は本当の過去。
+      It is time we went home の went は仮定法的な過去形で、現在の促しを表す。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または It is time + 過去形 が現在の促しを表すことを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g076_q001
+    question_type: two_choice
+    prompt: It is time we ___ home.
+    choices:
+      - text: went
+        correct: true
+      - text: go
+        correct: false
+    answer: went
+    explanation: >
+      It is time + 主語 + 過去形 の形。
+      went は過去の意味ではなく、「そろそろ帰るべきだ」という現在の促しを表す。
+    translation: そろそろ私たちは家に帰る時間だ。
+    focus:
+      - it_is_time_subjunctive
+      - went
+      - present_meaning
+
+  - id: g076_q002
+    question_type: two_choice
+    prompt: It is time ___ home.
+    choices:
+      - text: to go
+        correct: true
+      - text: went
+        correct: false
+    answer: to go
+    explanation: >
+      主語を出さずに「帰る時間だ」と言う普通の形。
+      It is time to + 動詞原形 を使う。
+    translation: 家に帰る時間だ。
+    focus:
+      - time_to_do
+      - infinitive
+      - go_home
+
+  - id: g076_q003
+    question_type: two_choice
+    prompt: It is time you ___ to bed.
+    choices:
+      - text: went
+        correct: true
+      - text: go
+        correct: false
+    answer: went
+    explanation: >
+      It is time + 主語 + 過去形。
+      実際にはまだ寝ていないが、もう寝るべき時だという意味。
+    translation: もうあなたは寝る時間だ。
+    focus:
+      - it_is_time_subjunctive
+      - went_to_bed
+      - advice
+
+  - id: g076_q004
+    question_type: two_choice
+    prompt: It is time for you ___ to bed.
+    choices:
+      - text: to go
+        correct: true
+      - text: went
+        correct: false
+    answer: to go
+    explanation: >
+      It is time for 人 to do の形。
+      for you の後ろは to go が自然。
+    translation: あなたが寝る時間です。
+    focus:
+      - time_to_do
+      - for_person_to_do
+      - to_go
+
+  - id: g076_q005
+    question_type: two_choice
+    prompt: It is high time we ___.
+    choices:
+      - text: left
+        correct: true
+      - text: leave
+        correct: false
+    answer: left
+    explanation: >
+      It is high time + 主語 + 過去形。
+      「とっくに出発すべき時だ」という強い促しを表す。
+    translation: 私たちはとっくに出発すべき時間だ。
+    focus:
+      - high_time
+      - left
+      - stronger_meaning
+
+  - id: g076_q006
+    question_type: two_choice
+    prompt: It is high time you ___.
+    choices:
+      - text: apologized
+        correct: true
+      - text: apologize
+        correct: false
+    answer: apologized
+    explanation: >
+      It is high time の後ろでは過去形を使う。
+      apologized は過去の意味ではなく、「とっくに謝るべきだ」という意味。
+    translation: あなたはとっくに謝るべき時だ。
+    focus:
+      - high_time
+      - apologized
+      - complaint
+
+  - id: g076_q007
+    question_type: two_choice
+    prompt: It is time he ___ working.
+    choices:
+      - text: started
+        correct: true
+      - text: starts
+        correct: false
+    answer: started
+    explanation: >
+      It is time + 主語 + 過去形。
+      彼がまだ働き始めていないので、そろそろ始めるべきだという意味。
+    translation: そろそろ彼は働き始めるべき時だ。
+    focus:
+      - it_is_time_subjunctive
+      - started
+      - working
+
+  - id: g076_q008
+    question_type: two_choice
+    prompt: It is time to ___ the meeting.
+    choices:
+      - text: start
+        correct: true
+      - text: started
+        correct: false
+    answer: start
+    explanation: >
+      It is time to + 動詞原形 の形。
+      to の後ろは原形 start を使う。
+    translation: 会議を始める時間だ。
+    focus:
+      - time_to_do
+      - infinitive
+      - start
+
+  - id: g076_q009
+    question_type: two_choice
+    prompt: It is time the children ___ quiet.
+    choices:
+      - text: were
+        correct: true
+      - text: are
+        correct: false
+    answer: were
+    explanation: >
+      It is time + 主語 + 過去形。
+      be動詞も仮定法的に were を使い、「そろそろ静かにすべきだ」という意味。
+    translation: そろそろ子どもたちは静かにすべき時間だ。
+    focus:
+      - it_is_time_subjunctive
+      - were
+      - be_verb
+
+  - id: g076_q010
+    question_type: two_choice
+    prompt: It is time for the children ___ quiet.
+    choices:
+      - text: to be
+        correct: true
+      - text: were
+        correct: false
+    answer: to be
+    explanation: >
+      It is time for 名詞 to do の形。
+      for the children の後ろは to be quiet が自然。
+    translation: 子どもたちが静かにする時間だ。
+    focus:
+      - time_to_do
+      - for_person_to_do
+      - to_be
+
+  - id: g076_q011
+    question_type: two_choice
+    prompt: It is high time the government ___ action.
+    choices:
+      - text: took
+        correct: true
+      - text: takes
+        correct: false
+    answer: took
+    explanation: >
+      It is high time + 主語 + 過去形。
+      「政府はとっくに行動を起こすべき時だ」という批判的な意味。
+    translation: 政府はとっくに行動を起こすべき時だ。
+    focus:
+      - high_time
+      - took_action
+      - government
+
+  - id: g076_q012
+    question_type: two_choice
+    prompt: It is time we ___ serious about this problem.
+    choices:
+      - text: were
+        correct: true
+      - text: are
+        correct: false
+    answer: were
+    explanation: >
+      It is time + 主語 + 過去形。
+      「そろそろこの問題を真剣に考えるべきだ」という現在の促しを表す。
+    translation: そろそろ私たちはこの問題に真剣になるべき時だ。
+    focus:
+      - it_is_time_subjunctive
+      - were
+      - serious
+
+common_mistakes:
+  - mistake: It is time we go home. と現在形を使ってしまう
+    correction: >
+      It is time + 主語 + 動詞 の形では、仮定法的に過去形を使う。
+      It is time we went home. が自然。
+  - mistake: It is time we went home. を過去の話だと思う
+    correction: >
+      went は過去の意味ではない。
+      「そろそろ帰るべきだ」という現在の促しを表す。
+  - mistake: It is time to went home. としてしまう
+    correction: >
+      It is time to + 動詞原形。
+      It is time to go home. が正しい。
+  - mistake: It is time for you went to bed. としてしまう
+    correction: >
+      It is time for 人 to do の形では、to + 動詞原形を使う。
+      It is time for you to go to bed. が正しい。
+  - mistake: It is high time の強さを読み落とす
+    correction: >
+      It is high time は「とっくに〜すべき時だ」という強い促し・批判を含む。
+
+learning_notes:
+  - >
+    It is time + 主語 + 過去形 は、現在の促しを表す。
+    過去形だが、過去の意味ではない。
+  - >
+    It is time we went home. は「そろそろ帰る時間だ」。
+    まだ帰っていないことが前提。
+  - >
+    It is high time は、普通の It is time より強く、
+    「もう遅いくらいだ」という響きがある。
+  - >
+    It is time to do / It is time for 人 to do は普通の不定詞表現。
+    仮定法の過去形と混同しない。
+
+prerequisites:
+  - g072
+  - g073
+  - g074
+  - g075
+
+next_items:
+  - g077
+  - g078
+  - g079

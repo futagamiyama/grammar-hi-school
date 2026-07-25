@@ -1,0 +1,371 @@
+id: g071
+file: g071.yaml
+
+title: 複合関係詞 whenever / wherever / however
+type: grammar_contrast
+
+section:
+  id: s08
+  title: 関係詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: whenever / wherever / however を意味で使い分けられるか？
+
+core_concept:
+  whenever:
+    form: whenever + 主語 + 動詞
+    meaning: 〜するときはいつでも、いつ〜しても
+    image: any time when / no matter when
+    examples:
+      - sentence: Visit me whenever you are free.
+        ja: 暇なときはいつでも私を訪ねてください。
+        point: whenever you are free = any time when you are free。
+      - sentence: Whenever I see this photo, I remember my childhood.
+        ja: この写真を見るたびに、私は子どものころを思い出す。
+        point: 「〜するときはいつでも」という反復の意味。
+      - sentence: Whenever you come, you are welcome.
+        ja: あなたがいつ来ても歓迎します。
+        point: 「いつ来ても」という譲歩の意味。
+
+  wherever:
+    form: wherever + 主語 + 動詞
+    meaning: 〜する所ならどこでも、どこへ〜しても
+    image: any place where / no matter where
+    examples:
+      - sentence: Sit wherever you like.
+        ja: 好きな所ならどこでも座ってください。
+        point: wherever you like = any place where you like。
+      - sentence: Wherever he goes, he makes friends.
+        ja: 彼はどこへ行っても友達を作る。
+        point: 「どこへ行っても」という譲歩の意味。
+      - sentence: I will follow you wherever you go.
+        ja: あなたがどこへ行っても私はついて行きます。
+        point: 場所を表す複合関係詞。
+
+  however:
+    form: however + 形容詞/副詞 + 主語 + 動詞
+    meaning: どんなに〜でも
+    image: no matter how
+    examples:
+      - sentence: However hard you try, you cannot finish it today.
+        ja: どんなに一生懸命やっても、今日それを終えることはできない。
+        point: however hard = no matter how hard。
+      - sentence: However busy I am, I read every day.
+        ja: どんなに忙しくても、私は毎日読む。
+        point: however + 形容詞 の形。
+      - sentence: However carefully you drive, accidents can happen.
+        ja: どんなに注意深く運転しても、事故は起こりうる。
+        point: however + 副詞 の形。
+
+main_rule: >
+  複合関係詞 whenever は「〜するときはいつでも」「いつ〜しても」を表す。
+  wherever は「〜する所ならどこでも」「どこへ〜しても」を表す。
+  however は「どんなに〜でも」を表し、後ろに形容詞や副詞を置くことが多い。
+  whenever = any time when / no matter when、
+  wherever = any place where / no matter where、
+  however = no matter how と考えるとよい。
+  いつなら whenever、どこなら wherever、程度・やり方なら however と判断する。
+
+contrast_pairs:
+  - time: Visit me whenever you are free.
+    place: Sit wherever you like.
+    point: >
+      whenever は時。
+      wherever は場所。
+
+  - time_concession: Whenever you come, you are welcome.
+    place_concession: Wherever you go, I will follow you.
+    point: >
+      whenever は「いつ〜しても」。
+      wherever は「どこへ〜しても」。
+
+  - place: Wherever he goes, he makes friends.
+    degree: However hard he tries, he cannot win.
+    point: >
+      wherever は場所。
+      however は「どんなに〜でも」と程度を表す。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または whenever / wherever / however の意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g071_q001
+    question_type: two_choice
+    prompt: Visit me ___ you are free.
+    choices:
+      - text: whenever
+        correct: true
+      - text: wherever
+        correct: false
+    answer: whenever
+    explanation: >
+      you are free は「暇なとき」を表す。
+      時を表すので whenever が自然。
+    translation: 暇なときはいつでも私を訪ねてください。
+    focus:
+      - whenever
+      - time
+      - any_time_when
+
+  - id: g071_q002
+    question_type: two_choice
+    prompt: Sit ___ you like.
+    choices:
+      - text: whenever
+        correct: false
+      - text: wherever
+        correct: true
+    answer: wherever
+    explanation: >
+      座る場所を表している。
+      「好きな所ならどこでも」なので wherever が自然。
+    translation: 好きな所ならどこでも座ってください。
+    focus:
+      - wherever
+      - place
+      - any_place_where
+
+  - id: g071_q003
+    question_type: two_choice
+    prompt: ___ I see this photo, I remember my childhood.
+    choices:
+      - text: Whenever
+        correct: true
+      - text: Wherever
+        correct: false
+    answer: Whenever
+    explanation: >
+      写真を見る「ときはいつでも」という時の意味。
+      Whenever I see this photo が自然。
+    translation: この写真を見るたびに、私は子どものころを思い出す。
+    focus:
+      - whenever
+      - repeated_time
+      - memory
+
+  - id: g071_q004
+    question_type: two_choice
+    prompt: ___ he goes, he makes friends.
+    choices:
+      - text: Whenever
+        correct: false
+      - text: Wherever
+        correct: true
+    answer: Wherever
+    explanation: >
+      goes は行く場所を問題にしている。
+      「どこへ行っても」なので Wherever が自然。
+    translation: 彼はどこへ行っても友達を作る。
+    focus:
+      - wherever
+      - place_concession
+      - goes
+
+  - id: g071_q005
+    question_type: two_choice
+    prompt: ___ you come, you are welcome.
+    choices:
+      - text: Whenever
+        correct: true
+      - text: However
+        correct: false
+    answer: Whenever
+    explanation: >
+      come する時を表している。
+      「いつ来ても」なので Whenever が自然。
+    translation: あなたがいつ来ても歓迎します。
+    focus:
+      - whenever
+      - time_concession
+      - welcome
+
+  - id: g071_q006
+    question_type: two_choice
+    prompt: I will follow you ___ you go.
+    choices:
+      - text: whenever
+        correct: false
+      - text: wherever
+        correct: true
+    answer: wherever
+    explanation: >
+      go する場所を表している。
+      「どこへ行っても」なので wherever が自然。
+    translation: あなたがどこへ行っても私はついて行きます。
+    focus:
+      - wherever
+      - place_concession
+      - follow
+
+  - id: g071_q007
+    question_type: two_choice
+    prompt: ___ hard you try, you cannot finish it today.
+    choices:
+      - text: However
+        correct: true
+      - text: Wherever
+        correct: false
+    answer: However
+    explanation: >
+      hard という副詞を強めて「どんなに一生懸命〜しても」を表している。
+      however hard が自然。
+    translation: どんなに一生懸命やっても、今日それを終えることはできない。
+    focus:
+      - however
+      - degree
+      - however_plus_adverb
+
+  - id: g071_q008
+    question_type: two_choice
+    prompt: ___ busy I am, I read every day.
+    choices:
+      - text: However
+        correct: true
+      - text: Whenever
+        correct: false
+    answer: However
+    explanation: >
+      busy という形容詞を強めて「どんなに忙しくても」を表している。
+      however busy が自然。
+    translation: どんなに忙しくても、私は毎日読む。
+    focus:
+      - however
+      - degree
+      - however_plus_adjective
+
+  - id: g071_q009
+    question_type: two_choice
+    prompt: Call me ___ you need help.
+    choices:
+      - text: whenever
+        correct: true
+      - text: wherever
+        correct: false
+    answer: whenever
+    explanation: >
+      助けが必要な「とき」を表している。
+      「必要なときはいつでも」なので whenever が自然。
+    translation: 助けが必要なときはいつでも電話してください。
+    focus:
+      - whenever
+      - time
+      - need_help
+
+  - id: g071_q010
+    question_type: two_choice
+    prompt: Put the box ___ you want.
+    choices:
+      - text: whenever
+        correct: false
+      - text: wherever
+        correct: true
+    answer: wherever
+    explanation: >
+      箱を置く場所を表している。
+      「好きな所ならどこにでも」なので wherever が自然。
+    translation: その箱を好きな所に置いてください。
+    focus:
+      - wherever
+      - place
+      - put
+
+  - id: g071_q011
+    question_type: two_choice
+    prompt: ___ carefully you drive, accidents can happen.
+    choices:
+      - text: However
+        correct: true
+      - text: Whenever
+        correct: false
+    answer: However
+    explanation: >
+      carefully という副詞を強めて「どんなに注意深く〜しても」を表している。
+      however carefully が自然。
+    translation: どんなに注意深く運転しても、事故は起こりうる。
+    focus:
+      - however
+      - however_plus_adverb
+      - concession
+
+  - id: g071_q012
+    question_type: two_choice
+    prompt: You can start ___ you are ready.
+    choices:
+      - text: whenever
+        correct: true
+      - text: however
+        correct: false
+    answer: whenever
+    explanation: >
+      ready になる時を表している。
+      「準備ができたときはいつでも」なので whenever が自然。
+    translation: 準備ができたらいつでも始めてよい。
+    focus:
+      - whenever
+      - time
+      - ready
+
+common_mistakes:
+  - mistake: whenever と wherever を音の近さで混同する
+    correction: >
+      whenever は時。
+      wherever は場所。
+      when / where と対応させて覚える。
+  - mistake: however を「しかし」とだけ覚える
+    correction: >
+      however は副詞として「しかし」もあるが、
+      複合関係詞では「どんなに〜でも」を表す。
+  - mistake: however の後ろに名詞だけを置く
+    correction: >
+      however は however hard, however busy, however carefully のように、
+      形容詞や副詞を伴うことが多い。
+  - mistake: wherever を時の意味で使う
+    correction: >
+      時なら whenever。
+      Call me whenever you need help. が自然。
+  - mistake: whenever を場所の意味で使う
+    correction: >
+      場所なら wherever。
+      Sit wherever you like. が自然。
+
+learning_notes:
+  - >
+    whenever は when と対応し、「いつでも」「いつ〜しても」を表す。
+  - >
+    wherever は where と対応し、「どこでも」「どこへ〜しても」を表す。
+  - >
+    however は how と対応し、「どんなに〜でも」を表す。
+    however + 形容詞/副詞 の形に注意する。
+  - >
+    複合関係詞は、名詞節として働く場合と、譲歩節として働く場合がある。
+    文脈で「いつでも」か「いつ〜しても」かを判断する。
+
+prerequisites:
+  - g064
+  - g065
+  - g070
+
+next_items:
+  - g072
+  - g073
+  - g074

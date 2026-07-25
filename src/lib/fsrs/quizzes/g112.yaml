@@ -1,0 +1,283 @@
+id: g112
+file: g112.yaml
+title: 相関接続詞 both A and B / either A or B / neither A nor B / not only A but also
+  B
+type: grammar_contrast
+section:
+  id: s11
+  title: 名詞節・接続詞
+level: basic
+target: 高校英文法基礎
+core_question: 相関接続詞で、AとBを同じ形で並べ、意味と動詞の一致を判断できるか？
+core_concept:
+  both_a_and_b:
+    form: both A and B
+    meaning: AもBも両方
+    image: 二つを両方まとめて肯定する
+    examples:
+    - sentence: Both Tom and Mary are students.
+      ja: トムもメアリーも学生です。
+      point: Tom と Mary の両方なので複数扱い。
+    - sentence: She can both sing and dance.
+      ja: 彼女は歌うことも踊ることもできる。
+      point: sing と dance を同じ形で並べる。
+  either_a_or_b:
+    form: either A or B
+    meaning: AかBのどちらか
+    image: 二つの選択肢のうち一つ
+    examples:
+    - sentence: You can have either tea or coffee.
+      ja: 紅茶かコーヒーのどちらかを飲めます。
+      point: 選択を表す。
+    - sentence: Either you or I am wrong.
+      ja: あなたか私のどちらかが間違っている。
+      point: 近い主語 I に合わせて am。
+  neither_a_nor_b:
+    form: neither A nor B
+    meaning: AもBもどちらも〜ない
+    image: 二つを両方否定する
+    examples:
+    - sentence: Neither Tom nor Mary is at home.
+      ja: トムもメアリーも家にいません。
+      point: 二者の両方を否定する。
+    - sentence: He can neither read nor write.
+      ja: 彼は読むことも書くこともできない。
+      point: read と write を同じ形で並べる。
+  not_only_a_but_also_b:
+    form: not only A but also B
+    meaning: AだけでなくBも
+    image: Aに加えてBを強調する
+    examples:
+    - sentence: She is not only kind but also brave.
+      ja: 彼女は親切なだけでなく勇敢でもある。
+      point: kind と brave を同じ形で並べる。
+    - sentence: Not only Tom but also his friends were invited.
+      ja: トムだけでなく彼の友人たちも招待された。
+      point: 近い主語 friends に合わせて were。
+main_rule: 相関接続詞は、二つの要素 A と B をセットで結びつける表現。both A and B は「AもBも両方」、either A or B は「AかBのどちらか」、neither
+  A nor B は「AもBもどちらも〜ない」、not only A but also B は「AだけでなくBも」。最大の注意点は、AとBを同じ文法形でそろえること。either
+  A or B / neither A nor B / not only A but also B が主語になる場合、動詞は近い主語に合わせることが多い。
+contrast_pairs:
+- both: Both Tom and Mary are students.
+  either: Either Tom or Mary is at home.
+  point: both は両方なので複数扱い。either はどちらか一方。
+- either: Either you or I am wrong.
+  neither: Neither you nor I am wrong.
+  point: either はどちらか一方、neither はどちらも否定。
+- not_only: Not only Tom but also his friends were invited.
+  both: Both Tom and his friends were invited.
+  point: not only はB側の追加を強める。
+- bad_parallel: He wants either to study abroad or starting a business.
+  good_parallel: He wants either to study abroad or to start a business.
+  point: AとBの形をそろえる。
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または相関接続詞でAとBを同じ形にそろえる原則を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.6
+    max_threshold_ratio: 0.85
+review_questions:
+- id: g112_q001
+  question_type: two_choice
+  prompt: Both Tom and Mary ___ students.
+  choices:
+  - text: are
+    correct: true
+  - text: is
+    correct: false
+  answer: are
+  explanation: both A and B は両方を主語にするので are。
+  translation: トムもメアリーも学生です。
+  focus:
+  - both_a_and_b
+  - agreement
+- id: g112_q002
+  question_type: two_choice
+  prompt: She can both sing ___ dance.
+  choices:
+  - text: and
+    correct: true
+  - text: or
+    correct: false
+  answer: and
+  explanation: both A and B の形。
+  translation: 彼女は歌うことも踊ることもできる。
+  focus:
+  - both_a_and_b
+  - parallel_structure
+- id: g112_q003
+  question_type: two_choice
+  prompt: The book is both interesting ___ useful.
+  choices:
+  - text: and
+    correct: true
+  - text: but
+    correct: false
+  answer: and
+  explanation: both A and B の形で形容詞を並べる。
+  translation: その本は面白く、役にも立つ。
+  focus:
+  - both_a_and_b
+  - adjectives
+- id: g112_q004
+  question_type: two_choice
+  prompt: You can have either tea ___ coffee.
+  choices:
+  - text: or
+    correct: true
+  - text: nor
+    correct: false
+  answer: or
+  explanation: either A or B で「AかBのどちらか」。
+  translation: 紅茶かコーヒーのどちらかを飲めます。
+  focus:
+  - either_a_or_b
+  - choice
+- id: g112_q005
+  question_type: two_choice
+  prompt: Either you or I ___ wrong.
+  choices:
+  - text: am
+    correct: true
+  - text: are
+    correct: false
+  answer: am
+  explanation: 近い主語 I に合わせて am。
+  translation: あなたか私のどちらかが間違っている。
+  focus:
+  - either_a_or_b
+  - agreement
+- id: g112_q006
+  question_type: two_choice
+  prompt: We will leave either today ___ tomorrow.
+  choices:
+  - text: or
+    correct: true
+  - text: and
+    correct: false
+  answer: or
+  explanation: either A or B の形で選択を表す。
+  translation: 私たちは今日か明日のどちらかに出発します。
+  focus:
+  - either_a_or_b
+  - time_words
+- id: g112_q007
+  question_type: two_choice
+  prompt: Neither Tom ___ Mary is at home.
+  choices:
+  - text: nor
+    correct: true
+  - text: or
+    correct: false
+  answer: nor
+  explanation: neither A nor B で「AもBもどちらも〜ない」。
+  translation: トムもメアリーも家にいません。
+  focus:
+  - neither_a_nor_b
+  - negative_pair
+- id: g112_q008
+  question_type: two_choice
+  prompt: Neither Tom nor Mary ___ at home.
+  choices:
+  - text: is
+    correct: true
+  - text: are
+    correct: false
+  answer: is
+  explanation: 近い主語 Mary に合わせて is。
+  translation: トムもメアリーも家にいません。
+  focus:
+  - neither_a_nor_b
+  - agreement
+- id: g112_q009
+  question_type: two_choice
+  prompt: He can neither read ___ write.
+  choices:
+  - text: nor
+    correct: true
+  - text: or
+    correct: false
+  answer: nor
+  explanation: neither A nor B の形。
+  translation: 彼は読むことも書くこともできない。
+  focus:
+  - neither_a_nor_b
+  - parallel_structure
+- id: g112_q010
+  question_type: two_choice
+  prompt: She is not only kind ___ also brave.
+  choices:
+  - text: but
+    correct: true
+  - text: and
+    correct: false
+  answer: but
+  explanation: not only A but also B の形。
+  translation: 彼女は親切なだけでなく勇敢でもある。
+  focus:
+  - not_only_a_but_also_b
+  - adjectives
+- id: g112_q011
+  question_type: two_choice
+  prompt: Not only Tom but also his friends ___ invited.
+  choices:
+  - text: were
+    correct: true
+  - text: was
+    correct: false
+  answer: were
+  explanation: 近い主語 his friends に合わせて were。
+  translation: トムだけでなく彼の友人たちも招待された。
+  focus:
+  - not_only_a_but_also_b
+  - agreement
+- id: g112_q012
+  question_type: two_choice
+  prompt: He wants either to study abroad or ___ a business.
+  choices:
+  - text: to start
+    correct: true
+  - text: starting
+    correct: false
+  answer: to start
+  explanation: to study と to start のように形をそろえる。
+  translation: 彼は留学するか事業を始めるかのどちらかを望んでいる。
+  focus:
+  - parallel_structure
+  - infinitive
+common_mistakes:
+- mistake: both A and B を単数扱いする
+  correction: both A and B は両方をまとめるので、主語なら複数扱いになりやすい。
+- mistake: either / neither / not only の動詞一致を常に複数にする
+  correction: 近い主語に動詞を合わせることが多い。
+- mistake: neither A nor B を肯定の選択と読む
+  correction: neither A nor B は「AもBもどちらも〜ない」。
+- mistake: AとBの形をそろえない
+  correction: 名詞と名詞、to不定詞とto不定詞、動名詞と動名詞のようにそろえる。
+learning_notes:
+- both A and B は「AもBも両方」。
+- either A or B は「AかBのどちらか」。
+- neither A nor B は「AもBもどちらも〜ない」。
+- not only A but also B は「AだけでなくBも」。
+- 相関接続詞では、AとBを同じ文法形でそろえる。
+prerequisites:
+- g031
+- g039
+- g053
+- g087
+- g108
+next_items:
+- g113
+- g114
+- g115

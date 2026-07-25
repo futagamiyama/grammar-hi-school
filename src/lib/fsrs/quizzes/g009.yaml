@@ -1,0 +1,328 @@
+id: g009
+file: g009.yaml
+
+title: 現在完了形 vs 過去完了形
+type: grammar_contrast
+
+section:
+  id: s01
+  title: 時制・相の基本対立
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 基準時点が現在か、過去か？
+
+core_concept:
+  present_perfect:
+    form: have/has + 過去分詞
+    meaning: 現在を基準にして、過去の出来事が今とつながっていることを表す
+    image: 今までに / もう / ちょうど / まだ / 今に影響がある
+    examples:
+      - sentence: I have finished my homework.
+        ja: 私は宿題を終えたところだ。 / 宿題はもう終わっている。
+        point: 現在を基準に、宿題が終わった状態が今に関係している。
+      - sentence: She has lived in Tokyo for five years.
+        ja: 彼女は5年間東京に住んでいる。
+        point: 過去から現在まで続いている状態を表す。
+      - sentence: I have seen this movie before.
+        ja: 私は以前この映画を見たことがある。
+        point: 現在までの経験を表す。
+
+  past_perfect:
+    form: had + 過去分詞
+    meaning: 過去のある時点を基準にして、それより前に起きたことを表す
+    image: その時までに / その時にはすでに / 過去のさらに前
+    examples:
+      - sentence: I had finished my homework before dinner.
+        ja: 私は夕食前に宿題を終えていた。
+        point: 夕食という過去の時点より前に、宿題が終わっていた。
+      - sentence: She had lived in Tokyo before she moved to Kyoto.
+        ja: 彼女は京都へ引っ越す前、東京に住んでいた。
+        point: 引っ越した時点より前の居住を表す。
+      - sentence: I had seen the movie before I read the book.
+        ja: 私はその本を読む前に、その映画を見ていた。
+        point: 本を読んだ時点より前の経験を表す。
+
+main_rule: >
+  現在完了形は、現在を基準にして、過去の出来事や状態が今とつながっていることを表す。
+  過去完了形は、過去のある時点を基準にして、それより前に起きたことを表す。
+  形だけで判断せず、「基準時点が今なのか、過去なのか」を見る。
+
+contrast_pairs:
+  - present_perfect: I have finished my homework, so I can go out now.
+    past_perfect: I had finished my homework before my friends came.
+    point: >
+      have finished は今外出できるという現在とのつながり。
+      had finished は友達が来たという過去の時点より前の完了。
+
+  - present_perfect: She has lived in Tokyo for five years.
+    past_perfect: She had lived in Tokyo for five years before she moved to Kyoto.
+    point: >
+      has lived は現在まで続く居住。
+      had lived は京都へ引っ越した過去時点より前の居住。
+
+  - present_perfect: I have never met him.
+    past_perfect: I had never met him before the party.
+    point: >
+      have never met は現在までの経験。
+      had never met はパーティーという過去時点までの経験。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+fsrs_rating:
+  again:
+    condition: 2問以上ミス、または現在完了形と過去完了形の基本対立を説明できない
+  hard:
+    condition: 1問ミス、または正解しても理由を説明できない
+  good:
+    condition: 全問正解。ただしEASY条件は満たさない
+  easy:
+    condition: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g009_q001
+    question_type: two_choice
+    prompt: I ___ my homework, so I can go out now.
+    choices:
+      - text: have finished
+        correct: true
+      - text: had finished
+        correct: false
+    answer: have finished
+    explanation: >
+      so I can go out now から、現在とのつながりがある。
+      現在を基準にした完了なので have finished が自然。
+    focus:
+      - present_reference
+      - result_now
+      - present_perfect
+
+  - id: g009_q002
+    question_type: two_choice
+    prompt: I ___ my homework before my friends came.
+    choices:
+      - text: have finished
+        correct: false
+      - text: had finished
+        correct: true
+    answer: had finished
+    explanation: >
+      before my friends came が過去の基準時点を作っている。
+      友達が来た時点より前に終えていたので had finished が自然。
+    focus:
+      - past_reference
+      - before_clause
+      - past_perfect
+
+  - id: g009_q003
+    question_type: two_choice
+    prompt: She ___ in Tokyo for five years, and she still lives there.
+    choices:
+      - text: has lived
+        correct: true
+      - text: had lived
+        correct: false
+    answer: has lived
+    explanation: >
+      she still lives there から、現在まで続いていることがわかる。
+      現在を基準にした継続なので has lived が自然。
+    focus:
+      - continuation_to_now
+      - still
+      - present_perfect
+
+  - id: g009_q004
+    question_type: two_choice
+    prompt: She ___ in Tokyo for five years before she moved to Kyoto.
+    choices:
+      - text: has lived
+        correct: false
+      - text: had lived
+        correct: true
+    answer: had lived
+    explanation: >
+      before she moved to Kyoto から、京都へ引っ越した過去時点が基準になる。
+      その時点より前に東京に住んでいたので had lived が自然。
+    focus:
+      - past_reference
+      - before_moved
+      - past_perfect
+
+  - id: g009_q005
+    question_type: two_choice
+    prompt: I ___ this movie before, so I know the story.
+    choices:
+      - text: have seen
+        correct: true
+      - text: had seen
+        correct: false
+    answer: have seen
+    explanation: >
+      so I know the story から、過去の経験が現在の知識につながっている。
+      現在を基準にした経験なので have seen が自然。
+    focus:
+      - experience_to_now
+      - present_result
+      - present_perfect
+
+  - id: g009_q006
+    question_type: two_choice
+    prompt: I ___ the movie before I read the book.
+    choices:
+      - text: have seen
+        correct: false
+      - text: had seen
+        correct: true
+    answer: had seen
+    explanation: >
+      before I read the book により、本を読んだ過去時点が基準になる。
+      その時点より前に映画を見ていたので had seen が自然。
+    focus:
+      - past_reference
+      - earlier_past
+      - past_perfect
+
+  - id: g009_q007
+    question_type: two_choice
+    prompt: We ___ already eaten lunch, so we are not hungry now.
+    choices:
+      - text: have
+        correct: true
+      - text: had
+        correct: false
+    answer: have
+    explanation: >
+      not hungry now から、昼食を食べたことが現在の状態につながっている。
+      現在を基準にするので have already eaten が自然。
+    focus:
+      - already
+      - result_now
+      - present_perfect
+
+  - id: g009_q008
+    question_type: two_choice
+    prompt: We ___ already eaten lunch when he arrived.
+    choices:
+      - text: have
+        correct: false
+      - text: had
+        correct: true
+    answer: had
+    explanation: >
+      when he arrived が過去の基準時点を作っている。
+      彼が到着した時点ではすでに食べ終えていたので had already eaten が自然。
+    focus:
+      - already
+      - when_clause
+      - past_perfect
+
+  - id: g009_q009
+    question_type: two_choice
+    prompt: I ___ never met her, but I hope to meet her someday.
+    choices:
+      - text: have
+        correct: true
+      - text: had
+        correct: false
+    answer: have
+    explanation: >
+      現在まで一度も会ったことがない、という経験を表している。
+      現在を基準にするので have never met が自然。
+    focus:
+      - never
+      - experience_to_now
+      - present_perfect
+
+  - id: g009_q010
+    question_type: two_choice
+    prompt: I ___ never met her before the conference.
+    choices:
+      - text: have
+        correct: false
+      - text: had
+        correct: true
+    answer: had
+    explanation: >
+      before the conference が過去の基準時点を作っている。
+      会議の前までは会ったことがなかったので had never met が自然。
+    focus:
+      - never
+      - before_conference
+      - past_perfect
+
+  - id: g009_q011
+    question_type: two_choice
+    prompt: He ___ just left the office, so you can still call him.
+    choices:
+      - text: has
+        correct: true
+      - text: had
+        correct: false
+    answer: has
+    explanation: >
+      so you can still call him から、直前に出たことが現在の状況に関係している。
+      現在を基準にするので has just left が自然。
+    focus:
+      - just
+      - result_now
+      - present_perfect
+
+  - id: g009_q012
+    question_type: two_choice
+    prompt: He ___ just left the office when I called him.
+    choices:
+      - text: has
+        correct: false
+      - text: had
+        correct: true
+    answer: had
+    explanation: >
+      when I called him が過去の基準時点を作っている。
+      私が電話した時点では、彼はちょうど出た後だったので had just left が自然。
+    focus:
+      - just
+      - when_called
+      - past_perfect
+
+common_mistakes:
+  - mistake: 日本語の「〜したことがある」だけを見て、常に現在完了形にする
+    correction: >
+      基準時点が現在なら現在完了形、過去の時点なら過去完了形を使う。
+      例: I have seen it before. / I had seen it before I read the book.
+
+  - mistake: 過去完了形を「大昔の過去」と考える
+    correction: >
+      過去完了形は古さを表すのではなく、過去の基準時点より前であることを表す。
+
+  - mistake: before があれば必ず過去完了形にする
+    correction: >
+      before は順序を明確にするので、文脈によっては過去形だけでも表せる。
+      ただしこのカードでは、現在完了形との対立を学ぶため、過去の基準時点より前なら過去完了形を選ぶ。
+
+learning_notes:
+  - >
+    現在完了形は「今」を基準にして、過去と現在のつながりを見る。
+  - >
+    過去完了形は「過去のある時点」を基準にして、その時点より前を見る。
+  - >
+    already, just, never, before だけで機械的に判断しない。
+    その語が現在を基準にしているのか、過去を基準にしているのかを見る。
+  - >
+    現在完了形と過去完了形の違いは、出来事の種類ではなく基準時点の違いである。
+
+prerequisites:
+  - g002
+  - g003
+
+next_items:
+  - g010
+  - g106

@@ -1,0 +1,347 @@
+id: g032
+file: g032.yaml
+
+title: by を使う受動態・使わない受動態
+type: construction
+
+section:
+  id: s04
+  title: 受動態・態
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 行為者を言う必要があるか？
+
+core_concept:
+  passive_without_by:
+    form: be + 過去分詞
+    meaning: 行為者を言わず、何がされたかを中心に述べる
+    image: 誰がしたかより、何がされたか・どうなったかが大事
+    examples:
+      - sentence: My bike was stolen.
+        ja: 私の自転車が盗まれた。
+        point: 誰が盗んだかわからないので by は不要。
+      - sentence: English is spoken in many countries.
+        ja: 英語は多くの国で話されている。
+        point: 話す人は一般的なので by people は普通省略する。
+      - sentence: This building was built in 1980.
+        ja: この建物は1980年に建てられた。
+        point: 誰が建てたかより、建物と年代が重要。
+
+  passive_with_by:
+    form: be + 過去分詞 + by ...
+    meaning: 行為者を明示する必要があるときに by を使う
+    image: 誰によってされたのかが情報として重要
+    examples:
+      - sentence: Hamlet was written by Shakespeare.
+        ja: 『ハムレット』はシェイクスピアによって書かれた。
+        point: 誰が書いたかが重要なので by Shakespeare を使う。
+      - sentence: The window was broken by Tom.
+        ja: その窓はトムによって壊された。
+        point: 誰が壊したかを明示している。
+      - sentence: This picture was painted by my sister.
+        ja: この絵は私の姉によって描かれた。
+        point: 作者を言うことに意味がある。
+
+main_rule: >
+  受動態では、行為者が不明・一般的・重要でない場合、by は省略される。
+  行為者を明示する必要がある場合だけ by を使う。
+  by を使うかどうかは、「誰によって」が文の重要な情報かどうかで判断する。
+  すべての受動態に by をつける必要はない。
+
+contrast_pairs:
+  - without_by: My wallet was stolen.
+    with_by: My wallet was stolen by a man in a black jacket.
+    point: >
+      誰が盗んだかわからない、または重要でないなら by は不要。
+      犯人の情報を示したいなら by を使う。
+
+  - without_by: English is spoken in Canada.
+    unnatural_with_by: English is spoken by people in Canada.
+    point: >
+      話す人が一般的なので by people は普通不要。
+      「英語が話されている」という事実が中心。
+
+  - without_by: The bridge was built in 1995.
+    with_by: The bridge was built by a famous engineer.
+    point: >
+      年代が中心なら by は不要。
+      誰が設計・建設したかが重要なら by を使う。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または by を使う受動態と使わない受動態の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g032_q001
+    question_type: two_choice
+    prompt: My bike was stolen ___.
+    choices:
+      - text: by someone
+        correct: false
+      - text: ""
+        correct: true
+    answer: ""
+    explanation: >
+      誰が盗んだかわからない、または重要でない場合は by someone をつける必要はない。
+      My bike was stolen. が自然。
+    translation: 私の自転車が盗まれた。
+    focus:
+      - passive_without_by
+      - unknown_agent
+      - stolen
+
+  - id: g032_q002
+    question_type: two_choice
+    prompt: Hamlet was written ___ Shakespeare.
+    choices:
+      - text: by
+        correct: true
+      - text: ""
+        correct: false
+    answer: by
+    explanation: >
+      『ハムレット』では誰が書いたかが重要な情報なので、
+      by Shakespeare を使う。
+    translation: 『ハムレット』はシェイクスピアによって書かれた。
+    focus:
+      - passive_with_by
+      - important_agent
+      - author
+
+  - id: g032_q003
+    question_type: two_choice
+    prompt: English is spoken in many countries ___.
+    choices:
+      - text: by people
+        correct: false
+      - text: ""
+        correct: true
+    answer: ""
+    explanation: >
+      話す人は一般的なので by people は普通不要。
+      英語が多くの国で話されているという事実が中心。
+    translation: 英語は多くの国で話されている。
+    focus:
+      - passive_without_by
+      - general_agent
+      - language
+
+  - id: g032_q004
+    question_type: two_choice
+    prompt: This picture was painted ___ my sister.
+    choices:
+      - text: by
+        correct: true
+      - text: ""
+        correct: false
+    answer: by
+    explanation: >
+      誰が描いたかを明示する文なので by my sister が必要。
+      作者を示す情報として by を使う。
+    translation: この絵は私の姉によって描かれた。
+    focus:
+      - passive_with_by
+      - important_agent
+      - creator
+
+  - id: g032_q005
+    question_type: two_choice
+    prompt: The meeting was canceled ___.
+    choices:
+      - text: ""
+        correct: true
+      - text: by someone
+        correct: false
+    answer: ""
+    explanation: >
+      誰が中止したかが重要でない場合、
+      The meeting was canceled. だけで自然。
+      by someone は不要。
+    translation: その会議は中止された。
+    focus:
+      - passive_without_by
+      - unimportant_agent
+      - canceled
+
+  - id: g032_q006
+    question_type: two_choice
+    prompt: The meeting was canceled ___ the manager.
+    choices:
+      - text: ""
+        correct: false
+      - text: by
+        correct: true
+    answer: by
+    explanation: >
+      the manager という行為者を明示しているので by が必要。
+      by the manager で「管理者によって」となる。
+    translation: その会議は管理者によって中止された。
+    focus:
+      - passive_with_by
+      - explicit_agent
+      - by_phrase
+
+  - id: g032_q007
+    question_type: two_choice
+    prompt: This building was built in 1980 ___.
+    choices:
+      - text: ""
+        correct: true
+      - text: by people
+        correct: false
+    answer: ""
+    explanation: >
+      文の中心は「この建物が1980年に建てられた」こと。
+      建てた人が一般的・不要なので by people はつけない。
+    translation: この建物は1980年に建てられた。
+    focus:
+      - passive_without_by
+      - unimportant_agent
+      - date_focus
+
+  - id: g032_q008
+    question_type: two_choice
+    prompt: This building was designed ___ a famous architect.
+    choices:
+      - text: by
+        correct: true
+      - text: ""
+        correct: false
+    answer: by
+    explanation: >
+      a famous architect という設計者が重要な情報なので、
+      by a famous architect を使う。
+    translation: この建物は有名な建築家によって設計された。
+    focus:
+      - passive_with_by
+      - important_agent
+      - designer
+
+  - id: g032_q009
+    question_type: two_choice
+    prompt: The road was closed ___ because of the snow.
+    choices:
+      - text: ""
+        correct: true
+      - text: by someone
+        correct: false
+    answer: ""
+    explanation: >
+      道路が閉鎖された理由が because of the snow で示されている。
+      誰が閉鎖したかは重要でないので by someone は不要。
+    translation: その道路は雪のため閉鎖された。
+    focus:
+      - passive_without_by
+      - reason_focus
+      - unimportant_agent
+
+  - id: g032_q010
+    question_type: two_choice
+    prompt: The window was broken ___ Tom.
+    choices:
+      - text: by
+        correct: true
+      - text: ""
+        correct: false
+    answer: by
+    explanation: >
+      Tom が壊した人であることを明示しているので by が必要。
+      by Tom で「トムによって」となる。
+    translation: その窓はトムによって壊された。
+    focus:
+      - passive_with_by
+      - explicit_agent
+      - by_phrase
+
+  - id: g032_q011
+    question_type: two_choice
+    prompt: The problem was solved ___.
+    choices:
+      - text: ""
+        correct: true
+      - text: by someone
+        correct: false
+    answer: ""
+    explanation: >
+      誰が解決したかを言う必要がない場合、
+      The problem was solved. が自然。
+      by someone は情報量が少なく、普通は不要。
+    translation: その問題は解決された。
+    focus:
+      - passive_without_by
+      - unimportant_agent
+      - solved
+
+  - id: g032_q012
+    question_type: two_choice
+    prompt: The problem was solved ___ a young engineer.
+    choices:
+      - text: ""
+        correct: false
+      - text: by
+        correct: true
+    answer: by
+    explanation: >
+      a young engineer という行為者を示しているので by が必要。
+      誰が解決したかが重要な情報になっている。
+    translation: その問題は若い技術者によって解決された。
+    focus:
+      - passive_with_by
+      - important_agent
+      - by_phrase
+
+common_mistakes:
+  - mistake: 受動態には必ず by をつけると思う
+    correction: >
+      行為者が不明・一般的・重要でない場合、by は省略する。
+      My bike was stolen. のように、by なしで自然な受動態は多い。
+  - mistake: by people や by someone を機械的につける
+    correction: >
+      by people や by someone は情報量が少ないことが多い。
+      誰がしたかが文の重要情報でないなら省略する。
+  - mistake: 行為者を明示しているのに by を抜かす
+    correction: >
+      Shakespeare, my sister, the manager のように行為者を明示するなら、
+      was written by Shakespeare のように by が必要。
+  - mistake: 受動態の主語だけを見て by の有無を決める
+    correction: >
+      by を使うかどうかは、主語ではなく「行為者を言う必要があるか」で決まる。
+
+learning_notes:
+  - >
+    受動態の by は「誰によって」を示す。
+    しかし、受動態だからといって必ず by が必要なわけではない。
+  - >
+    行為者がわからないとき、一般的すぎるとき、重要でないときは by を省略する。
+  - >
+    作者・発明者・責任者・具体的な行為者を示すときは by が重要になる。
+  - >
+    受動態では「何がされたか」を中心にする。
+    by は必要なときだけ足す情報と考える。
+
+prerequisites:
+  - g031
+
+next_items:
+  - g033
+  - g034
+  - g035

@@ -1,0 +1,369 @@
+id: g062
+file: g062.yaml
+
+title: 関係代名詞 that
+type: construction
+
+section:
+  id: s08
+  title: 関係詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: that を関係代名詞として使えるか？
+
+core_concept:
+  that_basic:
+    form: 先行詞 + that + 動詞 ...
+    meaning: who / which の代わりに使い、前の名詞を後ろから説明する
+    image: 人にも物にも使える関係代名詞
+    examples:
+      - sentence: I know a boy that lives in Osaka.
+        ja: 私は大阪に住んでいる少年を知っている。
+        point: a boy は人だが、who の代わりに that も使える。
+      - sentence: I have a book that explains grammar clearly.
+        ja: 私は文法をわかりやすく説明している本を持っている。
+        point: a book は物で、which の代わりに that も使える。
+      - sentence: This is the house that Jack built.
+        ja: これがジャックが建てた家です。
+        point: the house を that Jack built が説明している。
+
+  that_preferred:
+    form: all / anything / the only / 最上級 + 名詞 + that ...
+    meaning: 特定の先行詞の後で that がよく使われる
+    image: 範囲を強く限定する語の後では that が自然
+    examples:
+      - sentence: This is the best movie that I have ever seen.
+        ja: これは私が今まで見た中で最高の映画です。
+        point: 最上級 the best の後なので that が自然。
+      - sentence: This is the only thing that I need.
+        ja: これが私に必要な唯一のものです。
+        point: the only の後なので that が自然。
+      - sentence: Everything that he said was true.
+        ja: 彼が言ったことはすべて本当だった。
+        point: everything の後では that がよく使われる。
+
+  that_not_used:
+    form: comma + who/which
+    meaning: コンマの後の非制限用法では that は普通使わない
+    image: 補足説明では that ではなく who / which を使う
+    examples:
+      - sentence: My father, who lives in Tokyo, is a doctor.
+        ja: 東京に住んでいる私の父は医者です。
+        point: コンマつきの補足説明では who を使う。
+      - sentence: This book, which I bought yesterday, is interesting.
+        ja: 昨日買ったこの本は面白い。
+        point: コンマつきの補足説明では which を使う。
+      - sentence: The museum, which opened last year, is popular.
+        ja: 昨年開館したその博物館は人気がある。
+        point: 非制限用法なので that は使わない。
+
+main_rule: >
+  関係代名詞 that は、人にも物にも使える。
+  a boy that lives in Osaka は a boy who lives in Osaka と近い意味。
+  a book that explains grammar は a book which explains grammar と近い意味。
+  また、all, everything, anything, nothing, the only, the first, the last,
+  最上級を含む名詞の後では that がよく使われる。
+  ただし、コンマの後で補足説明をする非制限用法では that は普通使わず、
+  who や which を使う。
+
+contrast_pairs:
+  - who_or_that: I know a boy who lives in Osaka. / I know a boy that lives in Osaka.
+    which_or_that: I have a book which explains grammar. / I have a book that explains grammar.
+    point: >
+      that は人にも物にも使える。
+      ただし、who / which の基本を理解した上で使う。
+
+  - that_preferred: This is the best movie that I have ever seen.
+    less_natural: This is the best movie which I have ever seen.
+    point: >
+      最上級 the best の後では that が自然。
+      入試では that を選ばせることが多い。
+
+  - non_restrictive: This book, which I bought yesterday, is interesting.
+    incorrect_that: This book, that I bought yesterday, is interesting.
+    point: >
+      コンマつきの補足説明では that は普通使わない。
+      which を使う。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または that を使いやすい先行詞と使えない場面を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g062_q001
+    question_type: two_choice
+    prompt: I know a boy ___ lives in Osaka.
+    choices:
+      - text: that
+        correct: true
+      - text: what
+        correct: false
+    answer: that
+    explanation: >
+      a boy を後ろから説明する関係代名詞。
+      that は人にも使えるので that lives in Osaka が自然。
+    translation: 私は大阪に住んでいる少年を知っている。
+    focus:
+      - that_basic
+      - person_antecedent
+      - subject_relative
+
+  - id: g062_q002
+    question_type: two_choice
+    prompt: I have a book ___ explains grammar clearly.
+    choices:
+      - text: that
+        correct: true
+      - text: who
+        correct: false
+    answer: that
+    explanation: >
+      a book は物。
+      物を説明する関係代名詞として that を使える。
+      who は人に使う。
+    translation: 私は文法をわかりやすく説明している本を持っている。
+    focus:
+      - that_basic
+      - thing_antecedent
+      - subject_relative
+
+  - id: g062_q003
+    question_type: two_choice
+    prompt: This is the best movie ___ I have ever seen.
+    choices:
+      - text: that
+        correct: true
+      - text: who
+        correct: false
+    answer: that
+    explanation: >
+      先行詞に最上級 the best がついている。
+      このような場合、関係代名詞 that がよく使われる。
+    translation: これは私が今まで見た中で最高の映画です。
+    focus:
+      - that_preferred
+      - superlative
+      - the_best
+
+  - id: g062_q004
+    question_type: two_choice
+    prompt: This is the only thing ___ I need.
+    choices:
+      - text: that
+        correct: true
+      - text: who
+        correct: false
+    answer: that
+    explanation: >
+      the only thing の後では that が自然。
+      thing は人ではないので who は使わない。
+    translation: これが私に必要な唯一のものです。
+    focus:
+      - that_preferred
+      - the_only
+      - thing
+
+  - id: g062_q005
+    question_type: two_choice
+    prompt: Everything ___ he said was true.
+    choices:
+      - text: that
+        correct: true
+      - text: which
+        correct: false
+    answer: that
+    explanation: >
+      everything の後では that がよく使われる。
+      Everything that he said で「彼が言ったことすべて」。
+    translation: 彼が言ったことはすべて本当だった。
+    focus:
+      - that_preferred
+      - everything
+      - object_relative
+
+  - id: g062_q006
+    question_type: two_choice
+    prompt: Is there anything ___ I can do for you?
+    choices:
+      - text: that
+        correct: true
+      - text: who
+        correct: false
+    answer: that
+    explanation: >
+      anything の後では that がよく使われる。
+      anything は人ではないので who は使わない。
+    translation: 私にあなたのためにできることは何かありますか。
+    focus:
+      - that_preferred
+      - anything
+      - object_relative
+
+  - id: g062_q007
+    question_type: two_choice
+    prompt: He is the first person ___ arrived.
+    choices:
+      - text: that
+        correct: true
+      - text: which
+        correct: false
+    answer: that
+    explanation: >
+      the first person の後では that がよく使われる。
+      person は人なので which は使わない。
+    translation: 彼は最初に到着した人です。
+    focus:
+      - that_preferred
+      - the_first
+      - person
+
+  - id: g062_q008
+    question_type: two_choice
+    prompt: This is the last train ___ stops at this station.
+    choices:
+      - text: that
+        correct: true
+      - text: who
+        correct: false
+    answer: that
+    explanation: >
+      the last train の後では that がよく使われる。
+      train は物なので who は使わない。
+    translation: これはこの駅に停車する最後の電車です。
+    focus:
+      - that_preferred
+      - the_last
+      - train
+
+  - id: g062_q009
+    question_type: two_choice
+    prompt: My father, ___ lives in Tokyo, is a doctor.
+    choices:
+      - text: who
+        correct: true
+      - text: that
+        correct: false
+    answer: who
+    explanation: >
+      コンマつきで補足説明をしている非制限用法。
+      この場合、that は普通使わず who を使う。
+    translation: 東京に住んでいる私の父は医者です。
+    focus:
+      - that_not_used
+      - non_restrictive
+      - who
+
+  - id: g062_q010
+    question_type: two_choice
+    prompt: This book, ___ I bought yesterday, is interesting.
+    choices:
+      - text: which
+        correct: true
+      - text: that
+        correct: false
+    answer: which
+    explanation: >
+      コンマつきの補足説明では that は普通使わない。
+      物を補足説明するので which が自然。
+    translation: 昨日買ったこの本は面白い。
+    focus:
+      - that_not_used
+      - non_restrictive
+      - which
+
+  - id: g062_q011
+    question_type: two_choice
+    prompt: All the books ___ I borrowed were interesting.
+    choices:
+      - text: that
+        correct: true
+      - text: who
+        correct: false
+    answer: that
+    explanation: >
+      all the books の後では that がよく使われる。
+      books は物なので who は使わない。
+    translation: 私が借りた本はすべて面白かった。
+    focus:
+      - that_preferred
+      - all
+      - books
+
+  - id: g062_q012
+    question_type: two_choice
+    prompt: The only student ___ answered the question was Ken.
+    choices:
+      - text: that
+        correct: true
+      - text: which
+        correct: false
+    answer: that
+    explanation: >
+      the only student の後では that がよく使われる。
+      student は人なので which は使わない。
+    translation: その質問に答えた唯一の生徒はケンだった。
+    focus:
+      - that_preferred
+      - the_only
+      - student
+
+common_mistakes:
+  - mistake: that は物にしか使えないと思う
+    correction: >
+      関係代名詞 that は人にも物にも使える。
+      a boy that lives in Osaka / a book that explains grammar のように使う。
+  - mistake: どんな場合でも that を使えると思う
+    correction: >
+      コンマつきの補足説明では that は普通使わない。
+      My father, who lives in Tokyo, ... / This book, which I bought yesterday, ... とする。
+  - mistake: 最上級の後で which を選んでしまう
+    correction: >
+      the best, the first, the last, the only などの後では that がよく使われる。
+  - mistake: everything / anything の後で which を選んでしまう
+    correction: >
+      everything, anything, nothing などの後では that がよく使われる。
+  - mistake: that を疑問詞の what と混同する
+    correction: >
+      関係代名詞 that は前の名詞を説明する。
+      what は「〜すること・もの」という先行詞を含む関係代名詞として別に学ぶ。
+
+learning_notes:
+  - >
+    that は、人にも物にも使える便利な関係代名詞。
+    ただし、who / which の基本を先に理解しておくと混乱しにくい。
+  - >
+    all, everything, anything, nothing, the only, the first, the last,
+    最上級を含む語の後では that がよく使われる。
+  - >
+    コンマつきの補足説明では that は普通使わない。
+    この制限は入試で問われやすい。
+  - >
+    that は便利だが万能ではない。
+    先行詞の種類、文の形、コンマの有無を見る。
+
+prerequisites:
+  - g061
+
+next_items:
+  - g063
+  - g064
+  - g065

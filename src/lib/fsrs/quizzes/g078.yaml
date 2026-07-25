@@ -1,0 +1,375 @@
+id: g078
+file: g078.yaml
+
+title: if の省略と倒置
+type: construction
+
+section:
+  id: s09
+  title: 仮定法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: if が省略された仮定法の倒置を読めるか？
+
+core_concept:
+  were_inversion:
+    form: Were + 主語 + 補語 ..., 主語 + would/could/might + 動詞原形 ...
+    meaning: もし今〜なら、...だろうに
+    image: If + 主語 + were の if を省略し、were を前に出す
+    examples:
+      - sentence: Were I rich, I would travel around the world.
+        ja: もし私が金持ちなら、世界中を旅行するのに。
+        point: If I were rich と同じ意味の硬い表現。
+      - sentence: Were she here, she could help us.
+        ja: もし彼女がここにいれば、私たちを助けられるのに。
+        point: If she were here の if を省略した形。
+      - sentence: Were it not for water, we could not live.
+        ja: もし水がなければ、私たちは生きられないだろう。
+        point: If it were not for water の倒置。
+
+  had_inversion:
+    form: Had + 主語 + 過去分詞 ..., 主語 + would/could/might have + 過去分詞 ...
+    meaning: もし過去に〜していたら、...だっただろうに
+    image: If + 主語 + had + 過去分詞 の if を省略し、had を前に出す
+    examples:
+      - sentence: Had I known the truth, I would have told you.
+        ja: もし私が真実を知っていたら、あなたに話しただろうに。
+        point: If I had known the truth と同じ意味。
+      - sentence: Had he studied harder, he would have passed the exam.
+        ja: もし彼がもっと一生懸命勉強していたら、試験に合格していただろうに。
+        point: If he had studied harder の倒置。
+      - sentence: Had it not been for your help, I would have failed.
+        ja: もしあなたの助けがなかったなら、私は失敗していただろう。
+        point: If it had not been for your help の倒置。
+
+  should_inversion:
+    form: Should + 主語 + 動詞原形 ..., 主語 + will/would/can/could + 動詞原形 ...
+    meaning: 万一〜なら
+    image: 可能性の低い未来の条件を硬く表す
+    examples:
+      - sentence: Should you need help, please call me.
+        ja: 万一助けが必要なら、私に電話してください。
+        point: If you should need help と同じ意味の硬い表現。
+      - sentence: Should it rain tomorrow, the game will be canceled.
+        ja: 万一明日雨が降れば、試合は中止されるだろう。
+        point: 起こる可能性が低い条件を表す。
+      - sentence: Should you have any questions, feel free to ask.
+        ja: ご質問がありましたら、遠慮なくお尋ねください。
+        point: 丁寧な案内文でよく使われる形。
+
+main_rule: >
+  仮定法では、if を省略して語順を倒置することがある。
+  If I were rich は Were I rich となる。
+  If I had known the truth は Had I known the truth となる。
+  If it had not been for your help は Had it not been for your help となる。
+  この倒置は硬い書き言葉で、入試英文・論説文・案内文などに出やすい。
+  Were + 主語 は現在の非現実。
+  Had + 主語 + 過去分詞 は過去の非現実。
+  Should + 主語 + 動詞原形 は「万一〜なら」という低い可能性の未来条件を表す。
+
+contrast_pairs:
+  - normal_if: If I were rich, I would travel around the world.
+    inversion: Were I rich, I would travel around the world.
+    point: >
+      Were I rich は If I were rich と同じ意味。
+      if を省略し、were を主語の前に出している。
+
+  - normal_if: If I had known the truth, I would have told you.
+    inversion: Had I known the truth, I would have told you.
+    point: >
+      Had I known は If I had known と同じ意味。
+      過去の非現実を表す。
+
+  - normal_if: If you should need help, please call me.
+    inversion: Should you need help, please call me.
+    point: >
+      Should you need help は「万一助けが必要なら」。
+      丁寧で硬い条件表現。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または if 省略倒置の Were / Had / Should の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g078_q001
+    question_type: two_choice
+    prompt: ___ I rich, I would travel around the world.
+    choices:
+      - text: Were
+        correct: true
+      - text: Had
+        correct: false
+    answer: Were
+    explanation: >
+      If I were rich の if を省略した倒置。
+      現在の非現実なので Were I rich が自然。
+    translation: もし私が金持ちなら、世界中を旅行するのに。
+    focus:
+      - were_inversion
+      - present_unreal
+      - if_omission
+
+  - id: g078_q002
+    question_type: two_choice
+    prompt: ___ she here, she could help us.
+    choices:
+      - text: Were
+        correct: true
+      - text: Had
+        correct: false
+    answer: Were
+    explanation: >
+      If she were here の倒置。
+      今ここにいない人についての現在の非現実なので Were を使う。
+    translation: もし彼女がここにいれば、私たちを助けられるのに。
+    focus:
+      - were_inversion
+      - could
+      - here
+
+  - id: g078_q003
+    question_type: two_choice
+    prompt: ___ I known the truth, I would have told you.
+    choices:
+      - text: Had
+        correct: true
+      - text: Were
+        correct: false
+    answer: Had
+    explanation: >
+      If I had known the truth の倒置。
+      過去の非現実なので Had I known を使う。
+    translation: もし私が真実を知っていたら、あなたに話しただろうに。
+    focus:
+      - had_inversion
+      - past_unreal
+      - had_known
+
+  - id: g078_q004
+    question_type: two_choice
+    prompt: ___ he studied harder, he would have passed the exam.
+    choices:
+      - text: Had
+        correct: true
+      - text: Should
+        correct: false
+    answer: Had
+    explanation: >
+      If he had studied harder の倒置。
+      would have passed があるので過去の非現実。
+    translation: もし彼がもっと一生懸命勉強していたら、試験に合格していただろうに。
+    focus:
+      - had_inversion
+      - would_have
+      - exam
+
+  - id: g078_q005
+    question_type: two_choice
+    prompt: ___ it not for water, we could not live.
+    choices:
+      - text: Were
+        correct: true
+      - text: Had
+        correct: false
+    answer: Were
+    explanation: >
+      If it were not for water の倒置。
+      現在ある水がない場合の仮定なので Were it not for を使う。
+    translation: もし水がなければ、私たちは生きられないだろう。
+    focus:
+      - were_inversion
+      - if_it_were_not_for
+      - water
+
+  - id: g078_q006
+    question_type: two_choice
+    prompt: ___ it not been for your help, I would have failed.
+    choices:
+      - text: Had
+        correct: true
+      - text: Were
+        correct: false
+    answer: Had
+    explanation: >
+      If it had not been for your help の倒置。
+      would have failed があるので過去の非現実。
+    translation: もしあなたの助けがなかったなら、私は失敗していただろう。
+    focus:
+      - had_inversion
+      - if_it_had_not_been_for
+      - help
+
+  - id: g078_q007
+    question_type: two_choice
+    prompt: ___ you need help, please call me.
+    choices:
+      - text: Should
+        correct: true
+      - text: Had
+        correct: false
+    answer: Should
+    explanation: >
+      Should you need help は If you should need help の倒置。
+      「万一助けが必要なら」という丁寧で硬い表現。
+    translation: 万一助けが必要なら、私に電話してください。
+    focus:
+      - should_inversion
+      - future_condition
+      - need_help
+
+  - id: g078_q008
+    question_type: two_choice
+    prompt: ___ it rain tomorrow, the game will be canceled.
+    choices:
+      - text: Should
+        correct: true
+      - text: Had
+        correct: false
+    answer: Should
+    explanation: >
+      Should it rain tomorrow は「万一明日雨が降れば」。
+      未来の可能性の低い条件を表している。
+    translation: 万一明日雨が降れば、試合は中止されるだろう。
+    focus:
+      - should_inversion
+      - tomorrow
+      - weather
+
+  - id: g078_q009
+    question_type: two_choice
+    prompt: ___ you have any questions, feel free to ask.
+    choices:
+      - text: Should
+        correct: true
+      - text: Were
+        correct: false
+    answer: Should
+    explanation: >
+      Should you have any questions は案内文でよく使う丁寧な条件表現。
+      「ご質問がありましたら」という意味。
+    translation: ご質問がありましたら、遠慮なくお尋ねください。
+    focus:
+      - should_inversion
+      - polite_notice
+      - questions
+
+  - id: g078_q010
+    question_type: two_choice
+    prompt: ___ I in your position, I would accept the offer.
+    choices:
+      - text: Were
+        correct: true
+      - text: Had
+        correct: false
+    answer: Were
+    explanation: >
+      If I were in your position の倒置。
+      現在の非現実なので Were I in your position が自然。
+    translation: もし私があなたの立場なら、その申し出を受け入れるだろう。
+    focus:
+      - were_inversion
+      - advice
+      - present_unreal
+
+  - id: g078_q011
+    question_type: two_choice
+    prompt: ___ they left earlier, they might have met her.
+    choices:
+      - text: Had
+        correct: true
+      - text: Should
+        correct: false
+    answer: Had
+    explanation: >
+      If they had left earlier の倒置。
+      might have met があるので過去の非現実。
+    translation: もし彼らがもっと早く出発していたら、彼女に会えたかもしれないのに。
+    focus:
+      - had_inversion
+      - might_have
+      - left_earlier
+
+  - id: g078_q012
+    question_type: two_choice
+    prompt: ___ this plan fail, we will try another one.
+    choices:
+      - text: Should
+        correct: true
+      - text: Had
+        correct: false
+    answer: Should
+    explanation: >
+      Should this plan fail は「万一この計画が失敗したら」。
+      未来の条件を硬く表している。
+    translation: 万一この計画が失敗したら、別の案を試します。
+    focus:
+      - should_inversion
+      - future_condition
+      - plan
+
+common_mistakes:
+  - mistake: Were I rich を疑問文だと思う
+    correction: >
+      Were I rich は If I were rich の if 省略倒置。
+      疑問文ではなく仮定条件を表す。
+  - mistake: Had I known を「私は知っていたか」と読む
+    correction: >
+      Had I known は If I had known の倒置。
+      「もし私が知っていたら」という意味。
+  - mistake: Should you need help を「あなたは助けを必要とすべきだ」と読む
+    correction: >
+      Should you need help は If you should need help の倒置で、
+      「万一助けが必要なら」という条件を表す。
+  - mistake: Were / Had / Should の時制を区別しない
+    correction: >
+      Were は現在の非現実。
+      Had + 過去分詞は過去の非現実。
+      Should + 動詞原形は未来の低い可能性。
+  - mistake: 倒置を普通の if 文に戻せない
+    correction: >
+      Were I rich → If I were rich。
+      Had I known → If I had known。
+      Should you need help → If you should need help。
+
+learning_notes:
+  - >
+    if の省略倒置は硬い書き言葉。
+    普通の会話より、入試英文・論説文・案内文で見かける。
+  - >
+    Were + 主語 は If + 主語 + were。
+    現在の非現実を表す。
+  - >
+    Had + 主語 + 過去分詞 は If + 主語 + had + 過去分詞。
+    過去の非現実を表す。
+  - >
+    Should + 主語 + 動詞原形 は If + 主語 + should + 動詞原形。
+    「万一〜なら」という未来の条件を表す。
+
+prerequisites:
+  - g072
+  - g073
+  - g077
+
+next_items:
+  - g079
+  - g080
+  - g081

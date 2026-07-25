@@ -1,0 +1,345 @@
+id: g025
+file: g025.yaml
+
+title: may vs might
+type: grammar_contrast
+
+section:
+  id: s03
+  title: 助動詞・法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 可能性が比較的あるのか、より低い・控えめ・距離を置いた可能性なのか？
+
+core_concept:
+  may:
+    form: may + 動詞の原形
+    meaning: あり得る・〜かもしれない。比較的中立的な可能性を表す。
+    image: 可能性があると普通に述べる
+    examples:
+      - sentence: It may rain this afternoon.
+        ja: 今日の午後、雨が降るかもしれない。
+        point: 雨の可能性を中立的に述べている。
+      - sentence: She may know the answer.
+        ja: 彼女は答えを知っているかもしれない。
+        point: あり得る可能性として述べている。
+      - sentence: You may leave now.
+        ja: もう帰ってもよい。
+        point: 許可を表す may。g025では中心ではないが、重要な用法。
+
+  might:
+    form: might + 動詞の原形
+    meaning: ひょっとすると〜かもしれない。may より可能性が低い、または控えめ・遠回しに述べる。
+    image: 可能性はあるが、距離を置いている / 自信が弱い / 控えめ
+    examples:
+      - sentence: It might rain later, but I am not sure.
+        ja: 後で雨が降るかもしれないが、確かではない。
+        point: 可能性はあるが、話し手の確信が弱い。
+      - sentence: She might be at home.
+        ja: 彼女は家にいるかもしれない。
+        point: ひょっとすると、という控えめな可能性。
+      - sentence: I thought he might come.
+        ja: 彼が来るかもしれないと思った。
+        point: 過去の文脈で、may が might になることがある。
+
+main_rule: >
+  may は「〜かもしれない」と可能性を比較的中立的に述べる。
+  might は may よりも可能性が低く感じられることが多く、
+  また話し手が控えめに言う・距離を置くときにも使われる。
+  日本語ではどちらも「〜かもしれない」と訳せるため、
+  確信の強さ、控えめさ、文脈上の距離で判断する。
+
+contrast_pairs:
+  - may: It may rain this afternoon.
+    might: It might rain this afternoon.
+    point: >
+      may は普通に可能性があると言う感じ。
+      might は少し可能性が低い、または控えめに言う感じ。
+
+  - may: She may know the answer.
+    might: She might know the answer.
+    point: >
+      may は「知っている可能性がある」。might は「ひょっとすると知っているかもしれない」。
+
+  - may: You may use my phone.
+    might: You might use my phone.
+    point: >
+      You may use my phone. は許可を表す。
+      You might use my phone. は普通、許可としては不自然で、可能性や提案のように聞こえる。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g025_q001
+    question_type: two_choice
+    prompt: It ___ rain this afternoon. The sky is getting dark.
+    choices:
+      - text: may
+        correct: true
+      - text: might
+        correct: false
+    answer: may
+    ja: 今日の午後、雨が降るかもしれない。空が暗くなってきている。
+    explanation: >
+      空が暗くなってきているという具体的な兆候があり、
+      雨の可能性を比較的中立的に述べているので may が自然。
+    focus:
+      - possibility
+      - may
+      - evidence
+
+  - id: g025_q002
+    question_type: two_choice
+    prompt: It ___ rain later, but I am not sure.
+    choices:
+      - text: may
+        correct: false
+      - text: might
+        correct: true
+    answer: might
+    ja: 後で雨が降るかもしれないが、確かではない。
+    explanation: >
+      but I am not sure があるので、話し手の確信は弱い。
+      控えめな可能性を表す might が自然。
+    focus:
+      - weak_possibility
+      - might
+      - uncertainty
+
+  - id: g025_q003
+    question_type: two_choice
+    prompt: She ___ know the answer. She studied this topic last week.
+    choices:
+      - text: may
+        correct: true
+      - text: might
+        correct: false
+    answer: may
+    ja: 彼女は答えを知っているかもしれない。先週この話題を勉強していた。
+    explanation: >
+      勉強していたという根拠があるため、可能性を普通に述べる may が自然。
+    focus:
+      - possibility
+      - may
+      - reason
+
+  - id: g025_q004
+    question_type: two_choice
+    prompt: She ___ know the answer, but I doubt it.
+    choices:
+      - text: may
+        correct: false
+      - text: might
+        correct: true
+    answer: might
+    ja: 彼女は答えを知っているかもしれないが、私は疑わしいと思う。
+    explanation: >
+      but I doubt it により、可能性は低いと見ている。
+      そのため might が自然。
+    focus:
+      - low_possibility
+      - might
+      - doubt
+
+  - id: g025_q005
+    question_type: two_choice
+    prompt: You ___ leave now.
+    choices:
+      - text: may
+        correct: true
+      - text: might
+        correct: false
+    answer: may
+    ja: もう帰ってもよい。
+    explanation: >
+      ここでは may が許可を表している。
+      might は普通、この意味の許可には使わない。
+    focus:
+      - permission
+      - may
+
+  - id: g025_q006
+    question_type: two_choice
+    prompt: I thought he ___ come to the meeting.
+    choices:
+      - text: may
+        correct: false
+      - text: might
+        correct: true
+    answer: might
+    ja: 彼が会議に来るかもしれないと思った。
+    explanation: >
+      I thought という過去の文脈では、may が might になることがある。
+      過去の時点から見た可能性なので might が自然。
+    focus:
+      - past_context
+      - might
+      - sequence_of_tenses
+
+  - id: g025_q007
+    question_type: two_choice
+    prompt: This medicine ___ cause headaches in some people.
+    choices:
+      - text: may
+        correct: true
+      - text: might
+        correct: false
+    answer: may
+    ja: この薬は人によっては頭痛を引き起こすことがある。
+    explanation: >
+      薬の注意書きのように、一般的な可能性を中立的に述べる場合は may が自然。
+    focus:
+      - general_possibility
+      - formal_notice
+      - may
+
+  - id: g025_q008
+    question_type: two_choice
+    prompt: I ___ be wrong, but I think this answer is better.
+    choices:
+      - text: may
+        correct: false
+      - text: might
+        correct: true
+    answer: might
+    ja: 私が間違っているかもしれないが、この答えの方がよいと思う。
+    explanation: >
+      I might be wrong は控えめに意見を述べる定型的な表現。
+      自分の意見をやわらげるため might が自然。
+    focus:
+      - modesty
+      - might
+      - softening
+
+  - id: g025_q009
+    question_type: two_choice
+    prompt: There ___ be a problem with the system. Several users reported errors.
+    choices:
+      - text: may
+        correct: true
+      - text: might
+        correct: false
+    answer: may
+    ja: システムに問題があるかもしれない。何人かのユーザーがエラーを報告した。
+    explanation: >
+      複数の報告という根拠があるため、問題の可能性を中立的に述べる may が自然。
+    focus:
+      - possibility
+      - may
+      - evidence
+
+  - id: g025_q010
+    question_type: two_choice
+    prompt: There ___ be a problem, but we need more information.
+    choices:
+      - text: may
+        correct: false
+      - text: might
+        correct: true
+    answer: might
+    ja: 問題があるかもしれないが、さらに情報が必要だ。
+    explanation: >
+      we need more information により、話し手がまだ確信していないことがわかる。
+      控えめな可能性を表す might が自然。
+    focus:
+      - weak_possibility
+      - might
+      - incomplete_information
+
+  - id: g025_q011
+    question_type: two_choice
+    prompt: Students ___ use a dictionary during the exam.
+    choices:
+      - text: may
+        correct: true
+      - text: might
+        correct: false
+    answer: may
+    ja: 学生は試験中に辞書を使ってもよい。
+    explanation: >
+      規則上の許可を表す文なので may を使う。
+      might はこの許可の意味では不自然。
+    focus:
+      - permission
+      - rule
+      - may
+
+  - id: g025_q012
+    question_type: two_choice
+    prompt: He ___ not agree with us. He often has a different opinion.
+    choices:
+      - text: may
+        correct: false
+      - text: might
+        correct: true
+    answer: might
+    ja: 彼は私たちに賛成しないかもしれない。彼はよく違う意見を持っている。
+    explanation: >
+      反対する可能性はあるが、断定を避けて控えめに述べている。
+      might not agree が自然。
+    focus:
+      - might_not
+      - weak_possibility
+      - softening
+
+common_mistakes:
+  - mistake: may と might をどちらも単に「〜かもしれない」とだけ覚える
+    correction: >
+      may は比較的中立的な可能性、might はより控えめ・低い可能性・距離感を表すことが多い。
+
+  - mistake: might を may の過去形としてだけ覚える
+    correction: >
+      might は過去の文脈でも使うが、現在や未来についても控えめな可能性として使える。
+      例: It might rain later.
+
+  - mistake: 許可の may と可能性の may を混同する
+    correction: >
+      You may leave now. の may は許可。
+      It may rain. の may は可能性。
+      同じ may でも文脈で意味が変わる。
+
+  - mistake: might は必ず可能性がとても低いと思う
+    correction: >
+      might は may より控えめに聞こえることが多いが、必ず極端に低い可能性を表すわけではない。
+      丁寧さや遠回しな言い方として使うこともある。
+
+learning_notes:
+  - >
+    may と might は、日本語ではどちらも「〜かもしれない」と訳せるため、
+    日本語訳だけで判断すると区別しにくい。
+  - >
+    may は可能性を比較的まっすぐ述べる。
+    might は話し手が一歩引いて、控えめに可能性を述べる感じがある。
+  - >
+    I might be wrong, but ... は、意見をやわらげるための重要表現。
+  - >
+    You may ... は許可を表せるが、You might ... は普通、許可にはならない。
+  - >
+    I thought he might ... のように、過去の文脈では might が自然になることがある。
+
+prerequisites:
+  - g021
+
+next_items:
+  - g026
+  - g027
+  - g029

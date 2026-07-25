@@ -1,0 +1,332 @@
+id: g011
+file: g011.yaml
+
+title: have の現在形・進行形
+type: verb_usage
+
+section:
+  id: s02
+  title: 現在形・現在進行形と動詞用法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: have が「所有」か、「食事・会議・経験などの出来事」か？
+
+core_concept:
+  possessive_have:
+    form: have / has
+    meaning: 所有・持っている状態・身体的特徴・関係などを表す
+    image: すでに持っている状態 / そういう性質・関係がある
+    examples:
+      - sentence: I have a car.
+        ja: 私は車を持っている。
+        point: 所有を表す have なので、普通は現在進行形にしない。
+      - sentence: She has blue eyes.
+        ja: 彼女は青い目をしている。
+        point: 身体的特徴を表す状態なので has を使う。
+      - sentence: We have a problem.
+        ja: 私たちには問題がある。
+        point: 問題を抱えている状態を表している。
+
+  event_have:
+    form: am / is / are having
+    meaning: 食事・会議・パーティー・楽しい時間など、出来事や活動を表す
+    image: 今その活動をしている / その出来事の最中である
+    examples:
+      - sentence: We are having lunch now.
+        ja: 私たちは今、昼食を食べている。
+        point: have lunch は「昼食を食べる」という活動なので、現在進行形にできる。
+      - sentence: They are having a meeting.
+        ja: 彼らは会議をしている。
+        point: have a meeting は「会議を開く・会議をする」という出来事を表す。
+      - sentence: She is having a good time.
+        ja: 彼女は楽しい時間を過ごしている。
+        point: have a good time は経験・活動なので、現在進行形にできる。
+
+main_rule: >
+  have は「持っている」という所有・状態を表すとき、普通は現在進行形にしない。
+  しかし have lunch, have dinner, have a meeting, have a party, have a good time など、
+  食事・会議・経験・出来事を表すときは、現在進行形にできる。
+  have という形だけで判断せず、have の後ろの名詞が「状態」なのか「出来事」なのかを見る。
+
+contrast_pairs:
+  - possessive_have: I have a car.
+    event_have: I am having lunch now.
+    point: >
+      have a car は所有なので現在形。
+      have lunch は食事という活動なので現在進行形にできる。
+
+  - possessive_have: She has blue eyes.
+    event_have: She is having a good time.
+    point: >
+      has blue eyes は身体的特徴を表す状態。
+      is having a good time は今の経験・活動を表す。
+
+  - possessive_have: We have a problem.
+    event_have: We are having a meeting now.
+    point: >
+      have a problem は問題を抱えている状態。
+      have a meeting は会議をするという出来事。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+fsrs_rating:
+  again:
+    condition: 2問以上ミス、または所有のhaveと出来事のhaveの違いを説明できない
+  hard:
+    condition: 1問ミス、または正解しても理由を説明できない
+  good:
+    condition: 全問正解。ただしEASY条件は満たさない
+  easy:
+    condition: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g011_q001
+    question_type: two_choice
+    prompt: I ___ a bicycle.
+    choices:
+      - text: have
+        correct: true
+      - text: am having
+        correct: false
+    answer: have
+    explanation: >
+      have a bicycle は「自転車を持っている」という所有を表す。
+      所有の have は普通、現在進行形にしないので have が自然。
+    focus:
+      - possessive_have
+      - state
+      - present_simple
+
+  - id: g011_q002
+    question_type: two_choice
+    prompt: We ___ lunch now.
+    choices:
+      - text: have
+        correct: false
+      - text: are having
+        correct: true
+    answer: are having
+    explanation: >
+      have lunch は「昼食を食べる」という活動を表す。
+      now があり、今その活動をしているので are having が自然。
+    focus:
+      - event_have
+      - meal
+      - present_continuous
+
+  - id: g011_q003
+    question_type: two_choice
+    prompt: She ___ two brothers.
+    choices:
+      - text: has
+        correct: true
+      - text: is having
+        correct: false
+    answer: has
+    explanation: >
+      have two brothers は家族関係を表す状態。
+      進行中の動作ではないので has が自然。
+    focus:
+      - possessive_have
+      - relationship
+      - present_simple
+
+  - id: g011_q004
+    question_type: two_choice
+    prompt: They ___ a meeting in Room 3 now.
+    choices:
+      - text: have
+        correct: false
+      - text: are having
+        correct: true
+    answer: are having
+    explanation: >
+      have a meeting は「会議をする」という出来事を表す。
+      now があるので、現在進行形 are having が自然。
+    focus:
+      - event_have
+      - meeting
+      - present_continuous
+
+  - id: g011_q005
+    question_type: two_choice
+    prompt: This room ___ three windows.
+    choices:
+      - text: has
+        correct: true
+      - text: is having
+        correct: false
+    answer: has
+    explanation: >
+      部屋に窓があるという所有・構成を表す状態。
+      進行中の動作ではないので has を使う。
+    focus:
+      - possessive_have
+      - feature
+      - present_simple
+
+  - id: g011_q006
+    question_type: two_choice
+    prompt: She ___ a good time at the party.
+    choices:
+      - text: has
+        correct: false
+      - text: is having
+        correct: true
+    answer: is having
+    explanation: >
+      have a good time は「楽しい時間を過ごす」という経験・活動を表す。
+      パーティーの最中の状況なので is having が自然。
+    focus:
+      - event_have
+      - experience
+      - present_continuous
+
+  - id: g011_q007
+    question_type: two_choice
+    prompt: My father ___ a new phone.
+    choices:
+      - text: has
+        correct: true
+      - text: is having
+        correct: false
+    answer: has
+    explanation: >
+      have a new phone は「新しい電話を持っている」という所有。
+      所有の have は普通、現在進行形にしない。
+    focus:
+      - possessive_have
+      - state
+      - present_simple
+
+  - id: g011_q008
+    question_type: two_choice
+    prompt: We ___ dinner with our friends tonight.
+    choices:
+      - text: have
+        correct: false
+      - text: are having
+        correct: true
+    answer: are having
+    explanation: >
+      have dinner は食事という活動を表す。
+      tonight は予定された一時的な出来事を表し、現在進行形 are having が自然。
+    focus:
+      - event_have
+      - meal
+      - arranged_plan
+      - present_continuous
+
+  - id: g011_q009
+    question_type: two_choice
+    prompt: He ___ a lot of books.
+    choices:
+      - text: has
+        correct: true
+      - text: is having
+        correct: false
+    answer: has
+    explanation: >
+      have a lot of books は本を所有している状態。
+      現在進行中の動作ではないので has が自然。
+    focus:
+      - possessive_have
+      - possession
+      - present_simple
+
+  - id: g011_q010
+    question_type: two_choice
+    prompt: The students ___ a party after the exam.
+    choices:
+      - text: have
+        correct: false
+      - text: are having
+        correct: true
+    answer: are having
+    explanation: >
+      have a party は「パーティーを開く」という出来事を表す。
+      after the exam は予定された一時的な出来事を示すので are having が自然。
+    focus:
+      - event_have
+      - party
+      - arranged_plan
+      - present_continuous
+
+  - id: g011_q011
+    question_type: two_choice
+    prompt: I ___ a headache.
+    choices:
+      - text: have
+        correct: true
+      - text: am having
+        correct: false
+    answer: have
+    explanation: >
+      have a headache は体の状態を表す。
+      基本問題では、状態を表す have として現在形 have を選ぶ。
+    focus:
+      - possessive_have
+      - physical_state
+      - present_simple
+
+  - id: g011_q012
+    question_type: two_choice
+    prompt: They ___ breakfast at the hotel now.
+    choices:
+      - text: have
+        correct: false
+      - text: are having
+        correct: true
+    answer: are having
+    explanation: >
+      have breakfast は「朝食を食べる」という活動を表す。
+      now があるので、現在進行形 are having が自然。
+    focus:
+      - event_have
+      - meal
+      - present_continuous
+
+common_mistakes:
+  - mistake: have は状態動詞だから、いつも進行形にできないと思う
+    correction: >
+      所有の have は普通、現在進行形にしない。
+      しかし have lunch, have a meeting, have a party など、出来事や活動を表す have は進行形にできる。
+
+  - mistake: 「持っている」を日本語で「〜している」と訳すため、I am having a car. としてしまう
+    correction: >
+      日本語の「持っている」に引っ張られない。
+      所有は英語では状態なので、I have a car. が自然。
+
+  - mistake: have の後ろの名詞を見ずに、now があれば必ず進行形にする
+    correction: >
+      now があっても、have の意味が所有・状態なら進行形にしにくい。
+      have lunch や have a meeting のように、活動・出来事を表すかを見る。
+
+learning_notes:
+  - >
+    このカードは、現在形・現在進行形の一般ルールではなく、have という動詞の使い方を扱う。
+  - >
+    have の後ろに来る名詞が「物・特徴・関係・状態」なら、基本は現在形。
+  - >
+    have の後ろに来る名詞が「食事・会議・パーティー・経験」なら、出来事として現在進行形にできる。
+  - >
+    have to は「〜しなければならない」という別の表現なので、このカードでは扱わない。
+
+prerequisites:
+  - g001
+
+next_items:
+  - g012
+  - g013
+  - g014
+  - g021

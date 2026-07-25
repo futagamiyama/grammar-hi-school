@@ -1,0 +1,362 @@
+id: g004
+file: g004.yaml
+
+title: 現在完了形 vs 現在完了進行形
+type: grammar_contrast
+
+section:
+  id: s01
+  title: 時制・相の基本対立
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 結果・経験・完了を言うか、継続中の動作を強調するか？
+
+core_concept:
+  present_perfect:
+    form: 現在完了形
+    meaning: 過去から現在へのつながりを、結果・経験・完了・継続として述べる
+    image: 今に残っている結果 / 今までの経験 / もう終わったこと
+    typical_clues:
+      - already
+      - yet
+      - just
+      - ever
+      - never
+      - before
+      - so far
+      - since
+      - for
+    examples:
+      - sentence: I have finished my homework.
+        ja: 私は宿題を終えた。
+        point: 宿題が終わっているという現在の結果を表す。
+      - sentence: She has visited Kyoto three times.
+        ja: 彼女は京都を3回訪れたことがある。
+        point: 現在までの経験回数を表す。
+      - sentence: He has lived here for ten years.
+        ja: 彼はここに10年間住んでいる。
+        point: live のような状態に近い動詞では、継続を現在完了形で表すことが多い。
+
+  present_perfect_continuous:
+    form: 現在完了進行形
+    meaning: 過去から現在まで続いている動作、または最近まで続いていた動作を強調する
+    image: ずっと〜している / さっきまで〜していた / 動作の継続が目立つ
+    typical_clues:
+      - for two hours
+      - since this morning
+      - all day
+      - recently
+      - lately
+      - How long
+    examples:
+      - sentence: I have been studying for two hours.
+        ja: 私は2時間ずっと勉強している。
+        point: 勉強という動作が続いていることを強調している。
+      - sentence: She has been waiting since noon.
+        ja: 彼女は正午からずっと待っている。
+        point: 待つという動作の継続を表す。
+      - sentence: It has been raining all day.
+        ja: 一日中雨が降っている。
+        point: 雨が降り続いていることを表す。
+
+main_rule: >
+  現在完了形は、過去から現在へのつながりを結果・経験・完了・継続として述べる。
+  現在完了進行形は、過去から現在まで続いている動作や、最近まで続いていた動作の継続を強調する。
+  「終わった結果」を言いたいなら現在完了形、「ずっと続けている動作」を言いたいなら現在完了進行形が自然になりやすい。
+  ただし、know, own, belong などの状態動詞は進行形にしにくいため、現在完了形で継続を表すことが多い。
+
+contrast_pairs:
+  - present_perfect: I have finished my homework.
+    present_perfect_continuous: I have been doing my homework for two hours.
+    point: >
+      have finished は「終わった」という結果。
+      have been doing は「ずっとやっている」という動作の継続。
+
+  - present_perfect: She has read three books this month.
+    present_perfect_continuous: She has been reading this book all afternoon.
+    point: >
+      has read three books は現在までの完了量・経験量。
+      has been reading は読書という動作が続いていることを表す。
+
+  - present_perfect: It has stopped raining.
+    present_perfect_continuous: It has been raining all day.
+    point: >
+      has stopped は雨が止んだ結果。
+      has been raining は雨が降り続いている動作の継続。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、速く迷いなく答えられる
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+    note: >
+      8秒制限なら、平均4.8秒以内かつ最遅6.8秒以内をEASYの目安とする。
+
+review_questions:
+  - id: g004_q001
+    question_type: two_choice
+    prompt: I ___ my homework, so I can watch TV now.
+    choices:
+      - text: have finished
+        correct: true
+      - text: have been finishing
+        correct: false
+    answer: have finished
+    explanation: >
+      so I can watch TV now から、宿題が終わった結果が現在に関係している。
+      終了した結果を表すので、現在完了形 have finished が自然。
+    ja: 私は宿題を終えたので、今テレビを見ることができる。
+    focus:
+      - present_result
+      - completion
+      - present_perfect
+
+  - id: g004_q002
+    question_type: two_choice
+    prompt: I ___ my homework for two hours.
+    choices:
+      - text: have done
+        correct: false
+      - text: have been doing
+        correct: true
+    answer: have been doing
+    explanation: >
+      for two hours があり、宿題をする動作が続いていることを表している。
+      動作の継続を強調するので、現在完了進行形 have been doing が自然。
+    ja: 私は2時間ずっと宿題をしている。
+    focus:
+      - duration
+      - for_two_hours
+      - present_perfect_continuous
+
+  - id: g004_q003
+    question_type: two_choice
+    prompt: She ___ three emails so far.
+    choices:
+      - text: has written
+        correct: true
+      - text: has been writing
+        correct: false
+    answer: has written
+    explanation: >
+      three emails という完了した数が示されている。
+      現在までにどれだけ終えたかを表すので、現在完了形 has written が自然。
+    ja: 彼女は今までに3通のメールを書いた。
+    focus:
+      - completed_amount
+      - so_far
+      - present_perfect
+
+  - id: g004_q004
+    question_type: two_choice
+    prompt: She ___ emails all morning.
+    choices:
+      - text: has written
+        correct: false
+      - text: has been writing
+        correct: true
+    answer: has been writing
+    explanation: >
+      all morning があり、メールを書く動作が朝ずっと続いていることを表している。
+      動作の継続を強調するので、has been writing が自然。
+    ja: 彼女は午前中ずっとメールを書いている。
+    focus:
+      - duration
+      - all_morning
+      - present_perfect_continuous
+
+  - id: g004_q005
+    question_type: two_choice
+    prompt: It ___ raining, so we can go outside now.
+    choices:
+      - text: has stopped
+        correct: true
+      - text: has been stopping
+        correct: false
+    answer: has stopped
+    explanation: >
+      so we can go outside now から、雨が止んだ結果が現在に関係している。
+      結果を表すので、現在完了形 has stopped が自然。
+    ja: 雨が止んだので、私たちは今外に出られる。
+    focus:
+      - present_result
+      - completion
+      - present_perfect
+
+  - id: g004_q006
+    question_type: two_choice
+    prompt: It ___ raining all day.
+    choices:
+      - text: has rained
+        correct: false
+      - text: has been raining
+        correct: true
+    answer: has been raining
+    explanation: >
+      all day があり、雨が一日中降り続いていることを表している。
+      動作・状態の継続を強調するので、has been raining が自然。
+    ja: 一日中雨が降っている。
+    focus:
+      - duration
+      - all_day
+      - present_perfect_continuous
+
+  - id: g004_q007
+    question_type: two_choice
+    prompt: He ___ this book twice.
+    choices:
+      - text: has read
+        correct: true
+      - text: has been reading
+        correct: false
+    answer: has read
+    explanation: >
+      twice があるので、現在までの経験回数を表している。
+      経験・完了回数を表すので、現在完了形 has read が自然。
+    ja: 彼はこの本を2回読んだことがある。
+    focus:
+      - experience_count
+      - twice
+      - present_perfect
+
+  - id: g004_q008
+    question_type: two_choice
+    prompt: He ___ this book since this morning.
+    choices:
+      - text: has read
+        correct: false
+      - text: has been reading
+        correct: true
+    answer: has been reading
+    explanation: >
+      since this morning があり、読書という動作が朝から続いていることを表している。
+      動作の継続を強調するので、has been reading が自然。
+    ja: 彼は今朝からずっとこの本を読んでいる。
+    focus:
+      - duration
+      - since_this_morning
+      - present_perfect_continuous
+
+  - id: g004_q009
+    question_type: two_choice
+    prompt: We ___ each other for ten years.
+    choices:
+      - text: have known
+        correct: true
+      - text: have been knowing
+        correct: false
+    answer: have known
+    explanation: >
+      know は状態を表す動詞で、普通は進行形にしにくい。
+      10年間知っているという継続は、現在完了形 have known で表す。
+    ja: 私たちは10年間お互いを知っている。
+    focus:
+      - stative_verb
+      - duration
+      - present_perfect
+
+  - id: g004_q010
+    question_type: two_choice
+    prompt: We ___ for the bus for thirty minutes.
+    choices:
+      - text: have waited
+        correct: false
+      - text: have been waiting
+        correct: true
+    answer: have been waiting
+    explanation: >
+      wait は動作を表し、for thirty minutes によってその動作の継続が示されている。
+      ずっと待っていることを強調するので、have been waiting が自然。
+    ja: 私たちは30分間ずっとバスを待っている。
+    focus:
+      - duration
+      - waiting
+      - present_perfect_continuous
+
+  - id: g004_q011
+    question_type: two_choice
+    prompt: I ___ my phone. Here it is.
+    choices:
+      - text: have found
+        correct: true
+      - text: have been finding
+        correct: false
+    answer: have found
+    explanation: >
+      Here it is から、電話を見つけた結果が現在に残っている。
+      結果を表すので、現在完了形 have found が自然。
+    ja: 携帯電話を見つけた。ほら、ここにある。
+    focus:
+      - present_result
+      - completion
+      - present_perfect
+
+  - id: g004_q012
+    question_type: two_choice
+    prompt: You look tired. Have you ___?
+    choices:
+      - text: run
+        correct: false
+      - text: been running
+        correct: true
+    answer: been running
+    explanation: >
+      You look tired から、直前まで走っていた動作の影響が現在に残っていると考えられる。
+      動作の継続・最近までの活動を表すので、been running が自然。
+    ja: 疲れて見えるね。走っていたの？
+    focus:
+      - recent_activity
+      - present_evidence
+      - present_perfect_continuous
+
+common_mistakes:
+  - mistake: 現在完了形と現在完了進行形をどちらも「ずっと〜している」と訳して区別しない
+    correction: >
+      日本語訳だけではなく、結果や完了量を言いたいのか、動作の継続を強調したいのかで判断する。
+
+  - mistake: for や since があれば必ず現在完了進行形だと思う
+    correction: >
+      know, own, belong などの状態動詞では、for や since があっても現在完了形で継続を表すことが多い。
+
+  - mistake: 完了した数や回数がある文に現在完了進行形を使ってしまう
+    correction: >
+      three emails, twice, five pages など完了した量や回数を言う場合は、現在完了形が自然になりやすい。
+
+  - mistake: 現在完了進行形を「今この瞬間も必ず続いている」と思ってしまう
+    correction: >
+      現在完了進行形は、今も続いている場合だけでなく、つい最近まで続いていて現在に影響が残っている場合にも使える。
+
+learning_notes:
+  - >
+    現在完了形は「今どうなっているか」に焦点があることが多い。
+  - >
+    現在完了進行形は「どれくらい続けているか」「最近まで何をしていたか」に焦点があることが多い。
+  - >
+    finished, found, stopped のように結果がはっきり出る動詞は、現在完了形が自然になりやすい。
+  - >
+    studying, waiting, raining, reading のように継続する動作は、現在完了進行形が自然になりやすい。
+  - >
+    know, own, belong などの状態動詞は、現在完了進行形にしにくい。動詞用法カードでも別に扱う。
+
+prerequisites:
+  - g002
+
+next_items:
+  - g005
+  - g009
+  - g015

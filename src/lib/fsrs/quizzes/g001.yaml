@@ -1,0 +1,324 @@
+id: g001
+file: g001.yaml
+
+title: 現在形 vs 現在進行形
+type: grammar_contrast
+
+section:
+  id: s01
+  title: 時制・相の基本対立
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 恒常的なことか、一時的・進行中のことか？
+
+core_concept:
+  present_simple:
+    form: 現在形
+    meaning: 習慣・一般事実・恒常的な状態を表す
+    image: いつもそうである / 普段そうである / 一般にそうである
+    examples:
+      - sentence: I live in Tokyo.
+        ja: 私は東京に住んでいる。
+        point: 普段・恒常的に東京に住んでいる。
+      - sentence: She works for a bank.
+        ja: 彼女は銀行で働いている。
+        point: 職業・勤務先として普段そうである。
+      - sentence: Water boils at 100 degrees Celsius.
+        ja: 水は摂氏100度で沸騰する。
+        point: 一般事実を表している。
+
+  present_continuous:
+    form: 現在進行形
+    meaning: 今進行中の動作・一時的な状態・変化中の状況を表す
+    image: 今だけそうしている / 一時的にそうである / 変化している途中
+    examples:
+      - sentence: I am living in Tokyo this month.
+        ja: 私は今月、東京に住んでいる。
+        point: 一時的に東京に滞在している。
+      - sentence: She is working late today.
+        ja: 彼女は今日、遅くまで働いている。
+        point: 今日だけの一時的な状況。
+      - sentence: The weather is getting colder.
+        ja: 天気がだんだん寒くなってきている。
+        point: 変化の途中を表している。
+
+main_rule: >
+  現在形は「普段・一般・恒常的なこと」を表す。
+  現在進行形は「今進行中・一時的・変化中のこと」を表す。
+  日本語ではどちらも「〜している」と訳せることがあるため、
+  日本語訳ではなく、状況の性質で判断する。
+
+contrast_pairs:
+  - present_simple: I live in Osaka.
+    present_continuous: I am living in Osaka this year.
+    point: >
+      live は現在形なら恒常的な居住、現在進行形なら一時的な居住を表す。
+
+  - present_simple: She works at a hotel.
+    present_continuous: She is working at a hotel during the summer.
+    point: >
+      works は普段の勤務先、is working は夏の間だけの一時的な仕事を表す。
+
+  - present_simple: He plays tennis every Sunday.
+    present_continuous: He is playing tennis now.
+    point: >
+      every Sunday があれば習慣、now があれば今進行中の動作。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  again:
+    condition: 2問以上ミス、または現在形と現在進行形の基本対立を説明できない
+  hard:
+    condition: 1問ミス、または正解しても理由を説明できない、または大きく時間超過
+  good:
+    condition: 全問正解し、理由も説明できる
+  easy:
+    condition: 全問即答し、別の例にも応用できる
+
+review_questions:
+  - id: g001_q001
+    question_type: two_choice
+    prompt: She usually ___ coffee in the morning.
+    choices:
+      - text: drinks
+        correct: true
+      - text: is drinking
+        correct: false
+    answer: drinks
+    explanation: >
+      usually があるので、普段の習慣を表している。
+      したがって現在形 drinks が自然。
+    focus:
+      - habit
+      - usually
+      - present_simple
+
+  - id: g001_q002
+    question_type: two_choice
+    prompt: She ___ coffee now.
+    choices:
+      - text: drinks
+        correct: false
+      - text: is drinking
+        correct: true
+    answer: is drinking
+    explanation: >
+      now があるので、今している動作を表している。
+      したがって現在進行形 is drinking が自然。
+    focus:
+      - action_now
+      - now
+      - present_continuous
+
+  - id: g001_q003
+    question_type: two_choice
+    prompt: My brother ___ in Kyoto.
+    choices:
+      - text: lives
+        correct: true
+      - text: is living
+        correct: false
+    answer: lives
+    explanation: >
+      特に一時的であることを示す語句がないため、
+      普段の居住地を表す現在形 lives が自然。
+    focus:
+      - permanent_state
+      - live
+      - present_simple
+
+  - id: g001_q004
+    question_type: two_choice
+    prompt: My brother ___ in Kyoto this month.
+    choices:
+      - text: lives
+        correct: false
+      - text: is living
+        correct: true
+    answer: is living
+    explanation: >
+      this month があるので、今月だけの一時的な居住を表している。
+      したがって現在進行形 is living が自然。
+    focus:
+      - temporary_state
+      - this_month
+      - present_continuous
+
+  - id: g001_q005
+    question_type: two_choice
+    prompt: I ___ to school by bus every day.
+    choices:
+      - text: go
+        correct: true
+      - text: am going
+        correct: false
+    answer: go
+    explanation: >
+      every day があるので、毎日の習慣を表している。
+      したがって現在形 go が自然。
+    focus:
+      - habit
+      - every_day
+      - present_simple
+
+  - id: g001_q006
+    question_type: two_choice
+    prompt: I ___ to school by bus today.
+    choices:
+      - text: go
+        correct: false
+      - text: am going
+        correct: true
+    answer: am going
+    explanation: >
+      today は、普段とは違う今日だけの行動を表すことがある。
+      ここでは一時的な行動として現在進行形 am going が自然。
+    focus:
+      - temporary_action
+      - today
+      - present_continuous
+
+  - id: g001_q007
+    question_type: two_choice
+    prompt: The earth ___ around the sun.
+    choices:
+      - text: moves
+        correct: true
+      - text: is moving
+        correct: false
+    answer: moves
+    explanation: >
+      地球が太陽の周りを回ることは一般事実なので、
+      現在形 moves を使う。
+    focus:
+      - general_fact
+      - present_simple
+
+  - id: g001_q008
+    question_type: two_choice
+    prompt: The prices ___ quickly these days.
+    choices:
+      - text: rise
+        correct: false
+      - text: are rising
+        correct: true
+    answer: are rising
+    explanation: >
+      these days と quickly により、現在進行中の変化を表している。
+      したがって現在進行形 are rising が自然。
+    focus:
+      - changing_situation
+      - these_days
+      - present_continuous
+
+  - id: g001_q009
+    question_type: two_choice
+    prompt: He ___ tennis every Sunday.
+    choices:
+      - text: plays
+        correct: true
+      - text: is playing
+        correct: false
+    answer: plays
+    explanation: >
+      every Sunday があるので、習慣を表している。
+      したがって現在形 plays が自然。
+    focus:
+      - habit
+      - every_sunday
+      - present_simple
+
+  - id: g001_q010
+    question_type: two_choice
+    prompt: He ___ tennis in the park now.
+    choices:
+      - text: plays
+        correct: false
+      - text: is playing
+        correct: true
+    answer: is playing
+    explanation: >
+      now があるので、今している動作を表している。
+      したがって現在進行形 is playing が自然。
+    focus:
+      - action_now
+      - now
+      - present_continuous
+
+  - id: g001_q011
+    question_type: two_choice
+    prompt: This train usually ___ at 8:30.
+    choices:
+      - text: leaves
+        correct: true
+      - text: is leaving
+        correct: false
+    answer: leaves
+    explanation: >
+      usually があるので、時刻表上の通常の予定を表している。
+      現在形 leaves が自然。
+    focus:
+      - schedule
+      - usually
+      - present_simple
+
+  - id: g001_q012
+    question_type: two_choice
+    prompt: The train ___ now. Hurry up!
+    choices:
+      - text: leaves
+        correct: false
+      - text: is leaving
+        correct: true
+    answer: is leaving
+    explanation: >
+      now と Hurry up から、今まさに出発しようとしている状況。
+      現在進行形 is leaving が自然。
+    focus:
+      - action_now
+      - immediate_situation
+      - present_continuous
+
+common_mistakes:
+  - mistake: 日本語の「住んでいる」だけを見て現在進行形にしてしまう
+    correction: >
+      英語では、恒常的な居住なら I live in Tokyo. が基本。
+      一時的な居住なら I am living in Tokyo. も自然。
+
+  - mistake: 「〜している」はすべて現在進行形だと思う
+    correction: >
+      日本語訳ではなく、習慣・一般事実・恒常的状態か、
+      今進行中・一時的状態かで判断する。
+
+  - mistake: now がないと現在進行形を使えないと思う
+    correction: >
+      now がなくても、一時的な状況や変化中の状況なら現在進行形になる。
+      例: Prices are rising these days.
+
+learning_notes:
+  - >
+    現在形は「今この瞬間」ではなく、「普段そうである」「一般にそうである」
+    という広い現在を表す。
+  - >
+    現在進行形は「今している動作」だけでなく、
+    「一時的にそうである」「変化している途中」も表す。
+  - >
+    live, work, stay などは、現在形と現在進行形の違いが見えやすい。
+  - >
+    have, think, know, like などの状態動詞は別カードで扱う。
+    このカードでは一般的な対立だけを学ぶ。
+
+prerequisites: []
+
+next_items:
+  - g002
+  - g011
+  - g012
+  - g014

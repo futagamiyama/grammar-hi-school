@@ -1,0 +1,437 @@
+id: g115
+file: g115.yaml
+
+title: 接続詞と前置詞の使い分け
+type: grammar_contrast
+
+section:
+  id: s11
+  title: 名詞節・接続詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 後ろに文が来るか名詞句が来るかを見て、接続詞と前置詞を使い分けられるか？
+
+core_concept:
+  conjunction_plus_clause:
+    form: 接続詞 + 主語 + 動詞
+    meaning: 〜なので、〜だけれども、〜している間に
+    image: 接続詞は文と文をつなぐ
+    examples:
+      - sentence: I stayed home because it was raining.
+        ja: 雨が降っていたので、私は家にいた。
+        point: because の後ろは it was raining という文。
+      - sentence: Although he was tired, he kept working.
+        ja: 彼は疲れていたけれども、働き続けた。
+        point: although の後ろは he was tired という文。
+      - sentence: I read a book while I was waiting.
+        ja: 待っている間、私は本を読んだ。
+        point: while の後ろは I was waiting という文。
+
+  preposition_plus_noun:
+    form: 前置詞 + 名詞句
+    meaning: 〜のために、〜にもかかわらず、〜の間に
+    image: 前置詞は名詞句を後ろに取る
+    examples:
+      - sentence: I stayed home because of the rain.
+        ja: 雨のために、私は家にいた。
+        point: because of の後ろは the rain という名詞句。
+      - sentence: Despite his tiredness, he kept working.
+        ja: 疲労にもかかわらず、彼は働き続けた。
+        point: despite の後ろは his tiredness という名詞句。
+      - sentence: I read a book during the wait.
+        ja: 待ち時間の間、私は本を読んだ。
+        point: during の後ろは the wait という名詞句。
+
+  because_vs_because_of:
+    form: because + 文 / because of + 名詞句
+    meaning: 〜なので / 〜のために
+    image: 理由を文で言うか、名詞句で言うか
+    examples:
+      - sentence: The game was canceled because it rained.
+        ja: 雨が降ったので、その試合は中止された。
+        point: because の後ろは it rained という文。
+      - sentence: The game was canceled because of the rain.
+        ja: 雨のために、その試合は中止された。
+        point: because of の後ろは the rain という名詞句。
+      - sentence: She was late because of the traffic.
+        ja: 交通渋滞のため、彼女は遅れた。
+        point: the traffic は名詞句なので because of。
+
+  although_vs_despite:
+    form: although + 文 / despite + 名詞句・動名詞
+    meaning: 〜だけれども / 〜にもかかわらず
+    image: 譲歩を文で言うか、名詞句で言うか
+    examples:
+      - sentence: Although it was raining, we went out.
+        ja: 雨が降っていたけれども、私たちは外出した。
+        point: although の後ろは it was raining という文。
+      - sentence: Despite the rain, we went out.
+        ja: 雨にもかかわらず、私たちは外出した。
+        point: despite の後ろは the rain という名詞句。
+      - sentence: Despite being tired, he kept working.
+        ja: 疲れていたにもかかわらず、彼は働き続けた。
+        point: despite の後ろに動詞を置くなら動名詞 being。
+
+  while_vs_during:
+    form: while + 文 / during + 名詞句
+    meaning: 〜している間に / 〜の間に
+    image: 時間を文で言うか、名詞句で言うか
+    examples:
+      - sentence: I read a book while I was waiting.
+        ja: 待っている間、私は本を読んだ。
+        point: while の後ろは I was waiting という文。
+      - sentence: I read a book during the meeting.
+        ja: 会議の間、私は本を読んだ。
+        point: during の後ろは the meeting という名詞句。
+      - sentence: Please be quiet while I am speaking.
+        ja: 私が話している間は静かにしてください。
+        point: while の後ろは文。
+
+  until_vs_by:
+    form: until + 時点 / by + 時点
+    meaning: 〜までずっと / 〜までに
+    image: until は継続、by は期限
+    examples:
+      - sentence: I studied until midnight.
+        ja: 私は真夜中まで勉強した。
+        point: until は真夜中まで勉強が続いたことを表す。
+      - sentence: Please finish this by Friday.
+        ja: 金曜日までにこれを終えてください。
+        point: by は完了の期限を表す。
+      - sentence: Wait here until I come back.
+        ja: 私が戻るまでここで待っていてください。
+        point: until の後ろには文も置ける。
+
+main_rule: >
+  英語では、後ろに文が来るか名詞句が来るかで、使う語が変わる。
+  because / although / while などは接続詞なので、後ろに主語＋動詞を含む文を取る。
+  I stayed home because it was raining. では、because の後ろに it was raining という文が来ている。
+  because of / despite / during などは前置詞なので、後ろに名詞句を取る。
+  I stayed home because of the rain. では、because of の後ろに the rain という名詞句が来ている。
+  動詞を前置詞の後ろに置く場合は、despite being tired / for cutting paper のように動名詞にする。
+  また、until と by はどちらも「まで」と訳されることがあるが、
+  until は「その時までずっと続く」、by は「その時までに完了する」という違いがある。
+  まず後ろの形を見る。文なら接続詞、名詞句なら前置詞を選ぶ。
+
+contrast_pairs:
+  - conjunction: I stayed home because it was raining.
+    preposition: I stayed home because of the rain.
+    point: >
+      because の後ろは文。
+      because of の後ろは名詞句。
+
+  - conjunction: Although he was tired, he kept working.
+    preposition: Despite being tired, he kept working.
+    point: >
+      although の後ろは文。
+      despite の後ろに動詞を置くなら動名詞にする。
+
+  - conjunction: I read a book while I was waiting.
+    preposition: I read a book during the meeting.
+    point: >
+      while の後ろは文。
+      during の後ろは名詞句。
+
+  - until: I studied until midnight.
+    by: Please finish this by Friday.
+    point: >
+      until は継続の終点。
+      by は完了の期限。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または接続詞は文、前置詞は名詞句を後ろに取ることを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g115_q001
+    question_type: two_choice
+    prompt: I stayed home ___ it was raining.
+    choices:
+      - text: because
+        correct: true
+      - text: because of
+        correct: false
+    answer: because
+    explanation: >
+      it was raining は主語＋動詞を含む文。
+      文を後ろに取るので because を使う。
+    translation: 雨が降っていたので、私は家にいた。
+    focus:
+      - conjunction_plus_clause
+      - because_vs_because_of
+      - clause
+
+  - id: g115_q002
+    question_type: two_choice
+    prompt: I stayed home ___ the rain.
+    choices:
+      - text: because of
+        correct: true
+      - text: because
+        correct: false
+    answer: because of
+    explanation: >
+      the rain は名詞句。
+      名詞句を後ろに取るので because of を使う。
+    translation: 雨のために、私は家にいた。
+    focus:
+      - preposition_plus_noun
+      - because_vs_because_of
+      - noun_phrase
+
+  - id: g115_q003
+    question_type: two_choice
+    prompt: The game was canceled ___ it rained.
+    choices:
+      - text: because
+        correct: true
+      - text: because of
+        correct: false
+    answer: because
+    explanation: >
+      it rained は文。
+      理由を文で説明しているので because が正しい。
+    translation: 雨が降ったので、その試合は中止された。
+    focus:
+      - because_vs_because_of
+      - reason_clause
+      - rained
+
+  - id: g115_q004
+    question_type: two_choice
+    prompt: The game was canceled ___ the rain.
+    choices:
+      - text: because of
+        correct: true
+      - text: because
+        correct: false
+    answer: because of
+    explanation: >
+      the rain は名詞句。
+      because of the rain で「雨のために」という意味。
+    translation: 雨のために、その試合は中止された。
+    focus:
+      - because_vs_because_of
+      - rain
+      - preposition
+
+  - id: g115_q005
+    question_type: two_choice
+    prompt: ___ it was raining, we went out.
+    choices:
+      - text: Although
+        correct: true
+      - text: Despite
+        correct: false
+    answer: Although
+    explanation: >
+      it was raining は文。
+      接続詞 although を使って「雨が降っていたけれども」と表す。
+    translation: 雨が降っていたけれども、私たちは外出した。
+    focus:
+      - although_vs_despite
+      - concession_clause
+      - raining
+
+  - id: g115_q006
+    question_type: two_choice
+    prompt: ___ the rain, we went out.
+    choices:
+      - text: Despite
+        correct: true
+      - text: Although
+        correct: false
+    answer: Despite
+    explanation: >
+      the rain は名詞句。
+      前置詞 despite の後ろに置いて「雨にもかかわらず」と表す。
+    translation: 雨にもかかわらず、私たちは外出した。
+    focus:
+      - although_vs_despite
+      - despite
+      - noun_phrase
+
+  - id: g115_q007
+    question_type: two_choice
+    prompt: Despite ___ tired, he kept working.
+    choices:
+      - text: being
+        correct: true
+      - text: he was
+        correct: false
+    answer: being
+    explanation: >
+      despite は前置詞なので、後ろに文 he was tired は直接置けない。
+      動詞を使うなら動名詞 being tired にする。
+    translation: 疲れていたにもかかわらず、彼は働き続けた。
+    focus:
+      - although_vs_despite
+      - gerund
+      - being
+
+  - id: g115_q008
+    question_type: two_choice
+    prompt: I read a book ___ I was waiting.
+    choices:
+      - text: while
+        correct: true
+      - text: during
+        correct: false
+    answer: while
+    explanation: >
+      I was waiting は文。
+      文を後ろに取るので while を使う。
+    translation: 待っている間、私は本を読んだ。
+    focus:
+      - while_vs_during
+      - while_clause
+      - waiting
+
+  - id: g115_q009
+    question_type: two_choice
+    prompt: I read a book ___ the meeting.
+    choices:
+      - text: during
+        correct: true
+      - text: while
+        correct: false
+    answer: during
+    explanation: >
+      the meeting は名詞句。
+      during the meeting で「会議の間」という意味。
+    translation: 会議の間、私は本を読んだ。
+    focus:
+      - while_vs_during
+      - during
+      - meeting
+
+  - id: g115_q010
+    question_type: two_choice
+    prompt: Please be quiet ___ I am speaking.
+    choices:
+      - text: while
+        correct: true
+      - text: during
+        correct: false
+    answer: while
+    explanation: >
+      I am speaking は主語＋動詞を含む文。
+      while I am speaking で「私が話している間」。
+    translation: 私が話している間は静かにしてください。
+    focus:
+      - while_vs_during
+      - clause
+      - speaking
+
+  - id: g115_q011
+    question_type: two_choice
+    prompt: I studied ___ midnight.
+    choices:
+      - text: until
+        correct: true
+      - text: by
+        correct: false
+    answer: until
+    explanation: >
+      勉強が真夜中まで続いたことを表している。
+      継続の終点なので until を使う。
+    translation: 私は真夜中まで勉強した。
+    focus:
+      - until_vs_by
+      - continuation
+      - midnight
+
+  - id: g115_q012
+    question_type: two_choice
+    prompt: Please finish this ___ Friday.
+    choices:
+      - text: by
+        correct: true
+      - text: until
+        correct: false
+    answer: by
+    explanation: >
+      金曜日までに終える、という完了の期限を表している。
+      期限は by を使う。
+    translation: 金曜日までにこれを終えてください。
+    focus:
+      - until_vs_by
+      - deadline
+      - friday
+
+common_mistakes:
+  - mistake: because と because of を同じように使う
+    correction: >
+      because の後ろは文。
+      because of の後ろは名詞句。
+  - mistake: although の後ろに名詞句だけを置く
+    correction: >
+      although は接続詞なので、後ろに文が必要。
+      although the rain ではなく although it was raining。
+  - mistake: despite の後ろに文を直接置く
+    correction: >
+      despite は前置詞。
+      despite he was tired ではなく despite being tired または although he was tired。
+  - mistake: while と during を混同する
+    correction: >
+      while の後ろは文。
+      during の後ろは名詞句。
+  - mistake: until と by をどちらも「まで」とだけ覚える
+    correction: >
+      until は継続の終点。
+      by は完了の期限。
+      study until midnight / finish by Friday。
+  - mistake: 前置詞の後ろに動詞原形を置く
+    correction: >
+      前置詞の後ろに動詞を置くなら動名詞。
+      despite being tired / for cutting paper の形。
+
+learning_notes:
+  - >
+    接続詞は、後ろに主語＋動詞を含む文を取る。
+    because it rained / although he was tired / while I was waiting。
+  - >
+    前置詞は、後ろに名詞句を取る。
+    because of the rain / despite his age / during the meeting。
+  - >
+    前置詞の後ろに動詞を置くなら、動名詞にする。
+    despite being tired の形。
+  - >
+    「同じ日本語訳」でも、英語では後ろの形で語が変わる。
+    because と because of、although と despite、while と during に注意する。
+  - >
+    until は「〜までずっと」、by は「〜までに」。
+    継続か期限かを見て判断する。
+
+prerequisites:
+  - g039
+  - g053
+  - g105
+  - g106
+  - g109
+  - g113
+  - g114
+
+next_items:
+  - g116
+  - g117
+  - g118

@@ -1,0 +1,374 @@
+id: g086
+file: g086.yaml
+
+title: 否定語・準否定語による倒置
+type: construction
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 文頭の否定語・準否定語の後で、疑問文型の倒置を作れるか？
+
+core_concept:
+  negative_adverb_inversion:
+    form: 否定語/準否定語 + 助動詞 + 主語 + 動詞 ...
+    meaning: 決して〜ない、めったに〜ない、ほとんど〜ない
+    image: 否定語を文頭に出して強調し、その後ろを疑問文の語順にする
+    examples:
+      - sentence: Never have I seen such a beautiful view.
+        ja: 私はそんな美しい景色を一度も見たことがない。
+        point: Never を文頭に出したので have I seen の語順になる。
+      - sentence: Rarely do we see such honesty.
+        ja: 私たちはそのような正直さをめったに見ない。
+        point: Rarely を文頭に出したので do we see になる。
+      - sentence: Little did I know the truth.
+        ja: 私は真実をほとんど知らなかった。
+        point: Little を文頭に出したので did I know になる。
+
+  not_only_inversion:
+    form: Not only + 助動詞 + 主語 + 動詞 ..., but also ...
+    meaning: 〜だけでなく、...も
+    image: Not only を文頭に出すと、直後が倒置する
+    examples:
+      - sentence: Not only did he study hard, but he also helped his friends.
+        ja: 彼は一生懸命勉強しただけでなく、友人たちも助けた。
+        point: Not only を文頭に出したので did he study になる。
+      - sentence: Not only can she speak English, but she can also speak French.
+        ja: 彼女は英語を話せるだけでなく、フランス語も話せる。
+        point: 助動詞 can が主語 she の前に出る。
+      - sentence: Not only was the test difficult, but it was also long.
+        ja: そのテストは難しかっただけでなく、長くもあった。
+        point: be動詞 was が主語 the test の前に出る。
+
+  only_inversion:
+    form: Only + 副詞句/副詞節 + 助動詞 + 主語 + 動詞 ...
+    meaning: 〜して初めて、〜の場合にだけ
+    image: Only を含む語句を文頭に出すと、主節が倒置する
+    examples:
+      - sentence: Only then did I understand the problem.
+        ja: その時初めて私はその問題を理解した。
+        point: Only then の後ろで did I understand になる。
+      - sentence: Only in this way can we solve the problem.
+        ja: この方法でのみ、私たちはその問題を解決できる。
+        point: Only in this way の後ろで can we solve になる。
+      - sentence: Only after the meeting did I realize my mistake.
+        ja: 会議の後になって初めて、私は自分の間違いに気づいた。
+        point: Only after the meeting の後ろで did I realize になる。
+
+main_rule: >
+  否定語・準否定語を文頭に出して強調すると、その後ろは疑問文型の倒置になる。
+  Never have I seen such a beautiful view. は、
+  I have never seen such a beautiful view. を強調した形。
+  Rarely, Seldom, Little, Never, Hardly, Scarcely などが文頭に来ると、
+  助動詞 + 主語 + 動詞 の語順になる。
+  一般動詞の現在・過去では do / does / did を使う。
+  Not only ... but also ... でも、Not only が文頭に出ると倒置する。
+  Only then, Only in this way, Only after ... などでも、主節が倒置する。
+  ただし、倒置は硬い強調表現であり、普通の語順とは区別して読む。
+
+contrast_pairs:
+  - ordinary: I have never seen such a beautiful view.
+    inversion: Never have I seen such a beautiful view.
+    point: >
+      never を文頭に出すと have I seen の倒置になる。
+      意味はほぼ同じだが、倒置形は強調的で硬い。
+
+  - ordinary: He not only studied hard but also helped his friends.
+    inversion: Not only did he study hard, but he also helped his friends.
+    point: >
+      Not only が文頭に出ると did he study の倒置になる。
+      study は did の後ろなので原形。
+
+  - ordinary: I understood the problem only then.
+    inversion: Only then did I understand the problem.
+    point: >
+      Only then を文頭に出すと did I understand の倒置になる。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または否定語・準否定語が文頭に来た時の倒置を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g086_q001
+    question_type: two_choice
+    prompt: Never ___ I seen such a beautiful view.
+    choices:
+      - text: have
+        correct: true
+      - text: I have
+        correct: false
+    answer: have
+    explanation: >
+      Never が文頭に出ているので倒置が必要。
+      現在完了なので have I seen の語順になる。
+    translation: 私はそんな美しい景色を一度も見たことがない。
+    focus:
+      - negative_adverb_inversion
+      - never
+      - present_perfect
+
+  - id: g086_q002
+    question_type: two_choice
+    prompt: Rarely ___ we see such honesty.
+    choices:
+      - text: do
+        correct: true
+      - text: we do
+        correct: false
+    answer: do
+    explanation: >
+      Rarely が文頭にあるので倒置する。
+      一般動詞 see の現在形なので do we see になる。
+    translation: 私たちはそのような正直さをめったに見ない。
+    focus:
+      - negative_adverb_inversion
+      - rarely
+      - do_inversion
+
+  - id: g086_q003
+    question_type: two_choice
+    prompt: Little ___ I know the truth.
+    choices:
+      - text: did
+        correct: true
+      - text: I did
+        correct: false
+    answer: did
+    explanation: >
+      Little が文頭に出て「ほとんど〜ない」を強調している。
+      一般動詞 know の過去なので did I know になる。
+    translation: 私は真実をほとんど知らなかった。
+    focus:
+      - negative_adverb_inversion
+      - little
+      - did_inversion
+
+  - id: g086_q004
+    question_type: two_choice
+    prompt: Seldom ___ he make such mistakes.
+    choices:
+      - text: does
+        correct: true
+      - text: he does
+        correct: false
+    answer: does
+    explanation: >
+      Seldom が文頭にあるので倒置する。
+      he が主語の現在形なので does he make になる。
+    translation: 彼はそのような間違いをめったにしない。
+    focus:
+      - negative_adverb_inversion
+      - seldom
+      - does_inversion
+
+  - id: g086_q005
+    question_type: two_choice
+    prompt: Not only ___ he study hard, but he also helped his friends.
+    choices:
+      - text: did
+        correct: true
+      - text: he did
+        correct: false
+    answer: did
+    explanation: >
+      Not only が文頭に出ているので倒置する。
+      過去の一般動詞 study なので did he study になる。
+    translation: 彼は一生懸命勉強しただけでなく、友人たちも助けた。
+    focus:
+      - not_only_inversion
+      - did_inversion
+      - not_only_but_also
+
+  - id: g086_q006
+    question_type: two_choice
+    prompt: Not only did he ___ hard, but he also helped his friends.
+    choices:
+      - text: study
+        correct: true
+      - text: studied
+        correct: false
+    answer: study
+    explanation: >
+      did の後ろは動詞原形。
+      Not only did he studied とはしない。
+    translation: 彼は一生懸命勉強しただけでなく、友人たちも助けた。
+    focus:
+      - not_only_inversion
+      - bare_form
+      - study
+
+  - id: g086_q007
+    question_type: two_choice
+    prompt: Not only ___ she speak English, but she can also speak French.
+    choices:
+      - text: can
+        correct: true
+      - text: she can
+        correct: false
+    answer: can
+    explanation: >
+      Not only が文頭に出ているので倒置する。
+      助動詞 can が主語 she の前に出る。
+    translation: 彼女は英語を話せるだけでなく、フランス語も話せる。
+    focus:
+      - not_only_inversion
+      - modal_inversion
+      - can
+
+  - id: g086_q008
+    question_type: two_choice
+    prompt: Not only ___ the test difficult, but it was also long.
+    choices:
+      - text: was
+        correct: true
+      - text: the test was
+        correct: false
+    answer: was
+    explanation: >
+      Not only が文頭にあるので倒置する。
+      be動詞 was が主語 the test の前に出る。
+    translation: そのテストは難しかっただけでなく、長くもあった。
+    focus:
+      - not_only_inversion
+      - be_inversion
+      - was
+
+  - id: g086_q009
+    question_type: two_choice
+    prompt: Only then ___ I understand the problem.
+    choices:
+      - text: did
+        correct: true
+      - text: I did
+        correct: false
+    answer: did
+    explanation: >
+      Only then が文頭にあるので、主節が倒置する。
+      一般動詞 understand の過去なので did I understand。
+    translation: その時初めて私はその問題を理解した。
+    focus:
+      - only_inversion
+      - only_then
+      - did_inversion
+
+  - id: g086_q010
+    question_type: two_choice
+    prompt: Only in this way ___ we solve the problem.
+    choices:
+      - text: can
+        correct: true
+      - text: we can
+        correct: false
+    answer: can
+    explanation: >
+      Only in this way が文頭にあるので倒置する。
+      助動詞 can が主語 we の前に出る。
+    translation: この方法でのみ、私たちはその問題を解決できる。
+    focus:
+      - only_inversion
+      - only_in_this_way
+      - can
+
+  - id: g086_q011
+    question_type: two_choice
+    prompt: Only after the meeting ___ I realize my mistake.
+    choices:
+      - text: did
+        correct: true
+      - text: I did
+        correct: false
+    answer: did
+    explanation: >
+      Only after the meeting が文頭にあるので、主節が倒置する。
+      did I realize の語順になる。
+    translation: 会議の後になって初めて、私は自分の間違いに気づいた。
+    focus:
+      - only_inversion
+      - only_after
+      - did
+
+  - id: g086_q012
+    question_type: two_choice
+    prompt: Hardly ___ he arrived when it started to rain.
+    choices:
+      - text: had
+        correct: true
+      - text: he had
+        correct: false
+    answer: had
+    explanation: >
+      Hardly が文頭に出ているので倒置する。
+      Hardly had he arrived when ... で「彼が到着するやいなや雨が降り始めた」。
+    translation: 彼が到着するやいなや、雨が降り始めた。
+    focus:
+      - negative_adverb_inversion
+      - hardly
+      - had_inversion
+
+common_mistakes:
+  - mistake: Never I have seen ... としてしまう
+    correction: >
+      Never が文頭に来たら倒置が必要。
+      Never have I seen ... が正しい。
+  - mistake: Not only he studied ... としてしまう
+    correction: >
+      Not only が文頭に出ると倒置する。
+      Not only did he study ... が正しい。
+  - mistake: did の後ろを過去形にしてしまう
+    correction: >
+      did の後ろは動詞原形。
+      did he study, did I understand, did she say の形にする。
+  - mistake: Only then I understood ... としてしまう
+    correction: >
+      Only then が文頭に出ると、主節は倒置する。
+      Only then did I understand ... が正しい。
+  - mistake: 否定語が文頭にない場合にも倒置してしまう
+    correction: >
+      倒置は、Never, Rarely, Not only, Only then などが文頭に出た時に起こる。
+      普通の位置なら通常語順になる。
+
+learning_notes:
+  - >
+    否定語・準否定語が文頭に来ると、後ろは疑問文型の倒置になる。
+  - >
+    一般動詞の現在・過去では do / does / did を使う。
+    Rarely do we see / Seldom does he make / Little did I know。
+  - >
+    Not only が文頭に出ると倒置する。
+    Not only did he study hard, but he also helped his friends.
+  - >
+    Only then, Only in this way, Only after ... などでも主節が倒置する。
+  - >
+    倒置は意味よりも語順が問われやすい。
+    文頭の語句を見て、助動詞 + 主語 + 動詞の形を作る。
+
+prerequisites:
+  - g002
+  - g009
+  - g085
+
+next_items:
+  - g087
+  - g088
+  - g089

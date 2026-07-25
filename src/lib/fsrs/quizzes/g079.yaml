@@ -1,0 +1,376 @@
+id: g079
+file: g079.yaml
+
+title: otherwise / but に含まれる仮定法
+type: grammar_contrast
+
+section:
+  id: s09
+  title: 仮定法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: if がなくても、隠れた仮定を読み取れるか？
+
+core_concept:
+  otherwise_present:
+    form: 現在の状況. Otherwise, 主語 + would/could/might + 動詞原形 ...
+    meaning: そうでなければ、今〜だろうに
+    image: 今の事実と違う条件が隠れている
+    examples:
+      - sentence: I am busy. Otherwise, I would help you.
+        ja: 私は忙しい。そうでなければ、あなたを手伝うのに。
+        point: otherwise = if I were not busy。
+      - sentence: She is ill. Otherwise, she would come with us.
+        ja: 彼女は病気だ。そうでなければ、私たちと一緒に来るだろうに。
+        point: otherwise = if she were not ill。
+      - sentence: I do not know his address. Otherwise, I could visit him.
+        ja: 私は彼の住所を知らない。そうでなければ、彼を訪ねられるのに。
+        point: otherwise = if I knew his address。
+
+  otherwise_past:
+    form: 過去の状況. Otherwise, 主語 + would/could/might have + 過去分詞 ...
+    meaning: そうでなければ、過去に〜しただろうに
+    image: 過去の事実と違う条件が隠れている
+    examples:
+      - sentence: I was busy. Otherwise, I would have helped you.
+        ja: 私は忙しかった。そうでなければ、あなたを手伝っただろうに。
+        point: otherwise = if I had not been busy。
+      - sentence: She was ill. Otherwise, she would have come with us.
+        ja: 彼女は病気だった。そうでなければ、私たちと一緒に来ただろうに。
+        point: otherwise = if she had not been ill。
+      - sentence: I did not know his address. Otherwise, I could have visited him.
+        ja: 私は彼の住所を知らなかった。そうでなければ、彼を訪ねられたのに。
+        point: otherwise = if I had known his address。
+
+  but_hidden_condition:
+    form: 主語 + would/could/might ... , but + 事実
+    meaning: 〜するだろうに、しかし実際には...
+    image: but の後ろに、仮定を妨げる事実が来る
+    examples:
+      - sentence: I would help you, but I am busy.
+        ja: あなたを手伝うのに、でも私は忙しい。
+        point: If I were not busy, I would help you. に近い。
+      - sentence: I would have helped you, but I was busy.
+        ja: あなたを手伝っただろうに、でも私は忙しかった。
+        point: If I had not been busy, I would have helped you. に近い。
+      - sentence: She could have passed the exam, but she did not study hard.
+        ja: 彼女は試験に合格できただろうに、しかし一生懸命勉強しなかった。
+        point: 過去の非現実の結果を could have passed で表している。
+
+main_rule: >
+  仮定法は、必ず if を使うとは限らない。
+  otherwise は「そうでなければ」という意味で、隠れた if 条件を表す。
+  I am busy. Otherwise, I would help you. は
+  If I were not busy, I would help you. に近い。
+  現在の非現実なら would/could/might + 動詞原形。
+  過去の非現実なら would/could/might have + 過去分詞。
+  また、I would help you, but I am busy. のように、
+  but の後ろの事実が、仮定を妨げる条件として働くこともある。
+  if が見えなくても、would / could have などから仮定法を読み取る。
+
+contrast_pairs:
+  - present: I am busy. Otherwise, I would help you.
+    past: I was busy. Otherwise, I would have helped you.
+    point: >
+      would help は現在の非現実。
+      would have helped は過去の非現実。
+
+  - if_version: If I were not busy, I would help you.
+    otherwise_version: I am busy. Otherwise, I would help you.
+    point: >
+      otherwise は「そうでなければ」。
+      if 条件を別の形で表している。
+
+  - otherwise: She was ill. Otherwise, she would have come.
+    but: She would have come, but she was ill.
+    point: >
+      otherwise は事実の後に仮定結果を言う。
+      but は仮定結果の後に、それを妨げた事実を言う。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または otherwise / but に隠れた仮定を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g079_q001
+    question_type: two_choice
+    prompt: I am busy. Otherwise, I ___ you.
+    choices:
+      - text: would help
+        correct: true
+      - text: will help
+        correct: false
+    answer: would help
+    explanation: >
+      otherwise は「そうでなければ」。
+      今忙しいので手伝えないという現在の非現実を表し、would help を使う。
+    translation: 私は忙しい。そうでなければ、あなたを手伝うのに。
+    focus:
+      - otherwise_present
+      - would
+      - hidden_condition
+
+  - id: g079_q002
+    question_type: two_choice
+    prompt: I was busy. Otherwise, I ___ you.
+    choices:
+      - text: would have helped
+        correct: true
+      - text: would help
+        correct: false
+    answer: would have helped
+    explanation: >
+      I was busy は過去の事実。
+      過去に手伝っただろうに、という非現実の結果なので would have helped を使う。
+    translation: 私は忙しかった。そうでなければ、あなたを手伝っただろうに。
+    focus:
+      - otherwise_past
+      - would_have
+      - past_unreal
+
+  - id: g079_q003
+    question_type: two_choice
+    prompt: She is ill. Otherwise, she ___ with us.
+    choices:
+      - text: would come
+        correct: true
+      - text: would have come
+        correct: false
+    answer: would come
+    explanation: >
+      She is ill は現在の事実。
+      今病気でなければ来るだろうに、という現在の非現実なので would come。
+    translation: 彼女は病気だ。そうでなければ、私たちと一緒に来るだろうに。
+    focus:
+      - otherwise_present
+      - present_unreal
+      - ill
+
+  - id: g079_q004
+    question_type: two_choice
+    prompt: She was ill. Otherwise, she ___ with us.
+    choices:
+      - text: would have come
+        correct: true
+      - text: would come
+        correct: false
+    answer: would have come
+    explanation: >
+      She was ill は過去の事実。
+      過去に来ただろうに、という非現実の結果なので would have come。
+    translation: 彼女は病気だった。そうでなければ、私たちと一緒に来ただろうに。
+    focus:
+      - otherwise_past
+      - past_unreal
+      - would_have
+
+  - id: g079_q005
+    question_type: two_choice
+    prompt: I do not know his address. Otherwise, I ___ him.
+    choices:
+      - text: could visit
+        correct: true
+      - text: could have visited
+        correct: false
+    answer: could visit
+    explanation: >
+      現在、住所を知らないという事実がある。
+      もし知っていれば訪ねられるのに、という現在の非現実なので could visit。
+    translation: 私は彼の住所を知らない。そうでなければ、彼を訪ねられるのに。
+    focus:
+      - otherwise_present
+      - could
+      - address
+
+  - id: g079_q006
+    question_type: two_choice
+    prompt: I did not know his address. Otherwise, I ___ him.
+    choices:
+      - text: could have visited
+        correct: true
+      - text: could visit
+        correct: false
+    answer: could have visited
+    explanation: >
+      過去に住所を知らなかったという事実。
+      もし知っていたら訪ねられたのに、という過去の非現実なので could have visited。
+    translation: 私は彼の住所を知らなかった。そうでなければ、彼を訪ねられたのに。
+    focus:
+      - otherwise_past
+      - could_have
+      - address
+
+  - id: g079_q007
+    question_type: two_choice
+    prompt: I ___ you, but I am busy.
+    choices:
+      - text: would help
+        correct: true
+      - text: will help
+        correct: false
+    answer: would help
+    explanation: >
+      but I am busy が、手伝えない現在の事実を表している。
+      「忙しくなければ手伝うのに」という隠れた仮定なので would help。
+    translation: あなたを手伝うのに、でも私は忙しい。
+    focus:
+      - but_hidden_condition
+      - present_unreal
+      - would
+
+  - id: g079_q008
+    question_type: two_choice
+    prompt: I ___ you, but I was busy.
+    choices:
+      - text: would have helped
+        correct: true
+      - text: would help
+        correct: false
+    answer: would have helped
+    explanation: >
+      but I was busy が過去の事実。
+      過去に手伝えたはずだが実際には忙しかったので、would have helped を使う。
+    translation: あなたを手伝っただろうに、でも私は忙しかった。
+    focus:
+      - but_hidden_condition
+      - past_unreal
+      - would_have
+
+  - id: g079_q009
+    question_type: two_choice
+    prompt: She ___ the exam, but she did not study hard.
+    choices:
+      - text: could have passed
+        correct: true
+      - text: could pass
+        correct: false
+    answer: could have passed
+    explanation: >
+      she did not study hard は過去の事実。
+      合格できただろうに実際にはそうならなかったので could have passed。
+    translation: 彼女は試験に合格できただろうに、しかし一生懸命勉強しなかった。
+    focus:
+      - but_hidden_condition
+      - could_have
+      - exam
+
+  - id: g079_q010
+    question_type: two_choice
+    prompt: He ___ on time, but he missed the train.
+    choices:
+      - text: could have arrived
+        correct: true
+      - text: could arrive
+        correct: false
+    answer: could have arrived
+    explanation: >
+      missed the train は過去の事実。
+      電車に乗れていれば時間通りに着けたのに、という過去の非現実なので could have arrived。
+    translation: 彼は時間通りに到着できただろうに、しかし電車に乗り遅れた。
+    focus:
+      - but_hidden_condition
+      - past_unreal
+      - missed_train
+
+  - id: g079_q011
+    question_type: two_choice
+    prompt: The weather is bad. Otherwise, we ___ outside.
+    choices:
+      - text: would play
+        correct: true
+      - text: would have played
+        correct: false
+    answer: would play
+    explanation: >
+      The weather is bad は現在の事実。
+      天気が悪くなければ外で遊ぶのに、という現在の非現実なので would play。
+    translation: 天気が悪い。そうでなければ、私たちは外で遊ぶのに。
+    focus:
+      - otherwise_present
+      - weather
+      - would
+
+  - id: g079_q012
+    question_type: two_choice
+    prompt: The weather was bad. Otherwise, we ___ outside.
+    choices:
+      - text: would have played
+        correct: true
+      - text: would play
+        correct: false
+    answer: would have played
+    explanation: >
+      The weather was bad は過去の事実。
+      天気が悪くなければ外で遊んだだろうに、という過去の非現実なので would have played。
+    translation: 天気が悪かった。そうでなければ、私たちは外で遊んだだろうに。
+    focus:
+      - otherwise_past
+      - weather
+      - would_have
+
+common_mistakes:
+  - mistake: otherwise を単に「その他は」と読む
+    correction: >
+      仮定法での otherwise は「そうでなければ」。
+      隠れた if 条件を表すことが多い。
+  - mistake: I am busy. Otherwise, I will help you. としてしまう
+    correction: >
+      今忙しいので実際には手伝えない。
+      現在の非現実なので would help を使う。
+  - mistake: I was busy. Otherwise, I would help you. としてしまう
+    correction: >
+      過去の事実に反する結果なら would have + 過去分詞。
+      I would have helped you が自然。
+  - mistake: but の後ろの事実を仮定法と無関係だと思う
+    correction: >
+      I would help you, but I am busy. では、
+      but I am busy が「忙しくなければ」という隠れた条件を作っている。
+  - mistake: could have + 過去分詞を単なる過去可能と読む
+    correction: >
+      could have passed は「合格できただろうに」。
+      実際には合格しなかった可能性が高い。
+
+learning_notes:
+  - >
+    otherwise は「そうでなければ」。
+    if がなくても、仮定条件を表せる。
+  - >
+    現在の非現実なら would/could/might + 動詞原形。
+    I am busy. Otherwise, I would help you.
+  - >
+    過去の非現実なら would/could/might have + 過去分詞。
+    I was busy. Otherwise, I would have helped you.
+  - >
+    but の後ろの事実も、仮定法の条件を隠していることがある。
+    I would have gone, but I was sick. は
+    If I had not been sick, I would have gone. に近い。
+
+prerequisites:
+  - g072
+  - g073
+  - g077
+  - g078
+
+next_items:
+  - g080
+  - g081
+  - g082

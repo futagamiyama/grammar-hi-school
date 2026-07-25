@@ -1,0 +1,881 @@
+# =====
+# src/lib/fsrs/contents.yaml
+#
+# ここに have / think / know を入れ始めると、現在形・現在進行形の基本概念と動詞語法が混ざります。
+# そこは g011 以降に分けます。
+#
+# =====
+
+schema_version: 1
+
+course:
+  id: high_school_english_grammar_fsrs
+  title: 高校英文法マスターFSRS
+  description: >
+    高校英文法を、文法対立・動詞用法・構文・総合判断に分けて、
+    FSRSで反復学習するためのコース。
+  language: ja
+  target_level:
+    - 高校基礎
+    - 大学入試基礎
+    - TOEIC 500-700 準備
+
+paths:
+  quiz_dir: ./quizzes
+  quiz_file_pattern: "g{number}.yaml"
+
+fsrs_policy:
+  scheduling_unit: grammar_card
+  review_mode: random_quiz_from_card
+  default_questions_per_review: 3
+
+  rating_rule:
+    AGAIN:
+      condition: "不正解が2問以上、または核心ルールを理解していない"
+    HARD:
+      condition: "1問ミス、または正解しても理由を説明できない、または大きく時間超過"
+    GOOD:
+      condition: "全問正解し、理由も説明できる"
+    EASY:
+      condition: "全問即答し、別例にも応用できる"
+
+  important_note: >
+    正解かつ制限時間内でも、原則はGOOD。
+    EASYは「速い・迷いなし・応用可能」の場合だけ使う。
+
+quiz_policy:
+  choice_style:
+    default: two_choice
+    reason: >
+      4択は成績評価には有効だが、学習用には2択の方が
+      対立する文法テーマが見えやすい。
+
+  time_limit:
+    enabled: true
+    use_for_rating: true
+    default_seconds_per_question: 8
+
+  self_judgement:
+    enabled: true
+    judge_items:
+      - 正解したか
+      - 制限時間内だったか
+      - 理由を説明できるか
+      - 迷わず答えられたか
+
+card_types:
+  grammar_contrast:
+    description: >
+      現在形 vs 現在進行形、過去形 vs 現在完了形のように、
+      2つの文法形式の違いを判断するカード。
+
+  verb_usage:
+    description: >
+      have, think, see など、動詞ごとの意味と使い方を学ぶカード。
+      文法概念とは分けて扱う。
+
+  construction:
+    description: >
+      不定詞、動名詞、関係詞、仮定法、比較、倒置など、
+      構文としてまとまった型を学ぶカード。
+
+  exam_judgement:
+    description: >
+      複数の文法項目を組み合わせて判断する総合問題カード。
+      初期学習ではなく、後半の確認用。
+
+contents:
+  - section_id: s01
+    title: 時制・相の基本対立
+    description: >
+      英文法の中心。まず「時間」ではなく、
+      事実・状態・進行・完了・経験・過去との距離を区別する。
+    items:
+      - id: g001
+        file: g001.yaml
+        type: grammar_contrast
+        title: 現在形 vs 現在進行形
+        core_question: "恒常的なことか、一時的・進行中のことか？"
+
+      - id: g002
+        file: g002.yaml
+        type: grammar_contrast
+        title: 過去形 vs 現在完了形
+        core_question: "過去の出来事として切るか、現在とのつながりを見るか？"
+
+      - id: g003
+        file: g003.yaml
+        type: grammar_contrast
+        title: 過去形 vs 過去完了形
+        core_question: "過去の基準時点より前の出来事か？"
+
+      - id: g004
+        file: g004.yaml
+        type: grammar_contrast
+        title: 現在完了形 vs 現在完了進行形
+        core_question: "結果・経験を言うか、継続中の動作を強調するか？"
+
+      - id: g005
+        file: g005.yaml
+        type: grammar_contrast
+        title: 未来表現 will vs be going to
+        core_question: "その場の意志・予測か、すでにある予定・兆候か？"
+
+      - id: g006
+        file: g006.yaml
+        type: grammar_contrast
+        title: 未来表現 will vs 現在進行形
+        core_question: "単なる未来か、手配済みの予定か？"
+
+      - id: g007
+        file: g007.yaml
+        type: grammar_contrast
+        title: 未来表現 will vs 現在形
+        core_question: "未来の予定か、時刻表・確定スケジュールか？"
+
+      - id: g008
+        file: g008.yaml
+        type: grammar_contrast
+        title: used to vs would
+        core_question: "過去の状態か、過去の習慣的動作か？"
+
+      - id: g009
+        file: g009.yaml
+        type: grammar_contrast
+        title: 現在完了形 vs 過去完了形
+        core_question: "基準時点が現在か、過去か？"
+
+      - id: g010
+        file: g010.yaml
+        type: grammar_contrast
+        title: 時・条件の副詞節
+        core_question: "未来のことでも現在形を使う場面か？"
+
+  - section_id: s02
+    title: 現在形・現在進行形と動詞用法
+    description: >
+      現在形・現在進行形の一般ルールとは別に、
+      動詞ごとの意味・状態動詞・動作動詞を学ぶ。
+    items:
+      - id: g011
+        file: g011.yaml
+        type: verb_usage
+        title: have の現在形・進行形
+        core_question: "所有のhaveか、食事・会議など出来事のhaveか？"
+
+      - id: g012
+        file: g012.yaml
+        type: verb_usage
+        title: think の現在形・進行形
+        core_question: "思う believe か、考えている consider か？"
+
+      - id: g013
+        file: g013.yaml
+        type: verb_usage
+        title: be と be being
+        core_question: "性質を述べるのか、一時的な振る舞いを述べるのか？"
+
+      - id: g014
+        file: g014.yaml
+        type: verb_usage
+        title: live / work / stay
+        core_question: "恒常的な状態か、一時的な滞在・勤務か？"
+
+      - id: g015
+        file: g015.yaml
+        type: verb_usage
+        title: know / believe / understand
+        core_question: "状態動詞として進行形にしにくい動詞を判断する"
+
+      - id: g016
+        file: g016.yaml
+        type: verb_usage
+        title: like / love / want / need
+        core_question: "感情・欲求・必要を表す状態動詞を判断する"
+
+      - id: g017
+        file: g017.yaml
+        type: verb_usage
+        title: see / look / watch
+        core_question: "見える状態か、意識して見る動作か？"
+
+      - id: g018
+        file: g018.yaml
+        type: verb_usage
+        title: hear / listen
+        core_question: "聞こえる状態か、意識して聞く動作か？"
+
+      - id: g019
+        file: g019.yaml
+        type: verb_usage
+        title: taste / smell / feel
+        core_question: "感覚を表す状態か、試す動作か？"
+
+      - id: g020
+        file: g020.yaml
+        type: verb_usage
+        title: cost / own / belong / mean
+        core_question: "進行形にしにくい典型的な状態動詞を判断する"
+
+  - section_id: s03
+    title: 助動詞・法
+    description: >
+      can, must, should, would などを、日本語訳ではなく、
+      話し手の判断・確信・義務・推量として理解する。
+    items:
+      - id: g021
+        file: g021.yaml
+        type: grammar_contrast
+        title: can vs be able to
+        core_question: "一般的能力か、特定状況で実際にできたことか？"
+
+      - id: g022
+        file: g022.yaml
+        type: grammar_contrast
+        title: must vs have to
+        core_question: "話し手の判断による義務か、外部事情による必要か？"
+
+      - id: g023
+        file: g023.yaml
+        type: grammar_contrast
+        title: must not vs do not have to
+        core_question: "禁止か、不要か？"
+
+      - id: g024
+        file: g024.yaml
+        type: grammar_contrast
+        title: should vs had better
+        core_question: "助言か、強い警告・切迫した勧めか？"
+
+      - id: g025
+        file: g025.yaml
+        type: grammar_contrast
+        title: may vs might
+        core_question: "可能性の強さ・距離感を判断する"
+
+      - id: g026
+        file: g026.yaml
+        type: grammar_contrast
+        title: will vs would
+        core_question: "直接的な意志・予測か、距離を置いた表現か？"
+
+      - id: g027
+        file: g027.yaml
+        type: grammar_contrast
+        title: could の意味
+        core_question: "過去の能力か、控えめな可能性・依頼か？"
+
+      - id: g028
+        file: g028.yaml
+        type: grammar_contrast
+        title: should have 過去分詞
+        core_question: "過去にすべきだったが、しなかったことか？"
+
+      - id: g029
+        file: g029.yaml
+        type: grammar_contrast
+        title: must have 過去分詞
+        core_question: "過去について強く推量しているか？"
+
+      - id: g030
+        file: g030.yaml
+        type: grammar_contrast
+        title: cannot have 過去分詞
+        core_question: "過去についてありえないと判断しているか？"
+
+  - section_id: s04
+    title: 受動態・態
+    description: >
+      能動態と受動態を、単なる書き換えではなく、
+      情報の焦点の違いとして学ぶ。
+    items:
+      - id: g031
+        file: g031.yaml
+        type: grammar_contrast
+        title: 能動態 vs 受動態
+        core_question: "行為者を中心にするか、受け手を中心にするか？"
+
+      - id: g032
+        file: g032.yaml
+        type: construction
+        title: by を使う受動態・使わない受動態
+        core_question: "行為者を言う必要があるか？"
+
+      - id: g033
+        file: g033.yaml
+        type: construction
+        title: 進行形の受動態
+        core_question: "今まさに行われている受け身か？"
+
+      - id: g034
+        file: g034.yaml
+        type: construction
+        title: 完了形の受動態
+        core_question: "すでに行われた結果が現在に関係しているか？"
+
+      - id: g035
+        file: g035.yaml
+        type: construction
+        title: 第4文型の受動態
+        core_question: "人を主語にするか、物を主語にするか？"
+
+      - id: g036
+        file: g036.yaml
+        type: construction
+        title: 第5文型の受動態
+        core_question: "目的語補語をどう残すか？"
+
+      - id: g037
+        file: g037.yaml
+        type: construction
+        title: 群動詞の受動態
+        core_question: "look after, take care of などを1まとまりで扱えるか？"
+
+      - id: g038
+        file: g038.yaml
+        type: construction
+        title: 感情を表す受動態
+        core_question: "excited, interested, surprised などを正しく使えるか？"
+
+  - section_id: s05
+    title: 不定詞・動名詞・分詞
+    description: >
+      to do, doing, done を、日本語訳ではなく、
+      未来性・一般性・進行・受動・完了の感覚で区別する。
+    items:
+      - id: g039
+        file: g039.yaml
+        type: grammar_contrast
+        title: 不定詞 vs 動名詞
+        core_question: "これからすることか、すでにある行為・一般的行為か？"
+
+      - id: g040
+        file: g040.yaml
+        type: verb_usage
+        title: remember to do vs remember doing
+        core_question: "これからすることを覚えているか、したことを覚えているか？"
+
+      - id: g041
+        file: g041.yaml
+        type: verb_usage
+        title: forget to do vs forget doing
+        core_question: "し忘れたのか、したことを忘れたのか？"
+
+      - id: g042
+        file: g042.yaml
+        type: verb_usage
+        title: stop to do vs stop doing
+        core_question: "するために止まるのか、していることをやめるのか？"
+
+      - id: g043
+        file: g043.yaml
+        type: verb_usage
+        title: try to do vs try doing
+        core_question: "努力してやろうとするのか、試しにやってみるのか？"
+
+      - id: g044
+        file: g044.yaml
+        type: construction
+        title: want 人 to do
+        core_question: "人に〜してほしい構文を作れるか？"
+
+      - id: g045
+        file: g045.yaml
+        type: construction
+        title: too ... to do
+        core_question: "あまりに〜なのでできない、を判断できるか？"
+
+      - id: g046
+        file: g046.yaml
+        type: construction
+        title: enough to do
+        core_question: "〜するのに十分か？"
+
+      - id: g047
+        file: g047.yaml
+        type: construction
+        title: 現在分詞 vs 過去分詞
+        core_question: "する側か、される側か？"
+
+      - id: g048
+        file: g048.yaml
+        type: construction
+        title: 分詞構文
+        core_question: "接続詞と主語を省いた構造を読めるか？"
+
+  - section_id: s06
+    title: 関係詞
+    description: >
+      関係詞を、先行詞と空所の関係として理解する。
+    items:
+      - id: g049
+        file: g049.yaml
+        type: construction
+        title: who vs which
+        core_question: "先行詞が人か物か？"
+
+      - id: g050
+        file: g050.yaml
+        type: construction
+        title: who vs whom
+        core_question: "関係詞が主語か目的語か？"
+
+      - id: g051
+        file: g051.yaml
+        type: construction
+        title: which vs that
+        core_question: "制限用法でthatが自然な場面か？"
+
+      - id: g052
+        file: g052.yaml
+        type: construction
+        title: whose
+        core_question: "所有関係を表しているか？"
+
+      - id: g053
+        file: g053.yaml
+        type: construction
+        title: where vs which
+        core_question: "場所そのものか、場所を表す名詞を目的語にしているか？"
+
+      - id: g054
+        file: g054.yaml
+        type: construction
+        title: when vs which
+        core_question: "時そのものか、時を表す名詞を目的語にしているか？"
+
+      - id: g055
+        file: g055.yaml
+        type: construction
+        title: why vs which
+        core_question: "理由を表す関係副詞か？"
+
+      - id: g056
+        file: g056.yaml
+        type: construction
+        title: what
+        core_question: "the thing which と同じ働きか？"
+
+      - id: g057
+        file: g057.yaml
+        type: construction
+        title: 非制限用法
+        core_question: "追加説明として読めるか？"
+
+      - id: g058
+        file: g058.yaml
+        type: construction
+        title: 前置詞 + 関係代名詞
+        core_question: "前置詞と関係詞のつながりを見抜けるか？"
+
+  - section_id: s07
+    title: 比較
+    description: >
+      比較を、形の暗記ではなく、基準との差・同等性・最上位として扱う。
+    items:
+      - id: g059
+        file: g059.yaml
+        type: construction
+        title: 原級比較 as ... as
+        core_question: "同じ程度であることを表しているか？"
+
+      - id: g060
+        file: g060.yaml
+        type: construction
+        title: 比較級 than
+        core_question: "何と何を比べているか？"
+
+      - id: g061
+        file: g061.yaml
+        type: construction
+        title: 最上級
+        core_question: "範囲の中で最も〜か？"
+
+      - id: g062
+        file: g062.yaml
+        type: construction
+        title: less vs fewer
+        core_question: "不可算か可算複数か？"
+
+      - id: g063
+        file: g063.yaml
+        type: construction
+        title: more and more
+        core_question: "だんだん変化しているか？"
+
+      - id: g064
+        file: g064.yaml
+        type: construction
+        title: the 比較級, the 比較級
+        core_question: "一方が変わると他方も変わる関係か？"
+
+      - id: g065
+        file: g065.yaml
+        type: construction
+        title: no more than / not more than
+        core_question: "感情的に少ないのか、単に上限なのか？"
+
+      - id: g066
+        file: g066.yaml
+        type: construction
+        title: no less than / not less than
+        core_question: "感情的に多いのか、単に下限なのか？"
+
+  - section_id: s08
+    title: 仮定法
+    description: >
+      仮定法を「過去形なのに現在」と覚えるのではなく、
+      現実から距離を置く表現として学ぶ。
+    items:
+      - id: g067
+        file: g067.yaml
+        type: grammar_contrast
+        title: 仮定法過去
+        core_question: "現在の事実と違う仮定か？"
+
+      - id: g068
+        file: g068.yaml
+        type: grammar_contrast
+        title: 仮定法過去完了
+        core_question: "過去の事実と違う仮定か？"
+
+      - id: g069
+        file: g069.yaml
+        type: construction
+        title: I wish + 仮定法
+        core_question: "現実と違う願望か？"
+
+      - id: g070
+        file: g070.yaml
+        type: construction
+        title: as if + 仮定法
+        core_question: "実際とは違うように見える・振る舞うか？"
+
+      - id: g071
+        file: g071.yaml
+        type: construction
+        title: If it were not for
+        core_question: "もし〜がなければ、という条件か？"
+
+      - id: g072
+        file: g072.yaml
+        type: construction
+        title: without / but for
+        core_question: "if it were not for と同じ働きか？"
+
+      - id: g073
+        file: g073.yaml
+        type: construction
+        title: 仮定法の倒置
+        core_question: "ifが省略され、語順が変わっているか？"
+
+      - id: g074
+        file: g074.yaml
+        type: construction
+        title: mixed conditional
+        core_question: "過去の仮定と現在の結果が混ざっているか？"
+
+  - section_id: s09
+    title: 名詞・冠詞・代名詞
+    description: >
+      a, the, 無冠詞、one, another, other などを、
+      名詞の特定性・数・範囲として理解する。
+    items:
+      - id: g075
+        file: g075.yaml
+        type: grammar_contrast
+        title: a vs the
+        core_question: "初出・不特定か、特定済みか？"
+
+      - id: g076
+        file: g076.yaml
+        type: grammar_contrast
+        title: the vs 無冠詞
+        core_question: "特定のものか、一般概念か？"
+
+      - id: g077
+        file: g077.yaml
+        type: grammar_contrast
+        title: 可算名詞 vs 不可算名詞
+        core_question: "1つ2つと数える対象か？"
+
+      - id: g078
+        file: g078.yaml
+        type: grammar_contrast
+        title: some vs any
+        core_question: "肯定的に存在を見ているか、不定・疑問・否定か？"
+
+      - id: g079
+        file: g079.yaml
+        type: grammar_contrast
+        title: many vs much
+        core_question: "可算複数か、不可算か？"
+
+      - id: g080
+        file: g080.yaml
+        type: grammar_contrast
+        title: a few vs few
+        core_question: "少しはあるのか、ほとんどないのか？"
+
+      - id: g081
+        file: g081.yaml
+        type: grammar_contrast
+        title: a little vs little
+        core_question: "少しはあるのか、ほとんどないのか？"
+
+      - id: g082
+        file: g082.yaml
+        type: grammar_contrast
+        title: another vs other vs the other
+        core_question: "もう1つか、他のいくつかか、残り1つか？"
+
+  - section_id: s10
+    title: 接続詞・節
+    description: >
+      because, although, if, whether などを、
+      文と文の関係として理解する。
+    items:
+      - id: g083
+        file: g083.yaml
+        type: grammar_contrast
+        title: because vs because of
+        core_question: "後ろに文が来るか、名詞が来るか？"
+
+      - id: g084
+        file: g084.yaml
+        type: grammar_contrast
+        title: although vs despite
+        core_question: "後ろに文が来るか、名詞が来るか？"
+
+      - id: g085
+        file: g085.yaml
+        type: grammar_contrast
+        title: if vs whether
+        core_question: "条件か、〜かどうかか？"
+
+      - id: g086
+        file: g086.yaml
+        type: grammar_contrast
+        title: so that vs so ... that
+        core_question: "目的か、結果か？"
+
+      - id: g087
+        file: g087.yaml
+        type: grammar_contrast
+        title: unless vs if not
+        core_question: "〜でない限り、という条件か？"
+
+      - id: g088
+        file: g088.yaml
+        type: grammar_contrast
+        title: while vs during
+        core_question: "後ろに文が来るか、名詞が来るか？"
+
+      - id: g089
+        file: g089.yaml
+        type: grammar_contrast
+        title: when vs while
+        core_question: "一点の時か、継続中の時か？"
+
+      - id: g090
+        file: g090.yaml
+        type: grammar_contrast
+        title: before vs by the time
+        core_question: "単に前か、その時までに完了しているか？"
+
+  - section_id: s11
+    title: 語順・強調・倒置
+    description: >
+      英語の語順を、意味の焦点と文構造の変化として扱う。
+    items:
+      - id: g091
+        file: g091.yaml
+        type: construction
+        title: 疑問文の語順
+        core_question: "助動詞・be動詞・一般動詞の疑問文を区別できるか？"
+
+      - id: g092
+        file: g092.yaml
+        type: construction
+        title: 間接疑問文
+        core_question: "疑問文の語順ではなく、普通の語順に戻せるか？"
+
+      - id: g093
+        file: g093.yaml
+        type: construction
+        title: 否定語倒置
+        core_question: "Never, Little, Hardly などで倒置が起きているか？"
+
+      - id: g094
+        file: g094.yaml
+        type: construction
+        title: 強調構文
+        core_question: "It is ... that の中で何が強調されているか？"
+
+      - id: g095
+        file: g095.yaml
+        type: construction
+        title: so / neither の倒置
+        core_question: "私もそうだ・私も違う、を正しく作れるか？"
+
+      - id: g096
+        file: g096.yaml
+        type: construction
+        title: 省略
+        core_question: "繰り返しを避けるために何が省略されているか？"
+
+  - section_id: s12
+    title: 重要動詞・語法
+    description: >
+      文法書では細かく扱われがちだが、
+      実際には動詞ごとの型としてFSRSに載せるべき項目。
+    items:
+      - id: g097
+        file: g097.yaml
+        type: verb_usage
+        title: say / tell / speak / talk
+        core_question: "何を言うか、誰に言うか、会話するかを判断する"
+
+      - id: g098
+        file: g098.yaml
+        type: verb_usage
+        title: make / let / have
+        core_question: "使役の強さと形を区別できるか？"
+
+      - id: g099
+        file: g099.yaml
+        type: verb_usage
+        title: make / become / get / turn
+        core_question: "〜になる、〜にする、の違いを判断する"
+
+      - id: g100
+        file: g100.yaml
+        type: verb_usage
+        title: rise / raise
+        core_question: "自動詞か他動詞か？"
+
+      - id: g101
+        file: g101.yaml
+        type: verb_usage
+        title: lie / lay
+        core_question: "横たわるか、横たえるか？"
+
+      - id: g102
+        file: g102.yaml
+        type: verb_usage
+        title: borrow / lend / rent
+        core_question: "借りる・貸す・有料で借りるを区別できるか？"
+
+      - id: g103
+        file: g103.yaml
+        type: verb_usage
+        title: bring / take / carry
+        core_question: "話し手の場所との関係を判断できるか？"
+
+      - id: g104
+        file: g104.yaml
+        type: verb_usage
+        title: find / find out / notice / realize
+        core_question: "見つける・知る・気づくの違いを判断する"
+
+      - id: g105
+        file: g105.yaml
+        type: verb_usage
+        title: keep / remain / stay
+        core_question: "状態の継続を表す動詞を使い分ける"
+
+  - section_id: s13
+    title: 総合判断
+    description: >
+      後半用。単一テーマを学んだ後で、
+      複数の文法項目をまとめて判断する。
+    items:
+      - id: g106
+        file: g106.yaml
+        type: exam_judgement
+        title: 時制総合
+        core_question: "文脈から適切な時制を選べるか？"
+
+      - id: g107
+        file: g107.yaml
+        type: exam_judgement
+        title: 助動詞総合
+        core_question: "義務・推量・可能性・後悔を区別できるか？"
+
+      - id: g108
+        file: g108.yaml
+        type: exam_judgement
+        title: 準動詞総合
+        core_question: "to do, doing, done を文脈で判断できるか？"
+
+      - id: g109
+        file: g109.yaml
+        type: exam_judgement
+        title: 関係詞総合
+        core_question: "先行詞と空所から関係詞を判断できるか？"
+
+      - id: g110
+        file: g110.yaml
+        type: exam_judgement
+        title: 仮定法総合
+        core_question: "現実との距離と時制のズレを判断できるか？"
+
+      - id: g111
+        file: g111.yaml
+        type: exam_judgement
+        title: 接続詞総合
+        core_question: "文と文の論理関係を判断できるか？"
+
+      - id: g112
+        file: g112.yaml
+        type: exam_judgement
+        title: 冠詞・名詞総合
+        core_question: "特定性・可算性・数量を判断できるか？"
+
+      - id: g113
+        file: g113.yaml
+        type: exam_judgement
+        title: 動詞語法総合
+        core_question: "動詞ごとの型と意味を判断できるか？"
+
+      - id: g114
+        file: g114.yaml
+        type: exam_judgement
+        title: 語順・倒置・強調総合
+        core_question: "文構造の変化を見抜けるか？"
+
+      - id: g115
+        file: g115.yaml
+        type: exam_judgement
+        title: 入試英文法総合 1
+        core_question: "複数テーマを混ぜた基本問題に対応できるか？"
+
+      - id: g116
+        file: g116.yaml
+        type: exam_judgement
+        title: 入試英文法総合 2
+        core_question: "文脈を読んで文法形式を判断できるか？"
+
+      - id: g117
+        file: g117.yaml
+        type: exam_judgement
+        title: 入試英文法総合 3
+        core_question: "ひっかけではなく意味から判断できるか？"
+
+      - id: g118
+        file: g118.yaml
+        type: exam_judgement
+        title: 語法・構文総合 1
+        core_question: "動詞・形容詞・前置詞の型を判断できるか？"
+
+      - id: g119
+        file: g119.yaml
+        type: exam_judgement
+        title: 語法・構文総合 2
+        core_question: "似た表現の意味差を判断できるか？"
+
+      - id: g120
+        file: g120.yaml
+        type: exam_judgement
+        title: 高校英文法総合確認
+        core_question: "高校英文法の主要項目を横断的に使えるか？"

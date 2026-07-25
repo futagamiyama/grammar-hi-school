@@ -1,0 +1,255 @@
+id: g023
+file: g023.yaml
+title: must not vs do not have to
+type: grammar_contrast
+section:
+  id: s03
+  title: 助動詞・法
+level: basic
+target: 高校英文法基礎
+core_question: 禁止か、不要か？
+core_concept:
+  must_not:
+    form: must not + 動詞の原形
+    meaning: 〜してはいけない、という禁止を表す
+    image: してはいけない / 禁止されている / 強く止めている
+    examples:
+    - sentence: You must not touch this wire.
+      ja: この電線に触ってはいけない。
+      point: 危険なので、触ることを禁止している。
+    - sentence: Students must not use phones during the test.
+      ja: 生徒は試験中に携帯電話を使ってはいけない。
+      point: 試験中の行為を禁止している。
+    - sentence: You must not tell anyone this secret.
+      ja: この秘密を誰にも話してはいけない。
+      point: 話すことを強く禁止している。
+  do_not_have_to:
+    form: do not have to + 動詞の原形
+    meaning: 〜する必要はない、という不要を表す
+    image: しなくてもよい / 義務ではない / 必要がない
+    examples:
+    - sentence: You do not have to come early tomorrow.
+      ja: 明日は早く来る必要はない。
+      point: 早く来てもよいが、そうする必要はない。
+    - sentence: She does not have to wear a uniform on Friday.
+      ja: 彼女は金曜日には制服を着る必要がない。
+      point: 制服を着てもよいが、義務ではない。
+    - sentence: We do not have to pay today.
+      ja: 私たちは今日支払う必要はない。
+      point: 今日支払う義務がないことを表している。
+main_rule: must not は「〜してはいけない」という禁止を表す。do not have to は「〜する必要はない」という不要を表す。日本語の『〜してはいけない』と『〜しなくてもよい』を混同しないことが重要。must
+  の否定は『不要』ではなく『禁止』になる。
+contrast_pairs:
+- must_not: You must not enter this room.
+  do_not_have_to: You do not have to enter this room.
+  point: must not は入室禁止、do not have to は入室する必要がないという意味。
+- must_not: Students must not talk during the test.
+  do_not_have_to: Students do not have to write their names on this form.
+  point: must not は話すことを禁止し、do not have to は名前を書く必要がないことを表す。
+- must_not: You must not forget this password.
+  do_not_have_to: You do not have to remember this old password.
+  point: must not は忘れてはいけない、do not have to は覚えておく必要がない。
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.6
+    max_threshold_ratio: 0.85
+review_questions:
+- id: g023_q001
+  question_type: two_choice
+  prompt: You ___ touch this wire. It is dangerous.
+  choices:
+  - text: must not
+    correct: true
+  - text: do not have to
+    correct: false
+  answer: must not
+  explanation: It is dangerous から、触ることを禁止している。『触る必要がない』ではなく『触ってはいけない』なので must not
+    が自然。
+  focus:
+  - prohibition
+  - danger
+  - must_not
+- id: g023_q002
+  question_type: two_choice
+  prompt: You ___ come early tomorrow. The meeting starts at ten.
+  choices:
+  - text: must not
+    correct: false
+  - text: do not have to
+    correct: true
+  answer: do not have to
+  explanation: 早く来る義務がないことを表している。早く来ることを禁止しているわけではないので do not have to が自然。
+  focus:
+  - lack_of_necessity
+  - early_arrival
+  - do_not_have_to
+- id: g023_q003
+  question_type: two_choice
+  prompt: Students ___ use phones during the exam.
+  choices:
+  - text: must not
+    correct: true
+  - text: do not have to
+    correct: false
+  answer: must not
+  explanation: 試験中の携帯電話使用は禁止されている。『使う必要がない』ではなく『使ってはいけない』なので must not。
+  focus:
+  - exam_rule
+  - prohibition
+  - must_not
+- id: g023_q004
+  question_type: two_choice
+  prompt: You ___ answer all the questions. Choose five.
+  choices:
+  - text: must not
+    correct: false
+  - text: do not have to
+    correct: true
+  answer: do not have to
+  explanation: Choose five から、全部答える必要はないという意味。全部答えることを禁止しているわけではないので do not have to。
+  focus:
+  - lack_of_necessity
+  - test_instruction
+  - do_not_have_to
+- id: g023_q005
+  question_type: two_choice
+  prompt: You ___ tell anyone this secret.
+  choices:
+  - text: must not
+    correct: true
+  - text: do not have to
+    correct: false
+  answer: must not
+  explanation: 秘密を誰にも話してはいけない、という禁止を表している。したがって must not。
+  focus:
+  - secret
+  - prohibition
+  - must_not
+- id: g023_q006
+  question_type: two_choice
+  prompt: You ___ bring your textbook today. I will give you copies.
+  choices:
+  - text: must not
+    correct: false
+  - text: do not have to
+    correct: true
+  answer: do not have to
+  explanation: コピーを配るので教科書を持ってくる必要がないという意味。持参禁止ではないため do not have to。
+  focus:
+  - lack_of_necessity
+  - textbook
+  - do_not_have_to
+- id: g023_q007
+  question_type: two_choice
+  prompt: Visitors ___ take pictures inside the museum.
+  choices:
+  - text: must not
+    correct: true
+  - text: do not have to
+    correct: false
+  answer: must not
+  explanation: 美術館内での撮影禁止を表している。『撮影する必要がない』ではなく『撮影してはいけない』なので must not。
+  focus:
+  - museum_rule
+  - prohibition
+  - must_not
+- id: g023_q008
+  question_type: two_choice
+  prompt: She ___ wear a uniform on Fridays.
+  choices:
+  - text: must not
+    correct: false
+  - text: does not have to
+    correct: true
+  answer: does not have to
+  explanation: 金曜日は制服を着る必要がない、という不要を表している。主語が She なので does not have to になる。
+  focus:
+  - lack_of_necessity
+  - third_person_singular
+  - does_not_have_to
+- id: g023_q009
+  question_type: two_choice
+  prompt: You ___ park here. This space is for ambulances only.
+  choices:
+  - text: must not
+    correct: true
+  - text: do not have to
+    correct: false
+  answer: must not
+  explanation: 救急車専用スペースなので、ここに駐車してはいけないという禁止を表している。したがって must not。
+  focus:
+  - traffic_rule
+  - prohibition
+  - must_not
+- id: g023_q010
+  question_type: two_choice
+  prompt: We ___ pay now. We can pay later.
+  choices:
+  - text: must not
+    correct: false
+  - text: do not have to
+    correct: true
+  answer: do not have to
+  explanation: 後で支払えるので、今支払う必要はないという意味。支払いを禁止しているわけではないので do not have to。
+  focus:
+  - lack_of_necessity
+  - payment
+  - do_not_have_to
+- id: g023_q011
+  question_type: two_choice
+  prompt: Children ___ play near the river after dark.
+  choices:
+  - text: must not
+    correct: true
+  - text: do not have to
+    correct: false
+  answer: must not
+  explanation: 暗くなってから川の近くで遊ぶことを禁止している。危険を避けるための禁止なので must not。
+  focus:
+  - safety_rule
+  - prohibition
+  - must_not
+- id: g023_q012
+  question_type: two_choice
+  prompt: You ___ finish the report today. Next Monday is fine.
+  choices:
+  - text: must not
+    correct: false
+  - text: do not have to
+    correct: true
+  answer: do not have to
+  explanation: Next Monday is fine から、今日終える必要はないという意味。今日終えることを禁止しているわけではないので do not
+    have to。
+  focus:
+  - lack_of_necessity
+  - deadline
+  - do_not_have_to
+common_mistakes:
+- mistake: must not を『〜する必要がない』と訳してしまう
+  correction: must not は『〜してはいけない』という禁止。不要を表すなら do not have to を使う。
+- mistake: do not have to を『〜してはいけない』と訳してしまう
+  correction: do not have to は『〜しなくてもよい』『〜する必要はない』という意味。禁止ではない。
+- mistake: She do not have to のように三単現を崩してしまう
+  correction: '主語が三人称単数なら does not have to になる。例: She does not have to wear a uniform.'
+learning_notes:
+- must not と do not have to は、肯定形の must / have to よりも意味差が大きい。
+- must not は禁止。相手の行動を止める表現なので、かなり強い。
+- do not have to は不要。してもよいが、義務ではないという意味。
+- 日本語では『〜しなくてよい』と『〜してはいけない』をはっきり分けて考えると間違いにくい。
+prerequisites:
+- g022
+next_items:
+- g024

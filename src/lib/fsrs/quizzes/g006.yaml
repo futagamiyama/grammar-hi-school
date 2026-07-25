@@ -1,0 +1,330 @@
+id: g006
+file: g006.yaml
+
+title: 未来表現 will vs 現在進行形
+type: grammar_contrast
+
+section:
+  id: s01
+  title: 時制・相の基本対立
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 単なる未来・その場の意志か、手配済みの予定か？
+
+core_concept:
+  will:
+    form: will + 動詞の原形
+    meaning: その場で決めた意志・単純な未来・予測を表す
+    image: 今決めた / たぶんそうなる / 未来のことを述べる
+    examples:
+      - sentence: I will call you later.
+        ja: あとで電話します。
+        point: その場で言っている意志・約束。
+      - sentence: I think it will rain tomorrow.
+        ja: 明日は雨が降ると思う。
+        point: 未来についての予測。
+      - sentence: Don't worry. I'll help you.
+        ja: 心配しないで。手伝うよ。
+        point: その場で決めた申し出。
+
+  present_continuous:
+    form: am / is / are + 動詞のing形
+    meaning: すでに手配済みの近い未来の予定を表す
+    image: もう決まっている / 約束・予約・手配がある / カレンダーに入っている
+    examples:
+      - sentence: I am meeting Ken at six.
+        ja: 6時にケンに会う予定です。
+        point: 会う約束がすでに決まっている。
+      - sentence: She is flying to London tomorrow.
+        ja: 彼女は明日ロンドンへ飛ぶ予定です。
+        point: 航空券など、手配済みの予定を表す。
+      - sentence: We are having dinner with them tonight.
+        ja: 今夜、彼らと夕食をとる予定です。
+        point: すでに決まっている約束。
+
+main_rule: >
+  will は「その場で決めた意志」「単純な未来」「予測」を表す。
+  現在進行形は、未来のことでも「すでに手配済みの予定」を表せる。
+  日本語ではどちらも「〜するつもり」「〜する予定」と訳せることがあるため、
+  その場で決めたことか、すでに予定として決まっていることかで判断する。
+
+contrast_pairs:
+  - will: I will call him now.
+    present_continuous: I am meeting him at six.
+    point: >
+      will は今決めた行動、現在進行形はすでに決まっている約束を表す。
+
+  - will: I think she will come soon.
+    present_continuous: She is coming to our office tomorrow.
+    point: >
+      will は予測、現在進行形は手配済みの来訪予定を表す。
+
+  - will: I'll help you with your homework.
+    present_continuous: I am studying with Yuki after school.
+    point: >
+      will はその場の申し出、現在進行形は放課後の約束済み予定を表す。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g006_q001
+    question_type: two_choice
+    prompt: "Look at those dark clouds. I think it ___."
+    choices:
+      - text: will rain
+        correct: true
+      - text: is raining
+        correct: false
+    answer: will rain
+    ja: "あの黒い雲を見て。雨が降ると思う。"
+    explanation: >
+      I think があり、未来についての予測を述べている。
+      したがって will rain が自然。
+    focus:
+      - prediction
+      - will
+
+  - id: g006_q002
+    question_type: two_choice
+    prompt: "I have an appointment. I ___ the dentist at three."
+    choices:
+      - text: will see
+        correct: false
+      - text: am seeing
+        correct: true
+    answer: am seeing
+    ja: "予約があります。3時に歯医者に診てもらう予定です。"
+    explanation: >
+      appointment があり、すでに手配済みの予定を表している。
+      したがって現在進行形 am seeing が自然。
+    focus:
+      - arranged_plan
+      - present_continuous
+
+  - id: g006_q003
+    question_type: two_choice
+    prompt: "A: The phone is ringing. B: I ___ it."
+    choices:
+      - text: will answer
+        correct: true
+      - text: am answering
+        correct: false
+    answer: will answer
+    ja: "A: 電話が鳴っているよ。B: 私が出るよ。"
+    explanation: >
+      その場で決めた行動なので will answer が自然。
+      現在進行形は、すでに予定されていた行動には使えるが、この場面には合わない。
+    focus:
+      - instant_decision
+      - will
+
+  - id: g006_q004
+    question_type: two_choice
+    prompt: "We already bought the tickets. We ___ to Osaka tomorrow."
+    choices:
+      - text: will go
+        correct: false
+      - text: are going
+        correct: true
+    answer: are going
+    ja: "もうチケットを買いました。私たちは明日大阪へ行く予定です。"
+    explanation: >
+      already bought the tickets により、手配済みの予定だとわかる。
+      したがって現在進行形 are going が自然。
+    focus:
+      - arranged_plan
+      - tickets
+      - present_continuous
+
+  - id: g006_q005
+    question_type: two_choice
+    prompt: "Don't worry. I ___ you with the bags."
+    choices:
+      - text: will help
+        correct: true
+      - text: am helping
+        correct: false
+    answer: will help
+    ja: "心配しないで。荷物を持つのを手伝うよ。"
+    explanation: >
+      その場で申し出ているので will help が自然。
+      現在進行形は、すでに予定として決まっている場合に使う。
+    focus:
+      - offer
+      - instant_decision
+      - will
+
+  - id: g006_q006
+    question_type: two_choice
+    prompt: "She ___ her client at 10 a.m. The meeting is on her calendar."
+    choices:
+      - text: will meet
+        correct: false
+      - text: is meeting
+        correct: true
+    answer: is meeting
+    ja: "彼女は午前10時に顧客と会う予定です。その会議は彼女の予定表に入っています。"
+    explanation: >
+      on her calendar から、すでに決まっている予定だとわかる。
+      したがって現在進行形 is meeting が自然。
+    focus:
+      - arranged_plan
+      - calendar
+      - present_continuous
+
+  - id: g006_q007
+    question_type: two_choice
+    prompt: "I don't know the answer, but I ___ it up."
+    choices:
+      - text: will look
+        correct: true
+      - text: am looking
+        correct: false
+    answer: will look
+    ja: "答えはわかりませんが、調べます。"
+    explanation: >
+      今その場で「調べる」と決めているので will look が自然。
+    focus:
+      - instant_decision
+      - will
+
+  - id: g006_q008
+    question_type: two_choice
+    prompt: "My parents ___ us this weekend. We planned it last month."
+    choices:
+      - text: will visit
+        correct: false
+      - text: are visiting
+        correct: true
+    answer: are visiting
+    ja: "両親が今週末私たちを訪ねてくる予定です。先月その予定を立てました。"
+    explanation: >
+      We planned it last month から、すでに決まっている予定だとわかる。
+      したがって現在進行形 are visiting が自然。
+    focus:
+      - arranged_plan
+      - planned
+      - present_continuous
+
+  - id: g006_q009
+    question_type: two_choice
+    prompt: "I think this medicine ___ you feel better."
+    choices:
+      - text: will make
+        correct: true
+      - text: is making
+        correct: false
+    answer: will make
+    ja: "この薬で気分がよくなると思います。"
+    explanation: >
+      I think があり、未来の結果について予測している。
+      したがって will make が自然。
+    focus:
+      - prediction
+      - will
+
+  - id: g006_q010
+    question_type: two_choice
+    prompt: "I can't come tonight. I ___ dinner with my boss."
+    choices:
+      - text: will have
+        correct: false
+      - text: am having
+        correct: true
+    answer: am having
+    ja: "今夜は来られません。上司と夕食をとる予定です。"
+    explanation: >
+      I can't come tonight の理由として、すでに入っている予定を述べている。
+      したがって現在進行形 am having が自然。
+    focus:
+      - arranged_plan
+      - dinner_plan
+      - present_continuous
+
+  - id: g006_q011
+    question_type: two_choice
+    prompt: "It's cold in here. I ___ the window."
+    choices:
+      - text: will close
+        correct: true
+      - text: am closing
+        correct: false
+    answer: will close
+    ja: "ここは寒いですね。窓を閉めます。"
+    explanation: >
+      その場で窓を閉めると決めているので will close が自然。
+    focus:
+      - instant_decision
+      - will
+
+  - id: g006_q012
+    question_type: two_choice
+    prompt: "They ___ to Paris next Monday. Their flight is already booked."
+    choices:
+      - text: will fly
+        correct: false
+      - text: are flying
+        correct: true
+    answer: are flying
+    ja: "彼らは来週月曜日にパリへ飛ぶ予定です。飛行機はすでに予約されています。"
+    explanation: >
+      Their flight is already booked から、手配済みの予定だとわかる。
+      したがって現在進行形 are flying が自然。
+    focus:
+      - arranged_plan
+      - booked
+      - present_continuous
+
+common_mistakes:
+  - mistake: will を未来なら何でも使える形だと思う
+    correction: >
+      will は使える場面が広いが、すでに手配済みの予定では現在進行形の方が自然なことが多い。
+      例: I am meeting Ken at six.
+
+  - mistake: 現在進行形は「今していること」だけだと思う
+    correction: >
+      現在進行形は、未来のことでも、約束・予約・手配がある予定を表せる。
+      例: We are flying to Osaka tomorrow.
+
+  - mistake: 日本語の「〜する予定」をすべて will にしてしまう
+    correction: >
+      日本語では同じように訳せても、英語では「今決めたこと」なら will、
+      「すでに決まっている予定」なら現在進行形が自然。
+
+learning_notes:
+  - >
+    will は「未来」というより、話している時点での意志・予測を表すことが多い。
+  - >
+    現在進行形は、現在の状況の中ですでに動き出している未来の予定を表す。
+  - >
+    appointment, ticket, reservation, calendar, planned, booked などがあると、
+    手配済み予定として現在進行形を選びやすい。
+  - >
+    未来表現は日本語訳ではなく、決定・予測・手配のどれかで判断する。
+
+prerequisites:
+  - g001
+  - g005
+
+next_items:
+  - g007
+  - g010

@@ -1,0 +1,366 @@
+id: g074
+file: g074.yaml
+
+title: I wish + 仮定法
+type: grammar_contrast
+
+section:
+  id: s09
+  title: 仮定法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: I wish の後ろで、現在の残念さと過去の後悔を区別できるか？
+
+core_concept:
+  wish_present:
+    form: I wish + 主語 + 過去形
+    meaning: 今〜ならいいのに
+    image: 現在の事実と違うことを願う
+    examples:
+      - sentence: I wish I were rich.
+        ja: 私が金持ちならいいのに。
+        point: 実際には今金持ちではない。
+      - sentence: I wish I had more time.
+        ja: もっと時間があればいいのに。
+        point: 実際には今あまり時間がない。
+      - sentence: I wish she were here.
+        ja: 彼女がここにいればいいのに。
+        point: 実際には今彼女はここにいない。
+
+  wish_past:
+    form: I wish + 主語 + had + 過去分詞
+    meaning: 過去に〜していればよかったのに
+    image: 過去の事実と違うことを願う
+    examples:
+      - sentence: I wish I had studied harder.
+        ja: もっと一生懸命勉強していればよかったのに。
+        point: 実際には十分に勉強しなかった。
+      - sentence: I wish I had told you the truth.
+        ja: あなたに本当のことを言っていればよかったのに。
+        point: 実際には言わなかった。
+      - sentence: I wish I had not said that.
+        ja: あんなことを言わなければよかったのに。
+        point: 実際には言ってしまった。
+
+  wish_would:
+    form: I wish + 主語 + would + 動詞原形
+    meaning: 〜してくれればいいのに
+    image: 相手や状況への不満・変化への願い
+    examples:
+      - sentence: I wish he would listen to me.
+        ja: 彼が私の話を聞いてくれればいいのに。
+        point: 実際には聞いてくれないことへの不満。
+      - sentence: I wish it would stop raining.
+        ja: 雨がやんでくれればいいのに。
+        point: 今後の変化を願っている。
+      - sentence: I wish you would be quiet.
+        ja: 静かにしてくれればいいのに。
+        point: 相手の行動への不満を表す。
+
+main_rule: >
+  I wish の後ろでは、現実と違うことを願うために仮定法を使う。
+  現在の事実に反する願望なら I wish + 過去形。
+  I wish I were rich. は「金持ちならいいのに」で、実際には今金持ちではない。
+  過去の事実に反する後悔なら I wish + had + 過去分詞。
+  I wish I had studied harder. は「もっと勉強していればよかったのに」で、
+  実際には十分に勉強しなかった。
+  相手や状況が変わってほしいときは I wish + would + 動詞原形 を使うことがある。
+
+contrast_pairs:
+  - present_wish: I wish I had more time.
+    past_regret: I wish I had had more time.
+    point: >
+      had more time は現在の願望。
+      had had more time は過去の後悔。
+
+  - present_wish: I wish she were here.
+    past_regret: I wish she had been there.
+    point: >
+      were here は今ここにいないことへの願望。
+      had been there は過去にそこにいなかったことへの後悔。
+
+  - present_wish: I wish I knew the answer.
+    past_regret: I wish I had known the answer.
+    point: >
+      knew は今知らない。
+      had known は過去に知らなかった。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または I wish + 過去形 と I wish + had + 過去分詞 の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g074_q001
+    question_type: two_choice
+    prompt: I wish I ___ rich.
+    choices:
+      - text: were
+        correct: true
+      - text: am
+        correct: false
+    answer: were
+    explanation: >
+      今の事実に反する願望を表している。
+      仮定法なので I wish I were rich が自然。
+    translation: 私が金持ちならいいのに。
+    focus:
+      - wish_present
+      - were
+      - unreal_present
+
+  - id: g074_q002
+    question_type: two_choice
+    prompt: I wish I ___ more time now.
+    choices:
+      - text: had
+        correct: true
+      - text: have
+        correct: false
+    answer: had
+    explanation: >
+      now があり、現在の事実に反する願望。
+      I wish の後ろでは過去形 had を使う。
+    translation: 今もっと時間があればいいのに。
+    focus:
+      - wish_present
+      - had
+      - now
+
+  - id: g074_q003
+    question_type: two_choice
+    prompt: I wish she ___ here.
+    choices:
+      - text: were
+        correct: true
+      - text: is
+        correct: false
+    answer: were
+    explanation: >
+      実際には今ここにいない人について願っている。
+      I wish she were here が自然。
+    translation: 彼女がここにいればいいのに。
+    focus:
+      - wish_present
+      - were
+      - here
+
+  - id: g074_q004
+    question_type: two_choice
+    prompt: I wish I ___ harder when I was a student.
+    choices:
+      - text: had studied
+        correct: true
+      - text: studied
+        correct: false
+    answer: had studied
+    explanation: >
+      when I was a student から、過去の後悔を表している。
+      I wish + had + 過去分詞を使う。
+    translation: 学生だったころ、もっと一生懸命勉強していればよかったのに。
+    focus:
+      - wish_past
+      - had_studied
+      - past_regret
+
+  - id: g074_q005
+    question_type: two_choice
+    prompt: I wish I ___ you the truth yesterday.
+    choices:
+      - text: had told
+        correct: true
+      - text: told
+        correct: false
+    answer: had told
+    explanation: >
+      yesterday があり、過去に言わなかったことへの後悔。
+      I wish I had told you the truth が自然。
+    translation: 昨日あなたに本当のことを言っていればよかったのに。
+    focus:
+      - wish_past
+      - had_told
+      - yesterday
+
+  - id: g074_q006
+    question_type: two_choice
+    prompt: I wish I ___ that.
+    choices:
+      - text: had not said
+        correct: true
+      - text: did not say
+        correct: false
+    answer: had not said
+    explanation: >
+      すでに言ってしまったことへの後悔を表す。
+      過去の事実に反するので had not said を使う。
+    translation: あんなことを言わなければよかったのに。
+    focus:
+      - wish_past
+      - negative_past_regret
+      - had_not_said
+
+  - id: g074_q007
+    question_type: two_choice
+    prompt: I wish I ___ the answer now.
+    choices:
+      - text: knew
+        correct: true
+      - text: know
+        correct: false
+    answer: knew
+    explanation: >
+      now があり、現在の事実に反する願望。
+      実際には今答えを知らないので knew を使う。
+    translation: 今答えを知っていればいいのに。
+    focus:
+      - wish_present
+      - knew
+      - now
+
+  - id: g074_q008
+    question_type: two_choice
+    prompt: I wish I ___ the answer then.
+    choices:
+      - text: had known
+        correct: true
+      - text: knew
+        correct: false
+    answer: had known
+    explanation: >
+      then が過去を指しており、過去に知らなかったことへの後悔。
+      had known を使う。
+    translation: その時答えを知っていればよかったのに。
+    focus:
+      - wish_past
+      - had_known
+      - then
+
+  - id: g074_q009
+    question_type: two_choice
+    prompt: I wish he ___ to me.
+    choices:
+      - text: would listen
+        correct: true
+      - text: listens
+        correct: false
+    answer: would listen
+    explanation: >
+      相手が聞いてくれないことへの不満・変化への願い。
+      I wish he would listen to me が自然。
+    translation: 彼が私の話を聞いてくれればいいのに。
+    focus:
+      - wish_would
+      - complaint
+      - would_listen
+
+  - id: g074_q010
+    question_type: two_choice
+    prompt: I wish it ___ raining.
+    choices:
+      - text: would stop
+        correct: true
+      - text: stops
+        correct: false
+    answer: would stop
+    explanation: >
+      雨がやんでほしいという今後の変化への願い。
+      I wish it would stop raining が自然。
+    translation: 雨がやんでくれればいいのに。
+    focus:
+      - wish_would
+      - change
+      - stop_raining
+
+  - id: g074_q011
+    question_type: two_choice
+    prompt: I wish I ___ a car.
+    choices:
+      - text: had
+        correct: true
+      - text: have
+        correct: false
+    answer: had
+    explanation: >
+      今車を持っていないことへの願望。
+      現在の非現実なので過去形 had を使う。
+    translation: 車を持っていればいいのに。
+    focus:
+      - wish_present
+      - had
+      - possession
+
+  - id: g074_q012
+    question_type: two_choice
+    prompt: I wish I ___ a car last year.
+    choices:
+      - text: had bought
+        correct: true
+      - text: bought
+        correct: false
+    answer: had bought
+    explanation: >
+      last year があり、過去に買わなかったことへの後悔。
+      I wish I had bought a car last year が自然。
+    translation: 昨年車を買っていればよかったのに。
+    focus:
+      - wish_past
+      - had_bought
+      - last_year
+
+common_mistakes:
+  - mistake: I wish I am rich. と現在形を使ってしまう
+    correction: >
+      現在の事実に反する願望では I wish I were rich. のように過去形を使う。
+  - mistake: I wish I studied harder yesterday. としてしまう
+    correction: >
+      過去の後悔なら I wish I had studied harder. のように had + 過去分詞を使う。
+  - mistake: I wish I had more time と I wish I had had more time を混同する
+    correction: >
+      I wish I had more time は今もっと時間があればいいのに。
+      I wish I had had more time は過去にもっと時間があればよかったのに。
+  - mistake: I wish he listens to me. とする
+    correction: >
+      相手の行動が変わってほしいときは I wish he would listen to me. が自然。
+  - mistake: I wish の後ろを普通の願望と同じに考える
+    correction: >
+      I wish + 仮定法は、実際にはそうでないことへの願望・後悔を表す。
+
+learning_notes:
+  - >
+    I wish + 過去形 は、現在の事実に反する願望。
+    I wish I knew the answer. は「答えを知っていればいいのに」。
+  - >
+    I wish + had + 過去分詞 は、過去の事実に反する後悔。
+    I wish I had known the answer. は「答えを知っていればよかったのに」。
+  - >
+    I wish + would + 動詞原形 は、相手や状況が変わってほしいときに使う。
+  - >
+    now / yesterday / then / last year などの時を見て、
+    現在の願望か過去の後悔かを判断する。
+
+prerequisites:
+  - g072
+  - g073
+
+next_items:
+  - g075
+  - g076
+  - g077

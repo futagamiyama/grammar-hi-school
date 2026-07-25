@@ -1,0 +1,367 @@
+id: g058
+file: g058.yaml
+
+title: the 比較級, the 比較級
+type: construction
+
+section:
+  id: s07
+  title: 形容詞・副詞・比較
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 〜すればするほど、ますます〜という比例関係を読めるか？
+
+core_concept:
+  the_comparative_the_comparative:
+    form: the + 比較級 + 主語 + 動詞, the + 比較級 + 主語 + 動詞
+    meaning: 〜すればするほど、ますます〜
+    image: 一方が増えると、もう一方も連動して変化する
+    examples:
+      - sentence: The more you practice, the better you become.
+        ja: 練習すればするほど、ますます上達する。
+        point: 練習量が増えると、上達の程度も増える。
+      - sentence: The older we get, the wiser we become.
+        ja: 年を取れば取るほど、私たちは賢くなる。
+        point: 年齢の変化と賢さの変化が連動している。
+      - sentence: The faster you run, the sooner you will arrive.
+        ja: 速く走れば走るほど、早く到着する。
+        point: 走る速さと到着時刻が連動している。
+
+  first_the:
+    form: the + 比較級 + 主語 + 動詞
+    meaning: 条件・原因側の変化を表す
+    image: 変化のきっかけ
+    examples:
+      - sentence: The more you read,
+        ja: 読めば読むほど、
+        point: 読む量が増えるという条件側。
+      - sentence: The harder you work,
+        ja: 一生懸命働けば働くほど、
+        point: 努力の程度が増えるという条件側。
+      - sentence: The less you sleep,
+        ja: 睡眠が少なければ少ないほど、
+        point: 睡眠量が減るという条件側。
+
+  second_the:
+    form: the + 比較級 + 主語 + 動詞
+    meaning: 結果側の変化を表す
+    image: 条件に応じて起きる結果
+    examples:
+      - sentence: the more you learn.
+        ja: ますます多くを学ぶ。
+        point: 読む量に応じて学ぶ量が増える。
+      - sentence: the more successful you will be.
+        ja: ますます成功する。
+        point: 努力に応じて成功の可能性が高まる。
+      - sentence: the more tired you feel.
+        ja: ますます疲れを感じる。
+        point: 睡眠が少ないほど疲れが増える。
+
+main_rule: >
+  the 比較級, the 比較級 は「〜すればするほど、ますます〜」という比例関係を表す。
+  最初の the 比較級 は条件・原因側を表し、後ろの the 比較級 は結果側を表す。
+  The more you practice, the better you become. は
+  「練習すればするほど、ますます上達する」。
+  ここでの the は普通の「その」という意味ではなく、比較級を使った決まった構文の一部。
+  比較級なので more, better, older, faster, harder, less などを使う。
+
+contrast_pairs:
+  - normal_comparison: You practice more than before.
+    proportional_comparison: The more you practice, the better you become.
+    point: >
+      more than before は普通の比較。
+      The more..., the better... は2つの変化が連動する比例関係。
+
+  - simple_comparative: This problem is harder than that one.
+    proportional_comparison: The harder the problem is, the more carefully you must read it.
+    point: >
+      harder than は2つを比べる。
+      The harder..., the more carefully... は「難しければ難しいほど、より注意深く読む」。
+
+  - positive_relation: The faster you run, the sooner you will arrive.
+    negative_relation: The less you sleep, the more tired you feel.
+    point: >
+      一方が増える関係だけでなく、一方が減るほど他方が増える関係も表せる。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または the 比較級, the 比較級 の比例関係を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g058_q001
+    question_type: two_choice
+    prompt: ___ more you practice, the better you become.
+    choices:
+      - text: The
+        correct: true
+      - text: A
+        correct: false
+    answer: The
+    explanation: >
+      the 比較級, the 比較級 の構文。
+      The more you practice, the better you become. で
+      「練習すればするほど上達する」。
+    translation: 練習すればするほど、ますます上達する。
+    focus:
+      - the_comparative_the_comparative
+      - proportional_relation
+      - the_more_the_better
+
+  - id: g058_q002
+    question_type: two_choice
+    prompt: The more you practice, ___ better you become.
+    choices:
+      - text: the
+        correct: true
+      - text: a
+        correct: false
+    answer: the
+    explanation: >
+      the 比較級, the 比較級 では、後半にも the を置く。
+      ここでの the は構文の一部。
+    translation: 練習すればするほど、ますます上達する。
+    focus:
+      - second_the
+      - structure
+      - the_better
+
+  - id: g058_q003
+    question_type: two_choice
+    prompt: The ___ you read, the more you learn.
+    choices:
+      - text: more
+        correct: true
+      - text: most
+        correct: false
+    answer: more
+    explanation: >
+      the 比較級, the 比較級 の形なので、最上級 most ではなく比較級 more を使う。
+    translation: 読めば読むほど、ますます多くを学ぶ。
+    focus:
+      - comparative
+      - more
+      - not_superlative
+
+  - id: g058_q004
+    question_type: two_choice
+    prompt: The older we get, the ___ we become.
+    choices:
+      - text: wiser
+        correct: true
+      - text: wisest
+        correct: false
+    answer: wiser
+    explanation: >
+      the 比較級, the 比較級 の後半なので、比較級 wiser を使う。
+      wisest は最上級。
+    translation: 年を取れば取るほど、私たちは賢くなる。
+    focus:
+      - comparative
+      - wiser
+      - proportional_relation
+
+  - id: g058_q005
+    question_type: two_choice
+    prompt: The faster you run, the ___ you will arrive.
+    choices:
+      - text: sooner
+        correct: true
+      - text: soonest
+        correct: false
+    answer: sooner
+    explanation: >
+      the 比較級, the 比較級 の構文なので、比較級 sooner を使う。
+      「速く走れば走るほど、早く着く」。
+    translation: 速く走れば走るほど、早く到着する。
+    focus:
+      - comparative
+      - sooner
+      - adverb_comparison
+
+  - id: g058_q006
+    question_type: two_choice
+    prompt: The ___ you work, the more successful you will be.
+    choices:
+      - text: harder
+        correct: true
+      - text: hardest
+        correct: false
+    answer: harder
+    explanation: >
+      「一生懸命働けば働くほど」という意味。
+      the 比較級, the 比較級 なので harder を使う。
+    translation: 一生懸命働けば働くほど、ますます成功するだろう。
+    focus:
+      - comparative
+      - harder
+      - work_hard
+
+  - id: g058_q007
+    question_type: two_choice
+    prompt: The less you sleep, the ___ tired you feel.
+    choices:
+      - text: more
+        correct: true
+      - text: most
+        correct: false
+    answer: more
+    explanation: >
+      the less..., the more... で「少なければ少ないほど、ますます〜」。
+      後半も比較級 more を使う。
+    translation: 睡眠が少なければ少ないほど、ますます疲れを感じる。
+    focus:
+      - the_less_the_more
+      - comparative
+      - negative_relation
+
+  - id: g058_q008
+    question_type: two_choice
+    prompt: The earlier you start, the ___ you will finish.
+    choices:
+      - text: earlier
+        correct: true
+      - text: earliest
+        correct: false
+    answer: earlier
+    explanation: >
+      the 比較級, the 比較級 の後半なので earlier を使う。
+      「早く始めれば始めるほど、早く終わる」。
+    translation: 早く始めれば始めるほど、早く終わるだろう。
+    focus:
+      - comparative
+      - earlier
+      - proportional_relation
+
+  - id: g058_q009
+    question_type: two_choice
+    prompt: The more difficult the test is, the ___ carefully you should read.
+    choices:
+      - text: more
+        correct: true
+      - text: most
+        correct: false
+    answer: more
+    explanation: >
+      carefully は長い副詞なので、比較級は more carefully。
+      the more carefully you should read で「より注意深く読むべきだ」。
+    translation: 試験が難しければ難しいほど、より注意深く読むべきだ。
+    focus:
+      - more_carefully
+      - adverb_comparison
+      - proportional_relation
+
+  - id: g058_q010
+    question_type: two_choice
+    prompt: The ___ you wait, the harder it becomes.
+    choices:
+      - text: longer
+        correct: true
+      - text: longest
+        correct: false
+    answer: longer
+    explanation: >
+      the longer..., the harder... で
+      「長く待てば待つほど、ますます難しくなる」。
+    translation: 長く待てば待つほど、それはますます難しくなる。
+    focus:
+      - comparative
+      - longer
+      - harder
+
+  - id: g058_q011
+    question_type: two_choice
+    prompt: The more I learn, the ___ I realize how little I know.
+    choices:
+      - text: more
+        correct: true
+      - text: most
+        correct: false
+    answer: more
+    explanation: >
+      the more..., the more... の形。
+      「学べば学ぶほど、自分がどれほど知らないかをますます実感する」。
+    translation: 学べば学ぶほど、自分がどれほど知らないかをますます実感する。
+    focus:
+      - the_more_the_more
+      - comparative
+      - abstract_sentence
+
+  - id: g058_q012
+    question_type: two_choice
+    prompt: ___ warmer it gets, the more people go outside.
+    choices:
+      - text: The
+        correct: true
+      - text: As
+        correct: false
+    answer: The
+    explanation: >
+      the 比較級, the 比較級 の構文なので The warmer..., the more... とする。
+      As warmer とは言わない。
+    translation: 暖かくなればなるほど、外に出る人が増える。
+    focus:
+      - the_comparative_the_comparative
+      - the_warmer_the_more
+      - structure
+
+common_mistakes:
+  - mistake: the を普通の冠詞「その」と読んでしまう
+    correction: >
+      the 比較級, the 比較級 の the は構文の一部。
+      「その多く」ではなく、「〜すればするほど」という意味を作る。
+  - mistake: 比較級ではなく最上級を入れてしまう
+    correction: >
+      この構文は比較級を2回使う。
+      The more ..., the better ... のように、most や best ではなく more, better を使う。
+  - mistake: 後半の the を落としてしまう
+    correction: >
+      The more you practice, the better you become. のように、
+      前半にも後半にも the を置く。
+  - mistake: than を入れてしまう
+    correction: >
+      the 比較級, the 比較級 は than を使わない。
+      The faster you run, the sooner you arrive. が自然。
+  - mistake: ただの比較級と比例関係を混同する
+    correction: >
+      older than は単に2つを比べる。
+      The older we get, the wiser we become. は2つの変化が連動している。
+
+learning_notes:
+  - >
+    the 比較級, the 比較級 は「一方が変わると、もう一方も変わる」という構文。
+  - >
+    前半は条件・原因側、後半は結果側として読むとわかりやすい。
+  - >
+    The more you read, the more you learn. のように、
+    more が2回出る形はよく使われる。
+  - >
+    less, faster, harder, earlier, longer, better など、
+    さまざまな比較級をこの構文で使える。
+
+prerequisites:
+  - g056
+  - g057
+
+next_items:
+  - g059
+  - g060
+  - g061

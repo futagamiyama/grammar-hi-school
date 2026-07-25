@@ -1,0 +1,404 @@
+id: g102
+file: g102.yaml
+
+title: whether / if の名詞節
+type: grammar_contrast
+
+section:
+  id: s11
+  title: 名詞節・接続詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 「〜かどうか」を表す whether / if を、使える位置に応じて選べるか？
+
+core_concept:
+  whether_if_object_clause:
+    form: 動詞 + whether/if + 主語 + 動詞
+    meaning: 〜かどうかを...
+    image: yes/no疑問文を名詞節にして、動詞の目的語にする
+    examples:
+      - sentence: I do not know whether he will come.
+        ja: 私は彼が来るかどうか知らない。
+        point: whether he will come が know の目的語。
+      - sentence: I do not know if he will come.
+        ja: 私は彼が来るかどうか知らない。
+        point: 目的語の位置では whether も if も使える。
+      - sentence: She asked me whether I was free.
+        ja: 彼女は私に時間があるかどうか尋ねた。
+        point: whether I was free が ask の内容。
+
+  whether_subject_clause:
+    form: Whether + 主語 + 動詞 + 動詞 ...
+    meaning: 〜かどうかは...
+    image: whether節全体が文の主語になる
+    examples:
+      - sentence: Whether he will come is not clear.
+        ja: 彼が来るかどうかは明らかではない。
+        point: Whether he will come 全体が主語。
+      - sentence: Whether this plan will work depends on money.
+        ja: この計画がうまくいくかどうかは資金次第だ。
+        point: 主語節では if より whether が自然。
+      - sentence: Whether she agrees is important.
+        ja: 彼女が同意するかどうかは重要だ。
+        point: Whether she agrees 全体が主語。
+
+  whether_after_preposition:
+    form: 前置詞 + whether + 主語 + 動詞
+    meaning: 〜かどうかについて、〜かどうかに
+    image: 前置詞の後ろでは whether を使う
+    examples:
+      - sentence: We talked about whether we should continue.
+        ja: 私たちは続けるべきかどうかについて話し合った。
+        point: about の後ろなので whether を使う。
+      - sentence: It depends on whether he agrees.
+        ja: それは彼が同意するかどうかによる。
+        point: on の後ろなので whether を使う。
+      - sentence: There is doubt about whether the story is true.
+        ja: その話が本当かどうかについて疑いがある。
+        point: 前置詞 about の後ろは whether。
+
+  whether_or_not:
+    form: whether + 主語 + 動詞 + or not
+    meaning: 〜かどうか
+    image: 二つの可能性を明示する
+    examples:
+      - sentence: I do not know whether he will come or not.
+        ja: 私は彼が来るかどうか知らない。
+        point: or not を付けて「来るか来ないか」を明示している。
+      - sentence: Whether or not he agrees is important.
+        ja: 彼が同意するかどうかは重要だ。
+        point: Whether or not を文頭に置ける。
+      - sentence: We must decide whether to accept the offer or not.
+        ja: 私たちはその申し出を受け入れるかどうか決めなければならない。
+        point: whether to do の形でも or not を付けられる。
+
+  whether_to_do:
+    form: whether + to + 動詞原形
+    meaning: 〜するかどうか
+    image: 主語を出さずに、選択だけを表す
+    examples:
+      - sentence: I do not know whether to accept the offer.
+        ja: 私はその申し出を受け入れるべきかどうかわからない。
+        point: whether to accept で「受け入れるかどうか」。
+      - sentence: She could not decide whether to stay or leave.
+        ja: 彼女は残るべきか去るべきか決められなかった。
+        point: whether to stay or leave で二択を表す。
+      - sentence: We discussed whether to change the schedule.
+        ja: 私たちは予定を変更するかどうか話し合った。
+        point: whether to do は discuss などの目的語になる。
+
+main_rule: >
+  whether / if は、yes/no疑問文を名詞節にして「〜かどうか」を表す。
+  I do not know whether he will come. と
+  I do not know if he will come. は、どちらも「彼が来るかどうか知らない」という意味。
+  目的語の位置では whether も if も使えることが多い。
+  ただし、文の主語になる場合は Whether he will come is not clear. のように whether を使う。
+  前置詞の後ろでも about whether / on whether のように whether を使う。
+  whether or not は「〜かどうか」を明示する形。
+  whether to do は「〜するかどうか」を表す。
+  if は「もし」という条件の意味もあるため、
+  名詞節の「〜かどうか」なのか、条件の「もし」なのかを文脈で見分ける。
+
+contrast_pairs:
+  - object_whether: I do not know whether he will come.
+    object_if: I do not know if he will come.
+    point: >
+      know の目的語では whether も if も使える。
+      どちらも「彼が来るかどうか」という意味。
+
+  - subject_clause: Whether he will come is not clear.
+    unnatural_subject: If he will come is not clear.
+    point: >
+      主語節では whether が自然。
+      if を主語節として使うのは避ける。
+
+  - preposition: It depends on whether he agrees.
+    wrong_preposition: It depends on if he agrees.
+    point: >
+      前置詞 on の後ろでは whether を使うのが基本。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または whether / if の名詞節と使える位置の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g102_q001
+    question_type: two_choice
+    prompt: I do not know ___ he will come.
+    choices:
+      - text: whether
+        correct: true
+      - text: when
+        correct: false
+    answer: whether
+    explanation: >
+      whether he will come で「彼が来るかどうか」。
+      yes/no疑問文を名詞節にして、know の目的語にしている。
+    translation: 私は彼が来るかどうか知らない。
+    focus:
+      - whether_if_object_clause
+      - whether
+      - object_clause
+
+  - id: g102_q002
+    question_type: two_choice
+    prompt: I do not know ___ he will come.
+    choices:
+      - text: if
+        correct: true
+      - text: because
+        correct: false
+    answer: if
+    explanation: >
+      目的語の位置では if も「〜かどうか」の意味で使える。
+      I do not know if he will come. が自然。
+    translation: 私は彼が来るかどうか知らない。
+    focus:
+      - whether_if_object_clause
+      - if
+      - object_clause
+
+  - id: g102_q003
+    question_type: two_choice
+    prompt: She asked me ___ I was free.
+    choices:
+      - text: whether
+        correct: true
+      - text: that
+        correct: false
+    answer: whether
+    explanation: >
+      asked me whether I was free で
+      「私に時間があるかどうか尋ねた」という意味。
+    translation: 彼女は私に時間があるかどうか尋ねた。
+    focus:
+      - whether_if_object_clause
+      - asked
+      - free
+
+  - id: g102_q004
+    question_type: two_choice
+    prompt: ___ he will come is not clear.
+    choices:
+      - text: Whether
+        correct: true
+      - text: If
+        correct: false
+    answer: Whether
+    explanation: >
+      Whether he will come 全体が主語。
+      主語節では if より whether を使うのが自然。
+    translation: 彼が来るかどうかは明らかではない。
+    focus:
+      - whether_subject_clause
+      - subject_clause
+      - whether
+
+  - id: g102_q005
+    question_type: two_choice
+    prompt: ___ this plan will work depends on money.
+    choices:
+      - text: Whether
+        correct: true
+      - text: If
+        correct: false
+    answer: Whether
+    explanation: >
+      Whether this plan will work 全体が主語。
+      「この計画がうまくいくかどうかは資金次第だ」という意味。
+    translation: この計画がうまくいくかどうかは資金次第だ。
+    focus:
+      - whether_subject_clause
+      - plan
+      - depends_on
+
+  - id: g102_q006
+    question_type: two_choice
+    prompt: ___ she agrees is important.
+    choices:
+      - text: Whether
+        correct: true
+      - text: If
+        correct: false
+    answer: Whether
+    explanation: >
+      Whether she agrees 全体が文の主語。
+      主語節には whether を使う。
+    translation: 彼女が同意するかどうかは重要だ。
+    focus:
+      - whether_subject_clause
+      - agrees
+      - important
+
+  - id: g102_q007
+    question_type: two_choice
+    prompt: We talked about ___ we should continue.
+    choices:
+      - text: whether
+        correct: true
+      - text: if
+        correct: false
+    answer: whether
+    explanation: >
+      about は前置詞。
+      前置詞の後ろでは whether を使うのが基本。
+    translation: 私たちは続けるべきかどうかについて話し合った。
+    focus:
+      - whether_after_preposition
+      - about_whether
+      - continue
+
+  - id: g102_q008
+    question_type: two_choice
+    prompt: It depends on ___ he agrees.
+    choices:
+      - text: whether
+        correct: true
+      - text: if
+        correct: false
+    answer: whether
+    explanation: >
+      on は前置詞。
+      depends on whether ... で「〜かどうかによる」という意味。
+    translation: それは彼が同意するかどうかによる。
+    focus:
+      - whether_after_preposition
+      - on_whether
+      - depends
+
+  - id: g102_q009
+    question_type: two_choice
+    prompt: There is doubt about ___ the story is true.
+    choices:
+      - text: whether
+        correct: true
+      - text: if
+        correct: false
+    answer: whether
+    explanation: >
+      about の後ろなので whether を使う。
+      about whether the story is true で「その話が本当かどうかについて」。
+    translation: その話が本当かどうかについて疑いがある。
+    focus:
+      - whether_after_preposition
+      - doubt
+      - story
+
+  - id: g102_q010
+    question_type: two_choice
+    prompt: I do not know whether he will come ___ not.
+    choices:
+      - text: or
+        correct: true
+      - text: and
+        correct: false
+    answer: or
+    explanation: >
+      whether ... or not で「〜かどうか」。
+      来るか来ないかという二つの可能性を明示している。
+    translation: 私は彼が来るかどうか知らない。
+    focus:
+      - whether_or_not
+      - or_not
+      - come
+
+  - id: g102_q011
+    question_type: two_choice
+    prompt: I do not know whether ___ accept the offer.
+    choices:
+      - text: to
+        correct: true
+      - text: I to
+        correct: false
+    answer: to
+    explanation: >
+      whether to accept で「受け入れるかどうか」。
+      主語を出さずに選択を表す形。
+    translation: 私はその申し出を受け入れるべきかどうかわからない。
+    focus:
+      - whether_to_do
+      - whether_to
+      - accept
+
+  - id: g102_q012
+    question_type: two_choice
+    prompt: She could not decide whether to stay ___ leave.
+    choices:
+      - text: or
+        correct: true
+      - text: and
+        correct: false
+    answer: or
+    explanation: >
+      whether to stay or leave で「残るか去るか」。
+      二択を表すので or を使う。
+    translation: 彼女は残るべきか去るべきか決められなかった。
+    focus:
+      - whether_to_do
+      - stay_or_leave
+      - decide
+
+common_mistakes:
+  - mistake: whether / if を「もし」とだけ読む
+    correction: >
+      know, ask, wonder などの目的語になる場合、
+      whether / if は「〜かどうか」を表す。
+  - mistake: 主語節で If he will come is not clear. としてしまう
+    correction: >
+      文の主語になる場合は Whether he will come is not clear. が自然。
+  - mistake: 前置詞の後ろに if を置いてしまう
+    correction: >
+      about / on などの前置詞の後ろでは whether を使う。
+      about whether / depends on whether の形にする。
+  - mistake: whether to do を「〜するために」と読む
+    correction: >
+      whether to do は「〜するかどうか」。
+      目的を表す to不定詞ではない。
+  - mistake: whether ... or not の or を落としてしまう
+    correction: >
+      「〜かどうか」を明示する時は whether ... or not の形を覚える。
+
+learning_notes:
+  - >
+    whether / if は「〜かどうか」を表す名詞節を作る。
+    I do not know whether he will come. の形。
+  - >
+    目的語の位置では whether も if も使えることが多い。
+  - >
+    主語節では whether を使う。
+    Whether he will come is not clear. の形。
+  - >
+    前置詞の後ろでは whether を使う。
+    about whether / on whether に注意する。
+  - >
+    whether to do は「〜するかどうか」。
+    whether ... or not は「〜かどうか」を明示する形。
+
+prerequisites:
+  - g010
+  - g096
+  - g101
+
+next_items:
+  - g103
+  - g104
+  - g105

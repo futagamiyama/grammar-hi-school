@@ -1,0 +1,432 @@
+id: g113
+file: g113.yaml
+
+title: 等位接続詞 and / but / or / so / for
+type: grammar_contrast
+
+section:
+  id: s11
+  title: 名詞節・接続詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 等位接続詞 and / but / or / so / for の意味を、前後の関係から選べるか？
+
+core_concept:
+  and_addition:
+    form: A and B
+    meaning: AそしてB、AもBも
+    image: 情報を足す
+    examples:
+      - sentence: She opened the door and entered the room.
+        ja: 彼女はドアを開けて、部屋に入った。
+        point: 二つの動作を順に並べている。
+      - sentence: He is kind and honest.
+        ja: 彼は親切で正直だ。
+        point: kind と honest という二つの性質を足している。
+      - sentence: I bought bread and milk.
+        ja: 私はパンと牛乳を買った。
+        point: bread と milk を並列している。
+
+  but_contrast:
+    form: A, but B
+    meaning: AだがB
+    image: 予想と反対・対比を示す
+    examples:
+      - sentence: The bag is small, but it is heavy.
+        ja: そのかばんは小さいが、重い。
+        point: small から予想される軽さと heavy が対比されている。
+      - sentence: I wanted to go, but I was too busy.
+        ja: 私は行きたかったが、忙しすぎた。
+        point: 行きたい気持ちと実際に行けない状況の対比。
+      - sentence: He is strict but fair.
+        ja: 彼は厳しいが公平だ。
+        point: strict と fair を対比している。
+
+  or_choice:
+    form: A or B
+    meaning: AかB、さもないとB
+    image: 選択肢または条件の結果を示す
+    examples:
+      - sentence: You can have tea or coffee.
+        ja: 紅茶かコーヒーを飲めます。
+        point: tea と coffee の選択。
+      - sentence: Hurry up, or you will miss the train.
+        ja: 急ぎなさい、さもないと電車に乗り遅れます。
+        point: 命令文 + or で「さもないと」。
+      - sentence: Is he a student or a teacher?
+        ja: 彼は学生ですか、それとも先生ですか。
+        point: 二つの可能性を選ばせている。
+
+  so_result:
+    form: A, so B
+    meaning: AなのでB、だからB
+    image: 前の内容から結果が出る
+    examples:
+      - sentence: It was raining, so we stayed home.
+        ja: 雨が降っていたので、私たちは家にいた。
+        point: 雨が原因で、家にいたという結果になる。
+      - sentence: I was tired, so I went to bed early.
+        ja: 私は疲れていたので、早く寝た。
+        point: tired が理由、went to bed early が結果。
+      - sentence: He studied hard, so he passed the exam.
+        ja: 彼は一生懸命勉強したので、試験に合格した。
+        point: 勉強した結果、合格した。
+
+  for_reason:
+    form: A, for B
+    meaning: Aである。というのはBだからだ。
+    image: 後ろから理由を補足する、やや硬い表現
+    examples:
+      - sentence: I stayed home, for it was raining.
+        ja: 私は家にいた。というのは雨が降っていたからだ。
+        point: for は後ろから理由を説明する等位接続詞。
+      - sentence: She must be tired, for she has worked all day.
+        ja: 彼女は疲れているに違いない。というのは一日中働いたからだ。
+        point: 推測の理由を for で補足している。
+      - sentence: We left early, for the road was dangerous.
+        ja: 私たちは早く出発した。というのは道路が危険だったからだ。
+        point: 理由を後ろに加える硬めの表現。
+
+  coordinate_clause_punctuation:
+    form: 文, and/but/or/so/for 文
+    meaning: 二つの独立した文をつなぐ
+    image: 文と文をつなぐ時はコンマを置くことが多い
+    examples:
+      - sentence: I was tired, so I went home.
+        ja: 私は疲れていたので、家に帰った。
+        point: 二つの文を so でつないでいる。
+      - sentence: I wanted to go, but I stayed home.
+        ja: 私は行きたかったが、家にいた。
+        point: 二つの文の対比。
+      - sentence: Hurry up, or you will be late.
+        ja: 急ぎなさい、さもないと遅れます。
+        point: 命令文 + or の形。
+
+main_rule: >
+  等位接続詞は、語と語、句と句、文と文を対等につなぐ接続詞。
+  and は情報の追加、「そして」「〜と」。
+  but は対比、「しかし」「〜だが」。
+  or は選択、「AかB」、また命令文の後では「さもないと」。
+  so は結果、「だから」「それで」。
+  for は理由を後ろから補足し、「というのは〜だからだ」という硬めの表現になる。
+  because は従属接続詞だが、for は等位接続詞なので、
+  I stayed home, for it was raining. のように、前の文に理由を後から加える。
+  文と文を等位接続詞でつなぐ場合、英語では接続詞の前にコンマを置くことが多い。
+  ただし、語や短い句を並べるだけならコンマは不要。
+  bread and milk / kind but strict / tea or coffee のように使う。
+
+contrast_pairs:
+  - addition: He is kind and honest.
+    contrast: He is strict but fair.
+    point: >
+      and は情報を足す。
+      but は対比を表す。
+
+  - choice: You can have tea or coffee.
+    warning: Hurry up, or you will miss the train.
+    point: >
+      or は選択を表す。
+      命令文の後では「さもないと」という警告になる。
+
+  - result: It was raining, so we stayed home.
+    reason: We stayed home, for it was raining.
+    point: >
+      so は前から後ろへ結果を示す。
+      for は後ろから理由を補足する。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または and / but / or / so / for の意味の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g113_q001
+    question_type: two_choice
+    prompt: She opened the door ___ entered the room.
+    choices:
+      - text: and
+        correct: true
+      - text: but
+        correct: false
+    answer: and
+    explanation: >
+      ドアを開ける、部屋に入る、という二つの動作を順に並べている。
+      情報を足すので and が自然。
+    translation: 彼女はドアを開けて、部屋に入った。
+    focus:
+      - and_addition
+      - sequence
+      - entered
+
+  - id: g113_q002
+    question_type: two_choice
+    prompt: He is kind ___ honest.
+    choices:
+      - text: and
+        correct: true
+      - text: or
+        correct: false
+    answer: and
+    explanation: >
+      kind と honest の両方の性質を述べている。
+      追加なので and を使う。
+    translation: 彼は親切で正直だ。
+    focus:
+      - and_addition
+      - adjectives
+      - kind_honest
+
+  - id: g113_q003
+    question_type: two_choice
+    prompt: The bag is small, ___ it is heavy.
+    choices:
+      - text: but
+        correct: true
+      - text: so
+        correct: false
+    answer: but
+    explanation: >
+      small なのに heavy という対比がある。
+      予想と反対の内容をつなぐので but。
+    translation: そのかばんは小さいが、重い。
+    focus:
+      - but_contrast
+      - contrast
+      - small_heavy
+
+  - id: g113_q004
+    question_type: two_choice
+    prompt: I wanted to go, ___ I was too busy.
+    choices:
+      - text: but
+        correct: true
+      - text: and
+        correct: false
+    answer: but
+    explanation: >
+      行きたかったが、忙しすぎて行けなかったという対比。
+      but が自然。
+    translation: 私は行きたかったが、忙しすぎた。
+    focus:
+      - but_contrast
+      - wanted
+      - busy
+
+  - id: g113_q005
+    question_type: two_choice
+    prompt: You can have tea ___ coffee.
+    choices:
+      - text: or
+        correct: true
+      - text: but
+        correct: false
+    answer: or
+    explanation: >
+      tea と coffee のどちらかを選ぶ意味。
+      選択を表すので or を使う。
+    translation: 紅茶かコーヒーを飲めます。
+    focus:
+      - or_choice
+      - choice
+      - tea_coffee
+
+  - id: g113_q006
+    question_type: two_choice
+    prompt: Hurry up, ___ you will miss the train.
+    choices:
+      - text: or
+        correct: true
+      - text: and
+        correct: false
+    answer: or
+    explanation: >
+      命令文 + or で「さもないと」。
+      急がないと電車に乗り遅れる、という警告を表す。
+    translation: 急ぎなさい、さもないと電車に乗り遅れます。
+    focus:
+      - or_choice
+      - warning
+      - hurry_up
+
+  - id: g113_q007
+    question_type: two_choice
+    prompt: It was raining, ___ we stayed home.
+    choices:
+      - text: so
+        correct: true
+      - text: but
+        correct: false
+    answer: so
+    explanation: >
+      雨が降っていたことが理由で、家にいたという結果になる。
+      結果を表す so が自然。
+    translation: 雨が降っていたので、私たちは家にいた。
+    focus:
+      - so_result
+      - result
+      - raining
+
+  - id: g113_q008
+    question_type: two_choice
+    prompt: I was tired, ___ I went to bed early.
+    choices:
+      - text: so
+        correct: true
+      - text: or
+        correct: false
+    answer: so
+    explanation: >
+      疲れていた結果、早く寝た。
+      原因から結果へつなぐので so を使う。
+    translation: 私は疲れていたので、早く寝た。
+    focus:
+      - so_result
+      - tired
+      - went_to_bed
+
+  - id: g113_q009
+    question_type: two_choice
+    prompt: He studied hard, ___ he passed the exam.
+    choices:
+      - text: so
+        correct: true
+      - text: for
+        correct: false
+    answer: so
+    explanation: >
+      一生懸命勉強した結果、試験に合格した。
+      結果を表す so が自然。
+    translation: 彼は一生懸命勉強したので、試験に合格した。
+    focus:
+      - so_result
+      - studied
+      - passed
+
+  - id: g113_q010
+    question_type: two_choice
+    prompt: I stayed home, ___ it was raining.
+    choices:
+      - text: for
+        correct: true
+      - text: so
+        correct: false
+    answer: for
+    explanation: >
+      for は後ろから理由を補足する等位接続詞。
+      「というのは雨が降っていたからだ」という意味。
+    translation: 私は家にいた。というのは雨が降っていたからだ。
+    focus:
+      - for_reason
+      - reason
+      - raining
+
+  - id: g113_q011
+    question_type: two_choice
+    prompt: She must be tired, ___ she has worked all day.
+    choices:
+      - text: for
+        correct: true
+      - text: or
+        correct: false
+    answer: for
+    explanation: >
+      一日中働いたことが、「疲れているに違いない」という判断の理由。
+      for が理由を後ろから補足している。
+    translation: 彼女は疲れているに違いない。というのは一日中働いたからだ。
+    focus:
+      - for_reason
+      - must_be
+      - worked_all_day
+
+  - id: g113_q012
+    question_type: two_choice
+    prompt: I was tired, ___ I went home.
+    choices:
+      - text: so
+        correct: true
+      - text: because
+        correct: false
+    answer: so
+    explanation: >
+      ここでは二つの文を等位接続詞でつないでいる。
+      I was tired が原因、I went home が結果なので so が自然。
+      because を使うなら I went home because I was tired. のように語順を変える。
+    translation: 私は疲れていたので、家に帰った。
+    focus:
+      - coordinate_clause_punctuation
+      - so_result
+      - because_contrast
+
+common_mistakes:
+  - mistake: and を何でもつなげる接続詞として使う
+    correction: >
+      and は追加や順序を表す。
+      対比なら but、結果なら so、選択なら or を使う。
+  - mistake: but と so を混同する
+    correction: >
+      but は対比。
+      so は前の内容から出る結果。
+  - mistake: 命令文 + or を普通の選択として読む
+    correction: >
+      Hurry up, or you will miss the train. の or は
+      「さもないと」という警告を表す。
+  - mistake: for を because と完全に同じだと思う
+    correction: >
+      for は等位接続詞で、後ろから理由を補足する硬めの表現。
+      because は従属接続詞で、理由節を作る。
+  - mistake: because を so と同じ位置で使う
+    correction: >
+      I was tired, so I went home. は自然。
+      I was tired, because I went home. では意味が逆になる。
+  - mistake: 文と文をつなぐ時のコンマを意識しない
+    correction: >
+      独立した文同士を and / but / or / so / for でつなぐ時は、
+      接続詞の前にコンマを置くことが多い。
+
+learning_notes:
+  - >
+    and は追加・順序。
+    A and B で情報を足す。
+  - >
+    but は対比。
+    予想と反対の内容や、対照的な性質をつなぐ。
+  - >
+    or は選択。
+    命令文の後では「さもないと」という警告になる。
+  - >
+    so は結果。
+    前の内容を原因として、後ろに結果を述べる。
+  - >
+    for は理由。
+    後ろから「というのは〜だからだ」と補足する硬めの等位接続詞。
+
+prerequisites:
+  - g010
+  - g105
+  - g106
+  - g107
+  - g108
+  - g112
+
+next_items:
+  - g114
+  - g115
+  - g116

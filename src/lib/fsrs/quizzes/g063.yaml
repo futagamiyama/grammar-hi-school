@@ -1,0 +1,374 @@
+id: g063
+file: g063.yaml
+
+title: 関係代名詞 whose
+type: construction
+
+section:
+  id: s08
+  title: 関係詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 所有関係を whose + 名詞 で表せるか？
+
+core_concept:
+  whose_basic:
+    form: 先行詞 + whose + 名詞 + 動詞 ...
+    meaning: その人の〜、その物の〜
+    image: 前の名詞が、後ろの名詞を所有している
+    examples:
+      - sentence: I know a girl whose father is a doctor.
+        ja: 私は父親が医者である少女を知っている。
+        point: a girl と father の所有関係を whose father で表す。
+      - sentence: The man whose car was stolen called the police.
+        ja: 車を盗まれた男性は警察に電話した。
+        point: the man と car の所有関係を whose car で表す。
+      - sentence: This is the house whose roof is red.
+        ja: これは屋根が赤い家です。
+        point: the house と roof の所有関係を whose roof で表す。
+
+  whose_plus_noun:
+    form: whose + 名詞
+    meaning: 名詞を必ず伴い、その所有者を前の名詞に結びつける
+    image: whose は単独ではなく、後ろの名詞とセットで働く
+    examples:
+      - sentence: I met a student whose brother lives in Canada.
+        ja: 私は兄がカナダに住んでいる学生に会った。
+        point: whose brother がセット。
+      - sentence: She helped a boy whose bicycle was broken.
+        ja: 彼女は自転車が壊れていた少年を助けた。
+        point: whose bicycle がセット。
+      - sentence: We visited a town whose history is very old.
+        ja: 私たちは歴史がとても古い町を訪れた。
+        point: whose history がセット。
+
+  contrast_with_who:
+    form: who + 動詞 / whose + 名詞
+    meaning: who は人を主語として説明し、whose は所有関係を説明する
+    image: who は「その人が〜する」、whose は「その人の〜が」
+    examples:
+      - sentence: I know a boy who lives in Kyoto.
+        ja: 私は京都に住んでいる少年を知っている。
+        point: boy 自身が lives するので who。
+      - sentence: I know a boy whose mother lives in Kyoto.
+        ja: 私は母親が京都に住んでいる少年を知っている。
+        point: boy の mother が lives するので whose mother。
+      - sentence: The woman who called me was kind.
+        ja: 私に電話してきた女性は親切だった。
+        point: woman 自身が called するので who。
+
+main_rule: >
+  whose は、所有関係を表す関係代名詞。
+  whose の後ろには名詞が来る。
+  a girl whose father is a doctor は「父親が医者である少女」。
+  a man whose car was stolen は「車を盗まれた男性」。
+  who は「その人が〜する」と人を説明する。
+  whose は「その人の〜が」「その物の〜が」と所有関係を説明する。
+  まず、関係代名詞の後ろに名詞があるかを確認する。
+  whose father, whose car, whose name, whose roof のように、whose + 名詞 で見る。
+
+contrast_pairs:
+  - who: I know a boy who lives in Kyoto.
+    whose: I know a boy whose mother lives in Kyoto.
+    point: >
+      who lives は boy 自身が住んでいる。
+      whose mother lives は boy の mother が住んでいる。
+
+  - who: The man who called me was kind.
+    whose: The man whose car was stolen called the police.
+    point: >
+      who called は man 自身が電話した。
+      whose car was stolen は man の car が盗まれた。
+
+  - which: This is a house which stands on the hill.
+    whose: This is a house whose roof is red.
+    point: >
+      which stands は house 自体を説明する。
+      whose roof は house の roof を説明する所有関係。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または whose + 名詞 の所有関係を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g063_q001
+    question_type: two_choice
+    prompt: I know a girl ___ father is a doctor.
+    choices:
+      - text: whose
+        correct: true
+      - text: who
+        correct: false
+    answer: whose
+    explanation: >
+      father という名詞が後ろにあり、a girl の father を表している。
+      所有関係なので whose father が自然。
+    translation: 私は父親が医者である少女を知っている。
+    focus:
+      - whose
+      - whose_plus_noun
+      - possession
+
+  - id: g063_q002
+    question_type: two_choice
+    prompt: I know a girl ___ lives near here.
+    choices:
+      - text: whose
+        correct: false
+      - text: who
+        correct: true
+    answer: who
+    explanation: >
+      後ろに名詞ではなく lives という動詞が続いている。
+      girl 自身が住んでいるので who が自然。
+    translation: 私はこの近くに住んでいる少女を知っている。
+    focus:
+      - who
+      - subject_relative
+      - contrast_with_whose
+
+  - id: g063_q003
+    question_type: two_choice
+    prompt: The man ___ car was stolen called the police.
+    choices:
+      - text: whose
+        correct: true
+      - text: who
+        correct: false
+    answer: whose
+    explanation: >
+      car という名詞が後ろにあり、the man の car を表している。
+      所有関係なので whose car が自然。
+    translation: 車を盗まれた男性は警察に電話した。
+    focus:
+      - whose
+      - possession
+      - car
+
+  - id: g063_q004
+    question_type: two_choice
+    prompt: The man ___ called the police was calm.
+    choices:
+      - text: whose
+        correct: false
+      - text: who
+        correct: true
+    answer: who
+    explanation: >
+      called の主語は The man。
+      人が何かをしたことを説明するので who を使う。
+    translation: 警察に電話した男性は落ち着いていた。
+    focus:
+      - who
+      - subject_relative
+      - contrast_with_whose
+
+  - id: g063_q005
+    question_type: two_choice
+    prompt: I met a student ___ brother lives in Canada.
+    choices:
+      - text: whose
+        correct: true
+      - text: who
+        correct: false
+    answer: whose
+    explanation: >
+      brother は a student の兄弟。
+      所有関係を表すので whose brother が自然。
+    translation: 私は兄がカナダに住んでいる学生に会った。
+    focus:
+      - whose
+      - whose_plus_noun
+      - brother
+
+  - id: g063_q006
+    question_type: two_choice
+    prompt: I met a student ___ speaks French.
+    choices:
+      - text: whose
+        correct: false
+      - text: who
+        correct: true
+    answer: who
+    explanation: >
+      student 自身が speaks French している。
+      人を主語として説明するので who が自然。
+    translation: 私はフランス語を話す学生に会った。
+    focus:
+      - who
+      - subject_relative
+      - student
+
+  - id: g063_q007
+    question_type: two_choice
+    prompt: She helped a boy ___ bicycle was broken.
+    choices:
+      - text: whose
+        correct: true
+      - text: which
+        correct: false
+    answer: whose
+    explanation: >
+      bicycle は a boy のもの。
+      所有関係なので whose bicycle を使う。
+      which bicycle では関係代名詞の形にならない。
+    translation: 彼女は自転車が壊れていた少年を助けた。
+    focus:
+      - whose
+      - possession
+      - bicycle
+
+  - id: g063_q008
+    question_type: two_choice
+    prompt: She helped a boy ___ was crying.
+    choices:
+      - text: whose
+        correct: false
+      - text: who
+        correct: true
+    answer: who
+    explanation: >
+      boy 自身が泣いているので who was crying が自然。
+      whose の後ろには名詞が必要。
+    translation: 彼女は泣いていた少年を助けた。
+    focus:
+      - who
+      - subject_relative
+      - crying
+
+  - id: g063_q009
+    question_type: two_choice
+    prompt: This is the house ___ roof is red.
+    choices:
+      - text: whose
+        correct: true
+      - text: which
+        correct: false
+    answer: whose
+    explanation: >
+      roof は the house の一部・所有関係。
+      物にも whose を使うことができ、whose roof が自然。
+    translation: これは屋根が赤い家です。
+    focus:
+      - whose
+      - thing_antecedent
+      - roof
+
+  - id: g063_q010
+    question_type: two_choice
+    prompt: This is the house ___ stands on the hill.
+    choices:
+      - text: whose
+        correct: false
+      - text: which
+        correct: true
+    answer: which
+    explanation: >
+      house 自体が stands on the hill している。
+      物を主語として説明するので which が自然。
+    translation: これは丘の上に建っている家です。
+    focus:
+      - which
+      - subject_relative
+      - contrast_with_whose
+
+  - id: g063_q011
+    question_type: two_choice
+    prompt: Do you know the woman ___ name is on the list?
+    choices:
+      - text: whose
+        correct: true
+      - text: who
+        correct: false
+    answer: whose
+    explanation: >
+      name は the woman の名前。
+      所有関係なので whose name が自然。
+    translation: リストに名前が載っている女性を知っていますか。
+    focus:
+      - whose
+      - possession
+      - name
+
+  - id: g063_q012
+    question_type: two_choice
+    prompt: Do you know the woman ___ is on the list?
+    choices:
+      - text: whose
+        correct: false
+      - text: who
+        correct: true
+    answer: who
+    explanation: >
+      woman 自身がリストに載っているという意味。
+      人を主語として説明するので who is on the list が自然。
+    translation: リストに載っている女性を知っていますか。
+    focus:
+      - who
+      - subject_relative
+      - on_the_list
+
+common_mistakes:
+  - mistake: whose を疑問文の「誰の」だけだと思う
+    correction: >
+      whose は関係代名詞としても使える。
+      a girl whose father is a doctor は「父親が医者である少女」。
+  - mistake: whose の後ろに動詞をすぐ置いてしまう
+    correction: >
+      whose の後ろには名詞が必要。
+      whose father, whose car, whose name のように使う。
+  - mistake: who と whose を混同する
+    correction: >
+      who は「その人が〜する」。
+      whose + 名詞 は「その人の〜が」と所有関係を表す。
+  - mistake: 物には whose を使えないと思う
+    correction: >
+      whose は物にも使える。
+      a house whose roof is red のように使う。
+      ただし、より硬い表現では of which も使われる。
+  - mistake: whose car was stolen の意味を「車が盗んだ」と読む
+    correction: >
+      whose car は「その人の車」。
+      The man whose car was stolen は「車を盗まれた男性」。
+
+learning_notes:
+  - >
+    whose は「所有関係」を作る関係代名詞。
+    先行詞と、whose の後ろの名詞の関係を見る。
+  - >
+    whose の後ろには必ず名詞が来る。
+    whose father, whose car, whose name, whose roof のようにセットで読む。
+  - >
+    who lives は「その人が住んでいる」。
+    whose mother lives は「その人の母親が住んでいる」。
+  - >
+    関係詞の問題では、空所の直後を見ることが有効。
+    空所の直後が名詞なら whose を考える。
+
+prerequisites:
+  - g061
+  - g062
+
+next_items:
+  - g064
+  - g065
+  - g066

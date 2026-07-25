@@ -1,0 +1,1403 @@
+id: grammar_fsrs_index
+file: index.yaml
+title: 高校英文法マスターFSRS index
+version: 1
+language: ja
+target: 高校英文法基礎
+total_items: 120
+total_review_questions_expected: 1440
+default_quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+default_fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または対象項目の中核ルールを説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.6
+    max_threshold_ratio: 0.85
+sections:
+- id: s01
+  title: 時制・相
+  item_count: 10
+  range: g001-g010
+  items:
+  - g001
+  - g002
+  - g003
+  - g004
+  - g005
+  - g006
+  - g007
+  - g008
+  - g009
+  - g010
+- id: s02
+  title: 動詞の用法・状態動詞
+  item_count: 10
+  range: g011-g020
+  items:
+  - g011
+  - g012
+  - g013
+  - g014
+  - g015
+  - g016
+  - g017
+  - g018
+  - g019
+  - g020
+- id: s03
+  title: 助動詞
+  item_count: 10
+  range: g021-g030
+  items:
+  - g021
+  - g022
+  - g023
+  - g024
+  - g025
+  - g026
+  - g027
+  - g028
+  - g029
+  - g030
+- id: s04
+  title: 受動態
+  item_count: 8
+  range: g031-g038
+  items:
+  - g031
+  - g032
+  - g033
+  - g034
+  - g035
+  - g036
+  - g037
+  - g038
+- id: s05
+  title: 不定詞・動名詞・分詞
+  item_count: 10
+  range: g039-g048
+  items:
+  - g039
+  - g040
+  - g041
+  - g042
+  - g043
+  - g044
+  - g045
+  - g046
+  - g047
+  - g048
+- id: s06
+  title: 数量・形容詞・副詞・比較
+  item_count: 12
+  range: g049-g060
+  items:
+  - g049
+  - g050
+  - g051
+  - g052
+  - g053
+  - g054
+  - g055
+  - g056
+  - g057
+  - g058
+  - g059
+  - g060
+- id: s07
+  title: 関係詞
+  item_count: 11
+  range: g061-g071
+  items:
+  - g061
+  - g062
+  - g063
+  - g064
+  - g065
+  - g066
+  - g067
+  - g068
+  - g069
+  - g070
+  - g071
+- id: s08
+  title: 仮定法
+  item_count: 12
+  range: g072-g083
+  items:
+  - g072
+  - g073
+  - g074
+  - g075
+  - g076
+  - g077
+  - g078
+  - g079
+  - g080
+  - g081
+  - g082
+  - g083
+- id: s10
+  title: 強調・倒置・省略
+  item_count: 17
+  range: g084-g100
+  items:
+  - g084
+  - g085
+  - g086
+  - g087
+  - g088
+  - g089
+  - g090
+  - g091
+  - g092
+  - g093
+  - g094
+  - g095
+  - g096
+  - g097
+  - g098
+  - g099
+  - g100
+- id: s11
+  title: 名詞節・接続詞
+  item_count: 16
+  range: g101-g116
+  items:
+  - g101
+  - g102
+  - g103
+  - g104
+  - g105
+  - g106
+  - g107
+  - g108
+  - g109
+  - g110
+  - g111
+  - g112
+  - g113
+  - g114
+  - g115
+  - g116
+- id: s12
+  title: 前置詞
+  item_count: 4
+  range: g117-g120
+  items:
+  - g117
+  - g118
+  - g119
+  - g120
+items:
+- id: g001
+  file: g001.yaml
+  order: 1
+  title: 現在形 vs 現在進行形
+  section:
+    id: s01
+    title: 時制・相
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g002
+  file: g002.yaml
+  order: 2
+  title: 過去形 vs 現在完了形
+  section:
+    id: s01
+    title: 時制・相
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g003
+  file: g003.yaml
+  order: 3
+  title: 過去形 vs 過去完了形
+  section:
+    id: s01
+    title: 時制・相
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g004
+  file: g004.yaml
+  order: 4
+  title: 現在完了形 vs 現在完了進行形
+  section:
+    id: s01
+    title: 時制・相
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g005
+  file: g005.yaml
+  order: 5
+  title: 未来表現 will vs be going to
+  section:
+    id: s01
+    title: 時制・相
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g006
+  file: g006.yaml
+  order: 6
+  title: 未来表現 will vs 現在進行形
+  section:
+    id: s01
+    title: 時制・相
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g007
+  file: g007.yaml
+  order: 7
+  title: 未来表現 will vs 現在形
+  section:
+    id: s01
+    title: 時制・相
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g008
+  file: g008.yaml
+  order: 8
+  title: used to vs would
+  section:
+    id: s01
+    title: 時制・相
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g009
+  file: g009.yaml
+  order: 9
+  title: 現在完了形 vs 過去完了形
+  section:
+    id: s01
+    title: 時制・相
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g010
+  file: g010.yaml
+  order: 10
+  title: 時・条件の副詞節
+  section:
+    id: s01
+    title: 時制・相
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g011
+  file: g011.yaml
+  order: 11
+  title: have の現在形・進行形
+  section:
+    id: s02
+    title: 動詞の用法・状態動詞
+  type: verb_usage
+  expected_review_questions: 12
+  enabled: true
+- id: g012
+  file: g012.yaml
+  order: 12
+  title: think の現在形・進行形
+  section:
+    id: s02
+    title: 動詞の用法・状態動詞
+  type: verb_usage
+  expected_review_questions: 12
+  enabled: true
+- id: g013
+  file: g013.yaml
+  order: 13
+  title: be と be being
+  section:
+    id: s02
+    title: 動詞の用法・状態動詞
+  type: verb_usage
+  expected_review_questions: 12
+  enabled: true
+- id: g014
+  file: g014.yaml
+  order: 14
+  title: live / work / stay
+  section:
+    id: s02
+    title: 動詞の用法・状態動詞
+  type: verb_usage
+  expected_review_questions: 12
+  enabled: true
+- id: g015
+  file: g015.yaml
+  order: 15
+  title: know / believe / understand
+  section:
+    id: s02
+    title: 動詞の用法・状態動詞
+  type: verb_usage
+  expected_review_questions: 12
+  enabled: true
+- id: g016
+  file: g016.yaml
+  order: 16
+  title: like / love / want / need
+  section:
+    id: s02
+    title: 動詞の用法・状態動詞
+  type: verb_usage
+  expected_review_questions: 12
+  enabled: true
+- id: g017
+  file: g017.yaml
+  order: 17
+  title: see / look / watch
+  section:
+    id: s02
+    title: 動詞の用法・状態動詞
+  type: verb_usage
+  expected_review_questions: 12
+  enabled: true
+- id: g018
+  file: g018.yaml
+  order: 18
+  title: hear / listen
+  section:
+    id: s02
+    title: 動詞の用法・状態動詞
+  type: verb_usage
+  expected_review_questions: 12
+  enabled: true
+- id: g019
+  file: g019.yaml
+  order: 19
+  title: taste / smell / feel
+  section:
+    id: s02
+    title: 動詞の用法・状態動詞
+  type: verb_usage
+  expected_review_questions: 12
+  enabled: true
+- id: g020
+  file: g020.yaml
+  order: 20
+  title: cost / own / belong / mean
+  section:
+    id: s02
+    title: 動詞の用法・状態動詞
+  type: verb_usage
+  expected_review_questions: 12
+  enabled: true
+- id: g021
+  file: g021.yaml
+  order: 21
+  title: can vs be able to
+  section:
+    id: s03
+    title: 助動詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g022
+  file: g022.yaml
+  order: 22
+  title: must vs have to
+  section:
+    id: s03
+    title: 助動詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g023
+  file: g023.yaml
+  order: 23
+  title: must not vs do not have to
+  section:
+    id: s03
+    title: 助動詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g024
+  file: g024.yaml
+  order: 24
+  title: should vs had better
+  section:
+    id: s03
+    title: 助動詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g025
+  file: g025.yaml
+  order: 25
+  title: may vs might
+  section:
+    id: s03
+    title: 助動詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g026
+  file: g026.yaml
+  order: 26
+  title: will vs would
+  section:
+    id: s03
+    title: 助動詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g027
+  file: g027.yaml
+  order: 27
+  title: could の意味
+  section:
+    id: s03
+    title: 助動詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g028
+  file: g028.yaml
+  order: 28
+  title: should have 過去分詞
+  section:
+    id: s03
+    title: 助動詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g029
+  file: g029.yaml
+  order: 29
+  title: must have 過去分詞
+  section:
+    id: s03
+    title: 助動詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g030
+  file: g030.yaml
+  order: 30
+  title: cannot have 過去分詞
+  section:
+    id: s03
+    title: 助動詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g031
+  file: g031.yaml
+  order: 31
+  title: 能動態 vs 受動態
+  section:
+    id: s04
+    title: 受動態
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g032
+  file: g032.yaml
+  order: 32
+  title: by を使う受動態・使わない受動態
+  section:
+    id: s04
+    title: 受動態
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g033
+  file: g033.yaml
+  order: 33
+  title: 進行形の受動態
+  section:
+    id: s04
+    title: 受動態
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g034
+  file: g034.yaml
+  order: 34
+  title: 完了形の受動態
+  section:
+    id: s04
+    title: 受動態
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g035
+  file: g035.yaml
+  order: 35
+  title: 第4文型の受動態
+  section:
+    id: s04
+    title: 受動態
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g036
+  file: g036.yaml
+  order: 36
+  title: 第5文型の受動態
+  section:
+    id: s04
+    title: 受動態
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g037
+  file: g037.yaml
+  order: 37
+  title: 群動詞の受動態
+  section:
+    id: s04
+    title: 受動態
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g038
+  file: g038.yaml
+  order: 38
+  title: 感情を表す受動態
+  section:
+    id: s04
+    title: 受動態
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g039
+  file: g039.yaml
+  order: 39
+  title: 不定詞 vs 動名詞
+  section:
+    id: s05
+    title: 不定詞・動名詞・分詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g040
+  file: g040.yaml
+  order: 40
+  title: remember to do vs remember doing
+  section:
+    id: s05
+    title: 不定詞・動名詞・分詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g041
+  file: g041.yaml
+  order: 41
+  title: forget to do vs forget doing
+  section:
+    id: s05
+    title: 不定詞・動名詞・分詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g042
+  file: g042.yaml
+  order: 42
+  title: stop to do vs stop doing
+  section:
+    id: s05
+    title: 不定詞・動名詞・分詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g043
+  file: g043.yaml
+  order: 43
+  title: try to do vs try doing
+  section:
+    id: s05
+    title: 不定詞・動名詞・分詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g044
+  file: g044.yaml
+  order: 44
+  title: want 人 to do
+  section:
+    id: s05
+    title: 不定詞・動名詞・分詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g045
+  file: g045.yaml
+  order: 45
+  title: too ... to do
+  section:
+    id: s05
+    title: 不定詞・動名詞・分詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g046
+  file: g046.yaml
+  order: 46
+  title: enough to do
+  section:
+    id: s05
+    title: 不定詞・動名詞・分詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g047
+  file: g047.yaml
+  order: 47
+  title: 現在分詞 vs 過去分詞
+  section:
+    id: s05
+    title: 不定詞・動名詞・分詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g048
+  file: g048.yaml
+  order: 48
+  title: 分詞構文
+  section:
+    id: s05
+    title: 不定詞・動名詞・分詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g049
+  file: g049.yaml
+  order: 49
+  title: few / a few
+  section:
+    id: s06
+    title: 数量・形容詞・副詞・比較
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g050
+  file: g050.yaml
+  order: 50
+  title: little / a little
+  section:
+    id: s06
+    title: 数量・形容詞・副詞・比較
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g051
+  file: g051.yaml
+  order: 51
+  title: many / much
+  section:
+    id: s06
+    title: 数量・形容詞・副詞・比較
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g052
+  file: g052.yaml
+  order: 52
+  title: some / any
+  section:
+    id: s06
+    title: 数量・形容詞・副詞・比較
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g053
+  file: g053.yaml
+  order: 53
+  title: 形容詞 vs 副詞
+  section:
+    id: s06
+    title: 数量・形容詞・副詞・比較
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g054
+  file: g054.yaml
+  order: 54
+  title: hard / hardly
+  section:
+    id: s06
+    title: 数量・形容詞・副詞・比較
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g055
+  file: g055.yaml
+  order: 55
+  title: late / lately
+  section:
+    id: s06
+    title: 数量・形容詞・副詞・比較
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g056
+  file: g056.yaml
+  order: 56
+  title: 比較級 vs 最上級
+  section:
+    id: s06
+    title: 数量・形容詞・副詞・比較
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g057
+  file: g057.yaml
+  order: 57
+  title: as ... as
+  section:
+    id: s06
+    title: 数量・形容詞・副詞・比較
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g058
+  file: g058.yaml
+  order: 58
+  title: the 比較級, the 比較級
+  section:
+    id: s06
+    title: 数量・形容詞・副詞・比較
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g059
+  file: g059.yaml
+  order: 59
+  title: no more than / not more than
+  section:
+    id: s06
+    title: 数量・形容詞・副詞・比較
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g060
+  file: g060.yaml
+  order: 60
+  title: no less than / not less than
+  section:
+    id: s06
+    title: 数量・形容詞・副詞・比較
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g061
+  file: g061.yaml
+  order: 61
+  title: 関係代名詞 who / which
+  section:
+    id: s07
+    title: 関係詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g062
+  file: g062.yaml
+  order: 62
+  title: 関係代名詞 that
+  section:
+    id: s07
+    title: 関係詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g063
+  file: g063.yaml
+  order: 63
+  title: 関係代名詞 whose
+  section:
+    id: s07
+    title: 関係詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g064
+  file: g064.yaml
+  order: 64
+  title: 関係副詞 where / when
+  section:
+    id: s07
+    title: 関係詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g065
+  file: g065.yaml
+  order: 65
+  title: 関係副詞 why / how
+  section:
+    id: s07
+    title: 関係詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g066
+  file: g066.yaml
+  order: 66
+  title: 制限用法 vs 非制限用法
+  section:
+    id: s07
+    title: 関係詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g067
+  file: g067.yaml
+  order: 67
+  title: 関係代名詞 what
+  section:
+    id: s07
+    title: 関係詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g068
+  file: g068.yaml
+  order: 68
+  title: 関係代名詞の省略
+  section:
+    id: s07
+    title: 関係詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g069
+  file: g069.yaml
+  order: 69
+  title: 前置詞 + 関係代名詞
+  section:
+    id: s07
+    title: 関係詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g070
+  file: g070.yaml
+  order: 70
+  title: 複合関係詞 whoever / whatever
+  section:
+    id: s07
+    title: 関係詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g071
+  file: g071.yaml
+  order: 71
+  title: 複合関係詞 whenever / wherever / however
+  section:
+    id: s07
+    title: 関係詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g072
+  file: g072.yaml
+  order: 72
+  title: 仮定法過去
+  section:
+    id: s08
+    title: 仮定法
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g073
+  file: g073.yaml
+  order: 73
+  title: 仮定法過去完了
+  section:
+    id: s08
+    title: 仮定法
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g074
+  file: g074.yaml
+  order: 74
+  title: I wish + 仮定法
+  section:
+    id: s08
+    title: 仮定法
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g075
+  file: g075.yaml
+  order: 75
+  title: as if / as though + 仮定法
+  section:
+    id: s08
+    title: 仮定法
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g076
+  file: g076.yaml
+  order: 76
+  title: It is time + 仮定法
+  section:
+    id: s08
+    title: 仮定法
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g077
+  file: g077.yaml
+  order: 77
+  title: If it were not for / If it had not been for
+  section:
+    id: s08
+    title: 仮定法
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g078
+  file: g078.yaml
+  order: 78
+  title: if の省略と倒置
+  section:
+    id: s08
+    title: 仮定法
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g079
+  file: g079.yaml
+  order: 79
+  title: otherwise / but に含まれる仮定法
+  section:
+    id: s08
+    title: 仮定法
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g080
+  file: g080.yaml
+  order: 80
+  title: 混合仮定法
+  section:
+    id: s08
+    title: 仮定法
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g081
+  file: g081.yaml
+  order: 81
+  title: 要求・提案・命令の that節
+  section:
+    id: s08
+    title: 仮定法
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g082
+  file: g082.yaml
+  order: 82
+  title: 仮定法未来 should / were to
+  section:
+    id: s08
+    title: 仮定法
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g083
+  file: g083.yaml
+  order: 83
+  title: would rather + 仮定法
+  section:
+    id: s08
+    title: 仮定法
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g084
+  file: g084.yaml
+  order: 84
+  title: 強調構文 It is ... that
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g085
+  file: g085.yaml
+  order: 85
+  title: 強調の do / does / did
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g086
+  file: g086.yaml
+  order: 86
+  title: 否定語・準否定語による倒置
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g087
+  file: g087.yaml
+  order: 87
+  title: So / Neither / Nor による倒置
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g088
+  file: g088.yaml
+  order: 88
+  title: 場所・方向の副詞による倒置
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g089
+  file: g089.yaml
+  order: 89
+  title: 接続詞後の主語＋beの省略
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g090
+  file: g090.yaml
+  order: 90
+  title: 代不定詞 to
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g091
+  file: g091.yaml
+  order: 91
+  title: 比較表現での省略
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g092
+  file: g092.yaml
+  order: 92
+  title: if any / if ever / if anything
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g093
+  file: g093.yaml
+  order: 93
+  title: so / not による代用表現
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g094
+  file: g094.yaml
+  order: 94
+  title: 疑問詞 + do you think ... ?
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g095
+  file: g095.yaml
+  order: 95
+  title: 付加疑問文
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g096
+  file: g096.yaml
+  order: 96
+  title: 間接疑問文
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g097
+  file: g097.yaml
+  order: 97
+  title: 感嘆文 What / How
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g098
+  file: g098.yaml
+  order: 98
+  title: 否定疑問文
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g099
+  file: g099.yaml
+  order: 99
+  title: 修辞疑問文
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g100
+  file: g100.yaml
+  order: 100
+  title: 強調・倒置・省略の総合判定
+  section:
+    id: s10
+    title: 強調・倒置・省略
+  type: exam_judgement
+  expected_review_questions: 12
+  enabled: true
+- id: g101
+  file: g101.yaml
+  order: 101
+  title: 同格の that
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g102
+  file: g102.yaml
+  order: 102
+  title: whether / if の名詞節
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g103
+  file: g103.yaml
+  order: 103
+  title: 名詞節の that
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g104
+  file: g104.yaml
+  order: 104
+  title: what節
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g105
+  file: g105.yaml
+  order: 105
+  title: 理由を表す接続詞 because / since / as
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g106
+  file: g106.yaml
+  order: 106
+  title: 譲歩を表す although / though / even though
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g107
+  file: g107.yaml
+  order: 107
+  title: 目的を表す so that / in order to
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g108
+  file: g108.yaml
+  order: 108
+  title: 結果を表す so ... that / such ... that
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g109
+  file: g109.yaml
+  order: 109
+  title: 時を表す接続詞 when / while / as / before / after / until
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g110
+  file: g110.yaml
+  order: 110
+  title: 条件を表す接続詞 if / unless / as long as / provided that
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g111
+  file: g111.yaml
+  order: 111
+  title: 接続詞 as の用法
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g112
+  file: g112.yaml
+  order: 112
+  title: 相関接続詞 both A and B / either A or B / neither A nor B / not only A but also
+    B
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g113
+  file: g113.yaml
+  order: 113
+  title: 等位接続詞 and / but / or / so / for
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g114
+  file: g114.yaml
+  order: 114
+  title: 接続副詞 however / therefore / moreover / otherwise
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g115
+  file: g115.yaml
+  order: 115
+  title: 接続詞と前置詞の使い分け
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g116
+  file: g116.yaml
+  order: 116
+  title: 名詞節・接続詞の総合判定
+  section:
+    id: s11
+    title: 名詞節・接続詞
+  type: exam_judgement
+  expected_review_questions: 12
+  enabled: true
+- id: g117
+  file: g117.yaml
+  order: 117
+  title: 前置詞 at / on / in の時・場所
+  section:
+    id: s12
+    title: 前置詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g118
+  file: g118.yaml
+  order: 118
+  title: 移動・方向を表す前置詞 to / into / onto / from / out of
+  section:
+    id: s12
+    title: 前置詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g119
+  file: g119.yaml
+  order: 119
+  title: 時間を表す前置詞 for / since / during / until / by
+  section:
+    id: s12
+    title: 前置詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true
+- id: g120
+  file: g120.yaml
+  order: 120
+  title: 手段・道具・方法を表す by / with / in / on
+  section:
+    id: s12
+    title: 前置詞
+  type: grammar_contrast
+  expected_review_questions: 12
+  enabled: true

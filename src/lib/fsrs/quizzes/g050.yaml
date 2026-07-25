@@ -1,0 +1,351 @@
+id: g050
+file: g050.yaml
+
+title: little / a little
+type: grammar_contrast
+
+section:
+  id: s06
+  title: 名詞・冠詞・数量表現
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 不可算名詞について、ほとんどないのか、少しはあるのか？
+
+core_concept:
+  little:
+    form: little + 不可算名詞
+    meaning: ほとんど〜ない
+    image: 量が少なすぎて、不十分・否定的
+    examples:
+      - sentence: We have little time.
+        ja: 私たちには時間がほとんどない。
+        point: 時間が少なすぎて不十分という意味。
+      - sentence: There is little water in the bottle.
+        ja: そのボトルには水がほとんどない。
+        point: 水の量が少なすぎる。
+      - sentence: He has little money.
+        ja: 彼にはお金がほとんどない。
+        point: お金が少なく、不十分という感じ。
+
+  a_little:
+    form: a little + 不可算名詞
+    meaning: 少しはある
+    image: 量は多くないが、あるにはある
+    examples:
+      - sentence: We have a little time.
+        ja: 私たちには少し時間がある。
+        point: 多くはないが、時間はある。
+      - sentence: There is a little water in the bottle.
+        ja: そのボトルには水が少しある。
+        point: 少量だが、水はある。
+      - sentence: He has a little money.
+        ja: 彼には少しお金がある。
+        point: 多くはないが、お金はある。
+
+main_rule: >
+  little は「ほとんど〜ない」という否定的な意味を持つ。
+  a little は「少しはある」という肯定的な意味を持つ。
+  どちらも不可算名詞に使う。
+  little time は「時間がほとんどない」。
+  a little time は「少し時間がある」。
+  a があるかないかで、意味の向きが大きく変わる。
+
+contrast_pairs:
+  - negative: We have little time.
+    positive: We have a little time.
+    point: >
+      little time は「時間がほとんどない」。
+      a little time は「少し時間がある」。
+
+  - negative: There is little water left.
+    positive: There is a little water left.
+    point: >
+      little water は「水がほとんどない」。
+      a little water は「水が少しはある」。
+
+  - negative: He has little experience.
+    positive: He has a little experience.
+    point: >
+      little experience は「経験がほとんどない」。
+      a little experience は「少し経験がある」。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または little と a little の意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g050_q001
+    question_type: two_choice
+    prompt: We have ___ time, so we must hurry.
+    choices:
+      - text: little
+        correct: true
+      - text: a little
+        correct: false
+    answer: little
+    explanation: >
+      急がなければならないので、時間がほとんどないという意味。
+      否定的な little time が自然。
+    translation: 私たちには時間がほとんどないので、急がなければならない。
+    focus:
+      - little
+      - negative_quantity
+      - uncountable_noun
+
+  - id: g050_q002
+    question_type: two_choice
+    prompt: We have ___ time, so let's talk.
+    choices:
+      - text: little
+        correct: false
+      - text: a little
+        correct: true
+    answer: a little
+    explanation: >
+      話す余裕があるので、少しは時間があるという意味。
+      肯定的な a little time が自然。
+    translation: 私たちには少し時間があるので、話しましょう。
+    focus:
+      - a_little
+      - positive_quantity
+      - uncountable_noun
+
+  - id: g050_q003
+    question_type: two_choice
+    prompt: There is ___ water left, so we need to buy some.
+    choices:
+      - text: little
+        correct: true
+      - text: a little
+        correct: false
+    answer: little
+    explanation: >
+      水を買う必要があるので、水がほとんど残っていないという意味。
+      little water が自然。
+    translation: 水がほとんど残っていないので、少し買う必要がある。
+    focus:
+      - little
+      - negative_quantity
+      - water
+
+  - id: g050_q004
+    question_type: two_choice
+    prompt: There is ___ water left, so you can drink some.
+    choices:
+      - text: little
+        correct: false
+      - text: a little
+        correct: true
+    answer: a little
+    explanation: >
+      飲むことができるので、水が少しは残っているという意味。
+      a little water が自然。
+    translation: 水が少し残っているので、少し飲んでもいい。
+    focus:
+      - a_little
+      - positive_quantity
+      - water
+
+  - id: g050_q005
+    question_type: two_choice
+    prompt: He has ___ money, so he cannot buy lunch.
+    choices:
+      - text: little
+        correct: true
+      - text: a little
+        correct: false
+    answer: little
+    explanation: >
+      昼食を買えないので、お金がほとんどないという意味。
+      否定的な little money が自然。
+    translation: 彼にはお金がほとんどないので、昼食を買えない。
+    focus:
+      - little
+      - negative_quantity
+      - money
+
+  - id: g050_q006
+    question_type: two_choice
+    prompt: He has ___ money, so he can buy a drink.
+    choices:
+      - text: little
+        correct: false
+      - text: a little
+        correct: true
+    answer: a little
+    explanation: >
+      飲み物を買えるので、少しはお金があるという意味。
+      a little money が自然。
+    translation: 彼には少しお金があるので、飲み物を買える。
+    focus:
+      - a_little
+      - positive_quantity
+      - money
+
+  - id: g050_q007
+    question_type: two_choice
+    prompt: She has ___ experience, so she needs more training.
+    choices:
+      - text: little
+        correct: true
+      - text: a little
+        correct: false
+    answer: little
+    explanation: >
+      もっと訓練が必要なので、経験がほとんどないという意味。
+      little experience が自然。
+    translation: 彼女には経験がほとんどないので、もっと訓練が必要だ。
+    focus:
+      - little
+      - negative_quantity
+      - experience
+
+  - id: g050_q008
+    question_type: two_choice
+    prompt: She has ___ experience, so she can help us.
+    choices:
+      - text: little
+        correct: false
+      - text: a little
+        correct: true
+    answer: a little
+    explanation: >
+      私たちを助けられるので、少しは経験があるという意味。
+      a little experience が自然。
+    translation: 彼女には少し経験があるので、私たちを助けられる。
+    focus:
+      - a_little
+      - positive_quantity
+      - experience
+
+  - id: g050_q009
+    question_type: two_choice
+    prompt: There was ___ hope of finding him alive.
+    choices:
+      - text: little
+        correct: true
+      - text: a little
+        correct: false
+    answer: little
+    explanation: >
+      「生きて見つかる望みがほとんどなかった」という否定的な意味。
+      little hope が自然。
+    translation: 彼が生きて見つかる望みはほとんどなかった。
+    focus:
+      - little
+      - negative_quantity
+      - hope
+
+  - id: g050_q010
+    question_type: two_choice
+    prompt: There was ___ hope, so we kept searching.
+    choices:
+      - text: little
+        correct: false
+      - text: a little
+        correct: true
+    answer: a little
+    explanation: >
+      捜索を続けたので、少しは望みがあったという意味。
+      a little hope が自然。
+    translation: 少し望みがあったので、私たちは捜索を続けた。
+    focus:
+      - a_little
+      - positive_quantity
+      - hope
+
+  - id: g050_q011
+    question_type: two_choice
+    prompt: He showed ___ interest in the topic and soon left.
+    choices:
+      - text: little
+        correct: true
+      - text: a little
+        correct: false
+    answer: little
+    explanation: >
+      すぐに去ったので、その話題にほとんど興味を示さなかったという意味。
+      little interest が自然。
+    translation: 彼はその話題にほとんど興味を示さず、すぐに去った。
+    focus:
+      - little
+      - negative_quantity
+      - interest
+
+  - id: g050_q012
+    question_type: two_choice
+    prompt: He showed ___ interest in the topic and asked a question.
+    choices:
+      - text: little
+        correct: false
+      - text: a little
+        correct: true
+    answer: a little
+    explanation: >
+      質問したので、少しは興味を示したという意味。
+      a little interest が自然。
+    translation: 彼はその話題に少し興味を示し、質問した。
+    focus:
+      - a_little
+      - positive_quantity
+      - interest
+
+common_mistakes:
+  - mistake: little と a little をどちらも「少し」とだけ覚える
+    correction: >
+      little は「ほとんどない」で否定的。
+      a little は「少しはある」で肯定的。
+      a の有無で意味の向きが変わる。
+  - mistake: little / a little を複数可算名詞に使う
+    correction: >
+      little / a little は不可算名詞に使う。
+      students, books, mistakes などの複数可算名詞には few / a few を使う。
+  - mistake: a little time を「時間がほとんどない」と読む
+    correction: >
+      a little time は「少し時間がある」。
+      「時間がほとんどない」は little time。
+  - mistake: 文脈を見ずに little / a little を選ぶ
+    correction: >
+      must hurry, cannot buy, needs more training などは little。
+      let's talk, can buy, can help などは a little が自然。
+
+learning_notes:
+  - >
+    little は「少ない」ではなく「少なすぎる」と考えるとよい。
+    否定的な響きがある。
+  - >
+    a little は「多くはないが、あるにはある」と考える。
+    肯定的な響きがある。
+  - >
+    little / a little は不可算名詞に使う。
+    time, water, money, experience, hope, interest などと相性がよい。
+  - >
+    可算名詞の few / a few と対にして覚えるとよい。
+    few は数、little は量を表す。
+
+prerequisites:
+  - g049
+
+next_items:
+  - g051
+  - g052
+  - g053

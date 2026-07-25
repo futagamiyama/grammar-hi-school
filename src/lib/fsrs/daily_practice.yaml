@@ -1,0 +1,178 @@
+id: daily_practice_policy
+file: daily_practice.yaml
+title: 当日練習メニュー決定ルール
+version: 1
+target_course: 高校英文法マスターFSRS
+source_index: index.yaml
+goal: その日に練習すべき文法カードを、FSRSの復習期限・苦手度・新規学習のバランスで決める。
+basic_unit:
+  card: g001〜g120 の各yamlファイルを1枚のFSRSカードとして扱う
+  review_questions_per_card: 3
+  question_selection: 各カード内の review_questions からランダムに3問出題
+  time_limit_seconds_per_question: 8
+  rating_source: 3問の正誤と解答時間から AGAIN / HARD / GOOD / EASY を決める
+daily_priority_order:
+- priority: 1
+  name: overdue_reviews
+  label: 期限切れ復習
+  condition: fsrs.due_date < today
+  reason: 忘却が進んでいる可能性が高いので最優先。
+- priority: 2
+  name: due_today_reviews
+  label: 本日復習
+  condition: fsrs.due_date == today
+  reason: FSRSが今日復習すべきと判断したカード。
+- priority: 3
+  name: recent_failed_items
+  label: 直近ミス項目
+  condition: last_rating in ['AGAIN', 'HARD'] and last_review_date >= today - 3 days
+  reason: 最近つまずいた項目は、短期的に再確認する価値が高い。
+- priority: 4
+  name: weak_sections
+  label: 苦手セクション補強
+  condition: section_accuracy_7d < 0.80 or average_response_time_ratio_7d > 0.85
+  reason: 正解していても遅い項目は、反射的理解が弱い。
+- priority: 5
+  name: new_items
+  label: 新規学習
+  condition: new_item_queue is not empty and daily_new_limit not reached
+  reason: 復習過多にならない範囲で新しいカードを進める。
+- priority: 6
+  name: mixed_judgement
+  label: 総合判定
+  condition: normal_or_heavy_day and review_load is not too high
+  reason: 単元別理解を、入試形式に近い混合判断へつなげる。
+daily_load_profiles:
+  light:
+    description: 忙しい日。最低限、記憶を切らさない。
+    target_minutes: 5
+    max_cards: 6
+    max_new_items: 0
+    practice_order:
+    - overdue_reviews
+    - due_today_reviews
+    - recent_failed_items
+  normal:
+    description: 通常日。復習を中心に、新規を少し進める。
+    target_minutes: 15
+    max_cards: 18
+    max_new_items: 2
+    practice_order:
+    - overdue_reviews
+    - due_today_reviews
+    - recent_failed_items
+    - weak_sections
+    - new_items
+  heavy:
+    description: 余裕のある日。復習・苦手補強・総合判定まで行う。
+    target_minutes: 30
+    max_cards: 36
+    max_new_items: 4
+    practice_order:
+    - overdue_reviews
+    - due_today_reviews
+    - recent_failed_items
+    - weak_sections
+    - new_items
+    - mixed_judgement
+default_profile: normal
+selection_rules:
+  overdue_reviews:
+    sort_order:
+    - oldest_due_date_first
+    - lowest_fsrs_retrievability_first
+    - last_rating_AGAIN_first
+    - higher_error_rate_first
+    include_limit: until daily max_cards is reached
+  due_today_reviews:
+    sort_order:
+    - lowest_fsrs_retrievability_first
+    - higher_error_rate_first
+    - slower_average_response_time_first
+    include_limit: after overdue reviews, until daily max_cards is reached
+  recent_failed_items:
+    lookback_days: 3
+    include_if:
+    - last_rating == AGAIN
+    - last_rating == HARD
+    - last_session_missed_questions >= 1
+    cooldown: 同じカードを1日に2回以上出す場合は、最低3時間あける
+  weak_sections:
+    metrics:
+      accuracy_window_days: 7
+      weak_accuracy_threshold: 0.8
+      slow_response_time_ratio_threshold: 0.85
+    select_from: 該当セクション内で、未復習または低成績のカード
+    max_cards_per_day: 4
+  new_items:
+    order: index.yaml の items.order 順
+    skip_if:
+    - overdue_reviews_count > 10
+    - yesterday_accuracy < 0.70
+    - today_profile == light
+    max_new_items_by_profile:
+      light: 0
+      normal: 2
+      heavy: 4
+  mixed_judgement:
+    preferred_cards:
+    - g100
+    - g116
+    include_if:
+    - today_profile == heavy
+    - due_reviews_remaining == 0
+    - recent_failed_items_count <= 2
+    max_cards_per_day: 2
+session_structure:
+  step_1_warmup:
+    name: ウォームアップ
+    cards: 2
+    selection: 昨日GOODまたはEASYだったカードから短く確認
+    purpose: 学習開始の抵抗を下げる。
+  step_2_due_reviews:
+    name: 本体復習
+    selection: overdue_reviews と due_today_reviews を優先
+    purpose: FSRSの復習期限に従って記憶を維持する。
+  step_3_weak_or_new:
+    name: 補強または新規
+    selection: 復習負荷が低ければ weak_sections または new_items
+    purpose: 苦手補強と進度確保。
+  step_4_short_summary:
+    name: 終了確認
+    output:
+    - today_accuracy
+    - average_response_time
+    - again_count
+    - hard_count
+    - next_due_count
+    - weakest_section_today
+    purpose: 明日の出題判断に使う。
+rating_rules_reference:
+  AGAIN: 3問中2問以上ミス
+  HARD: 3問中1問ミス、または正解しても中核ルールを説明できない
+  GOOD: 3問全問正解。ただしEASY条件は満たさない
+  EASY: 3問全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も85%以内
+daily_output_schema:
+  date: YYYY-MM-DD
+  profile: light | normal | heavy
+  selected_cards:
+  - id: g001
+    file: g001.yaml
+    reason: due_today_reviews
+    question_count: 3
+  skipped_new_items_reason: optional
+  summary_after_practice:
+    cards_done: 0
+    questions_done: 0
+    accuracy: 0.0
+    again: 0
+    hard: 0
+    good: 0
+    easy: 0
+    weak_sections: []
+notes:
+- 復習期限が来ているカードを最優先する。
+- 新規カードは、復習が重い日は入れない。
+- 正解しても遅い項目は苦手扱いにする。
+- 1カードにつき3問ランダムに出し、3問単位でFSRS評価する。
+- 総合判定カードは、通常復習が安定している日にだけ入れる。

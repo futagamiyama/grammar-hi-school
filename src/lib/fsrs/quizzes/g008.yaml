@@ -1,0 +1,301 @@
+id: g008
+file: g008.yaml
+
+title: used to vs would
+type: grammar_contrast
+
+section:
+  id: s01
+  title: 時制・相の基本対立
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 過去の状態か、過去の習慣的動作か？
+
+core_concept:
+  used_to:
+    form: used to + 動詞の原形
+    meaning: 現在とは違う過去の状態・過去の習慣を表す
+    image: 昔はそうだったが、今は違う
+    examples:
+      - sentence: I used to live in Kyoto.
+        ja: 私は以前、京都に住んでいた。
+        point: 過去の状態。今は京都に住んでいない含みがある。
+      - sentence: She used to play tennis every weekend.
+        ja: 彼女は以前、毎週末テニスをしていた。
+        point: 過去の習慣。今はそうしていない含みがある。
+      - sentence: There used to be a bookstore here.
+        ja: ここには以前、本屋があった。
+        point: 過去の存在・状態を表している。
+
+  would:
+    form: would + 動詞の原形
+    meaning: 過去によく繰り返した習慣的動作を表す
+    image: 昔はよく〜したものだ
+    examples:
+      - sentence: When I was a child, I would visit my grandparents every summer.
+        ja: 子どものころ、私は毎年夏に祖父母を訪ねたものだった。
+        point: 過去に繰り返した動作を表している。
+      - sentence: After dinner, my father would read to us.
+        ja: 夕食後、父はよく私たちに本を読んでくれたものだった。
+        point: 過去の反復的な動作を表している。
+
+main_rule: >
+  used to は、過去の状態にも過去の習慣的動作にも使える。
+  would は、過去に繰り返した動作には使えるが、live, be, know, have, belong などの状態には原則として使いにくい。
+  したがって、過去の状態なら used to、過去の反復的な動作なら used to も would も可能。
+  このカードでは「would が使えるか」を中心に判断する。
+
+contrast_pairs:
+  - used_to: I used to live in London.
+    would: I would live in London.
+    point: live は過去の状態を表すため、used to が自然。would はこの意味では不自然。
+  - used_to: There used to be a small park here.
+    would: There would be a small park here.
+    point: 過去の存在・状態を表すので used to が自然。would は習慣的動作ではない。
+  - used_to: When I was young, I used to swim in the river.
+    would: When I was young, I would swim in the river.
+    point: swim は繰り返した動作なので、used to も would も使える。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+  note: >
+    used to と would は、反復的動作では両方正解になることがある。
+    そのため、このカードの2択は「この文では would が自然に使えるか」を中心に作る。
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+  rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+
+review_questions:
+  - id: g008_q001
+    question_type: two_choice
+    prompt: I ___ live in a small village.
+    choices:
+      - text: used to
+        correct: true
+      - text: would
+        correct: false
+    answer: used to
+    ja: 私は以前、小さな村に住んでいた。
+    explanation: live は過去の状態を表している。状態には would より used to が自然。
+    focus:
+      - past_state
+      - live
+      - used_to
+
+  - id: g008_q002
+    question_type: two_choice
+    prompt: There ___ be a movie theater near the station.
+    choices:
+      - text: used to
+        correct: true
+      - text: would
+        correct: false
+    answer: used to
+    ja: 駅の近くには以前、映画館があった。
+    explanation: there be は存在を表す状態。過去の状態なので used to が自然。
+    focus:
+      - past_existence
+      - there_be
+      - used_to
+
+  - id: g008_q003
+    question_type: two_choice
+    prompt: When I was a child, I ___ play in this park every day.
+    choices:
+      - text: used to
+        correct: false
+      - text: would
+        correct: true
+    answer: would
+    ja: 子どものころ、私は毎日この公園で遊んだものだった。
+    explanation: play は繰り返された動作。used to も可能だが、この問題では would が使える典型例として扱う。
+    focus:
+      - past_habit
+      - repeated_action
+      - would
+
+  - id: g008_q004
+    question_type: two_choice
+    prompt: When we were kids, we ___ go fishing every Sunday.
+    choices:
+      - text: used to
+        correct: false
+      - text: would
+        correct: true
+    answer: would
+    ja: 子どものころ、私たちは毎週日曜日によく釣りに行ったものだった。
+    explanation: go fishing は反復的な動作。would が自然に使える。
+    focus:
+      - past_habit
+      - repeated_action
+      - would
+
+  - id: g008_q005
+    question_type: two_choice
+    prompt: My grandfather ___ tell us old stories after dinner.
+    choices:
+      - text: used to
+        correct: false
+      - text: would
+        correct: true
+    answer: would
+    ja: 祖父は夕食後、よく昔話をしてくれたものだった。
+    explanation: tell は反復的な動作を表しているので would が自然。used to も可能だが、ここでは would の典型例を問う。
+    focus:
+      - past_habit
+      - repeated_action
+      - tell
+      - would
+
+  - id: g008_q006
+    question_type: two_choice
+    prompt: She ___ be very shy.
+    choices:
+      - text: used to
+        correct: true
+      - text: would
+        correct: false
+    answer: used to
+    ja: 彼女は以前、とても内気だった。
+    explanation: be shy は過去の状態。状態には used to が自然で、would は不自然。
+    focus:
+      - past_state
+      - be
+      - used_to
+
+  - id: g008_q007
+    question_type: two_choice
+    prompt: I ___ know him well.
+    choices:
+      - text: used to
+        correct: true
+      - text: would
+        correct: false
+    answer: used to
+    ja: 私は以前、彼のことをよく知っていた。
+    explanation: know は状態動詞。過去の状態なので used to が自然。
+    focus:
+      - past_state
+      - know
+      - used_to
+
+  - id: g008_q008
+    question_type: two_choice
+    prompt: Every summer, my family ___ stay at this hotel.
+    choices:
+      - text: used to
+        correct: false
+      - text: would
+        correct: true
+    answer: would
+    ja: 毎年夏、私の家族はこのホテルに泊まったものだった。
+    explanation: stay at this hotel は毎年繰り返された行動として読める。every summer があるので would が自然。
+    focus:
+      - past_habit
+      - repeated_action
+      - stay
+      - would
+
+  - id: g008_q009
+    question_type: two_choice
+    prompt: This building ___ belong to a bank.
+    choices:
+      - text: used to
+        correct: true
+      - text: would
+        correct: false
+    answer: used to
+    ja: この建物は以前、銀行のものだった。
+    explanation: belong は所有・所属の状態を表す。過去の状態なので used to が自然。
+    focus:
+      - past_state
+      - belong
+      - used_to
+
+  - id: g008_q010
+    question_type: two_choice
+    prompt: On rainy days, we ___ sit by the window and read books.
+    choices:
+      - text: used to
+        correct: false
+      - text: would
+        correct: true
+    answer: would
+    ja: 雨の日には、私たちはよく窓辺に座って本を読んだものだった。
+    explanation: sit and read は過去に繰り返した動作。would が自然に使える。
+    focus:
+      - past_habit
+      - repeated_action
+      - would
+
+  - id: g008_q011
+    question_type: two_choice
+    prompt: He ___ have long hair when he was young.
+    choices:
+      - text: used to
+        correct: true
+      - text: would
+        correct: false
+    answer: used to
+    ja: 彼は若いころ、髪が長かった。
+    explanation: have long hair は状態・所有を表す。過去の状態なので used to が自然。
+    focus:
+      - past_state
+      - have
+      - used_to
+
+  - id: g008_q012
+    question_type: two_choice
+    prompt: Whenever I visited her, she ___ make tea for me.
+    choices:
+      - text: used to
+        correct: false
+      - text: would
+        correct: true
+    answer: would
+    ja: 私が彼女を訪ねると、彼女はいつも私にお茶を入れてくれたものだった。
+    explanation: make tea は訪問のたびに繰り返された動作。would が特に自然。
+    focus:
+      - past_habit
+      - repeated_action
+      - would
+
+common_mistakes:
+  - mistake: used to と would をどちらも「〜したものだ」とだけ覚える
+    correction: used to は過去の状態にも使えるが、would は原則として過去の反復的な動作に使う。
+  - mistake: I would live in Kyoto. を「京都に住んでいたものだ」と考える
+    correction: live は状態なので、この意味では I used to live in Kyoto. が自然。
+  - mistake: would が使える文は used to が使えないと思う
+    correction: 反復的な動作なら used to も would も使えることが多い。would は回想的・物語的に響きやすい。
+  - mistake: 過去の習慣なら必ず would を使うと思う
+    correction: would は過去の反復動作には使えるが、現在との対比を強く出すなら used to が自然なことが多い。
+
+learning_notes:
+  - used to は「以前はそうだったが、今は違う」という対比を含みやすい。
+  - would は過去の状態ではなく、過去に繰り返した動作に使う。
+  - 過去の状態を表す live, be, know, have, belong などでは used to を選ぶ。
+  - When I was a child などの過去の枠組みがあると、would は自然になりやすい。
+  - 反復的動作では used to も would も可能なことがあるため、このカードでは「would が自然に使える場面」と「would が不自然な状態」を対比する。
+
+prerequisites:
+  - g002
+  - g003
+
+next_items:
+  - g009
+  - g010

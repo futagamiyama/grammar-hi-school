@@ -1,0 +1,260 @@
+id: g024
+file: g024.yaml
+title: should vs had better
+type: grammar_contrast
+section:
+  id: s03
+  title: 助動詞・法
+level: basic
+target: 高校英文法基礎
+core_question: 普通の助言か、切迫した警告・強い勧めか？
+core_concept:
+  should:
+    form: should + 動詞の原形
+    meaning: 〜した方がよい、という一般的・穏やかな助言を表す
+    image: おすすめ / 助言 / 常識的にそうした方がよい
+    examples:
+    - sentence: You should exercise regularly.
+      ja: 定期的に運動した方がよい。
+      point: 健康のための一般的な助言を表している。
+    - sentence: She should talk to her teacher.
+      ja: 彼女は先生に相談した方がよい。
+      point: 穏やかに勧めている。
+    - sentence: We should leave some time for questions.
+      ja: 質問のための時間を残しておいた方がよい。
+      point: 計画上そうするのが望ましい、という助言。
+  had_better:
+    form: had better + 動詞の原形
+    meaning: 〜した方がよい、そうしないと悪い結果になる、という強い助言・警告を表す
+    image: 今すぐそうした方がよい / しないとまずい / 警告に近い
+    examples:
+    - sentence: You had better leave now, or you will miss the train.
+      ja: 今出た方がいい。そうしないと電車に乗り遅れる。
+      point: 遅れるという悪い結果が迫っている。
+    - sentence: You had better not touch that wire.
+      ja: その電線には触らない方がいい。
+      point: 危険なので、警告として強く勧めている。
+    - sentence: We had better hurry. The store closes in ten minutes.
+      ja: 急いだ方がいい。店は10分で閉まる。
+      point: 時間的な切迫感がある。
+main_rule: should は、一般的・穏やかな助言を表す。had better は、そうしないと悪い結果になるという含みを持つ強い助言・警告を表す。had better の had は過去形の意味ではなく、後ろには必ず動詞の原形を置く。
+contrast_pairs:
+- should: You should see a doctor if you often feel tired.
+  had_better: You had better see a doctor now. Your chest hurts badly.
+  point: should は一般的な助言、had better は今すぐ必要な強い勧め。
+- should: You should save some money every month.
+  had_better: You had better save the file now, or you may lose your work.
+  point: should は生活上の助言、had better は差し迫った悪い結果を避けるための警告。
+- should: Students should read more books.
+  had_better: You had better not be late again, or the coach will be angry.
+  point: should は一般論、had better not は『しない方がよい』という警告。
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+  instruction: 文脈上より自然な方を選ぶ。
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+  rating_rules:
+    AGAIN: 2問以上ミス
+    HARD: 1問ミス、または理由を説明できない
+    GOOD: 全問正解。ただしEASY条件は満たさない
+    EASY: 全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.6
+    max_threshold_ratio: 0.85
+review_questions:
+- id: g024_q001
+  question_type: two_choice
+  prompt: You ___ exercise regularly.
+  choices:
+  - text: should
+    correct: true
+  - text: had better
+    correct: false
+  answer: should
+  explanation: 定期的な運動についての一般的な助言なので should が自然。差し迫った警告ではない。
+  focus:
+  - general_advice
+  - should
+- id: g024_q002
+  question_type: two_choice
+  prompt: You ___ leave now, or you will miss the last train.
+  choices:
+  - text: should
+    correct: false
+  - text: had better
+    correct: true
+  answer: had better
+  explanation: or you will miss the last train から、そうしないと悪い結果になる。切迫した警告なので had better が自然。
+  focus:
+  - warning
+  - bad_result
+  - had_better
+- id: g024_q003
+  question_type: two_choice
+  prompt: Students ___ read more books.
+  choices:
+  - text: should
+    correct: true
+  - text: had better
+    correct: false
+  answer: should
+  explanation: 学生はもっと本を読んだ方がよい、という一般的な助言。警告ではないので should が自然。
+  focus:
+  - general_advice
+  - students
+  - should
+- id: g024_q004
+  question_type: two_choice
+  prompt: You ___ not touch that wire. It may be live.
+  choices:
+  - text: should
+    correct: false
+  - text: had better
+    correct: true
+  answer: had better
+  explanation: 感電の危険があるため、強い警告として『触らない方がよい』と言っている。had better not が自然。
+  focus:
+  - negative
+  - warning
+  - danger
+  - had_better_not
+- id: g024_q005
+  question_type: two_choice
+  prompt: You ___ ask your teacher if you do not understand the question.
+  choices:
+  - text: should
+    correct: true
+  - text: had better
+    correct: false
+  answer: should
+  explanation: わからない時は先生に聞くべき、という普通の助言。切迫した悪い結果を避ける警告ではないので should。
+  focus:
+  - advice
+  - school
+  - should
+- id: g024_q006
+  question_type: two_choice
+  prompt: We ___ hurry. The store closes in ten minutes.
+  choices:
+  - text: should
+    correct: false
+  - text: had better
+    correct: true
+  answer: had better
+  explanation: 10分で閉店するため、急がないと間に合わない。時間的に切迫しているので had better が自然。
+  focus:
+  - urgency
+  - time_pressure
+  - had_better
+- id: g024_q007
+  question_type: two_choice
+  prompt: People ___ be kind to others.
+  choices:
+  - text: should
+    correct: true
+  - text: had better
+    correct: false
+  answer: should
+  explanation: 人は他人に親切にすべきだ、という道徳的・一般的な助言なので should が自然。
+  focus:
+  - moral_advice
+  - general_statement
+  - should
+- id: g024_q008
+  question_type: two_choice
+  prompt: You ___ apologize now, or she may never trust you again.
+  choices:
+  - text: should
+    correct: false
+  - text: had better
+    correct: true
+  answer: had better
+  explanation: 謝らないと信頼を失うかもしれない、という悪い結果が示されている。強い勧めなので had better が自然。
+  focus:
+  - warning
+  - relationship
+  - bad_result
+  - had_better
+- id: g024_q009
+  question_type: two_choice
+  prompt: You ___ not eat too much sugar.
+  choices:
+  - text: should
+    correct: true
+  - text: had better
+    correct: false
+  answer: should
+  explanation: 砂糖を取りすぎない方がよい、という健康上の一般的な助言。今すぐの警告ではないので should not が自然。
+  focus:
+  - negative
+  - health_advice
+  - should_not
+- id: g024_q010
+  question_type: two_choice
+  prompt: You ___ not be late again. The manager is already angry.
+  choices:
+  - text: should
+    correct: false
+  - text: had better
+    correct: true
+  answer: had better
+  explanation: 上司がすでに怒っており、次に遅刻すると悪い結果になりそうな状況。警告なので had better not が自然。
+  focus:
+  - negative
+  - warning
+  - workplace
+  - had_better_not
+- id: g024_q011
+  question_type: two_choice
+  prompt: We ___ reduce plastic waste.
+  choices:
+  - text: should
+    correct: true
+  - text: had better
+    correct: false
+  answer: should
+  explanation: プラスチックごみを減らすべきだ、という社会的・一般的な主張。差し迫った個別の警告ではないので should。
+  focus:
+  - general_advice
+  - social_issue
+  - should
+- id: g024_q012
+  question_type: two_choice
+  prompt: You ___ save the file now, or you may lose your work.
+  choices:
+  - text: should
+    correct: false
+  - text: had better
+    correct: true
+  answer: had better
+  explanation: 保存しないと作業を失う可能性がある。悪い結果を避けるための強い勧めなので had better が自然。
+  focus:
+  - warning
+  - computer
+  - bad_result
+  - had_better
+common_mistakes:
+- mistake: had better を『過去に〜した方がよかった』と考えてしまう
+  correction: had better の had は過去の意味ではない。現在または近い未来への強い助言・警告を表す。
+- mistake: had better to do としてしまう
+  correction: had better の後ろは to 不定詞ではなく動詞の原形。正しくは You had better go.。
+- mistake: should と had better を同じ強さだと思ってしまう
+  correction: should は普通の助言。had better は『そうしないとまずい』という含みを持つ強い表現。
+- mistake: had better を目上の人や他人に不用意に使ってしまう
+  correction: had better は警告っぽく聞こえることがある。丁寧に助言するなら should や maybe you should の方が安全。
+learning_notes:
+- should は、高校英文法では最も基本的な『助言』の助動詞として扱う。
+- had better は形は過去に見えるが、意味は現在または近い未来への強い助言・警告。
+- had better には、言わない部分に『そうしないと悪いことが起こる』という圧力がある。
+- 否定形は had better not + 動詞の原形。had better do not にはしない。
+- 入試では、文脈に or, otherwise, now, hurry, dangerous などがあると had better が自然になりやすい。
+prerequisites:
+- g021
+- g022
+next_items:
+- g025

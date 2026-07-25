@@ -1,0 +1,435 @@
+id: g118
+file: g118.yaml
+
+title: 移動・方向を表す前置詞 to / into / onto / from / out of
+type: grammar_contrast
+
+section:
+  id: s12
+  title: 前置詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 位置を表す in / on / at と、移動・方向を表す to / into / onto / from / out of を区別できるか？
+
+core_concept:
+  to_destination:
+    form: go/come/move/travel + to + 場所
+    meaning: 〜へ、〜に向かって
+    image: 目的地へ向かう矢印
+    examples:
+      - sentence: I went to the station.
+        ja: 私は駅へ行った。
+        point: 駅が移動の目的地なので to。
+      - sentence: She came to my house.
+        ja: 彼女は私の家へ来た。
+        point: my house へ向かう移動を表す。
+      - sentence: He moved to Tokyo last year.
+        ja: 彼は去年東京へ引っ越した。
+        point: Tokyo が移動後の目的地。
+
+  into_inside_movement:
+    form: go/come/put/jump + into + 内部
+    meaning: 〜の中へ
+    image: 外から中へ入る動き
+    examples:
+      - sentence: She went into the room.
+        ja: 彼女は部屋の中へ入った。
+        point: 外から部屋の中へ入る動きなので into。
+      - sentence: He jumped into the pool.
+        ja: 彼はプールに飛び込んだ。
+        point: プールの中へ入る動き。
+      - sentence: Put the keys into the bag.
+        ja: 鍵をバッグの中に入れなさい。
+        point: バッグの中へ移す動き。
+
+  onto_surface_movement:
+    form: climb/jump/put + onto + 表面
+    meaning: 〜の上へ
+    image: 表面に乗る動き
+    examples:
+      - sentence: The cat jumped onto the table.
+        ja: その猫はテーブルの上へ飛び乗った。
+        point: テーブルの表面へ移動して乗るので onto。
+      - sentence: He climbed onto the roof.
+        ja: 彼は屋根の上へ登った。
+        point: 屋根の表面へ到達する動き。
+      - sentence: Put the box onto the shelf.
+        ja: 箱を棚の上に置きなさい。
+        point: 棚の表面へ移す動き。
+
+  from_starting_point:
+    form: come/go/move + from + 場所
+    meaning: 〜から
+    image: 出発点から離れる矢印
+    examples:
+      - sentence: He came from Canada.
+        ja: 彼はカナダから来た。
+        point: Canada が出発点なので from。
+      - sentence: The train leaves from platform 3.
+        ja: その電車は3番線から出発します。
+        point: platform 3 が出発点。
+      - sentence: I received a letter from my friend.
+        ja: 私は友人から手紙を受け取った。
+        point: 手紙の出どころを from が表す。
+
+  out_of_inside_to_outside:
+    form: go/come/take/get + out of + 内部
+    meaning: 〜の中から外へ
+    image: 中から外へ出る動き
+    examples:
+      - sentence: He came out of the room.
+        ja: 彼は部屋から出てきた。
+        point: 部屋の中から外へ出る動き。
+      - sentence: She took the keys out of the bag.
+        ja: 彼女はバッグから鍵を取り出した。
+        point: バッグの中から外へ出す動き。
+      - sentence: The dog ran out of the house.
+        ja: その犬は家から走って出た。
+        point: 家の中から外へ出る動き。
+
+  position_vs_movement:
+    form: in/on/at + 場所 / into/onto/to + 場所
+    meaning: 〜にある / 〜へ動く
+    image: 位置か、移動かで前置詞が変わる
+    examples:
+      - sentence: She is in the room.
+        ja: 彼女は部屋の中にいる。
+        point: 位置を表すので in。
+      - sentence: She went into the room.
+        ja: 彼女は部屋の中へ入った。
+        point: 移動を表すので into。
+      - sentence: The book is on the desk.
+        ja: その本は机の上にある。
+        point: 位置は on。机の上へ移す動きなら onto。
+
+main_rule: >
+  at / on / in は主に位置を表すが、to / into / onto / from / out of は移動や方向を表す。
+  to は目的地へ向かう移動。
+  I went to the station. は「駅へ行った」。
+  into は外から中へ入る動き。
+  She went into the room. は「部屋の中へ入った」。
+  onto は表面の上へ乗る動き。
+  The cat jumped onto the table. は「テーブルの上へ飛び乗った」。
+  from は出発点・出どころ。
+  He came from Canada. は「カナダから来た」。
+  out of は中から外へ出る動き。
+  He came out of the room. は「部屋から出てきた」。
+  位置なら in the room / on the table、移動なら into the room / onto the table と考える。
+
+contrast_pairs:
+  - position: She is in the room.
+    movement: She went into the room.
+    point: >
+      in は部屋の中にいる位置。
+      into は外から部屋の中へ入る移動。
+
+  - position: The cat is on the table.
+    movement: The cat jumped onto the table.
+    point: >
+      on は表面にある位置。
+      onto は表面へ乗る移動。
+
+  - destination: He moved to Tokyo.
+    starting_point: He came from Canada.
+    point: >
+      to は目的地。
+      from は出発点・出どころ。
+
+  - inside: The keys are in the bag.
+    outside_movement: She took the keys out of the bag.
+    point: >
+      in は中にある位置。
+      out of は中から外へ出す動き。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または位置と移動の前置詞の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g118_q001
+    question_type: two_choice
+    prompt: I went ___ the station.
+    choices:
+      - text: to
+        correct: true
+      - text: at
+        correct: false
+    answer: to
+    explanation: >
+      went は移動を表す動詞。
+      the station が目的地なので to the station が正しい。
+    translation: 私は駅へ行った。
+    focus:
+      - to_destination
+      - destination
+      - station
+
+  - id: g118_q002
+    question_type: two_choice
+    prompt: She came ___ my house.
+    choices:
+      - text: to
+        correct: true
+      - text: in
+        correct: false
+    answer: to
+    explanation: >
+      come は目的地へ向かう移動を表す。
+      my house へ来たので to my house。
+    translation: 彼女は私の家へ来た。
+    focus:
+      - to_destination
+      - come_to
+      - house
+
+  - id: g118_q003
+    question_type: two_choice
+    prompt: He moved ___ Tokyo last year.
+    choices:
+      - text: to
+        correct: true
+      - text: at
+        correct: false
+    answer: to
+    explanation: >
+      move to ... で「〜へ引っ越す」。
+      Tokyo が移動後の目的地。
+    translation: 彼は去年東京へ引っ越した。
+    focus:
+      - to_destination
+      - move_to
+      - tokyo
+
+  - id: g118_q004
+    question_type: two_choice
+    prompt: She went ___ the room.
+    choices:
+      - text: into
+        correct: true
+      - text: in
+        correct: false
+    answer: into
+    explanation: >
+      went は移動を表す。
+      外から部屋の中へ入る動きなので into the room。
+    translation: 彼女は部屋の中へ入った。
+    focus:
+      - into_inside_movement
+      - movement_inside
+      - room
+
+  - id: g118_q005
+    question_type: two_choice
+    prompt: She is ___ the room.
+    choices:
+      - text: in
+        correct: true
+      - text: into
+        correct: false
+    answer: in
+    explanation: >
+      is は位置を表している。
+      部屋の中にいる状態なので in the room。
+    translation: 彼女は部屋の中にいる。
+    focus:
+      - position_vs_movement
+      - in_position
+      - room
+
+  - id: g118_q006
+    question_type: two_choice
+    prompt: He jumped ___ the pool.
+    choices:
+      - text: into
+        correct: true
+      - text: in
+        correct: false
+    answer: into
+    explanation: >
+      jumped は移動を表す。
+      プールの中へ飛び込む動きなので into the pool。
+    translation: 彼はプールに飛び込んだ。
+    focus:
+      - into_inside_movement
+      - jump_into
+      - pool
+
+  - id: g118_q007
+    question_type: two_choice
+    prompt: The cat jumped ___ the table.
+    choices:
+      - text: onto
+        correct: true
+      - text: on
+        correct: false
+    answer: onto
+    explanation: >
+      jumped は移動を表す。
+      テーブルの表面へ飛び乗る動きなので onto the table。
+    translation: その猫はテーブルの上へ飛び乗った。
+    focus:
+      - onto_surface_movement
+      - jump_onto
+      - table
+
+  - id: g118_q008
+    question_type: two_choice
+    prompt: The cat is ___ the table.
+    choices:
+      - text: on
+        correct: true
+      - text: onto
+        correct: false
+    answer: on
+    explanation: >
+      is は位置を表す。
+      テーブルの上にいる状態なので on the table。
+    translation: その猫はテーブルの上にいる。
+    focus:
+      - position_vs_movement
+      - on_position
+      - table
+
+  - id: g118_q009
+    question_type: two_choice
+    prompt: He came ___ Canada.
+    choices:
+      - text: from
+        correct: true
+      - text: to
+        correct: false
+    answer: from
+    explanation: >
+      Canada は来た出発点・出どころ。
+      出発点には from を使う。
+    translation: 彼はカナダから来た。
+    focus:
+      - from_starting_point
+      - starting_point
+      - canada
+
+  - id: g118_q010
+    question_type: two_choice
+    prompt: The train leaves ___ platform 3.
+    choices:
+      - text: from
+        correct: true
+      - text: into
+        correct: false
+    answer: from
+    explanation: >
+      platform 3 は電車の出発点。
+      出発点を表すので from platform 3。
+    translation: その電車は3番線から出発します。
+    focus:
+      - from_starting_point
+      - leaves_from
+      - platform
+
+  - id: g118_q011
+    question_type: two_choice
+    prompt: He came ___ the room.
+    choices:
+      - text: out of
+        correct: true
+      - text: into
+        correct: false
+    answer: out of
+    explanation: >
+      部屋の中から外へ出てきた動き。
+      out of the room が正しい。
+    translation: 彼は部屋から出てきた。
+    focus:
+      - out_of_inside_to_outside
+      - out_of
+      - room
+
+  - id: g118_q012
+    question_type: two_choice
+    prompt: She took the keys ___ the bag.
+    choices:
+      - text: out of
+        correct: true
+      - text: into
+        correct: false
+    answer: out of
+    explanation: >
+      バッグの中から鍵を外へ取り出した動き。
+      out of the bag が正しい。
+    translation: 彼女はバッグから鍵を取り出した。
+    focus:
+      - out_of_inside_to_outside
+      - take_out_of
+      - bag
+
+common_mistakes:
+  - mistake: go at the station としてしまう
+    correction: >
+      go は目的地へ向かう移動を表すので to を使う。
+      go to the station が正しい。
+  - mistake: into と in を同じだと思う
+    correction: >
+      in は中にある位置。
+      into は外から中へ入る移動。
+  - mistake: onto と on を同じだと思う
+    correction: >
+      on は表面にある位置。
+      onto は表面へ乗る移動。
+  - mistake: came to Canada と came from Canada を混同する
+    correction: >
+      to は目的地。
+      from は出発点・出どころ。
+  - mistake: out of を単なる from と同じに考える
+    correction: >
+      out of は「中から外へ」という内部からの移動を強く表す。
+  - mistake: 日本語の「に」だけで in / into / to を選ぶ
+    correction: >
+      英語では位置か移動か、目的地か内部への移動かを見る。
+      in the room / into the room / to the room を区別する。
+
+learning_notes:
+  - >
+    to は目的地へ向かう移動。
+    go to school / move to Tokyo の形。
+  - >
+    into は外から中へ入る動き。
+    go into the room / jump into the pool。
+  - >
+    onto は表面の上へ乗る動き。
+    jump onto the table / climb onto the roof。
+  - >
+    from は出発点・出どころ。
+    come from Canada / receive a letter from a friend。
+  - >
+    out of は中から外へ出る動き。
+    come out of the room / take keys out of the bag。
+  - >
+    位置なら in / on / at、移動なら into / onto / to をまず疑う。
+
+prerequisites:
+  - g053
+  - g117
+
+next_items:
+  - g119
+  - g120
+  - g121

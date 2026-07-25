@@ -1,0 +1,374 @@
+id: g085
+file: g085.yaml
+
+title: 強調の do / does / did
+type: grammar_contrast
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 肯定文で使う do / does / did が、強調を表すことを読めるか？
+
+core_concept:
+  emphatic_do_present:
+    form: 主語 + do/does + 動詞原形
+    meaning: 本当に〜する、たしかに〜する
+    image: 普通の肯定文を強める
+    examples:
+      - sentence: I do like this song.
+        ja: 私はこの歌が本当に好きです。
+        point: like を do で強調している。
+      - sentence: She does know the answer.
+        ja: 彼女はたしかに答えを知っている。
+        point: she なので does、後ろは原形 know。
+      - sentence: He does work hard.
+        ja: 彼は本当によく働く。
+        point: works ではなく does work の形。
+
+  emphatic_do_past:
+    form: 主語 + did + 動詞原形
+    meaning: 本当に〜した、たしかに〜した
+    image: 過去の肯定文を強める
+    examples:
+      - sentence: I did call you yesterday.
+        ja: 私は昨日たしかにあなたに電話しました。
+        point: called ではなく did call。
+      - sentence: He did finish the work.
+        ja: 彼は本当にその仕事を終えた。
+        point: did の後ろは原形 finish。
+      - sentence: They did arrive on time.
+        ja: 彼らはたしかに時間通りに到着した。
+        point: arrived ではなく did arrive。
+
+  contrast_with_ordinary_do:
+    form: do/does/did + 動詞原形
+    meaning: 疑問文・否定文の助動詞としても使うが、肯定文では強調になる
+    image: 肯定文に余分に入った do は強調
+    examples:
+      - sentence: Do you like this song?
+        ja: あなたはこの歌が好きですか。
+        point: 疑問文を作る do。
+      - sentence: I do not like this song.
+        ja: 私はこの歌が好きではありません。
+        point: 否定文を作る do。
+      - sentence: I do like this song.
+        ja: 私はこの歌が本当に好きです。
+        point: 肯定文の do は強調。
+
+main_rule: >
+  do / does / did は、疑問文や否定文だけでなく、肯定文で強調として使われることがある。
+  I like this song. は普通の肯定文。
+  I do like this song. は「私はこの歌が本当に好きです」と、like を強めている。
+  三人称単数現在では does + 動詞原形を使う。
+  She does know the answer. で、knows ではなく know になる。
+  過去では did + 動詞原形を使う。
+  I did call you yesterday. で、called ではなく call になる。
+  do / does / did の後ろは必ず動詞原形にする。
+
+contrast_pairs:
+  - ordinary: I like this song.
+    emphatic: I do like this song.
+    point: >
+      do を入れると、like を強調して「本当に好きだ」という意味になる。
+
+  - ordinary: She knows the answer.
+    emphatic: She does know the answer.
+    point: >
+      三人称単数現在では does を使う。
+      後ろは knows ではなく know。
+
+  - ordinary: I called you yesterday.
+    emphatic: I did call you yesterday.
+    point: >
+      過去の強調では did を使う。
+      後ろは called ではなく call。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または強調の do / does / did の後ろが原形になることを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g085_q001
+    question_type: two_choice
+    prompt: I ___ like this song.
+    choices:
+      - text: do
+        correct: true
+      - text: am
+        correct: false
+    answer: do
+    explanation: >
+      肯定文で do を入れると、動詞 like を強調できる。
+      I do like this song. で「本当に好きです」。
+    translation: 私はこの歌が本当に好きです。
+    focus:
+      - emphatic_do_present
+      - do
+      - like
+
+  - id: g085_q002
+    question_type: two_choice
+    prompt: She ___ know the answer.
+    choices:
+      - text: does
+        correct: true
+      - text: do
+        correct: false
+    answer: does
+    explanation: >
+      主語 She は三人称単数なので does を使う。
+      does の後ろは原形 know。
+    translation: 彼女はたしかに答えを知っている。
+    focus:
+      - emphatic_do_present
+      - does
+      - third_person_singular
+
+  - id: g085_q003
+    question_type: two_choice
+    prompt: She does ___ the answer.
+    choices:
+      - text: know
+        correct: true
+      - text: knows
+        correct: false
+    answer: know
+    explanation: >
+      does の後ろは動詞原形。
+      She does knows とはしない。
+    translation: 彼女はたしかに答えを知っている。
+    focus:
+      - emphatic_do_present
+      - bare_form
+      - know
+
+  - id: g085_q004
+    question_type: two_choice
+    prompt: I ___ call you yesterday.
+    choices:
+      - text: did
+        correct: true
+      - text: do
+        correct: false
+    answer: did
+    explanation: >
+      yesterday があり、過去の強調。
+      did + 動詞原形で「たしかに〜した」を表す。
+    translation: 私は昨日たしかにあなたに電話しました。
+    focus:
+      - emphatic_do_past
+      - did
+      - yesterday
+
+  - id: g085_q005
+    question_type: two_choice
+    prompt: I did ___ you yesterday.
+    choices:
+      - text: call
+        correct: true
+      - text: called
+        correct: false
+    answer: call
+    explanation: >
+      did の後ろは動詞原形。
+      I did called とはしない。
+    translation: 私は昨日たしかにあなたに電話しました。
+    focus:
+      - emphatic_do_past
+      - bare_form
+      - call
+
+  - id: g085_q006
+    question_type: two_choice
+    prompt: He ___ work hard.
+    choices:
+      - text: does
+        correct: true
+      - text: do
+        correct: false
+    answer: does
+    explanation: >
+      主語 He は三人称単数現在なので does。
+      He does work hard. で「彼は本当によく働く」。
+    translation: 彼は本当によく働く。
+    focus:
+      - emphatic_do_present
+      - does
+      - work
+
+  - id: g085_q007
+    question_type: two_choice
+    prompt: He does ___ hard.
+    choices:
+      - text: work
+        correct: true
+      - text: works
+        correct: false
+    answer: work
+    explanation: >
+      does の後ろは原形。
+      He does works hard. は誤り。
+    translation: 彼は本当によく働く。
+    focus:
+      - emphatic_do_present
+      - bare_form
+      - work
+
+  - id: g085_q008
+    question_type: two_choice
+    prompt: They ___ arrive on time.
+    choices:
+      - text: did
+        correct: true
+      - text: were
+        correct: false
+    answer: did
+    explanation: >
+      did arrive で「たしかに到着した」という過去の強調。
+      arrive は did の後ろなので原形。
+    translation: 彼らはたしかに時間通りに到着した。
+    focus:
+      - emphatic_do_past
+      - did
+      - arrive
+
+  - id: g085_q009
+    question_type: two_choice
+    prompt: They did ___ on time.
+    choices:
+      - text: arrive
+        correct: true
+      - text: arrived
+        correct: false
+    answer: arrive
+    explanation: >
+      did の後ろは動詞原形。
+      They did arrived とはしない。
+    translation: 彼らはたしかに時間通りに到着した。
+    focus:
+      - emphatic_do_past
+      - bare_form
+      - arrived_error
+
+  - id: g085_q010
+    question_type: two_choice
+    prompt: This plan ___ make sense.
+    choices:
+      - text: does
+        correct: true
+      - text: is
+        correct: false
+    answer: does
+    explanation: >
+      This plan は三人称単数なので does。
+      does make sense で「たしかに筋が通っている」と強調する。
+    translation: この計画はたしかに筋が通っている。
+    focus:
+      - emphatic_do_present
+      - does
+      - make_sense
+
+  - id: g085_q011
+    question_type: two_choice
+    prompt: The movie ___ look interesting.
+    choices:
+      - text: does
+        correct: true
+      - text: do
+        correct: false
+    answer: does
+    explanation: >
+      The movie は三人称単数なので does。
+      does look interesting で「たしかに面白そうだ」と強調する。
+    translation: その映画はたしかに面白そうだ。
+    focus:
+      - emphatic_do_present
+      - does
+      - look
+
+  - id: g085_q012
+    question_type: two_choice
+    prompt: I ___ tell him the truth.
+    choices:
+      - text: did
+        correct: true
+      - text: told
+        correct: false
+    answer: did
+    explanation: >
+      did tell で「たしかに話した」という強調。
+      did の後ろは原形 tell。
+    translation: 私は彼にたしかに本当のことを話した。
+    focus:
+      - emphatic_do_past
+      - did_tell
+      - truth
+
+common_mistakes:
+  - mistake: 肯定文の do を不要な誤りだと思う
+    correction: >
+      肯定文の do / does / did は、動詞を強調するために使われることがある。
+      I do like it. は正しい。
+  - mistake: She does knows としてしまう
+    correction: >
+      does の後ろは動詞原形。
+      She does know が正しい。
+  - mistake: I did called としてしまう
+    correction: >
+      did の後ろは動詞原形。
+      I did call が正しい。
+  - mistake: 強調の do と疑問文・否定文の do を区別できない
+    correction: >
+      Do you like it? は疑問文。
+      I do not like it. は否定文。
+      I do like it. は肯定文で、do が強調。
+  - mistake: do / does / did の選択を主語と時制で判断しない
+    correction: >
+      現在で I/you/we/they なら do。
+      現在で三人称単数なら does。
+      過去なら did。
+
+learning_notes:
+  - >
+    強調の do は、肯定文で「本当に」「たしかに」という意味を足す。
+  - >
+    do / does / did の後ろは必ず動詞原形。
+    does know, did call, do like の形。
+  - >
+    三人称単数現在では does を使う。
+    She does know the answer. の形を反射的に作れるようにする。
+  - >
+    過去の強調では did を使う。
+    I did call you yesterday. は「昨日たしかに電話した」。
+
+prerequisites:
+  - g001
+  - g002
+  - g011
+  - g084
+
+next_items:
+  - g086
+  - g087
+  - g088

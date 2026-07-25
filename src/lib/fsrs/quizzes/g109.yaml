@@ -1,0 +1,433 @@
+id: g109
+file: g109.yaml
+
+title: 時を表す接続詞 when / while / as / before / after / until
+type: grammar_contrast
+
+section:
+  id: s11
+  title: 名詞節・接続詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 時を表す接続詞の意味と、時の副詞節では未来内容でも現在形を使うことを理解できるか？
+
+core_concept:
+  when_time_clause:
+    form: when + 主語 + 動詞
+    meaning: 〜するとき、〜したとき
+    image: ある時点・出来事を基準にする
+    examples:
+      - sentence: Call me when you arrive.
+        ja: 到着したら私に電話してください。
+        point: 未来のことでも、when節の中は arrive と現在形。
+      - sentence: When I got home, it was raining.
+        ja: 私が家に着いた時、雨が降っていた。
+        point: got home という時点を基準にしている。
+      - sentence: I was happy when I heard the news.
+        ja: その知らせを聞いた時、私はうれしかった。
+        point: heard the news という出来事の時を表す。
+
+  while_time_clause:
+    form: while + 主語 + 動詞
+    meaning: 〜している間に、〜する一方で
+    image: ある程度続く時間の中で起こる
+    examples:
+      - sentence: I read a book while I was waiting.
+        ja: 待っている間、私は本を読んだ。
+        point: while は継続している時間を表す。
+      - sentence: Please be quiet while I am speaking.
+        ja: 私が話している間は静かにしてください。
+        point: speaking という継続中の行為に注目している。
+      - sentence: While some people agreed, others disagreed.
+        ja: 賛成する人もいれば、反対する人もいた。
+        point: while は「一方で」という対比も表す。
+
+  as_time_clause:
+    form: as + 主語 + 動詞
+    meaning: 〜するとき、〜しながら、〜するにつれて
+    image: 二つの出来事が同時に進む
+    examples:
+      - sentence: As I opened the door, the phone rang.
+        ja: 私がドアを開けた時、電話が鳴った。
+        point: ほぼ同時に起こった出来事を表す。
+      - sentence: She smiled as she listened to the music.
+        ja: 彼女は音楽を聴きながら微笑んだ。
+        point: listened と smiled が同時に進んでいる。
+      - sentence: As he grew older, he became wiser.
+        ja: 彼は年を取るにつれて、より賢くなった。
+        point: as は「〜するにつれて」も表す。
+
+  before_after_clause:
+    form: before/after + 主語 + 動詞
+    meaning: 〜する前に、〜した後で
+    image: 出来事の前後関係を示す
+    examples:
+      - sentence: Wash your hands before you eat.
+        ja: 食べる前に手を洗いなさい。
+        point: before の後ろは文。未来の内容でも eat は現在形。
+      - sentence: I will call you after I finish my homework.
+        ja: 宿題を終えた後で、あなたに電話します。
+        point: after節の中は will finish ではなく finish。
+      - sentence: He left before I arrived.
+        ja: 私が到着する前に、彼は出発した。
+        point: before で二つの出来事の順序を示す。
+
+  until_clause:
+    form: until + 主語 + 動詞
+    meaning: 〜するまでずっと
+    image: ある時点まで状態・動作が続く
+    examples:
+      - sentence: Wait here until I come back.
+        ja: 私が戻るまでここで待っていてください。
+        point: 未来のことでも until節の中は come back。
+      - sentence: I studied until midnight.
+        ja: 私は真夜中まで勉強した。
+        point: until は継続の終点を示す。
+      - sentence: He did not know the truth until he read the letter.
+        ja: 彼はその手紙を読むまで真実を知らなかった。
+        point: not ... until で「〜して初めて...する」の意味になる。
+
+  future_in_time_clause:
+    form: when/before/after/until + 主語 + 現在形
+    meaning: 未来の内容でも、時の副詞節では現在形
+    image: 時を表す節の中では will を使わない
+    examples:
+      - sentence: I will call you when I arrive.
+        ja: 到着したらあなたに電話します。
+        point: when I will arrive ではなく when I arrive。
+      - sentence: We will start after he comes.
+        ja: 彼が来た後で、私たちは始めます。
+        point: after he will come ではなく after he comes。
+      - sentence: Stay here until the rain stops.
+        ja: 雨がやむまでここにいなさい。
+        point: until the rain will stop ではなく until the rain stops。
+
+main_rule: >
+  時を表す接続詞には when, while, as, before, after, until などがある。
+  when は「〜するとき」で、ある時点や出来事を基準にする。
+  while は「〜している間に」で、継続している時間に注目する。
+  as は「〜するとき」「〜しながら」「〜するにつれて」のように、
+  二つの出来事が同時に進む感じを表す。
+  before / after は出来事の前後関係を示す。
+  until は「〜するまでずっと」で、ある時点まで状態や動作が続くことを表す。
+  重要なのは、時の副詞節では未来の内容でも will を使わず、現在形を使うこと。
+  I will call you when I arrive. が正しく、when I will arrive とはしない。
+  after he comes, before you eat, until the rain stops も同じ型。
+
+contrast_pairs:
+  - when: Call me when you arrive.
+    while: I read a book while I was waiting.
+    point: >
+      when は到着する時点を表す。
+      while は待っている間という継続時間を表す。
+
+  - while: She smiled while she was listening to music.
+    as: She smiled as she listened to the music.
+    point: >
+      while は「その間」を強く意識する。
+      as は二つの動作が同時に進む感じを表す。
+
+  - correct: I will call you when I arrive.
+    incorrect: I will call you when I will arrive.
+    point: >
+      時の副詞節では、未来の内容でも現在形を使う。
+      when I arrive が正しい。
+
+  - until: Wait here until I come back.
+    by: Finish it by tomorrow.
+    point: >
+      until は「その時までずっと続く」。
+      by は「その時までに完了する」。
+      このカードでは until の継続感に注目する。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または時の副詞節では未来内容でも現在形を使うことを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g109_q001
+    question_type: two_choice
+    prompt: Call me when you ___.
+    choices:
+      - text: arrive
+        correct: true
+      - text: will arrive
+        correct: false
+    answer: arrive
+    explanation: >
+      when が時を表す副詞節を作っている。
+      未来の内容でも、when節の中は現在形 arrive を使う。
+    translation: 到着したら私に電話してください。
+    focus:
+      - when_time_clause
+      - future_in_time_clause
+      - arrive
+
+  - id: g109_q002
+    question_type: two_choice
+    prompt: When I ___ home, it was raining.
+    choices:
+      - text: got
+        correct: true
+      - text: get
+        correct: false
+    answer: got
+    explanation: >
+      主節 it was raining が過去なので、
+      家に着いた時点も過去の got home にする。
+    translation: 私が家に着いた時、雨が降っていた。
+    focus:
+      - when_time_clause
+      - past
+      - got_home
+
+  - id: g109_q003
+    question_type: two_choice
+    prompt: I read a book ___ I was waiting.
+    choices:
+      - text: while
+        correct: true
+      - text: until
+        correct: false
+    answer: while
+    explanation: >
+      I was waiting は継続中の行為。
+      「待っている間」を表すので while が自然。
+    translation: 待っている間、私は本を読んだ。
+    focus:
+      - while_time_clause
+      - duration
+      - waiting
+
+  - id: g109_q004
+    question_type: two_choice
+    prompt: Please be quiet ___ I am speaking.
+    choices:
+      - text: while
+        correct: true
+      - text: after
+        correct: false
+    answer: while
+    explanation: >
+      I am speaking は今続いている動作。
+      「話している間は静かにして」と言うので while を使う。
+    translation: 私が話している間は静かにしてください。
+    focus:
+      - while_time_clause
+      - speaking
+      - be_quiet
+
+  - id: g109_q005
+    question_type: two_choice
+    prompt: ___ some people agreed, others disagreed.
+    choices:
+      - text: While
+        correct: true
+      - text: Until
+        correct: false
+    answer: While
+    explanation: >
+      while は「一方で」という対比も表す。
+      賛成する人と反対する人を対比している。
+    translation: 賛成する人もいれば、反対する人もいた。
+    focus:
+      - while_time_clause
+      - contrast
+      - agreed_disagreed
+
+  - id: g109_q006
+    question_type: two_choice
+    prompt: ___ I opened the door, the phone rang.
+    choices:
+      - text: As
+        correct: true
+      - text: Until
+        correct: false
+    answer: As
+    explanation: >
+      ドアを開けたことと電話が鳴ったことがほぼ同時に起きている。
+      同時性を表す as が自然。
+    translation: 私がドアを開けた時、電話が鳴った。
+    focus:
+      - as_time_clause
+      - simultaneous
+      - phone_rang
+
+  - id: g109_q007
+    question_type: two_choice
+    prompt: ___ he grew older, he became wiser.
+    choices:
+      - text: As
+        correct: true
+      - text: Before
+        correct: false
+    answer: As
+    explanation: >
+      As he grew older で「彼が年を取るにつれて」。
+      変化が同時に進むことを表す。
+    translation: 彼は年を取るにつれて、より賢くなった。
+    focus:
+      - as_time_clause
+      - as_change
+      - grew_older
+
+  - id: g109_q008
+    question_type: two_choice
+    prompt: Wash your hands ___ you eat.
+    choices:
+      - text: before
+        correct: true
+      - text: after
+        correct: false
+    answer: before
+    explanation: >
+      食べる前に手を洗う、という前後関係。
+      before you eat が正しい。
+    translation: 食べる前に手を洗いなさい。
+    focus:
+      - before_after_clause
+      - before
+      - eat
+
+  - id: g109_q009
+    question_type: two_choice
+    prompt: I will call you after I ___ my homework.
+    choices:
+      - text: finish
+        correct: true
+      - text: will finish
+        correct: false
+    answer: finish
+    explanation: >
+      after が時を表す副詞節を作っている。
+      未来の内容でも after節の中は現在形 finish を使う。
+    translation: 宿題を終えた後で、あなたに電話します。
+    focus:
+      - before_after_clause
+      - future_in_time_clause
+      - after
+
+  - id: g109_q010
+    question_type: two_choice
+    prompt: Wait here until I ___ back.
+    choices:
+      - text: come
+        correct: true
+      - text: will come
+        correct: false
+    answer: come
+    explanation: >
+      until が時を表す副詞節を作っている。
+      未来の内容でも until I come back と現在形にする。
+    translation: 私が戻るまでここで待っていてください。
+    focus:
+      - until_clause
+      - future_in_time_clause
+      - come_back
+
+  - id: g109_q011
+    question_type: two_choice
+    prompt: He did not know the truth ___ he read the letter.
+    choices:
+      - text: until
+        correct: true
+      - text: while
+        correct: false
+    answer: until
+    explanation: >
+      not ... until で「〜するまで...しなかった」。
+      その手紙を読んで初めて真実を知った、という意味。
+    translation: 彼はその手紙を読むまで真実を知らなかった。
+    focus:
+      - until_clause
+      - not_until
+      - truth
+
+  - id: g109_q012
+    question_type: two_choice
+    prompt: Stay here until the rain ___.
+    choices:
+      - text: stops
+        correct: true
+      - text: will stop
+        correct: false
+    answer: stops
+    explanation: >
+      until the rain stops は時の副詞節。
+      未来のことでも、節の中は現在形 stops にする。
+    translation: 雨がやむまでここにいなさい。
+    focus:
+      - future_in_time_clause
+      - until
+      - rain_stops
+
+common_mistakes:
+  - mistake: 時の副詞節で will を使ってしまう
+    correction: >
+      when / before / after / until などが時を表す副詞節を作る時は、
+      未来の内容でも現在形を使う。
+      when I arrive / after he comes / until it stops。
+  - mistake: when と while を同じように使う
+    correction: >
+      when は時点・出来事に注目する。
+      while は継続している時間に注目する。
+  - mistake: as を理由の「〜なので」とだけ読む
+    correction: >
+      as は時の「〜するとき」「〜しながら」「〜するにつれて」も表す。
+      文脈で判断する。
+  - mistake: until を「〜までに」と読む
+    correction: >
+      until は「〜までずっと」。
+      完了期限を表す by とは違う。
+  - mistake: not ... until を直訳して意味を取りづらくする
+    correction: >
+      not ... until は「〜して初めて...する」と読むと自然な場合がある。
+      He did not know the truth until he read the letter.。
+
+learning_notes:
+  - >
+    when は「〜するとき」。
+    ある時点・出来事を基準にする。
+  - >
+    while は「〜している間」。
+    継続中の時間や、対比の「一方で」を表す。
+  - >
+    as は「〜するとき」「〜しながら」「〜するにつれて」。
+    二つの出来事や変化が同時に進む感じがある。
+  - >
+    before / after は前後関係、until は継続の終点を表す。
+  - >
+    時の副詞節では未来の内容でも現在形。
+    when I arrive / after he comes / until the rain stops を基本形として覚える。
+
+prerequisites:
+  - g001
+  - g002
+  - g006
+  - g007
+  - g010
+  - g105
+
+next_items:
+  - g110
+  - g111
+  - g112

@@ -1,0 +1,354 @@
+id: g056
+file: g056.yaml
+
+title: 比較級 vs 最上級
+type: grammar_contrast
+
+section:
+  id: s07
+  title: 形容詞・副詞・比較
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 2つを比べているのか、全体の中で一番なのか？
+
+core_concept:
+  comparative:
+    form: 比較級 + than
+    meaning: 〜より...だ
+    image: 2つのものを横に並べて比べる
+    examples:
+      - sentence: This book is older than that one.
+        ja: この本はあの本より古い。
+        point: this book と that one の2つを比べている。
+      - sentence: She is taller than her brother.
+        ja: 彼女は兄より背が高い。
+        point: she と her brother を比べている。
+      - sentence: This question is more difficult than the last one.
+        ja: この問題は前の問題より難しい。
+        point: difficult は more difficult の形で比較級を作る。
+
+  superlative:
+    form: the + 最上級
+    meaning: 最も〜だ
+    image: 3つ以上・ある範囲の中で一番
+    examples:
+      - sentence: This is the oldest book in the library.
+        ja: これは図書館で最も古い本だ。
+        point: 図書館の中で一番古い。
+      - sentence: She is the tallest student in her class.
+        ja: 彼女はクラスで一番背が高い生徒だ。
+        point: クラス全体の中で一番。
+      - sentence: This is the most difficult question on the test.
+        ja: これはそのテストで最も難しい問題だ。
+        point: テスト全体の中で一番難しい。
+
+main_rule: >
+  比較級は、2つのものを比べて「〜より...だ」と言う形。
+  taller than, older than, more difficult than のように than と一緒に使うことが多い。
+  最上級は、ある範囲の中で「最も〜だ」と言う形。
+  the tallest, the oldest, the most difficult のように the を付けるのが基本。
+  than があれば比較級、in/of などで範囲を示して一番を表すなら最上級を考える。
+
+contrast_pairs:
+  - comparative: She is taller than her brother.
+    superlative: She is the tallest student in her class.
+    point: >
+      taller than は2つを比べる。
+      the tallest は範囲の中で一番を表す。
+
+  - comparative: This question is more difficult than the last one.
+    superlative: This is the most difficult question on the test.
+    point: >
+      more difficult than は「前の問題より難しい」。
+      the most difficult は「テストの中で最も難しい」。
+
+  - comparative: This river is longer than that river.
+    superlative: This is the longest river in Japan.
+    point: >
+      longer than は2つの川の比較。
+      the longest in Japan は日本の中で一番長い。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または比較級と最上級の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g056_q001
+    question_type: two_choice
+    prompt: She is ___ than her brother.
+    choices:
+      - text: taller
+        correct: true
+      - text: the tallest
+        correct: false
+    answer: taller
+    explanation: >
+      than があり、彼女と兄を比べている。
+      2つの比較なので比較級 taller を使う。
+    translation: 彼女は兄より背が高い。
+    focus:
+      - comparative
+      - than
+      - taller
+
+  - id: g056_q002
+    question_type: two_choice
+    prompt: She is ___ student in her class.
+    choices:
+      - text: taller
+        correct: false
+      - text: the tallest
+        correct: true
+    answer: the tallest
+    explanation: >
+      in her class という範囲の中で一番背が高いという意味。
+      最上級 the tallest を使う。
+    translation: 彼女はクラスで一番背が高い生徒だ。
+    focus:
+      - superlative
+      - in_phrase
+      - the_tallest
+
+  - id: g056_q003
+    question_type: two_choice
+    prompt: This book is ___ than that one.
+    choices:
+      - text: older
+        correct: true
+      - text: the oldest
+        correct: false
+    answer: older
+    explanation: >
+      than that one があるので、2つの本を比べている。
+      比較級 older が自然。
+    translation: この本はあの本より古い。
+    focus:
+      - comparative
+      - than
+      - older
+
+  - id: g056_q004
+    question_type: two_choice
+    prompt: This is ___ book in the library.
+    choices:
+      - text: older
+        correct: false
+      - text: the oldest
+        correct: true
+    answer: the oldest
+    explanation: >
+      in the library という範囲の中で一番古い本という意味。
+      最上級 the oldest が自然。
+    translation: これは図書館で最も古い本だ。
+    focus:
+      - superlative
+      - the_oldest
+      - range
+
+  - id: g056_q005
+    question_type: two_choice
+    prompt: This question is ___ than the last one.
+    choices:
+      - text: more difficult
+        correct: true
+      - text: the most difficult
+        correct: false
+    answer: more difficult
+    explanation: >
+      than the last one があり、前の問題と比べている。
+      比較級 more difficult を使う。
+    translation: この問題は前の問題より難しい。
+    focus:
+      - comparative
+      - more_difficult
+      - than
+
+  - id: g056_q006
+    question_type: two_choice
+    prompt: This is ___ question on the test.
+    choices:
+      - text: more difficult
+        correct: false
+      - text: the most difficult
+        correct: true
+    answer: the most difficult
+    explanation: >
+      on the test という範囲の中で一番難しい問題という意味。
+      最上級 the most difficult が自然。
+    translation: これはそのテストで最も難しい問題だ。
+    focus:
+      - superlative
+      - the_most_difficult
+      - range
+
+  - id: g056_q007
+    question_type: two_choice
+    prompt: My bag is ___ than yours.
+    choices:
+      - text: heavier
+        correct: true
+      - text: the heaviest
+        correct: false
+    answer: heavier
+    explanation: >
+      than yours があるので、私のかばんとあなたのかばんを比べている。
+      比較級 heavier を使う。
+    translation: 私のかばんはあなたのものより重い。
+    focus:
+      - comparative
+      - heavier
+      - than_yours
+
+  - id: g056_q008
+    question_type: two_choice
+    prompt: This is ___ bag of the three.
+    choices:
+      - text: heavier
+        correct: false
+      - text: the heaviest
+        correct: true
+    answer: the heaviest
+    explanation: >
+      of the three という範囲の中で一番重いという意味。
+      最上級 the heaviest を使う。
+    translation: これは3つの中で一番重いかばんだ。
+    focus:
+      - superlative
+      - of_the_three
+      - the_heaviest
+
+  - id: g056_q009
+    question_type: two_choice
+    prompt: This road is ___ than that road.
+    choices:
+      - text: safer
+        correct: true
+      - text: the safest
+        correct: false
+    answer: safer
+    explanation: >
+      than that road があり、2つの道を比べている。
+      比較級 safer が自然。
+    translation: この道はあの道より安全だ。
+    focus:
+      - comparative
+      - safer
+      - than
+
+  - id: g056_q010
+    question_type: two_choice
+    prompt: This is ___ road in the town.
+    choices:
+      - text: safer
+        correct: false
+      - text: the safest
+        correct: true
+    answer: the safest
+    explanation: >
+      in the town という範囲の中で一番安全な道という意味。
+      最上級 the safest を使う。
+    translation: これは町で一番安全な道だ。
+    focus:
+      - superlative
+      - the_safest
+      - in_phrase
+
+  - id: g056_q011
+    question_type: two_choice
+    prompt: He runs ___ than I do.
+    choices:
+      - text: faster
+        correct: true
+      - text: the fastest
+        correct: false
+    answer: faster
+    explanation: >
+      than I do があるので、彼と私の走る速さを比べている。
+      比較級 faster を使う。
+    translation: 彼は私より速く走る。
+    focus:
+      - comparative
+      - adverb_comparison
+      - faster
+
+  - id: g056_q012
+    question_type: two_choice
+    prompt: He runs ___ in our team.
+    choices:
+      - text: faster
+        correct: false
+      - text: the fastest
+        correct: true
+    answer: the fastest
+    explanation: >
+      in our team という範囲の中で一番速く走るという意味。
+      副詞の最上級でも the fastest を使うのが基本。
+    translation: 彼は私たちのチームで一番速く走る。
+    focus:
+      - superlative
+      - adverb_superlative
+      - the_fastest
+
+common_mistakes:
+  - mistake: than があるのに最上級を使ってしまう
+    correction: >
+      than は2つを比べる合図。
+      taller than, older than, more difficult than のように比較級を使う。
+  - mistake: in/of の範囲があるのに比較級を使ってしまう
+    correction: >
+      in the class, in the world, of the three などで一番を表すなら最上級を使う。
+      the tallest in the class, the heaviest of the three のようにする。
+  - mistake: the を比較級につけてしまう
+    correction: >
+      普通の比較級では the をつけない。
+      She is taller than her brother. が基本。
+      ただし the 比較級, the 比較級 は別構文として扱う。
+  - mistake: more と -er を同時に使う
+    correction: >
+      more taller とは言わない。
+      taller または more difficult のように、語に応じて形を選ぶ。
+  - mistake: 最上級に the をつけ忘れる
+    correction: >
+      名詞を説明して「一番〜な」と言うときは、the tallest student,
+      the most difficult question のように the をつけるのが基本。
+
+learning_notes:
+  - >
+    比較級は「A と B を比べる」形。
+    than が見えたらまず比較級を考える。
+  - >
+    最上級は「範囲の中で一番」。
+    in the class, in the world, of the three などが合図になる。
+  - >
+    短い形容詞・副詞は -er / -est を使うことが多い。
+    tall, taller, the tallest / fast, faster, the fastest。
+  - >
+    長い形容詞・副詞は more / most を使うことが多い。
+    difficult, more difficult, the most difficult。
+
+prerequisites:
+  - g053
+
+next_items:
+  - g057
+  - g058
+  - g059

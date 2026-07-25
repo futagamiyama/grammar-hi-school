@@ -1,0 +1,377 @@
+id: g096
+file: g096.yaml
+
+title: 間接疑問文
+type: grammar_contrast
+
+section:
+  id: s10
+  title: 強調・倒置・省略
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 疑問詞を含む節を、平叙文語順で名詞節として使えるか？
+
+core_concept:
+  wh_indirect_question:
+    form: 主語 + 動詞 + 疑問詞 + 主語 + 動詞
+    meaning: 〜がどこで・いつ・なぜ・何を...するか
+    image: 疑問文を文の一部に入れると、後ろは普通の文の語順になる
+    examples:
+      - sentence: I do not know where he lives.
+        ja: 私は彼がどこに住んでいるか知らない。
+        point: where の後ろは he lives。does he live ではない。
+      - sentence: Please tell me when the meeting starts.
+        ja: 会議がいつ始まるか教えてください。
+        point: when の後ろは the meeting starts。
+      - sentence: I wonder why she left early.
+        ja: なぜ彼女が早く帰ったのかと思う。
+        point: why の後ろは she left early。
+
+  yes_no_indirect_question:
+    form: 主語 + 動詞 + whether/if + 主語 + 動詞
+    meaning: 〜かどうか
+    image: yes/no疑問文を whether / if で名詞節にする
+    examples:
+      - sentence: I do not know whether he will come.
+        ja: 私は彼が来るかどうか知らない。
+        point: whether の後ろは he will come。
+      - sentence: Please tell me if she is at home.
+        ja: 彼女が家にいるかどうか教えてください。
+        point: if の後ろは she is at home。is she ではない。
+      - sentence: I wonder whether the plan will work.
+        ja: その計画がうまくいくかどうかと思う。
+        point: whether は「〜かどうか」。
+
+  indirect_question_as_subject:
+    form: 疑問詞 + 主語 + 動詞 + is important / depends ...
+    meaning: 〜かが重要だ、〜かによる
+    image: 間接疑問節全体が主語になる
+    examples:
+      - sentence: What he said is true.
+        ja: 彼が言ったことは本当だ。
+        point: What he said 全体が主語。
+      - sentence: Where we should go depends on the weather.
+        ja: 私たちがどこへ行くべきかは天気による。
+        point: Where we should go 全体が主語。
+      - sentence: Whether he agrees is not important.
+        ja: 彼が同意するかどうかは重要ではない。
+        point: Whether he agrees 全体が主語。
+
+main_rule: >
+  間接疑問文は、疑問文を文の一部として使う形。
+  Where does he live? は直接疑問文。
+  I do not know where he lives. は間接疑問文。
+  間接疑問文では、疑問詞の後ろを疑問文語順にせず、平叙文語順にする。
+  where he lives が正しく、where does he live ではない。
+  yes/no で答える疑問文は whether / if を使って「〜かどうか」を表す。
+  I do not know whether he will come. は「彼が来るかどうか知らない」。
+  また、What he said is true. のように、間接疑問節全体が主語になることもある。
+  ポイントは、疑問詞や whether / if の後ろを普通の文として組み立てること。
+
+contrast_pairs:
+  - direct_question: Where does he live?
+    indirect_question: I do not know where he lives.
+    point: >
+      直接疑問文では does he live。
+      間接疑問文では where he lives の平叙文語順。
+
+  - direct_question: Is she at home?
+    indirect_question: Please tell me if she is at home.
+    point: >
+      yes/no疑問文は if / whether を使って「〜かどうか」にする。
+      後ろは she is at home の語順。
+
+  - question: What did he say?
+    noun_clause: What he said is true.
+    point: >
+      What he said は「彼が言ったこと」。
+      間接疑問節全体が主語になっている。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または間接疑問文で平叙文語順になることを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g096_q001
+    question_type: two_choice
+    prompt: I do not know where ___.
+    choices:
+      - text: he lives
+        correct: true
+      - text: does he live
+        correct: false
+    answer: he lives
+    explanation: >
+      間接疑問文では、疑問詞 where の後ろは平叙文語順。
+      where he lives が正しく、where does he live ではない。
+    translation: 私は彼がどこに住んでいるか知らない。
+    focus:
+      - wh_indirect_question
+      - word_order
+      - where
+
+  - id: g096_q002
+    question_type: two_choice
+    prompt: Please tell me when ___.
+    choices:
+      - text: the meeting starts
+        correct: true
+      - text: does the meeting start
+        correct: false
+    answer: the meeting starts
+    explanation: >
+      tell me when ... は間接疑問文。
+      when の後ろは the meeting starts の語順にする。
+    translation: 会議がいつ始まるか教えてください。
+    focus:
+      - wh_indirect_question
+      - when
+      - meeting
+
+  - id: g096_q003
+    question_type: two_choice
+    prompt: I wonder why ___ early.
+    choices:
+      - text: she left
+        correct: true
+      - text: did she leave
+        correct: false
+    answer: she left
+    explanation: >
+      wonder why ... は「なぜ〜なのだろうと思う」。
+      why の後ろは she left early の平叙文語順。
+    translation: なぜ彼女が早く帰ったのかと思う。
+    focus:
+      - wh_indirect_question
+      - why
+      - past
+
+  - id: g096_q004
+    question_type: two_choice
+    prompt: Do you know what ___?
+    choices:
+      - text: he bought
+        correct: true
+      - text: did he buy
+        correct: false
+    answer: he bought
+    explanation: >
+      Do you know の後ろに入る間接疑問文。
+      what の後ろは he bought の語順。
+    translation: 彼が何を買ったか知っていますか。
+    focus:
+      - wh_indirect_question
+      - what
+      - object_question
+
+  - id: g096_q005
+    question_type: two_choice
+    prompt: I cannot remember how much ___.
+    choices:
+      - text: it cost
+        correct: true
+      - text: did it cost
+        correct: false
+    answer: it cost
+    explanation: >
+      how much の後ろは平叙文語順。
+      it cost が正しく、did it cost ではない。
+    translation: それがいくらしたか思い出せない。
+    focus:
+      - wh_indirect_question
+      - how_much
+      - cost
+
+  - id: g096_q006
+    question_type: two_choice
+    prompt: I do not know whether ___.
+    choices:
+      - text: he will come
+        correct: true
+      - text: will he come
+        correct: false
+    answer: he will come
+    explanation: >
+      whether は「〜かどうか」。
+      後ろは he will come の平叙文語順にする。
+    translation: 私は彼が来るかどうか知らない。
+    focus:
+      - yes_no_indirect_question
+      - whether
+      - future
+
+  - id: g096_q007
+    question_type: two_choice
+    prompt: Please tell me if ___ at home.
+    choices:
+      - text: she is
+        correct: true
+      - text: is she
+        correct: false
+    answer: she is
+    explanation: >
+      if はここでは「もし」ではなく「〜かどうか」。
+      if she is at home が正しい。
+    translation: 彼女が家にいるかどうか教えてください。
+    focus:
+      - yes_no_indirect_question
+      - if_whether
+      - be_verb
+
+  - id: g096_q008
+    question_type: two_choice
+    prompt: I wonder whether ___ work.
+    choices:
+      - text: the plan will
+        correct: true
+      - text: will the plan
+        correct: false
+    answer: the plan will
+    explanation: >
+      whether の後ろは平叙文語順。
+      the plan will work が正しい。
+    translation: その計画がうまくいくかどうかと思う。
+    focus:
+      - yes_no_indirect_question
+      - whether
+      - plan
+
+  - id: g096_q009
+    question_type: two_choice
+    prompt: What ___ is true.
+    choices:
+      - text: he said
+        correct: true
+      - text: did he say
+        correct: false
+    answer: he said
+    explanation: >
+      What he said 全体が主語。
+      「彼が言ったこと」という名詞節なので、he said の語順。
+    translation: 彼が言ったことは本当だ。
+    focus:
+      - indirect_question_as_subject
+      - what_clause
+      - subject_clause
+
+  - id: g096_q010
+    question_type: two_choice
+    prompt: Where ___ depends on the weather.
+    choices:
+      - text: we should go
+        correct: true
+      - text: should we go
+        correct: false
+    answer: we should go
+    explanation: >
+      Where we should go 全体が主語。
+      間接疑問文なので we should go の語順にする。
+    translation: 私たちがどこへ行くべきかは天気による。
+    focus:
+      - indirect_question_as_subject
+      - where_clause
+      - should
+
+  - id: g096_q011
+    question_type: two_choice
+    prompt: Whether ___ is not important.
+    choices:
+      - text: he agrees
+        correct: true
+      - text: does he agree
+        correct: false
+    answer: he agrees
+    explanation: >
+      Whether he agrees 全体が主語。
+      whether の後ろは he agrees の平叙文語順。
+    translation: 彼が同意するかどうかは重要ではない。
+    focus:
+      - indirect_question_as_subject
+      - whether_clause
+      - agrees
+
+  - id: g096_q012
+    question_type: two_choice
+    prompt: I want to know who ___ the window.
+    choices:
+      - text: broke
+        correct: true
+      - text: did break
+        correct: false
+    answer: broke
+    explanation: >
+      ここでは who が broke の主語。
+      who broke the window で「誰が窓を割ったか」という間接疑問文。
+    translation: 私は誰が窓を割ったのか知りたい。
+    focus:
+      - wh_indirect_question
+      - who_subject
+      - broke
+
+common_mistakes:
+  - mistake: I do not know where does he live. としてしまう
+    correction: >
+      間接疑問文では、疑問詞の後ろは平叙文語順。
+      I do not know where he lives. が正しい。
+  - mistake: Please tell me when does the meeting start. としてしまう
+    correction: >
+      tell me の後ろは間接疑問文。
+      when the meeting starts の語順にする。
+  - mistake: whether の後ろを疑問文語順にしてしまう
+    correction: >
+      whether / if の後ろも平叙文語順。
+      whether he will come が正しい。
+  - mistake: if を常に「もし」と読む
+    correction: >
+      I do not know if he will come. の if は「〜かどうか」。
+      条件の「もし」とは違う。
+  - mistake: What he said を疑問文だと思う
+    correction: >
+      What he said は「彼が言ったこと」という名詞節。
+      文の主語や目的語になれる。
+
+learning_notes:
+  - >
+    間接疑問文では、疑問詞の後ろを平叙文語順にする。
+    where he lives / what he bought / why she left の形。
+  - >
+    yes/no疑問文を名詞節にする時は whether / if を使う。
+    whether he will come = 彼が来るかどうか。
+  - >
+    if は「もし」だけでなく、「〜かどうか」という意味でも使う。
+  - >
+    What he said / Where we should go / Whether he agrees のように、
+    間接疑問節全体が主語になることもある。
+  - >
+    直接疑問文の語順をそのまま持ち込まない。
+    疑問詞の後ろを普通の文として作る。
+
+prerequisites:
+  - g001
+  - g002
+  - g010
+  - g094
+
+next_items:
+  - g097
+  - g098
+  - g099

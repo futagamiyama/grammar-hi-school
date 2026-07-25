@@ -1,0 +1,350 @@
+id: g037
+file: g037.yaml
+
+title: 群動詞の受動態
+type: construction
+
+section:
+  id: s04
+  title: 受動態・態
+
+level: basic
+target: 高校英文法基礎
+
+core_question: look after, take care of などを1まとまりで扱えるか？
+
+core_concept:
+  phrasal_verb_active:
+    form: 動詞 + 前置詞/副詞 + 目的語
+    meaning: 動詞と前置詞・副詞がまとまって1つの意味を作る
+    image: look after, take care of, laugh at などを1つの動詞として見る
+    examples:
+      - sentence: She looks after the children.
+        ja: 彼女は子どもたちの世話をしている。
+        point: look after で「世話をする」という1つの意味。
+      - sentence: They took care of the old man.
+        ja: 彼らはその老人の世話をした。
+        point: take care of で「世話をする」という1つのまとまり。
+      - sentence: Everyone laughed at him.
+        ja: みんなが彼を笑った。
+        point: laugh at で「〜を笑う」という1つのまとまり。
+
+  phrasal_verb_passive:
+    form: 主語 + be + 過去分詞 + 前置詞/副詞
+    meaning: 群動詞の目的語を主語にした受動態
+    image: 前置詞・副詞を落とさずに残す
+    examples:
+      - sentence: The children are looked after by her.
+        ja: その子どもたちは彼女に世話されている。
+        point: look after の after を残す。
+      - sentence: The old man was taken care of by them.
+        ja: その老人は彼らに世話された。
+        point: take care of の of を残す。
+      - sentence: He was laughed at by everyone.
+        ja: 彼はみんなに笑われた。
+        point: laugh at の at を残す。
+
+main_rule: >
+  look after, take care of, laugh at, speak to, listen to などの群動詞は、
+  前置詞・副詞まで含めて1つの動詞のまとまりとして扱う。
+  受動態にすると、目的語が主語になり、
+  前置詞・副詞は文末側に残る。
+  She looks after the children. は The children are looked after by her. となる。
+  after を落として The children are looked by her. とは言わない。
+
+contrast_pairs:
+  - active: She looks after the children.
+    passive: The children are looked after by her.
+    point: >
+      look after で1つの動詞のまとまり。
+      受動態でも after を残す。
+
+  - active: They took care of the old man.
+    passive: The old man was taken care of by them.
+    point: >
+      take care of は3語で1つのまとまり。
+      受動態では taken care of まで残す。
+
+  - active: Everyone laughed at him.
+    passive: He was laughed at by everyone.
+    point: >
+      laugh at は「〜を笑う」。
+      受動態でも at を落とさない。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または群動詞の受動態で前置詞・副詞を残す理由を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g037_q001
+    question_type: two_choice
+    prompt: She looks after the children. → The children are looked ___ by her.
+    choices:
+      - text: after
+        correct: true
+      - text: ""
+        correct: false
+    answer: after
+    explanation: >
+      look after で「世話をする」という1つのまとまり。
+      受動態でも after を落とさず、are looked after とする。
+    translation: 彼女は子どもたちの世話をしている。→ 子どもたちは彼女に世話されている。
+    focus:
+      - phrasal_verb_passive
+      - look_after
+      - preposition_remains
+
+  - id: g037_q002
+    question_type: two_choice
+    prompt: They took care of the old man. → The old man was taken care ___ by them.
+    choices:
+      - text: of
+        correct: true
+      - text: ""
+        correct: false
+    answer: of
+    explanation: >
+      take care of で「世話をする」というまとまり。
+      受動態では was taken care of と of を残す。
+    translation: 彼らはその老人の世話をした。→ その老人は彼らに世話された。
+    focus:
+      - phrasal_verb_passive
+      - take_care_of
+      - preposition_remains
+
+  - id: g037_q003
+    question_type: two_choice
+    prompt: Everyone laughed at him. → He was laughed ___ by everyone.
+    choices:
+      - text: at
+        correct: true
+      - text: ""
+        correct: false
+    answer: at
+    explanation: >
+      laugh at で「〜を笑う」。
+      受動態でも at を残して was laughed at とする。
+    translation: みんなが彼を笑った。→ 彼はみんなに笑われた。
+    focus:
+      - phrasal_verb_passive
+      - laugh_at
+      - preposition_remains
+
+  - id: g037_q004
+    question_type: two_choice
+    prompt: The nurse looked after the patient. → The patient was ___ by the nurse.
+    choices:
+      - text: looked after
+        correct: true
+      - text: looked
+        correct: false
+    answer: looked after
+    explanation: >
+      look after の after を落とすと意味が壊れる。
+      受動態では was looked after by the nurse が正しい。
+    translation: 看護師はその患者の世話をした。→ その患者は看護師に世話された。
+    focus:
+      - look_after
+      - passive_voice
+      - phrasal_verb
+
+  - id: g037_q005
+    question_type: two_choice
+    prompt: We talked about the problem. → The problem was talked ___ by us.
+    choices:
+      - text: about
+        correct: true
+      - text: ""
+        correct: false
+    answer: about
+    explanation: >
+      talk about で「〜について話す」。
+      受動態でも about を残して was talked about とする。
+    translation: 私たちはその問題について話した。→ その問題は私たちによって話し合われた。
+    focus:
+      - talk_about
+      - preposition_remains
+      - passive_voice
+
+  - id: g037_q006
+    question_type: two_choice
+    prompt: Many people spoke to her. → She was spoken ___ by many people.
+    choices:
+      - text: to
+        correct: true
+      - text: ""
+        correct: false
+    answer: to
+    explanation: >
+      speak to で「〜に話しかける」。
+      受動態でも to を残して was spoken to とする。
+    translation: 多くの人が彼女に話しかけた。→ 彼女は多くの人に話しかけられた。
+    focus:
+      - speak_to
+      - preposition_remains
+      - passive_voice
+
+  - id: g037_q007
+    question_type: two_choice
+    prompt: Nobody listened to his advice. → His advice was not listened ___.
+    choices:
+      - text: to
+        correct: true
+      - text: ""
+        correct: false
+    answer: to
+    explanation: >
+      listen to で「〜を聞く」。
+      受動態では to を残して was not listened to とする。
+    translation: 誰も彼の助言を聞かなかった。→ 彼の助言は聞き入れられなかった。
+    focus:
+      - listen_to
+      - negative_passive
+      - preposition_remains
+
+  - id: g037_q008
+    question_type: two_choice
+    prompt: The manager dealt with the issue. → The issue was dealt ___ by the manager.
+    choices:
+      - text: with
+        correct: true
+      - text: ""
+        correct: false
+    answer: with
+    explanation: >
+      deal with で「〜に対処する」。
+      受動態でも with を残して was dealt with とする。
+    translation: 管理者はその問題に対処した。→ その問題は管理者によって対処された。
+    focus:
+      - deal_with
+      - preposition_remains
+      - passive_voice
+
+  - id: g037_q009
+    question_type: two_choice
+    prompt: People often refer to this book. → This book is often referred ___.
+    choices:
+      - text: to
+        correct: true
+      - text: ""
+        correct: false
+    answer: to
+    explanation: >
+      refer to で「〜を参照する・〜に言及する」。
+      受動態でも to を残して is referred to とする。
+    translation: 人々はよくこの本を参照する。→ この本はよく参照される。
+    focus:
+      - refer_to
+      - passive_voice
+      - preposition_remains
+
+  - id: g037_q010
+    question_type: two_choice
+    prompt: We can rely on him. → He can be relied ___.
+    choices:
+      - text: on
+        correct: true
+      - text: ""
+        correct: false
+    answer: on
+    explanation: >
+      rely on で「〜に頼る」。
+      受動態でも on を残して can be relied on とする。
+    translation: 私たちは彼を頼ることができる。→ 彼は頼りにされうる。
+    focus:
+      - rely_on
+      - modal_passive
+      - preposition_remains
+
+  - id: g037_q011
+    question_type: two_choice
+    prompt: Someone has broken into the house. → The house has been broken ___.
+    choices:
+      - text: into
+        correct: true
+      - text: ""
+        correct: false
+    answer: into
+    explanation: >
+      break into で「〜に侵入する」。
+      受動態でも into を残して has been broken into とする。
+    translation: 誰かがその家に侵入した。→ その家は侵入された。
+    focus:
+      - break_into
+      - present_perfect_passive
+      - preposition_remains
+
+  - id: g037_q012
+    question_type: two_choice
+    prompt: They put off the meeting. → The meeting was ___.
+    choices:
+      - text: put off
+        correct: true
+      - text: put
+        correct: false
+    answer: put off
+    explanation: >
+      put off で「延期する」。
+      受動態でも off を残して was put off とする。
+    translation: 彼らはその会議を延期した。→ その会議は延期された。
+    focus:
+      - put_off
+      - particle_remains
+      - passive_voice
+
+common_mistakes:
+  - mistake: 受動態にすると前置詞を消してしまう
+    correction: >
+      look after, laugh at, listen to などは、前置詞まで含めて1つの意味を作る。
+      受動態でも前置詞を残す。
+  - mistake: The children are looked by her. のように書く
+    correction: >
+      look だけでは「世話をする」という意味にならない。
+      The children are looked after by her. と after が必要。
+  - mistake: take care of の of を落とす
+    correction: >
+      take care of は3語で1つのまとまり。
+      The old man was taken care of. のように of まで残す。
+  - mistake: 群動詞を普通の自動詞だと思って受動態にできないと考える
+    correction: >
+      目的語を取る群動詞は、目的語を主語にして受動態にできる。
+      He was laughed at. / The problem was dealt with. のように使える。
+
+learning_notes:
+  - >
+    群動詞の受動態では、動詞だけでなく前置詞・副詞まで含めて覚える。
+  - >
+    受動態にしても、前置詞・副詞は文の後ろに残る。
+    He was laughed at. の at は必須。
+  - >
+    look after, take care of, listen to, refer to, rely on, deal with は
+    入試でも狙われやすい。
+  - >
+    「前置詞が文末に残っているから変」と考えない。
+    英語では群動詞の受動態として自然な形。
+
+prerequisites:
+  - g031
+  - g032
+
+next_items:
+  - g038
+  - g039
+  - g040

@@ -1,0 +1,372 @@
+id: g077
+file: g077.yaml
+
+title: If it were not for / If it had not been for
+type: grammar_contrast
+
+section:
+  id: s09
+  title: 仮定法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 「〜がなければ」「〜がなかったなら」を現在と過去で使い分けられるか？
+
+core_concept:
+  if_it_were_not_for:
+    form: If it were not for + 名詞, 主語 + would/could/might + 動詞原形 ...
+    meaning: もし今〜がなければ、...だろうに
+    image: 現在あるもの・人・条件がない世界を仮定する
+    examples:
+      - sentence: If it were not for water, we could not live.
+        ja: もし水がなければ、私たちは生きられないだろう。
+        point: 現在ある水がない世界を仮定している。
+      - sentence: If it were not for your help, I could not finish this work.
+        ja: もしあなたの助けがなければ、私はこの仕事を終えられないだろう。
+        point: 今の助けがない場合を仮定している。
+      - sentence: If it were not for music, my life would be boring.
+        ja: もし音楽がなければ、私の人生は退屈だろう。
+        point: 現在ある音楽がない世界を仮定している。
+
+  if_it_had_not_been_for:
+    form: If it had not been for + 名詞, 主語 + would/could/might have + 過去分詞 ...
+    meaning: もし過去に〜がなかったなら、...だっただろうに
+    image: 過去に実際にあったもの・人・条件がなかった世界を仮定する
+    examples:
+      - sentence: If it had not been for your help, I would have failed.
+        ja: もしあなたの助けがなかったなら、私は失敗していただろう。
+        point: 実際には過去に助けがあった。
+      - sentence: If it had not been for the rain, we would have gone out.
+        ja: もし雨がなかったなら、私たちは外出していただろう。
+        point: 実際には過去に雨が降った。
+      - sentence: If it had not been for his advice, I could not have solved the problem.
+        ja: もし彼の助言がなかったなら、私はその問題を解けなかっただろう。
+        point: 実際には過去に助言があった。
+
+  without_but_for:
+    form: Without / But for + 名詞
+    meaning: 〜がなければ、〜がなかったなら
+    image: If it were not for / If it had not been for の短い形
+    examples:
+      - sentence: Without water, we could not live.
+        ja: 水がなければ、私たちは生きられないだろう。
+        point: Without water = If it were not for water。
+      - sentence: Without your help, I would have failed.
+        ja: あなたの助けがなかったなら、私は失敗していただろう。
+        point: would have failed から過去の非現実。
+      - sentence: But for his advice, I could not have solved the problem.
+        ja: 彼の助言がなかったなら、私はその問題を解けなかっただろう。
+        point: But for は Without と同じく「〜がなければ」。
+
+main_rule: >
+  If it were not for + 名詞 は、「もし今〜がなければ」を表す。
+  現在の事実に反する仮定なので、結果は would/could/might + 動詞原形になる。
+  If it were not for water, we could not live. は
+  「もし水がなければ、私たちは生きられないだろう」という意味。
+  If it had not been for + 名詞 は、「もし過去に〜がなかったなら」を表す。
+  過去の事実に反する仮定なので、結果は would/could/might have + 過去分詞になる。
+  Without / But for + 名詞 も、同じ意味を短く表せる。
+  結果節が would be なら現在、would have been なら過去と判断する。
+
+contrast_pairs:
+  - present_unreal: If it were not for water, we could not live.
+    past_unreal: If it had not been for your help, I would have failed.
+    point: >
+      If it were not for は現在あるものがない場合の仮定。
+      If it had not been for は過去にあったものがなかった場合の仮定。
+
+  - full_form: If it were not for music, my life would be boring.
+    short_form: Without music, my life would be boring.
+    point: >
+      Without music は If it were not for music と近い。
+      結果が would be なので現在の非現実。
+
+  - full_form: If it had not been for his advice, I could not have solved it.
+    short_form: But for his advice, I could not have solved it.
+    point: >
+      But for his advice は If it had not been for his advice と近い。
+      could not have solved なので過去の非現実。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または If it were not for と If it had not been for の違いを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g077_q001
+    question_type: two_choice
+    prompt: If it ___ not for water, we could not live.
+    choices:
+      - text: were
+        correct: true
+      - text: had been
+        correct: false
+    answer: were
+    explanation: >
+      水が今存在しない場合を仮定している。
+      現在の非現実なので If it were not for water が自然。
+    translation: もし水がなければ、私たちは生きられないだろう。
+    focus:
+      - if_it_were_not_for
+      - present_unreal
+      - water
+
+  - id: g077_q002
+    question_type: two_choice
+    prompt: If it ___ not been for your help, I would have failed.
+    choices:
+      - text: had
+        correct: true
+      - text: were
+        correct: false
+    answer: had
+    explanation: >
+      would have failed があるので過去の非現実。
+      If it had not been for your help が自然。
+    translation: もしあなたの助けがなかったなら、私は失敗していただろう。
+    focus:
+      - if_it_had_not_been_for
+      - past_unreal
+      - help
+
+  - id: g077_q003
+    question_type: two_choice
+    prompt: If it were not for your help, I ___ finish this work.
+    choices:
+      - text: could not
+        correct: true
+      - text: could not have
+        correct: false
+    answer: could not
+    explanation: >
+      If it were not for は現在の非現実。
+      結果節は could not + 動詞原形 にする。
+    translation: もしあなたの助けがなければ、私はこの仕事を終えられないだろう。
+    focus:
+      - if_it_were_not_for
+      - result_clause
+      - could_not
+
+  - id: g077_q004
+    question_type: two_choice
+    prompt: If it had not been for your help, I ___ this work.
+    choices:
+      - text: could not have finished
+        correct: true
+      - text: could not finish
+        correct: false
+    answer: could not have finished
+    explanation: >
+      If it had not been for は過去の非現実。
+      結果節は could not have + 過去分詞 にする。
+    translation: もしあなたの助けがなかったなら、私はこの仕事を終えられなかっただろう。
+    focus:
+      - if_it_had_not_been_for
+      - result_clause
+      - could_not_have
+
+  - id: g077_q005
+    question_type: two_choice
+    prompt: If it ___ not for music, my life would be boring.
+    choices:
+      - text: were
+        correct: true
+      - text: had been
+        correct: false
+    answer: were
+    explanation: >
+      would be があるので現在の非現実。
+      今音楽がなければ、人生が退屈だろうという意味。
+    translation: もし音楽がなければ、私の人生は退屈だろう。
+    focus:
+      - if_it_were_not_for
+      - present_unreal
+      - music
+
+  - id: g077_q006
+    question_type: two_choice
+    prompt: If it had not been for the rain, we ___ out.
+    choices:
+      - text: would have gone
+        correct: true
+      - text: would go
+        correct: false
+    answer: would have gone
+    explanation: >
+      If it had not been for the rain は過去の非現実。
+      実際には雨が降って外出しなかったので、would have gone を使う。
+    translation: もし雨がなかったなら、私たちは外出していただろう。
+    focus:
+      - if_it_had_not_been_for
+      - would_have
+      - rain
+
+  - id: g077_q007
+    question_type: two_choice
+    prompt: ___ water, we could not live.
+    choices:
+      - text: Without
+        correct: true
+      - text: Because
+        correct: false
+    answer: Without
+    explanation: >
+      Without water は If it were not for water と近い。
+      「水がなければ」という意味。
+    translation: 水がなければ、私たちは生きられないだろう。
+    focus:
+      - without_but_for
+      - present_unreal
+      - without
+
+  - id: g077_q008
+    question_type: two_choice
+    prompt: ___ your help, I would have failed.
+    choices:
+      - text: Without
+        correct: true
+      - text: Because
+        correct: false
+    answer: Without
+    explanation: >
+      Without your help は If it had not been for your help と近い。
+      would have failed から過去の非現実。
+    translation: あなたの助けがなかったなら、私は失敗していただろう。
+    focus:
+      - without_but_for
+      - past_unreal
+      - without
+
+  - id: g077_q009
+    question_type: two_choice
+    prompt: But for his advice, I ___ the problem.
+    choices:
+      - text: could not have solved
+        correct: true
+      - text: could not solve
+        correct: false
+    answer: could not have solved
+    explanation: >
+      But for his advice は「彼の助言がなかったなら」。
+      過去に解けなかっただろうという意味なので could not have solved。
+    translation: 彼の助言がなかったなら、私はその問題を解けなかっただろう。
+    focus:
+      - without_but_for
+      - but_for
+      - past_unreal
+
+  - id: g077_q010
+    question_type: two_choice
+    prompt: Without the sun, nothing ___ live.
+    choices:
+      - text: could
+        correct: true
+      - text: could have
+        correct: false
+    answer: could
+    explanation: >
+      太陽が今存在しない場合を仮定している。
+      現在の非現実なので could live が自然。
+    translation: 太陽がなければ、何も生きられないだろう。
+    focus:
+      - without_but_for
+      - present_unreal
+      - sun
+
+  - id: g077_q011
+    question_type: two_choice
+    prompt: If it had not been for his quick decision, we ___ the chance.
+    choices:
+      - text: would have lost
+        correct: true
+      - text: would lose
+        correct: false
+    answer: would have lost
+    explanation: >
+      If it had not been for は過去の非現実。
+      過去にチャンスを失っていただろうという意味なので would have lost。
+    translation: もし彼の素早い決断がなかったなら、私たちはその機会を失っていただろう。
+    focus:
+      - if_it_had_not_been_for
+      - would_have
+      - decision
+
+  - id: g077_q012
+    question_type: two_choice
+    prompt: If it were not for the Internet, our lives ___ very different.
+    choices:
+      - text: would be
+        correct: true
+      - text: would have been
+        correct: false
+    answer: would be
+    explanation: >
+      If it were not for は現在の非現実。
+      今インターネットがなければ、生活は違うだろうという意味。
+    translation: もしインターネットがなければ、私たちの生活は大きく違っているだろう。
+    focus:
+      - if_it_were_not_for
+      - would_be
+      - internet
+
+common_mistakes:
+  - mistake: If it were not for と If it had not been for を同じ時制で使ってしまう
+    correction: >
+      If it were not for は現在の非現実。
+      If it had not been for は過去の非現実。
+  - mistake: If it had not been for の結果節を would + 原形にしてしまう
+    correction: >
+      過去の非現実なので would/could/might have + 過去分詞を使う。
+      would have failed, could have solved など。
+  - mistake: If it were not for の結果節を would have + 過去分詞にしてしまう
+    correction: >
+      現在の非現実なら would/could/might + 動詞原形。
+      would be, could live, could finish など。
+  - mistake: Without を単なる「〜なしで」とだけ読む
+    correction: >
+      Without + 名詞 は、仮定法の If it were not for / If it had not been for と同じ意味で使われることがある。
+  - mistake: But for を「しかし」と読んでしまう
+    correction: >
+      But for + 名詞 は「〜がなければ」という意味。
+      Without と近い硬い表現。
+
+learning_notes:
+  - >
+    If it were not for + 名詞 は「もし今〜がなければ」。
+    現在の非現実を表す。
+  - >
+    If it had not been for + 名詞 は「もし過去に〜がなかったなら」。
+    過去の非現実を表す。
+  - >
+    Without / But for + 名詞 は、同じ内容を短く表せる。
+    後ろの would be / would have been で時を判断する。
+  - >
+    結果節が would/could + 原形なら現在。
+    would/could have + 過去分詞なら過去。
+
+prerequisites:
+  - g072
+  - g073
+  - g074
+
+next_items:
+  - g078
+  - g079
+  - g080

@@ -1,0 +1,356 @@
+id: g060
+file: g060.yaml
+
+title: no less than / not less than
+type: grammar_contrast
+
+section:
+  id: s07
+  title: 形容詞・副詞・比較
+
+level: basic
+target: 高校英文法基礎
+
+core_question: なんと〜もなのか、少なくとも〜なのか？
+
+core_concept:
+  no_less_than:
+    form: no less than + 数量
+    meaning: なんと〜も
+    image: 数量が多いことを強調する
+    examples:
+      - sentence: He has no less than 1,000,000 yen.
+        ja: 彼はなんと100万円も持っている。
+        point: 100万円という多さを強調している。
+      - sentence: No less than fifty people came to the meeting.
+        ja: その会議にはなんと50人も来た。
+        point: 50人も来たという多さ・驚きを表す。
+      - sentence: The project cost no less than ten million yen.
+        ja: その計画にはなんと1,000万円もかかった。
+        point: 1,000万円という金額の大きさを強調している。
+
+  not_less_than:
+    form: not less than + 数量
+    meaning: 少なくとも〜、〜以上
+    image: 下限を示す
+    examples:
+      - sentence: He has not less than 1,000,000 yen.
+        ja: 彼は少なくとも100万円持っている。
+        point: 100万円を下回らないという下限を表す。
+      - sentence: Not less than fifty people must attend.
+        ja: 少なくとも50人が出席しなければならない。
+        point: 50人以上という条件・下限を表す。
+      - sentence: The work will take not less than two hours.
+        ja: その仕事は少なくとも2時間はかかる。
+        point: 2時間を下回らないという下限を表す。
+
+main_rule: >
+  no less than は「なんと〜も」という多さの強調。
+  not less than は「少なくとも〜」「〜以上」という下限。
+  no は感情的に「それほど多い」と強調する。
+  not は単に「それを下回らない」と客観的に制限する。
+  He has no less than 1,000,000 yen. は「なんと100万円も持っている」。
+  He has not less than 1,000,000 yen. は「少なくとも100万円持っている」。
+  形が似ているが、no less than は多さの評価、not less than は下限の指定と考える。
+
+contrast_pairs:
+  - emphasis_on_largeness: He has no less than 1,000,000 yen.
+    lower_limit: He has not less than 1,000,000 yen.
+    point: >
+      no less than は「なんと100万円も」と多さを強調する。
+      not less than は「100万円以上」と下限を表す。
+
+  - emphasis_on_largeness: No less than fifty people came.
+    lower_limit: Not less than fifty people must attend.
+    point: >
+      no less than fifty people came は「なんと50人も来た」。
+      not less than fifty people must attend は「少なくとも50人が出席しなければならない」。
+
+  - emphasis_on_largeness: It took no less than five hours.
+    lower_limit: It will take not less than five hours.
+    point: >
+      no less than five hours は「なんと5時間も」という長さの強調。
+      not less than five hours は「少なくとも5時間」という下限。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または no less than と not less than の意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g060_q001
+    question_type: two_choice
+    prompt: He has ___ 1,000,000 yen. He is richer than I expected.
+    choices:
+      - text: no less than
+        correct: true
+      - text: not less than
+        correct: false
+    answer: no less than
+    explanation: >
+      richer than I expected から、100万円という多さに驚いている。
+      多さを強調する no less than が自然。
+    translation: 彼はなんと100万円も持っている。予想より裕福だ。
+    focus:
+      - no_less_than
+      - largeness_emphasis
+      - money
+
+  - id: g060_q002
+    question_type: two_choice
+    prompt: You must save ___ 1,000,000 yen.
+    choices:
+      - text: no less than
+        correct: false
+      - text: not less than
+        correct: true
+    answer: not less than
+    explanation: >
+      貯金額の下限を示している。
+      「少なくとも100万円」なので not less than が自然。
+    translation: あなたは少なくとも100万円を貯めなければならない。
+    focus:
+      - not_less_than
+      - lower_limit
+      - money
+
+  - id: g060_q003
+    question_type: two_choice
+    prompt: ___ fifty people came to the event. It was a big success.
+    choices:
+      - text: No less than
+        correct: true
+      - text: Not less than
+        correct: false
+    answer: No less than
+    explanation: >
+      big success から、50人も来たという多さを強調している。
+      No less than fifty people came. が自然。
+    translation: そのイベントにはなんと50人も来た。大成功だった。
+    focus:
+      - no_less_than
+      - largeness_emphasis
+      - people
+
+  - id: g060_q004
+    question_type: two_choice
+    prompt: ___ fifty people must attend the meeting.
+    choices:
+      - text: No less than
+        correct: false
+      - text: Not less than
+        correct: true
+    answer: Not less than
+    explanation: >
+      会議に必要な人数の下限を表している。
+      「少なくとも50人」なので Not less than が自然。
+    translation: 少なくとも50人がその会議に出席しなければならない。
+    focus:
+      - not_less_than
+      - lower_limit
+      - attendance
+
+  - id: g060_q005
+    question_type: two_choice
+    prompt: The project cost ___ ten million yen. We were shocked.
+    choices:
+      - text: no less than
+        correct: true
+      - text: not less than
+        correct: false
+    answer: no less than
+    explanation: >
+      We were shocked があるので、金額の大きさを強調している。
+      no less than ten million yen が自然。
+    translation: その計画にはなんと1,000万円もかかった。私たちは驚いた。
+    focus:
+      - no_less_than
+      - largeness_emphasis
+      - cost
+
+  - id: g060_q006
+    question_type: two_choice
+    prompt: The budget must be ___ ten million yen.
+    choices:
+      - text: no less than
+        correct: false
+      - text: not less than
+        correct: true
+    answer: not less than
+    explanation: >
+      予算の下限を示している。
+      「少なくとも1,000万円」なので not less than が自然。
+    translation: 予算は少なくとも1,000万円でなければならない。
+    focus:
+      - not_less_than
+      - lower_limit
+      - budget
+
+  - id: g060_q007
+    question_type: two_choice
+    prompt: It took ___ five hours. I did not expect it to take so long.
+    choices:
+      - text: no less than
+        correct: true
+      - text: not less than
+        correct: false
+    answer: no less than
+    explanation: >
+      so long があるので、5時間もかかったという長さを強調している。
+      no less than five hours が自然。
+    translation: それにはなんと5時間もかかった。そんなに長くかかるとは思わなかった。
+    focus:
+      - no_less_than
+      - largeness_emphasis
+      - time
+
+  - id: g060_q008
+    question_type: two_choice
+    prompt: The work will take ___ five hours.
+    choices:
+      - text: no less than
+        correct: false
+      - text: not less than
+        correct: true
+    answer: not less than
+    explanation: >
+      作業時間の下限を表している。
+      「少なくとも5時間」なので not less than five hours が自然。
+    translation: その作業は少なくとも5時間はかかるだろう。
+    focus:
+      - not_less_than
+      - lower_limit
+      - time
+
+  - id: g060_q009
+    question_type: two_choice
+    prompt: She read ___ twenty books last month. That's amazing.
+    choices:
+      - text: no less than
+        correct: true
+      - text: not less than
+        correct: false
+    answer: no less than
+    explanation: >
+      That's amazing があるので、20冊も読んだという多さを強調している。
+      no less than twenty books が自然。
+    translation: 彼女は先月なんと20冊も本を読んだ。すばらしい。
+    focus:
+      - no_less_than
+      - largeness_emphasis
+      - books
+
+  - id: g060_q010
+    question_type: two_choice
+    prompt: Students must read ___ twenty books a year.
+    choices:
+      - text: no less than
+        correct: false
+      - text: not less than
+        correct: true
+    answer: not less than
+    explanation: >
+      年間に読むべき本の数の下限を示している。
+      「少なくとも20冊」なので not less than twenty books が自然。
+    translation: 生徒は年間少なくとも20冊の本を読まなければならない。
+    focus:
+      - not_less_than
+      - lower_limit
+      - books
+
+  - id: g060_q011
+    question_type: two_choice
+    prompt: The mountain is ___ 3,000 meters high. I was surprised.
+    choices:
+      - text: no less than
+        correct: true
+      - text: not less than
+        correct: false
+    answer: no less than
+    explanation: >
+      I was surprised があるので、3,000メートルという高さを強調している。
+      no less than 3,000 meters が自然。
+    translation: その山はなんと3,000メートルもある。私は驚いた。
+    focus:
+      - no_less_than
+      - largeness_emphasis
+      - height
+
+  - id: g060_q012
+    question_type: two_choice
+    prompt: The wall must be ___ three meters high.
+    choices:
+      - text: no less than
+        correct: false
+      - text: not less than
+        correct: true
+    answer: not less than
+    explanation: >
+      壁の高さの下限を表している。
+      「少なくとも3メートル」なので not less than three meters が自然。
+    translation: その壁は少なくとも3メートルの高さでなければならない。
+    focus:
+      - not_less_than
+      - lower_limit
+      - height
+
+common_mistakes:
+  - mistake: no less than と not less than をどちらも「〜以上」とだけ覚える
+    correction: >
+      no less than は「なんと〜も」と多さを強調する。
+      not less than は「少なくとも〜」「〜以上」と下限を示す。
+  - mistake: no less than を客観的な下限として読む
+    correction: >
+      no less than は話し手の評価が入ることが多い。
+      「そんなに多く」「なんとそれだけも」という響きがある。
+  - mistake: not less than を「なんと〜も」と強く訳しすぎる
+    correction: >
+      not less than は基本的に「〜を下回らない」「少なくとも〜」。
+      多さの強調は no less than の方が強い。
+  - mistake: no more than と no less than を混同する
+    correction: >
+      no more than は「たった〜だけ」と少なさを強調する。
+      no less than は「なんと〜も」と多さを強調する。
+  - mistake: not more than と not less than を混同する
+    correction: >
+      not more than は「多くても〜」で上限。
+      not less than は「少なくとも〜」で下限。
+
+learning_notes:
+  - >
+    no less than は「なんと〜も」。
+    話し手が多いと感じている。
+  - >
+    not less than は「少なくとも〜」。
+    数量の下限を客観的に示す。
+  - >
+    no more than / not more than とセットで覚えるとよい。
+    no は評価、not は範囲と考える。
+  - >
+    no less than fifty people came は「なんと50人も来た」。
+    not less than fifty people must attend は「少なくとも50人が出席しなければならない」。
+
+prerequisites:
+  - g056
+  - g059
+
+next_items:
+  - g061
+  - g062
+  - g063

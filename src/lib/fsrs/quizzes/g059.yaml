@@ -1,0 +1,356 @@
+id: g059
+file: g059.yaml
+
+title: no more than / not more than
+type: grammar_contrast
+
+section:
+  id: s07
+  title: 形容詞・副詞・比較
+
+level: basic
+target: 高校英文法基礎
+
+core_question: たった〜だけなのか、多くても〜なのか？
+
+core_concept:
+  no_more_than:
+    form: no more than + 数量
+    meaning: たった〜だけ
+    image: 数量が少ないことを強調する
+    examples:
+      - sentence: He has no more than 1,000 yen.
+        ja: 彼はたった1,000円しか持っていない。
+        point: 1,000円という少なさを強調している。
+      - sentence: No more than ten people came to the meeting.
+        ja: その会議に来たのはたった10人だけだった。
+        point: 10人しか来なかったという不満・少なさの強調。
+      - sentence: The book costs no more than five dollars.
+        ja: その本はたった5ドルしかしない。
+        point: 5ドルという安さ・少なさを強調している。
+
+  not_more_than:
+    form: not more than + 数量
+    meaning: 多くても〜、せいぜい〜
+    image: 上限を示す
+    examples:
+      - sentence: He has not more than 1,000 yen.
+        ja: 彼は多くても1,000円しか持っていない。
+        point: 1,000円を超えないという上限を表す。
+      - sentence: Not more than ten people can enter the room.
+        ja: その部屋には多くても10人までしか入れない。
+        point: 10人以下という上限を表す。
+      - sentence: The work will take not more than two hours.
+        ja: その仕事は多くても2時間しかかからない。
+        point: 2時間を超えないという上限を表す。
+
+main_rule: >
+  no more than は「たった〜だけ」という少なさの強調。
+  not more than は「多くても〜」「〜以下」という上限。
+  no は感情的に「それだけしかない」と強調する。
+  not は単に「それを超えない」と客観的に制限する。
+  He has no more than 1,000 yen. は「たった1,000円しかない」。
+  He has not more than 1,000 yen. は「多くても1,000円だ」。
+  形が似ているが、no more than は少なさの評価、not more than は上限の指定と考える。
+
+contrast_pairs:
+  - emphasis_on_smallness: He has no more than 1,000 yen.
+    upper_limit: He has not more than 1,000 yen.
+    point: >
+      no more than は「たった1,000円だけ」と少なさを強調する。
+      not more than は「1,000円以下」と上限を表す。
+
+  - emphasis_on_smallness: No more than ten people came.
+    upper_limit: Not more than ten people may enter.
+    point: >
+      no more than ten people came は「たった10人しか来なかった」。
+      not more than ten people may enter は「多くても10人まで入れる」。
+
+  - emphasis_on_smallness: It took no more than five minutes.
+    upper_limit: It will take not more than five minutes.
+    point: >
+      no more than five minutes は「たった5分だけ」という短さの強調。
+      not more than five minutes は「5分以内」という上限。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または no more than と not more than の意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g059_q001
+    question_type: two_choice
+    prompt: He has ___ 1,000 yen. He cannot buy lunch.
+    choices:
+      - text: no more than
+        correct: true
+      - text: not more than
+        correct: false
+    answer: no more than
+    explanation: >
+      昼食を買えないという文脈なので、1,000円しかないという少なさを強調している。
+      no more than が自然。
+    translation: 彼はたった1,000円しか持っていない。昼食を買えない。
+    focus:
+      - no_more_than
+      - smallness_emphasis
+      - money
+
+  - id: g059_q002
+    question_type: two_choice
+    prompt: You may spend ___ 1,000 yen.
+    choices:
+      - text: no more than
+        correct: false
+      - text: not more than
+        correct: true
+    answer: not more than
+    explanation: >
+      使ってよい金額の上限を示している。
+      「多くても1,000円まで」なので not more than が自然。
+    translation: あなたは多くても1,000円まで使ってよい。
+    focus:
+      - not_more_than
+      - upper_limit
+      - money
+
+  - id: g059_q003
+    question_type: two_choice
+    prompt: ___ ten people came to the event. It was almost empty.
+    choices:
+      - text: No more than
+        correct: true
+      - text: Not more than
+        correct: false
+    answer: No more than
+    explanation: >
+      会場がほぼ空だったので、来た人数が少なかったことを強調している。
+      No more than ten people came. が自然。
+    translation: そのイベントに来たのはたった10人だけだった。会場はほぼ空だった。
+    focus:
+      - no_more_than
+      - smallness_emphasis
+      - people
+
+  - id: g059_q004
+    question_type: two_choice
+    prompt: ___ ten people can enter this room at one time.
+    choices:
+      - text: No more than
+        correct: false
+      - text: Not more than
+        correct: true
+    answer: Not more than
+    explanation: >
+      部屋に入れる人数の上限を表している。
+      「多くても10人まで」なので Not more than が自然。
+    translation: この部屋には一度に多くても10人までしか入れない。
+    focus:
+      - not_more_than
+      - upper_limit
+      - capacity
+
+  - id: g059_q005
+    question_type: two_choice
+    prompt: The book cost ___ five dollars. It was very cheap.
+    choices:
+      - text: no more than
+        correct: true
+      - text: not more than
+        correct: false
+    answer: no more than
+    explanation: >
+      very cheap があるので、5ドルという安さを強調している。
+      no more than five dollars が自然。
+    translation: その本はたった5ドルしかしなかった。とても安かった。
+    focus:
+      - no_more_than
+      - smallness_emphasis
+      - price
+
+  - id: g059_q006
+    question_type: two_choice
+    prompt: The ticket should cost ___ five dollars.
+    choices:
+      - text: no more than
+        correct: false
+      - text: not more than
+        correct: true
+    answer: not more than
+    explanation: >
+      チケット代が5ドルを超えるべきではないという上限を表している。
+      not more than five dollars が自然。
+    translation: そのチケットは多くても5ドルであるべきだ。
+    focus:
+      - not_more_than
+      - upper_limit
+      - price
+
+  - id: g059_q007
+    question_type: two_choice
+    prompt: It took ___ five minutes. I was surprised it was so quick.
+    choices:
+      - text: no more than
+        correct: true
+      - text: not more than
+        correct: false
+    answer: no more than
+    explanation: >
+      so quick とあるので、たった5分だったという短さを強調している。
+      no more than five minutes が自然。
+    translation: それはたった5分しかかからなかった。あまりに速くて驚いた。
+    focus:
+      - no_more_than
+      - smallness_emphasis
+      - time
+
+  - id: g059_q008
+    question_type: two_choice
+    prompt: The test will take ___ thirty minutes.
+    choices:
+      - text: no more than
+        correct: false
+      - text: not more than
+        correct: true
+    answer: not more than
+    explanation: >
+      試験時間の上限を表している。
+      「多くても30分」なので not more than thirty minutes が自然。
+    translation: そのテストは多くても30分しかかからない。
+    focus:
+      - not_more_than
+      - upper_limit
+      - time
+
+  - id: g059_q009
+    question_type: two_choice
+    prompt: She ate ___ two cookies and said she was full.
+    choices:
+      - text: no more than
+        correct: true
+      - text: not more than
+        correct: false
+    answer: no more than
+    explanation: >
+      2枚食べただけで満腹と言っているので、少なさを強調している。
+      no more than two cookies が自然。
+    translation: 彼女はたった2枚のクッキーを食べただけで、お腹がいっぱいだと言った。
+    focus:
+      - no_more_than
+      - smallness_emphasis
+      - cookies
+
+  - id: g059_q010
+    question_type: two_choice
+    prompt: Each student may borrow ___ two books.
+    choices:
+      - text: no more than
+        correct: false
+      - text: not more than
+        correct: true
+    answer: not more than
+    explanation: >
+      借りられる本の数の上限を示している。
+      「多くても2冊まで」なので not more than two books が自然。
+    translation: 各生徒は多くても2冊まで本を借りることができる。
+    focus:
+      - not_more_than
+      - upper_limit
+      - books
+
+  - id: g059_q011
+    question_type: two_choice
+    prompt: The village has ___ fifty people. It is very small.
+    choices:
+      - text: no more than
+        correct: true
+      - text: not more than
+        correct: false
+    answer: no more than
+    explanation: >
+      とても小さい村だという文脈なので、人口の少なさを強調している。
+      no more than fifty people が自然。
+    translation: その村にはたった50人しかいない。とても小さい村だ。
+    focus:
+      - no_more_than
+      - smallness_emphasis
+      - population
+
+  - id: g059_q012
+    question_type: two_choice
+    prompt: The group must have ___ fifty members.
+    choices:
+      - text: no more than
+        correct: false
+      - text: not more than
+        correct: true
+    answer: not more than
+    explanation: >
+      グループの人数制限を表している。
+      「多くても50人まで」なので not more than fifty members が自然。
+    translation: そのグループは多くても50人まででなければならない。
+    focus:
+      - not_more_than
+      - upper_limit
+      - members
+
+common_mistakes:
+  - mistake: no more than と not more than をどちらも「〜以下」とだけ覚える
+    correction: >
+      no more than は「たった〜だけ」と少なさを強調する。
+      not more than は「多くても〜」と上限を示す。
+  - mistake: no more than を客観的な上限として読む
+    correction: >
+      no more than は話し手の評価が入ることが多い。
+      「それしかない」「たったそれだけ」という響きがある。
+  - mistake: not more than を「たった〜だけ」と強く訳しすぎる
+    correction: >
+      not more than は基本的に「〜を超えない」「多くても〜」。
+      感情的な少なさの強調は no more than の方が強い。
+  - mistake: no と not の違いを文法的な否定だけで処理する
+    correction: >
+      no more than の no は、比較対象を打ち消して「それ以上ではない＝それだけ」と強調する。
+      not more than は普通の否定で上限を示す。
+  - mistake: more than の反対をすべて no more than だと思う
+    correction: >
+      上限を客観的に言うなら not more than。
+      少なさを強調したいなら no more than。
+
+learning_notes:
+  - >
+    no more than は「たった〜だけ」。
+    話し手が少ないと感じている。
+  - >
+    not more than は「多くても〜」。
+    数量の上限を客観的に示す。
+  - >
+    no more than ten people came は「たった10人しか来なかった」。
+    not more than ten people may enter は「多くても10人まで入れる」。
+  - >
+    no less than / not less than も同じ発想で区別できる。
+    no は評価、not は範囲・上限下限と考えるとよい。
+
+prerequisites:
+  - g056
+  - g057
+
+next_items:
+  - g060
+  - g061
+  - g062

@@ -1,0 +1,372 @@
+id: g072
+file: g072.yaml
+
+title: 仮定法過去
+type: grammar_contrast
+
+section:
+  id: s09
+  title: 仮定法
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 現在の事実に反する仮定を、過去形で表せるか？
+
+core_concept:
+  subjunctive_past:
+    form: If + 主語 + 過去形 ..., 主語 + would/could/might + 動詞原形 ...
+    meaning: もし今〜なら、...だろうに
+    image: 現在の事実とは違う世界を仮に考える
+    examples:
+      - sentence: If I had more time, I would read more books.
+        ja: もしもっと時間があれば、もっと本を読むのに。
+        point: 実際には今あまり時間がない。
+      - sentence: If I knew his phone number, I could call him.
+        ja: もし彼の電話番号を知っていれば、彼に電話できるのに。
+        point: 実際には今その番号を知らない。
+      - sentence: If she were here, she would help us.
+        ja: もし彼女がここにいれば、私たちを助けてくれるのに。
+        point: 実際には今彼女はここにいない。
+
+  indicative_condition:
+    form: If + 主語 + 現在形 ..., 主語 + will/can + 動詞原形 ...
+    meaning: もし本当に〜なら、...するだろう
+    image: 現実に起こりうる条件
+    examples:
+      - sentence: If I have time, I will read the book.
+        ja: 時間があれば、その本を読みます。
+        point: 実際に時間ができる可能性がある条件。
+      - sentence: If I know his number, I will call him.
+        ja: 彼の番号がわかれば、彼に電話します。
+        point: 現実の条件なので現在形。
+      - sentence: If she is here, she can help us.
+        ja: 彼女がここにいれば、私たちを助けられます。
+        point: 現実に確認できる条件。
+
+  be_verb_were:
+    form: If + 主語 + were ...
+    meaning: もし〜なら
+    image: be動詞では were を使うのが標準的な仮定法
+    examples:
+      - sentence: If I were rich, I would travel around the world.
+        ja: もし私が金持ちなら、世界中を旅行するのに。
+        point: 実際には金持ちではない。
+      - sentence: If he were free, he would join us.
+        ja: もし彼が暇なら、私たちに加わるのに。
+        point: 実際には今彼は暇ではない。
+      - sentence: If it were sunny, we could play outside.
+        ja: もし晴れていれば、外で遊べるのに。
+        point: 実際には今晴れていない。
+
+main_rule: >
+  仮定法過去は、現在の事実に反する仮定を表す。
+  形は If + 主語 + 過去形, 主語 + would/could/might + 動詞原形。
+  If I had more time, I would read more books. は
+  「もしもっと時間があれば、もっと本を読むのに」という意味で、
+  実際には今あまり時間がないことを含む。
+  名前は「過去」だが、表しているのは現在の非現実。
+  be動詞では If I were ..., If he were ... のように were を使うのが標準的。
+
+contrast_pairs:
+  - real_condition: If I have time, I will read the book.
+    unreal_present: If I had time, I would read the book.
+    point: >
+      have は現実に起こりうる条件。
+      had は現在の事実に反する仮定。
+
+  - real_condition: If she is here, she can help us.
+    unreal_present: If she were here, she could help us.
+    point: >
+      is は現実の条件。
+      were は「実際にはここにいないが、もしここにいれば」という仮定。
+
+  - real_condition: If I know his number, I will call him.
+    unreal_present: If I knew his number, I would call him.
+    point: >
+      know は現実の条件。
+      knew は「実際には知らないが、もし知っていれば」という仮定。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または仮定法過去が現在の非現実を表すことを説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g072_q001
+    question_type: two_choice
+    prompt: If I ___ more time, I would read more books.
+    choices:
+      - text: had
+        correct: true
+      - text: have
+        correct: false
+    answer: had
+    explanation: >
+      would read があるので、現在の事実に反する仮定法過去。
+      If節では過去形 had を使う。
+    translation: もしもっと時間があれば、もっと本を読むのに。
+    focus:
+      - subjunctive_past
+      - unreal_present
+      - had
+
+  - id: g072_q002
+    question_type: two_choice
+    prompt: If I have time, I ___ read the book.
+    choices:
+      - text: will
+        correct: true
+      - text: would
+        correct: false
+    answer: will
+    explanation: >
+      If I have time は現実に起こりうる条件。
+      普通の条件文なので will read が自然。
+    translation: 時間があれば、その本を読みます。
+    focus:
+      - indicative_condition
+      - real_condition
+      - will
+
+  - id: g072_q003
+    question_type: two_choice
+    prompt: If I ___ rich, I would travel around the world.
+    choices:
+      - text: were
+        correct: true
+      - text: am
+        correct: false
+    answer: were
+    explanation: >
+      would travel があるので仮定法過去。
+      be動詞では If I were rich が標準的。
+    translation: もし私が金持ちなら、世界中を旅行するのに。
+    focus:
+      - be_verb_were
+      - subjunctive_past
+      - unreal_present
+
+  - id: g072_q004
+    question_type: two_choice
+    prompt: If she ___ here, she could help us.
+    choices:
+      - text: were
+        correct: true
+      - text: is
+        correct: false
+    answer: were
+    explanation: >
+      could help があるので、現在の事実に反する仮定。
+      実際には彼女はここにいないという含みがある。
+    translation: もし彼女がここにいれば、私たちを助けられるのに。
+    focus:
+      - be_verb_were
+      - could
+      - unreal_present
+
+  - id: g072_q005
+    question_type: two_choice
+    prompt: If she is here, she ___ help us.
+    choices:
+      - text: can
+        correct: true
+      - text: could
+        correct: false
+    answer: can
+    explanation: >
+      If she is here は現実の条件。
+      仮定法ではないので can help が自然。
+    translation: 彼女がここにいれば、私たちを助けられます。
+    focus:
+      - indicative_condition
+      - real_condition
+      - can
+
+  - id: g072_q006
+    question_type: two_choice
+    prompt: If I ___ his phone number, I could call him.
+    choices:
+      - text: knew
+        correct: true
+      - text: know
+        correct: false
+    answer: knew
+    explanation: >
+      could call があるので仮定法過去。
+      実際には今その電話番号を知らないという意味。
+    translation: もし彼の電話番号を知っていれば、彼に電話できるのに。
+    focus:
+      - subjunctive_past
+      - knew
+      - could
+
+  - id: g072_q007
+    question_type: two_choice
+    prompt: If I know his number, I ___ call him.
+    choices:
+      - text: will
+        correct: true
+      - text: would
+        correct: false
+    answer: will
+    explanation: >
+      If I know his number は現実にありうる条件。
+      普通の条件文なので will call が自然。
+    translation: 彼の番号がわかれば、彼に電話します。
+    focus:
+      - indicative_condition
+      - real_condition
+      - know
+
+  - id: g072_q008
+    question_type: two_choice
+    prompt: If it ___ sunny, we could play outside.
+    choices:
+      - text: were
+        correct: true
+      - text: is
+        correct: false
+    answer: were
+    explanation: >
+      could play があるので仮定法過去。
+      実際には今晴れていないという含みがある。
+    translation: もし晴れていれば、外で遊べるのに。
+    focus:
+      - be_verb_were
+      - unreal_present
+      - weather
+
+  - id: g072_q009
+    question_type: two_choice
+    prompt: If he ___ harder, he would get better grades.
+    choices:
+      - text: studied
+        correct: true
+      - text: studies
+        correct: false
+    answer: studied
+    explanation: >
+      would get があるので仮定法過去。
+      If節では現在の事実に反する仮定として過去形 studied を使う。
+    translation: もし彼がもっと一生懸命勉強すれば、もっとよい成績を取るのに。
+    focus:
+      - subjunctive_past
+      - studied
+      - would
+
+  - id: g072_q010
+    question_type: two_choice
+    prompt: If he studies harder, he ___ get better grades.
+    choices:
+      - text: will
+        correct: true
+      - text: would
+        correct: false
+    answer: will
+    explanation: >
+      If he studies harder は現実に起こりうる条件。
+      普通の条件文なので will get が自然。
+    translation: 彼がもっと一生懸命勉強すれば、もっとよい成績を取るだろう。
+    focus:
+      - indicative_condition
+      - real_condition
+      - studies
+
+  - id: g072_q011
+    question_type: two_choice
+    prompt: If I ___ you, I would tell the truth.
+    choices:
+      - text: were
+        correct: true
+      - text: am
+        correct: false
+    answer: were
+    explanation: >
+      If I were you は仮定法の定型表現。
+      「もし私があなたなら」という現在の非現実を表す。
+    translation: もし私があなたなら、本当のことを言うだろう。
+    focus:
+      - if_i_were_you
+      - be_verb_were
+      - advice
+
+  - id: g072_q012
+    question_type: two_choice
+    prompt: If I ___ enough money, I would buy this computer.
+    choices:
+      - text: had
+        correct: true
+      - text: have
+        correct: false
+    answer: had
+    explanation: >
+      would buy があるので仮定法過去。
+      実際には今十分なお金がないという意味。
+    translation: もし十分なお金があれば、このコンピューターを買うのに。
+    focus:
+      - subjunctive_past
+      - unreal_present
+      - money
+
+common_mistakes:
+  - mistake: 仮定法過去を過去の話だと思う
+    correction: >
+      仮定法過去は、名前に過去とあるが、基本的には現在の事実に反する仮定を表す。
+  - mistake: If I have more time, I would ... と混ぜてしまう
+    correction: >
+      現実の条件なら If I have ..., I will ...
+      非現実の仮定なら If I had ..., I would ...。
+  - mistake: If I am you と言ってしまう
+    correction: >
+      「もし私があなたなら」は If I were you。
+      仮定法では be動詞に were を使うのが標準的。
+  - mistake: would の後ろに過去形を置いてしまう
+    correction: >
+      would / could / might の後ろは動詞原形。
+      would read, could call, might help の形にする。
+  - mistake: If節に would を入れてしまう
+    correction: >
+      基本形は If + 過去形, would + 動詞原形。
+      If I would have time ではなく If I had time。
+
+learning_notes:
+  - >
+    仮定法過去は、現在の事実と違うことを仮に考える表現。
+    過去形を使うが、意味は現在。
+  - >
+    基本形は If + 過去形, would/could/might + 動詞原形。
+  - >
+    be動詞では were を使うのが標準的。
+    If I were you, If she were here の形を覚える。
+  - >
+    普通の条件文と混ぜない。
+    If I have time, I will ...
+    If I had time, I would ...。
+
+prerequisites:
+  - g005
+  - g006
+  - g026
+  - g027
+
+next_items:
+  - g073
+  - g074
+  - g075

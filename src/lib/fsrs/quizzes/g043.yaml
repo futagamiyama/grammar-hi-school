@@ -1,0 +1,352 @@
+id: g043
+file: g043.yaml
+
+title: try to do vs try doing
+type: verb_usage
+
+section:
+  id: s05
+  title: 不定詞・動名詞・分詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: 努力してやろうとするのか、試しにやってみるのか？
+
+core_concept:
+  try_to_do:
+    form: try + to do
+    meaning: 難しいこと・必要なことをしようと努力する
+    image: 目的に向かって努力する
+    examples:
+      - sentence: I tried to open the door.
+        ja: 私はそのドアを開けようとした。
+        point: ドアを開けることを目標に努力した。
+      - sentence: She tried to solve the problem.
+        ja: 彼女はその問題を解こうとした。
+        point: 解くことが難しく、努力している。
+      - sentence: He tried to stay awake.
+        ja: 彼は起きていようとした。
+        point: 眠らないように努力した。
+
+  try_doing:
+    form: try + doing
+    meaning: 効果があるかどうか試しに〜してみる
+    image: 方法を試す・実験する
+    examples:
+      - sentence: Try opening the window.
+        ja: 試しに窓を開けてみなさい。
+        point: 窓を開ける方法を試してみる。
+      - sentence: I tried restarting the computer.
+        ja: 私は試しにコンピューターを再起動してみた。
+        point: 問題解決の方法として再起動を試した。
+      - sentence: Try taking a deep breath.
+        ja: 試しに深呼吸してみなさい。
+        point: 落ち着くための方法として試している。
+
+main_rule: >
+  try to do は「〜しようと努力する」「何とか〜しようとする」。
+  try doing は「試しに〜してみる」「方法として〜を試す」。
+  to do は目標へ向かう努力を表し、doing は試す方法・手段を表す。
+  日本語ではどちらも「〜してみる」と訳せることがあるため、
+  難しい目標に向かって努力しているのか、効果を確かめるために試しているのかで判断する。
+
+contrast_pairs:
+  - effort: I tried to open the door.
+    experiment: I tried opening the door.
+    point: >
+      tried to open は、開けようと努力した。
+      tried opening は、方法として開けてみた。
+
+  - effort: She tried to solve the problem.
+    experiment: She tried using a different method.
+    point: >
+      tried to solve は、問題を解こうと努力した。
+      tried using は、別の方法を試してみた。
+
+  - effort: He tried to sleep.
+    experiment: He tried drinking warm milk.
+    point: >
+      tried to sleep は、眠ろうと努力した。
+      tried drinking warm milk は、眠る方法として温かい牛乳を飲んでみた。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または try to do と try doing の意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g043_q001
+    question_type: two_choice
+    prompt: I tried ___ the heavy door, but I couldn't.
+    choices:
+      - text: to open
+        correct: true
+      - text: opening
+        correct: false
+    answer: to open
+    explanation: >
+      but I couldn't があるので、ドアを開けようと努力したができなかったという意味。
+      努力を表す try to open が自然。
+    translation: 私はその重いドアを開けようとしたが、できなかった。
+    focus:
+      - try_to_do
+      - effort
+      - failed_attempt
+
+  - id: g043_q002
+    question_type: two_choice
+    prompt: If the room is hot, try ___ the window.
+    choices:
+      - text: to open
+        correct: false
+      - text: opening
+        correct: true
+    answer: opening
+    explanation: >
+      暑い部屋への対処法として、試しに窓を開けてみるという意味。
+      方法を試すので try opening が自然。
+    translation: 部屋が暑いなら、試しに窓を開けてみなさい。
+    focus:
+      - try_doing
+      - experiment
+      - solution_attempt
+
+  - id: g043_q003
+    question_type: two_choice
+    prompt: She tried ___ the problem, but it was too difficult.
+    choices:
+      - text: to solve
+        correct: true
+      - text: solving
+        correct: false
+    answer: to solve
+    explanation: >
+      問題を解こうと努力したが、難しすぎたという意味。
+      目標へ向かう努力なので tried to solve が自然。
+    translation: 彼女はその問題を解こうとしたが、難しすぎた。
+    focus:
+      - try_to_do
+      - effort
+      - difficult_task
+
+  - id: g043_q004
+    question_type: two_choice
+    prompt: If this method doesn't work, try ___ another one.
+    choices:
+      - text: to use
+        correct: false
+      - text: using
+        correct: true
+    answer: using
+    explanation: >
+      別の方法を試してみるという意味。
+      効果を確かめるための試行なので try using が自然。
+    translation: この方法がうまくいかなければ、別の方法を試してみなさい。
+    focus:
+      - try_doing
+      - experiment
+      - method
+
+  - id: g043_q005
+    question_type: two_choice
+    prompt: He tried ___ awake during the lecture.
+    choices:
+      - text: to stay
+        correct: true
+      - text: staying
+        correct: false
+    answer: to stay
+    explanation: >
+      講義中に眠らないよう努力したという意味。
+      努力を表す try to stay が自然。
+    translation: 彼は講義中、起きていようとした。
+    focus:
+      - try_to_do
+      - effort
+      - stay_awake
+
+  - id: g043_q006
+    question_type: two_choice
+    prompt: If you can't sleep, try ___ warm milk.
+    choices:
+      - text: to drink
+        correct: false
+      - text: drinking
+        correct: true
+    answer: drinking
+    explanation: >
+      眠れないときの対処法として、温かい牛乳を飲んでみるという意味。
+      方法を試すので try drinking が自然。
+    translation: 眠れないなら、試しに温かい牛乳を飲んでみなさい。
+    focus:
+      - try_doing
+      - experiment
+      - remedy
+
+  - id: g043_q007
+    question_type: two_choice
+    prompt: I tried ___ him, but he didn't answer.
+    choices:
+      - text: to call
+        correct: true
+      - text: calling
+        correct: false
+    answer: to call
+    explanation: >
+      彼に電話しようとしたが、彼が出なかったという意味。
+      目的に向かう努力なので tried to call が自然。
+    translation: 私は彼に電話しようとしたが、彼は出なかった。
+    focus:
+      - try_to_do
+      - effort
+      - call
+
+  - id: g043_q008
+    question_type: two_choice
+    prompt: If the app doesn't work, try ___ it.
+    choices:
+      - text: to restart
+        correct: false
+      - text: restarting
+        correct: true
+    answer: restarting
+    explanation: >
+      アプリが動かないときの対処法として、再起動を試すという意味。
+      方法を試すので try restarting が自然。
+    translation: そのアプリが動かないなら、試しに再起動してみなさい。
+    focus:
+      - try_doing
+      - experiment
+      - troubleshooting
+
+  - id: g043_q009
+    question_type: two_choice
+    prompt: They tried ___ the mountain before sunset.
+    choices:
+      - text: to reach
+        correct: true
+      - text: reaching
+        correct: false
+    answer: to reach
+    explanation: >
+      日没前に山に到達しようと努力したという意味。
+      目標へ向かう努力なので tried to reach が自然。
+    translation: 彼らは日没前にその山に到達しようとした。
+    focus:
+      - try_to_do
+      - effort
+      - goal
+
+  - id: g043_q010
+    question_type: two_choice
+    prompt: The soup is too salty. Try ___ some water.
+    choices:
+      - text: to add
+        correct: false
+      - text: adding
+        correct: true
+    answer: adding
+    explanation: >
+      塩辛すぎるスープへの対処法として、水を足してみるという意味。
+      試す方法なので try adding が自然。
+    translation: そのスープは塩辛すぎる。試しに水を少し足してみなさい。
+    focus:
+      - try_doing
+      - experiment
+      - solution_attempt
+
+  - id: g043_q011
+    question_type: two_choice
+    prompt: She tried ___ her feelings.
+    choices:
+      - text: to hide
+        correct: true
+      - text: hiding
+        correct: false
+    answer: to hide
+    explanation: >
+      感情を隠そうと努力したという意味。
+      目標へ向かう努力なので tried to hide が自然。
+    translation: 彼女は自分の感情を隠そうとした。
+    focus:
+      - try_to_do
+      - effort
+      - hide_feelings
+
+  - id: g043_q012
+    question_type: two_choice
+    prompt: If you feel nervous, try ___ a deep breath.
+    choices:
+      - text: to take
+        correct: false
+      - text: taking
+        correct: true
+    answer: taking
+    explanation: >
+      緊張したときの対処法として、深呼吸を試すという意味。
+      方法を試すので try taking が自然。
+    translation: 緊張するなら、試しに深呼吸してみなさい。
+    focus:
+      - try_doing
+      - experiment
+      - remedy
+
+common_mistakes:
+  - mistake: try to do と try doing をどちらも同じ「〜してみる」と考える
+    correction: >
+      try to do は「努力して〜しようとする」。
+      try doing は「試しに〜してみる」。
+      努力なのか、方法の試行なのかを区別する。
+  - mistake: I tried opening the door, but I couldn't. を自然だと思う
+    correction: >
+      「開けようとしたができなかった」は I tried to open the door, but I couldn't. が自然。
+      try opening は「方法として開けてみる」という意味。
+  - mistake: 対処法をすすめる文で try to do を使ってしまう
+    correction: >
+      「試しに〜してみなさい」は try doing が自然。
+      Try restarting the computer. / Try drinking warm milk.
+  - mistake: try doing を「努力」の意味で使う
+    correction: >
+      難しい目標に向かって努力するなら try to do。
+      Try to solve the problem. は「解こうと努力する」。
+
+learning_notes:
+  - >
+    try to do は、成功するかわからないことに向かって努力する。
+    「何とか〜しようとする」と考える。
+  - >
+    try doing は、効果があるか確かめるために方法を試す。
+    「試しに〜してみる」と考える。
+  - >
+    try to open the door は「ドアを開けようとする」。
+    try opening the door は「試しにドアを開けてみる」。
+  - >
+    remember, forget, stop, try は、to do と doing の違いが意味差に直結する代表的な動詞。
+
+prerequisites:
+  - g039
+  - g040
+  - g041
+  - g042
+
+next_items:
+  - g044
+  - g045
+  - g046

@@ -1,0 +1,351 @@
+id: g042
+file: g042.yaml
+
+title: stop to do vs stop doing
+type: verb_usage
+
+section:
+  id: s05
+  title: 不定詞・動名詞・分詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: するために止まるのか、していることをやめるのか？
+
+core_concept:
+  stop_to_do:
+    form: stop + to do
+    meaning: 何かをするために立ち止まる・中断する
+    image: 今していることを止めて、別の行為をする
+    examples:
+      - sentence: He stopped to take a rest.
+        ja: 彼は休憩するために立ち止まった。
+        point: 止まった目的が to take a rest。
+      - sentence: She stopped to talk to her friend.
+        ja: 彼女は友人と話すために立ち止まった。
+        point: 話すために動きを止めた。
+      - sentence: We stopped to look at the map.
+        ja: 私たちは地図を見るために立ち止まった。
+        point: 地図を見ることが止まった目的。
+
+  stop_doing:
+    form: stop + doing
+    meaning: していることをやめる
+    image: その行為自体を中止する
+    examples:
+      - sentence: He stopped smoking.
+        ja: 彼はタバコを吸うのをやめた。
+        point: smoking という行為をやめた。
+      - sentence: Stop talking.
+        ja: 話すのをやめなさい。
+        point: talking という行為を中止する。
+      - sentence: It stopped raining.
+        ja: 雨がやんだ。
+        point: raining という動作・状態が終わった。
+
+main_rule: >
+  stop to do は「〜するために立ち止まる・中断する」。
+  stop doing は「〜するのをやめる」。
+  to do は、止まった後にする目的を表す。
+  doing は、やめる対象そのものを表す。
+  日本語ではどちらも「止まる」「やめる」と訳せるため、
+  その行為をするために止まったのか、その行為自体をやめたのかで判断する。
+
+contrast_pairs:
+  - purpose: He stopped to smoke.
+    stopped_activity: He stopped smoking.
+    point: >
+      stopped to smoke は、タバコを吸うために立ち止まった。
+      stopped smoking は、タバコを吸うのをやめた。
+
+  - purpose: She stopped to talk.
+    stopped_activity: She stopped talking.
+    point: >
+      stopped to talk は、話すために立ち止まった。
+      stopped talking は、話すのをやめた。
+
+  - purpose: We stopped to take pictures.
+    stopped_activity: We stopped taking pictures.
+    point: >
+      stopped to take pictures は、写真を撮るために立ち止まった。
+      stopped taking pictures は、写真を撮るのをやめた。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または stop to do と stop doing の意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g042_q001
+    question_type: two_choice
+    prompt: He stopped ___ a rest.
+    choices:
+      - text: to take
+        correct: true
+      - text: taking
+        correct: false
+    answer: to take
+    explanation: >
+      休憩するために立ち止まったという意味。
+      止まった目的を表すので stopped to take が自然。
+    translation: 彼は休憩するために立ち止まった。
+    focus:
+      - stop_to_do
+      - purpose
+      - to_infinitive
+
+  - id: g042_q002
+    question_type: two_choice
+    prompt: He stopped ___ because he was tired.
+    choices:
+      - text: to run
+        correct: false
+      - text: running
+        correct: true
+    answer: running
+    explanation: >
+      疲れたので走ることをやめたという意味。
+      やめる対象は running なので stopped running が自然。
+    translation: 彼は疲れたので走るのをやめた。
+    focus:
+      - stop_doing
+      - stopped_activity
+      - gerund
+
+  - id: g042_q003
+    question_type: two_choice
+    prompt: She stopped ___ to her friend.
+    choices:
+      - text: to talk
+        correct: true
+      - text: talking
+        correct: false
+    answer: to talk
+    explanation: >
+      友人と話すために立ち止まったという意味。
+      目的を表すので stopped to talk が自然。
+    translation: 彼女は友人と話すために立ち止まった。
+    focus:
+      - stop_to_do
+      - purpose
+      - talk_to
+
+  - id: g042_q004
+    question_type: two_choice
+    prompt: She stopped ___ when the teacher came in.
+    choices:
+      - text: to talk
+        correct: false
+      - text: talking
+        correct: true
+    answer: talking
+    explanation: >
+      先生が入ってきたので、話すことをやめたという意味。
+      やめた行為そのものなので talking が自然。
+    translation: 先生が入ってくると、彼女は話すのをやめた。
+    focus:
+      - stop_doing
+      - stopped_activity
+      - talking
+
+  - id: g042_q005
+    question_type: two_choice
+    prompt: We stopped ___ at the map.
+    choices:
+      - text: to look
+        correct: true
+      - text: looking
+        correct: false
+    answer: to look
+    explanation: >
+      地図を見るために立ち止まったという意味。
+      to look は止まった目的を表す。
+    translation: 私たちは地図を見るために立ち止まった。
+    focus:
+      - stop_to_do
+      - purpose
+      - look_at
+
+  - id: g042_q006
+    question_type: two_choice
+    prompt: We stopped ___ at the map and started walking again.
+    choices:
+      - text: to look
+        correct: false
+      - text: looking
+        correct: true
+    answer: looking
+    explanation: >
+      地図を見ることをやめて、また歩き始めたという意味。
+      やめた対象は looking なので stopped looking が自然。
+    translation: 私たちは地図を見るのをやめて、また歩き始めた。
+    focus:
+      - stop_doing
+      - stopped_activity
+      - looking_at
+
+  - id: g042_q007
+    question_type: two_choice
+    prompt: He stopped ___ after ten years.
+    choices:
+      - text: to smoke
+        correct: false
+      - text: smoking
+        correct: true
+    answer: smoking
+    explanation: >
+      10年続けた喫煙をやめたという意味。
+      stop smoking は「タバコを吸うのをやめる」。
+    translation: 彼は10年後にタバコを吸うのをやめた。
+    focus:
+      - stop_doing
+      - smoking
+      - habit_ended
+
+  - id: g042_q008
+    question_type: two_choice
+    prompt: He stopped ___ on the way home.
+    choices:
+      - text: to smoke
+        correct: true
+      - text: smoking
+        correct: false
+    answer: to smoke
+    explanation: >
+      帰り道で、タバコを吸うために立ち止まったという意味。
+      止まった目的なので to smoke が自然。
+    translation: 彼は帰り道にタバコを吸うために立ち止まった。
+    focus:
+      - stop_to_do
+      - purpose
+      - smoke
+
+  - id: g042_q009
+    question_type: two_choice
+    prompt: The rain stopped ___ around noon.
+    choices:
+      - text: to fall
+        correct: false
+      - text: falling
+        correct: true
+    answer: falling
+    explanation: >
+      雨が降ることが止まった、つまり雨がやんだという意味。
+      stop doing の形で stopped falling が自然。
+    translation: 雨は正午ごろに降りやんだ。
+    focus:
+      - stop_doing
+      - natural_event
+      - raining
+
+  - id: g042_q010
+    question_type: two_choice
+    prompt: The driver stopped ___ a child cross the street.
+    choices:
+      - text: to let
+        correct: true
+      - text: letting
+        correct: false
+    answer: to let
+    explanation: >
+      子どもに道を渡らせるために車を止めたという意味。
+      目的を表すので stopped to let が自然。
+    translation: 運転手は子どもに道を渡らせるために止まった。
+    focus:
+      - stop_to_do
+      - purpose
+      - let_someone_do
+
+  - id: g042_q011
+    question_type: two_choice
+    prompt: Please stop ___ your phone during class.
+    choices:
+      - text: to use
+        correct: false
+      - text: using
+        correct: true
+    answer: using
+    explanation: >
+      授業中に携帯電話を使う行為をやめてほしいという意味。
+      stop using が自然。
+    translation: 授業中に携帯電話を使うのをやめてください。
+    focus:
+      - stop_doing
+      - prohibited_activity
+      - using_phone
+
+  - id: g042_q012
+    question_type: two_choice
+    prompt: She stopped ___ some flowers on her way home.
+    choices:
+      - text: to buy
+        correct: true
+      - text: buying
+        correct: false
+    answer: to buy
+    explanation: >
+      花を買うために立ち寄った・立ち止まったという意味。
+      止まった目的なので stopped to buy が自然。
+    translation: 彼女は帰り道に花を買うために立ち寄った。
+    focus:
+      - stop_to_do
+      - purpose
+      - buy
+
+common_mistakes:
+  - mistake: stop to do と stop doing をどちらも「〜するのをやめる」と考える
+    correction: >
+      stop to do は「〜するために止まる」。
+      stop doing は「〜するのをやめる」。
+      to do は目的、doing はやめる対象。
+  - mistake: He stopped to smoke. を「タバコをやめた」と読む
+    correction: >
+      He stopped to smoke. は「タバコを吸うために立ち止まった」。
+      「タバコをやめた」は He stopped smoking.
+  - mistake: Stop to talk. を命令文で「話すのをやめなさい」と読む
+    correction: >
+      「話すのをやめなさい」は Stop talking.。
+      Stop to talk. は「話すために立ち止まりなさい」という意味になる。
+  - mistake: to do を必ず「これからすること」とだけ考え、目的の意味を見落とす
+    correction: >
+      stop to do の to do は、止まった目的を表す。
+      「〜するために止まる」と読む。
+
+learning_notes:
+  - >
+    stop to do では、stop と to do は別の行為。
+    何かを止めて、その目的として to do をする。
+  - >
+    stop doing では、doing がやめる対象そのもの。
+    stop smoking は smoking をやめる。
+  - >
+    stopped to smoke と stopped smoking は意味が正反対に近い。
+    2択問題ではこの対立を即座に見分ける。
+  - >
+    remember/forget/stop/try は、to do と doing の両方を取り、
+    意味が変わる代表的な動詞としてまとめて学ぶとよい。
+
+prerequisites:
+  - g039
+
+next_items:
+  - g043
+  - g044
+  - g045

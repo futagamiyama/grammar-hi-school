@@ -1,0 +1,358 @@
+id: g039
+file: g039.yaml
+
+title: 不定詞 vs 動名詞
+type: grammar_contrast
+
+section:
+  id: s05
+  title: 不定詞・動名詞・分詞
+
+level: basic
+target: 高校英文法基礎
+
+core_question: これからすることか、すでにある行為・一般的行為か？
+
+core_concept:
+  infinitive:
+    form: to + 動詞の原形
+    meaning: これからすること、目的、予定、意志、可能性を表しやすい
+    image: 未来へ向かう動き
+    examples:
+      - sentence: I want to study abroad.
+        ja: 私は留学したい。
+        point: これからしたいことなので to study。
+      - sentence: She decided to join the club.
+        ja: 彼女はそのクラブに入ることを決めた。
+        point: 決めた後にする行為なので to join。
+      - sentence: I went to the library to study.
+        ja: 私は勉強するために図書館へ行った。
+        point: 目的を表す to study。
+
+  gerund:
+    form: 動詞のing形
+    meaning: すでにある行為、経験、習慣、一般的な活動を名詞のように表す
+    image: 行為そのものをひとまとまりの名詞として見る
+    examples:
+      - sentence: I enjoy reading books.
+        ja: 私は本を読むことを楽しむ。
+        point: 読書という活動そのものなので reading。
+      - sentence: She finished writing the report.
+        ja: 彼女は報告書を書き終えた。
+        point: すでに進んでいた行為を終えたので writing。
+      - sentence: Swimming is good exercise.
+        ja: 泳ぐことはよい運動だ。
+        point: 一般的な活動を主語にしているので Swimming。
+
+main_rule: >
+  不定詞 to do は、これからすること、目的、予定、意志など、
+  未来へ向かう感覚を持ちやすい。
+  動名詞 doing は、すでにある行為、経験、習慣、一般的な活動を
+  名詞のように表す。
+  ただし、実際には動詞ごとに to do を取るか doing を取るかが決まる場合が多い。
+  want, decide, hope, plan などは to do を取りやすく、
+  enjoy, finish, avoid, mind などは doing を取りやすい。
+
+contrast_pairs:
+  - infinitive: I want to read this book.
+    gerund: I enjoy reading books.
+    point: >
+      want はこれからしたいことなので to read。
+      enjoy は行為そのものを楽しむので reading。
+
+  - infinitive: She decided to leave early.
+    gerund: She finished writing the report.
+    point: >
+      decide はこれからする行為を決める。
+      finish はすでに行っていた行為を終える。
+
+  - infinitive: To learn English takes time.
+    gerund: Learning English takes time.
+    point: >
+      どちらも主語として使えるが、一般的な活動としては
+      Learning English の方が自然なことが多い。
+
+quiz_policy:
+  questions_per_review: 3
+  question_selection: random
+  choice_style: two_choice
+  time_limit_seconds_per_question: 8
+
+fsrs_rating:
+  review_question_count: 3
+  time_limit_seconds_per_question: 8
+
+  rating_rules:
+    AGAIN: "2問以上ミス"
+    HARD: "1問ミス、または不定詞と動名詞の基本的な意味差を説明できない"
+    GOOD: "全問正解。ただしEASY条件は満たさない"
+    EASY: "全問正解し、平均時間が制限時間の60%以内、かつ最遅問題も制限時間の85%以内"
+
+  easy_policy:
+    method: average_and_max_time
+    average_threshold_ratio: 0.60
+    max_threshold_ratio: 0.85
+
+review_questions:
+  - id: g039_q001
+    question_type: two_choice
+    prompt: I want ___ abroad.
+    choices:
+      - text: to study
+        correct: true
+      - text: studying
+        correct: false
+    answer: to study
+    explanation: >
+      want は「これから〜したい」という意味を表すので、
+      後ろには to do を取る。want to study が自然。
+    translation: 私は留学したい。
+    focus:
+      - infinitive
+      - want_to_do
+      - future_direction
+
+  - id: g039_q002
+    question_type: two_choice
+    prompt: I enjoy ___ books.
+    choices:
+      - text: to read
+        correct: false
+      - text: reading
+        correct: true
+    answer: reading
+    explanation: >
+      enjoy は行為そのものを楽しむという意味なので、
+      後ろには動名詞 reading を取る。
+    translation: 私は本を読むことを楽しむ。
+    focus:
+      - gerund
+      - enjoy_doing
+      - activity_as_noun
+
+  - id: g039_q003
+    question_type: two_choice
+    prompt: She decided ___ early.
+    choices:
+      - text: to leave
+        correct: true
+      - text: leaving
+        correct: false
+    answer: to leave
+    explanation: >
+      decide は「これからすることを決める」動詞。
+      未来へ向かう行為なので to leave が自然。
+    translation: 彼女は早く出発することを決めた。
+    focus:
+      - infinitive
+      - decide_to_do
+      - future_action
+
+  - id: g039_q004
+    question_type: two_choice
+    prompt: She finished ___ the report.
+    choices:
+      - text: to write
+        correct: false
+      - text: writing
+        correct: true
+    answer: writing
+    explanation: >
+      finish は、すでに行っていた行為を終えるという意味。
+      後ろには動名詞 writing を取る。
+    translation: 彼女は報告書を書き終えた。
+    focus:
+      - gerund
+      - finish_doing
+      - completed_activity
+
+  - id: g039_q005
+    question_type: two_choice
+    prompt: He hopes ___ a doctor.
+    choices:
+      - text: to become
+        correct: true
+      - text: becoming
+        correct: false
+    answer: to become
+    explanation: >
+      hope はこれから実現してほしいことを表す。
+      未来へ向かう内容なので to become が自然。
+    translation: 彼は医者になることを望んでいる。
+    focus:
+      - infinitive
+      - hope_to_do
+      - future_direction
+
+  - id: g039_q006
+    question_type: two_choice
+    prompt: He avoided ___ the question.
+    choices:
+      - text: to answer
+        correct: false
+      - text: answering
+        correct: true
+    answer: answering
+    explanation: >
+      avoid は「〜することを避ける」という意味で、
+      後ろには動名詞 answering を取る。
+    translation: 彼はその質問に答えるのを避けた。
+    focus:
+      - gerund
+      - avoid_doing
+      - activity_as_object
+
+  - id: g039_q007
+    question_type: two_choice
+    prompt: We plan ___ next month.
+    choices:
+      - text: to travel
+        correct: true
+      - text: traveling
+        correct: false
+    answer: to travel
+    explanation: >
+      plan はこれからする予定を表す。
+      後ろには to do を取り、plan to travel となる。
+    translation: 私たちは来月旅行する予定だ。
+    focus:
+      - infinitive
+      - plan_to_do
+      - future_plan
+
+  - id: g039_q008
+    question_type: two_choice
+    prompt: Would you mind ___ the window?
+    choices:
+      - text: to open
+        correct: false
+      - text: opening
+        correct: true
+    answer: opening
+    explanation: >
+      mind は「〜することを嫌がる・気にする」という意味で、
+      後ろには動名詞を取る。
+      Would you mind opening...? で丁寧な依頼になる。
+    translation: 窓を開けていただけますか。
+    focus:
+      - gerund
+      - mind_doing
+      - polite_request
+
+  - id: g039_q009
+    question_type: two_choice
+    prompt: I went to the library ___.
+    choices:
+      - text: to study
+        correct: true
+      - text: studying
+        correct: false
+    answer: to study
+    explanation: >
+      ここでは「勉強するために」という目的を表している。
+      目的を表す不定詞 to study が自然。
+    translation: 私は勉強するために図書館へ行った。
+    focus:
+      - infinitive
+      - purpose
+      - to_do
+
+  - id: g039_q010
+    question_type: two_choice
+    prompt: ___ every day is important.
+    choices:
+      - text: To exercise
+        correct: false
+      - text: Exercising
+        correct: true
+    answer: Exercising
+    explanation: >
+      主語として一般的な活動を述べる場合、
+      動名詞 Exercising が自然なことが多い。
+      To exercise も文法的には可能だが、ここでは一般的活動として Exercising がより自然。
+    translation: 毎日運動することは大切だ。
+    focus:
+      - gerund
+      - subject
+      - general_activity
+
+  - id: g039_q011
+    question_type: two_choice
+    prompt: It is important ___ every day.
+    choices:
+      - text: to exercise
+        correct: true
+      - text: exercising
+        correct: false
+    answer: to exercise
+    explanation: >
+      It is important to do の形では、
+      後ろに不定詞を置いて「〜することは重要だ」と表す。
+    translation: 毎日運動することは大切だ。
+    focus:
+      - infinitive
+      - it_is_adjective_to_do
+      - formal_subject
+
+  - id: g039_q012
+    question_type: two_choice
+    prompt: He promised ___ me.
+    choices:
+      - text: to help
+        correct: true
+      - text: helping
+        correct: false
+    answer: to help
+    explanation: >
+      promise はこれからすることを約束する動詞。
+      後ろには to do を取り、promised to help が自然。
+    translation: 彼は私を手伝うと約束した。
+    focus:
+      - infinitive
+      - promise_to_do
+      - future_action
+
+common_mistakes:
+  - mistake: 不定詞と動名詞をどちらも「〜すること」とだけ覚える
+    correction: >
+      日本語では同じ「〜すること」と訳せても、
+      to do はこれからすること・目的・意志に向きやすく、
+      doing は行為そのもの・経験・一般的活動に向きやすい。
+  - mistake: want enjoying のように、動詞ごとの型を無視する
+    correction: >
+      want, decide, hope, plan, promise は to do を取りやすい。
+      enjoy, finish, avoid, mind は doing を取りやすい。
+  - mistake: enjoy to do としてしまう
+    correction: >
+      enjoy の後ろは動名詞。
+      enjoy reading, enjoy playing, enjoy talking のように使う。
+  - mistake: 目的を表す不定詞を動名詞にしてしまう
+    correction: >
+      「〜するために」と目的を表すときは to do を使う。
+      I went to the library to study. が自然。
+  - mistake: It is ... の構文で動名詞を選ぶ
+    correction: >
+      It is important to do の形では、不定詞を使う。
+      It is important exercising every day. とは普通言わない。
+
+learning_notes:
+  - >
+    不定詞は「これからすること」や「目的」に向きやすい。
+    動名詞は「行為そのもの」や「一般的活動」に向きやすい。
+  - >
+    ただし、最終的には動詞ごとの型を覚える必要がある。
+    このカードは不定詞と動名詞の基本イメージを学ぶカード。
+  - >
+    remember, forget, stop, try のように、
+    to do と doing の両方を取り、意味が変わる動詞は別カードで扱う。
+  - >
+    2択問題では、単に形を覚えるのではなく、
+    「これからすることか、すでにある行為か」を意識する。
+
+prerequisites: []
+
+next_items:
+  - g040
+  - g041
+  - g042
+  - g043
